@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Form5 : Form
     {
-        public Form2()
+        public Form5()
         {
             InitializeComponent();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -22,22 +32,21 @@ namespace WindowsFormsApp1
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            taCus.Fill(dsCus.Customer1);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            taCus.Insert(textBox1.Text,textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,textBox7.Text,textBox8.Text,textBox9.Text,textBox10.Text);
-            Form3 login = new Form3();
+            Form7 paymet = new Form7();
             this.Hide();
-            login.ShowDialog();
+            paymet.ShowDialog();
             this.Show();
         }
 

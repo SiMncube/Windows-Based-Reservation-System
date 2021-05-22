@@ -32,5 +32,20 @@ namespace WindowsFormsApp1
             login.ShowDialog();
             this.Show();
         }
+        private void makeBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 makebooking = new Form5();
+            this.Hide();
+            makebooking.ShowDialog();
+            this.Show();
+        }
+
+        private void checkBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 checkBooking = new Form6();
+            this.Hide();
+            checkBooking.ShowDialog();
+            this.Show();
+        }
     }
 }

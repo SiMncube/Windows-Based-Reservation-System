@@ -33,6 +33,8 @@ namespace WindowsFormsApp1
             this.signUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +66,26 @@ namespace WindowsFormsApp1
             // 
             // bookingToolStripMenuItem
             // 
+            this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeBookingToolStripMenuItem,
+            this.checkBookingToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.bookingToolStripMenuItem.Text = "Booking";
+            // 
+            // makeBookingToolStripMenuItem
+            // 
+            this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.makeBookingToolStripMenuItem.Text = "Make Booking";
+            this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
+            // 
+            // checkBookingToolStripMenuItem
+            // 
+            this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.checkBookingToolStripMenuItem.Text = "Check Booking";
+            this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -91,5 +110,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem signUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem makeBookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkBookingToolStripMenuItem;
     }
 }
