@@ -157,7 +157,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form7";
-            this.Text = "Form7";
+            this.Text = "Payment";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

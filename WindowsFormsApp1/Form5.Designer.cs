@@ -39,12 +39,12 @@ namespace WindowsFormsApp1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -161,6 +161,17 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(522, 519);
             this.panel1.TabIndex = 26;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(-3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 18);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "MakeBooking";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,17 +223,6 @@ namespace WindowsFormsApp1
             this.label6.TabIndex = 26;
             this.label6.Text = "Amount due";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 18);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "MakeBooking";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +232,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form5";
-            this.Text = "Make Booking";
+            this.Text = "Booking";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -37,18 +37,21 @@ namespace WindowsFormsApp1
             this.checkBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extendStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.galleryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.signUpToolStripMenuItem,
             this.loginToolStripMenuItem,
-            this.bookingToolStripMenuItem});
+            this.bookingToolStripMenuItem,
+            this.galleryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,6 +106,12 @@ namespace WindowsFormsApp1
             this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.extendStayToolStripMenuItem.Text = "Extend Stay";
             // 
+            // galleryToolStripMenuItem
+            // 
+            this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
+            this.galleryToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.galleryToolStripMenuItem.Text = "Gallery";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,7 +122,7 @@ namespace WindowsFormsApp1
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -132,5 +141,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem checkBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem extendStayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem galleryToolStripMenuItem;
     }
 }
