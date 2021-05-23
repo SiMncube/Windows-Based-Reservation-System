@@ -174,8 +174,8 @@ namespace WindowsFormsApp1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Double Room",
-            "Single Room"});
+            "Double Room - R800",
+            "Single Room - 450"});
             this.comboBox1.Location = new System.Drawing.Point(144, 164);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 21);
