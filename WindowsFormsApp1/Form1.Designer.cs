@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makeBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeBookingToolStripMenuItem,
-            this.checkBookingToolStripMenuItem});
+            this.checkBookingToolStripMenuItem,
+            this.modifyBookingToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.bookingToolStripMenuItem.Text = "Booking";
@@ -76,16 +78,22 @@ namespace WindowsFormsApp1
             // makeBookingToolStripMenuItem
             // 
             this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
-            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.makeBookingToolStripMenuItem.Text = "Make Booking";
             this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
             // 
             // checkBookingToolStripMenuItem
             // 
             this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
-            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.checkBookingToolStripMenuItem.Text = "Check Booking";
             this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
+            // 
+            // modifyBookingToolStripMenuItem
+            // 
+            this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
+            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyBookingToolStripMenuItem.Text = "Modify Booking";
             // 
             // Form1
             // 
@@ -112,5 +120,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem makeBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkBookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
     }
 }
