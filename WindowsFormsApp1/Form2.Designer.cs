@@ -413,6 +413,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCus)).EndInit();

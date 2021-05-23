@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
             this.makeBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extendStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@ namespace WindowsFormsApp1
             this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeBookingToolStripMenuItem,
             this.checkBookingToolStripMenuItem,
-            this.modifyBookingToolStripMenuItem});
+            this.modifyBookingToolStripMenuItem,
+            this.extendStayToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.bookingToolStripMenuItem.Text = "Booking";
@@ -93,7 +95,13 @@ namespace WindowsFormsApp1
             // 
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
             this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modifyBookingToolStripMenuItem.Text = "Modify Booking";
+            this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
+            // 
+            // extendStayToolStripMenuItem
+            // 
+            this.extendStayToolStripMenuItem.Name = "extendStayToolStripMenuItem";
+            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extendStayToolStripMenuItem.Text = "Extend Stay";
             // 
             // Form1
             // 
@@ -101,10 +109,12 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -121,5 +131,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem makeBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem extendStayToolStripMenuItem;
     }
 }
