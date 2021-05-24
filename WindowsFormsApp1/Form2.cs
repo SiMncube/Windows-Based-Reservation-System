@@ -40,9 +40,9 @@ namespace WindowsFormsApp1
         {
             taCus.Insert(textBox1.Text,textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,textBox7.Text,textBox8.Text,textBox9.Text,textBox10.Text);
             Form1 login = new Form1();
-            this.Hide();
-            login.ShowDialog();
             this.Close();
+            login.ShowDialog();
+            login.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
