@@ -89,9 +89,9 @@ namespace WindowsFormsApp1
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name *";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -100,9 +100,9 @@ namespace WindowsFormsApp1
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(10, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Surname";
+            this.label2.Text = "Surname *";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -111,9 +111,9 @@ namespace WindowsFormsApp1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Identity No.";
+            this.label3.Text = "Identity No. *";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -122,9 +122,9 @@ namespace WindowsFormsApp1
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(113, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Cellphone no.";
+            this.label4.Text = "Cellphone no. *";
             // 
             // label5
             // 
@@ -132,9 +132,9 @@ namespace WindowsFormsApp1
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(5, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 16);
+            this.label5.Size = new System.Drawing.Size(118, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Email address";
+            this.label5.Text = "Email address *";
             // 
             // label6
             // 
@@ -142,9 +142,9 @@ namespace WindowsFormsApp1
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(5, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.Size = new System.Drawing.Size(86, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Password";
+            this.label6.Text = "Password *";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 16);
+            this.label7.Size = new System.Drawing.Size(91, 16);
             this.label7.TabIndex = 6;
             this.label7.Text = "Street name";
             // 
@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
             this.label8.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.label8.Location = new System.Drawing.Point(2, 122);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 16);
+            this.label8.Size = new System.Drawing.Size(62, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "Surburb";
             // 
@@ -175,7 +175,7 @@ namespace WindowsFormsApp1
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 77);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 16);
+            this.label9.Size = new System.Drawing.Size(34, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "City";
             // 
@@ -185,7 +185,7 @@ namespace WindowsFormsApp1
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 160);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 16);
+            this.label10.Size = new System.Drawing.Size(93, 16);
             this.label10.TabIndex = 9;
             this.label10.Text = "Postal Code";
             // 

@@ -59,9 +59,9 @@ namespace WindowsFormsApp1
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(2, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(165, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Booking Reference";
+            this.label1.Text = "Booking Reference *";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 16);
+            this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Check Booking";
             // 
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 16);
+            this.label3.Size = new System.Drawing.Size(118, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Booking Details";
             // 
