@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extendStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.galleryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,36 +75,44 @@ namespace WindowsFormsApp1
             // makeBookingToolStripMenuItem
             // 
             this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
-            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.makeBookingToolStripMenuItem.Text = "Make Booking";
             this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
             // 
             // checkBookingToolStripMenuItem
             // 
             this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
-            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.checkBookingToolStripMenuItem.Text = "Check Booking";
             this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
             // 
             // modifyBookingToolStripMenuItem
             // 
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
-            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
             this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click_1);
             // 
             // extendStayToolStripMenuItem
             // 
             this.extendStayToolStripMenuItem.Name = "extendStayToolStripMenuItem";
-            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.extendStayToolStripMenuItem.Text = "Extend Stay";
             // 
             // galleryToolStripMenuItem
             // 
+            this.galleryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.picturesToolStripMenuItem});
             this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
             this.galleryToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
             this.galleryToolStripMenuItem.Text = "Gallery";
-            this.galleryToolStripMenuItem.Click += new System.EventHandler(this.galleryToolStripMenuItem_Click);
+            // 
+            // picturesToolStripMenuItem
+            // 
+            this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.picturesToolStripMenuItem.Text = "Pictures";
+            this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
             // 
             // Form8
             // 
@@ -131,5 +140,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem extendStayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem galleryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem picturesToolStripMenuItem;
     }
 }

@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_arrowF_80;
             this.pictureBox2.Location = new System.Drawing.Point(12, 293);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(89, 89);
+            this.pictureBox2.Size = new System.Drawing.Size(89, 85);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_arrow_80;
-            this.pictureBox3.Location = new System.Drawing.Point(1209, 273);
+            this.pictureBox3.Location = new System.Drawing.Point(1209, 293);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(86, 85);
             this.pictureBox3.TabIndex = 26;

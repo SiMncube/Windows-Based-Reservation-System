@@ -48,11 +48,11 @@ namespace WindowsFormsApp1
             this.Show();
         }
 
-        private void galleryToolStripMenuItem_Click(object sender, EventArgs e)
+        private void picturesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 gallery = new Form3();
+            Form3 pics = new Form3();
             this.Hide();
-            gallery.ShowDialog();
+            pics.ShowDialog();
             this.Show();
         }
     }
