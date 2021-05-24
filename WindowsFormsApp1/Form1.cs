@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
             Form2 signup = new Form2();
             this.Hide();
             signup.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

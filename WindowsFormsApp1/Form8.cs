@@ -55,5 +55,13 @@ namespace WindowsFormsApp1
             pics.ShowDialog();
             this.Show();
         }
+
+        private void extendStayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form9 extend = new Form9();
+            this.Hide();
+            extend.ShowDialog();
+            this.Show();
+        }
     }
 }

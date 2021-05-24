@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(396, 133);
+            this.panel1.Location = new System.Drawing.Point(384, 181);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(611, 319);
             this.panel1.TabIndex = 26;
