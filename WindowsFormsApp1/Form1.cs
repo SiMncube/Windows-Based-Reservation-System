@@ -47,5 +47,18 @@ namespace WindowsFormsApp1
             checkBooking.ShowDialog();
             this.Show();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void modifyBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 cancelBooking = new Form4();
+            this.Hide();
+            cancelBooking.ShowDialog();
+            this.Show();
+        }
     }
 }

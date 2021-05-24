@@ -115,6 +115,7 @@ namespace WindowsFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 336);
             this.panel2.TabIndex = 26;
+            this.panel2.Visible = false;
             // 
             // label3
             // 

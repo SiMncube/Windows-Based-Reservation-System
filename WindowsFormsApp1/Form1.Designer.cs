@@ -38,6 +38,7 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extendStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.galleryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@ namespace WindowsFormsApp1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
             this.signUpToolStripMenuItem,
             this.loginToolStripMenuItem,
             this.bookingToolStripMenuItem,
@@ -77,7 +79,7 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem,
             this.extendStayToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
             this.bookingToolStripMenuItem.Text = "Booking";
             // 
             // makeBookingToolStripMenuItem
@@ -99,6 +101,7 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
             this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
+            this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click);
             // 
             // extendStayToolStripMenuItem
             // 
@@ -111,6 +114,13 @@ namespace WindowsFormsApp1
             this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
             this.galleryToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.galleryToolStripMenuItem.Text = "Gallery";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(43, 21);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -142,5 +152,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem extendStayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem galleryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

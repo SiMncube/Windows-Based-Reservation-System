@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panel2.Visible = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
