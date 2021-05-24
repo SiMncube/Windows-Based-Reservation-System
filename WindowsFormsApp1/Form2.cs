@@ -39,10 +39,10 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             taCus.Insert(textBox1.Text,textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,textBox7.Text,textBox8.Text,textBox9.Text,textBox10.Text);
-            Form3 login = new Form3();
+            Form1 login = new Form1();
             this.Hide();
             login.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -74,5 +74,6 @@ namespace WindowsFormsApp1
         {
             textBox7.PasswordChar = '*';
         }
+        
     }
 }

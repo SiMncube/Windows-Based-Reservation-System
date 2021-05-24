@@ -17,48 +17,25 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form8 homePage = new Form8();
+            this.Hide();
+            homePage.ShowDialog();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
             Form2 signup = new Form2();
             this.Hide();
             signup.ShowDialog();
-            this.Show();
-        }
-
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 login = new Form3();
-            this.Hide();
-            login.ShowDialog();
-            this.Show();
-        }
-        private void makeBookingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form5 makebooking = new Form5();
-            this.Hide();
-            makebooking.ShowDialog();
-            this.Show();
-        }
-
-        private void checkBookingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form6 checkBooking = new Form6();
-            this.Hide();
-            checkBooking.ShowDialog();
-            this.Show();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             this.Close();
         }
 
-        private void modifyBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Form4 cancelBooking = new Form4();
-            this.Hide();
-            cancelBooking.ShowDialog();
-            this.Show();
+
         }
     }
 }
