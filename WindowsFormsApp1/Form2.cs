@@ -12,14 +12,64 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+
         public Form2()
         {
             InitializeComponent();
         }
         private bool IsLoginValid()
         {
+            int count = 0;
 
+            if(textBox1.Text.Length < 3)
+            {
+                ChangeColor(textBox1);
+                count++;
+            }
+            if(textBox2.Text.Length < 3)
+            {
+                ChangeColor(textBox2);
+                count++;
+            }
+            if (textBox3.Text.Length != 13 || !textBox3.ToString().All(char.IsDigit))
+            {
+                ChangeColor(textBox3);
+                count++;
+            }
+            if(textBox4.Text.Length != 10 || !textBox4.ToString().All(char.IsDigit))
+            {
+                ChangeColor(textBox4);
+                count++;
+            }
+            if(textBox5.Text.Length < 8)
+            {
+                ChangeColor(textBox5);
+                count++;
+            }
+            if(textBox7.Text.Length < 5)
+            {
+                ChangeColor(textBox7);
+                count++;
+            }
+            if (count > 0)
+            {
+                return false;
+            }
             return true;
+        }
+        private bool RecordsAlreadyExists()
+        {
+            if (textBox5.Text.Length < 8)
+            {
+                return false;
+            }
+            DataRow foundRow = dsCus.Tables["Customer1"].Rows.Find(textBox5.Text.ToString());
+            if (foundRow != null)
+            {
+                label13.Visible = true;
+                return true;
+            }
+            return false;
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -38,11 +88,14 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            taCus.Insert(textBox1.Text,textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,textBox7.Text,textBox8.Text,textBox9.Text,textBox10.Text);
-            Form1 login = new Form1();
-            this.Close();
-            login.ShowDialog();
-            login.Show();
+            if (!RecordsAlreadyExists() && IsLoginValid())
+            {
+                taCus.Insert(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
+                Form1 login = new Form1();
+                this.Close();
+                login.ShowDialog();
+                login.Show();
+            }
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -70,10 +123,18 @@ namespace WindowsFormsApp1
 
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox7.PasswordChar = '*';
+            
         }
-        
+        private void ChangeColor(TextBox textBox)
+        {
+            textBox.BackColor = Color.Red;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
