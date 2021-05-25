@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCus)).BeginInit();
@@ -196,6 +197,7 @@ namespace WindowsFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 22);
             this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -228,6 +230,7 @@ namespace WindowsFormsApp1
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(194, 22);
             this.textBox5.TabIndex = 14;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -244,7 +247,6 @@ namespace WindowsFormsApp1
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(194, 22);
             this.textBox7.TabIndex = 16;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
@@ -436,6 +438,7 @@ namespace WindowsFormsApp1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBox5);
@@ -482,6 +485,17 @@ namespace WindowsFormsApp1
             this.label14.Size = new System.Drawing.Size(95, 13);
             this.label14.TabIndex = 20;
             this.label14.Text = "Address Details";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(201, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(190, 16);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Login details already exist";
+            this.label13.Visible = false;
             // 
             // Form2
             // 
@@ -558,5 +572,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

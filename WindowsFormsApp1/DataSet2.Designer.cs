@@ -279,8 +279,6 @@ namespace WindowsFormsApp1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Customer1DataTable : global::System.Data.TypedTableBase<Customer1Row> {
             
-            private global::System.Data.DataColumn columnCustID;
-            
             private global::System.Data.DataColumn columnCustName;
             
             private global::System.Data.DataColumn columnCustSurname;
@@ -332,14 +330,6 @@ namespace WindowsFormsApp1 {
             protected Customer1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CustIDColumn {
-                get {
-                    return this.columnCustID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -462,7 +452,6 @@ namespace WindowsFormsApp1 {
             public Customer1Row AddCustomer1Row(string CustName, string CustSurname, string ID_Number, string CellPhone_No, string Email_Address, string Password, string StreetName, string Suburb, string City, string PostalCode) {
                 Customer1Row rowCustomer1Row = ((Customer1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         CustName,
                         CustSurname,
                         ID_Number,
@@ -480,9 +469,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Customer1Row FindByCustID(int CustID) {
+            public Customer1Row FindByEmail_Address(string Email_Address) {
                 return ((Customer1Row)(this.Rows.Find(new object[] {
-                            CustID})));
+                            Email_Address})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -502,7 +491,6 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnCustID = base.Columns["CustID"];
                 this.columnCustName = base.Columns["CustName"];
                 this.columnCustSurname = base.Columns["CustSurname"];
                 this.columnID_Number = base.Columns["ID_Number"];
@@ -518,8 +506,6 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnCustID = new global::System.Data.DataColumn("CustID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustID);
                 this.columnCustName = new global::System.Data.DataColumn("CustName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustName);
                 this.columnCustSurname = new global::System.Data.DataColumn("CustSurname", typeof(string), null, global::System.Data.MappingType.Element);
@@ -541,13 +527,7 @@ namespace WindowsFormsApp1 {
                 this.columnPostalCode = new global::System.Data.DataColumn("PostalCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPostalCode);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCustID}, true));
-                this.columnCustID.AutoIncrement = true;
-                this.columnCustID.AutoIncrementSeed = -1;
-                this.columnCustID.AutoIncrementStep = -1;
-                this.columnCustID.AllowDBNull = false;
-                this.columnCustID.ReadOnly = true;
-                this.columnCustID.Unique = true;
+                                this.columnEmail_Address}, true));
                 this.columnCustName.AllowDBNull = false;
                 this.columnCustName.MaxLength = 50;
                 this.columnCustSurname.AllowDBNull = false;
@@ -557,6 +537,7 @@ namespace WindowsFormsApp1 {
                 this.columnCellPhone_No.AllowDBNull = false;
                 this.columnCellPhone_No.MaxLength = 10;
                 this.columnEmail_Address.AllowDBNull = false;
+                this.columnEmail_Address.Unique = true;
                 this.columnEmail_Address.MaxLength = 50;
                 this.columnPassword.AllowDBNull = false;
                 this.columnPassword.MaxLength = 50;
@@ -702,17 +683,6 @@ namespace WindowsFormsApp1 {
             internal Customer1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableCustomer1 = ((Customer1DataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int CustID {
-                get {
-                    return ((int)(this[this.tableCustomer1.CustIDColumn]));
-                }
-                set {
-                    this[this.tableCustomer1.CustIDColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1053,7 +1023,6 @@ namespace WindowsFormsApp1.DataSet2TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Customer1";
-            tableMapping.ColumnMappings.Add("CustID", "CustID");
             tableMapping.ColumnMappings.Add("CustName", "CustName");
             tableMapping.ColumnMappings.Add("CustSurname", "CustSurname");
             tableMapping.ColumnMappings.Add("ID_Number", "ID_Number");
@@ -1067,9 +1036,8 @@ namespace WindowsFormsApp1.DataSet2TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Customer1] WHERE (([CustID] = @Original_CustID) AND ([CustName] = @Original_CustName) AND ([CustSurname] = @Original_CustSurname) AND ([ID_Number] = @Original_ID_Number) AND ([CellPhone_No] = @Original_CellPhone_No) AND ([Email_Address] = @Original_Email_Address) AND ([Password] = @Original_Password) AND ((@IsNull_StreetName = 1 AND [StreetName] IS NULL) OR ([StreetName] = @Original_StreetName)) AND ((@IsNull_Suburb = 1 AND [Suburb] IS NULL) OR ([Suburb] = @Original_Suburb)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostalCode = 1 AND [PostalCode] IS NULL) OR ([PostalCode] = @Original_PostalCode)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Customer1] WHERE (([CustName] = @Original_CustName) AND ([CustSurname] = @Original_CustSurname) AND ([ID_Number] = @Original_ID_Number) AND ([CellPhone_No] = @Original_CellPhone_No) AND ([Email_Address] = @Original_Email_Address) AND ([Password] = @Original_Password) AND ((@IsNull_StreetName = 1 AND [StreetName] IS NULL) OR ([StreetName] = @Original_StreetName)) AND ((@IsNull_Suburb = 1 AND [Suburb] IS NULL) OR ([Suburb] = @Original_Suburb)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostalCode = 1 AND [PostalCode] IS NULL) OR ([PostalCode] = @Original_PostalCode)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustSurname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Number", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1086,8 +1054,8 @@ namespace WindowsFormsApp1.DataSet2TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostalCode", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostalCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Customer1] ([CustName], [CustSurname], [ID_Number], [CellPhone_No], [Email_Address], [Password], [StreetName], [Suburb], [City], [PostalCode]) VALUES (@CustName, @CustSurname, @ID_Number, @CellPhone_No, @Email_Address, @Password, @StreetName, @Suburb, @City, @PostalCode);
-SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, StreetName, Suburb, City, PostalCode FROM Customer1 WHERE (CustID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Customer1] ([CustName], [CustSurname], [ID_Number], [CellPhone_No], [Email_Address], [Password], [StreetName], [Suburb], [City], [PostalCode]) VALUES (@CustName, @CustSurname, @ID_Number, @CellPhone_No, @Email_Address, @Password, @StreetName, @Suburb, @City, @PostalCode);
+SELECT CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, StreetName, Suburb, City, PostalCode FROM Customer1 WHERE (Email_Address = @Email_Address)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1101,8 +1069,8 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostalCode", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostalCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Customer1] SET [CustName] = @CustName, [CustSurname] = @CustSurname, [ID_Number] = @ID_Number, [CellPhone_No] = @CellPhone_No, [Email_Address] = @Email_Address, [Password] = @Password, [StreetName] = @StreetName, [Suburb] = @Suburb, [City] = @City, [PostalCode] = @PostalCode WHERE (([CustID] = @Original_CustID) AND ([CustName] = @Original_CustName) AND ([CustSurname] = @Original_CustSurname) AND ([ID_Number] = @Original_ID_Number) AND ([CellPhone_No] = @Original_CellPhone_No) AND ([Email_Address] = @Original_Email_Address) AND ([Password] = @Original_Password) AND ((@IsNull_StreetName = 1 AND [StreetName] IS NULL) OR ([StreetName] = @Original_StreetName)) AND ((@IsNull_Suburb = 1 AND [Suburb] IS NULL) OR ([Suburb] = @Original_Suburb)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostalCode = 1 AND [PostalCode] IS NULL) OR ([PostalCode] = @Original_PostalCode)));
-SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, StreetName, Suburb, City, PostalCode FROM Customer1 WHERE (CustID = @CustID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Customer1] SET [CustName] = @CustName, [CustSurname] = @CustSurname, [ID_Number] = @ID_Number, [CellPhone_No] = @CellPhone_No, [Email_Address] = @Email_Address, [Password] = @Password, [StreetName] = @StreetName, [Suburb] = @Suburb, [City] = @City, [PostalCode] = @PostalCode WHERE (([CustName] = @Original_CustName) AND ([CustSurname] = @Original_CustSurname) AND ([ID_Number] = @Original_ID_Number) AND ([CellPhone_No] = @Original_CellPhone_No) AND ([Email_Address] = @Original_Email_Address) AND ([Password] = @Original_Password) AND ((@IsNull_StreetName = 1 AND [StreetName] IS NULL) OR ([StreetName] = @Original_StreetName)) AND ((@IsNull_Suburb = 1 AND [Suburb] IS NULL) OR ([Suburb] = @Original_Suburb)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostalCode = 1 AND [PostalCode] IS NULL) OR ([PostalCode] = @Original_PostalCode)));
+SELECT CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, StreetName, Suburb, City, PostalCode FROM Customer1 WHERE (Email_Address = @Email_Address)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1114,7 +1082,6 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Suburb", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Suburb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostalCode", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostalCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustSurname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Number", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1129,7 +1096,6 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PostalCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostalCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostalCode", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostalCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CustID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1145,8 +1111,8 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pas" +
-                "sword, StreetName, Suburb, City, PostalCode FROM dbo.Customer1";
+            this._commandCollection[0].CommandText = "SELECT CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, S" +
+                "treetName, Suburb, City, PostalCode FROM Customer1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1207,75 +1173,74 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CustID, string Original_CustName, string Original_CustSurname, string Original_ID_Number, string Original_CellPhone_No, string Original_Email_Address, string Original_Password, string Original_StreetName, string Original_Suburb, string Original_City, string Original_PostalCode) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CustID));
+        public virtual int Delete(string Original_CustName, string Original_CustSurname, string Original_ID_Number, string Original_CellPhone_No, string Original_Email_Address, string Original_Password, string Original_StreetName, string Original_Suburb, string Original_City, string Original_PostalCode) {
             if ((Original_CustName == null)) {
                 throw new global::System.ArgumentNullException("Original_CustName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CustName));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_CustName));
             }
             if ((Original_CustSurname == null)) {
                 throw new global::System.ArgumentNullException("Original_CustSurname");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CustSurname));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CustSurname));
             }
             if ((Original_ID_Number == null)) {
                 throw new global::System.ArgumentNullException("Original_ID_Number");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ID_Number));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ID_Number));
             }
             if ((Original_CellPhone_No == null)) {
                 throw new global::System.ArgumentNullException("Original_CellPhone_No");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_CellPhone_No));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_CellPhone_No));
             }
             if ((Original_Email_Address == null)) {
                 throw new global::System.ArgumentNullException("Original_Email_Address");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Email_Address));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Email_Address));
             }
             if ((Original_Password == null)) {
                 throw new global::System.ArgumentNullException("Original_Password");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Password));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Password));
             }
             if ((Original_StreetName == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_StreetName));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_StreetName));
             }
             if ((Original_Suburb == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Suburb));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Suburb));
             }
             if ((Original_City == null)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_City));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_City));
             }
             if ((Original_PostalCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_PostalCode));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_PostalCode));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1389,7 +1354,6 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
                     string Suburb, 
                     string City, 
                     string PostalCode, 
-                    int Original_CustID, 
                     string Original_CustName, 
                     string Original_CustSurname, 
                     string Original_ID_Number, 
@@ -1399,8 +1363,7 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
                     string Original_StreetName, 
                     string Original_Suburb, 
                     string Original_City, 
-                    string Original_PostalCode, 
-                    int CustID) {
+                    string Original_PostalCode) {
             if ((CustName == null)) {
                 throw new global::System.ArgumentNullException("CustName");
             }
@@ -1461,76 +1424,74 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(PostalCode));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_CustID));
             if ((Original_CustName == null)) {
                 throw new global::System.ArgumentNullException("Original_CustName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CustName));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_CustName));
             }
             if ((Original_CustSurname == null)) {
                 throw new global::System.ArgumentNullException("Original_CustSurname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_CustSurname));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CustSurname));
             }
             if ((Original_ID_Number == null)) {
                 throw new global::System.ArgumentNullException("Original_ID_Number");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ID_Number));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ID_Number));
             }
             if ((Original_CellPhone_No == null)) {
                 throw new global::System.ArgumentNullException("Original_CellPhone_No");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CellPhone_No));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_CellPhone_No));
             }
             if ((Original_Email_Address == null)) {
                 throw new global::System.ArgumentNullException("Original_Email_Address");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Email_Address));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Email_Address));
             }
             if ((Original_Password == null)) {
                 throw new global::System.ArgumentNullException("Original_Password");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Password));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Password));
             }
             if ((Original_StreetName == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_StreetName));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_StreetName));
             }
             if ((Original_Suburb == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Suburb));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Suburb));
             }
             if ((Original_City == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_City));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_City));
             }
             if ((Original_PostalCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_PostalCode));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_PostalCode));
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(CustID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1556,13 +1517,11 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
                     string CustSurname, 
                     string ID_Number, 
                     string CellPhone_No, 
-                    string Email_Address, 
                     string Password, 
                     string StreetName, 
                     string Suburb, 
                     string City, 
                     string PostalCode, 
-                    int Original_CustID, 
                     string Original_CustName, 
                     string Original_CustSurname, 
                     string Original_ID_Number, 
@@ -1573,7 +1532,7 @@ SELECT CustID, CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Pa
                     string Original_Suburb, 
                     string Original_City, 
                     string Original_PostalCode) {
-            return this.Update(CustName, CustSurname, ID_Number, CellPhone_No, Email_Address, Password, StreetName, Suburb, City, PostalCode, Original_CustID, Original_CustName, Original_CustSurname, Original_ID_Number, Original_CellPhone_No, Original_Email_Address, Original_Password, Original_StreetName, Original_Suburb, Original_City, Original_PostalCode, Original_CustID);
+            return this.Update(CustName, CustSurname, ID_Number, CellPhone_No, Original_Email_Address, Password, StreetName, Suburb, City, PostalCode, Original_CustName, Original_CustSurname, Original_ID_Number, Original_CellPhone_No, Original_Email_Address, Original_Password, Original_StreetName, Original_Suburb, Original_City, Original_PostalCode);
         }
     }
     
