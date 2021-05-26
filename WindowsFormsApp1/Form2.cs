@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
         }
         private bool RecordsAlreadyExists()
         {
+            taCus.Fill(dsCus.Customer1);
             if (textBox5.Text.Length < 8)
             {
                 return false;
