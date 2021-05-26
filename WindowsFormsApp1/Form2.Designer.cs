@@ -410,6 +410,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button1;
+
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
