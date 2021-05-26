@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            customerTableAdapter.Fill(fullDatabase.Customer);
         }
         private bool IsLoginValid()
         {
@@ -56,6 +57,18 @@ namespace WindowsFormsApp1
             }
             return true;
         }
+        private bool RecordsAlreadyExists()
+        {
+            if (textBox5.Text.Length < 8)
+                return false;
+            DataRow foundRow = fullDatabase.Tables["Customer"].Rows.Find(textBox5.Text.ToLower());
+            if (foundRow != null)
+            {
+                label13.Visible = true;
+                return true;
+            }
+            return false;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -63,12 +76,13 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(IsLoginValid())
+            if(!RecordsAlreadyExists() && IsLoginValid())
             {
-                Form1 login = new Form1();
-                this.Close();
-                login.ShowDialog();
-                login.Show();
+                customerTableAdapter.Insert(textBox5.Text.ToLower(), textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox7.Text, textBox8.Text, textBox6.Text, textBox9.Text, textBox10.Text);
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel4.Visible = true;
             }
         }
         private void ChangeColor(TextBox textBox)
@@ -90,6 +104,20 @@ namespace WindowsFormsApp1
                     return false;
             }
             return true;
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form8 homePage = new Form8();
+            this.Hide();
+            homePage.ShowDialog();
+            this.Close();
         }
     }
 }

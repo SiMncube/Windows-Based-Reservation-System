@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,10 +59,31 @@ namespace WindowsFormsApp1
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fullDatabase = new WindowsFormsApp1.fullDatabase();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.emailIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,7 +128,7 @@ namespace WindowsFormsApp1
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(204, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 22);
+            this.textBox1.Size = new System.Drawing.Size(208, 22);
             this.textBox1.TabIndex = 10;
             // 
             // label2
@@ -124,7 +146,7 @@ namespace WindowsFormsApp1
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(204, 75);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 22);
+            this.textBox2.Size = new System.Drawing.Size(208, 22);
             this.textBox2.TabIndex = 11;
             // 
             // label3
@@ -152,7 +174,7 @@ namespace WindowsFormsApp1
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(204, 119);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(194, 22);
+            this.textBox3.Size = new System.Drawing.Size(208, 22);
             this.textBox3.TabIndex = 12;
             // 
             // textBox4
@@ -160,7 +182,7 @@ namespace WindowsFormsApp1
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(204, 157);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(194, 22);
+            this.textBox4.Size = new System.Drawing.Size(208, 22);
             this.textBox4.TabIndex = 13;
             // 
             // panel3
@@ -213,7 +235,7 @@ namespace WindowsFormsApp1
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(204, 31);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(194, 22);
+            this.textBox5.Size = new System.Drawing.Size(208, 22);
             this.textBox5.TabIndex = 14;
             // 
             // label6
@@ -231,7 +253,7 @@ namespace WindowsFormsApp1
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(204, 73);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(194, 22);
+            this.textBox7.Size = new System.Drawing.Size(208, 22);
             this.textBox7.TabIndex = 16;
             // 
             // panel2
@@ -240,6 +262,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
@@ -248,7 +271,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.textBox10);
             this.panel2.Location = new System.Drawing.Point(114, 335);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(429, 202);
+            this.panel2.Size = new System.Drawing.Size(429, 295);
             this.panel2.TabIndex = 28;
             // 
             // label14
@@ -276,7 +299,7 @@ namespace WindowsFormsApp1
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(204, 32);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(194, 22);
+            this.textBox8.Size = new System.Drawing.Size(208, 22);
             this.textBox8.TabIndex = 17;
             // 
             // label10
@@ -316,7 +339,7 @@ namespace WindowsFormsApp1
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(204, 71);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(194, 22);
+            this.textBox6.Size = new System.Drawing.Size(208, 22);
             this.textBox6.TabIndex = 15;
             // 
             // textBox9
@@ -324,7 +347,7 @@ namespace WindowsFormsApp1
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(204, 116);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(194, 22);
+            this.textBox9.Size = new System.Drawing.Size(208, 22);
             this.textBox9.TabIndex = 18;
             // 
             // textBox10
@@ -332,13 +355,13 @@ namespace WindowsFormsApp1
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(204, 154);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(194, 22);
+            this.textBox10.Size = new System.Drawing.Size(208, 22);
             this.textBox10.TabIndex = 19;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.15F);
-            this.button1.Location = new System.Drawing.Point(114, 596);
+            this.button1.Location = new System.Drawing.Point(3, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 59);
             this.button1.TabIndex = 29;
@@ -356,13 +379,140 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // fullDatabase
+            // 
+            this.fullDatabase.DataSetName = "fullDatabase";
+            this.fullDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.fullDatabase;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.emailIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn,
+            this.idNumberDataGridViewTextBoxColumn,
+            this.cellNumberDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.streetNameDataGridViewTextBoxColumn,
+            this.suburbDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn,
+            this.postalCodeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.customerBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(549, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(725, 296);
+            this.dataGridView1.TabIndex = 32;
+            // 
+            // emailIDDataGridViewTextBoxColumn
+            // 
+            this.emailIDDataGridViewTextBoxColumn.DataPropertyName = "emailID";
+            this.emailIDDataGridViewTextBoxColumn.HeaderText = "emailID";
+            this.emailIDDataGridViewTextBoxColumn.Name = "emailIDDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            // 
+            // idNumberDataGridViewTextBoxColumn
+            // 
+            this.idNumberDataGridViewTextBoxColumn.DataPropertyName = "idNumber";
+            this.idNumberDataGridViewTextBoxColumn.HeaderText = "idNumber";
+            this.idNumberDataGridViewTextBoxColumn.Name = "idNumberDataGridViewTextBoxColumn";
+            // 
+            // cellNumberDataGridViewTextBoxColumn
+            // 
+            this.cellNumberDataGridViewTextBoxColumn.DataPropertyName = "cellNumber";
+            this.cellNumberDataGridViewTextBoxColumn.HeaderText = "cellNumber";
+            this.cellNumberDataGridViewTextBoxColumn.Name = "cellNumberDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // streetNameDataGridViewTextBoxColumn
+            // 
+            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "streetName";
+            this.streetNameDataGridViewTextBoxColumn.HeaderText = "streetName";
+            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
+            // 
+            // suburbDataGridViewTextBoxColumn
+            // 
+            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "suburb";
+            this.suburbDataGridViewTextBoxColumn.HeaderText = "suburb";
+            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "postalCode";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "postalCode";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Location = new System.Drawing.Point(558, 335);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(716, 202);
+            this.panel4.TabIndex = 33;
+            this.panel4.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(31, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(682, 20);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "You details have been captured.. You may proceed to make a booking";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(241, 122);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(221, 54);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Procced to booking";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 667);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -376,6 +526,11 @@ namespace WindowsFormsApp1
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -412,5 +567,22 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private fullDatabase fullDatabase;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cellNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn streetNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn suburbDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label15;
     }
 }
