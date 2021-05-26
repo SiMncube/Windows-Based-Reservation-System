@@ -31,12 +31,12 @@ namespace WindowsFormsApp1
                 ChangeColor(textBox2);
                 count++;
             }
-            if (textBox3.Text.Length != 13 || !textBox3.ToString().All(char.IsDigit))
+            if (textBox3.Text.Length != 13 || !isAllDigits(textBox3))
             {
                 ChangeColor(textBox3);
                 count++;
             }
-            if(textBox4.Text.Length != 10 || !textBox4.ToString().All(char.IsDigit))
+            if(textBox4.Text.Length != 10 || !isAllDigits(textBox4))
             {
                 ChangeColor(textBox4);
                 count++;
@@ -62,7 +62,6 @@ namespace WindowsFormsApp1
             taCus.Fill(dsCus.Customer1);
             if (textBox5.Text.Length < 8)
             {
-                label13.Visible = true;
                 return false;
             }
             DataRow foundRow = dsCus.Tables["Customer1"].Rows.Find(textBox5.Text);
@@ -90,7 +89,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!RecordsAlreadyExists())
+            if (!RecordsAlreadyExists() && IsLoginValid())
             {
                 taCus.Insert(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
                 Form1 login = new Form1();
@@ -137,6 +136,22 @@ namespace WindowsFormsApp1
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             
+        }
+        private bool isDigit(char ch)
+        {
+            if (ch >= '0' && ch <= '9')
+                return true;
+            return false;
+        }
+        private bool isAllDigits(TextBox textBox)
+        {
+            String s = textBox.Text.ToString();
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (!isDigit(s[i]))
+                    return false;
+            }
+            return true;
         }
     }
 }
