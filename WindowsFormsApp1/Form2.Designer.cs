@@ -63,10 +63,10 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsCus = new WindowsFormsApp1.DataSet2();
+            this.dsCus = new WindowsFormsApp1.fullDatabase();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.taCus = new WindowsFormsApp1.DataSet2TableAdapters.Customer1TableAdapter();
+            this.taCus = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -563,8 +563,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource customer1BindingSource;
-        private DataSet2 dsCus;
-        private DataSet2TableAdapters.Customer1TableAdapter taCus;
+        private fullDatabase dsCus;
+        private fullDatabase.CustomerTableAdapter taCus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
