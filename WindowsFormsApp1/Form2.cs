@@ -30,12 +30,12 @@ namespace WindowsFormsApp1
                 ChangeColor(textBox2);
                 count++;
             }
-            if (textBox3.Text.Length != 13 || !textBox3.ToString().All(char.IsDigit))
+            if (textBox3.Text.Length != 13 || !isAllDigit(textBox3))
             {
                 ChangeColor(textBox3);
                 count++;
             }
-            if (textBox4.Text.Length != 10 || !textBox4.ToString().All(char.IsDigit))
+            if (textBox4.Text.Length != 10 || !isAllDigit(textBox4))
             {
                 ChangeColor(textBox4);
                 count++;
@@ -74,6 +74,22 @@ namespace WindowsFormsApp1
         private void ChangeColor(TextBox textBox)
         {
             textBox.BackColor = Color.Red;
+        }
+        private bool isDigit(char ch)
+        {
+            if (ch >= '0' && ch <= '9')
+                return true;
+            return false;
+        }
+        private bool isAllDigit(TextBox textbox)
+        {
+            string s = textbox.Text.ToString();
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (!isDigit(s[i]))
+                    return false;
+            }
+            return true;
         }
     }
 }
