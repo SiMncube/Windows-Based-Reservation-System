@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                 label13.Visible = true;
                 return false;
             }
-            DataRow[] foundRow = dsCus.Tables["Customer1"].Select("Email_Address = " + textBox5.Text,"Password");//.Rows.Find(textBox5.Text);
+            DataRow foundRow = dsCus.Tables["Customer1"].Rows.Find(textBox5.Text);
             if (foundRow != null)
             {
                 label13.Visible = true;
