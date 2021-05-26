@@ -39,10 +39,6 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dsCus = new WindowsFormsApp1.DataSet2();
-            this.taCus = new WindowsFormsApp1.DataSet2TableAdapters.Customer1TableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCus)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,15 +150,6 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // dsCus
-            // 
-            this.dsCus.DataSetName = "DataSet2";
-            this.dsCus.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // taCus
-            // 
-            this.taCus.ClearBeforeFill = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +164,6 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +180,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private DataSet2 dsCus;
-        private DataSet2TableAdapters.Customer1TableAdapter taCus;
     }
 }
