@@ -42,13 +42,6 @@ namespace WindowsFormsApp1
         }
         private bool LoginIsValid()
         {
-            taCus.Fill(dsCus.Customer1);
-            DataRow foundEmail = dsCus.Tables["Customer1"].Rows.Find(textBox1.Text.ToString());
-            if (foundEmail == null)
-            {
-                label5.Visible = true;
-                return false;
-            }
             return true;
         }
 
