@@ -62,9 +62,10 @@ namespace WindowsFormsApp1
             taCus.Fill(dsCus.Customer1);
             if (textBox5.Text.Length < 8)
             {
+                label13.Visible = true;
                 return false;
             }
-            DataRow foundRow = dsCus.Tables["Customer1"].Rows.Find(textBox5.Text.ToString());
+            DataRow[] foundRow = dsCus.Tables["Customer1"].Select("Email_Address = " + textBox5.Text,"Password");//.Rows.Find(textBox5.Text);
             if (foundRow != null)
             {
                 label13.Visible = true;
@@ -89,7 +90,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!RecordsAlreadyExists() && IsLoginValid())
+            if (!RecordsAlreadyExists())
             {
                 taCus.Insert(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
                 Form1 login = new Form1();
