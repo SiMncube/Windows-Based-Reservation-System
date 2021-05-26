@@ -82,7 +82,6 @@ namespace WindowsFormsApp1
             this.label5.TabIndex = 7;
             this.label5.Text = "username incorrect";
             this.label5.Visible = false;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
