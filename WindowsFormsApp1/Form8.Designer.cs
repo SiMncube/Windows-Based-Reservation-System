@@ -75,28 +75,28 @@ namespace WindowsFormsApp1
             // makeBookingToolStripMenuItem
             // 
             this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
-            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.makeBookingToolStripMenuItem.Text = "Make Booking";
             this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
             // 
             // checkBookingToolStripMenuItem
             // 
             this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
-            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.checkBookingToolStripMenuItem.Text = "Check Booking";
             this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
             // 
             // modifyBookingToolStripMenuItem
             // 
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
-            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
             this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click_1);
             // 
             // extendStayToolStripMenuItem
             // 
             this.extendStayToolStripMenuItem.Name = "extendStayToolStripMenuItem";
-            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.extendStayToolStripMenuItem.Text = "Extend Stay";
             this.extendStayToolStripMenuItem.Click += new System.EventHandler(this.extendStayToolStripMenuItem_Click);
             // 

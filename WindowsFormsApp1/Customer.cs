@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Customer
+    public class Customer
     {
-        private string emailAddress;
+        private string emailID;
         private string name;
         private string surname;
         private string idNumber;
         private string cellNumber;
         public Customer(string e, string n, string s, string i, string c)
         {
-            this.emailAddress = e;
+            this.emailID= e;
             this.name = n;
             this.surname = s;
             this.idNumber = i;
             this.cellNumber = c;
         }
-        public string getEmailAddress()
+        public string getEmailID()
         {
-            return this.emailAddress;
+            return this.emailID;
         }
         public string getName()
         {

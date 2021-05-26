@@ -29,8 +29,8 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +39,17 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-
+            this.fullDatabase = new WindowsFormsApp1.fullDatabase();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.panel1.SuspendLayout();
-
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -61,27 +63,17 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(611, 337);
             this.panel1.TabIndex = 26;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(199, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Password Incorrect";
-            this.label6.Visible = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(199, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 20);
+            this.label5.Size = new System.Drawing.Size(217, 20);
             this.label5.TabIndex = 7;
-            this.label5.Text = "username incorrect";
+            this.label5.Text = "Login details are incorrect";
             this.label5.Visible = false;
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label4
             // 
@@ -108,7 +100,7 @@ namespace WindowsFormsApp1
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(203, 66);
+            this.textBox1.Location = new System.Drawing.Point(203, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 26);
             this.textBox1.TabIndex = 2;
@@ -117,7 +109,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 66);
+            this.label1.Location = new System.Drawing.Point(3, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 0;
@@ -152,6 +144,20 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
+            // fullDatabase
+            // 
+            this.fullDatabase.DataSetName = "fullDatabase";
+            this.fullDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.fullDatabase;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +172,8 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,7 +188,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private fullDatabase fullDatabase;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter;
     }
 }
