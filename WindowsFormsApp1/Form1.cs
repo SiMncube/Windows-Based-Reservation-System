@@ -19,10 +19,13 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form8 homePage = new Form8();
-            this.Hide();
-            homePage.ShowDialog();
-            this.Close();
+            if (LoginIsValid())
+            {
+                Form8 homePage = new Form8();
+                this.Hide();
+                homePage.ShowDialog();
+                this.Close();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -34,6 +37,22 @@ namespace WindowsFormsApp1
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private bool LoginIsValid()
+        {
+            taCus.Fill(dsCus.Customer1);
+            DataRow foundEmail = dsCus.Tables["Customer1"].Rows.Find(textBox1.Text.ToString());
+            if (foundEmail == null)
+            {
+                label5.Visible = true;
+                return false;
+            }
+            return true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
