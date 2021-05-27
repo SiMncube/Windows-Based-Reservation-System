@@ -56,21 +56,15 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dateIn = dateTimePicker1.Value.Date;
-                dateOut = dateTimePicker2.Value.Date;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please Select Date", "Invalid Input");
-            }
+
+            dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
 
 
             //checking room availability, conditions that must be true for a valid date input
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
-            
-                //available rooms
+
+            //available rooms
             {
                 int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
                 for (int roomID = 1; roomID <= 15; roomID++)
@@ -109,15 +103,9 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
 
-            try
-            {
-                dateIn = dateTimePicker1.Value.Date;
-                dateOut = dateTimePicker2.Value.Date;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please Select Date", "Invalid Input");
-            }
+            dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
+
             numberOfNights = dateOut.Subtract(dateIn).Days;
             try
             {
