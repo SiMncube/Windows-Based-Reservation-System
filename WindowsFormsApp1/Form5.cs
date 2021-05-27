@@ -20,6 +20,9 @@ namespace WindowsFormsApp1
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
+        ArrayList availableSingleRooms = new ArrayList();
+        ArrayList availableDoubleRooms = new ArrayList();
+
 
         public Form5()
         {
@@ -53,7 +56,54 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dateIn = dateTimePicker1.Value.Date;
+                dateOut = dateTimePicker2.Value.Date;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Select Date", "Invalid Input");
+            }
 
+
+            //checking room availability, conditions that must be true for a valid date input
+            if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
+            
+                //available rooms
+            {
+                int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
+                for (int roomID = 1; roomID <= 15; roomID++)
+                {
+                    bool isRoomAvailable = true;
+                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID.AddDays(1))
+                    {
+                        for (int i = 1; i <= numberOfRecordsInBookedRoom; i++)
+                        {
+                            if ((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
+                               (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))  //the has both method returns the roomID if the record exists
+                            {
+                                isRoomAvailable = false;
+                            }
+                        }
+                        if (!isRoomAvailable)
+                            break;
+                    }
+
+                    if (roomID <= 7)
+                        availableSingleRooms.Add(roomID);
+                    else
+                        availableDoubleRooms.Add(roomID);
+                }
+            }
+            else
+                MessageBox.Show("Your date Input is invalid", "Invalid Input");
+
+
+            MessageBox.Show("Number of Available Single Rooms: " + availableSingleRooms.Count +
+                "\nNumber of Available Double Rooms:" + availableDoubleRooms.Count, "Available Rooms");
+
+            button1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,8 +111,16 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
 
-            dateIn = dateTimePicker1.Value.Date;
-            dateOut = dateTimePicker2.Value.Date;
+
+            try
+            {
+                dateIn = dateTimePicker1.Value.Date;
+                dateOut = dateTimePicker2.Value.Date;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Select Date", "Invalid Input");
+            }
             numberOfNights = dateOut.Subtract(dateIn).Days;
 
             try
@@ -83,46 +141,14 @@ namespace WindowsFormsApp1
             bookingSummaryTableAdapter.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
             textBox1.Text = amountDue.ToString("C");
 
-            string user = currentUser.getEmailID();
-            int summaryID = int.Parse((string)bookingSummaryTableAdapter.getLastRecordID());
+            //string user = currentUser.getEmailID();
             //if (currentUser.getEmailID.Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
+            //int summaryID = (int)bookingSummaryTableAdapter.getLastRecordID();
+            //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
-            //------------------------------------------------adding booking to to booked room record.
-
-            //checking room availability
-            ArrayList availableSingleRooms = new ArrayList();
-            ArrayList availableDoubleRooms = new ArrayList();
-
-            /*conditions that must be true for a valid date input
-            DateTime.Compare(DateTime.Today, dateIn) <= 0
-            DateTime.Compare(DateTime.Today, dateOut) < 0
-            DateTime.Compare(dateIn, dateOut) < 0
-            */
-
-            bookedRoomTableAdapter.
-            //available single rooms
-            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
-            for (int roomID = 1; roomID <= 7; roomID++)
-            {
-                bool isRoomAvailable = true;
-                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID.AddDays(1))
-                {
-                    for (int i = 1; i <= numberOfRecordsInBookedRoom; i++)
-                    {
-                        if()
-                        if (bookedRoomTableAdapter.hasBoth(roomID,dateID) > 0) //the has both method returns the roomID if the record exists
-                            isRoomAvailable = false;
-                    }
-                    if (!isRoomAvailable)
-                        break;
-                }
-                availableSingleRooms.Add(roomID);
-            }
-
-            MessageBox.Show("Number of Available Single Rooms: " + availableSingleRooms.Count +
-                "\nNumber of Available Double Rooms:" + availableDoubleRooms.Count, "Available Rooms");
+            //adding booking to to booked room record.
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -244,5 +270,9 @@ namespace WindowsFormsApp1
 
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
