@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             DateTime.Compare(dateIn, dateOut) < 0
             */
 
-
+            bookedRoomTableAdapter.
             //available single rooms
             int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
             for (int roomID = 1; roomID <= 7; roomID++)
@@ -111,7 +111,8 @@ namespace WindowsFormsApp1
                 {
                     for (int i = 1; i <= numberOfRecordsInBookedRoom; i++)
                     {
-                        if ()
+                        if()
+                        if (bookedRoomTableAdapter.hasBoth(roomID,dateID) > 0) //the has both method returns the roomID if the record exists
                             isRoomAvailable = false;
                     }
                     if (!isRoomAvailable)

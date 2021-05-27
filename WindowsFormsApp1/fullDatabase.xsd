@@ -353,6 +353,16 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)</Comma
               <Mapping SourceColumn="roomID" DataSetColumn="roomID" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="group7.dbo.BookedRoom" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="hasBoth" Modifier="Public" Name="hasBoth" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="hasBoth">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select summaryID
+from BookedRoom
+where dateID = '2021-05-28' and roomID = 1;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="numberOfRecords" Modifier="Public" Name="numberOfRecords" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="numberOfRecords">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
