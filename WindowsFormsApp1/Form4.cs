@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);
+            paymentTableAdapter1.Fill(fullDatabase.Payment);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -47,30 +48,90 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(bookingExist(textBox1.Text))
+            if (bookingIsCancelled(textBox1.Text))
+            {
+                label5.Visible = true;
+                label7.Visible = false;
+                label4.Visible = false;
+                label6.Visible = false;
+            }
+            else if(bookingExist(textBox1.Text))
             {
                 label4.Visible = true;
+                label6.Visible = true;
+                label7.Visible = false;
                 label5.Visible = false;
             }
             else
             {
-                label5.Visible = true;
+                label7.Visible = true;
                 label4.Visible = false;
+                label6.Visible = false;
+                label5.Visible = false;
             }
         }
         private bool bookingExist(string summaryID)
         {
-            
+
             for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
             {
                 if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
                 {
-                    fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Canceled";
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Cancelled";
+                    bookingSummaryTableAdapter.Update(fullDatabase.BookingSummary);
+                    processRefund(summaryID);
                     return true;
                 }
-
             }
             return false;
+        }
+        private string calculateAmountDue(string s)
+        {           
+            double due = double.Parse(s) * 0.5;
+            return due + "";
+        }
+        private void processRefund(string summaryID)
+        {
+            for (int i = 0; i < fullDatabase.Payment.Rows.Count; i++)
+            {
+                if (fullDatabase.Tables["Payment"].Rows[i]["summaryID"].ToString() == summaryID)
+                {
+                    string newAmount = calculateAmountDue(fullDatabase.Tables["Payment"].Rows[i]["amountDue"].ToString());
+                    string typeOfPayment = fullDatabase.Tables["Payment"].Rows[i]["typeOfPayment"].ToString();
+                    paymentTableAdapter1.Insert(DateTime.Now, "-"+newAmount, int.Parse(summaryID), typeOfPayment);
+                    label6.Text += "R " + newAmount;
+                    paymentTableAdapter1.Fill(fullDatabase.Payment);
+                    break;
+                }
+                
+            }
+        }
+        private bool bookingIsCancelled(string summaryID)
+        {
+            for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
+                {
+                    if (fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString().Equals("Cancelled"))
+                        return true;
+                    return false;
+                }
+            }
+            return false;
+        }
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
