@@ -111,7 +111,6 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
 
-
             try
             {
                 dateIn = dateTimePicker1.Value.Date;
@@ -122,7 +121,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Please Select Date", "Invalid Input");
             }
             numberOfNights = dateOut.Subtract(dateIn).Days;
-
             try
             {
                 int numberOfSingleRooms = int.Parse(textBox3.Text);
