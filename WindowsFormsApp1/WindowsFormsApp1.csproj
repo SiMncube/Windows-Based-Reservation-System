@@ -100,6 +100,9 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="fullDatabase.cs">
+      <DependentUpon>fullDatabase.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fullDatabase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

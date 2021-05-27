@@ -277,7 +277,29 @@ SELECT roomTypeID, roomPrice, description, numberOfPeople, status FROM RoomType 
               <Mapping SourceColumn="numberOfPeople" DataSetColumn="numberOfPeople" />
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="group7.dbo.RoomType" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getDoubleRoomPrice" Modifier="Public" Name="getDoubleRoomPrice" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getDoubleRoomPrice">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select roomPrice
+from RoomType
+where roomTypeID = 11;
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="group7.dbo.RoomType" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getSingleRoomPrice" Modifier="Public" Name="getSingleRoomPrice" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getSingleRoomPrice">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select roomPrice
+from RoomType
+where roomTypeID = 1;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BookedRoomTableAdapter" GeneratorDataComponentClassName="BookedRoomTableAdapter" Name="BookedRoom" UserDataComponentName="BookedRoomTableAdapter">
             <MainSource>
@@ -412,7 +434,18 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
               <Mapping SourceColumn="amountDue" DataSetColumn="amountDue" />
               <Mapping SourceColumn="numberOfNights" DataSetColumn="numberOfNights" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="group7.dbo.BookingSummary" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getLastRecordID" Modifier="Public" Name="getLastRecordID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getLastRecordID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select summaryID
+from BookingSummary
+where summaryID = (select max(summaryID) from BookingSummary);</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

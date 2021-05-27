@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         DateTime dateIn;
         DateTime dateOut;
         int numberOfNights;
-        string bookingMethod = "IntenalTest";
+        string bookingMethod = "Online";
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
@@ -52,20 +52,32 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             int summaryID;
+            double amountDueForSingleRooms;
+            double amountDueForDoubleRooms;
 
+            try
+            {
+                int numberOfSingleRooms = int.Parse(textBox3.Text);
+                int numberOfDoubleRooms = int.Parse(textBox4.Text);
 
+                amountDueForSingleRooms = numberOfSingleRooms * double.Parse(roomTypeTableAdapter.getSingleRoomPrice());
+                amountDueForDoubleRooms = numberOfDoubleRooms * double.Parse((string)roomTypeTableAdapter.getDoubleRoomPrice());
+
+                amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid input", "Error");
+            }
 
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
             bookingSummaryTableAdapter.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
 
+            //if (currentUser.getEmailID.Equals("2160"))
+            //   bookingMethod = "Admin - Sihle";
 
-            int numberOfSingleRooms = int.Parse(textBox3.Text);
-            int numberOfDoubleRooms = int.Parse(textBox4.Text);
-
-            double amountDueForSingleRooms = numberOfSingleRooms;
-            double amountDueForDoubleRooms = numberOfSingleRooms;
             textBox1.Text = amountDue.ToString("C");
         }
 
