@@ -42,9 +42,23 @@ namespace WindowsFormsApp1
             this.fullDatabase = new WindowsFormsApp1.fullDatabase();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.emailIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,9 +72,9 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(384, 181);
+            this.panel1.Location = new System.Drawing.Point(337, 408);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 337);
+            this.panel1.Size = new System.Drawing.Size(535, 252);
             this.panel1.TabIndex = 26;
             // 
             // label5
@@ -80,7 +94,7 @@ namespace WindowsFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(8, 230);
+            this.label4.Location = new System.Drawing.Point(3, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(378, 20);
             this.label4.TabIndex = 6;
@@ -100,7 +114,7 @@ namespace WindowsFormsApp1
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(203, 76);
+            this.textBox1.Location = new System.Drawing.Point(203, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 26);
             this.textBox1.TabIndex = 2;
@@ -109,7 +123,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 78);
+            this.label1.Location = new System.Drawing.Point(4, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 0;
@@ -118,7 +132,7 @@ namespace WindowsFormsApp1
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(7, 283);
+            this.button1.Location = new System.Drawing.Point(8, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 51);
             this.button1.TabIndex = 4;
@@ -129,7 +143,7 @@ namespace WindowsFormsApp1
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 149);
+            this.textBox2.Location = new System.Drawing.Point(203, 114);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(300, 26);
             this.textBox2.TabIndex = 3;
@@ -139,7 +153,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 150);
+            this.label2.Location = new System.Drawing.Point(3, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 1;
@@ -159,15 +173,105 @@ namespace WindowsFormsApp1
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.emailIDDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn,
+            this.idNumberDataGridViewTextBoxColumn,
+            this.cellNumberDataGridViewTextBoxColumn,
+            this.streetNameDataGridViewTextBoxColumn,
+            this.suburbDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn,
+            this.postalCodeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.customerBindingSource1;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.Location = new System.Drawing.Point(154, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1044, 390);
+            this.dataGridView1.TabIndex = 28;
+            // 
+            // customerBindingSource1
+            // 
+            this.customerBindingSource1.DataMember = "Customer";
+            this.customerBindingSource1.DataSource = this.fullDatabase;
+            // 
+            // emailIDDataGridViewTextBoxColumn
+            // 
+            this.emailIDDataGridViewTextBoxColumn.DataPropertyName = "emailID";
+            this.emailIDDataGridViewTextBoxColumn.HeaderText = "emailID";
+            this.emailIDDataGridViewTextBoxColumn.Name = "emailIDDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            // 
+            // idNumberDataGridViewTextBoxColumn
+            // 
+            this.idNumberDataGridViewTextBoxColumn.DataPropertyName = "idNumber";
+            this.idNumberDataGridViewTextBoxColumn.HeaderText = "idNumber";
+            this.idNumberDataGridViewTextBoxColumn.Name = "idNumberDataGridViewTextBoxColumn";
+            // 
+            // cellNumberDataGridViewTextBoxColumn
+            // 
+            this.cellNumberDataGridViewTextBoxColumn.DataPropertyName = "cellNumber";
+            this.cellNumberDataGridViewTextBoxColumn.HeaderText = "cellNumber";
+            this.cellNumberDataGridViewTextBoxColumn.Name = "cellNumberDataGridViewTextBoxColumn";
+            // 
+            // streetNameDataGridViewTextBoxColumn
+            // 
+            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "streetName";
+            this.streetNameDataGridViewTextBoxColumn.HeaderText = "streetName";
+            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
+            // 
+            // suburbDataGridViewTextBoxColumn
+            // 
+            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "suburb";
+            this.suburbDataGridViewTextBoxColumn.HeaderText = "suburb";
+            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "postalCode";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "postalCode";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 651);
+            this.ClientSize = new System.Drawing.Size(1356, 672);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -175,6 +279,8 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +299,17 @@ namespace WindowsFormsApp1
         private fullDatabase fullDatabase;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource customerBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cellNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn streetNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn suburbDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
     }
 }

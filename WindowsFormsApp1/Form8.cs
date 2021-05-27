@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             string s = currentUser.getEmailID();
-            label1.Text = "Current logged in user emailID : " + s;
+            label1.Text = "Current logged in user email ID : " + s;
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -84,6 +84,11 @@ namespace WindowsFormsApp1
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
