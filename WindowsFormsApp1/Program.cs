@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1   
-{   public static class currentUser
+{
+    public static class currentUser
     {
         private static string emailID;
         private static int summaryID;
@@ -26,7 +27,7 @@ namespace WindowsFormsApp1
             summaryID = s;
         }
     }
-    
+
     static class Program
     {
         /// <summary>
