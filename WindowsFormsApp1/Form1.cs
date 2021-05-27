@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            customerTableAdapter.Fill(fullDatabase.Customer);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +27,11 @@ namespace WindowsFormsApp1
                 homePage.ShowDialog();
                 this.Close();
             }
+            else
+            {
+                label5.Visible = true;
+            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -38,15 +44,29 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
 
         }
         private bool LoginIsValid()
         {
-
-            return true;
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString() == textBox1.Text)
+                {
+                    currentUser.setEmailID(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString());
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
         {
 
         }
