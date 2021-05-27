@@ -99,10 +99,8 @@ namespace WindowsFormsApp1
             else
                 MessageBox.Show("Your date Input is invalid", "Invalid Input");
 
-
             MessageBox.Show("Number of Available Single Rooms: " + availableSingleRooms.Count +
                 "\nNumber of Available Double Rooms:" + availableDoubleRooms.Count, "Available Rooms");
-
             button1.Enabled = true;
         }
 

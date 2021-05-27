@@ -673,6 +673,10 @@ where summaryID = (select max(summaryID) from BookingSummary);</CommandText>
       <xs:selector xpath=".//mstns:RoomType" />
       <xs:field xpath="mstns:roomTypeID" />
     </xs:unique>
+    <xs:unique name="BookedRoom_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BookedRoom" />
+      <xs:field xpath="mstns:dateID" />
+    </xs:unique>
     <xs:unique name="BookingSummary_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:BookingSummary" />
       <xs:field xpath="mstns:summaryID" />

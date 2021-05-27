@@ -1907,6 +1907,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BookedRoomRow FindBydateID(System.DateTime dateID) {
+                return ((BookedRoomRow)(this.Rows.Find(new object[] {
+                            dateID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 BookedRoomDataTable cln = ((BookedRoomDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1936,7 +1943,10 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnsummaryID);
                 this.columnroomID = new global::System.Data.DataColumn("roomID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnroomID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columndateID}, true));
                 this.columndateID.AllowDBNull = false;
+                this.columndateID.Unique = true;
                 this.columnsummaryID.AllowDBNull = false;
                 this.columnroomID.AllowDBNull = false;
             }
@@ -5294,6 +5304,14 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int summaryID, int roomID, System.DateTime Original_dateID, int Original_summaryID, int Original_roomID) {
+            return this.Update(Original_dateID, summaryID, roomID, Original_dateID, Original_summaryID, Original_roomID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
