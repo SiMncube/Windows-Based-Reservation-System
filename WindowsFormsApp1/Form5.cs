@@ -12,6 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
+        DateTime dateIn;
+        DateTime dateOut;
+        int numberOfNights;
+        string bookingMethod = "IntenalTest";
+        string bookingStatus = "inComplete";
+        double amountDue = 0;
+
+
+        //fullDatabase.BookingSummaryRow currentBooking = new fullDatabase.BookingSummaryRow();
+        //BookingSummaryTableAdapter.insert();
+
+
         public Form5()
         {
             InitializeComponent();
@@ -44,10 +56,20 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form7 paymet = new Form7();
+       
+
+            dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
+            numberOfNights = dateOut.Subtract(dateIn).Days;
+            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+
+           
+            /*
+            Form7 payment = new Form7();
             this.Hide();
-            paymet.ShowDialog();
+            payment.ShowDialog();
             this.Show();
+            */
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -72,6 +94,8 @@ namespace WindowsFormsApp1
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
 
         }
 
@@ -88,6 +112,32 @@ namespace WindowsFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          //dataGridView1.Refresh();
+          //dataGridView1.Refresh();
         }
     }
 }

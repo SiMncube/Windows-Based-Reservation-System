@@ -119,5 +119,15 @@ namespace WindowsFormsApp1
             homePage.ShowDialog();
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void customerBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
