@@ -91,15 +91,11 @@ namespace WindowsFormsApp1
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
-            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
-            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
-            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
-            // TODO: This line of code loads data into the 'fullDatabase1.Payment' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'fullDatabase.Payment' table. You can move, or remove it, as needed.
             this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
-            // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'fullDatabase.BookedRoom' table. You can move, or remove it, as needed.
             this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
-            // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
             this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
 
         }
@@ -185,14 +181,6 @@ namespace WindowsFormsApp1
         }
 
         private void bookingSummaryBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bookingSummaryBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.fullDatabase);
-
-        }
-
-        private void bookingSummaryBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
             this.bookingSummaryBindingSource.EndEdit();
