@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
 {   public static class currentUser
     {
         private static string emailID;
+        private static int summaryID;
         public static string getEmailID()
         {
             return emailID;
@@ -15,6 +16,14 @@ namespace WindowsFormsApp1
         public static void setEmailID(string e)
         {
             emailID = e;
+        }
+        public static int getSummaryID()
+        {
+            return summaryID;
+        }
+        public static void setSummaryID(int s)
+        {
+            summaryID = s;
         }
     }
     
