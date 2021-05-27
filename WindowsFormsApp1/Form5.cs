@@ -61,13 +61,17 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
 
+            dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
+            numberOfNights = dateOut.Subtract(dateIn).Days;
+
             try
             {
                 int numberOfSingleRooms = int.Parse(textBox3.Text);
                 int numberOfDoubleRooms = int.Parse(textBox4.Text);
 
-                amountDueForSingleRooms = numberOfSingleRooms * double.Parse(roomTypeTableAdapter.getSingleRoomPrice());
-                amountDueForDoubleRooms = numberOfDoubleRooms * double.Parse((string)roomTypeTableAdapter.getDoubleRoomPrice());
+                amountDueForSingleRooms = (numberOfSingleRooms * double.Parse(roomTypeTableAdapter.getSingleRoomPrice())) * numberOfNights;
+                amountDueForDoubleRooms = (numberOfDoubleRooms * double.Parse((string)roomTypeTableAdapter.getDoubleRoomPrice())) * numberOfNights;
 
                 amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
             }
@@ -76,9 +80,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Invalid input", "Error");
             }
 
-            dateIn = dateTimePicker1.Value.Date;
-            dateOut = dateTimePicker2.Value.Date;
-            numberOfNights = dateOut.Subtract(dateIn).Days;
             bookingSummaryTableAdapter.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
             textBox1.Text = amountDue.ToString("C");
 
@@ -99,15 +100,28 @@ namespace WindowsFormsApp1
             DateTime.Compare(DateTime.Today, dateOut) < 0
             DateTime.Compare(dateIn, dateOut) < 0
             */
-            
-            /*
-             for each Single rooms in our database  : roomID
-                for (each record in the bookedroom database) : dateID
-                    if (roomId and dateID matches)
-                        break
-             */
-           
 
+
+            //available single rooms
+            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
+            for (int roomID = 1; roomID <= 7; roomID++)
+            {
+                bool isRoomAvailable = true;
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID.AddDays(1))
+                {
+                    for (int i = 1; i <= numberOfRecordsInBookedRoom; i++)
+                    {
+                        if ()
+                            isRoomAvailable = false;
+                    }
+                    if (!isRoomAvailable)
+                        break;
+                }
+                availableSingleRooms.Add(roomID);
+            }
+
+            MessageBox.Show("Number of Available Single Rooms: " + availableSingleRooms.Count +
+                "\nNumber of Available Double Rooms:" + availableDoubleRooms.Count, "Available Rooms");
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -7,9 +7,12 @@
     }
 }
 
-namespace WindowsFormsApp1.fullDatabaseTableAdapters {
-    
-    
+namespace WindowsFormsApp1.fullDatabaseTableAdapters
+{
+    partial class BookedRoomTableAdapter
+    {
+    }
+
     public partial class BookingSummaryTableAdapter {
     }
 }
