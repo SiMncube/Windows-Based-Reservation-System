@@ -15,6 +15,9 @@ namespace WindowsFormsApp1
         public Form8()
         {
             InitializeComponent();
+            string s = currentUser.getEmailID();
+            label1.Text = "Current logged in user emailID : " + s;
+            panel1.Visible = true;
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,6 +70,11 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

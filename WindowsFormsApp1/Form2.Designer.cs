@@ -51,13 +51,13 @@ namespace WindowsFormsApp1
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fullDatabase = new WindowsFormsApp1.fullDatabase();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -74,8 +74,9 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -302,6 +303,17 @@ namespace WindowsFormsApp1
             this.textBox8.Size = new System.Drawing.Size(208, 22);
             this.textBox8.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.15F);
+            this.button1.Location = new System.Drawing.Point(3, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 59);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Sign up";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -357,17 +369,6 @@ namespace WindowsFormsApp1
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(208, 22);
             this.textBox10.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.15F);
-            this.button1.Location = new System.Drawing.Point(3, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 59);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Sign up";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -484,16 +485,6 @@ namespace WindowsFormsApp1
             this.panel4.TabIndex = 33;
             this.panel4.Visible = false;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(31, 50);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(682, 20);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "You details have been captured.. You may proceed to make a booking";
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -504,6 +495,20 @@ namespace WindowsFormsApp1
             this.button2.Text = "Procced to booking";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(31, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(682, 20);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "You details have been captured.. You may proceed to make a booking";
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -584,5 +589,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
     }
 }

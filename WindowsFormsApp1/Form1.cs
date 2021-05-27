@@ -12,7 +12,6 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private Customer currentCust;
         public Form1()
         {
             InitializeComponent();
@@ -55,11 +54,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString() == textBox1.Text)
                 {
-                    this.currentCust = new Customer(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString(),
-                                                fullDatabase.Tables["Customer"].Rows[i]["name"].ToString(),
-                                                fullDatabase.Tables["Customer"].Rows[i]["surname"].ToString(),
-                                                fullDatabase.Tables["Customer"].Rows[i]["idNumber"].ToString(),
-                                                fullDatabase.Tables["Customer"].Rows[i]["cellNumber"].ToString());
+                    currentUser.setEmailID(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString());
                     return true;
                 }
             }
@@ -74,10 +69,6 @@ namespace WindowsFormsApp1
         private void label5_Click_1(object sender, EventArgs e)
         {
 
-        }
-        public Customer currentUser()
-        {
-            return this.currentCust;
         }
     }
 }
