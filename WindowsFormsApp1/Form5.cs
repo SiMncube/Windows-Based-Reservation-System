@@ -94,6 +94,10 @@ namespace WindowsFormsApp1
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fullDatabase1.Payment' table. You can move, or remove it, as needed.
+            this.paymentTableAdapter.Fill(this.fullDatabase1.Payment);
+            // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
             // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
             this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
 
@@ -138,6 +142,16 @@ namespace WindowsFormsApp1
         {
           //dataGridView1.Refresh();
           //dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bookingSummaryBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
