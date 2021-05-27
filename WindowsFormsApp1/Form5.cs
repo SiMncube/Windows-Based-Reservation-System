@@ -56,20 +56,21 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-       
+            int summaryID;
+
+
 
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
-            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, amountDue.ToString(), bookingMethod, bookingStatus, numberOfNights);
+            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
 
-           
-            /*
-            Form7 payment = new Form7();
-            this.Hide();
-            payment.ShowDialog();
-            this.Show();
-            */
+
+            int numberOfSingleRooms = int.Parse(textBox3.Text);
+            int numberOfDoubleRooms = int.Parse(textBox4.Text);
+
+            double amountDueForSingleRooms = numberOfSingleRooms;
+            textBox1.Text = amountDue.ToString("C");
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -151,6 +152,34 @@ namespace WindowsFormsApp1
         }
 
         private void bookingSummaryBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form7 payment = new Form7();
+            this.Hide();
+            payment.ShowDialog();
+            this.Show();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

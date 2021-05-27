@@ -5379,52 +5379,52 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [BookingSummary] WHERE (([summaryID] = @Original_summaryID) AND ([emailID] = @Original_emailID) AND ([dateIn] = @Original_dateIn) AND ([dateOut] = @Original_dateOut) AND ((@IsNull_bookingMethod = 1 AND [bookingMethod] IS NULL) OR ([bookingMethod] = @Original_bookingMethod)) AND ((@IsNull_bookingStatus = 1 AND [bookingStatus] IS NULL) OR ([bookingStatus] = @Original_bookingStatus)) AND ([amountDue] = @Original_amountDue) AND ([numberOfNights] = @Original_numberOfNights))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [BookingSummary] WHERE (([summaryID] = @Original_summaryID) AND ([emailID] = @Original_emailID) AND ([dateIn] = @Original_dateIn) AND ([dateOut] = @Original_dateOut) AND ([numberOfNights] = @Original_numberOfNights) AND ((@IsNull_bookingMethod = 1 AND [bookingMethod] IS NULL) OR ([bookingMethod] = @Original_bookingMethod)) AND ((@IsNull_bookingStatus = 1 AND [bookingStatus] IS NULL) OR ([bookingStatus] = @Original_bookingStatus)) AND ([amountDue] = @Original_amountDue))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_emailID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "emailID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bookingMethod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bookingStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_amountDue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amountDue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [BookingSummary] ([emailID], [dateIn], [dateOut], [bookingMethod], [bookingStatus], [amountDue], [numberOfNights]) VALUES (@emailID, @dateIn, @dateOut, @bookingMethod, @bookingStatus, @amountDue, @numberOfNights);
-SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amountDue, numberOfNights FROM BookingSummary WHERE (summaryID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [BookingSummary] ([emailID], [dateIn], [dateOut], [numberOfNights], [bookingMethod], [bookingStatus], [amountDue]) VALUES (@emailID, @dateIn, @dateOut, @numberOfNights, @bookingMethod, @bookingStatus, @amountDue);
+SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue FROM BookingSummary WHERE (summaryID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@emailID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "emailID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amountDue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amountDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [BookingSummary] SET [emailID] = @emailID, [dateIn] = @dateIn, [dateOut] = @dateOut, [bookingMethod] = @bookingMethod, [bookingStatus] = @bookingStatus, [amountDue] = @amountDue, [numberOfNights] = @numberOfNights WHERE (([summaryID] = @Original_summaryID) AND ([emailID] = @Original_emailID) AND ([dateIn] = @Original_dateIn) AND ([dateOut] = @Original_dateOut) AND ((@IsNull_bookingMethod = 1 AND [bookingMethod] IS NULL) OR ([bookingMethod] = @Original_bookingMethod)) AND ((@IsNull_bookingStatus = 1 AND [bookingStatus] IS NULL) OR ([bookingStatus] = @Original_bookingStatus)) AND ([amountDue] = @Original_amountDue) AND ([numberOfNights] = @Original_numberOfNights));
-SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amountDue, numberOfNights FROM BookingSummary WHERE (summaryID = @summaryID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [BookingSummary] SET [emailID] = @emailID, [dateIn] = @dateIn, [dateOut] = @dateOut, [numberOfNights] = @numberOfNights, [bookingMethod] = @bookingMethod, [bookingStatus] = @bookingStatus, [amountDue] = @amountDue WHERE (([summaryID] = @Original_summaryID) AND ([emailID] = @Original_emailID) AND ([dateIn] = @Original_dateIn) AND ([dateOut] = @Original_dateOut) AND ([numberOfNights] = @Original_numberOfNights) AND ((@IsNull_bookingMethod = 1 AND [bookingMethod] IS NULL) OR ([bookingMethod] = @Original_bookingMethod)) AND ((@IsNull_bookingStatus = 1 AND [bookingStatus] IS NULL) OR ([bookingStatus] = @Original_bookingStatus)) AND ([amountDue] = @Original_amountDue));
+SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue FROM BookingSummary WHERE (summaryID = @summaryID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@emailID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "emailID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amountDue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amountDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_emailID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "emailID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bookingMethod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingMethod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bookingStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_amountDue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amountDue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfNights", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfNights", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@summaryID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5441,8 +5441,8 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amountD" +
-                "ue, numberOfNights FROM BookingSummary";
+            this._commandCollection[0].CommandText = "SELECT        summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod," +
+                " bookingStatus, amountDue\r\nFROM            BookingSummary";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5503,7 +5503,7 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_summaryID, string Original_emailID, System.DateTime Original_dateIn, System.DateTime Original_dateOut, string Original_bookingMethod, string Original_bookingStatus, string Original_amountDue, int Original_numberOfNights) {
+        public virtual int Delete(int Original_summaryID, string Original_emailID, System.DateTime Original_dateIn, System.DateTime Original_dateOut, int Original_numberOfNights, string Original_bookingMethod, string Original_bookingStatus, string Original_amountDue) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_summaryID));
             if ((Original_emailID == null)) {
                 throw new global::System.ArgumentNullException("Original_emailID");
@@ -5513,29 +5513,29 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_dateIn));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_dateOut));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_numberOfNights));
             if ((Original_bookingMethod == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_bookingMethod));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_bookingMethod));
             }
             if ((Original_bookingStatus == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_bookingStatus));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_bookingStatus));
             }
             if ((Original_amountDue == null)) {
                 throw new global::System.ArgumentNullException("Original_amountDue");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_amountDue));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_amountDue));
             }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_numberOfNights));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5556,7 +5556,7 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string emailID, System.DateTime dateIn, System.DateTime dateOut, string bookingMethod, string bookingStatus, string amountDue, int numberOfNights) {
+        public virtual int Insert(string emailID, System.DateTime dateIn, System.DateTime dateOut, int numberOfNights, string bookingMethod, string bookingStatus, string amountDue) {
             if ((emailID == null)) {
                 throw new global::System.ArgumentNullException("emailID");
             }
@@ -5565,25 +5565,25 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(dateIn));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(dateOut));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(numberOfNights));
             if ((bookingMethod == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(bookingMethod));
-            }
-            if ((bookingStatus == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(bookingStatus));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(bookingMethod));
+            }
+            if ((bookingStatus == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(bookingStatus));
             }
             if ((amountDue == null)) {
                 throw new global::System.ArgumentNullException("amountDue");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(amountDue));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(amountDue));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(numberOfNights));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5608,18 +5608,18 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
                     string emailID, 
                     System.DateTime dateIn, 
                     System.DateTime dateOut, 
+                    int numberOfNights, 
                     string bookingMethod, 
                     string bookingStatus, 
                     string amountDue, 
-                    int numberOfNights, 
                     int Original_summaryID, 
                     string Original_emailID, 
                     System.DateTime Original_dateIn, 
                     System.DateTime Original_dateOut, 
+                    int Original_numberOfNights, 
                     string Original_bookingMethod, 
                     string Original_bookingStatus, 
                     string Original_amountDue, 
-                    int Original_numberOfNights, 
                     int summaryID) {
             if ((emailID == null)) {
                 throw new global::System.ArgumentNullException("emailID");
@@ -5629,25 +5629,25 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(dateIn));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(dateOut));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(numberOfNights));
             if ((bookingMethod == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(bookingMethod));
-            }
-            if ((bookingStatus == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(bookingStatus));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(bookingMethod));
+            }
+            if ((bookingStatus == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(bookingStatus));
             }
             if ((amountDue == null)) {
                 throw new global::System.ArgumentNullException("amountDue");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(amountDue));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(amountDue));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(numberOfNights));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_summaryID));
             if ((Original_emailID == null)) {
                 throw new global::System.ArgumentNullException("Original_emailID");
@@ -5657,29 +5657,29 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
             }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_dateIn));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_dateOut));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_numberOfNights));
             if ((Original_bookingMethod == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_bookingMethod));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_bookingMethod));
             }
             if ((Original_bookingStatus == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_bookingStatus));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_bookingStatus));
             }
             if ((Original_amountDue == null)) {
                 throw new global::System.ArgumentNullException("Original_amountDue");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_amountDue));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_amountDue));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_numberOfNights));
             this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(summaryID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5701,8 +5701,8 @@ SELECT summaryID, emailID, dateIn, dateOut, bookingMethod, bookingStatus, amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string emailID, System.DateTime dateIn, System.DateTime dateOut, string bookingMethod, string bookingStatus, string amountDue, int numberOfNights, int Original_summaryID, string Original_emailID, System.DateTime Original_dateIn, System.DateTime Original_dateOut, string Original_bookingMethod, string Original_bookingStatus, string Original_amountDue, int Original_numberOfNights) {
-            return this.Update(emailID, dateIn, dateOut, bookingMethod, bookingStatus, amountDue, numberOfNights, Original_summaryID, Original_emailID, Original_dateIn, Original_dateOut, Original_bookingMethod, Original_bookingStatus, Original_amountDue, Original_numberOfNights, Original_summaryID);
+        public virtual int Update(string emailID, System.DateTime dateIn, System.DateTime dateOut, int numberOfNights, string bookingMethod, string bookingStatus, string amountDue, int Original_summaryID, string Original_emailID, System.DateTime Original_dateIn, System.DateTime Original_dateOut, int Original_numberOfNights, string Original_bookingMethod, string Original_bookingStatus, string Original_amountDue) {
+            return this.Update(emailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue, Original_summaryID, Original_emailID, Original_dateIn, Original_dateOut, Original_numberOfNights, Original_bookingMethod, Original_bookingStatus, Original_amountDue, Original_summaryID);
         }
     }
     
