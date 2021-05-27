@@ -19,11 +19,6 @@ namespace WindowsFormsApp1
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
-
-        //fullDatabase.BookingSummaryRow currentBooking = new fullDatabase.BookingSummaryRow();
-        //BookingSummaryTableAdapter.insert();
-
-
         public Form5()
         {
             InitializeComponent();
@@ -63,13 +58,14 @@ namespace WindowsFormsApp1
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
-            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+            bookingSummaryTableAdapter.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
 
 
             int numberOfSingleRooms = int.Parse(textBox3.Text);
             int numberOfDoubleRooms = int.Parse(textBox4.Text);
 
             double amountDueForSingleRooms = numberOfSingleRooms;
+            double amountDueForDoubleRooms = numberOfSingleRooms;
             textBox1.Text = amountDue.ToString("C");
         }
 
@@ -95,12 +91,16 @@ namespace WindowsFormsApp1
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
+            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
             // TODO: This line of code loads data into the 'fullDatabase1.Payment' table. You can move, or remove it, as needed.
-            this.paymentTableAdapter.Fill(this.fullDatabase1.Payment);
+            this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
             // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
-            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
             // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
-            this.bookingSummaryTableAdapter1.Fill(this.fullDatabase1.BookingSummary);
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
 
         }
 
@@ -141,9 +141,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.bookingSummaryTableAdapter1.Fill(this.fullDatabase1.BookingSummary);
-            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
-            this.paymentTableAdapter.Fill(this.fullDatabase1.Payment);
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
+            this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
@@ -181,6 +181,22 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void bookingSummaryBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bookingSummaryBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.fullDatabase);
+
+        }
+
+        private void bookingSummaryBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bookingSummaryBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.fullDatabase);
 
         }
     }
