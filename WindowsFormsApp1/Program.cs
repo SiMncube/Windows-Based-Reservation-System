@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1   
-{   public static class currentUser
+{
+    public static class currentUser
     {
         private static string emailID;
+        private static int summaryID;
         public static string getEmailID()
         {
             return emailID;
@@ -16,8 +18,16 @@ namespace WindowsFormsApp1
         {
             emailID = e;
         }
+        public static int getSummaryID()
+        {
+            return summaryID;
+        }
+        public static void setSummaryID(int s)
+        {
+            summaryID = s;
+        }
     }
-    
+
     static class Program
     {
         /// <summary>
