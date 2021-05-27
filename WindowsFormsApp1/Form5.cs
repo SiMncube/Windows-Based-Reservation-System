@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace WindowsFormsApp1
         string bookingMethod = "Online";
         string bookingStatus = "inComplete";
         double amountDue = 0;
+
 
         public Form5()
         {
@@ -49,9 +51,13 @@ namespace WindowsFormsApp1
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            int summaryID;
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
 
@@ -74,11 +80,34 @@ namespace WindowsFormsApp1
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
             bookingSummaryTableAdapter.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+            textBox1.Text = amountDue.ToString("C");
 
+            string user = currentUser.getEmailID();
+            int summaryID = int.Parse((string)bookingSummaryTableAdapter.getLastRecordID());
             //if (currentUser.getEmailID.Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
-            textBox1.Text = amountDue.ToString("C");
+
+            //------------------------------------------------adding booking to to booked room record.
+
+            //checking room availability
+            ArrayList availableSingleRooms = new ArrayList();
+            ArrayList availableDoubleRooms = new ArrayList();
+
+            /*conditions that must be true for a valid date input
+            DateTime.Compare(DateTime.Today, dateIn) <= 0
+            DateTime.Compare(DateTime.Today, dateOut) < 0
+            DateTime.Compare(dateIn, dateOut) < 0
+            */
+            
+            /*
+             for each Single rooms in our database  : roomID
+                for (each record in the bookedroom database) : dateID
+                    if (roomId and dateID matches)
+                        break
+             */
+           
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -199,5 +228,6 @@ namespace WindowsFormsApp1
             this.tableAdapterManager.UpdateAll(this.fullDatabase);
 
         }
+
     }
 }
