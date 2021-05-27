@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
-            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+            bookingSummaryTableAdapter1.Insert("test101", dateIn, dateOut, amountDue.ToString(), bookingMethod, bookingStatus, numberOfNights);
 
            
             /*
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
             this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
             // TODO: This line of code loads data into the 'fullDatabase1.BookedRoom' table. You can move, or remove it, as needed.
-            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
+            this.bookingSummaryTableAdapter1.Fill(this.fullDatabase1.BookingSummary);
 
         }
 
@@ -140,8 +140,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-          //dataGridView1.Refresh();
-          //dataGridView1.Refresh();
+            this.bookingSummaryTableAdapter1.Fill(this.fullDatabase1.BookingSummary);
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase1.BookedRoom);
+            this.paymentTableAdapter.Fill(this.fullDatabase1.Payment);
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
