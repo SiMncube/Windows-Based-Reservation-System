@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1   
@@ -10,6 +11,7 @@ namespace WindowsFormsApp1
     {
         private static string emailID;
         private static int summaryID;
+        private static int[] roomIDs;
         public static string getEmailID()
         {
             return emailID;
@@ -25,6 +27,14 @@ namespace WindowsFormsApp1
         public static void setSummaryID(int s)
         {
             summaryID = s;
+        }
+        public static int[] getRoomIDs()
+        {
+            return roomIDs;
+        }
+        public static void setRoomIDs(int[] r)
+        {
+            roomIDs = r;
         }
     }
 
