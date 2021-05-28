@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                                (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))  //the has both method returns the roomID if the record exists
                             {
                                 isRoomAvailable = false;
+                                break;
                             }
                         }
                         if (!isRoomAvailable)
