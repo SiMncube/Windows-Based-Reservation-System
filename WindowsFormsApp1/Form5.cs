@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -148,17 +148,14 @@ namespace WindowsFormsApp1
             }
             textBox1.Text = "R" + amountDue.ToString() + ".00";
 
-
-            //if (currentUser.getEmailID().Equals("2160"))
-            //   bookingMethod = "Admin - Sihle";
-
-            int[] singleAllocatedRooms = new int[numberOfSingleRooms];
-            int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
-
-            //adding booking to bookedRoom Table
+            //fullDatabase.Tables.
+            //adding booking to array that would be to an array that would be processed for payments
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
             {
-                bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+                int[] singleAllocatedRooms = new int[numberOfSingleRooms];
+                int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
+
+                bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, "R" + amountDue.ToString() + ".00");
                 int summaryID = (int)bookingSummaryTableAdapter.getLastRecord();
                 currentUser.setSummaryID(summaryID);
 
@@ -180,12 +177,12 @@ namespace WindowsFormsApp1
                     }
                 }
 
+                /*
+                int[] allRooms = singleAllocatedRooms.Concat(doubleAllocatedRooms);
+                MessageBox.Show(singleAllocatedRooms.ToString(), "Available rooms");
+                currentUser.setRoomIDs(singleAllocatedRooms);
+                */
             }
-
-
-            doubleAllocatedRooms.CopyTo(singleAllocatedRooms,0);
-            MessageBox.Show(doubleAllocatedRooms.ToString(), "Available rooms");
-
 
             Form7 payment = new Form7();
             this.Hide();
