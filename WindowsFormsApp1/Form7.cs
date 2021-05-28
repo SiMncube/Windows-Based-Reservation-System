@@ -46,7 +46,15 @@ namespace WindowsFormsApp1
                 paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentUser.getSummaryID(), "EFT");
                 updateBookingStatus();
                 label8.Text += getAmountDue();
+                label9.Visible = true;
                 label8.Visible = true;
+                label6.Visible = false;
+                label7.Visible = false;
+                resetColor(textBox1);
+                resetColor(textBox2);
+                resetColor(textBox3);
+                paymentTableAdapter1.Fill(fullDatabase1.Payment);
+                button1.Enabled = false;
             }
         }
 
@@ -146,6 +154,7 @@ namespace WindowsFormsApp1
                 {
                     fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete";
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
+                    bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
 
             }
@@ -164,6 +173,10 @@ namespace WindowsFormsApp1
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+        private void resetColor(TextBox textBox)
+        {
+            textBox.BackColor = Color.White;
         }
     }
 
