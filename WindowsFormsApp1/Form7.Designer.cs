@@ -70,6 +70,13 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.bookedRoomTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.bookedRoomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookedRoomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summaryIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
@@ -80,6 +87,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookedRoomBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -120,7 +129,6 @@ namespace WindowsFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 26);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -130,7 +138,6 @@ namespace WindowsFormsApp1
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
             this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
@@ -141,7 +148,6 @@ namespace WindowsFormsApp1
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "CVV *";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
@@ -150,7 +156,6 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(315, 26);
             this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
             // 
@@ -177,7 +182,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(63, 448);
+            this.panel1.Location = new System.Drawing.Point(63, 453);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 268);
             this.panel1.TabIndex = 25;
@@ -251,7 +256,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.DataSource = this.paymentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(63, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 340);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -322,7 +327,7 @@ namespace WindowsFormsApp1
             this.dataGridView2.DataSource = this.bookingSummaryBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(609, 12);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(671, 413);
+            this.dataGridView2.Size = new System.Drawing.Size(671, 340);
             this.dataGridView2.TabIndex = 27;
             // 
             // summaryIDDataGridViewTextBoxColumn1
@@ -385,9 +390,9 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(694, 448);
+            this.panel2.Location = new System.Drawing.Point(63, 371);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(569, 268);
+            this.panel2.Size = new System.Drawing.Size(615, 76);
             this.panel2.TabIndex = 28;
             // 
             // label9
@@ -395,7 +400,7 @@ namespace WindowsFormsApp1
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label9.Location = new System.Drawing.Point(120, 63);
+            this.label9.Location = new System.Drawing.Point(111, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(286, 30);
             this.label9.TabIndex = 2;
@@ -407,7 +412,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label8.Location = new System.Drawing.Point(120, 128);
+            this.label8.Location = new System.Drawing.Point(120, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(230, 30);
             this.label8.TabIndex = 1;
@@ -419,17 +424,68 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(120, 98);
+            this.label7.Location = new System.Drawing.Point(120, 20);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(220, 30);
             this.label7.TabIndex = 0;
             this.label7.Text = "Amount Due :  R";
+            // 
+            // bookedRoomTableAdapter1
+            // 
+            this.bookedRoomTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookedRoomIDDataGridViewTextBoxColumn,
+            this.dateIDDataGridViewTextBoxColumn,
+            this.summaryIDDataGridViewTextBoxColumn2,
+            this.roomIDDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.bookedRoomBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(839, 371);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(441, 350);
+            this.dataGridView3.TabIndex = 29;
+            // 
+            // bookedRoomBindingSource
+            // 
+            this.bookedRoomBindingSource.DataMember = "BookedRoom";
+            this.bookedRoomBindingSource.DataSource = this.fullDatabase1;
+            // 
+            // bookedRoomIDDataGridViewTextBoxColumn
+            // 
+            this.bookedRoomIDDataGridViewTextBoxColumn.DataPropertyName = "bookedRoomID";
+            this.bookedRoomIDDataGridViewTextBoxColumn.HeaderText = "bookedRoomID";
+            this.bookedRoomIDDataGridViewTextBoxColumn.Name = "bookedRoomIDDataGridViewTextBoxColumn";
+            this.bookedRoomIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateIDDataGridViewTextBoxColumn
+            // 
+            this.dateIDDataGridViewTextBoxColumn.DataPropertyName = "dateID";
+            this.dateIDDataGridViewTextBoxColumn.HeaderText = "dateID";
+            this.dateIDDataGridViewTextBoxColumn.Name = "dateIDDataGridViewTextBoxColumn";
+            // 
+            // summaryIDDataGridViewTextBoxColumn2
+            // 
+            this.summaryIDDataGridViewTextBoxColumn2.DataPropertyName = "summaryID";
+            this.summaryIDDataGridViewTextBoxColumn2.HeaderText = "summaryID";
+            this.summaryIDDataGridViewTextBoxColumn2.Name = "summaryIDDataGridViewTextBoxColumn2";
+            // 
+            // roomIDDataGridViewTextBoxColumn
+            // 
+            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "roomID";
+            this.roomIDDataGridViewTextBoxColumn.HeaderText = "roomID";
+            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 728);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -451,6 +507,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookedRoomBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,5 +555,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private fullDatabaseTableAdapters.BookedRoomTableAdapter bookedRoomTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookedRoomIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summaryIDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bookedRoomBindingSource;
     }
 }
