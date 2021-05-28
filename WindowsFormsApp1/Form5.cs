@@ -133,23 +133,37 @@ namespace WindowsFormsApp1
             //if (currentUser.getEmailID.Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
-            string summaryID = bookingSummaryTableAdapter.getLastRecord().ToString();
-            currentUser.setEmailID(summaryID);
-            //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
             //adding booking to to booked room record.
-            if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count )
-                bookingSummaryTableAdapter.Insert(summaryID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+            if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
+            {
+                bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+                int summaryID = (int)bookingSummaryTableAdapter.getLastRecord();
+               
+                for (int i = 0; i < numberOfSingleRooms ; i++) //adding single rooms to bookedRoom table
+                {
+                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
+                    {
+                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    }
+                }
 
+                for (int i = 0; i < numberOfDoubleRooms; i++) //adding double rooms to bookedRoom table
+                {
+                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
+                    {
+                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    }
+                }
+            }
 
             textBox1.Text = amountDue.ToString("C");
 
-
+            
             Form7 payment = new Form7();
             this.Hide();
             payment.ShowDialog();
             this.Show();
-            
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
