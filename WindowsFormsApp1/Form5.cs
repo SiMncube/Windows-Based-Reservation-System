@@ -138,7 +138,7 @@ namespace WindowsFormsApp1
             //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
             //adding booking to to booked room record.
-            if (availableSingleRooms.Count <= numberOfSingleRooms && availableDoubleRooms.Count <= numberOfDoubleRooms)
+            if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count )
                 bookingSummaryTableAdapter.Insert(summaryID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
 
 
