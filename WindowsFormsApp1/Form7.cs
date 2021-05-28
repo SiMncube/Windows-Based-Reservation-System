@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
             customerTableAdapter1.Fill(fullDatabase1.Customer);
             paymentTableAdapter1.Fill(fullDatabase1.Payment);
             bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
+            bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
             label7.Text += getAmountDue();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -140,14 +141,14 @@ namespace WindowsFormsApp1
                 for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 {
                     bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
-                    bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
             }
+            bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
         }
         private DateTime GetDateIn()
         {
             DateTime dateIn =  DateTime.Now;
-            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0; i--)
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
