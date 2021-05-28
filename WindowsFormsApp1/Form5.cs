@@ -127,7 +127,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Invalid input", "Error");
             }
-            textBox1.Text = amountDue.ToString("C");
+            textBox1.Text = "R" + amountDue.ToString();
 
 
             //if (currentUser.getEmailID().Equals("2160"))
