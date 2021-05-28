@@ -104,9 +104,6 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double amountDueForSingleRooms;
-            double amountDueForDoubleRooms;
-
             int numberOfSingleRooms = 0;
             int numberOfDoubleRooms = 0;
 
@@ -114,6 +111,8 @@ namespace WindowsFormsApp1
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
 
+            double amountDueForSingleRooms;
+            double amountDueForDoubleRooms;
             try
             {
                 numberOfSingleRooms = int.Parse(textBox3.Text);
@@ -128,9 +127,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Invalid input", "Error");
             }
+            textBox1.Text = amountDue.ToString("C");
 
-            //string user = ;
-            //if (currentUser.getEmailID.Equals("2160"))
+
+            //if (currentUser.getEmailID().Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
 
@@ -152,14 +152,11 @@ namespace WindowsFormsApp1
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                     {
-                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
                     }
                 }
             }
 
-            textBox1.Text = amountDue.ToString("C");
-
-            
             Form7 payment = new Form7();
             this.Hide();
             payment.ShowDialog();
