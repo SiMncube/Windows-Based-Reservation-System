@@ -54,6 +54,15 @@ namespace WindowsFormsApp1
                 label7.Visible = false;
                 label4.Visible = false;
                 label6.Visible = false;
+                label8.Visible = false;
+            }
+            else if(bookingIsIncomplete(textBox1.Text))
+            {
+                label5.Visible = false;
+                label7.Visible = false;
+                label4.Visible = false;
+                label6.Visible = false;
+                label8.Visible = true;
             }
             else if(bookingExist(textBox1.Text))
             {
@@ -61,6 +70,7 @@ namespace WindowsFormsApp1
                 label6.Visible = true;
                 label7.Visible = false;
                 label5.Visible = false;
+                label8.Visible = false;
             }
             else
             {
@@ -68,6 +78,7 @@ namespace WindowsFormsApp1
                 label4.Visible = false;
                 label6.Visible = false;
                 label5.Visible = false;
+                label8.Visible = false;
             }
         }
         private bool bookingExist(string summaryID)
@@ -113,6 +124,19 @@ namespace WindowsFormsApp1
                 if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
                 {
                     if (fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString().Equals("Cancelled"))
+                        return true;
+                    return false;
+                }
+            }
+            return false;
+        }
+        private bool bookingIsIncomplete(string summaryID)
+        {
+            for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
+                {
+                    if (fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString().Equals("inComplete"))
                         return true;
                     return false;
                 }
