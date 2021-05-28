@@ -23,6 +23,9 @@ namespace WindowsFormsApp1
         ArrayList availableSingleRooms = new ArrayList();
         ArrayList availableDoubleRooms = new ArrayList();
 
+        int numberOfSingleRooms = 0;
+        int numberOfDoubleRooms = 0;
+
         private void ChangeColor(TextBox textBox)
         {
             textBox.BackColor = Color.Red;
@@ -71,54 +74,115 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void updateAvailableRoomList()
         {
             availableSingleRooms.Clear();
             availableDoubleRooms.Clear();
 
-            dateIn = dateTimePicker1.Value.Date;
-            dateOut = dateTimePicker2.Value.Date;
-
-            //checking room availability, and validating daate input
-            if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
-
+            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
+            for (int roomID = 1; roomID <= 15; roomID++)
             {
-                int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
-                for (int roomID = 1; roomID <= 15; roomID++)
+                bool isRoomAvailable = true;
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
-                    bool isRoomAvailable = true;
-                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
+                    for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
                     {
-                        for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+                        if ((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
+                           (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))
                         {
-                            if ((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
-                               (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))  //the has both method returns the roomID if the record exists
-                            {
-                                isRoomAvailable = false;
-                                break;
-                            }
-                        }
-                        if (!isRoomAvailable)
+                            isRoomAvailable = false;
                             break;
+                        }
                     }
-
-                    if (isRoomAvailable)
-                    {
-                        if (roomID <= 7)
-                            availableSingleRooms.Add(roomID);
-                        else
-                            availableDoubleRooms.Add(roomID);
-                    }
+                    if (!isRoomAvailable)
+                        break;
                 }
 
-                button1.Enabled = true;
+                if (isRoomAvailable)
+                {
+                    if (roomID <= 7)
+                        availableSingleRooms.Add(roomID);
+                    else
+                        availableDoubleRooms.Add(roomID);
+                }
+            }
+        }
+
+        private void updateAmountDue()
+        {
+            double amountDueForSingleRooms;
+            double amountDueForDoubleRooms;
+
+            if (isAllDigit(textBox3) && !textBox3.Text.Equals(""))
+            {
+                numberOfSingleRooms = int.Parse(textBox3.Text);
+                amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
             }
             else
-                label7.Visible = true;
+            {
+                ChangeColor(textBox3);
+                amountDueForSingleRooms = 0;
+            }
 
+            if (isAllDigit(textBox4) && !textBox4.Text.Equals(""))
+            {
+                numberOfDoubleRooms = int.Parse(textBox4.Text);
+                amountDueForDoubleRooms = (numberOfDoubleRooms * 800 * numberOfNights);
+            }
+            else
+            {
+                ChangeColor(textBox4);
+                amountDueForDoubleRooms = 0;
+            }
+
+            amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
+            textBox1.Text = "R" + amountDue.ToString() + ".00";
+        }
+
+        private bool DoWeHaveSuffientRooms()
+        {
+            //Checking Number of rooms input then allowing the user to check if all Input Is Valid
+            //and the requested number of rooms if they are available in the specified period
+
+            if (numberOfSingleRooms > availableSingleRooms.Count)
+            {
+                label10.Text = "Appologies We now Have: " + availableSingleRooms.Count + "Single Rooms";
+                label10.Visible = true;
+                return false;
+            }
+            if (numberOfDoubleRooms > availableDoubleRooms.Count)
+            {
+                label11.Text = "Appologies We now have: " + availableDoubleRooms.Count + "Double Rooms";
+                label11.Visible = true;
+                return false;
+            }
+
+            return true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
+            numberOfNights = dateOut.Subtract(dateIn).Days;
+
+            //checking room availability, and validating date input
+            if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
+            {
+                this.updateAvailableRoomList();
+
+                if (DoWeHaveSuffientRooms() && !(numberOfSingleRooms == 0 && numberOfDoubleRooms == 0))
+                {
+                    this.updateAmountDue();
+                    button1.Enabled = true;     //checking out button
+                }
+            }
+            else
+                label7.Visible = true;   //selected date is invalid label
 
             textBox5.Text = "Singles: " + availableSingleRooms.Count + ", Doubles: " + availableDoubleRooms.Count;
         }
@@ -127,31 +191,6 @@ namespace WindowsFormsApp1
         {
             label7.Visible = false;
 
-            int numberOfSingleRooms = 0;
-            int numberOfDoubleRooms = 0;
-
-            dateIn = dateTimePicker1.Value.Date;
-            dateOut = dateTimePicker2.Value.Date;
-            numberOfNights = dateOut.Subtract(dateIn).Days;
-
-            double amountDueForSingleRooms;
-            double amountDueForDoubleRooms;
-
-            try
-            {
-                numberOfSingleRooms = int.Parse(textBox3.Text);
-                numberOfDoubleRooms = int.Parse(textBox4.Text);
-
-                amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
-                amountDueForDoubleRooms = (numberOfDoubleRooms * 800 * numberOfNights);
-
-                amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
-            }
-            catch (Exception)
-            {
-                //label8.Visible = true;
-            }
-            textBox1.Text = "R" + amountDue.ToString() + ".00";
 
             //adding booking to array that would be to an array that would be processed for payments
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
@@ -183,8 +222,6 @@ namespace WindowsFormsApp1
                 Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
                 Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
                 currentBooking.setRoomIDs(allAllocatedRooms);
-
-
 
 
                 //testing code for checking allocated rooms

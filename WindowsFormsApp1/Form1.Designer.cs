@@ -43,7 +43,6 @@ namespace WindowsFormsApp1
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.emailIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@ namespace WindowsFormsApp1
             this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
@@ -196,11 +196,6 @@ namespace WindowsFormsApp1
             this.dataGridView1.Size = new System.Drawing.Size(1044, 390);
             this.dataGridView1.TabIndex = 28;
             // 
-            // customerBindingSource1
-            // 
-            this.customerBindingSource1.DataMember = "Customer";
-            this.customerBindingSource1.DataSource = this.fullDatabase;
-            // 
             // emailIDDataGridViewTextBoxColumn
             // 
             this.emailIDDataGridViewTextBoxColumn.DataPropertyName = "emailID";
@@ -261,10 +256,17 @@ namespace WindowsFormsApp1
             this.postalCodeDataGridViewTextBoxColumn.HeaderText = "postalCode";
             this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
             // 
+            // customerBindingSource1
+            // 
+            this.customerBindingSource1.DataMember = "Customer";
+            this.customerBindingSource1.DataSource = this.fullDatabase;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WALLPAPER;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1356, 672);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
