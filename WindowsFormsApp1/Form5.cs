@@ -60,10 +60,9 @@ namespace WindowsFormsApp1
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
 
-            //checking room availability, conditions that must be true for a valid date input
+            //checking room availability, and validating daate input
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
 
-            //available rooms
             {
                 int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
                 for (int roomID = 1; roomID <= 15; roomID++)
@@ -128,12 +127,12 @@ namespace WindowsFormsApp1
             //if (currentUser.getEmailID.Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
-            //int summaryID = (int)bookingSummaryTableAdapter.getLastRecordID();
+            string summaryID = bookingSummaryTableAdapter.getLastRecord().ToString();
             //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
             //adding booking to to booked room record.
             if (availableSingleRooms.Count <= numberOfSingleRooms && availableDoubleRooms.Count <= numberOfDoubleRooms)
-                bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
+                bookingSummaryTableAdapter.Insert(summaryID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
 
 
             textBox1.Text = amountDue.ToString("C");
