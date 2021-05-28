@@ -23,6 +23,26 @@ namespace WindowsFormsApp1
         ArrayList availableSingleRooms = new ArrayList();
         ArrayList availableDoubleRooms = new ArrayList();
 
+        private void ChangeColor(TextBox textBox)
+        {
+            textBox.BackColor = Color.Red;
+        }
+        private bool isDigit(char ch)
+        {
+            if (ch >= '0' && ch <= '9')
+                return true;
+            return false;
+        }
+        private bool isAllDigit(TextBox textbox)
+        {
+            string s = textbox.Text.ToString();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (!isDigit(s[i]))
+                    return false;
+            }
+            return true;
+        }
 
         public Form5()
         {
@@ -134,14 +154,14 @@ namespace WindowsFormsApp1
             //   bookingMethod = "Admin - Sihle";
 
 
-            //adding booking to to booked room record.
+            //adding booking to bookedRoom Table
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
             {
                 bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
                 int summaryID = (int)bookingSummaryTableAdapter.getLastRecord();
                 currentUser.setSummaryID(summaryID);
-               
-                for (int i = 0; i < numberOfSingleRooms ; i++) //adding single rooms to bookedRoom table
+
+                for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                     {
