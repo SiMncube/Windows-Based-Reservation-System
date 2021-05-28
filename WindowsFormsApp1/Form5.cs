@@ -134,6 +134,7 @@ namespace WindowsFormsApp1
             //   bookingMethod = "Admin - Sihle";
 
             string summaryID = bookingSummaryTableAdapter.getLastRecord().ToString();
+            currentUser.setEmailID(summaryID);
             //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
             //adding booking to to booked room record.
