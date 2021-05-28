@@ -56,6 +56,8 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            availableSingleRooms.Clear();
+            availableDoubleRooms.Clear();
 
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
@@ -68,9 +70,9 @@ namespace WindowsFormsApp1
                 for (int roomID = 1; roomID <= 15; roomID++)
                 {
                     bool isRoomAvailable = true;
-                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID.AddDays(1))
+                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                     {
-                        for (int i = 1; i <= numberOfRecordsInBookedRoom; i++)
+                        for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
                         {
                             if ((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
                                (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))  //the has both method returns the roomID if the record exists
@@ -82,10 +84,13 @@ namespace WindowsFormsApp1
                             break;
                     }
 
-                    if (roomID <= 7)
-                        availableSingleRooms.Add(roomID);
-                    else
-                        availableDoubleRooms.Add(roomID);
+                    if (isRoomAvailable)
+                    {
+                        if (roomID <= 7)
+                            availableSingleRooms.Add(roomID);
+                        else
+                            availableDoubleRooms.Add(roomID);
+                    }
                 }
             }
             else
