@@ -109,20 +109,20 @@ namespace WindowsFormsApp1
             int count = 0;
             if(!nameIsValid())
             {
-                textBox3.ForeColor = Color.Red;
+                textBox3.BackColor = Color.Red;
                 count++;
             }
             if(!cardNumberIsValid())
             {
-                textBox1.ForeColor = Color.Red;
+                textBox1.BackColor = Color.Red;
                 count++;
             }
             if(!cvvIsValid())
             {
-                textBox2.ForeColor = Color.Red;
+                textBox2.BackColor = Color.Red;
                 count++;
             }
-            if(cardNotExpired())
+            if(!cardNotExpired())
             {
                 label6.Visible = true;
                 count++;
@@ -157,6 +157,11 @@ namespace WindowsFormsApp1
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
