@@ -113,13 +113,11 @@ namespace WindowsFormsApp1
                             availableDoubleRooms.Add(roomID);
                     }
                 }
+
+                button1.Enabled = true;
             }
             else
-                MessageBox.Show("Your date Input is invalid", "Invalid Input");
-
-            MessageBox.Show("Number of Available Single Rooms: " + availableSingleRooms.Count +
-                "\nNumber of Available Double Rooms:" + availableDoubleRooms.Count, "Available Rooms");
-            button1.Enabled = true;
+                label7.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -146,7 +144,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid input", "Error");
+                //label8.Visible = true;
             }
             textBox1.Text = "R" + amountDue.ToString() + ".00";
 
@@ -154,6 +152,8 @@ namespace WindowsFormsApp1
             //if (currentUser.getEmailID().Equals("2160"))
             //   bookingMethod = "Admin - Sihle";
 
+            int[] singleAllocatedRooms = new int[numberOfSingleRooms];
+            int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
 
             //adding booking to bookedRoom Table
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
@@ -166,7 +166,8 @@ namespace WindowsFormsApp1
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                     {
-                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                        //bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                        singleAllocatedRooms[i] = (int)availableSingleRooms[i];
                     }
                 }
 
@@ -174,10 +175,17 @@ namespace WindowsFormsApp1
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                     {
-                        bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
+                        //bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
+                        doubleAllocatedRooms[i] = (int)availableSingleRooms[i];
                     }
                 }
+
             }
+
+
+            doubleAllocatedRooms.CopyTo(singleAllocatedRooms,0);
+            MessageBox.Show(doubleAllocatedRooms.ToString(), "Available rooms");
+
 
             Form7 payment = new Form7();
             this.Hide();
@@ -312,6 +320,11 @@ namespace WindowsFormsApp1
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
 
         }

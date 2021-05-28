@@ -76,9 +76,6 @@ namespace WindowsFormsApp1
             this.roomTypeTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTypeTableAdapter();
             this.roomTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryDataGridView)).BeginInit();
@@ -138,9 +135,9 @@ namespace WindowsFormsApp1
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(156, 142);
+            this.textBox3.Location = new System.Drawing.Point(196, 144);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(156, 26);
+            this.textBox3.Size = new System.Drawing.Size(268, 26);
             this.textBox3.TabIndex = 6;
             this.textBox3.Text = "1";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -148,7 +145,7 @@ namespace WindowsFormsApp1
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 42);
+            this.dateTimePicker1.Location = new System.Drawing.Point(196, 44);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker1.TabIndex = 7;
@@ -157,7 +154,7 @@ namespace WindowsFormsApp1
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(156, 96);
+            this.dateTimePicker2.Location = new System.Drawing.Point(196, 98);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker2.TabIndex = 8;
@@ -188,9 +185,6 @@ namespace WindowsFormsApp1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.textBox4);
@@ -226,9 +220,9 @@ namespace WindowsFormsApp1
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(156, 196);
+            this.textBox4.Location = new System.Drawing.Point(196, 198);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 29);
+            this.textBox4.Size = new System.Drawing.Size(268, 29);
             this.textBox4.TabIndex = 33;
             this.textBox4.Text = "0";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -259,9 +253,9 @@ namespace WindowsFormsApp1
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(156, 253);
+            this.textBox1.Location = new System.Drawing.Point(196, 255);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 29);
+            this.textBox1.Size = new System.Drawing.Size(268, 29);
             this.textBox1.TabIndex = 29;
             this.textBox1.Text = "0";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -478,40 +472,15 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(323, 149);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(156, 301);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.Size = new System.Drawing.Size(218, 20);
             this.label7.TabIndex = 36;
-            this.label7.Text = "INVALID input";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(430, 103);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "INVALID Date";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(430, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "INVALID Date";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(323, 209);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 13);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "INVALID input";
+            this.label7.Text = "Selected Date is INVALID";
+            this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // Form5
             // 
@@ -591,8 +560,5 @@ namespace WindowsFormsApp1
         private fullDatabaseTableAdapters.RoomTableAdapter roomTableAdapter;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
     }
 }
