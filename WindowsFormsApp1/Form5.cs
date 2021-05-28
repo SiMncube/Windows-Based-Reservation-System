@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             {
                 bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
                 int summaryID = (int)bookingSummaryTableAdapter.getLastRecord();
-                currentUser.setSummaryID(summaryID);
+                currentBooking.setSummaryID(summaryID);
 
                 for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
                 {

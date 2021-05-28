@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             if(paymentDetailIsValid())
             {
-                paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentUser.getSummaryID(), "EFT");
+                paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentBooking.getSummaryID(), "EFT");
                 updateBookingStatus();
                 updateBookedRoom();
                 label8.Text += getAmountDue();
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if(fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID()+"")
+                if(fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID()+"")
                     return fullDatabase1.Tables["BookingSummary"].Rows[i]["amountDue"].ToString();
             }
             return "";
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID() + "")
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
                     fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete";
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
@@ -134,12 +134,12 @@ namespace WindowsFormsApp1
         }
         private void updateBookedRoom()
         {
-            int[] rooms = currentUser.getRoomIDs();
+            int[] rooms = currentBooking.getRoomIDs();
             for (int i = 0; i < rooms.Length; i++)
             {
                 for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 {
-                    bookedRoomTableAdapter1.Insert(dateID, currentUser.getSummaryID(), rooms[i]);
+                    bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
                     bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
             }
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             DateTime dateIn =  DateTime.Now;
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID() + "")
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
                     string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString();
                     int year = int.Parse(dateString.Substring(0, 4));
@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
             DateTime dateIn = DateTime.Now;
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID() + "")
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
                     string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString();
                     int year = int.Parse(dateString.Substring(0, 4));

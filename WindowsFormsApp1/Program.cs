@@ -10,8 +10,7 @@ namespace WindowsFormsApp1
     public static class currentUser
     {
         private static string emailID;
-        private static int summaryID;
-        private static int[] roomIDs;
+
         public static string getEmailID()
         {
             return emailID;
@@ -20,6 +19,12 @@ namespace WindowsFormsApp1
         {
             emailID = e;
         }
+        
+    }
+    public static class currentBooking
+    {
+        private static int summaryID;
+        private static int[] roomIDs;
         public static int getSummaryID()
         {
             return summaryID;
