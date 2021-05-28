@@ -133,14 +133,14 @@ namespace WindowsFormsApp1
 
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
-            
+
             try
             {
                 numberOfSingleRooms = int.Parse(textBox3.Text);
                 numberOfDoubleRooms = int.Parse(textBox4.Text);
 
-                amountDueForSingleRooms = (numberOfSingleRooms * double.Parse(roomTypeTableAdapter.getSingleRoomPrice())) * numberOfNights;
-                amountDueForDoubleRooms = (numberOfDoubleRooms * double.Parse((string)roomTypeTableAdapter.getDoubleRoomPrice())) * numberOfNights;
+                amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
+                amountDueForDoubleRooms = (numberOfDoubleRooms * 800 * numberOfNights);
 
                 amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
             }
