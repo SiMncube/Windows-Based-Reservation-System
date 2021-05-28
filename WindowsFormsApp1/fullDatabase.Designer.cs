@@ -36,6 +36,10 @@ namespace WindowsFormsApp1 {
         
         private BookingSummaryDataTable tableBookingSummary;
         
+        private global::System.Data.DataRelation relationFK_BookedRoom_BookingSummary;
+        
+        private global::System.Data.DataRelation relationFK_BookedRoom_Room;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -314,6 +318,8 @@ namespace WindowsFormsApp1 {
                     this.tableBookingSummary.InitVars();
                 }
             }
+            this.relationFK_BookedRoom_BookingSummary = this.Relations["FK_BookedRoom_BookingSummary"];
+            this.relationFK_BookedRoom_Room = this.Relations["FK_BookedRoom_Room"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -336,6 +342,14 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tableBookedRoom);
             this.tableBookingSummary = new BookingSummaryDataTable();
             base.Tables.Add(this.tableBookingSummary);
+            this.relationFK_BookedRoom_BookingSummary = new global::System.Data.DataRelation("FK_BookedRoom_BookingSummary", new global::System.Data.DataColumn[] {
+                        this.tableBookingSummary.summaryIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBookedRoom.summaryIDColumn}, false);
+            this.Relations.Add(this.relationFK_BookedRoom_BookingSummary);
+            this.relationFK_BookedRoom_Room = new global::System.Data.DataRelation("FK_BookedRoom_Room", new global::System.Data.DataColumn[] {
+                        this.tableRoom.roomIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBookedRoom.roomIDColumn}, false);
+            this.Relations.Add(this.relationFK_BookedRoom_Room);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1800,6 +1814,8 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnroomID;
             
+            private global::System.Data.DataColumn columnbookedRoomID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BookedRoomDataTable() {
@@ -1859,6 +1875,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn bookedRoomIDColumn {
+                get {
+                    return this.columnbookedRoomID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1894,12 +1918,19 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BookedRoomRow AddBookedRoomRow(System.DateTime dateID, int summaryID, int roomID) {
+            public BookedRoomRow AddBookedRoomRow(System.DateTime dateID, BookingSummaryRow parentBookingSummaryRowByFK_BookedRoom_BookingSummary, RoomRow parentRoomRowByFK_BookedRoom_Room, int bookedRoomID) {
                 BookedRoomRow rowBookedRoomRow = ((BookedRoomRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         dateID,
-                        summaryID,
-                        roomID};
+                        null,
+                        null,
+                        bookedRoomID};
+                if ((parentBookingSummaryRowByFK_BookedRoom_BookingSummary != null)) {
+                    columnValuesArray[1] = parentBookingSummaryRowByFK_BookedRoom_BookingSummary[0];
+                }
+                if ((parentRoomRowByFK_BookedRoom_Room != null)) {
+                    columnValuesArray[2] = parentRoomRowByFK_BookedRoom_Room[0];
+                }
                 rowBookedRoomRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBookedRoomRow);
                 return rowBookedRoomRow;
@@ -1932,6 +1963,7 @@ namespace WindowsFormsApp1 {
                 this.columndateID = base.Columns["dateID"];
                 this.columnsummaryID = base.Columns["summaryID"];
                 this.columnroomID = base.Columns["roomID"];
+                this.columnbookedRoomID = base.Columns["bookedRoomID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1943,12 +1975,18 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnsummaryID);
                 this.columnroomID = new global::System.Data.DataColumn("roomID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnroomID);
+                this.columnbookedRoomID = new global::System.Data.DataColumn("bookedRoomID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbookedRoomID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columndateID}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnbookedRoomID}, false));
                 this.columndateID.AllowDBNull = false;
                 this.columndateID.Unique = true;
                 this.columnsummaryID.AllowDBNull = false;
                 this.columnroomID.AllowDBNull = false;
+                this.columnbookedRoomID.AllowDBNull = false;
+                this.columnbookedRoomID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2770,6 +2808,17 @@ namespace WindowsFormsApp1 {
                     this[this.tableRoom.statusColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BookedRoomRow[] GetBookedRoomRows() {
+                if ((this.Table.ChildRelations["FK_BookedRoom_Room"] == null)) {
+                    return new BookedRoomRow[0];
+                }
+                else {
+                    return ((BookedRoomRow[])(base.GetChildRows(this.Table.ChildRelations["FK_BookedRoom_Room"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2886,6 +2935,39 @@ namespace WindowsFormsApp1 {
                 }
                 set {
                     this[this.tableBookedRoom.roomIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int bookedRoomID {
+                get {
+                    return ((int)(this[this.tableBookedRoom.bookedRoomIDColumn]));
+                }
+                set {
+                    this[this.tableBookedRoom.bookedRoomIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BookingSummaryRow BookingSummaryRow {
+                get {
+                    return ((BookingSummaryRow)(this.GetParentRow(this.Table.ParentRelations["FK_BookedRoom_BookingSummary"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_BookedRoom_BookingSummary"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public RoomRow RoomRow {
+                get {
+                    return ((RoomRow)(this.GetParentRow(this.Table.ParentRelations["FK_BookedRoom_Room"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_BookedRoom_Room"]);
                 }
             }
         }
@@ -3024,6 +3106,17 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetbookingStatusNull() {
                 this[this.tableBookingSummary.bookingStatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BookedRoomRow[] GetBookedRoomRows() {
+                if ((this.Table.ChildRelations["FK_BookedRoom_BookingSummary"] == null)) {
+                    return new BookedRoomRow[0];
+                }
+                else {
+                    return ((BookedRoomRow[])(base.GetChildRows(this.Table.ChildRelations["FK_BookedRoom_BookingSummary"])));
+                }
             }
         }
         
@@ -5126,35 +5219,41 @@ SELECT roomTypeID, roomPrice, description, numberOfPeople, status FROM RoomType 
             tableMapping.ColumnMappings.Add("dateID", "dateID");
             tableMapping.ColumnMappings.Add("summaryID", "summaryID");
             tableMapping.ColumnMappings.Add("roomID", "roomID");
+            tableMapping.ColumnMappings.Add("bookedRoomID", "bookedRoomID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[BookedRoom] WHERE (([dateID] = @Original_dateID) AND ([summary" +
-                "ID] = @Original_summaryID) AND ([roomID] = @Original_roomID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [BookedRoom] WHERE (([dateID] = @Original_dateID) AND ([summaryID] = " +
+                "@Original_summaryID) AND ([roomID] = @Original_roomID) AND ([bookedRoomID] = @Or" +
+                "iginal_bookedRoomID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateID", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateID", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookedRoomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookedRoomID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[BookedRoom] ([dateID], [summaryID], [roomID]) VALUES (@dateID," +
-                " @summaryID, @roomID);\r\nSELECT dateID, summaryID, roomID FROM BookedRoom WHERE (" +
-                "dateID = @dateID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [BookedRoom] ([dateID], [summaryID], [roomID], [bookedRoomID]) VALUES" +
+                " (@dateID, @summaryID, @roomID, @bookedRoomID);\r\nSELECT dateID, summaryID, roomI" +
+                "D, bookedRoomID FROM BookedRoom WHERE (bookedRoomID = @bookedRoomID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateID", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateID", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@roomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookedRoomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookedRoomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[BookedRoom] SET [dateID] = @dateID, [summaryID] = @summaryID, [roomID] = @roomID WHERE (([dateID] = @Original_dateID) AND ([summaryID] = @Original_summaryID) AND ([roomID] = @Original_roomID));
-SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [BookedRoom] SET [dateID] = @dateID, [summaryID] = @summaryID, [roomID] = @roomID, [bookedRoomID] = @bookedRoomID WHERE (([dateID] = @Original_dateID) AND ([summaryID] = @Original_summaryID) AND ([roomID] = @Original_roomID) AND ([bookedRoomID] = @Original_bookedRoomID));
+SELECT dateID, summaryID, roomID, bookedRoomID FROM BookedRoom WHERE (bookedRoomID = @bookedRoomID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateID", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateID", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@roomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateID", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookedRoomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookedRoomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateID", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_summaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "summaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookedRoomID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookedRoomID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5170,7 +5269,7 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT dateID, summaryID, roomID FROM dbo.BookedRoom";
+            this._commandCollection[0].CommandText = "SELECT dateID, summaryID, roomID, bookedRoomID FROM BookedRoom";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -5235,10 +5334,11 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime Original_dateID, int Original_summaryID, int Original_roomID) {
+        public virtual int Delete(System.DateTime Original_dateID, int Original_summaryID, int Original_roomID, int Original_bookedRoomID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_dateID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_summaryID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_roomID));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_bookedRoomID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5259,10 +5359,11 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime dateID, int summaryID, int roomID) {
+        public virtual int Insert(System.DateTime dateID, int summaryID, int roomID, int bookedRoomID) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(dateID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(summaryID));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(roomID));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(bookedRoomID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5283,13 +5384,15 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime dateID, int summaryID, int roomID, System.DateTime Original_dateID, int Original_summaryID, int Original_roomID) {
+        public virtual int Update(System.DateTime dateID, int summaryID, int roomID, int bookedRoomID, System.DateTime Original_dateID, int Original_summaryID, int Original_roomID, int Original_bookedRoomID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(dateID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(summaryID));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(roomID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_dateID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_summaryID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_roomID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(bookedRoomID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Original_dateID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_summaryID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_roomID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_bookedRoomID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5310,8 +5413,8 @@ SELECT dateID, summaryID, roomID FROM BookedRoom WHERE (dateID = @dateID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int summaryID, int roomID, System.DateTime Original_dateID, int Original_summaryID, int Original_roomID) {
-            return this.Update(Original_dateID, summaryID, roomID, Original_dateID, Original_summaryID, Original_roomID);
+        public virtual int Update(int summaryID, int roomID, int bookedRoomID, System.DateTime Original_dateID, int Original_summaryID, int Original_roomID, int Original_bookedRoomID) {
+            return this.Update(Original_dateID, summaryID, roomID, bookedRoomID, Original_dateID, Original_summaryID, Original_roomID, Original_bookedRoomID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6043,6 +6146,24 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(fullDatabase dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._roomTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._roomTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bookingSummaryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bookingSummaryTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6058,15 +6179,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._paymentTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6088,15 +6200,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._bookingSummaryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bookingSummaryTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -6107,6 +6210,22 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(fullDatabase dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._roomTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._roomTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bookingSummaryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bookingSummaryTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6120,14 +6239,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._paymentTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6147,14 +6258,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._bookingSummaryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bookingSummaryTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -6165,14 +6268,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(fullDatabase dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._bookingSummaryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bookingSummaryTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._bookedRoomTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.BookedRoom.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6189,14 +6284,6 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._paymentTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Payment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6210,6 +6297,22 @@ SELECT summaryID, emailID, dateIn, dateOut, numberOfNights, bookingMethod, booki
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._bookingSummaryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BookingSummary.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bookingSummaryTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._roomTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._roomTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

@@ -60,7 +60,6 @@ namespace WindowsFormsApp1
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
 
-
             //checking room availability, conditions that must be true for a valid date input
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
 
@@ -133,6 +132,13 @@ namespace WindowsFormsApp1
             //if (fullDatabase.Tables["BookingSummary"].Rows[summaryID]["summaryID"])
 
             //adding booking to to booked room record.
+
+            /*
+            Form7 payment = new Form7();
+            this.Hide();
+            payment.ShowDialog();
+            this.Show();
+            */
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -225,10 +231,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form7 payment = new Form7();
-            this.Hide();
-            payment.ShowDialog();
-            this.Show();
+
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
