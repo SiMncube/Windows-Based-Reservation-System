@@ -153,7 +153,6 @@ namespace WindowsFormsApp1
             }
             textBox1.Text = "R" + amountDue.ToString() + ".00";
 
-
             //adding booking to array that would be to an array that would be processed for payments
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
             {
@@ -168,7 +167,6 @@ namespace WindowsFormsApp1
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                     {
-                        //bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
                         singleAllocatedRooms[i] = (int)availableSingleRooms[i];
                     }
                 }
@@ -177,7 +175,6 @@ namespace WindowsFormsApp1
                 {
                     for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                     {
-                        //bookedRoomTableAdapter.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
                         doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
                     }
                 }
@@ -188,6 +185,8 @@ namespace WindowsFormsApp1
                 currentBooking.setRoomIDs(allAllocatedRooms);
 
 
+
+
                 //testing code for checking allocated rooms
                 string sss = "";
 
@@ -195,9 +194,7 @@ namespace WindowsFormsApp1
                 {
                     sss += allAllocatedRooms[i] + ", ";
                 }
-
                 textBox2.Text = sss;
-                
             }
 
             Form7 payment = new Form7();
