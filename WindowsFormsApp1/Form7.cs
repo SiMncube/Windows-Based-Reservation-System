@@ -23,28 +23,13 @@ namespace WindowsFormsApp1
             bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
             label7.Text += getAmountDue();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if(paymentDetailIsValid())
             {
                 paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentUser.getSummaryID(), "EFT");
                 updateBookingStatus();
+                updateBookedRoom();
                 label8.Text += getAmountDue();
                 label9.Visible = true;
                 label8.Visible = true;
@@ -56,19 +41,7 @@ namespace WindowsFormsApp1
                 paymentTableAdapter1.Fill(fullDatabase1.Payment);
                 button1.Enabled = false;
             }
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
+        }       
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
             this.Close();
@@ -159,7 +132,54 @@ namespace WindowsFormsApp1
 
             }
         }
+        private void updateBookedRoom()
+        {
+            int[] rooms = currentUser.getRoomIDs();
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
+                {
+                    bookedRoomTableAdapter1.Insert(dateID, currentUser.getSummaryID(), rooms[i]);
+                    bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
+                }
+            }
+        }
+        private DateTime GetDateIn()
+        {
+            DateTime dateIn =  DateTime.Now;
+            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID() + "")
+                {
+                    string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString();
+                    int year = int.Parse(dateString.Substring(0, 4));
+                    int month = int.Parse(dateString.Substring(5, 2));
+                    int day = int.Parse(dateString.Substring(8, 2));
+                    dateIn = new DateTime(year, month, day);
+                    break;
+                }
 
+            }
+            return dateIn;
+        }
+        private DateTime GetDateOut()
+        {
+            DateTime dateIn = DateTime.Now;
+            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentUser.getSummaryID() + "")
+                {
+                    string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString();
+                    int year = int.Parse(dateString.Substring(0, 4));
+                    int month = int.Parse(dateString.Substring(5, 2));
+                    int day = int.Parse(dateString.Substring(8, 2));
+                    dateIn = new DateTime(year, month, day);
+                    break;
+                }
+
+            }
+            return dateIn;
+        }
         private void Form7_Load(object sender, EventArgs e)
         {
             
