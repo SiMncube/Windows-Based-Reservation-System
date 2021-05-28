@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.summaryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +65,7 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,7 +126,7 @@ namespace WindowsFormsApp1
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 16);
+            this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cancel Booking";
             // 
@@ -172,6 +173,7 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -180,6 +182,30 @@ namespace WindowsFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(502, 114);
             this.panel2.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label7.Location = new System.Drawing.Point(80, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(316, 23);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Booking Ref does not exist";
+            this.label7.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label5.Location = new System.Drawing.Point(64, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(341, 23);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Booking is already cancelled";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -361,29 +387,17 @@ namespace WindowsFormsApp1
             this.paymentBindingSource1.DataMember = "Payment";
             this.paymentBindingSource1.DataSource = this.fullDatabase;
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label7.Location = new System.Drawing.Point(80, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(316, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Booking Ref does not exist";
-            this.label7.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label5.Location = new System.Drawing.Point(64, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(341, 23);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Booking is already cancelled";
-            this.label5.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label8.Location = new System.Drawing.Point(104, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(256, 23);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Booking was not paid";
+            this.label8.Visible = false;
             // 
             // Form4
             // 
@@ -454,5 +468,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.BindingSource paymentBindingSource1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
     }
 }
