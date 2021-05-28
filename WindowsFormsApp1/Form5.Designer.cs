@@ -76,6 +76,10 @@ namespace WindowsFormsApp1
             this.roomTypeTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTypeTableAdapter();
             this.roomTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryDataGridView)).BeginInit();
@@ -482,6 +486,48 @@ namespace WindowsFormsApp1
             this.label7.Visible = false;
             this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(196, 596);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(491, 29);
+            this.textBox2.TabIndex = 37;
+            this.textBox2.Text = "0";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Enabled = false;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(196, 541);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(491, 29);
+            this.textBox5.TabIndex = 38;
+            this.textBox5.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 547);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(142, 20);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Available Rooms";
+            this.label8.Click += new System.EventHandler(this.label8_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 602);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 20);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "booked Rooms";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +535,10 @@ namespace WindowsFormsApp1
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1370, 682);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.paymentDataGridView);
             this.Controls.Add(this.bookedRoomDataGridView);
             this.Controls.Add(this.bookingSummaryDataGridView);
@@ -509,6 +559,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.paymentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -560,5 +611,9 @@ namespace WindowsFormsApp1
         private fullDatabaseTableAdapters.RoomTableAdapter roomTableAdapter;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label9;
     }
 }
