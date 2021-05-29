@@ -132,6 +132,7 @@ namespace WindowsFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(208, 22);
             this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -150,6 +151,7 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 22);
             this.textBox2.TabIndex = 11;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -178,6 +180,7 @@ namespace WindowsFormsApp1
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(208, 22);
             this.textBox3.TabIndex = 12;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -186,6 +189,7 @@ namespace WindowsFormsApp1
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(208, 22);
             this.textBox4.TabIndex = 13;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // panel3
             // 
@@ -240,6 +244,7 @@ namespace WindowsFormsApp1
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(208, 22);
             this.textBox5.TabIndex = 14;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -258,6 +263,7 @@ namespace WindowsFormsApp1
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(208, 22);
             this.textBox7.TabIndex = 16;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // panel2
             // 
@@ -323,9 +329,9 @@ namespace WindowsFormsApp1
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(5, 123);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 16);
+            this.label10.Size = new System.Drawing.Size(103, 16);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Postal Code";
+            this.label10.Text = "Postal Code *";
             // 
             // label9
             // 
@@ -372,6 +378,7 @@ namespace WindowsFormsApp1
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(208, 22);
             this.textBox10.TabIndex = 19;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // pictureBox1
             // 
@@ -493,7 +500,7 @@ namespace WindowsFormsApp1
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(257, 124);
+            this.button2.Location = new System.Drawing.Point(199, 122);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(221, 59);
             this.button2.TabIndex = 5;
@@ -531,7 +538,6 @@ namespace WindowsFormsApp1
             this.Name = "Form2";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form2_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

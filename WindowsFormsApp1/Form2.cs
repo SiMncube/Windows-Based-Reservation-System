@@ -21,12 +21,12 @@ namespace WindowsFormsApp1
         {
             int count = 0;
 
-            if (textBox1.Text.Length < 3)
+            if (textBox1.Text.Length < 3 || !isAllLetters(textBox1.Text))
             {
                 ChangeColor(textBox1);
                 count++;
             }
-            if (textBox2.Text.Length < 3)
+            if (textBox2.Text.Length < 3 || !isAllLetters(textBox2.Text))
             {
                 ChangeColor(textBox2);
                 count++;
@@ -49,6 +49,11 @@ namespace WindowsFormsApp1
             if (textBox7.Text.Length < 5)
             {
                 ChangeColor(textBox7);
+                count++;
+            }
+            if(textBox10.Text.Length != 4 || !isAllDigit(textBox10))
+            {
+                ChangeColor(textBox10);
                 count++;
             }
             if (count > 0)
@@ -78,11 +83,13 @@ namespace WindowsFormsApp1
         {
             if(!RecordsAlreadyExists() && IsLoginValid())
             {
-                customerTableAdapter.Insert(textBox5.Text.ToLower(), textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox7.Text, textBox8.Text, textBox6.Text, textBox9.Text, textBox10.Text);
-                panel1.Visible = false;
-                panel2.Visible = false;
-                panel3.Visible = false;
-                panel4.Visible = true;
+                
+                customerTableAdapter.Insert(textBox5.Text.ToLower(), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox3.Text, textBox4.Text, textBox7.Text, capFirst(textBox8.Text), capFirst(textBox6.Text), capFirst(textBox9.Text), textBox10.Text);
+                panel1.Enabled = false;
+                panel2.Enabled = false;
+                panel3.Enabled = false;
+                panel4.Visible= true;
+                customerTableAdapter.Fill(fullDatabase.Customer);
             }
         }
         private void ChangeColor(TextBox textBox)
@@ -105,34 +112,68 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-        private void Form2_Load(object sender, EventArgs e)
+        private bool isLetter(char c)
         {
-            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
-
+            if (c >= 'a' && c <= 'z')
+                return true;
+            return false;
         }
-
+        private bool isAllLetters(string s)
+        {
+            s = s.ToLower();
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (!isLetter(s[i]))
+                    return false;
+            }
+            return true;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
+            currentUser.setEmailID(textBox5.Text);
             Form8 homePage = new Form8();
             this.Hide();
             homePage.ShowDialog();
             this.Close();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private string capFirst(string s)
         {
-
+            return (s[0] + "").ToUpper() + s.Substring(1);
         }
 
-        private void customerBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.BackColor = Color.White;
         }
 
-        private void Form2_Load_1(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            textBox2.BackColor = Color.White;
+        }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            textBox4.BackColor = Color.White;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            textBox5.BackColor = Color.White;
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            textBox7.BackColor = Color.White;
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            textBox8.BackColor = Color.White;
         }
     }
 }
