@@ -182,8 +182,7 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\empty-tabletop-product-display-with-blurred-bathroom_41470-3566.jpg" />
-    <Content Include="Resources\photo-1448697138198-9aa6d0d84bf4.jpg" />
+    <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
     <None Include="Resources\photo-1448697138198-9aa6d0d84bf41.jpg" />
