@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
             // 
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(342, 367);
+            this.button1.Location = new System.Drawing.Point(342, 317);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 55);
             this.button1.TabIndex = 4;
@@ -194,9 +194,9 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(61, 12);
+            this.panel1.Location = new System.Drawing.Point(486, 237);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(522, 500);
+            this.panel1.Size = new System.Drawing.Size(522, 384);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -240,7 +240,7 @@ namespace WindowsFormsApp1
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(180, 367);
+            this.button4.Location = new System.Drawing.Point(180, 317);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 55);
             this.button4.TabIndex = 35;
@@ -272,7 +272,7 @@ namespace WindowsFormsApp1
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(18, 367);
+            this.button2.Location = new System.Drawing.Point(18, 317);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 55);
             this.button2.TabIndex = 32;
@@ -316,9 +316,9 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.bookingSummaryDataGridView.DataSource = this.bookingSummaryBindingSource;
-            this.bookingSummaryDataGridView.Location = new System.Drawing.Point(589, 12);
+            this.bookingSummaryDataGridView.Location = new System.Drawing.Point(295, 12);
             this.bookingSummaryDataGridView.Name = "bookingSummaryDataGridView";
-            this.bookingSummaryDataGridView.Size = new System.Drawing.Size(770, 500);
+            this.bookingSummaryDataGridView.Size = new System.Drawing.Size(862, 219);
             this.bookingSummaryDataGridView.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn1
@@ -427,6 +427,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 682);
             this.Controls.Add(this.bookingSummaryDataGridView);
