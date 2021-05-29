@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             textBox3.BackColor = Color.White;
+            label10.Visible = false;
         }
 
         private void updateAvailableRoomList()
@@ -145,33 +146,25 @@ namespace WindowsFormsApp1
 
         private bool DoWeHaveSuffientSingleRooms()
         {
-            //Checking Number of rooms input then allowing the user to check if all Input Is Valid
-            //and the requested number of rooms if they are available in the specified period
-
             if (numberOfSingleRooms > availableSingleRooms.Count)
             {
-                label10.Text = "Appologies We now Have: " + availableSingleRooms.Count + " Single Rooms for your Seleted period";
+                label10.Text = "Appologies Only: " + availableSingleRooms.Count + " Single Rooms are left for your Seleted period";
                 label10.Visible = true;
                 this.ChangeColor(textBox3);
                 return false;
             }
-            label10.Visible = false;
             return true;
         }
 
         private bool DoWeHaveSuffientDoubleRooms()
         {
-            //Checking Number of rooms input then allowing the user to check if all Input Is Valid
-            //and the requested number of rooms if they are available in the specified period
-
             if (numberOfDoubleRooms > availableDoubleRooms.Count)
             {
-                label11.Text = "Appologies We now have: " + availableDoubleRooms.Count + " Double Rooms for your Seleted period";
+                label11.Text = "Appologies Only: " + availableDoubleRooms.Count + " Double Rooms are left for your Seleted period";
                 label11.Visible = true;
                 this.ChangeColor(textBox4);
                 return false;
             }
-            label10.Visible = false;
             return true;
         }
 
@@ -184,16 +177,14 @@ namespace WindowsFormsApp1
             //checking room availability, and validating date input
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
             {
-                label7.Visible = false;         //since now date is valid this label should be removed
                 this.updateAvailableRoomList();
                 string finalAmount = this.getAmountDue();
 
-                if (DoWeHaveSuffientDoubleRooms() && DoWeHaveSuffientSingleRooms() )
+                if (DoWeHaveSuffientDoubleRooms() && DoWeHaveSuffientSingleRooms())
                 {
                     textBox1.Text = finalAmount;
-                    button1.Enabled = true;     //checking out button
-
-                    //&& (numberOfSingleRooms != 0 && numberOfDoubleRooms != 0)
+                    if (numberOfSingleRooms != 0 && numberOfDoubleRooms != 0)
+                        button1.Enabled = true;     //checking out button shown
                 }
             }
             else
@@ -300,12 +291,12 @@ namespace WindowsFormsApp1
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-
+            label7.Visible = false;         //since now date is valid this label should be removed
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-
+            label7.Visible = false;         //since now date is valid this label should be removed
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -348,6 +339,7 @@ namespace WindowsFormsApp1
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             textBox4.BackColor = Color.White;
+            label11.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
