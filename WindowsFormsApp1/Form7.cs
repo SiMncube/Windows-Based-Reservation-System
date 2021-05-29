@@ -41,6 +41,8 @@ namespace WindowsFormsApp1
                 resetColor(textBox3);
                 paymentTableAdapter1.Fill(fullDatabase1.Payment);
                 button1.Enabled = false;
+                label8.Text = toString();
+                panel1.Enabled = false;
             }
         }       
         private void pictureBox1_Click_2(object sender, EventArgs e)
@@ -69,7 +71,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID() && fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString() == getSurname())
+                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID() && fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString().Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
                     return true;
             }
             return false;
@@ -181,23 +183,59 @@ namespace WindowsFormsApp1
             }
             return dateIn;
         }
-        private void Form7_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
         private void resetColor(TextBox textBox)
         {
             textBox.BackColor = Color.White;
+        }
+        /*private string getDataBaseColumn(string databaseName,string primaryKeyName , string dataBasColumn , string primaryKey)
+        {
+            for (int i = 0; i < fullDatabase1.f.Rows.Count; i++)
+            {
+                if(fullDatabase1.Tables[databaseName].Rows[i][primaryKeyName].ToString() ==  primaryKey)
+                    return fullDatabase1.Tables[databaseName].Rows[i][dataBasColumn].ToString();
+
+            }
+                return "";
+        }*/
+        private string getCustomerColumn()
+        {
+            for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID())
+                {
+                    return "Name : " + fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString() + " " + fullDatabase1.Tables["Customer"].Rows[i]["name"].ToString();
+                }
+            }
+            return "";
+        }
+        private string getSummaryDetails()
+        {
+            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                {
+                    return "\nDate in   : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString().Substring(0, 10) +
+                            "\nDate out : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString().Substring(0, 10) +
+                            "\nAmount paid : " + getAmountDue() +
+                            "\nBooking reference : " + currentBooking.getSummaryID();
+                }
+
+            }
+            return "";
+        }
+        private string toString()
+        {
+            return getCustomerColumn() + getSummaryDetails();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
         }
     }
 
