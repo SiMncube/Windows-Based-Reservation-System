@@ -195,6 +195,8 @@ namespace WindowsFormsApp1
             else
             {
                 label7.Visible = true;
+                comboBox1.Enabled = false;
+                comboBox2.Enabled = false;
             }
         }
 
