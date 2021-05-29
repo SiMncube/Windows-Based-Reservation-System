@@ -138,7 +138,7 @@ namespace WindowsFormsApp1
         }
         private string capFirst(string s)
         {
-            return (s[0] + "").ToUpper() + s.Substring(1);
+            return (s[0] + "").ToUpper() + s.Substring(1).ToLower();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
