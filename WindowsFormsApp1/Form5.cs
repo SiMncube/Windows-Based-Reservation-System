@@ -74,13 +74,13 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            textBox3.BackColor = Color.White;
         }
 
         private void updateAvailableRoomList()
         {
-            availableSingleRooms.Clear();
-            availableDoubleRooms.Clear();
+            availableSingleRooms = new ArrayList();
+            availableDoubleRooms = new ArrayList();
 
             int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
             for (int roomID = 1; roomID <= 15; roomID++)
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void updateAmountDue()
+        private string getAmountDue()
         {
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
@@ -139,33 +139,44 @@ namespace WindowsFormsApp1
             }
 
             amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
-            textBox1.Text = "R" + amountDue.ToString() + ".00";
+            ///textBox1.Text = "R" + amountDue.ToString() + ".00";
+            return "R" + amountDue.ToString() + ".00";
         }
 
-        private bool DoWeHaveSuffientRooms()
+        private bool DoWeHaveSuffientSingleRooms()
         {
             //Checking Number of rooms input then allowing the user to check if all Input Is Valid
             //and the requested number of rooms if they are available in the specified period
 
             if (numberOfSingleRooms > availableSingleRooms.Count)
             {
-                label10.Text = "Appologies We now Have: " + availableSingleRooms.Count + "Single Rooms";
+                label10.Text = "Appologies We now Have: " + availableSingleRooms.Count + " Single Rooms for your Seleted period";
                 label10.Visible = true;
+                this.ChangeColor(textBox3);
                 return false;
             }
+            label10.Visible = false;
+            return true;
+        }
+
+        private bool DoWeHaveSuffientDoubleRooms()
+        {
+            //Checking Number of rooms input then allowing the user to check if all Input Is Valid
+            //and the requested number of rooms if they are available in the specified period
+
             if (numberOfDoubleRooms > availableDoubleRooms.Count)
             {
-                label11.Text = "Appologies We now have: " + availableDoubleRooms.Count + "Double Rooms";
+                label11.Text = "Appologies We now have: " + availableDoubleRooms.Count + " Double Rooms for your Seleted period";
                 label11.Visible = true;
+                this.ChangeColor(textBox4);
                 return false;
             }
-
+            label10.Visible = false;
             return true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             numberOfNights = dateOut.Subtract(dateIn).Days;
@@ -173,12 +184,16 @@ namespace WindowsFormsApp1
             //checking room availability, and validating date input
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
             {
+                label7.Visible = false;         //since now date is valid this label should be removed
                 this.updateAvailableRoomList();
+                string finalAmount = this.getAmountDue();
 
-                if (DoWeHaveSuffientRooms() && !(numberOfSingleRooms == 0 && numberOfDoubleRooms == 0))
+                if (DoWeHaveSuffientDoubleRooms() && DoWeHaveSuffientSingleRooms() )
                 {
-                    this.updateAmountDue();
+                    textBox1.Text = finalAmount;
                     button1.Enabled = true;     //checking out button
+
+                    //&& (numberOfSingleRooms != 0 && numberOfDoubleRooms != 0)
                 }
             }
             else
@@ -189,9 +204,6 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label7.Visible = false;
-
-
             //adding booking to array that would be to an array that would be processed for payments
             if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
             {
@@ -335,7 +347,7 @@ namespace WindowsFormsApp1
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+            textBox4.BackColor = Color.White;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
