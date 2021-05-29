@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
         int numberOfSingleRooms = 0;
         int numberOfDoubleRooms = 0;
 
+        int payClickCount = 1;
+
         private void ChangeColor(TextBox textBox)
         {
             textBox.BackColor = Color.Red;
@@ -144,25 +146,27 @@ namespace WindowsFormsApp1
             return "R" + amountDue.ToString() + ".00";
         }
 
-        private bool DoWeHaveSuffientSingleRooms()
+        private bool WeHaveSuffientSingleRooms()
         {
             if (numberOfSingleRooms > availableSingleRooms.Count)
             {
                 label10.Text = "Appologies Only: " + availableSingleRooms.Count + " Single Rooms are left for your Seleted period";
                 label10.Visible = true;
                 this.ChangeColor(textBox3);
+                button1.Enabled = false;  //checking out button shown
                 return false;
             }
             return true;
         }
 
-        private bool DoWeHaveSuffientDoubleRooms()
+        private bool WeHaveSuffientDoubleRooms()
         {
             if (numberOfDoubleRooms > availableDoubleRooms.Count)
             {
                 label11.Text = "Appologies Only: " + availableDoubleRooms.Count + " Double Rooms are left for your Seleted period";
                 label11.Visible = true;
                 this.ChangeColor(textBox4);
+                button1.Enabled = false;  //checking out button shown
                 return false;
             }
             return true;
@@ -180,10 +184,10 @@ namespace WindowsFormsApp1
                 this.updateAvailableRoomList();
                 string finalAmount = this.getAmountDue();
 
-                if (DoWeHaveSuffientDoubleRooms() && DoWeHaveSuffientSingleRooms())
+                if (WeHaveSuffientDoubleRooms() && WeHaveSuffientSingleRooms())
                 {
                     textBox1.Text = finalAmount;
-                    if (numberOfSingleRooms != 0 && numberOfDoubleRooms != 0)
+                    if (!(numberOfSingleRooms == 0 && numberOfDoubleRooms == 0))
                         button1.Enabled = true;     //checking out button shown
                 }
             }
@@ -193,49 +197,76 @@ namespace WindowsFormsApp1
             textBox5.Text = "Singles: " + availableSingleRooms.Count + ", Doubles: " + availableDoubleRooms.Count;
         }
 
+        public void allocateRooms()
+        {
+            int[] singleAllocatedRooms = new int[numberOfSingleRooms];
+            int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
+            for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
+            {
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
+                {
+                    singleAllocatedRooms[i] = (int)availableSingleRooms[i];
+                }
+            }
+
+            for (int i = 0; i < numberOfDoubleRooms; i++) //adding double rooms to bookedRoom table
+            {
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
+                {
+                    doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
+                }
+            }
+
+            int[] allAllocatedRooms = new int[singleAllocatedRooms.Length + doubleAllocatedRooms.Length];
+            Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
+            Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
+            currentBooking.setRoomIDs(allAllocatedRooms);
+
+            //testing code for checking allocated rooms
+            string sss = "";
+
+            for (int i = 0; i < allAllocatedRooms.Length; i++)
+            {
+                sss += allAllocatedRooms[i] + ", ";
+            }
+            textBox2.Text = sss;
+        }
+
+        private void updateThisBooking()
+        {
+            for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                {
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["dateIn"] = dateIn;
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["dateOut"] = dateOut;
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["numberOfNights"] = numberOfNights;
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["bookingMethod"] = bookingMethod;
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"] = bookingStatus;
+                    fullDatabase.Tables["BookingSummary"].Rows[i]["amountDue"] = amountDue.ToString();
+
+                    bookingSummaryTableAdapter.Update(fullDatabase.BookingSummary);
+                    bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);
+
+                    this.allocateRooms();  //adding booking to array that would be to an array that would be processed for payments
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            //adding booking to array that would be to an array that would be processed for payments
-            if (numberOfSingleRooms <= availableSingleRooms.Count && numberOfDoubleRooms <= availableDoubleRooms.Count)
+            button1.Enabled = false;
+            
+            if (payClickCount == 1)
             {
-                int[] singleAllocatedRooms = new int[numberOfSingleRooms];
-                int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
-
                 bookingSummaryTableAdapter.Insert(currentUser.getEmailID(), dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, amountDue.ToString());
                 int summaryID = (int)bookingSummaryTableAdapter.getLastRecord();
                 currentBooking.setSummaryID(summaryID);
-
-                for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
-                {
-                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
-                    {
-                        singleAllocatedRooms[i] = (int)availableSingleRooms[i];
-                    }
-                }
-
-                for (int i = 0; i < numberOfDoubleRooms; i++) //adding double rooms to bookedRoom table
-                {
-                    for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
-                    {
-                        doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
-                    }
-                }
-
-                int[] allAllocatedRooms = new int[singleAllocatedRooms.Length + doubleAllocatedRooms.Length];
-                Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
-                Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
-                currentBooking.setRoomIDs(allAllocatedRooms);
-
-
-                //testing code for checking allocated rooms
-                string sss = "";
-
-                for (int i = 0; i < allAllocatedRooms.Length; i++)
-                {
-                    sss += allAllocatedRooms[i] + ", ";
-                }
-                textBox2.Text = sss;
+                this.allocateRooms();  //adding booking to array that would be to an array that would be processed for payments
+                payClickCount++;
             }
+
+            this.updateThisBooking();
 
             Form7 payment = new Form7();
             this.Hide();
