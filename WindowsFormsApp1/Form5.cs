@@ -78,6 +78,8 @@ namespace WindowsFormsApp1
         {
             textBox3.BackColor = Color.White;
             label10.Visible = false;
+            button1.Enabled = false;  //checking out button shown
+
         }
 
         private void updateAvailableRoomList()
@@ -325,11 +327,14 @@ namespace WindowsFormsApp1
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             label7.Visible = false;         //since now date is valid this label should be removed
+            button1.Enabled = false;  //checking out button shown
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             label7.Visible = false;         //since now date is valid this label should be removed
+            button1.Enabled = false;  //checking out button shown
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -373,6 +378,7 @@ namespace WindowsFormsApp1
         {
             textBox4.BackColor = Color.White;
             label11.Visible = false;
+            button1.Enabled = false;  //checking out button shown
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
