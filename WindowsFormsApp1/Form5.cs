@@ -188,13 +188,13 @@ namespace WindowsFormsApp1
                 {
                     textBox1.Text = finalAmount;
                     if (!(numberOfSingleRooms == 0 && numberOfDoubleRooms == 0))
-                        button1.Enabled = true;     //checking out button shown
+                        button1.Enabled = true;    //checking out button shown
                 }
             }
             else
                 label7.Visible = true;   //selected date is invalid label
 
-            textBox5.Text = "Singles: " + availableSingleRooms.Count + ", Doubles: " + availableDoubleRooms.Count;
+            //textBox5.Text = "Singles: " + availableSingleRooms.Count + ", Doubles: " + availableDoubleRooms.Count;
         }
 
         public void allocateRooms()
@@ -222,6 +222,7 @@ namespace WindowsFormsApp1
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
             currentBooking.setRoomIDs(allAllocatedRooms);
 
+            /*
             //testing code for checking allocated rooms
             string sss = "";
 
@@ -230,6 +231,7 @@ namespace WindowsFormsApp1
                 sss += allAllocatedRooms[i] + ", ";
             }
             textBox2.Text = sss;
+            */
         }
 
         private void updateThisBooking()
