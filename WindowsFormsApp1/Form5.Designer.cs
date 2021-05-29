@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
@@ -86,6 +87,7 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+
             // bookingSummaryDataGridView
             // 
             this.bookingSummaryDataGridView.AutoGenerateColumns = false;
