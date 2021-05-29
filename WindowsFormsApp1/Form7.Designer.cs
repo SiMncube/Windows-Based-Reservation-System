@@ -256,7 +256,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.DataSource = this.paymentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(698, 241);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(524, 358);
+            this.dataGridView1.Size = new System.Drawing.Size(536, 358);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -447,7 +447,7 @@ namespace WindowsFormsApp1
             this.dataGridView3.DataSource = this.bookedRoomBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(802, 12);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(420, 223);
+            this.dataGridView3.Size = new System.Drawing.Size(432, 223);
             this.dataGridView3.TabIndex = 29;
             // 
             // bookedRoomIDDataGridViewTextBoxColumn

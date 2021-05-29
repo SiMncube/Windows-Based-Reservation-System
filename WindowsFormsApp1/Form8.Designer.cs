@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn,
             this.postalCodeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(158, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1033, 257);
             this.dataGridView1.TabIndex = 3;
