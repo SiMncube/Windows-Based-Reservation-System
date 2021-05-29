@@ -22,7 +22,10 @@ namespace WindowsFormsApp1
         {
             if (LoginIsValid())
             {
+                
+
                 Form8 homePage = new Form8();
+                fullDatabase.BookingSummary.GetType();
                 this.Hide();
                 homePage.ShowDialog();
                 this.Close();
