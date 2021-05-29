@@ -44,15 +44,16 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(459, 172);
+            this.panel1.Location = new System.Drawing.Point(373, 158);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(576, 324);
+            this.panel1.Size = new System.Drawing.Size(576, 293);
             this.panel1.TabIndex = 0;
             // 
             // dateTimePicker1
@@ -94,7 +95,7 @@ namespace WindowsFormsApp1
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(7, 260);
+            this.button1.Location = new System.Drawing.Point(203, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 61);
             this.button1.TabIndex = 1;
@@ -127,6 +128,8 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1305, 633);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);

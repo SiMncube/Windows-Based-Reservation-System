@@ -37,15 +37,13 @@ namespace WindowsFormsApp1
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bookingSummaryTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
             this.bookingSummaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fullDatabase1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookingSummaryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.summaryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,14 +52,16 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberOfNightsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingSummaryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fullDatabase1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(453, 511);
+            this.panel1.Location = new System.Drawing.Point(465, 281);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 153);
             this.panel1.TabIndex = 25;
@@ -137,10 +137,34 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(453, 271);
+            this.panel2.Location = new System.Drawing.Point(465, 449);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 219);
+            this.panel2.Size = new System.Drawing.Size(460, 157);
             this.panel2.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label5.Location = new System.Drawing.Point(91, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(274, 23);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Booking does not exist";
+            this.label5.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label4.Location = new System.Drawing.Point(3, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "label4";
+            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -165,30 +189,6 @@ namespace WindowsFormsApp1
             // 
             this.bookingSummaryBindingSource.DataMember = "BookingSummary";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(3, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
-            this.label4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label5.Location = new System.Drawing.Point(90, 92);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(274, 23);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Booking does not exist";
-            this.label5.Visible = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -204,20 +204,10 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn,
             this.numberOfNightsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookingSummaryBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(305, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(270, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(843, 249);
             this.dataGridView1.TabIndex = 27;
-            // 
-            // fullDatabase1BindingSource
-            // 
-            this.fullDatabase1BindingSource.DataSource = this.fullDatabase1;
-            this.fullDatabase1BindingSource.Position = 0;
-            // 
-            // bookingSummaryBindingSource1
-            // 
-            this.bookingSummaryBindingSource1.DataMember = "BookingSummary";
-            this.bookingSummaryBindingSource1.DataSource = this.fullDatabase1BindingSource;
             // 
             // summaryIDDataGridViewTextBoxColumn
             // 
@@ -268,10 +258,22 @@ namespace WindowsFormsApp1
             this.numberOfNightsDataGridViewTextBoxColumn.HeaderText = "numberOfNights";
             this.numberOfNightsDataGridViewTextBoxColumn.Name = "numberOfNightsDataGridViewTextBoxColumn";
             // 
+            // bookingSummaryBindingSource1
+            // 
+            this.bookingSummaryBindingSource1.DataMember = "BookingSummary";
+            this.bookingSummaryBindingSource1.DataSource = this.fullDatabase1BindingSource;
+            // 
+            // fullDatabase1BindingSource
+            // 
+            this.fullDatabase1BindingSource.DataSource = this.fullDatabase1;
+            this.fullDatabase1BindingSource.Position = 0;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1332, 676);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -289,8 +291,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

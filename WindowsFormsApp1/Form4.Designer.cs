@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(135, 421);
+            this.panel1.Location = new System.Drawing.Point(426, 370);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 242);
             this.panel1.TabIndex = 26;
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.Size = new System.Drawing.Size(117, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cancel Booking";
             // 
@@ -178,10 +178,22 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(725, 414);
+            this.panel2.Location = new System.Drawing.Point(164, 240);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(502, 114);
+            this.panel2.Size = new System.Drawing.Size(502, 110);
             this.panel2.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label8.Location = new System.Drawing.Point(104, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(256, 23);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Booking was not paid";
+            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -237,7 +249,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.DataSource = this.bookingSummaryBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(61, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(742, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(742, 212);
             this.dataGridView1.TabIndex = 29;
             // 
             // summaryIDDataGridViewTextBoxColumn
@@ -318,7 +330,7 @@ namespace WindowsFormsApp1
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label6);
             this.panel3.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(725, 534);
+            this.panel3.Location = new System.Drawing.Point(672, 240);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(502, 110);
             this.panel3.TabIndex = 30;
@@ -337,6 +349,7 @@ namespace WindowsFormsApp1
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paymentIDDataGridViewTextBoxColumn,
@@ -345,9 +358,9 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn1,
             this.typeOfPaymentDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.paymentBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(869, 12);
+            this.dataGridView2.Location = new System.Drawing.Point(809, 12);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(443, 396);
+            this.dataGridView2.Size = new System.Drawing.Size(462, 212);
             this.dataGridView2.TabIndex = 31;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -387,22 +400,12 @@ namespace WindowsFormsApp1
             this.paymentBindingSource1.DataMember = "Payment";
             this.paymentBindingSource1.DataSource = this.fullDatabase;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label8.Location = new System.Drawing.Point(104, 71);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(256, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Booking was not paid";
-            this.label8.Visible = false;
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1324, 698);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel3);

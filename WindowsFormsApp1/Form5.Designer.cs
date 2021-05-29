@@ -76,7 +76,6 @@ namespace WindowsFormsApp1
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
@@ -87,10 +86,10 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-
             // bookingSummaryDataGridView
             // 
             this.bookingSummaryDataGridView.AutoGenerateColumns = false;
+            this.bookingSummaryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bookingSummaryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingSummaryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -102,7 +101,7 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.bookingSummaryDataGridView.DataSource = this.bookingSummaryBindingSource;
-            this.bookingSummaryDataGridView.Location = new System.Drawing.Point(295, 12);
+            this.bookingSummaryDataGridView.Location = new System.Drawing.Point(263, 12);
             this.bookingSummaryDataGridView.Name = "bookingSummaryDataGridView";
             this.bookingSummaryDataGridView.Size = new System.Drawing.Size(862, 219);
             this.bookingSummaryDataGridView.TabIndex = 27;
@@ -224,7 +223,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(399, 384);
+            this.panel1.Location = new System.Drawing.Point(459, 325);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(509, 286);
             this.panel1.TabIndex = 28;
@@ -369,7 +368,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(399, 309);
+            this.panel2.Location = new System.Drawing.Point(459, 248);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(509, 55);
             this.panel2.TabIndex = 40;
