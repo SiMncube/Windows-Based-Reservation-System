@@ -318,7 +318,7 @@ namespace WindowsFormsApp1
             this.bookingSummaryDataGridView.DataSource = this.bookingSummaryBindingSource;
             this.bookingSummaryDataGridView.Location = new System.Drawing.Point(295, 12);
             this.bookingSummaryDataGridView.Name = "bookingSummaryDataGridView";
-            this.bookingSummaryDataGridView.Size = new System.Drawing.Size(862, 219);
+            this.bookingSummaryDataGridView.Size = new System.Drawing.Size(863, 219);
             this.bookingSummaryDataGridView.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn1
