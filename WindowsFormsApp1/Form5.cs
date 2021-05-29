@@ -29,6 +29,9 @@ namespace WindowsFormsApp1
         public Form5()
         {
             InitializeComponent();
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
+            this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
+            this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
         }
         private void updateAvailableRoomList()
         {
@@ -118,19 +121,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void Form5_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fullDatabase.Payment' table. You can move, or remove it, as needed.
-            this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
-            // TODO: This line of code loads data into the 'fullDatabase.BookedRoom' table. You can move, or remove it, as needed.
-            this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
-            // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
-            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
-
-        }
-
-        
+        } 
         private void updateBookingSummery()
         {
 

@@ -52,7 +52,8 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
             {
-                if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString() == textBox1.Text)
+                if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && 
+                    fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                 {
                     currentUser.setEmailID(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString());
                     return true;
