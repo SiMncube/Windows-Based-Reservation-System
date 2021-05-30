@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -41,12 +42,12 @@ namespace WindowsFormsApp1
                 ChangeColor(textBox4);
                 count++;
             }
-            if (textBox5.Text.Length < 8)
+            if (!IsValidMailAddress(textBox5.Text))
             {
                 ChangeColor(textBox5);
                 count++;
             }
-            if (textBox7.Text.Length < 5)
+            if (textBox7.Text.Length < 5 )
             {
                 ChangeColor(textBox7);
                 count++;
@@ -139,6 +140,15 @@ namespace WindowsFormsApp1
         private string capFirst(string s)
         {
             return (s[0] + "").ToUpper() + s.Substring(1).ToLower();
+        }
+        public  bool IsValidMailAddress(string s)
+        {
+            if (s != null)
+            {
+                EmailAddressAttribute email = new EmailAddressAttribute();
+                return email.IsValid(s);
+            }
+            return false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
