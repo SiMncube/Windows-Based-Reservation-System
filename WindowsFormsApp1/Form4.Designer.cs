@@ -57,7 +57,6 @@ namespace WindowsFormsApp1
             this.bookingSummaryTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.paymentTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.paymentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +72,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +86,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(426, 370);
+            this.panel1.Location = new System.Drawing.Point(426, 353);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 242);
             this.panel1.TabIndex = 26;
@@ -175,14 +173,15 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(164, 240);
+            this.panel2.Location = new System.Drawing.Point(426, 254);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(502, 110);
+            this.panel2.Size = new System.Drawing.Size(502, 93);
             this.panel2.TabIndex = 28;
             // 
             // label8
@@ -190,7 +189,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label8.Location = new System.Drawing.Point(104, 71);
+            this.label8.Location = new System.Drawing.Point(104, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(256, 23);
             this.label8.TabIndex = 8;
@@ -202,7 +201,7 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label7.Location = new System.Drawing.Point(80, 25);
+            this.label7.Location = new System.Drawing.Point(89, 34);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(316, 23);
             this.label7.TabIndex = 6;
@@ -226,7 +225,7 @@ namespace WindowsFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(104, 48);
+            this.label4.Location = new System.Drawing.Point(104, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(244, 23);
             this.label4.TabIndex = 4;
@@ -326,24 +325,14 @@ namespace WindowsFormsApp1
             this.paymentBindingSource.DataMember = "Payment";
             this.paymentBindingSource.DataSource = this.fullDatabase;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(672, 240);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(502, 110);
-            this.panel3.TabIndex = 30;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(32, 44);
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(103, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(278, 33);
+            this.label6.Size = new System.Drawing.Size(203, 27);
             this.label6.TabIndex = 0;
             this.label6.Text = "Refund Amount  : ";
             this.label6.Visible = false;
@@ -410,7 +399,6 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1324, 698);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
@@ -427,8 +415,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -461,7 +447,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfNightsDataGridViewTextBoxColumn;
         private fullDatabaseTableAdapters.PaymentTableAdapter paymentTableAdapter1;
         private System.Windows.Forms.BindingSource paymentBindingSource;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentIDDataGridViewTextBoxColumn;

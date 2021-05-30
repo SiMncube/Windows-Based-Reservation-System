@@ -97,7 +97,8 @@ namespace WindowsFormsApp1
             return false;
         }
         private string calculateAmountDue(string s)
-        {           
+        {
+            s = s.Substring(2, s.Length - 5);
             double due = double.Parse(s) * 0.5;
             return due + "";
         }
