@@ -71,6 +71,13 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             label5.Visible = false;
+            if (textBox2.Text.Length > 0)
+                button2.Visible = true;
+            else
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
