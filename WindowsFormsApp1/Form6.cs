@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.BackColor = Color.White;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
         private bool bookingExist(string summaryID)
         {
             string intro = "  === You Bookin Details Are ===";
-            string dateIn = "\n\n  Check in date : ";
+            string dateIn = "\n  Check in date : ";
             string dateOut = "\n  Check out date : ";
             string numNights = "\n  Number of nights : ";
             string bookingMethod = "\n  Bookin was made : ";
@@ -73,10 +73,12 @@ namespace WindowsFormsApp1
                     bookingStatus += fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString();
                     amount += fullDatabase1.Tables["BookingSummary"].Rows[i]["amountDue"].ToString();
                     label4.Text = intro + dateIn + dateOut + numNights + bookingMethod + bookingStatus + amount;
+                    label3.Visible = false;
                     return true;
                 }
                 
             }
+            textBox1.BackColor = Color.Red;
             return false;
         }
 
