@@ -183,7 +183,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString();
+                    string dateString = checkDate(fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString());
                     int year = int.Parse(dateString.Substring(0, 4));
                     int month = int.Parse(dateString.Substring(5, 2));
                     int day = int.Parse(dateString.Substring(8, 2));
