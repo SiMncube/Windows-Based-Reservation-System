@@ -41,6 +41,7 @@ namespace WindowsFormsApp1
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -211,6 +211,17 @@ namespace WindowsFormsApp1
             this.panel3.Size = new System.Drawing.Size(429, 110);
             this.panel3.TabIndex = 27;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(203, 84);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(209, 23);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Click here to go to the Log in page\r\n";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label16
             // 
@@ -404,6 +415,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -543,17 +555,6 @@ namespace WindowsFormsApp1
             // customerTableAdapter1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(203, 84);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Click here to go to the Log in page\r\n";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form2
             // 

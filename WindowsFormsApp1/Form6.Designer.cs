@@ -97,6 +97,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -113,7 +114,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(465, 281);
+            this.panel1.Location = new System.Drawing.Point(435, 452);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 153);
             this.panel1.TabIndex = 25;
@@ -138,9 +139,9 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(465, 449);
+            this.panel2.Location = new System.Drawing.Point(435, 247);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 157);
+            this.panel2.Size = new System.Drawing.Size(460, 199);
             this.panel2.TabIndex = 26;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -209,7 +210,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.DataSource = this.bookingSummaryBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(270, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 225);
             this.dataGridView1.TabIndex = 27;
             // 
             // summaryIDDataGridViewTextBoxColumn

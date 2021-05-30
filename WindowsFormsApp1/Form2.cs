@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             if(!RecordsAlreadyExists() && IsLoginValid())
             {
                 
-                customerTableAdapter.Insert(textBox5.Text.ToLower(), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox3.Text, textBox4.Text, textBox7.Text, capFirst(textBox8.Text), capFirst(textBox6.Text), capFirst(textBox9.Text), textBox10.Text);
+                customerTableAdapter.Insert(textBox5.Text.ToLower(), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox3.Text, textBox4.Text, textBox7.Text, capFirst(textBox6.Text), capFirst(textBox8.Text), capFirst(textBox9.Text), textBox10.Text);
                 panel1.Enabled = false;
                 panel2.Enabled = false;
                 panel3.Enabled = false;
@@ -180,6 +180,7 @@ namespace WindowsFormsApp1
         {
             textBox5.BackColor = Color.White;
             label16.Visible = false;
+            label13.Visible = false;
             button3.Visible = false;
         }
 
