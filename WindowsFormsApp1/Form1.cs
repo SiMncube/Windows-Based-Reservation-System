@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            label5.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,6 +85,11 @@ namespace WindowsFormsApp1
             textBox2.UseSystemPasswordChar = true;
             button2.Visible = true;
             button3.Visible = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label5.Visible = false;
         }
     }
 }
