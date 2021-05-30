@@ -176,6 +176,7 @@ namespace WindowsFormsApp1
         {
             textBox5.BackColor = Color.White;
             label16.Visible = false;
+            label13.Visible = false;
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
