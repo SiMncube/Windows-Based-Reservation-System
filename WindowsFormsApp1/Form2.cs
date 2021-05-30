@@ -181,6 +181,7 @@ namespace WindowsFormsApp1
         {
             textBox5.BackColor = Color.White;
             label16.Visible = false;
+            label13.Visible = false;
             button3.Visible = false;
         }
 
