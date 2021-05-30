@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -22,8 +23,6 @@ namespace WindowsFormsApp1
         {
             if (LoginIsValid())
             {
-                
-
                 Form8 homePage = new Form8();
                 fullDatabase.BookingSummary.GetType();
                 this.Hide();
@@ -64,12 +63,6 @@ namespace WindowsFormsApp1
             }
             return false;
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label5_Click_1(object sender, EventArgs e)
         {
 
@@ -78,6 +71,20 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            button3.Visible = true;
+            button2.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            button2.Visible = true;
+            button3.Visible = false;
         }
     }
 }

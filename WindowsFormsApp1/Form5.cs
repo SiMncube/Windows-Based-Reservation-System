@@ -13,8 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
-        DateTime dateIn;
-        DateTime dateOut;
+        DateTime dateIn = DateTime.Now;
+        DateTime dateOut = DateTime.Now;
         int numberOfNights;
         string bookingMethod = "Online";
         string bookingStatus = "inComplete";
