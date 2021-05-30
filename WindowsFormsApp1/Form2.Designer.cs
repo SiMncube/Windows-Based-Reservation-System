@@ -77,6 +77,7 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,6 +197,7 @@ namespace WindowsFormsApp1
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label5);
@@ -211,6 +213,7 @@ namespace WindowsFormsApp1
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(201, 12);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(190, 16);
@@ -525,6 +528,18 @@ namespace WindowsFormsApp1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(201, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 16);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "Invalid email";
+            this.label16.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,5 +621,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private System.Windows.Forms.Label label16;
     }
 }
