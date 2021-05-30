@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_arrowF_80;
             this.pictureBox2.Location = new System.Drawing.Point(12, 293);
             this.pictureBox2.Name = "pictureBox2";
@@ -76,6 +77,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -86,6 +88,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_arrow_80;
             this.pictureBox3.Location = new System.Drawing.Point(1209, 293);
             this.pictureBox3.Name = "pictureBox3";
