@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
             }
             if (!IsValidMailAddress(textBox5.Text))
             {
+                label16.Visible = true;
                 ChangeColor(textBox5);
                 count++;
             }
@@ -174,6 +175,7 @@ namespace WindowsFormsApp1
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             textBox5.BackColor = Color.White;
+            label16.Visible = false;
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
