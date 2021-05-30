@@ -96,7 +96,6 @@ namespace WindowsFormsApp1
             else if (RecordsAlreadyExists())
             {
                 button3.Visible = true;
-                label13.Visible = true;
             }
         }
         private void ChangeColor(TextBox textBox)
