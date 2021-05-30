@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         }
         private bool bookingExist(string summaryID)
         {
-            string intro = "  == You Bookin Details Are ==";
+            string intro = "  === You Bookin Details Are ===";
             string dateIn = "\n\n  Check in date : ";
             string dateOut = "\n  Check out date : ";
             string numNights = "\n  Number of nights : ";
@@ -66,8 +66,8 @@ namespace WindowsFormsApp1
             {
                 if(fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
                 {
-                    dateIn += fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString();
-                    dateOut += fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString();
+                    dateIn += fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString().Substring(0,10);
+                    dateOut += fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString().Substring(0,10);
                     numNights += fullDatabase1.Tables["BookingSummary"].Rows[i]["numberOfNights"].ToString();
                     bookingMethod += fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingMethod"].ToString();
                     bookingStatus += fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString();
@@ -83,6 +83,11 @@ namespace WindowsFormsApp1
         private void Form6_Load(object sender, EventArgs e)
         {
             this.bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
