@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(280, 69);
+            this.textBox1.Location = new System.Drawing.Point(297, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 26);
             this.textBox1.TabIndex = 1;
@@ -135,7 +135,7 @@ namespace WindowsFormsApp1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DarkGray;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(280, 121);
+            this.dateTimePicker1.Location = new System.Drawing.Point(297, 120);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
             this.dateTimePicker1.TabIndex = 4;
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(280, 165);
+            this.textBox2.Location = new System.Drawing.Point(297, 165);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(315, 26);
             this.textBox2.TabIndex = 6;
@@ -185,7 +185,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Location = new System.Drawing.Point(77, 454);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(615, 276);
+            this.panel1.Size = new System.Drawing.Size(661, 276);
             this.panel1.TabIndex = 25;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(276, 98);
+            this.label6.Location = new System.Drawing.Point(293, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 20);
             this.label6.TabIndex = 10;
@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(280, 28);
+            this.textBox3.Location = new System.Drawing.Point(297, 28);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(315, 26);
             this.textBox3.TabIndex = 9;
@@ -255,7 +255,7 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn,
             this.typeOfPaymentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.paymentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(698, 241);
+            this.dataGridView1.Location = new System.Drawing.Point(744, 241);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(536, 207);
             this.dataGridView1.TabIndex = 26;
@@ -327,7 +327,7 @@ namespace WindowsFormsApp1
             this.dataGridView2.DataSource = this.bookingSummaryBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(77, 12);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(719, 223);
+            this.dataGridView2.Size = new System.Drawing.Size(743, 223);
             this.dataGridView2.TabIndex = 27;
             // 
             // summaryIDDataGridViewTextBoxColumn1
@@ -392,7 +392,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(77, 241);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 207);
+            this.panel2.Size = new System.Drawing.Size(661, 207);
             this.panel2.TabIndex = 28;
             // 
             // label9
@@ -445,7 +445,7 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn2,
             this.roomIDDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.bookedRoomBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(802, 12);
+            this.dataGridView3.Location = new System.Drawing.Point(848, 12);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(432, 223);
             this.dataGridView3.TabIndex = 29;
