@@ -93,6 +93,11 @@ namespace WindowsFormsApp1
                 panel4.Visible= true;
                 customerTableAdapter.Fill(fullDatabase.Customer);
             }
+            else if (RecordsAlreadyExists())
+            {
+                button3.Visible = true;
+                label13.Visible = true;
+            }
         }
         private void ChangeColor(TextBox textBox)
         {
@@ -176,7 +181,7 @@ namespace WindowsFormsApp1
         {
             textBox5.BackColor = Color.White;
             label16.Visible = false;
-            label13.Visible = false;
+            button3.Visible = false;
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -187,6 +192,21 @@ namespace WindowsFormsApp1
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
             textBox8.BackColor = Color.White;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
