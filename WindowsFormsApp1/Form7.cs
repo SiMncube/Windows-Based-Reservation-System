@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
         }
         private bool cardNotExpired()
         {
-            return dateTimePicker1.Value.Year > DateTime.Today.Year;
+            return dateTimePicker1.Value.Year > DateTime.Today.Year && dateTimePicker1.Value.Month < 13 && dateTimePicker1.Value.Month > 0;
         }
         private bool cvvIsValid()
         {
@@ -247,6 +247,16 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox3.BackColor = Color.White;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            label6.Visible = false;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.White;
         }
     }
 
