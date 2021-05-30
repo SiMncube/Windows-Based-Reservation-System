@@ -254,7 +254,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form8";
-            this.Text = "Form8";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form8_Load);
             this.menuStrip1.ResumeLayout(false);

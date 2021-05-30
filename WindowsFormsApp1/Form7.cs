@@ -147,6 +147,17 @@ namespace WindowsFormsApp1
             }
             bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
         }
+        private string checkDate(string date)
+        {
+            if(date[2] < '0' || date[2] > '9')
+            {
+                string year = date.Substring(6, 4);
+                string month = date.Substring(3, 2);
+                string day = date.Substring(0, 2);
+                return year + "/" + month + "/" + day;
+            }
+            return date;   
+        }
         private DateTime GetDateIn()
         {
             DateTime dateIn =  DateTime.Now;
@@ -154,7 +165,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString();
+                    string dateString = checkDate(fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString());
                     int year = int.Parse(dateString.Substring(0, 4));
                     int month = int.Parse(dateString.Substring(5, 2));
                     int day = int.Parse(dateString.Substring(8, 2));

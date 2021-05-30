@@ -284,6 +284,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(-3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 18);
@@ -410,7 +411,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.bookingSummaryDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form5";
-            this.Text = "Make Booking";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryDataGridView)).EndInit();
