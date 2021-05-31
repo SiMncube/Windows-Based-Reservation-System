@@ -79,6 +79,7 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,7 +103,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Location = new System.Drawing.Point(114, 22);
+            this.panel1.Location = new System.Drawing.Point(114, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(429, 156);
             this.panel1.TabIndex = 25;
@@ -206,7 +207,7 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Location = new System.Drawing.Point(114, 184);
+            this.panel3.Location = new System.Drawing.Point(114, 237);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(429, 110);
             this.panel3.TabIndex = 27;
@@ -311,7 +312,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Location = new System.Drawing.Point(114, 300);
+            this.panel2.Location = new System.Drawing.Point(114, 353);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(429, 232);
             this.panel2.TabIndex = 28;
@@ -455,9 +456,9 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn,
             this.postalCodeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(549, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(549, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(636, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 272);
             this.dataGridView1.TabIndex = 32;
             // 
             // emailIDDataGridViewTextBoxColumn
@@ -525,9 +526,9 @@ namespace WindowsFormsApp1
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.label15);
-            this.panel4.Location = new System.Drawing.Point(549, 335);
+            this.panel4.Location = new System.Drawing.Point(549, 355);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(636, 197);
+            this.panel4.Size = new System.Drawing.Size(636, 230);
             this.panel4.TabIndex = 33;
             this.panel4.Visible = false;
             // 
@@ -556,6 +557,16 @@ namespace WindowsFormsApp1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(677, 33);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(280, 30);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Customer database";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,6 +574,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1286, 667);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -584,6 +596,7 @@ namespace WindowsFormsApp1
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -639,5 +652,6 @@ namespace WindowsFormsApp1
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label17;
     }
 }
