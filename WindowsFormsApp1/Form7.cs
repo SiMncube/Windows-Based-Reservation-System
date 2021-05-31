@@ -149,21 +149,24 @@ namespace WindowsFormsApp1
         }
         private string checkDate(string date)
         {
-            if(date[1] > '0' || date[1] > '9')
+            if (date[1] >= '0' || date[1] <= 9)
+                return date;
+            string m = date.Substring(0, 1);
+            string d = date.Substring(2, 1);
+            string y = date.Substring(4, 4);
+
+            if (m.Length == 1)
             {
-                string year = date.Substring(4,4);
-                string month = date.Substring(0,1);
-                string day = date.Substring(2,1);
-                return year + "/" + month + "/" + day;
+                m = "0" + m;
             }
-            else if(date[2] < '0' || date[2] > '9')
+            if (d.Length == 1)
             {
-                string year = date.Substring(6, 4);
-                string month = date.Substring(3, 2);
-                string day = date.Substring(0, 2);
-                return year + "/" + month + "/" + day;
+                d = "0" + d;
             }
-            return date;   
+
+            date = y + "/" + m + "/" + d;
+
+            return date;
         }
         private DateTime GetDateIn()
         {
