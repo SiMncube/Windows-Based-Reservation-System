@@ -394,9 +394,9 @@ namespace WindowsFormsApp1
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label12.Location = new System.Drawing.Point(51, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 23);
+            this.label12.Size = new System.Drawing.Size(158, 23);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Amount Due :  R ";
+            this.label12.Text = "Amount Due : ";
             // 
             // Form5
             // 
