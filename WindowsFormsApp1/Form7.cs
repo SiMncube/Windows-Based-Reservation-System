@@ -140,9 +140,9 @@ namespace WindowsFormsApp1
             int[] rooms = currentBooking.getRoomIDs();
             for (int i = 0; i < rooms.Length; i++)
             {
-                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) <= 0; dateID = dateID.AddDays(1))
+                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 {
-                    bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
+                    bookedRoomTableAdapter1.Insert(GetDateIn(), currentBooking.getSummaryID(), rooms[i]);
                 }
             }
             bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
@@ -154,26 +154,24 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    DateTime date = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"];
+                    dateIn = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"];
                     break;
                 }
-
             }
             return dateIn;
         }
         private DateTime GetDateOut()
         {
-            DateTime dateIn = DateTime.Today;
-            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            DateTime dateOut = DateTime.Today;
+            for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0 ; i--)
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    DateTime date = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"];
+                    dateOut = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"];
                     break;
                 }
-
             }
-            return dateIn;
+            return dateOut;
         }
         private void resetColor(TextBox textBox)
         {
