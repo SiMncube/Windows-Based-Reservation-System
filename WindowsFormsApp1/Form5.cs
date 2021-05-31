@@ -38,46 +38,49 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
             {
-                if ((fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID) &&
+                if ((fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString().Equals(summaryID)) &&
                    (fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString().Equals("Complete")))
                     return true;
             }
             return false;
         }
 
-
+        private bool isRoomAvailable(int roomID, DateTime dateID)
+        {
+            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
+            //int nnumberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
+            for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+            {
+                if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
+                   (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))) /*) &&
+                   (bookingIsComplete(fullDatabase.Tables["BookedRoom"].Rows[i]["summaryID"].ToString())))*/
+                //if the record of the room in bookedRoom is complete then that room is not available
+                //however if the booking of that room has been cancelled than that room has to be marked available
+                //even though it exist in bookedRoom records
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void updateAvailableRoomList()
         {
             availableSingleRooms = new ArrayList();
             availableDoubleRooms = new ArrayList();
 
-            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
-
-            //int nnumberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
-
             for (int roomID = 1; roomID <= 15; roomID++)
             {
-                bool isRoomAvailable = true;
+                bool roomAvailable = true;
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
-                    for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+                    if (!isRoomAvailable(roomID, dateID))
                     {
-                        if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
-                           (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID)) &&
-                           (bookingIsComplete(fullDatabase.Tables["BookedRoom"].Rows[i]["summaryID"].ToString())))
-                        //if the record of the room in bookedRoom is complete then that room is not available
-                        //however if the booking of that room has been cancelled than that room has to be marked available
-                        //even though it exist in bookedRoom records
-                        {
-                            isRoomAvailable = false;
-                            break;
-                        }
-                    }
-                    if (!isRoomAvailable)
+                        roomAvailable = false;
                         break;
+                    }
                 }
 
-                if (isRoomAvailable)
+                if (roomAvailable)
                 {
                     if (roomID <= 7)
                         availableSingleRooms.Add(roomID);
