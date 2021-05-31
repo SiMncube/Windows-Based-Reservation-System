@@ -72,9 +72,10 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
             numberOfNights = dateOut.Subtract(dateIn).Days;
+            if (numberOfNights == 0)
+                numberOfNights++;
 
-
-            if (comboBox1.SelectedItem == null)
+            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem  == "0")
             {
                 amountDueForSingleRooms = 0.0;
             }
@@ -83,7 +84,7 @@ namespace WindowsFormsApp1
                 numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
                 amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
             }
-            if (comboBox2.SelectedItem == null)
+            if (comboBox2.SelectedItem == null || comboBox2.SelectedItem == "0")
             {
                 amountDueForDoubleRooms = 0.0;
             }
