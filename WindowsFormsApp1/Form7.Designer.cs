@@ -399,9 +399,9 @@ namespace WindowsFormsApp1
             this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label8.Location = new System.Drawing.Point(133, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(230, 30);
+            this.label8.Size = new System.Drawing.Size(224, 30);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Amount Paid :  R";
+            this.label8.Text = "Amount Paid : R";
             this.label8.Visible = false;
             // 
             // label7
