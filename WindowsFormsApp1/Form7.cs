@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             int[] rooms = currentBooking.getRoomIDs();
             for (int i = 0; i < rooms.Length; i++)
             {
-                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
+                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) <= 0; dateID = dateID.AddDays(1))
                 {
                     bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
                 }
