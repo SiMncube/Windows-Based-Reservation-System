@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             this.numberOfNightsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingSummaryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fullDatabase1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -114,7 +115,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(435, 452);
+            this.panel1.Location = new System.Drawing.Point(435, 511);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 153);
             this.panel1.TabIndex = 25;
@@ -139,7 +140,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(435, 247);
+            this.panel2.Location = new System.Drawing.Point(435, 288);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 199);
             this.panel2.TabIndex = 26;
@@ -208,7 +209,7 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn,
             this.numberOfNightsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookingSummaryBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(270, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(267, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(843, 225);
             this.dataGridView1.TabIndex = 27;
@@ -272,6 +273,16 @@ namespace WindowsFormsApp1
             this.fullDatabase1BindingSource.DataSource = this.fullDatabase1;
             this.fullDatabase1BindingSource.Position = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(523, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(347, 27);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Booking summary database";
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +290,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1332, 676);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -298,6 +310,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1BindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -327,5 +340,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfNightsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bookingSummaryBindingSource1;
         private System.Windows.Forms.BindingSource fullDatabase1BindingSource;
+        private System.Windows.Forms.Label label9;
     }
 }
