@@ -206,8 +206,8 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    return "\nDate in   : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString().Substring(0, 10) +
-                            "\nDate out : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString().Substring(0, 10) +
+                    return "\nDate in   : " + ((DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"]).ToString("MM/dd/yyyy") +
+                            "\nDate out : " + ((DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"]).ToString("MM/dd/yyyy") +
                             "\nAmount paid : " + getAmountDue() +
                             "\nBooking reference : " + currentBooking.getSummaryID();
                 }
