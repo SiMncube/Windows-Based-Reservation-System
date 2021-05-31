@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
         }
         private DateTime GetDateIn()
         {
-            DateTime dateIn =  DateTime.Now;
+            DateTime dateIn =  DateTime.Today;
             for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0; i--)
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
         }
         private DateTime GetDateOut()
         {
-            DateTime dateIn = DateTime.Now;
+            DateTime dateIn = DateTime.Today;
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
