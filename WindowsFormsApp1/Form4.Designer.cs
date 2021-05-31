@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace WindowsFormsApp1
             this.bookingSummaryTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.paymentTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.paymentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +65,8 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -86,7 +88,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(426, 353);
+            this.panel1.Location = new System.Drawing.Point(426, 389);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 242);
             this.panel1.TabIndex = 26;
@@ -123,7 +125,7 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 16);
             this.label2.TabIndex = 3;
@@ -179,10 +181,22 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(426, 254);
+            this.panel2.Location = new System.Drawing.Point(426, 290);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(502, 93);
             this.panel2.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(103, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 27);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Refund Amount  : ";
+            this.label6.Visible = false;
             // 
             // label8
             // 
@@ -248,10 +262,11 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn,
             this.numberOfNightsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookingSummaryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(742, 212);
             this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // summaryIDDataGridViewTextBoxColumn
             // 
@@ -325,18 +340,6 @@ namespace WindowsFormsApp1
             this.paymentBindingSource.DataMember = "Payment";
             this.paymentBindingSource.DataSource = this.fullDatabase;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(103, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 27);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Refund Amount  : ";
-            this.label6.Visible = false;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -349,9 +352,9 @@ namespace WindowsFormsApp1
             this.summaryIDDataGridViewTextBoxColumn1,
             this.typeOfPaymentDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.paymentBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(809, 12);
+            this.dataGridView2.Location = new System.Drawing.Point(794, 48);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(462, 212);
+            this.dataGridView2.Size = new System.Drawing.Size(539, 212);
             this.dataGridView2.TabIndex = 31;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -391,13 +394,35 @@ namespace WindowsFormsApp1
             this.paymentBindingSource1.DataMember = "Payment";
             this.paymentBindingSource1.DataSource = this.fullDatabase;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(202, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(347, 27);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Booking summary database";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(967, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(235, 27);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Payment database";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1324, 698);
+            this.ClientSize = new System.Drawing.Size(1345, 698);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -418,6 +443,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -458,5 +484,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

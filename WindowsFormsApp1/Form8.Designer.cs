@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDatabase = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
@@ -139,7 +140,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(401, 306);
+            this.label1.Location = new System.Drawing.Point(409, 410);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 23);
             this.label1.TabIndex = 0;
@@ -163,7 +164,7 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn,
             this.postalCodeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(158, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(153, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1033, 257);
             this.dataGridView1.TabIndex = 3;
@@ -243,6 +244,16 @@ namespace WindowsFormsApp1
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(482, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 30);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Customer database";
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +261,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.stack_clean_towels_bathrobe_table_73344_6251;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 594);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -292,5 +304,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn suburbDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
     }
 }
