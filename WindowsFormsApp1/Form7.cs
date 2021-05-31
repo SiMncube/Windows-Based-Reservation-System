@@ -152,8 +152,8 @@ namespace WindowsFormsApp1
             if(date[1] > '0' || date[1] > '9')
             {
                 string year = date.Substring(4,4);
-                string month = date.Substring(2,1);
-                string day = date.Substring(0,1);
+                string month = date.Substring(0,1);
+                string day = date.Substring(2,1);
                 return year + "/" + month + "/" + day;
             }
             else if(date[2] < '0' || date[2] > '9')
