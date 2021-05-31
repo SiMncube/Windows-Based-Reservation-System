@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
         }
         private string checkDate(string date)
         {
-            if (date[1] >= '0' || date[1] <= 9)
+            if (date[1] >= '0' || date[1] <= '9')
                 return date;
             string m = date.Substring(0, 1);
             string d = date.Substring(2, 1);
