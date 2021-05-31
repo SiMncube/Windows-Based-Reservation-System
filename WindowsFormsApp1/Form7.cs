@@ -227,6 +227,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            textBox1.BackColor = Color.White;
             textBox3.BackColor = Color.White;
         }
 
