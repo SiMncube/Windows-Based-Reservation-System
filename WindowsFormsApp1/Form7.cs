@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete";
+                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete" ;
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
                     bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             int[] rooms = currentBooking.getRoomIDs();
             for (int i = 0; i < rooms.Length; i++)
             {
-                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
+                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) <= 0; dateID = dateID.AddDays(1))
                 {
                     bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
                 }
