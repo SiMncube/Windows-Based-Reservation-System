@@ -31,5 +31,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Form9_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

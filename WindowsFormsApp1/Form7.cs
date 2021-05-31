@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         {
             if(paymentDetailIsValid())
             {
-                paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                paymentTableAdapter1.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
                 updateBookingStatus();
                 updateBookedRoom();
                 label8.Text += getAmountDue();
@@ -239,6 +239,11 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox2.BackColor = Color.White;
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -13,8 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
-        DateTime dateIn = DateTime.Now;
-        DateTime dateOut = DateTime.Now;
+        DateTime dateIn = DateTime.Today;
+        DateTime dateOut = DateTime.Today;
         int numberOfNights;
         string bookingMethod = "Online";
         string bookingStatus = "inComplete";
@@ -46,14 +46,13 @@ namespace WindowsFormsApp1
         }
 
         private bool isRoomAvailable(int roomID, DateTime dateID)
-        {
-            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
-            //int nnumberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
+        {   
+            int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
             for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
             {
                 if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
-                   (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))) /*) &&
-                   (bookingIsComplete(fullDatabase.Tables["BookedRoom"].Rows[i]["summaryID"].ToString())))*/
+                   (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID)) &&
+                   (bookingIsComplete(fullDatabase.Tables["BookedRoom"].Rows[i]["summaryID"].ToString())))
                 //if the record of the room in bookedRoom is complete then that room is not available
                 //however if the booking of that room has been cancelled than that room has to be marked available
                 //even though it exist in bookedRoom records
@@ -63,6 +62,7 @@ namespace WindowsFormsApp1
             }
             return true;
         }
+
         private void updateAvailableRoomList()
         {
             availableSingleRooms = new ArrayList();
@@ -70,17 +70,17 @@ namespace WindowsFormsApp1
 
             for (int roomID = 1; roomID <= 15; roomID++)
             {
-                bool roomAvailable = true;
+                bool roomAvailableFlag = true;
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
                     if (!isRoomAvailable(roomID, dateID))
                     {
-                        roomAvailable = false;
+                        roomAvailableFlag = false;
                         break;
                     }
                 }
 
-                if (roomAvailable)
+                if (roomAvailableFlag)
                 {
                     if (roomID <= 7)
                         availableSingleRooms.Add(roomID);

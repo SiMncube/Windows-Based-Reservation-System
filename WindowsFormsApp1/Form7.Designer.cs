@@ -535,6 +535,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form7";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
