@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
                 {
-                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete";
+                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete" ;
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
                     bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
