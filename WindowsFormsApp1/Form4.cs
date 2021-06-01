@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
                 {
                     string newAmount = calculateAmountDue(fullDatabase.Tables["Payment"].Rows[i]["amountDue"].ToString());
                     string typeOfPayment = fullDatabase.Tables["Payment"].Rows[i]["typeOfPayment"].ToString();
-                    paymentTableAdapter1.Insert(DateTime.Now, "-R"+newAmount, int.Parse(summaryID), typeOfPayment);
+                    paymentTableAdapter1.Insert(DateTime.Today, "-R"+newAmount, int.Parse(summaryID), typeOfPayment);
                     label6.Text += "R " + newAmount;
                     paymentTableAdapter1.Fill(fullDatabase.Payment);
                     break;

@@ -583,6 +583,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
