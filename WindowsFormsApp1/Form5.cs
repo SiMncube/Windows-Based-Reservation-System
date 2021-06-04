@@ -245,6 +245,7 @@ namespace WindowsFormsApp1
             button4.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
         }
 
         private void button1_Click(object sender, EventArgs e)
