@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,87 +15,85 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            customerTableAdapter.Fill(fullDatabase.Customer);
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             if (LoginIsValid())
             {
                 Form8 homePage = new Form8();
-                fullDatabase.BookingSummary.GetType();
                 this.Hide();
                 homePage.ShowDialog();
                 this.Close();
             }
-            else
+        }
+        private bool userNameIsCorrect()
+        {
+            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                label5.Visible = true;
+                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                {
+                    currentUser.setEmailID(fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString());
+                    return true;
+                }
             }
-            
+            label8.Visible = true;
+            return false;
+        }
+        private bool passwordIsCorrect()
+        {
+            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text &&
+                    fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (userNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool LoginIsValid()
+        {
+            return userNameIsCorrect() && passwordIsCorrect();
+        }
+        private void Form10_Load(object sender, EventArgs e)
+        {
+
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label8.Visible = false;
+            label9.Visible = false;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            label9.Visible = false;
+            label8.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Form2 signup = new Form2();
             this.Hide();
             signup.ShowDialog();
             this.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
-
-        }
-        private bool LoginIsValid()
-        {
-            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
-            {
-                if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && 
-                    fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
-                {
-                    currentUser.setEmailID(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString());
-                    return true;
-                }
-            }
-            return false;
-        }
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            label5.Visible = false;
-            if (textBox2.Text.Length > 0)
-                button2.Visible = true;
-            else
-            {
-                button2.Visible = false;
-                button3.Visible = false;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = false;
-            button3.Visible = true;
-            button2.Visible = false;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = true;
-            button2.Visible = true;
-            button3.Visible = false;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            label5.Visible = false;
         }
     }
 }
