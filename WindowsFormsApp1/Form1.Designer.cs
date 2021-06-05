@@ -49,7 +49,6 @@ namespace WindowsFormsApp1
             this.label6 = new System.Windows.Forms.Label();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -178,7 +177,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(491, 165);
+            this.panel1.Location = new System.Drawing.Point(495, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 479);
             this.panel1.TabIndex = 15;
@@ -254,7 +253,6 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -265,13 +263,13 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Vivaldi", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(354, 14);
+            this.label7.Location = new System.Drawing.Point(260, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(567, 76);
+            this.label7.Size = new System.Drawing.Size(801, 61);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Welcome to the Cottage";
+            this.label7.Text = "Welcome to the Cottage BnB";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -290,17 +288,6 @@ namespace WindowsFormsApp1
             // customerTableAdapter1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(927, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 36);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "BnB";
             // 
             // Form1
             // 
@@ -347,6 +334,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
     }
 }
