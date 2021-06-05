@@ -61,39 +61,35 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = true;
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = true;
-            pictureBox2.Visible = true;
-            pictureBox3.Visible = false;
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             label8.Visible = false;
             label9.Visible = false;
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             label9.Visible = false;
             label8.Visible = false;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 signup = new Form2();
             this.Hide();
             signup.ShowDialog();
             this.Show();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            button4.Visible = true;
+            button5.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            button5.Visible = true;
+            button4.Visible = false;
         }
     }
 }
