@@ -30,6 +30,13 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,15 +68,8 @@ namespace WindowsFormsApp1
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.SuspendLayout();
@@ -115,10 +115,89 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(437, 90);
+            this.panel1.Location = new System.Drawing.Point(419, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(597, 657);
             this.panel1.TabIndex = 39;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label25.Location = new System.Drawing.Point(139, 350);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(101, 16);
+            this.label25.TabIndex = 45;
+            this.label25.Text = "Identity Number";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(139, 320);
+            this.textBox12.MaxLength = 30;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(232, 27);
+            this.textBox12.TabIndex = 44;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(9, 327);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(90, 20);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "ID Number";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(139, 432);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(179, 16);
+            this.label23.TabIndex = 42;
+            this.label23.Text = "Email already registered";
+            this.label23.Visible = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Red;
+            this.label22.Location = new System.Drawing.Point(139, 432);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(97, 16);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Email invalid";
+            this.label22.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(282, 502);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(129, 15);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Password too short";
+            this.label21.Visible = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(282, 502);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(156, 15);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "Password do not match";
+            this.label20.Visible = false;
             // 
             // textBox4
             // 
@@ -223,6 +302,7 @@ namespace WindowsFormsApp1
             this.textBox11.Location = new System.Drawing.Point(139, 384);
             this.textBox11.MaxLength = 3;
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(57, 27);
             this.textBox11.TabIndex = 34;
             this.textBox11.Text = "+27";
@@ -241,10 +321,11 @@ namespace WindowsFormsApp1
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(223, 384);
-            this.textBox10.MaxLength = 10;
+            this.textBox10.MaxLength = 9;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(148, 27);
             this.textBox10.TabIndex = 33;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label4
             // 
@@ -446,54 +527,6 @@ namespace WindowsFormsApp1
             this.label10.TabIndex = 23;
             this.label10.Text = "Postal / Zip Code";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(282, 502);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(156, 15);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Password do not match";
-            this.label20.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(282, 502);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(129, 15);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Password too short";
-            this.label21.Visible = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(139, 432);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 16);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "Email invalid";
-            this.label22.Visible = false;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(139, 432);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(179, 16);
-            this.label23.TabIndex = 42;
-            this.label23.Text = "Email already registered";
-            this.label23.Visible = false;
-            // 
             // customerTableAdapter1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
@@ -503,45 +536,14 @@ namespace WindowsFormsApp1
             this.fullDatabase1.DataSetName = "fullDatabase";
             this.fullDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(9, 327);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(90, 20);
-            this.label24.TabIndex = 43;
-            this.label24.Text = "ID Number";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(139, 320);
-            this.textBox12.MaxLength = 30;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(232, 27);
-            this.textBox12.TabIndex = 44;
-            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label25.Location = new System.Drawing.Point(139, 350);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(101, 16);
-            this.label25.TabIndex = 45;
-            this.label25.Text = "Identity Number";
-            // 
-            // Form10
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1327, 749);
             this.Controls.Add(this.panel1);
-            this.Name = "Form10";
+            this.Name = "Form2";
             this.Text = "Form10";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form10_Load);
