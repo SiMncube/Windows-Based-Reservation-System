@@ -36,9 +36,9 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                if(fullDatabase1.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    currentUser.setEmailID(fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString());
+                    currentUser.setEmailID(fullDatabase1.Customer[i].emailID);
                     return true;
                 }
             }
@@ -49,8 +49,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text &&
-                    fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                if(fullDatabase1.Customer[i].password == textBox2.Text && fullDatabase1.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                     return true;
             }
             if (userNameIsCorrect())
