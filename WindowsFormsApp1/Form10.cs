@@ -17,9 +17,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if(signUIsValid())
+            {
+                panel1.Enabled = false;
+                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text, "0" + textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
+            }
+            
+        }
+        private string capFirst(string s)
+        {
+            return (s[0] + "").ToUpper() + s.Substring(1).ToLower();
         }
         private bool isDigit(char ch)
         {
@@ -52,10 +61,6 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panel1.Enabled = false;
-        }
         private bool NameIsValid()
         {
             int count = 0;
@@ -77,6 +82,15 @@ namespace WindowsFormsApp1
             if (!isAllDigit(textBox6.Text) || textBox6.Text.Length != 4)
             {
                 textBox6.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool IdIsValid()
+        {
+            if(!isAllDigit(textBox12.Text) || textBox12.Text.Length != 13)
+            {
+                textBox12.BackColor = Color.Red;
                 return false;
             }
             return true;
@@ -141,12 +155,45 @@ namespace WindowsFormsApp1
         }
         private bool signUIsValid()
         {
-            return NameIsValid() && AddrressIsValid() && CellNumberisValid() && EmailISValid() && PasswordIsValid();
+            return NameIsValid() && AddrressIsValid() && CellNumberisValid() && EmailISValid() && PasswordIsValid() && IdIsValid();
         }
 
         private void Form10_Load(object sender, EventArgs e)
         {
             customerTableAdapter1.Fill(fullDatabase1.Customer);
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            textBox12.BackColor = Color.White;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.White;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            textBox6.BackColor = Color.White;
+        }
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            textBox7.BackColor = Color.White;
+            label23.Visible = false;
+            label22.Visible = false;
+        }
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            textBox8.BackColor = Color.White;
+            textBox9.BackColor = Color.White;
+            label20.Visible = false;
+            label21.Visible = false;
         }
     }
 }
