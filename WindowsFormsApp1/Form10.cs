@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -55,7 +56,7 @@ namespace WindowsFormsApp1
         {
             panel1.Enabled = false;
         }
-        private bool nameIsValid()
+        private bool NameIsValid()
         {
             int count = 0;
             if(!isAllLetters(textBox1.Text) || textBox1.Text.Length < 3)
@@ -71,7 +72,7 @@ namespace WindowsFormsApp1
             return count == 0;
         }
 
-        private bool addrressIsValid()
+        private bool AddrressIsValid()
         {
             if (!isAllDigit(textBox6.Text) || textBox6.Text.Length != 4)
             {
@@ -80,7 +81,7 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-        private bool cellNumberisValid()
+        private bool CellNumberisValid()
         {
             if(isAllDigit(textBox10.Text) || textBox10.Text.Length != 9)
             {
@@ -89,6 +90,63 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-        private 
+        private bool EmailISValid()
+        {
+            if (textBox7.Text != null)
+            {
+                EmailAddressAttribute email = new EmailAddressAttribute();
+                if (!email.IsValid(textBox7.Text))
+                {
+                    textBox7.BackColor = Color.Red;
+                    label22.Visible = true;
+                    return false;
+                }
+                if(EmailIsRegistred())
+                {
+                    textBox7.BackColor = Color.Red;
+                    label23.Visible = true;
+                    return false;
+                }
+                return true;
+            }
+            textBox7.BackColor = Color.Red;
+            return false;
+        }
+        private bool EmailIsRegistred()
+        {
+            for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Customer[i].emailID == textBox7.Text)
+                    return true;
+            }
+            return false;
+        }
+        private bool PasswordIsValid()
+        {
+            if(textBox8.Text.Length < 4)
+            {
+                label21.Visible = true;
+                textBox8.BackColor = Color.Red;
+                textBox9.BackColor = Color.Red;
+                return false;
+            }
+            if(textBox8.Text != textBox9.Text)
+            {
+                label20.Visible = true;
+                textBox8.BackColor = Color.Red;
+                textBox9.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool signUIsValid()
+        {
+            return NameIsValid() && AddrressIsValid() && CellNumberisValid() && EmailISValid() && PasswordIsValid();
+        }
+
+        private void Form10_Load(object sender, EventArgs e)
+        {
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
+        }
     }
 }
