@@ -71,9 +71,10 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID() && fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString().Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
+                if (fullDatabase1.Customer[i].emailID == currentUser.getEmailID() && fullDatabase1.Customer[i].surname.Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
                     return true;
             }
+            textBox3.BackColor = Color.Red;
             return false;
         }
         private bool cardNumberIsValid()
@@ -92,10 +93,7 @@ namespace WindowsFormsApp1
         {
             int count = 0;
             if(!nameIsValid())
-            {
-                textBox3.BackColor = Color.Red;
                 count++;
-            }
             if(!cardNumberIsValid())
             {
                 textBox1.BackColor = Color.Red;
@@ -117,8 +115,8 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if(fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID()+"")
-                    return fullDatabase1.Tables["BookingSummary"].Rows[i]["amountDue"].ToString();
+                if(fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                    return fullDatabase1.BookingSummary[i].amountDue;
             }
             return "";
         }
@@ -126,9 +124,9 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete" ;
+                    fullDatabase1.BookingSummary[i].bookingStatus = "Complete" ;
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
                     bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
@@ -152,9 +150,9 @@ namespace WindowsFormsApp1
             DateTime dateIn =  DateTime.Today;
             for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0; i--)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    dateIn = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"];
+                    dateIn = fullDatabase1.BookingSummary[i].dateIn;
                     break;
                 }
             }
@@ -165,9 +163,9 @@ namespace WindowsFormsApp1
             DateTime dateOut = DateTime.Today;
             for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0 ; i--)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    dateOut = (DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"];
+                    dateOut = fullDatabase1.BookingSummary[i].dateOut;
                     break;
                 }
             }
@@ -177,23 +175,13 @@ namespace WindowsFormsApp1
         {
             textBox.BackColor = Color.White;
         }
-        /*private string getDataBaseColumn(string databaseName,string primaryKeyName , string dataBasColumn , string primaryKey)
-        {
-            for (int i = 0; i < fullDatabase1.f.Rows.Count; i++)
-            {
-                if(fullDatabase1.Tables[databaseName].Rows[i][primaryKeyName].ToString() ==  primaryKey)
-                    return fullDatabase1.Tables[databaseName].Rows[i][dataBasColumn].ToString();
-
-            }
-                return "";
-        }*/
         private string getCustomerColumn()
         {
             for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID())
+                if (fullDatabase1.Customer[i].emailID == currentUser.getEmailID())
                 {
-                    return "Name : " + fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString() + " " + fullDatabase1.Tables["Customer"].Rows[i]["name"].ToString();
+                    return "Name : " + fullDatabase1.Customer[i].surname + " " + fullDatabase1.Customer[i].name;
                 }
             }
             return "";
@@ -202,10 +190,10 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    return "\nDate in   : " + ((DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"]).ToString("MM/dd/yyyy") +
-                            "\nDate out : " + ((DateTime)fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"]).ToString("MM/dd/yyyy") +
+                    return "\nDate in   : " + fullDatabase1.BookingSummary[i].dateIn +
+                            "\nDate out : " + fullDatabase1.BookingSummary[i].dateOut +
                             "\nAmount paid : " + getAmountDue() +
                             "\nBooking reference : " + currentBooking.getSummaryID();
                 }
@@ -239,10 +227,6 @@ namespace WindowsFormsApp1
             textBox2.BackColor = Color.White;
         }
 
-        private void Form7_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
