@@ -214,5 +214,10 @@ namespace WindowsFormsApp1
         {
             textBox10.BackColor = Color.White;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
