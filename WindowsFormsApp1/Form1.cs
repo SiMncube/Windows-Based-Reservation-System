@@ -20,10 +20,6 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-           Form10 f = new Form10();
-            this.Hide();
-           f.ShowDialog();
-            this.Close();
             if (LoginIsValid())
             {
                 Form8 homePage = new Form8();

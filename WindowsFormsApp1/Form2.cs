@@ -16,91 +16,20 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
-            customerTableAdapter.Fill(fullDatabase.Customer);
         }
-        private bool IsLoginValid()
-        {
-            int count = 0;
-
-            if (textBox1.Text.Length < 3 || !isAllLetters(textBox1.Text))
-            {
-                ChangeColor(textBox1);
-                count++;
-            }
-            if (textBox2.Text.Length < 3 || !isAllLetters(textBox2.Text))
-            {
-                ChangeColor(textBox2);
-                count++;
-            }
-            if (textBox3.Text.Length != 13 || !isAllDigit(textBox3))
-            {
-                ChangeColor(textBox3);
-                count++;
-            }
-            if (textBox4.Text.Length != 10 || !isAllDigit(textBox4))
-            {
-                ChangeColor(textBox4);
-                count++;
-            }
-            if (!IsValidMailAddress(textBox5.Text))
-            {
-                label16.Visible = true;
-                ChangeColor(textBox5);
-                count++;
-            }
-            if (textBox7.Text.Length < 5 )
-            {
-                ChangeColor(textBox7);
-                count++;
-            }
-            if(textBox10.Text.Length != 4 || !isAllDigit(textBox10))
-            {
-                ChangeColor(textBox10);
-                count++;
-            }
-            if (count > 0)
-            {
-                return false;
-            }
-            return true;
-        }
-        private bool RecordsAlreadyExists()
-        {
-            if (textBox5.Text.Length < 8)
-                return false;
-            DataRow foundRow = fullDatabase.Tables["Customer"].Rows.Find(textBox5.Text.ToLower());
-            if (foundRow != null)
-            {
-                label13.Visible = true;
-                return true;
-            }
-            return false;
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            customerTableAdapter.Fill(fullDatabase.Customer);
-            this.Close();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!RecordsAlreadyExists() && IsLoginValid())
+            if(signUIsValid())
             {
-                customerTableAdapter.Insert(textBox5.Text.ToLower(), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox3.Text, textBox4.Text, textBox7.Text, capFirst(textBox8.Text), capFirst(textBox9.Text), capFirst(textBox6.Text), textBox10.Text);
                 panel1.Enabled = false;
-                panel2.Enabled = false;
-                panel3.Enabled = false;
-                panel4.Visible= true;
-                customerTableAdapter.Fill(fullDatabase.Customer);
+                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text, "0" + textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
+                button1.Enabled = false;
             }
-            else if (RecordsAlreadyExists())
-            {
-                button3.Visible = true;
-            }
+            
         }
-        private void ChangeColor(TextBox textBox)
+        private string capFirst(string s)
         {
-            textBox.BackColor = Color.Red;
+            return (s[0] + "").ToUpper() + s.Substring(1).ToLower();
         }
         private bool isDigit(char ch)
         {
@@ -108,10 +37,9 @@ namespace WindowsFormsApp1
                 return true;
             return false;
         }
-        private bool isAllDigit(TextBox textbox)
+        private bool isAllDigit(string s)
         {
-            string s = textbox.Text.ToString();
-            for(int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 if (!isDigit(s[i]))
                     return false;
@@ -127,33 +55,118 @@ namespace WindowsFormsApp1
         private bool isAllLetters(string s)
         {
             s = s.ToLower();
-            for(int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 if (!isLetter(s[i]))
                     return false;
             }
             return true;
         }
-        private void button2_Click(object sender, EventArgs e)
+        private bool NameIsValid()
         {
-            currentUser.setEmailID(textBox5.Text);
-            Form8 homePage = new Form8();
-            this.Hide();
-            homePage.ShowDialog();
-            this.Close();
+            int count = 0;
+            if(!isAllLetters(textBox1.Text) || textBox1.Text.Length < 3)
+            {
+                textBox1.BackColor = Color.Red;
+                count++;
+            }
+            if (!isAllLetters(textBox2.Text) || textBox2.Text.Length < 3)
+            {
+                textBox2.BackColor = Color.Red;
+                count++;
+            }
+            return count == 0;
         }
-        private string capFirst(string s)
+
+        private bool AddrressIsValid()
         {
-            return (s[0] + "").ToUpper() + s.Substring(1).ToLower();
+            if (!isAllDigit(textBox6.Text) || textBox6.Text.Length != 4)
+            {
+                textBox6.BackColor = Color.Red;
+                return false;
+            }
+            return true;
         }
-        public  bool IsValidMailAddress(string s)
+        private bool IdIsValid()
         {
-            if (s != null)
+            if(!isAllDigit(textBox12.Text) || textBox12.Text.Length != 13)
+            {
+                textBox12.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool CellNumberisValid()
+        {
+            if(isAllDigit(textBox10.Text) || textBox10.Text.Length != 9)
+            {
+                textBox10.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool EmailISValid()
+        {
+            if (textBox7.Text != null)
             {
                 EmailAddressAttribute email = new EmailAddressAttribute();
-                return email.IsValid(s);
+                if (!email.IsValid(textBox7.Text))
+                {
+                    textBox7.BackColor = Color.Red;
+                    label22.Visible = true;
+                    return false;
+                }
+                if(EmailIsRegistred())
+                {
+                    textBox7.BackColor = Color.Red;
+                    label23.Visible = true;
+                    return false;
+                }
+                return true;
+            }
+            textBox7.BackColor = Color.Red;
+            return false;
+        }
+        private bool EmailIsRegistred()
+        {
+            for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Customer[i].emailID == textBox7.Text)
+                    return true;
             }
             return false;
+        }
+        private bool PasswordIsValid()
+        {
+            if(textBox8.Text.Length < 4)
+            {
+                label21.Visible = true;
+                textBox8.BackColor = Color.Red;
+                textBox9.BackColor = Color.Red;
+                return false;
+            }
+            if(textBox8.Text != textBox9.Text)
+            {
+                label20.Visible = true;
+                textBox8.BackColor = Color.Red;
+                textBox9.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool signUIsValid()
+        {
+            return NameIsValid() && AddrressIsValid() && CellNumberisValid() && EmailISValid() && PasswordIsValid() && IdIsValid();
+        }
+
+        private void Form10_Load(object sender, EventArgs e)
+        {
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            textBox12.BackColor = Color.White;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -166,52 +179,22 @@ namespace WindowsFormsApp1
             textBox2.BackColor = Color.White;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            textBox3.BackColor = Color.White;
+            textBox6.BackColor = Color.White;
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            textBox4.BackColor = Color.White;
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            textBox5.BackColor = Color.White;
-            label16.Visible = false;
-            label13.Visible = false;
-            button3.Visible = false;
-        }
-
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             textBox7.BackColor = Color.White;
+            label23.Visible = false;
+            label22.Visible = false;
         }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
             textBox8.BackColor = Color.White;
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
+            textBox9.BackColor = Color.White;
+            label20.Visible = false;
+            label21.Visible = false;
         }
     }
 }
