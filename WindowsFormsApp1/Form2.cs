@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
         }
         private bool CellNumberisValid()
         {
-            if(isAllDigit(textBox10.Text) || textBox10.Text.Length != 9)
+            if(!isAllDigit(textBox10.Text) || textBox10.Text.Length != 9)
             {
                 textBox10.BackColor = Color.Red;
                 return false;
@@ -138,16 +138,16 @@ namespace WindowsFormsApp1
         }
         private bool PasswordIsValid()
         {
-            if(textBox8.Text.Length < 4)
+            if (textBox8.Text != textBox9.Text)
             {
-                label21.Visible = true;
+                label20.Visible = true;
                 textBox8.BackColor = Color.Red;
                 textBox9.BackColor = Color.Red;
                 return false;
             }
-            if(textBox8.Text != textBox9.Text)
+            if (textBox8.Text.Length < 4)
             {
-                label20.Visible = true;
+                label21.Visible = true;
                 textBox8.BackColor = Color.Red;
                 textBox9.BackColor = Color.Red;
                 return false;
@@ -156,7 +156,20 @@ namespace WindowsFormsApp1
         }
         private bool signUIsValid()
         {
-            return NameIsValid() && AddrressIsValid() && CellNumberisValid() && EmailISValid() && PasswordIsValid() && IdIsValid();
+            int count = 0;
+            if (!NameIsValid())
+                count ++;
+            if (!AddrressIsValid())
+                count ++;
+            if (!CellNumberisValid())
+                count ++;
+            if (!EmailISValid())
+                count ++;
+            if (!PasswordIsValid())
+                count ++;
+            if (IdIsValid())
+                count ++;
+            return count == 0;
         }
 
         private void Form10_Load(object sender, EventArgs e)
@@ -195,6 +208,11 @@ namespace WindowsFormsApp1
             textBox9.BackColor = Color.White;
             label20.Visible = false;
             label21.Visible = false;
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            textBox10.BackColor = Color.White;
         }
     }
 }
