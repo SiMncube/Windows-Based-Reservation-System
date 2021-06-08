@@ -159,7 +159,7 @@ namespace WindowsFormsApp1
             this.label23.ForeColor = System.Drawing.Color.Red;
             this.label23.Location = new System.Drawing.Point(139, 432);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(179, 16);
+            this.label23.Size = new System.Drawing.Size(182, 16);
             this.label23.TabIndex = 42;
             this.label23.Text = "Email already registered";
             this.label23.Visible = false;
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
             this.label22.ForeColor = System.Drawing.Color.Red;
             this.label22.Location = new System.Drawing.Point(139, 432);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 16);
+            this.label22.Size = new System.Drawing.Size(99, 16);
             this.label22.TabIndex = 41;
             this.label22.Text = "Email invalid";
             this.label22.Visible = false;
@@ -546,7 +546,7 @@ namespace WindowsFormsApp1
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(12, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 62);
+            this.button2.Size = new System.Drawing.Size(45, 45);
             this.button2.TabIndex = 40;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
