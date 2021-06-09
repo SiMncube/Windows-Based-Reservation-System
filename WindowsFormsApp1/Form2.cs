@@ -177,9 +177,13 @@ namespace WindowsFormsApp1
             customerTableAdapter1.Fill(fullDatabase1.Customer);
         }
 
-        private void textBox12_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            textBox12.BackColor = Color.White;
+            this.Close();
+        }
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -192,16 +196,43 @@ namespace WindowsFormsApp1
             textBox2.BackColor = Color.White;
         }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            textBox4.BackColor = Color.White;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            textBox5.BackColor = Color.White;
+        }
+
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             textBox6.BackColor = Color.White;
         }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            textBox12.BackColor = Color.White;
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            textBox10.BackColor = Color.White;
+        }
+
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             textBox7.BackColor = Color.White;
             label23.Visible = false;
             label22.Visible = false;
         }
+
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             textBox8.BackColor = Color.White;
@@ -210,14 +241,202 @@ namespace WindowsFormsApp1
             label21.Visible = false;
         }
 
-        private void textBox10_TextChanged(object sender, EventArgs e)
+        private void textBox1_Enter(object sender, EventArgs e)
         {
-            textBox10.BackColor = Color.White;
+            if(textBox1.Text == "First name")
+            {
+                textBox1.Text = null;
+                textBox1.ForeColor = Color.Black;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox1_Leave(object sender, EventArgs e)
         {
-            this.Close();
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "First name";
+                textBox1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Last name")
+            {
+                textBox2.Text = null;
+                textBox2.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Last name";
+                textBox2.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Street Address Line 1")
+            {
+                textBox3.Text = null;
+                textBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                textBox3.Text = "Street Address Line 1";
+                textBox3.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "Street Address Line 2")
+            {
+                textBox4.Text = null;
+                textBox4.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "")
+            {
+                textBox4.Text = "Street Address Line 2";
+                textBox4.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox5_Enter(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "City")
+            {
+                textBox5.Text = null;
+                textBox5.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "")
+            {
+                textBox5.Text = "City";
+                textBox5.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox6_Enter(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "Postal code")
+            {
+                textBox6.Text = null;
+                textBox6.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "")
+            {
+                textBox6.Text = "Postal code";
+                textBox6.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox12_Enter(object sender, EventArgs e)
+        {
+            if (textBox12.Text == "ID number")
+            {
+                textBox12.Text = null;
+                textBox12.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox12_Leave(object sender, EventArgs e)
+        {
+            if (textBox12.Text == "")
+            {
+                textBox12.Text = "ID number";
+                textBox12.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox10_Enter(object sender, EventArgs e)
+        {
+            if (textBox10.Text == "712345678")
+            {
+                textBox10.Text = null;
+                textBox10.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (textBox10.Text == "")
+            {
+                textBox10.Text = "712345678";
+                textBox10.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox7_Enter(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "Email")
+            {
+                textBox7.Text = null;
+                textBox7.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                textBox7.Text = "Email";
+                textBox7.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox8_Enter(object sender, EventArgs e)
+        {
+            if (textBox8.Text == "Enter password")
+            {
+                textBox8.Text = null;
+                textBox8.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (textBox8.Text == "")
+            {
+                textBox8.Text = "Enter password";
+                textBox8.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox9_Enter(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "Confirm password")
+            {
+                textBox9.Text = null;
+                textBox9.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "")
+            {
+                textBox9.Text = "Confirm password";
+                textBox9.ForeColor = Color.Gray;
+            }
         }
     }
 }
