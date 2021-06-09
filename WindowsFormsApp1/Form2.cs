@@ -369,7 +369,7 @@ namespace WindowsFormsApp1
 
         private void textBox10_Enter(object sender, EventArgs e)
         {
-            if (textBox10.Text == "712345678")
+            if (textBox10.Text == "Cell number")
             {
                 textBox10.Text = null;
                 textBox10.ForeColor = Color.Black;
@@ -380,7 +380,7 @@ namespace WindowsFormsApp1
         {
             if (textBox10.Text == "")
             {
-                textBox10.Text = "712345678";
+                textBox10.Text = "Cell number";
                 textBox10.ForeColor = Color.Gray;
             }
         }
