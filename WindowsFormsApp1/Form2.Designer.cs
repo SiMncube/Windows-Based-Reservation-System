@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@ namespace WindowsFormsApp1
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.SuspendLayout();
@@ -78,18 +78,33 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(550, 88);
+            this.panel1.Location = new System.Drawing.Point(540, 104);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 430);
+            this.panel1.Size = new System.Drawing.Size(374, 467);
             this.panel1.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(39, 394);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 35);
+            this.button3.TabIndex = 57;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox9
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.Color.Gray;
             this.textBox9.Location = new System.Drawing.Point(39, 341);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(304, 26);
+            this.textBox9.Size = new System.Drawing.Size(304, 27);
             this.textBox9.TabIndex = 55;
             this.textBox9.Text = "Confirm password";
             this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
@@ -97,11 +112,11 @@ namespace WindowsFormsApp1
             // 
             // textBox8
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.Gray;
-            this.textBox8.Location = new System.Drawing.Point(39, 294);
+            this.textBox8.Location = new System.Drawing.Point(40, 294);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(304, 26);
+            this.textBox8.Size = new System.Drawing.Size(303, 27);
             this.textBox8.TabIndex = 54;
             this.textBox8.Text = "Enter password";
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
@@ -110,11 +125,11 @@ namespace WindowsFormsApp1
             // 
             // textBox7
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
-            this.textBox7.Location = new System.Drawing.Point(36, 248);
+            this.textBox7.Location = new System.Drawing.Point(40, 248);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(307, 26);
+            this.textBox7.Size = new System.Drawing.Size(303, 27);
             this.textBox7.TabIndex = 53;
             this.textBox7.Text = "Email";
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
@@ -123,11 +138,11 @@ namespace WindowsFormsApp1
             // 
             // textBox10
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.Gray;
             this.textBox10.Location = new System.Drawing.Point(230, 200);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(113, 26);
+            this.textBox10.Size = new System.Drawing.Size(113, 27);
             this.textBox10.TabIndex = 52;
             this.textBox10.Text = "Cell number";
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
@@ -136,11 +151,11 @@ namespace WindowsFormsApp1
             // 
             // textBox12
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.Color.Gray;
-            this.textBox12.Location = new System.Drawing.Point(39, 200);
+            this.textBox12.Location = new System.Drawing.Point(40, 200);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(180, 26);
+            this.textBox12.Size = new System.Drawing.Size(179, 27);
             this.textBox12.TabIndex = 51;
             this.textBox12.Text = "ID number";
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
@@ -149,11 +164,11 @@ namespace WindowsFormsApp1
             // 
             // textBox6
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
             this.textBox6.Location = new System.Drawing.Point(230, 168);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(113, 26);
+            this.textBox6.Size = new System.Drawing.Size(113, 27);
             this.textBox6.TabIndex = 50;
             this.textBox6.Text = "Postal code";
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
@@ -162,11 +177,11 @@ namespace WindowsFormsApp1
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(39, 168);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 26);
+            this.textBox5.Size = new System.Drawing.Size(180, 27);
             this.textBox5.TabIndex = 49;
             this.textBox5.Text = "City";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
@@ -175,11 +190,11 @@ namespace WindowsFormsApp1
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
             this.textBox4.Location = new System.Drawing.Point(39, 136);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(304, 26);
+            this.textBox4.Size = new System.Drawing.Size(304, 27);
             this.textBox4.TabIndex = 48;
             this.textBox4.Text = "Street Address Line 2";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -188,11 +203,11 @@ namespace WindowsFormsApp1
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
             this.textBox3.Location = new System.Drawing.Point(39, 104);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 26);
+            this.textBox3.Size = new System.Drawing.Size(304, 27);
             this.textBox3.TabIndex = 47;
             this.textBox3.Text = "Street Address Line 1";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -201,11 +216,11 @@ namespace WindowsFormsApp1
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
             this.textBox2.Location = new System.Drawing.Point(194, 72);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 26);
+            this.textBox2.Size = new System.Drawing.Size(149, 27);
             this.textBox2.TabIndex = 46;
             this.textBox2.Text = "Last name";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -214,11 +229,11 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(39, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 26);
+            this.textBox1.Size = new System.Drawing.Size(149, 27);
             this.textBox1.TabIndex = 41;
             this.textBox1.Text = "First name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -280,7 +295,7 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(264, 373);
+            this.button1.Location = new System.Drawing.Point(261, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 35);
             this.button1.TabIndex = 38;
@@ -331,20 +346,6 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 40;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(38, 373);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 35);
-            this.button3.TabIndex = 57;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
