@@ -201,11 +201,11 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(597, 194);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 29);
+            this.label4.Size = new System.Drawing.Size(249, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Payment Details";
             // 
