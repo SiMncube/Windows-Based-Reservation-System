@@ -443,5 +443,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

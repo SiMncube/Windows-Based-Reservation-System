@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(1081, 38);
+            this.label1.Location = new System.Drawing.Point(1120, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 24);
             this.label1.TabIndex = 0;
