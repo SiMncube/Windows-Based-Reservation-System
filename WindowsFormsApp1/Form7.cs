@@ -227,6 +227,10 @@ namespace WindowsFormsApp1
             textBox2.BackColor = Color.White;
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }
