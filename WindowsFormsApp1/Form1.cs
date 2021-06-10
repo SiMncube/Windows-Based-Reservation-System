@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             Form2 signup = new Form2();
             this.Hide();
             signup.ShowDialog();
-            this.Show();
+            this.Close();
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             Form10 forgot = new Form10();
             this.Hide();
             forgot.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }
