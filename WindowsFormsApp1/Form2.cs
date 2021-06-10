@@ -16,16 +16,65 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
         }
         private void button1_Click(object sender, EventArgs e)
         {
             if(signUIsValid())
             {
                 panel1.Enabled = false;
-                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text, "0" + textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
-                button1.Enabled = false;
+                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text,textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
+                Timer timer = new Timer();
+                Timer timer1 = new Timer();
+                Timer timer2 = new Timer();
+                Timer timer3 = new Timer();
+                Timer timer4 = new Timer();
+                timer.Interval = 7500;
+                timer1.Interval = 1500;
+                timer2.Interval = 3000;
+                timer3.Interval = 4500;
+                timer4.Interval = 6000;
+                timer.Tick += new EventHandler(timer_Tick);
+                timer1.Tick += new EventHandler(timer1_Tick);
+                timer2.Tick += new EventHandler(timer2_Tick);
+                timer3.Tick += new EventHandler(timer3_Tick);
+                timer4.Tick += new EventHandler(timer4_Tick);
+                timer4.Start();
+                timer.Start();
+                timer1.Start();
+                timer2.Start();
+                timer3.Start();
+                timer4.Start();
+                label8.Visible = true;
             }
             
+        }
+        private void diplay(TextBox textBox)
+        {
+            
+        }
+        void timer1_Tick(object sender, EventArgs e)
+        {
+            label11.Visible = true;
+        }
+        void timer2_Tick(object sender, EventArgs e)
+        {
+            label12.Visible = true;
+        }
+        void timer3_Tick(object sender, EventArgs e)
+        {
+            label13.Visible = true;
+        }
+        void timer4_Tick(object sender, EventArgs e)
+        {
+            label14.Visible = true;
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            Form8 homePage = new Form8();
+            this.Hide();
+            homePage.ShowDialog();
+            this.Close();
         }
         private string capFirst(string s)
         {
@@ -415,6 +464,7 @@ namespace WindowsFormsApp1
             {
                 textBox8.Text = null;
                 textBox8.ForeColor = Color.Black;
+                textBox8.UseSystemPasswordChar = true;
             }
         }
 
@@ -423,6 +473,7 @@ namespace WindowsFormsApp1
             if (textBox8.Text == "")
             {
                 textBox8.Text = "Enter password";
+                textBox8.UseSystemPasswordChar = false;
                 textBox8.ForeColor = Color.Gray;
             }
         }
@@ -433,6 +484,7 @@ namespace WindowsFormsApp1
             {
                 textBox9.Text = null;
                 textBox9.ForeColor = Color.Black;
+                textBox9.UseSystemPasswordChar = true;
             }
         }
 
@@ -442,6 +494,7 @@ namespace WindowsFormsApp1
             {
                 textBox9.Text = "Confirm password";
                 textBox9.ForeColor = Color.Gray;
+                textBox9.UseSystemPasswordChar = false;
             }
         }
 
