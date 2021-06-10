@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 195);
+            this.button1.Location = new System.Drawing.Point(3, 205);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 68);
             this.button1.TabIndex = 0;
@@ -150,6 +150,7 @@ namespace WindowsFormsApp1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label5);
@@ -162,7 +163,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Location = new System.Drawing.Point(381, 237);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 287);
+            this.panel1.Size = new System.Drawing.Size(633, 335);
             this.panel1.TabIndex = 25;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -230,9 +231,9 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(501, 542);
+            this.panel2.Location = new System.Drawing.Point(217, 205);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 130);
+            this.panel2.Size = new System.Drawing.Size(409, 120);
             this.panel2.TabIndex = 28;
             // 
             // label9
@@ -308,7 +309,6 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_532;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1323, 749);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
