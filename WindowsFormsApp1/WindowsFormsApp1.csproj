@@ -189,6 +189,9 @@
     <None Include="Resources\icons8-eye-80.png" />
     <None Include="Resources\icons8-hide-80.png" />
     <None Include="Resources\icons8-back-to-100.png" />
+    <None Include="Resources\icons8-cell-phone-80.png" />
+    <None Include="Resources\icons8-android-24.png" />
+    <None Include="Resources\icons8-envelope-24.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
