@@ -86,28 +86,28 @@ namespace WindowsFormsApp1
             // makeBookingToolStripMenuItem
             // 
             this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
-            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.makeBookingToolStripMenuItem.Text = "Make Booking";
             this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
             // 
             // checkBookingToolStripMenuItem
             // 
             this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
-            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.checkBookingToolStripMenuItem.Text = "Check Booking";
             this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
             // 
             // modifyBookingToolStripMenuItem
             // 
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
-            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
             this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click_1);
             // 
             // extendStayToolStripMenuItem
             // 
             this.extendStayToolStripMenuItem.Name = "extendStayToolStripMenuItem";
-            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.extendStayToolStripMenuItem.Text = "Extend Stay";
             this.extendStayToolStripMenuItem.Click += new System.EventHandler(this.extendStayToolStripMenuItem_Click);
             // 
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             // picturesToolStripMenuItem
             // 
             this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
-            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.picturesToolStripMenuItem.Text = "Pictures";
             this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
             // 
@@ -133,11 +133,11 @@ namespace WindowsFormsApp1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(1103, 37);
+            this.label1.Location = new System.Drawing.Point(1081, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.Size = new System.Drawing.Size(61, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "user";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // customerBindingSource

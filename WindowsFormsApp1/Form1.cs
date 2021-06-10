@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             if (LoginIsValid())
             {
                 Form8 homePage = new Form8();
+
                 this.Hide();
                 homePage.ShowDialog();
                 this.Close();
