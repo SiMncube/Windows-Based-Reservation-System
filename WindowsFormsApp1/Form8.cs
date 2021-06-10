@@ -16,13 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             customerTableAdapter.Fill(fullDatabase.Customer);
-            string s = "";
-            for(int i = 0; i < fullDatabase.Customer.Rows.Count;i++)
+            string userName = "";
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
             {
-                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
-                    s += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    break;
+                }
+
             }
-            label1.Text = "Logged In User: \n" + s;
+            label1.Text += userName;
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -85,7 +89,7 @@ namespace WindowsFormsApp1
         private void Form8_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-          //  this.customerTableAdapter.Fill(this.fullDatabase.Customer);
+            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
 
         }
 
