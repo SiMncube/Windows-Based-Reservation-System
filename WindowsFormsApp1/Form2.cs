@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
                 count ++;
             if (!PasswordIsValid())
                 count ++;
-            if (IdIsValid())
+            if (!IdIsValid())
                 count ++;
             return count == 0;
         }
