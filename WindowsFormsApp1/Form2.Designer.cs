@@ -229,6 +229,7 @@ namespace WindowsFormsApp1
             this.textBox9.Size = new System.Drawing.Size(330, 27);
             this.textBox9.TabIndex = 55;
             this.textBox9.Text = "Confirm password";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
             this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 

@@ -240,7 +240,13 @@ namespace WindowsFormsApp1
             label20.Visible = false;
             label21.Visible = false;
         }
-
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            textBox8.BackColor = Color.White;
+            textBox9.BackColor = Color.White;
+            label20.Visible = false;
+            label21.Visible = false;
+        }
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if(textBox1.Text == "First name")
@@ -448,5 +454,7 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        
     }
 }
