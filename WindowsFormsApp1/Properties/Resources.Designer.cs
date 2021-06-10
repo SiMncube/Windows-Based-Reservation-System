@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_android_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-android-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arrow_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrow-80", resourceCulture);
@@ -96,6 +106,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap icons8_back_to_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-back-to-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cell_phone_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cell-phone-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_envelope_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-envelope-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
