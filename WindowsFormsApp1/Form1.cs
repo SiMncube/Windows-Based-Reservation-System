@@ -95,5 +95,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form10 forgot = new Form10();
+            this.Hide();
+            forgot.ShowDialog();
+            this.Show();
+        }
     }
 }
