@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             string s = currentUser.getEmailID();
-            label1.Text = "Current logged in user email ID : " + s;
+            label1.Text = "Logged In User: \n" + s;
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
         private void Form8_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
+          //  this.customerTableAdapter.Fill(this.fullDatabase.Customer);
 
         }
 
