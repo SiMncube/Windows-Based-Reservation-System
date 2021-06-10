@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
         }
         private bool CellNumberisValid()
         {
-            if(!isAllDigit(textBox10.Text) || textBox10.Text.Length != 9)
+            if(!isAllDigit(textBox10.Text) || textBox10.Text.Length != 10)
             {
                 textBox10.BackColor = Color.Red;
                 return false;
