@@ -176,21 +176,26 @@ namespace WindowsFormsApp1
         private void bookingInnerDGV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             label4.Visible = false;
-            DataRow dataRow = fullDs1.BookingInner.NewRow();
-            for(int i = 0; i < dataRow.ItemArray.Length; i++)
+            if(!bookingIsCanceled((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsIncomplete((int)bookingInnerDGV.CurrentRow.Cells[4].Value))
             {
-                dataRow[i] = bookingInnerDGV.CurrentRow.Cells[i].Value;
+                DataRow dataRow = fullDs1.BookingInner.NewRow();
+                for (int i = 0; i < dataRow.ItemArray.Length; i++)
+                {
+                    dataRow[i] = bookingInnerDGV.CurrentRow.Cells[i].Value;
+                }
+                try
+                {
+                    fullDs1.BookingInner.Rows.Add(dataRow);
+                    label5.Visible = false;
+                    label13.Visible = false;
+                    label14.Visible = false;
+                }
+                catch (ConstraintException)
+                {
+                    label5.Visible = true;
+                    
+                }
             }
-            try
-            {
-                fullDs1.BookingInner.Rows.Add(dataRow);
-                label5.Visible = false;
-            }
-            catch(ConstraintException)
-            {
-                label5.Visible = true;
-            }
-            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -236,7 +241,33 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        private bool bookingIsCanceled(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if(fullDs.BookingSummary[i].summaryID == summaryID && fullDs.BookingSummary[i].bookingStatus == "Cancelled")
+                {
+                    label13.Visible = true;
+                    label14.Visible = false;
+                    return true;
+                }
 
+            }
+            return false;
+        }
+        private bool bookingIsIncomplete(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID && fullDs.BookingSummary[i].bookingStatus == "inComplete")
+                {
+                    label14.Visible = true;
+                    label13.Visible = false;
+                    return true;
+                }
+            }
+            return false;
+        }
         private void firtNameTextBox_Enter(object sender, EventArgs e)
         {
             if (firtNameTextBox.Text == "First name")
