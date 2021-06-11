@@ -201,5 +201,59 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void firtNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (firtNameTextBox.Text == "First name")
+            {
+                firtNameTextBox.Text = null;
+                firtNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void firtNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (firtNameTextBox.Text == "")
+            {
+                firtNameTextBox.Text = "First name";
+                firtNameTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void lastNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (lastNameTextBox.Text == "Last name")
+            {
+                lastNameTextBox.Text = null;
+                lastNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void lastNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (lastNameTextBox.Text == "")
+            {
+                lastNameTextBox.Text = "Last name";
+                lastNameTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void addressLine1TextBox_Enter(object sender, EventArgs e)
+        {
+            if (addressLine1TextBox.Text == "Street Address Line 1")
+            {
+                addressLine1TextBox.Text = null;
+                addressLine1TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void addressLine1TextBox_Leave(object sender, EventArgs e)
+        {
+            if (addressLine1TextBox.Text == "")
+            {
+                addressLine1TextBox.Text = "Street Address Line 1";
+                addressLine1TextBox.ForeColor = Color.Gray;
+            }
+        }
     }
 }
