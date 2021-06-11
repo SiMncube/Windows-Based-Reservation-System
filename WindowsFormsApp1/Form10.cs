@@ -45,20 +45,27 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (userExist())
+            if (textBox2.Text != null)
             {
-                for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+                if (userExist())
                 {
-                    if (fullDatabase1.Customer[i].emailID.Equals(textBox2.Text, StringComparison.OrdinalIgnoreCase) || textBox2.Text.Equals(fullDatabase1.Customer[i].cellNumber))
+                    for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
                     {
-                        panel1.Visible = false;
-                        panel2.Visible = true;
-                        break;
+                        if (fullDatabase1.Customer[i].emailID.Equals(textBox2.Text, StringComparison.OrdinalIgnoreCase) || textBox2.Text.Equals(fullDatabase1.Customer[i].cellNumber))
+                        {
+                            panel1.Visible = false;
+                            panel2.Visible = true;
+                            break;
+                        }
                     }
                 }
+                else
+                    label10.Visible = true;
             }
             else
-                label10.Visible = true;
+            {
+                label12.Visible = true;
+            }
             
         }
         private bool userExist()
@@ -76,6 +83,7 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             label10.Visible = false;
+            label12.Visible = false;
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
@@ -175,6 +183,37 @@ namespace WindowsFormsApp1
             this.Hide();
             login.ShowDialog();
             this.Close();
+        }
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            if(textBox3.Text != "Enter password")
+                textBox3.UseSystemPasswordChar = true;
+            button12.Visible = true;
+            button9.Visible = false;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "Enter password")
+                textBox3.UseSystemPasswordChar = false;
+            button12.Visible = false;
+            button9.Visible = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text != "Confirm password")
+                textBox4.UseSystemPasswordChar = true;
+            button10.Visible = false;
+            button11.Visible = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text != "Confirm password")
+                textBox4.UseSystemPasswordChar = false;
+            button10.Visible = true;
+            button11.Visible = false;
         }
     }
 }
