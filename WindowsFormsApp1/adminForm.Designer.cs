@@ -112,6 +112,8 @@ namespace WindowsFormsApp1
             this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
             this.label12 = new System.Windows.Forms.Label();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -626,6 +628,8 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox1);
@@ -656,6 +660,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(224, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "Row is already added";
+            this.label5.Visible = false;
             // 
             // textBox1
             // 
@@ -955,6 +960,30 @@ namespace WindowsFormsApp1
             // 
             this.staffTa.ClearBeforeFill = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(409, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(293, 24);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Booking is already canceled";
+            this.label13.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(409, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 24);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Booking is incomplete";
+            this.label14.Visible = false;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1074,5 +1103,7 @@ namespace WindowsFormsApp1
         private fullDatabaseTableAdapters.viewBookingInnerTableAdapter viewBookingInnerTa;
         private System.Windows.Forms.Label label12;
         private fullDatabaseTableAdapters.StaffTableAdapter staffTa;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
