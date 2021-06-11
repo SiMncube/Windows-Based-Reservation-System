@@ -249,6 +249,8 @@ namespace WindowsFormsApp1
             this.emailTextBox.Size = new System.Drawing.Size(314, 27);
             this.emailTextBox.TabIndex = 53;
             this.emailTextBox.Text = "Email";
+            this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // cellNumberTextBox
             // 
@@ -259,6 +261,8 @@ namespace WindowsFormsApp1
             this.cellNumberTextBox.Size = new System.Drawing.Size(248, 27);
             this.cellNumberTextBox.TabIndex = 52;
             this.cellNumberTextBox.Text = "Cell number";
+            this.cellNumberTextBox.Enter += new System.EventHandler(this.cellNumberTextBox_Enter);
+            this.cellNumberTextBox.Leave += new System.EventHandler(this.cellNumberTextBox_Leave);
             // 
             // IDTextBox
             // 
