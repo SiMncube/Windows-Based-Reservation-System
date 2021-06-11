@@ -208,7 +208,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
-            this.pictureBox3.Location = new System.Drawing.Point(434, 268);
+            this.pictureBox3.Location = new System.Drawing.Point(449, 268);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -244,7 +244,7 @@ namespace WindowsFormsApp1
             // 
             this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.emailTextBox.Location = new System.Drawing.Point(146, 267);
+            this.emailTextBox.Location = new System.Drawing.Point(161, 267);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(314, 27);
             this.emailTextBox.TabIndex = 53;
@@ -335,7 +335,7 @@ namespace WindowsFormsApp1
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(216, 248);
+            this.label23.Location = new System.Drawing.Point(227, 248);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(179, 16);
             this.label23.TabIndex = 42;

@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
                 textBox9.BackColor = Color.Red;
                 return false;
             }
-            if (textBox8.Text.Length < 4)
+            if (textBox8.Text.Length < 8)
             {
                 label21.Visible = true;
                 textBox8.BackColor = Color.Red;

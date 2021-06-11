@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -59,7 +60,79 @@ namespace WindowsFormsApp1
             }
             return true;
         }
-
+        private bool NameIsValid()
+        {
+            int count = 0;
+            if (!isAllLetters(firtNameTextBox.Text) || firtNameTextBox.Text.Length < 3)
+            {
+                firtNameTextBox.BackColor = Color.Red;
+                count++;
+            }
+            if (!isAllLetters(lastNameTextBox.Text) || lastNameTextBox.Text.Length < 3)
+            {
+                lastNameTextBox.BackColor = Color.Red;
+                count++;
+            }
+            return count == 0;
+        }
+        private bool CellNumberisValid()
+        {
+            if (!isAllDigit(cellNumberTextBox.Text) || cellNumberTextBox.Text.Length != 10)
+            {
+                cellNumberTextBox.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool EmailISValid()
+        {
+            if (emailTextBox.Text != null)
+            {
+                EmailAddressAttribute email = new EmailAddressAttribute();
+                if (!email.IsValid(emailTextBox.Text))
+                {
+                    emailTextBox.BackColor = Color.Red;
+                    label22.Visible = true;
+                    return false;
+                }
+                if (EmailIsRegistred())
+                {
+                    emailTextBox.BackColor = Color.Red;
+                    label23.Visible = true;
+                    return false;
+                }
+                return true;
+            }
+            emailTextBox.BackColor = Color.Red;
+            return false;
+        }
+        private bool EmailIsRegistred()
+        {
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(emailTextBox.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            return false;
+        }
+        private bool AddrressIsValid()
+        {
+            if (!isAllDigit(postalCodeTextBox.Text) || postalCodeTextBox.Text.Length != 4)
+            {
+                postalCodeTextBox.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+        private bool IdIsValid()
+        {
+            if (!isAllDigit(IDTextBox.Text) || IDTextBox.Text.Length != 13)
+            {
+                IDTextBox.BackColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             bookingInnerTa.FillByPreference(fullDs.BookingInner,textBox1.Text);
