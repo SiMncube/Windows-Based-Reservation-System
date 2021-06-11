@@ -363,5 +363,52 @@ namespace WindowsFormsApp1
                 emailTextBox.ForeColor = Color.Gray;
             }
         }
+
+        private void firtNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            firtNameTextBox.BackColor = Color.White;
+        }
+
+        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            lastNameTextBox.BackColor = Color.White;
+        }
+
+        private void addressLine1TextBox_TextChanged(object sender, EventArgs e)
+        {
+            addressLine1TextBox.BackColor = Color.White;
+        }
+
+        private void addressLine2TextBox_TextChanged(object sender, EventArgs e)
+        {
+            addressLine2TextBox.BackColor = Color.White;
+        }
+
+        private void cityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            cityTextBox.BackColor = Color.White;
+        }
+
+        private void postalCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            postalCodeTextBox.BackColor = Color.White;
+        }
+
+        private void IDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            IDTextBox.BackColor = Color.White;
+        }
+
+        private void cellNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            cellNumberTextBox.BackColor = Color.White;
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+            emailTextBox.BackColor = Color.White;
+            label23.Visible = false;
+            label22.Visible = false;
+        }
     }
 }

@@ -249,6 +249,7 @@ namespace WindowsFormsApp1
             this.emailTextBox.Size = new System.Drawing.Size(314, 27);
             this.emailTextBox.TabIndex = 53;
             this.emailTextBox.Text = "Email";
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
@@ -261,6 +262,7 @@ namespace WindowsFormsApp1
             this.cellNumberTextBox.Size = new System.Drawing.Size(248, 27);
             this.cellNumberTextBox.TabIndex = 52;
             this.cellNumberTextBox.Text = "Cell number";
+            this.cellNumberTextBox.TextChanged += new System.EventHandler(this.cellNumberTextBox_TextChanged);
             this.cellNumberTextBox.Enter += new System.EventHandler(this.cellNumberTextBox_Enter);
             this.cellNumberTextBox.Leave += new System.EventHandler(this.cellNumberTextBox_Leave);
             // 
@@ -273,6 +275,7 @@ namespace WindowsFormsApp1
             this.IDTextBox.Size = new System.Drawing.Size(248, 27);
             this.IDTextBox.TabIndex = 51;
             this.IDTextBox.Text = "ID number";
+            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
             this.IDTextBox.Enter += new System.EventHandler(this.IDTextBox_Enter);
             this.IDTextBox.Leave += new System.EventHandler(this.IDTextBox_Leave);
             // 
@@ -285,6 +288,7 @@ namespace WindowsFormsApp1
             this.postalCodeTextBox.Size = new System.Drawing.Size(248, 27);
             this.postalCodeTextBox.TabIndex = 50;
             this.postalCodeTextBox.Text = "Postal code";
+            this.postalCodeTextBox.TextChanged += new System.EventHandler(this.postalCodeTextBox_TextChanged);
             this.postalCodeTextBox.Enter += new System.EventHandler(this.postalCodeTextBox_Enter);
             this.postalCodeTextBox.Leave += new System.EventHandler(this.postalCodeTextBox_Leave);
             // 
@@ -297,6 +301,7 @@ namespace WindowsFormsApp1
             this.cityTextBox.Size = new System.Drawing.Size(248, 27);
             this.cityTextBox.TabIndex = 49;
             this.cityTextBox.Text = "City";
+            this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
             this.cityTextBox.Enter += new System.EventHandler(this.cityTextBox_Enter);
             this.cityTextBox.Leave += new System.EventHandler(this.cityTextBox_Leave);
             // 
@@ -309,6 +314,7 @@ namespace WindowsFormsApp1
             this.addressLine2TextBox.Size = new System.Drawing.Size(502, 27);
             this.addressLine2TextBox.TabIndex = 48;
             this.addressLine2TextBox.Text = "Street Address Line 2";
+            this.addressLine2TextBox.TextChanged += new System.EventHandler(this.addressLine2TextBox_TextChanged);
             this.addressLine2TextBox.Enter += new System.EventHandler(this.addressLine2TextBox_Enter);
             this.addressLine2TextBox.Leave += new System.EventHandler(this.addressLine2TextBox_Leave);
             // 
@@ -321,6 +327,7 @@ namespace WindowsFormsApp1
             this.addressLine1TextBox.Size = new System.Drawing.Size(502, 27);
             this.addressLine1TextBox.TabIndex = 47;
             this.addressLine1TextBox.Text = "Street Address Line 1";
+            this.addressLine1TextBox.TextChanged += new System.EventHandler(this.addressLine1TextBox_TextChanged);
             this.addressLine1TextBox.Enter += new System.EventHandler(this.addressLine1TextBox_Enter);
             this.addressLine1TextBox.Leave += new System.EventHandler(this.addressLine1TextBox_Leave);
             // 
@@ -333,6 +340,7 @@ namespace WindowsFormsApp1
             this.lastNameTextBox.Size = new System.Drawing.Size(248, 27);
             this.lastNameTextBox.TabIndex = 46;
             this.lastNameTextBox.Text = "Last name";
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
             this.lastNameTextBox.Leave += new System.EventHandler(this.lastNameTextBox_Leave);
             // 
@@ -345,6 +353,7 @@ namespace WindowsFormsApp1
             this.firtNameTextBox.Size = new System.Drawing.Size(248, 27);
             this.firtNameTextBox.TabIndex = 41;
             this.firtNameTextBox.Text = "First name";
+            this.firtNameTextBox.TextChanged += new System.EventHandler(this.firtNameTextBox_TextChanged);
             this.firtNameTextBox.Enter += new System.EventHandler(this.firtNameTextBox_Enter);
             this.firtNameTextBox.Leave += new System.EventHandler(this.firtNameTextBox_Leave);
             // 
