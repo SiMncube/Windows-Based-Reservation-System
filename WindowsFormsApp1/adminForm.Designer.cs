@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cellNumberTextBox = new System.Windows.Forms.TextBox();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.postalCodeTextBox = new System.Windows.Forms.TextBox();
@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.cancelButton);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.emailTextBox);
             this.panel1.Controls.Add(this.cellNumberTextBox);
             this.panel1.Controls.Add(this.IDTextBox);
             this.panel1.Controls.Add(this.postalCodeTextBox);
@@ -240,15 +240,15 @@ namespace WindowsFormsApp1
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
             // 
-            // textBox7
+            // emailTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Gray;
-            this.textBox7.Location = new System.Drawing.Point(146, 267);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(314, 27);
-            this.textBox7.TabIndex = 53;
-            this.textBox7.Text = "Email";
+            this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.emailTextBox.Location = new System.Drawing.Point(146, 267);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(314, 27);
+            this.emailTextBox.TabIndex = 53;
+            this.emailTextBox.Text = "Email";
             // 
             // cellNumberTextBox
             // 
@@ -755,7 +755,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox cellNumberTextBox;
         private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.TextBox postalCodeTextBox;
