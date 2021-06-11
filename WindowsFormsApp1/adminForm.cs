@@ -20,8 +20,22 @@ namespace WindowsFormsApp1
             paymentTa.Fill(fullDs.Payment);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            label12.Text += logedInAdmin();
         }
-
+        private string logedInAdmin()
+        {
+            string admin = "";
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
+                {
+                    admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
+                    break;
+                }
+            }
+            return admin;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if(signUIsValid())
