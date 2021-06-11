@@ -23,7 +23,12 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+            if(signUIsValid())
+            {
+                customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+                label9.Visible = true;
+                panel1.Enabled = false;
+            }
         }
         private string capFirst(string s)
         {
@@ -132,6 +137,21 @@ namespace WindowsFormsApp1
                 return false;
             }
             return true;
+        }
+        private bool signUIsValid()
+        {
+            int count = 0;
+            if (!NameIsValid())
+                count++;
+            if (!AddrressIsValid())
+                count++;
+            if (!CellNumberisValid())
+                count++;
+            if (!EmailISValid())
+                count++;
+            if (!IdIsValid())
+                count++;
+            return count == 0;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -409,6 +429,11 @@ namespace WindowsFormsApp1
             emailTextBox.BackColor = Color.White;
             label23.Visible = false;
             label22.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
         }
     }
 }

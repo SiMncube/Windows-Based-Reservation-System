@@ -91,6 +91,8 @@ namespace WindowsFormsApp1
             this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
             this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -124,6 +126,7 @@ namespace WindowsFormsApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -136,6 +139,7 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label8);
@@ -155,9 +159,10 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(340, 98);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(344, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(583, 395);
+            this.panel1.Size = new System.Drawing.Size(583, 422);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -165,7 +170,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(42, 13);
+            this.label1.Location = new System.Drawing.Point(41, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 27);
             this.label1.TabIndex = 1;
@@ -176,7 +181,7 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(42, 42);
+            this.label3.Location = new System.Drawing.Point(41, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(353, 20);
             this.label3.TabIndex = 3;
@@ -187,7 +192,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.label8.Location = new System.Drawing.Point(46, 62);
+            this.label8.Location = new System.Drawing.Point(45, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 62;
@@ -197,7 +202,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox6.Location = new System.Drawing.Point(268, 219);
+            this.pictureBox6.Location = new System.Drawing.Point(267, 268);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(26, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -208,7 +213,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
-            this.pictureBox3.Location = new System.Drawing.Point(449, 268);
+            this.pictureBox3.Location = new System.Drawing.Point(448, 317);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -219,7 +224,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
-            this.pictureBox2.Location = new System.Drawing.Point(522, 219);
+            this.pictureBox2.Location = new System.Drawing.Point(521, 268);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -233,7 +238,7 @@ namespace WindowsFormsApp1
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(46, 315);
+            this.cancelButton.Location = new System.Drawing.Point(45, 364);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(82, 35);
             this.cancelButton.TabIndex = 57;
@@ -244,7 +249,7 @@ namespace WindowsFormsApp1
             // 
             this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.emailTextBox.Location = new System.Drawing.Point(161, 267);
+            this.emailTextBox.Location = new System.Drawing.Point(160, 316);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(314, 27);
             this.emailTextBox.TabIndex = 53;
@@ -257,7 +262,7 @@ namespace WindowsFormsApp1
             // 
             this.cellNumberTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cellNumberTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.cellNumberTextBox.Location = new System.Drawing.Point(300, 218);
+            this.cellNumberTextBox.Location = new System.Drawing.Point(299, 267);
             this.cellNumberTextBox.Name = "cellNumberTextBox";
             this.cellNumberTextBox.Size = new System.Drawing.Size(248, 27);
             this.cellNumberTextBox.TabIndex = 52;
@@ -270,7 +275,7 @@ namespace WindowsFormsApp1
             // 
             this.IDTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.IDTextBox.Location = new System.Drawing.Point(46, 218);
+            this.IDTextBox.Location = new System.Drawing.Point(45, 267);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(248, 27);
             this.IDTextBox.TabIndex = 51;
@@ -283,7 +288,7 @@ namespace WindowsFormsApp1
             // 
             this.postalCodeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postalCodeTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.postalCodeTextBox.Location = new System.Drawing.Point(300, 184);
+            this.postalCodeTextBox.Location = new System.Drawing.Point(299, 233);
             this.postalCodeTextBox.Name = "postalCodeTextBox";
             this.postalCodeTextBox.Size = new System.Drawing.Size(248, 27);
             this.postalCodeTextBox.TabIndex = 50;
@@ -296,7 +301,7 @@ namespace WindowsFormsApp1
             // 
             this.cityTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.cityTextBox.Location = new System.Drawing.Point(46, 184);
+            this.cityTextBox.Location = new System.Drawing.Point(45, 233);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(248, 27);
             this.cityTextBox.TabIndex = 49;
@@ -309,7 +314,7 @@ namespace WindowsFormsApp1
             // 
             this.addressLine2TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine2TextBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressLine2TextBox.Location = new System.Drawing.Point(46, 152);
+            this.addressLine2TextBox.Location = new System.Drawing.Point(45, 201);
             this.addressLine2TextBox.Name = "addressLine2TextBox";
             this.addressLine2TextBox.Size = new System.Drawing.Size(502, 27);
             this.addressLine2TextBox.TabIndex = 48;
@@ -322,7 +327,7 @@ namespace WindowsFormsApp1
             // 
             this.addressLine1TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine1TextBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressLine1TextBox.Location = new System.Drawing.Point(46, 120);
+            this.addressLine1TextBox.Location = new System.Drawing.Point(45, 169);
             this.addressLine1TextBox.Name = "addressLine1TextBox";
             this.addressLine1TextBox.Size = new System.Drawing.Size(502, 27);
             this.addressLine1TextBox.TabIndex = 47;
@@ -335,7 +340,7 @@ namespace WindowsFormsApp1
             // 
             this.lastNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.lastNameTextBox.Location = new System.Drawing.Point(300, 87);
+            this.lastNameTextBox.Location = new System.Drawing.Point(299, 136);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(248, 27);
             this.lastNameTextBox.TabIndex = 46;
@@ -348,7 +353,7 @@ namespace WindowsFormsApp1
             // 
             this.firtNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firtNameTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.firtNameTextBox.Location = new System.Drawing.Point(46, 87);
+            this.firtNameTextBox.Location = new System.Drawing.Point(45, 136);
             this.firtNameTextBox.Name = "firtNameTextBox";
             this.firtNameTextBox.Size = new System.Drawing.Size(248, 27);
             this.firtNameTextBox.TabIndex = 41;
@@ -362,7 +367,7 @@ namespace WindowsFormsApp1
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(227, 248);
+            this.label23.Location = new System.Drawing.Point(226, 297);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(179, 16);
             this.label23.TabIndex = 42;
@@ -374,7 +379,7 @@ namespace WindowsFormsApp1
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(265, 248);
+            this.label22.Location = new System.Drawing.Point(264, 297);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(97, 16);
             this.label22.TabIndex = 41;
@@ -388,7 +393,7 @@ namespace WindowsFormsApp1
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(466, 315);
+            this.registerButton.Location = new System.Drawing.Point(465, 364);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(82, 35);
             this.registerButton.TabIndex = 38;
@@ -737,6 +742,33 @@ namespace WindowsFormsApp1
             // 
             this.bookingSummaryTa.ClearBeforeFill = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lime;
+            this.label9.Location = new System.Drawing.Point(46, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(468, 23);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "Customer account successfully registered";
+            this.label9.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(395, 53);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(497, 41);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Register new customer";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,5 +861,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private fullDatabaseTableAdapters.BookingSummaryTableAdapter bookingSummaryTa;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button2;
     }
 }
