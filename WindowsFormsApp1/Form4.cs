@@ -83,11 +83,12 @@ namespace WindowsFormsApp1
         }
         private bool bookingExist(string summaryID)
         {
-
             for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
             {
                 if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
                 {
+                    if (fullDatabase.BookingSummary[i].dateIn.CompareTo(DateTime.Today.Date) < 0)
+                        return false;
                     fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Cancelled";
                     bookingSummaryTableAdapter.Update(fullDatabase.BookingSummary);
                     processRefund(summaryID);
