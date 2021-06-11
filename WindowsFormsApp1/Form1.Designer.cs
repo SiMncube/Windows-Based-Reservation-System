@@ -47,12 +47,13 @@ namespace WindowsFormsApp1
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
+            this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -281,14 +282,18 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 0;
             // 
-            // fullDatabase1
+            // fullDs
             // 
-            this.fullDatabase1.DataSetName = "fullDatabase";
-            this.fullDatabase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.fullDs.DataSetName = "fullDatabase";
+            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerTableAdapter1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // staffTa
+            // 
+            this.staffTa.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -308,7 +313,7 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,12 +333,13 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private fullDatabase fullDatabase1;
+        private fullDatabase fullDs;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private fullDatabaseTableAdapters.StaffTableAdapter staffTa;
     }
 }

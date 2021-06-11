@@ -15,50 +15,118 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            customerTableAdapter1.Fill(fullDatabase1.Customer);
+            customerTableAdapter1.Fill(fullDs.Customer);
+            staffTa.Fill(fullDs.Staff);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            adminForm a = new adminForm();
-            this.Hide();
-            a.ShowDialog();
-            this.Close();
-            if (LoginIsValid())
+            if (loginisValid())
             {
-                Form8 homePage = new Form8();
-                this.Hide();
-                homePage.ShowDialog();
-                this.Close();
+                if(userNameIsCorrect() && userPasswordIsCorrect())
+                {
+                    Form8 homePage = new Form8();
+                    this.Hide();
+                    homePage.ShowDialog();
+                    this.Close();
+                }
+                if(adminNameIsCorrect() && adminPasswordIsCorrect())
+                {
+                    adminForm a = new adminForm();
+                    this.Hide();
+                    a.ShowDialog();
+                    this.Close();
+                }
+                if(managerNameIsCorrect() && managerNameIsCorrect())
+                {
+                    managerForm m = new managerForm();
+                    this.Hide();
+                    m.ShowDialog();
+                    this.Close();
+                }
             }
         }
         private bool userNameIsCorrect()
         {
-            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
             {
-                if(fullDatabase1.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                if (fullDs.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    currentUser.setEmailID(fullDatabase1.Customer[i].emailID);
+                    currentUser.setEmailID(fullDs.Customer[i].emailID);
                     return true;
                 }
             }
             label8.Visible = true;
             return false;
         }
-        private bool passwordIsCorrect()
+        private bool userPasswordIsCorrect()
         {
-            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
             {
-                if(fullDatabase1.Customer[i].password == textBox2.Text && fullDatabase1.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                if(fullDs.Customer[i].password == textBox2.Text && fullDs.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                     return true;
             }
             if (userNameIsCorrect())
                 label9.Visible = true;
             return false;
         }
-        private bool LoginIsValid()
+        private bool adminNameIsCorrect()
         {
-            return userNameIsCorrect() && passwordIsCorrect();
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Admin")
+                {
+                    currentUser.setEmailID(fullDs.Staff[i].emailID);
+                    return true;
+                }
+            }
+            label8.Visible = true;
+            return false;
+        }
+        private bool adminPasswordIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (adminNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool managerNameIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Manager")
+                {
+                    currentUser.setEmailID(fullDs.Staff[i].emailID);
+                    return true;
+                }
+            }
+            label8.Visible = true;
+            return false;
+        }
+        private bool managerPasswordIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (managerNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool loginisValid()
+        {
+            if (userNameIsCorrect() && userPasswordIsCorrect())
+                return true;
+            if (adminNameIsCorrect() && adminPasswordIsCorrect())
+                return true;
+            if (managerNameIsCorrect() && managerNameIsCorrect())
+                return true;
+            return false;
         }
         private void Form10_Load(object sender, EventArgs e)
         {
