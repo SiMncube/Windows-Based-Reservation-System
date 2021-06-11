@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             if (numberOfNights == 0)
                 numberOfNights++;
 
-            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem == "0")
+            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem.ToString() == "0")
             {
                 amountDueForSingleRooms = 0.0;
             }
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
                 numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
                 amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
             }
-            if (comboBox2.SelectedItem == null || comboBox2.SelectedItem == "0")
+            if (comboBox2.SelectedItem == null || comboBox2.SelectedItem.ToString() == "0")
             {
                 amountDueForDoubleRooms = 0.0;
             }
