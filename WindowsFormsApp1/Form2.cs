@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+        Timer timer = new Timer();
         public Form2()
         {
             InitializeComponent();
@@ -24,28 +25,26 @@ namespace WindowsFormsApp1
             {
                 panel1.Enabled = false;
                 customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text,textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
-                Timer timer = new Timer();
+                label9.Visible = true;
                 Timer timer1 = new Timer();
                 Timer timer2 = new Timer();
                 Timer timer3 = new Timer();
                 Timer timer4 = new Timer();
-                timer.Interval = 7500;
-                timer1.Interval = 1500;
-                timer2.Interval = 3000;
-                timer3.Interval = 4500;
-                timer4.Interval = 6000;
+                timer.Interval = 2300;
+                timer1.Interval = 500;
+                timer2.Interval = 1000;
+                timer3.Interval = 1500;
+                timer4.Interval = 2000;
                 timer.Tick += new EventHandler(timer_Tick);
                 timer1.Tick += new EventHandler(timer1_Tick);
                 timer2.Tick += new EventHandler(timer2_Tick);
                 timer3.Tick += new EventHandler(timer3_Tick);
                 timer4.Tick += new EventHandler(timer4_Tick);
-                timer4.Start();
                 timer.Start();
                 timer1.Start();
                 timer2.Start();
                 timer3.Start();
                 timer4.Start();
-                label8.Visible = true;
             }
             
         }
@@ -72,7 +71,8 @@ namespace WindowsFormsApp1
         void timer_Tick(object sender, EventArgs e)
         {
             Form8 homePage = new Form8();
-            this.Hide();
+            timer.Dispose();
+            this.Dispose();
             homePage.ShowDialog();
             this.Close();
         }
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
         {
             for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Customer[i].emailID == textBox7.Text)
+                if (fullDatabase1.Customer[i].emailID.Equals(textBox7.Text, StringComparison.OrdinalIgnoreCase))
                     return true;
             }
             return false;
@@ -503,14 +503,10 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form1 login = new Form1();
+            this.Hide();
+            login.ShowDialog();
             this.Close();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }
 }

@@ -31,14 +31,12 @@ namespace WindowsFormsApp1
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -71,8 +69,8 @@ namespace WindowsFormsApp1
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -86,12 +84,14 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(475, 147);
+            this.panel1.Location = new System.Drawing.Point(486, 144);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 461);
             this.panel1.TabIndex = 1;
@@ -123,18 +123,40 @@ namespace WindowsFormsApp1
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(360, 70);
+            this.label14.Location = new System.Drawing.Point(358, 5);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(18, 25);
             this.label14.TabIndex = 67;
             this.label14.Text = ".";
             this.label14.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(42, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "The Cottage BnB sign up";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(43, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Fill the registration form bellow to register your account";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(336, 70);
+            this.label13.Location = new System.Drawing.Point(345, 5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(18, 25);
             this.label13.TabIndex = 66;
@@ -145,7 +167,7 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(312, 70);
+            this.label12.Location = new System.Drawing.Point(334, 5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(18, 25);
             this.label12.TabIndex = 65;
@@ -156,7 +178,8 @@ namespace WindowsFormsApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(288, 70);
+            this.label11.ForeColor = System.Drawing.Color.Blue;
+            this.label11.Location = new System.Drawing.Point(321, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(18, 25);
             this.label11.TabIndex = 64;
@@ -167,60 +190,18 @@ namespace WindowsFormsApp1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(43, 77);
+            this.label8.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.label8.Location = new System.Drawing.Point(46, 62);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(245, 16);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 62;
-            this.label8.Text = "Sign up successfull redirecting to homepage";
             this.label8.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(47, 10);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(330, 53);
-            this.panel4.TabIndex = 44;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(105, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
-            this.label9.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "The Cottage BnB sign up";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Fill the registration form bellow to register your account";
             // 
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox6.Location = new System.Drawing.Point(199, 232);
+            this.pictureBox6.Location = new System.Drawing.Point(199, 216);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(26, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,7 +212,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_lock_24;
-            this.pictureBox5.Location = new System.Drawing.Point(350, 373);
+            this.pictureBox5.Location = new System.Drawing.Point(350, 357);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -242,7 +223,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_lock_24;
-            this.pictureBox4.Location = new System.Drawing.Point(350, 326);
+            this.pictureBox4.Location = new System.Drawing.Point(350, 310);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -253,7 +234,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
-            this.pictureBox3.Location = new System.Drawing.Point(350, 280);
+            this.pictureBox3.Location = new System.Drawing.Point(350, 264);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -264,7 +245,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
-            this.pictureBox2.Location = new System.Drawing.Point(350, 232);
+            this.pictureBox2.Location = new System.Drawing.Point(350, 216);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -278,7 +259,7 @@ namespace WindowsFormsApp1
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(46, 415);
+            this.button3.Location = new System.Drawing.Point(46, 399);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(82, 35);
             this.button3.TabIndex = 57;
@@ -290,7 +271,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.Color.Gray;
-            this.textBox9.Location = new System.Drawing.Point(46, 373);
+            this.textBox9.Location = new System.Drawing.Point(46, 357);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(330, 27);
             this.textBox9.TabIndex = 55;
@@ -303,7 +284,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.Gray;
-            this.textBox8.Location = new System.Drawing.Point(47, 326);
+            this.textBox8.Location = new System.Drawing.Point(47, 310);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(329, 27);
             this.textBox8.TabIndex = 54;
@@ -316,7 +297,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
-            this.textBox7.Location = new System.Drawing.Point(47, 280);
+            this.textBox7.Location = new System.Drawing.Point(47, 264);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(329, 27);
             this.textBox7.TabIndex = 53;
@@ -329,7 +310,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.Gray;
-            this.textBox10.Location = new System.Drawing.Point(237, 232);
+            this.textBox10.Location = new System.Drawing.Point(237, 216);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(139, 27);
             this.textBox10.TabIndex = 52;
@@ -342,7 +323,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.Color.Gray;
-            this.textBox12.Location = new System.Drawing.Point(47, 232);
+            this.textBox12.Location = new System.Drawing.Point(47, 216);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(179, 27);
             this.textBox12.TabIndex = 51;
@@ -355,7 +336,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox6.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
-            this.textBox6.Location = new System.Drawing.Point(237, 200);
+            this.textBox6.Location = new System.Drawing.Point(237, 184);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(139, 27);
             this.textBox6.TabIndex = 50;
@@ -368,7 +349,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox5.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
-            this.textBox5.Location = new System.Drawing.Point(46, 200);
+            this.textBox5.Location = new System.Drawing.Point(46, 184);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 27);
             this.textBox5.TabIndex = 49;
@@ -381,7 +362,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
-            this.textBox4.Location = new System.Drawing.Point(46, 168);
+            this.textBox4.Location = new System.Drawing.Point(46, 152);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(330, 27);
             this.textBox4.TabIndex = 48;
@@ -394,7 +375,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(46, 136);
+            this.textBox3.Location = new System.Drawing.Point(46, 120);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(330, 27);
             this.textBox3.TabIndex = 47;
@@ -407,7 +388,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(201, 104);
+            this.textBox2.Location = new System.Drawing.Point(201, 88);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 27);
             this.textBox2.TabIndex = 46;
@@ -420,7 +401,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(46, 105);
+            this.textBox1.Location = new System.Drawing.Point(46, 87);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 27);
             this.textBox1.TabIndex = 41;
@@ -434,7 +415,7 @@ namespace WindowsFormsApp1
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(46, 261);
+            this.label23.Location = new System.Drawing.Point(46, 245);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(179, 16);
             this.label23.TabIndex = 42;
@@ -446,7 +427,7 @@ namespace WindowsFormsApp1
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(46, 261);
+            this.label22.Location = new System.Drawing.Point(46, 245);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(97, 16);
             this.label22.TabIndex = 41;
@@ -458,7 +439,7 @@ namespace WindowsFormsApp1
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(43, 309);
+            this.label21.Location = new System.Drawing.Point(43, 293);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(129, 15);
             this.label21.TabIndex = 40;
@@ -470,7 +451,7 @@ namespace WindowsFormsApp1
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(43, 355);
+            this.label20.Location = new System.Drawing.Point(43, 339);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(156, 15);
             this.label20.TabIndex = 39;
@@ -484,7 +465,7 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(294, 415);
+            this.button1.Location = new System.Drawing.Point(294, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 35);
             this.button1.TabIndex = 38;
@@ -586,6 +567,19 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lime;
+            this.label9.Location = new System.Drawing.Point(43, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(271, 16);
+            this.label9.TabIndex = 68;
+            this.label9.Text = "Sign up successfull redirecting to homepage";
+            this.label9.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,8 +596,6 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form10_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -654,12 +646,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
