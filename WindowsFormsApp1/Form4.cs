@@ -115,7 +115,6 @@ namespace WindowsFormsApp1
                     paymentTableAdapter1.Fill(fullDatabase.Payment);
                     break;
                 }
-                
             }
         }
         private bool bookingIsCancelled(string summaryID)
