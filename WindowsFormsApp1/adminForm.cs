@@ -327,5 +327,41 @@ namespace WindowsFormsApp1
                 IDTextBox.ForeColor = Color.Gray;
             }
         }
+
+        private void cellNumberTextBox_Enter(object sender, EventArgs e)
+        {
+            if (cellNumberTextBox.Text == "Cell number")
+            {
+                cellNumberTextBox.Text = null;
+                cellNumberTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void cellNumberTextBox_Leave(object sender, EventArgs e)
+        {
+            if (cellNumberTextBox.Text == "")
+            {
+                cellNumberTextBox.Text = "Cell number";
+                cellNumberTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void emailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "Email")
+            {
+                emailTextBox.Text = null;
+                emailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "")
+            {
+                emailTextBox.Text = "Email";
+                emailTextBox.ForeColor = Color.Gray;
+            }
+        }
     }
 }
