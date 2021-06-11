@@ -269,6 +269,8 @@ namespace WindowsFormsApp1
             this.IDTextBox.Size = new System.Drawing.Size(248, 27);
             this.IDTextBox.TabIndex = 51;
             this.IDTextBox.Text = "ID number";
+            this.IDTextBox.Enter += new System.EventHandler(this.IDTextBox_Enter);
+            this.IDTextBox.Leave += new System.EventHandler(this.IDTextBox_Leave);
             // 
             // postalCodeTextBox
             // 
@@ -279,6 +281,8 @@ namespace WindowsFormsApp1
             this.postalCodeTextBox.Size = new System.Drawing.Size(248, 27);
             this.postalCodeTextBox.TabIndex = 50;
             this.postalCodeTextBox.Text = "Postal code";
+            this.postalCodeTextBox.Enter += new System.EventHandler(this.postalCodeTextBox_Enter);
+            this.postalCodeTextBox.Leave += new System.EventHandler(this.postalCodeTextBox_Leave);
             // 
             // cityTextBox
             // 
@@ -289,6 +293,8 @@ namespace WindowsFormsApp1
             this.cityTextBox.Size = new System.Drawing.Size(248, 27);
             this.cityTextBox.TabIndex = 49;
             this.cityTextBox.Text = "City";
+            this.cityTextBox.Enter += new System.EventHandler(this.cityTextBox_Enter);
+            this.cityTextBox.Leave += new System.EventHandler(this.cityTextBox_Leave);
             // 
             // addressLine2TextBox
             // 
@@ -299,6 +305,8 @@ namespace WindowsFormsApp1
             this.addressLine2TextBox.Size = new System.Drawing.Size(502, 27);
             this.addressLine2TextBox.TabIndex = 48;
             this.addressLine2TextBox.Text = "Street Address Line 2";
+            this.addressLine2TextBox.Enter += new System.EventHandler(this.addressLine2TextBox_Enter);
+            this.addressLine2TextBox.Leave += new System.EventHandler(this.addressLine2TextBox_Leave);
             // 
             // addressLine1TextBox
             // 

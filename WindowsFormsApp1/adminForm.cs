@@ -255,5 +255,77 @@ namespace WindowsFormsApp1
                 addressLine1TextBox.ForeColor = Color.Gray;
             }
         }
+
+        private void addressLine2TextBox_Enter(object sender, EventArgs e)
+        {
+            if (addressLine2TextBox.Text == "Street Address Line 2")
+            {
+                addressLine2TextBox.Text = null;
+                addressLine2TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void addressLine2TextBox_Leave(object sender, EventArgs e)
+        {
+            if (addressLine2TextBox.Text == "")
+            {
+                addressLine2TextBox.Text = "Street Address Line 2";
+                addressLine2TextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void cityTextBox_Enter(object sender, EventArgs e)
+        {
+            if (cityTextBox.Text == "City")
+            {
+                cityTextBox.Text = null;
+                cityTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void cityTextBox_Leave(object sender, EventArgs e)
+        {
+            if (cityTextBox.Text == "")
+            {
+                cityTextBox.Text = "City";
+                cityTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void postalCodeTextBox_Enter(object sender, EventArgs e)
+        {
+            if (postalCodeTextBox.Text == "Postal code")
+            {
+                postalCodeTextBox.Text = null;
+                postalCodeTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void postalCodeTextBox_Leave(object sender, EventArgs e)
+        {
+            if (postalCodeTextBox.Text == "")
+            {
+                postalCodeTextBox.Text = "Postal code";
+                postalCodeTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void IDTextBox_Enter(object sender, EventArgs e)
+        {
+            if (IDTextBox.Text == "ID number")
+            {
+                IDTextBox.Text = null;
+                IDTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void IDTextBox_Leave(object sender, EventArgs e)
+        {
+            if (IDTextBox.Text == "")
+            {
+                IDTextBox.Text = "ID number";
+                IDTextBox.ForeColor = Color.Gray;
+            }
+        }
     }
 }
