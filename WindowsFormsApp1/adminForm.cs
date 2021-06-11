@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             bookingInnerTa.Fill(fullDs.BookingInner);
             paymentTa.Fill(fullDs.Payment);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -434,6 +435,11 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Enabled = true;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            viewBookingInnerTa.FillByPreference(fullDs.viewBookingInner, textBox2.Text);
         }
     }
 }
