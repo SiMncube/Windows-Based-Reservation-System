@@ -51,10 +51,20 @@ namespace WindowsFormsApp1
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // customerTableAdapter1
@@ -73,7 +83,7 @@ namespace WindowsFormsApp1
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(33, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 45);
             this.button1.TabIndex = 41;
@@ -90,7 +100,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(560, 198);
+            this.panel1.Location = new System.Drawing.Point(505, 229);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(353, 258);
             this.panel1.TabIndex = 42;
@@ -138,7 +148,7 @@ namespace WindowsFormsApp1
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(33, 133);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(290, 42);
+            this.button4.Size = new System.Drawing.Size(290, 45);
             this.button4.TabIndex = 9;
             this.button4.Text = "Reset Password";
             this.button4.UseVisualStyleBackColor = false;
@@ -151,9 +161,9 @@ namespace WindowsFormsApp1
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(35, 192);
+            this.button5.Location = new System.Drawing.Point(33, 191);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(288, 37);
+            this.button5.Size = new System.Drawing.Size(290, 47);
             this.button5.TabIndex = 10;
             this.button5.Text = "Back";
             this.button5.UseVisualStyleBackColor = false;
@@ -171,7 +181,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(556, 202);
+            this.panel2.Location = new System.Drawing.Point(501, 214);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(353, 258);
             this.panel2.TabIndex = 43;
@@ -244,9 +254,9 @@ namespace WindowsFormsApp1
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(30, 206);
+            this.button7.Location = new System.Drawing.Point(28, 206);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(288, 37);
+            this.button7.Size = new System.Drawing.Size(290, 37);
             this.button7.TabIndex = 12;
             this.button7.Text = "Back";
             this.button7.UseVisualStyleBackColor = false;
@@ -294,7 +304,7 @@ namespace WindowsFormsApp1
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(552, 211);
+            this.panel3.Location = new System.Drawing.Point(509, 210);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 258);
             this.panel3.TabIndex = 44;
@@ -327,6 +337,91 @@ namespace WindowsFormsApp1
             this.label14.TabIndex = 9;
             this.label14.Text = "Your password is successfully reset\r\nProceed to login";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1366, 100);
+            this.panel4.TabIndex = 45;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(548, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Safe . Dependable . Affordable";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(3, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 45);
+            this.button2.TabIndex = 40;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(431, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(483, 61);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "The Cottage BnB";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(105, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Location = new System.Drawing.Point(-6, 713);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1375, 37);
+            this.panel5.TabIndex = 46;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(480, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(414, 18);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Copyright 2014 | All rights reserved | Privacy policy";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 0;
+            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,8 +429,10 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "Form10";
@@ -348,6 +445,10 @@ namespace WindowsFormsApp1
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +476,13 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label11;
     }
 }
