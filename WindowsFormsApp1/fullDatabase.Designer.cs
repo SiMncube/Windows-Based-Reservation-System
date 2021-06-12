@@ -2996,15 +2996,15 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnID_Number;
             
-            private global::System.Data.DataColumn columncell_Number;
+            private global::System.Data.DataColumn columnCell_Number;
             
             private global::System.Data.DataColumn columnBooking_Ref;
             
-            private global::System.Data.DataColumn columnemail;
+            private global::System.Data.DataColumn columnCustomer_Email;
             
             private global::System.Data.DataColumn columnBooking_status;
             
-            private global::System.Data.DataColumn columnAmount_paid;
+            private global::System.Data.DataColumn columnAmount_Due;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3065,9 +3065,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cell_NumberColumn {
+            public global::System.Data.DataColumn Cell_NumberColumn {
                 get {
-                    return this.columncell_Number;
+                    return this.columnCell_Number;
                 }
             }
             
@@ -3081,9 +3081,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn emailColumn {
+            public global::System.Data.DataColumn Customer_EmailColumn {
                 get {
-                    return this.columnemail;
+                    return this.columnCustomer_Email;
                 }
             }
             
@@ -3097,9 +3097,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Amount_paidColumn {
+            public global::System.Data.DataColumn Amount_DueColumn {
                 get {
-                    return this.columnAmount_paid;
+                    return this.columnAmount_Due;
                 }
             }
             
@@ -3140,17 +3140,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BookingInnerRow AddBookingInnerRow(string Name, string Surname, string ID_Number, string cell_Number, string email, string Booking_status, string Amount_paid) {
+            public BookingInnerRow AddBookingInnerRow(string Name, string Surname, string ID_Number, string Cell_Number, string Customer_Email, string Booking_status, string Amount_Due) {
                 BookingInnerRow rowBookingInnerRow = ((BookingInnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
                         Surname,
                         ID_Number,
-                        cell_Number,
+                        Cell_Number,
                         null,
-                        email,
+                        Customer_Email,
                         Booking_status,
-                        Amount_paid};
+                        Amount_Due};
                 rowBookingInnerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBookingInnerRow);
                 return rowBookingInnerRow;
@@ -3183,11 +3183,11 @@ namespace WindowsFormsApp1 {
                 this.columnName = base.Columns["Name"];
                 this.columnSurname = base.Columns["Surname"];
                 this.columnID_Number = base.Columns["ID Number"];
-                this.columncell_Number = base.Columns["cell Number"];
+                this.columnCell_Number = base.Columns["Cell Number"];
                 this.columnBooking_Ref = base.Columns["Booking Ref"];
-                this.columnemail = base.Columns["email"];
+                this.columnCustomer_Email = base.Columns["Customer Email"];
                 this.columnBooking_status = base.Columns["Booking status"];
-                this.columnAmount_paid = base.Columns["Amount paid"];
+                this.columnAmount_Due = base.Columns["Amount Due"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3199,16 +3199,16 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnSurname);
                 this.columnID_Number = new global::System.Data.DataColumn("ID Number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Number);
-                this.columncell_Number = new global::System.Data.DataColumn("cell Number", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncell_Number);
+                this.columnCell_Number = new global::System.Data.DataColumn("Cell Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCell_Number);
                 this.columnBooking_Ref = new global::System.Data.DataColumn("Booking Ref", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Ref);
-                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail);
+                this.columnCustomer_Email = new global::System.Data.DataColumn("Customer Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomer_Email);
                 this.columnBooking_status = new global::System.Data.DataColumn("Booking status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_status);
-                this.columnAmount_paid = new global::System.Data.DataColumn("Amount paid", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount_paid);
+                this.columnAmount_Due = new global::System.Data.DataColumn("Amount Due", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount_Due);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBooking_Ref}, true));
                 this.columnName.AllowDBNull = false;
@@ -3220,9 +3220,9 @@ namespace WindowsFormsApp1 {
                 this.columnID_Number.AllowDBNull = false;
                 this.columnID_Number.Caption = "idNumber";
                 this.columnID_Number.MaxLength = 13;
-                this.columncell_Number.AllowDBNull = false;
-                this.columncell_Number.Caption = "cellNumber";
-                this.columncell_Number.MaxLength = 10;
+                this.columnCell_Number.AllowDBNull = false;
+                this.columnCell_Number.Caption = "cellNumber";
+                this.columnCell_Number.MaxLength = 10;
                 this.columnBooking_Ref.AutoIncrement = true;
                 this.columnBooking_Ref.AutoIncrementSeed = -1;
                 this.columnBooking_Ref.AutoIncrementStep = -1;
@@ -3230,14 +3230,14 @@ namespace WindowsFormsApp1 {
                 this.columnBooking_Ref.ReadOnly = true;
                 this.columnBooking_Ref.Unique = true;
                 this.columnBooking_Ref.Caption = "summaryID";
-                this.columnemail.AllowDBNull = false;
-                this.columnemail.Caption = "emailID";
-                this.columnemail.MaxLength = 50;
+                this.columnCustomer_Email.AllowDBNull = false;
+                this.columnCustomer_Email.Caption = "emailID";
+                this.columnCustomer_Email.MaxLength = 50;
                 this.columnBooking_status.Caption = "bookingStatus";
                 this.columnBooking_status.MaxLength = 50;
-                this.columnAmount_paid.AllowDBNull = false;
-                this.columnAmount_paid.Caption = "amountDue";
-                this.columnAmount_paid.MaxLength = 50;
+                this.columnAmount_Due.AllowDBNull = false;
+                this.columnAmount_Due.Caption = "amountDue";
+                this.columnAmount_Due.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4622,12 +4622,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cell_Number {
+            public string Cell_Number {
                 get {
-                    return ((string)(this[this.tableBookingInner.cell_NumberColumn]));
+                    return ((string)(this[this.tableBookingInner.Cell_NumberColumn]));
                 }
                 set {
-                    this[this.tableBookingInner.cell_NumberColumn] = value;
+                    this[this.tableBookingInner.Cell_NumberColumn] = value;
                 }
             }
             
@@ -4644,12 +4644,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string email {
+            public string Customer_Email {
                 get {
-                    return ((string)(this[this.tableBookingInner.emailColumn]));
+                    return ((string)(this[this.tableBookingInner.Customer_EmailColumn]));
                 }
                 set {
-                    this[this.tableBookingInner.emailColumn] = value;
+                    this[this.tableBookingInner.Customer_EmailColumn] = value;
                 }
             }
             
@@ -4671,12 +4671,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Amount_paid {
+            public string Amount_Due {
                 get {
-                    return ((string)(this[this.tableBookingInner.Amount_paidColumn]));
+                    return ((string)(this[this.tableBookingInner.Amount_DueColumn]));
                 }
                 set {
-                    this[this.tableBookingInner.Amount_paidColumn] = value;
+                    this[this.tableBookingInner.Amount_DueColumn] = value;
                 }
             }
             
@@ -8562,11 +8562,11 @@ SELECT emailID, name, surname, idNumber, cellNumber, password, staffType, street
             tableMapping.ColumnMappings.Add("name", "Name");
             tableMapping.ColumnMappings.Add("surname", "Surname");
             tableMapping.ColumnMappings.Add("idNumber", "ID Number");
-            tableMapping.ColumnMappings.Add("cellNumber", "cell Number");
+            tableMapping.ColumnMappings.Add("cellNumber", "Cell Number");
             tableMapping.ColumnMappings.Add("summaryID", "Booking Ref");
-            tableMapping.ColumnMappings.Add("emailID", "email");
+            tableMapping.ColumnMappings.Add("emailID", "Customer Email");
             tableMapping.ColumnMappings.Add("bookingStatus", "Booking status");
-            tableMapping.ColumnMappings.Add("amountDue", "Amount paid");
+            tableMapping.ColumnMappings.Add("amountDue", "Amount Due");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
