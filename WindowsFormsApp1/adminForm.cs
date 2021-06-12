@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
             staffTa.Fill(fullDs.Staff);
             label12.Text += logedInAdmin();
         }
+        /*=========================================================================================== Kaygee code ===========================================================================================*/
+
         private string logedInAdmin()
         {
             string admin = "";
@@ -486,5 +488,7 @@ namespace WindowsFormsApp1
         {
             viewBookingInnerTa.FillByPreference(fullDs.viewBookingInner, textBox2.Text);
         }
+
+        /*=========================================================================================== Kaygee code ===========================================================================================*/
     }
 }
