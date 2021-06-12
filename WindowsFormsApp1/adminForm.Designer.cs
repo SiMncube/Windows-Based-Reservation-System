@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -73,6 +74,8 @@ namespace WindowsFormsApp1
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs1 = new WindowsFormsApp1.fullDatabase();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -110,10 +113,7 @@ namespace WindowsFormsApp1
             this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
             this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
-            this.label12 = new System.Windows.Forms.Label();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -162,6 +162,17 @@ namespace WindowsFormsApp1
             this.tabPage1.Text = "Create new customer profile";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Location = new System.Drawing.Point(1004, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(198, 15);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Currently logged in Admin : ";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SteelBlue;
@@ -169,7 +180,7 @@ namespace WindowsFormsApp1
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(484, 101);
+            this.button2.Location = new System.Drawing.Point(421, 111);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(497, 41);
             this.button2.TabIndex = 3;
@@ -201,7 +212,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
             this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(433, 157);
+            this.panel1.Location = new System.Drawing.Point(370, 167);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(583, 422);
             this.panel1.TabIndex = 2;
@@ -640,6 +651,30 @@ namespace WindowsFormsApp1
             this.panel2.Size = new System.Drawing.Size(1049, 296);
             this.panel2.TabIndex = 1;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(409, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 24);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Booking is incomplete";
+            this.label14.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(409, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(293, 24);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Booking is already canceled";
+            this.label13.Visible = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -945,44 +980,9 @@ namespace WindowsFormsApp1
             // 
             this.viewBookingInnerTa.ClearBeforeFill = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(1004, 3);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 15);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Currently logged in Admin : ";
-            // 
             // staffTa
             // 
             this.staffTa.ClearBeforeFill = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(409, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(293, 24);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Booking is already canceled";
-            this.label13.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(409, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 24);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Booking is incomplete";
-            this.label14.Visible = false;
             // 
             // adminForm
             // 
