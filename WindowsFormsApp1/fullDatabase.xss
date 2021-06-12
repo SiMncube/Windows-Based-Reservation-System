@@ -13,7 +13,7 @@
     <Shape ID="DesignTable:Room" ZOrder="5" X="1480" Y="70" Height="134" Width="179" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:RoomType" ZOrder="4" X="1729" Y="70" Height="210" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Staff" ZOrder="3" X="111" Y="55" Height="325" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="257" />
-    <Shape ID="DesignTable:BookingInner" ZOrder="2" X="614" Y="282" Height="281" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="194" />
+    <Shape ID="DesignTable:BookingInner" ZOrder="2" X="614" Y="282" Height="281" Width="176" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="194" />
     <Shape ID="DesignTable:viewBookingInner" ZOrder="1" X="870" Y="286" Height="286" Width="250" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="216" />
   </Shapes>
   <Connectors />
