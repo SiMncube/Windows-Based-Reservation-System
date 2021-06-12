@@ -209,6 +209,9 @@ namespace WindowsFormsApp1
             label4.Visible = true;
             bookingInnerTa.Fill(fullDs.BookingInner);
             fullDs1.Clear();
+            label5.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
         }
         private string calculateAmountDue(string s)
         {
