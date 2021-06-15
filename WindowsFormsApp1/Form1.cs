@@ -30,14 +30,14 @@ namespace WindowsFormsApp1
                     homePage.ShowDialog();
                     this.Close();
                 }
-                if(adminNameIsCorrect() && adminPasswordIsCorrect())
+                else if(adminNameIsCorrect() && adminPasswordIsCorrect())
                 {
                     adminForm a = new adminForm();
                     this.Hide();
                     a.ShowDialog();
                     this.Close();
                 }
-                if(managerNameIsCorrect() && managerNameIsCorrect())
+                else if(managerNameIsCorrect() && managerNameIsCorrect())
                 {
                     managerForm m = new managerForm();
                     this.Hide();
@@ -174,6 +174,41 @@ namespace WindowsFormsApp1
             this.Hide();
             forgot.ShowDialog();
             this.Close();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (loginisValid())
+                {
+                    if (userNameIsCorrect() && userPasswordIsCorrect())
+                    {
+                        Form8 homePage = new Form8();
+                        this.Hide();
+                        homePage.ShowDialog();
+                        this.Close();
+                    }
+                    else if (adminNameIsCorrect() && adminPasswordIsCorrect())
+                    {
+                        adminForm a = new adminForm();
+                        this.Hide();
+                        a.ShowDialog();
+                        this.Close();
+                    }
+                    else if (managerNameIsCorrect() && managerNameIsCorrect())
+                    {
+                        managerForm m = new managerForm();
+                        this.Hide();
+                        m.ShowDialog();
+                        this.Close();
+                    }
+                }
+            }
         }
     }
 }
