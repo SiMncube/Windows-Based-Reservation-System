@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class adminForm : Form
     {
+        string currentCustomerEmailID;
         public adminForm()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace WindowsFormsApp1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if(signUIsValid())
+            if (signUIsValid())
             {
                 customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
                 label9.Visible = true;
@@ -172,13 +173,13 @@ namespace WindowsFormsApp1
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            bookingInnerTa.FillByPreference(fullDs.BookingInner,textBox1.Text);
+            bookingInnerTa.FillByPreference(fullDs.BookingInner, textBox1.Text);
         }
 
         private void bookingInnerDGV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             label4.Visible = false;
-            if(!bookingIsCanceled((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsIncomplete((int)bookingInnerDGV.CurrentRow.Cells[4].Value))
+            if (!bookingIsCanceled((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsIncomplete((int)bookingInnerDGV.CurrentRow.Cells[4].Value))
             {
                 DataRow dataRow = fullDs1.BookingInner.NewRow();
                 for (int i = 0; i < dataRow.ItemArray.Length; i++)
@@ -195,14 +196,14 @@ namespace WindowsFormsApp1
                 catch (ConstraintException)
                 {
                     label5.Visible = true;
-                    
+
                 }
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            for(int i = 0; i < dataGridView1.Rows.Count;i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 cancelBooking((int)dataGridView1.CurrentRow.Cells[4].Value);
             }
@@ -249,7 +250,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
             {
-                if(fullDs.BookingSummary[i].summaryID == summaryID && fullDs.BookingSummary[i].bookingStatus == "Cancelled")
+                if (fullDs.BookingSummary[i].summaryID == summaryID && fullDs.BookingSummary[i].bookingStatus == "Cancelled")
                 {
                     label13.Visible = true;
                     label14.Visible = false;
@@ -536,6 +537,19 @@ namespace WindowsFormsApp1
 
 
         /*=========================================================================================== Sihle Code ===========================================================================================*/
+
+        private bool CustomerIsRegistered()
+        {
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(textBox3.Text, StringComparison.OrdinalIgnoreCase))
+                {
+                    currentCustomerEmailID = fullDs.Customer[i].emailID;
+                    return true;
+                }
+            }
+            return false;
+        }
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
@@ -546,6 +560,27 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            label32.Visible = false;
+            textBox3.BackColor = Color.White;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (CustomerIsRegistered())
+                panel5.Enabled = true;
+            else
+            {
+                label32.Visible = true;
+                textBox3.BackColor = Color.Red;
+            }
+
+        }
     }
 }

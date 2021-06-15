@@ -110,6 +110,7 @@ namespace WindowsFormsApp1
             this.tableAdapterManager.PaymentTableAdapter = this.paymentTableAdapter;
             this.tableAdapterManager.RoomTableAdapter = null;
             this.tableAdapterManager.RoomTypeTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bookedRoomTableAdapter
