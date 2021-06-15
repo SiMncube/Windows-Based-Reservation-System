@@ -743,24 +743,24 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            label20.Text = getAmountDue();
+            label20.Visible = true;
             numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
             if (amountDue != 0)
-                button4.Enabled = true;
+                button8.Enabled = true;
             else
-                button4.Enabled = false;
+                button8.Enabled = false;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            label20.Text = getAmountDue();
+            label20.Visible = true;
             numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
             if (amountDue != 0)
-                button4.Enabled = true;
+                button8.Enabled = true;
             else
-                button4.Enabled = false;
+                button8.Enabled = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -773,6 +773,7 @@ namespace WindowsFormsApp1
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
         }
 
         private void button9_Click(object sender, EventArgs e)
