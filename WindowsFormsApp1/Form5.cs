@@ -13,8 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
-        DateTime dateIn = DateTime.Now;
-        DateTime dateOut = DateTime.Now;
+        DateTime dateIn = DateTime.Today;
+        DateTime dateOut = DateTime.Today;
         int numberOfNights;
         string bookingMethod = "Online";
         string bookingStatus = "inComplete";
@@ -33,31 +33,54 @@ namespace WindowsFormsApp1
             this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
             this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
         }
+
+        private bool bookingIsComplete(string summaryID)
+        {
+            for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
+            {
+                if ((fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString().Equals(summaryID)) &&
+                   (fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"].ToString().Equals("Complete")))
+                    return true;
+            }
+            return false;
+        }
+
+        private bool isRoomAvailable(int roomID, DateTime dateID)
+        {   
+            int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
+            for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+            {
+                if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
+                   (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID)) &&
+                   (bookingIsComplete(fullDatabase.Tables["BookedRoom"].Rows[i]["summaryID"].ToString())))
+                //if the record of the room in bookedRoom is complete then that room is not available
+                //however if the booking of that room has been cancelled than that room has to be marked available
+                //even though it exist in bookedRoom records
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void updateAvailableRoomList()
         {
             availableSingleRooms = new ArrayList();
             availableDoubleRooms = new ArrayList();
 
-            int numberOfRecordsInBookedRoom = (int)bookedRoomTableAdapter.numberOfRecords();
             for (int roomID = 1; roomID <= 15; roomID++)
             {
-                bool isRoomAvailable = true;
+                bool roomAvailableFlag = true;
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
-                    for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+                    if (!isRoomAvailable(roomID, dateID))
                     {
-                        if ((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
-                           (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID))
-                        {
-                            isRoomAvailable = false;
-                            break;
-                        }
-                    }
-                    if (!isRoomAvailable)
+                        roomAvailableFlag = false;
                         break;
+                    }
                 }
 
-                if (isRoomAvailable)
+                if (roomAvailableFlag)
                 {
                     if (roomID <= 7)
                         availableSingleRooms.Add(roomID);
@@ -72,9 +95,10 @@ namespace WindowsFormsApp1
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
             numberOfNights = dateOut.Subtract(dateIn).Days;
+            if (numberOfNights == 0)
+                numberOfNights++;
 
-
-            if (comboBox1.SelectedItem == null)
+            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem.ToString() == "0")
             {
                 amountDueForSingleRooms = 0.0;
             }
@@ -83,7 +107,7 @@ namespace WindowsFormsApp1
                 numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
                 amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
             }
-            if (comboBox2.SelectedItem == null)
+            if (comboBox2.SelectedItem == null || comboBox2.SelectedItem.ToString() == "0")
             {
                 amountDueForDoubleRooms = 0.0;
             }
@@ -121,10 +145,9 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        } 
-        private void updateBookingSummery()
+        }
+        private void updateBookingSummary()
         {
-
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
             int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
 
@@ -215,13 +238,14 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            updateBookingSummery();
+            updateBookingSummary();
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
             button1.Enabled = true;
             button4.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
+            this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -230,6 +254,16 @@ namespace WindowsFormsApp1
             this.Hide();
             payment.ShowDialog();
             this.Close();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

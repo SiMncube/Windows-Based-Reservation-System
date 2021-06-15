@@ -83,11 +83,12 @@ namespace WindowsFormsApp1
         }
         private bool bookingExist(string summaryID)
         {
-
             for (int i = 0; i < fullDatabase.BookingSummary.Rows.Count; i++)
             {
                 if (fullDatabase.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == summaryID)
                 {
+                    if (fullDatabase.BookingSummary[i].dateIn.CompareTo(DateTime.Today.Date) < 0)
+                        return false;
                     fullDatabase.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Cancelled";
                     bookingSummaryTableAdapter.Update(fullDatabase.BookingSummary);
                     processRefund(summaryID);
@@ -97,7 +98,8 @@ namespace WindowsFormsApp1
             return false;
         }
         private string calculateAmountDue(string s)
-        {           
+        {
+            s = s.Substring(2, s.Length - 5);
             double due = double.Parse(s) * 0.5;
             return due + "";
         }
@@ -109,12 +111,11 @@ namespace WindowsFormsApp1
                 {
                     string newAmount = calculateAmountDue(fullDatabase.Tables["Payment"].Rows[i]["amountDue"].ToString());
                     string typeOfPayment = fullDatabase.Tables["Payment"].Rows[i]["typeOfPayment"].ToString();
-                    paymentTableAdapter1.Insert(DateTime.Now, "-"+newAmount, int.Parse(summaryID), typeOfPayment);
+                    paymentTableAdapter1.Insert(DateTime.Today, "-R"+newAmount, int.Parse(summaryID), typeOfPayment);
                     label6.Text += "R " + newAmount;
                     paymentTableAdapter1.Fill(fullDatabase.Payment);
                     break;
                 }
-                
             }
         }
         private bool bookingIsCancelled(string summaryID)
@@ -154,6 +155,11 @@ namespace WindowsFormsApp1
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

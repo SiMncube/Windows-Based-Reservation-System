@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForm.Designer.cs">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -109,10 +122,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fullDatabase.xsd</DependentUpon>
     </Compile>
+    <Compile Include="managerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerForm.Designer.cs">
+      <DependentUpon>managerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminForm.resx">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -137,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerForm.resx">
+      <DependentUpon>managerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,8 +210,35 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\empty-tabletop-product-display-with-blurred-bathroom_41470-3566.jpg" />
-    <Content Include="Resources\photo-1448697138198-9aa6d0d84bf4.jpg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%292.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%291.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%29.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.274.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.273.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.272.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.271.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.287.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.286.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.285.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.284.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.283.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.282.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.281.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.29.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.27.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-05 at 09.41.26.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-06-05 at 08.53.30.jpeg" />
+    <None Include="Resources\icons8-male-user-96.png" />
+    <None Include="Resources\icons8-eye-80.png" />
+    <None Include="Resources\icons8-hide-80.png" />
+    <None Include="Resources\icons8-back-to-100.png" />
+    <None Include="Resources\icons8-cell-phone-80.png" />
+    <None Include="Resources\icons8-android-24.png" />
+    <None Include="Resources\icons8-envelope-24.png" />
+    <None Include="Resources\icons8-lock-24.png" />
+    <None Include="Resources\icons8-user-24.png" />
+    <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
     <None Include="Resources\photo-1448697138198-9aa6d0d84bf41.jpg" />

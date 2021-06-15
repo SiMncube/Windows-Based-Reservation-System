@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,80 +15,165 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            customerTableAdapter.Fill(fullDatabase.Customer);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (LoginIsValid())
-            {
-                Form8 homePage = new Form8();
-                fullDatabase.BookingSummary.GetType();
-                this.Hide();
-                homePage.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                label5.Visible = true;
-            }
-            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Form2 signup = new Form2();
-            this.Hide();
-            signup.ShowDialog();
-            this.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
-
-        }
-        private bool LoginIsValid()
-        {
-            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
-            {
-                if (fullDatabase.Tables["Customer"].Rows[i]["Password"].ToString() == textBox2.Text && 
-                    fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString().Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
-                {
-                    currentUser.setEmailID(fullDatabase.Tables["Customer"].Rows[i]["emailID"].ToString());
-                    return true;
-                }
-            }
-            return false;
-        }
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            label5.Visible = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = false;
-            button3.Visible = true;
-            button2.Visible = false;
+            customerTableAdapter1.Fill(fullDs.Customer);
+            staffTa.Fill(fullDs.Staff);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar = true;
-            button2.Visible = true;
-            button3.Visible = false;
+            if (loginisValid())
+            {
+                if(userNameIsCorrect() && userPasswordIsCorrect())
+                {
+                    Form8 homePage = new Form8();
+                    this.Hide();
+                    homePage.ShowDialog();
+                    this.Close();
+                }
+                if(adminNameIsCorrect() && adminPasswordIsCorrect())
+                {
+                    adminForm a = new adminForm();
+                    this.Hide();
+                    a.ShowDialog();
+                    this.Close();
+                }
+                if(managerNameIsCorrect() && managerNameIsCorrect())
+                {
+                    managerForm m = new managerForm();
+                    this.Hide();
+                    m.ShowDialog();
+                    this.Close();
+                }
+            }
         }
+        private bool userNameIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                {
+                    currentUser.setEmailID(fullDs.Customer[i].emailID);
+                    return true;
+                }
+            }
+            label8.Visible = true;
+            return false;
+        }
+        private bool userPasswordIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if(fullDs.Customer[i].password == textBox2.Text && fullDs.Customer[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (userNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool adminNameIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Admin")
+                {
+                    currentUser.setEmailID(fullDs.Staff[i].emailID);
+                    return true;
+                }
+            }
+            label8.Visible = true;
+            return false;
+        }
+        private bool adminPasswordIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (adminNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool managerNameIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Manager")
+                {
+                    currentUser.setEmailID(fullDs.Staff[i].emailID);
+                    return true;
+                }
+            }
+            label8.Visible = true;
+            return false;
+        }
+        private bool managerPasswordIsCorrect()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            if (managerNameIsCorrect())
+                label9.Visible = true;
+            return false;
+        }
+        private bool loginisValid()
+        {
+            if (userNameIsCorrect() && userPasswordIsCorrect())
+                return true;
+            if (adminNameIsCorrect() && adminPasswordIsCorrect())
+                return true;
+            if (managerNameIsCorrect() && managerNameIsCorrect())
+                return true;
+            return false;
+        }
+        private void Form10_Load(object sender, EventArgs e)
+        {
 
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            label5.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            label9.Visible = false;
+            label8.Visible = false;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 signup = new Form2();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            button4.Visible = true;
+            button5.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            button5.Visible = true;
+            button4.Visible = false;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form10 forgot = new Form10();
+            this.Hide();
+            forgot.ShowDialog();
+            this.Close();
         }
     }
 }

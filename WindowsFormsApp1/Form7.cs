@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         {
             if(paymentDetailIsValid())
             {
-                paymentTableAdapter1.Insert(DateTime.Now, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                paymentTableAdapter1.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
                 updateBookingStatus();
                 updateBookedRoom();
                 label8.Text += getAmountDue();
@@ -71,9 +71,10 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID() && fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString().Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
+                if (fullDatabase1.Customer[i].emailID == currentUser.getEmailID() && fullDatabase1.Customer[i].surname.Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
                     return true;
             }
+            textBox3.BackColor = Color.Red;
             return false;
         }
         private bool cardNumberIsValid()
@@ -92,10 +93,7 @@ namespace WindowsFormsApp1
         {
             int count = 0;
             if(!nameIsValid())
-            {
-                textBox3.BackColor = Color.Red;
                 count++;
-            }
             if(!cardNumberIsValid())
             {
                 textBox1.BackColor = Color.Red;
@@ -117,8 +115,8 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if(fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID()+"")
-                    return fullDatabase1.Tables["BookingSummary"].Rows[i]["amountDue"].ToString();
+                if(fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                    return fullDatabase1.BookingSummary[i].amountDue;
             }
             return "";
         }
@@ -126,9 +124,9 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    fullDatabase1.Tables["BookingSummary"].Rows[i]["bookingStatus"] = "Complete";
+                    fullDatabase1.BookingSummary[i].bookingStatus = "Complete" ;
                     bookingSummaryTableAdapter1.Update(fullDatabase1.BookingSummary);
                     bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
                 }
@@ -142,79 +140,48 @@ namespace WindowsFormsApp1
             {
                 for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 {
-                    bookedRoomTableAdapter1.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
+                    bookedRoomTableAdapter1.Insert(GetDateIn(), currentBooking.getSummaryID(), rooms[i]);
                 }
             }
             bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
         }
-        private string checkDate(string date)
-        {
-            if(date[2] < '0' || date[2] > '9')
-            {
-                string year = date.Substring(6, 4);
-                string month = date.Substring(3, 2);
-                string day = date.Substring(0, 2);
-                return year + "/" + month + "/" + day;
-            }
-            return date;   
-        }
         private DateTime GetDateIn()
         {
-            DateTime dateIn =  DateTime.Now;
+            DateTime dateIn =  DateTime.Today;
             for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0; i--)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    string dateString = checkDate(fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString());
-                    int year = int.Parse(dateString.Substring(0, 4));
-                    int month = int.Parse(dateString.Substring(5, 2));
-                    int day = int.Parse(dateString.Substring(8, 2));
-                    dateIn = new DateTime(year, month, day);
+                    dateIn = fullDatabase1.BookingSummary[i].dateIn;
                     break;
                 }
-
             }
             return dateIn;
         }
         private DateTime GetDateOut()
         {
-            DateTime dateIn = DateTime.Now;
-            for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
+            DateTime dateOut = DateTime.Today;
+            for (int i = fullDatabase1.BookingSummary.Rows.Count - 1; i >= 0 ; i--)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    string dateString = fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString();
-                    int year = int.Parse(dateString.Substring(0, 4));
-                    int month = int.Parse(dateString.Substring(5, 2));
-                    int day = int.Parse(dateString.Substring(8, 2));
-                    dateIn = new DateTime(year, month, day);
+                    dateOut = fullDatabase1.BookingSummary[i].dateOut;
                     break;
                 }
-
             }
-            return dateIn;
+            return dateOut;
         }
         private void resetColor(TextBox textBox)
         {
             textBox.BackColor = Color.White;
         }
-        /*private string getDataBaseColumn(string databaseName,string primaryKeyName , string dataBasColumn , string primaryKey)
-        {
-            for (int i = 0; i < fullDatabase1.f.Rows.Count; i++)
-            {
-                if(fullDatabase1.Tables[databaseName].Rows[i][primaryKeyName].ToString() ==  primaryKey)
-                    return fullDatabase1.Tables[databaseName].Rows[i][dataBasColumn].ToString();
-
-            }
-                return "";
-        }*/
         private string getCustomerColumn()
         {
             for(int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["Customer"].Rows[i]["emailID"].ToString() == currentUser.getEmailID())
+                if (fullDatabase1.Customer[i].emailID == currentUser.getEmailID())
                 {
-                    return "Name : " + fullDatabase1.Tables["Customer"].Rows[i]["surname"].ToString() + " " + fullDatabase1.Tables["Customer"].Rows[i]["name"].ToString();
+                    return "Name : " + fullDatabase1.Customer[i].surname + " " + fullDatabase1.Customer[i].name;
                 }
             }
             return "";
@@ -223,10 +190,10 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDatabase1.BookingSummary.Rows.Count; i++)
             {
-                if (fullDatabase1.Tables["BookingSummary"].Rows[i]["summaryID"].ToString() == currentBooking.getSummaryID() + "")
+                if (fullDatabase1.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    return "\nDate in   : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateIn"].ToString().Substring(0, 10) +
-                            "\nDate out : " + fullDatabase1.Tables["BookingSummary"].Rows[i]["dateOut"].ToString().Substring(0, 10) +
+                    return "\nDate in   : " + fullDatabase1.BookingSummary[i].dateIn +
+                            "\nDate out : " + fullDatabase1.BookingSummary[i].dateOut +
                             "\nAmount paid : " + getAmountDue() +
                             "\nBooking reference : " + currentBooking.getSummaryID();
                 }
@@ -246,6 +213,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            textBox1.BackColor = Color.White;
             textBox3.BackColor = Color.White;
         }
 
@@ -257,6 +225,11 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox2.BackColor = Color.White;
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

@@ -15,8 +15,18 @@ namespace WindowsFormsApp1
         public Form8()
         {
             InitializeComponent();
-            string s = currentUser.getEmailID();
-            label1.Text = "Current logged in user email ID : " + s;
+            customerTableAdapter.Fill(fullDatabase.Customer);
+            string userName = "";
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    break;
+                }
+
+            }
+            label1.Text += userName;
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
