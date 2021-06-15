@@ -32,6 +32,8 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,13 +58,26 @@ namespace WindowsFormsApp1
             this.label22 = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fullDs1 = new WindowsFormsApp1.fullDatabase();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,19 +86,6 @@ namespace WindowsFormsApp1
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bookingInnerDGV = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fullDs1 = new WindowsFormsApp1.fullDatabase();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +93,14 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingRefDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,16 +118,6 @@ namespace WindowsFormsApp1
             this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,15 +129,15 @@ namespace WindowsFormsApp1
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,6 +169,30 @@ namespace WindowsFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(2, 54);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 20);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "Logout";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(6, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 45);
+            this.button3.TabIndex = 43;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label12
             // 
@@ -484,6 +508,31 @@ namespace WindowsFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Make booking";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(2, 54);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 20);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Logout";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(6, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 45);
+            this.button4.TabIndex = 45;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // tabPage3
             // 
@@ -496,6 +545,31 @@ namespace WindowsFormsApp1
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modify booking";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(2, 54);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 20);
+            this.label17.TabIndex = 46;
+            this.label17.Text = "Logout";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(6, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 45);
+            this.button5.TabIndex = 45;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabPage4
             // 
@@ -511,6 +585,30 @@ namespace WindowsFormsApp1
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Cancel booking";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(2, 53);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 20);
+            this.label18.TabIndex = 46;
+            this.label18.Text = "Logout";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(6, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(45, 45);
+            this.button6.TabIndex = 45;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
             // 
@@ -580,6 +678,51 @@ namespace WindowsFormsApp1
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(844, 128);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn1
+            // 
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn1
+            // 
+            this.iDNumberDataGridViewTextBoxColumn1.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn1.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn1.Name = "iDNumberDataGridViewTextBoxColumn1";
+            this.iDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingRefDataGridViewTextBoxColumn1
+            // 
+            this.bookingRefDataGridViewTextBoxColumn1.DataPropertyName = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn1.HeaderText = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn1.Name = "bookingRefDataGridViewTextBoxColumn1";
+            this.bookingRefDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn1
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
+            this.bookingStatusDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingInnerBindingSource1
+            // 
+            this.bookingInnerBindingSource1.DataMember = "BookingInner";
+            this.bookingInnerBindingSource1.DataSource = this.fullDs1;
+            // 
+            // fullDs1
+            // 
+            this.fullDs1.DataSetName = "fullDatabase";
+            this.fullDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -684,6 +827,51 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.TabIndex = 0;
             this.bookingInnerDGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookingInnerDGV_RowHeaderMouseDoubleClick);
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn
+            // 
+            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
+            this.iDNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingRefDataGridViewTextBoxColumn
+            // 
+            this.bookingRefDataGridViewTextBoxColumn.DataPropertyName = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn.HeaderText = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn.Name = "bookingRefDataGridViewTextBoxColumn";
+            this.bookingRefDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn.DataPropertyName = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn.HeaderText = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn.Name = "bookingStatusDataGridViewTextBoxColumn";
+            this.bookingStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingInnerBindingSource
+            // 
+            this.bookingInnerBindingSource.DataMember = "BookingInner";
+            this.bookingInnerBindingSource.DataSource = this.fullDs;
+            // 
+            // fullDs
+            // 
+            this.fullDs.DataSetName = "fullDatabase";
+            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label19);
@@ -696,6 +884,30 @@ namespace WindowsFormsApp1
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "View booking";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(-1, 51);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 20);
+            this.label19.TabIndex = 46;
+            this.label19.Text = "Logout";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(3, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 45);
+            this.button7.TabIndex = 45;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel4
             // 
@@ -763,96 +975,6 @@ namespace WindowsFormsApp1
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(1043, 354);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn1
-            // 
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
-            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn1
-            // 
-            this.iDNumberDataGridViewTextBoxColumn1.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn1.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn1.Name = "iDNumberDataGridViewTextBoxColumn1";
-            this.iDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingRefDataGridViewTextBoxColumn1
-            // 
-            this.bookingRefDataGridViewTextBoxColumn1.DataPropertyName = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn1.HeaderText = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn1.Name = "bookingRefDataGridViewTextBoxColumn1";
-            this.bookingRefDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn1
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
-            this.bookingStatusDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingInnerBindingSource1
-            // 
-            this.bookingInnerBindingSource1.DataMember = "BookingInner";
-            this.bookingInnerBindingSource1.DataSource = this.fullDs1;
-            // 
-            // fullDs1
-            // 
-            this.fullDs1.DataSetName = "fullDatabase";
-            this.fullDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn
-            // 
-            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
-            this.iDNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingRefDataGridViewTextBoxColumn
-            // 
-            this.bookingRefDataGridViewTextBoxColumn.DataPropertyName = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn.HeaderText = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn.Name = "bookingRefDataGridViewTextBoxColumn";
-            this.bookingRefDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn.DataPropertyName = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn.HeaderText = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn.Name = "bookingStatusDataGridViewTextBoxColumn";
-            this.bookingStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingInnerBindingSource
-            // 
-            this.bookingInnerBindingSource.DataMember = "BookingInner";
-            this.bookingInnerBindingSource.DataSource = this.fullDs;
-            // 
-            // fullDs
-            // 
-            this.fullDs.DataSetName = "fullDatabase";
-            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nameDataGridViewTextBoxColumn2
             // 
@@ -953,126 +1075,6 @@ namespace WindowsFormsApp1
             // 
             this.staffTa.ClearBeforeFill = true;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(2, 54);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 20);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Logout";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(6, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 45);
-            this.button3.TabIndex = 43;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(2, 54);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 20);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "Logout";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(6, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 45);
-            this.button4.TabIndex = 45;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(2, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 20);
-            this.label17.TabIndex = 46;
-            this.label17.Text = "Logout";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(6, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 45);
-            this.button5.TabIndex = 45;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(2, 53);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 20);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "Logout";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(6, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 45);
-            this.button6.TabIndex = 45;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(-1, 51);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 20);
-            this.label19.TabIndex = 46;
-            this.label19.Text = "Logout";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 45);
-            this.button7.TabIndex = 45;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1097,18 +1099,18 @@ namespace WindowsFormsApp1
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
