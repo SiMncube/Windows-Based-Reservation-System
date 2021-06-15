@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
         public Form1()
         {
+            
             InitializeComponent();
             customerTableAdapter1.Fill(fullDs.Customer);
             staffTa.Fill(fullDs.Staff);
