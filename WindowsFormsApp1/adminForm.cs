@@ -534,16 +534,16 @@ namespace WindowsFormsApp1
         }
 
 
-        /*=========================================================================================== Kaygee code ===========================================================================================*/
+        /*=========================================================================================== Kaygee code END ===========================================================================================*/
 
 
-        /*=========================================================================================== Sihle Code ===========================================================================================*/
+        /*=========================================================================================== Sihle Code START ===========================================================================================*/
         string currentCustomerEmailID;
 
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
         int numberOfNights;
-        string bookingMethod = "Admin";
+        string bookingMethod = "Admin - ";
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
@@ -680,6 +680,7 @@ namespace WindowsFormsApp1
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
             int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
 
+            bookingMethod += currentUser.getEmailID();
             bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, getAmountDue().ToString());
             int summaryID = (int)bookingSummaryTa.getLastRecord();
             currentBooking.setSummaryID(summaryID);
