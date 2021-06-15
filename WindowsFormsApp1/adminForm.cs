@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             viewBookingInnerTa.Fill(fullDs.viewBookingInner);
             staffTa.Fill(fullDs.Staff);
+            customerTa.Fill(fullDs.Customer);
             label12.Text += logedInAdmin();
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
