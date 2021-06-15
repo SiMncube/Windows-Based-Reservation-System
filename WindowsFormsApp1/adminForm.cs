@@ -779,7 +779,10 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Form7 payment = new Form7();
+            //this.Hide();
+            payment.ShowDialog();
+            //this.Close();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -810,5 +813,9 @@ namespace WindowsFormsApp1
 
         }
 
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
