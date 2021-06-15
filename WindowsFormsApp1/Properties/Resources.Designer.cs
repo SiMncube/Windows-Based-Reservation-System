@@ -243,6 +243,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_53_28__1_ {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.53.28 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_53_29 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.53.29", resourceCulture);
@@ -256,6 +266,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_531 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_5310 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.5310", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,36 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_536 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.536", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_537 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.537", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_538 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.538", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_06_02_at_15_539 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-06-02 at 15.539", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
