@@ -123,6 +123,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_credit_card_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-credit-card-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_credit_card_961 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-credit-card-961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_envelope_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-envelope-24", resourceCulture);
@@ -173,9 +193,39 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_mastercard_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-mastercard-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_mastercard_credit_card_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-mastercard-credit-card-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_visa_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-visa-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
