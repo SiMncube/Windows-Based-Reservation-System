@@ -162,6 +162,7 @@ namespace WindowsFormsApp1
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.label33 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -609,9 +610,9 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(313, 339);
+            this.panel5.Location = new System.Drawing.Point(348, 378);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(728, 283);
+            this.panel5.Size = new System.Drawing.Size(707, 298);
             this.panel5.TabIndex = 48;
             // 
             // label28
@@ -776,7 +777,7 @@ namespace WindowsFormsApp1
             // 
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(278, 37);
+            this.label30.Location = new System.Drawing.Point(333, 37);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(385, 18);
             this.label30.TabIndex = 49;
@@ -784,7 +785,7 @@ namespace WindowsFormsApp1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 58);
+            this.textBox3.Location = new System.Drawing.Point(242, 58);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(524, 26);
             this.textBox3.TabIndex = 50;
@@ -792,12 +793,15 @@ namespace WindowsFormsApp1
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(717, 57);
+            this.button10.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(902, 292);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(74, 26);
+            this.button10.Size = new System.Drawing.Size(99, 38);
             this.button10.TabIndex = 51;
-            this.button10.Text = "Check";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Text = "Click Here";
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label32
@@ -805,7 +809,7 @@ namespace WindowsFormsApp1
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(326, 87);
+            this.label32.Location = new System.Drawing.Point(381, 87);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(301, 16);
             this.label32.TabIndex = 53;
@@ -1170,6 +1174,7 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.customerDataGridView);
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Controls.Add(this.label30);
@@ -1177,7 +1182,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Location = new System.Drawing.Point(165, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1041, 299);
+            this.groupBox1.Size = new System.Drawing.Size(1041, 336);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Customer Profile";
@@ -1563,6 +1568,16 @@ namespace WindowsFormsApp1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label33.Location = new System.Drawing.Point(52, 302);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(136, 18);
+            this.label33.TabIndex = 54;
+            this.label33.Text = "Customer Details";
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1749,5 +1764,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private System.Windows.Forms.Label label33;
     }
 }

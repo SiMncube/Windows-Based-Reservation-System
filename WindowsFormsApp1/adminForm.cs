@@ -783,6 +783,8 @@ namespace WindowsFormsApp1
             //this.Hide();
             payment.ShowDialog();
             //this.Close();
+
+            label33.Visible = false;
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -797,6 +799,7 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            panel5.Enabled = true;
             customerTa.FillByAnythingGiven(fullDs.Customer, textBox3.Text);
             //label32.Visible = false;
             //textBox3.BackColor = Color.White;
@@ -804,14 +807,8 @@ namespace WindowsFormsApp1
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (CustomerIsRegistered())
-                panel5.Enabled = true;
-            else
-            {
-                label32.Visible = true;
-                textBox3.BackColor = Color.Red;
-            }
 
+                panel5.Enabled = true;
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
@@ -831,8 +828,8 @@ namespace WindowsFormsApp1
 
         private void customerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //customerDataGridView.Enabled = false;
-            currentCustomerEmailID = customerDataGridView.CurrentCell.ToString();
+            currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
+            label33.Text = "To Process Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + ")";
         }
 
         private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
