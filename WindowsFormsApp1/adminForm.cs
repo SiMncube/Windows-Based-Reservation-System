@@ -680,7 +680,6 @@ namespace WindowsFormsApp1
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
             int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
 
-            bookingMethod += currentUser.getEmailID();
             bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, getAmountDue().ToString());
             int summaryID = (int)bookingSummaryTa.getLastRecord();
             currentBooking.setSummaryID(summaryID);
