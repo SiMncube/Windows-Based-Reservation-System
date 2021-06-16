@@ -21,10 +21,6 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            invoiceForm p = new invoiceForm();
-            this.Hide();
-            p.ShowDialog();
-            this.Close();
             if (loginisValid())
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())

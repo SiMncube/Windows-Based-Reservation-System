@@ -41,13 +41,26 @@ namespace WindowsFormsApp1
             }
             return holderNameTextBox.Text.Substring(startIndex).Trim();
         }
+        private bool isLetter(char c)
+        {
+            if (c >= 'a' && c <= 'z')
+                return true;
+            return false;
+        }
+        private bool isAllLetters(string s)
+        {
+            s = s.ToLower();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (!isLetter(s[i]))
+                    return false;
+            }
+            return true;
+        }
         private bool nameIsValid()
         {
-            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
-            {
-                if (fullDs.Customer[i].emailID == currentUser.getEmailID() && fullDs.Customer[i].surname.Equals(getSurname(), StringComparison.OrdinalIgnoreCase))
-                    return true;
-            }
+            if (isAllLetters(holderNameTextBox.Text)&& holderNameTextBox.Text.Length > 3)
+                return true;
             holderNameTextBox.BackColor = Color.Red;
             return false;
         }

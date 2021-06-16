@@ -779,7 +779,7 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form7 payment = new Form7();
+            PaymentForm payment= new PaymentForm();
             //this.Hide();
             payment.ShowDialog();
             //this.Close();

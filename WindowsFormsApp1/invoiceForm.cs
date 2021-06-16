@@ -60,6 +60,26 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        private decimal getAmountDue()
+        {
+            string amountDue = "";
+            for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
+            {
+                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                {
+                    amountDue = fullDs.BookingSummary[i].amountDue.Substring(2);
+                    break;
+                }
+            }
+            string temp = "";
+            for (int i = 0; i < amountDue.Length;i++)
+            {
+                if (amountDue[i] == '.')
+                    break;
+                temp += amountDue[i];
+            }
+            return decimal.Parse(temp);
+        }
         private void setPrices()
         {
             for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
@@ -67,7 +87,7 @@ namespace WindowsFormsApp1
                 if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
                     label4.Text = fullDs.BookingSummary[i].numberOfNights + "";
-                    label19.Text = "R " + int.Parse(fullDs.BookingSummary[i].amountDue) / fullDs.BookingSummary[i].numberOfNights;
+                    label19.Text = "R " + getAmountDue() / fullDs.BookingSummary[i].numberOfNights;
                     label21.Text = "R " + fullDs.BookingSummary[i].amountDue;
                 }
             }
