@@ -17,6 +17,18 @@ namespace WindowsFormsApp1
             InitializeComponent();
             bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);
             paymentTableAdapter1.Fill(fullDatabase.Payment);
+            customerTableAdapter1.Fill(fullDatabase.Customer);
+            string userName = "";
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    break;
+                }
+
+            }
+            label9.Text += userName;
         }
 
         private void label3_Click(object sender, EventArgs e)
