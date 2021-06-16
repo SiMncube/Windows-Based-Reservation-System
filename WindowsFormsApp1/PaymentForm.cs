@@ -125,12 +125,14 @@ namespace WindowsFormsApp1
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if(eftIsValid())
-            paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
-            invoiceForm i = new invoiceForm();
-            this.Hide();
-            i.ShowDialog();
-            this.Close();
+            if (eftIsValid())
+            {
+                paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                invoiceForm i = new invoiceForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
