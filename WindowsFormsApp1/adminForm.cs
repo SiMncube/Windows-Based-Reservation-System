@@ -828,5 +828,21 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void customerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //customerDataGridView.Enabled = false;
+            currentCustomerEmailID = customerDataGridView.CurrentCell.ToString();
+        }
+
+        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bookingInnerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
