@@ -51,7 +51,12 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.fullDs = new WindowsFormsApp1.fullDatabase();
+            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
+            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -304,6 +309,23 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Receipt";
             // 
+            // fullDs
+            // 
+            this.fullDs.DataSetName = "fullDatabase";
+            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookingSummaryTa
+            // 
+            this.bookingSummaryTa.ClearBeforeFill = true;
+            // 
+            // customerTa
+            // 
+            this.customerTa.ClearBeforeFill = true;
+            // 
+            // paymentTa
+            // 
+            this.paymentTa.ClearBeforeFill = true;
+            // 
             // invoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +336,7 @@ namespace WindowsFormsApp1
             this.Text = "Invoice";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,5 +365,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private fullDatabase fullDs;
+        private fullDatabaseTableAdapters.BookingSummaryTableAdapter bookingSummaryTa;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTa;
+        private fullDatabaseTableAdapters.PaymentTableAdapter paymentTa;
     }
 }
