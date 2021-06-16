@@ -704,7 +704,7 @@ namespace WindowsFormsApp1
             int[] allAllocatedRooms = new int[singleAllocatedRooms.Length + doubleAllocatedRooms.Length];
             Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
-            currentBooking.setRoomIDs(allAllocatedRooms);
+            currentBooking.setRoomIDs(allAllocatedRooms);   
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -779,6 +779,7 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
+            currentUser.setEmailID(currentCustomerEmailID);
             PaymentForm payment= new PaymentForm();
             //this.Hide();
             payment.ShowDialog();
@@ -797,8 +798,9 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            label32.Visible = false;
-            textBox3.BackColor = Color.White;
+            customerTa.FillByAnythingGiven(fullDs.Customer, textBox3.Text);
+            //label32.Visible = false;
+            //textBox3.BackColor = Color.White;
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -814,6 +816,16 @@ namespace WindowsFormsApp1
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
         {
 
         }
