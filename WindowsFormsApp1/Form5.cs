@@ -32,6 +32,18 @@ namespace WindowsFormsApp1
             this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
             this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
             this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
+            this.customerTableAdapter1.Fill(this.fullDatabase.Customer);
+            string userName = "";
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    break;
+                }
+
+            }
+            label6.Text += userName;
         }
 
         private bool bookingIsComplete(string summaryID)

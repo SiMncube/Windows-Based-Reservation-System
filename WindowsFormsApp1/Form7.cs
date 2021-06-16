@@ -23,6 +23,21 @@ namespace WindowsFormsApp1
             bookingSummaryTableAdapter1.Fill(fullDatabase1.BookingSummary);
             bookedRoomTableAdapter1.Fill(fullDatabase1.BookedRoom);
             label7.Text += getAmountDue();
+            toolTip1.SetToolTip(textBox3, "Initials");
+            toolTip1.SetToolTip(textBox1, "Must be 16 digits");
+            toolTip1.SetToolTip(textBox2, "Must be 3 digits");
+
+            string userName = "";
+            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase1.Customer[i].surname + " " + fullDatabase1.Customer[i].name;
+                    break;
+                }
+
+            }
+            label10.Text += userName;
         }
         private void button1_Click(object sender, EventArgs e)
         {

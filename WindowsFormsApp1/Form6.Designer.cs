@@ -45,6 +45,8 @@ namespace WindowsFormsApp1
             this.bookingSummaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingSummaryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fullDatabase1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -193,6 +195,22 @@ namespace WindowsFormsApp1
             this.fullDatabase1BindingSource.DataSource = this.fullDatabase1;
             this.fullDatabase1BindingSource.Position = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(1009, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 15);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Currently logged in : ";
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +218,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_534;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1332, 676);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -239,5 +258,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource bookingSummaryBindingSource1;
         private System.Windows.Forms.BindingSource fullDatabase1BindingSource;
+        private System.Windows.Forms.Label label6;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
     }
 }

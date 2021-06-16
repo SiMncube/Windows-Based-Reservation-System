@@ -14,7 +14,19 @@ namespace WindowsFormsApp1
     {
         public Form3()
         {
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
             InitializeComponent();
+            string userName = "";
+            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase1.Customer[i].surname + " " + fullDatabase1.Customer[i].name;
+                    break;
+                }
+
+            }
+            label1.Text += userName;
 
         }
 
