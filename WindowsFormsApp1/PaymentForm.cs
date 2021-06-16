@@ -15,18 +15,9 @@ namespace WindowsFormsApp1
         public PaymentForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panel2.Visible = true;
-            panel3.Visible = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panel3.Visible = true;
-            panel2.Visible = false;
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
         }
         private string getAmountDue()
         {
@@ -84,7 +75,16 @@ namespace WindowsFormsApp1
         }
         private bool creditDetailsValid()
         {
-            return nameIsValid() && cardNumberIsValid() && cvvIsValid() && dateIsSelected();
+            int count = 0;
+            if (!nameIsValid())
+                count++;
+            if (!cardNumberIsValid())
+                count++;
+            if (!cvvIsValid())
+                count++;
+            if (dateIsSelected())
+                count++;
+            return count == 0;
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -119,9 +119,23 @@ namespace WindowsFormsApp1
             passwordTextbox.BackColor = Color.Red;
             return false;
         }
+        private bool bankIsChoosen()
+        {
+            if (bankComboBox.SelectedItem != null)
+                return true;
+            bankComboBox.BackColor = Color.Red;
+            return false;
+        }
         private bool eftIsValid()
         {
-            return usernameIsValid() && passwordIsValid();
+            int count = 0;
+            if(!usernameIsValid())
+                count++;
+            if(!passwordIsValid())
+                count++;
+            if (!bankIsChoosen())
+                count++;
+            return count == 0;
         }
         private void button5_Click(object sender, EventArgs e)
         {
