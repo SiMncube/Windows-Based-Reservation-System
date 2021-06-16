@@ -137,11 +137,64 @@ namespace WindowsFormsApp1
                 count++;
             return count == 0;
         }
+        private DateTime GetDateIn()
+        {
+            DateTime dateIn = DateTime.Today;
+            for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
+            {
+                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                {
+                    dateIn = fullDs.BookingSummary[i].dateIn;
+                    break;
+                }
+            }
+            return dateIn;
+        }
+        private DateTime GetDateOut()
+        {
+            DateTime dateOut = DateTime.Today;
+            for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
+            {
+                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                {
+                    dateOut = fullDs.BookingSummary[i].dateOut;
+                    break;
+                }
+            }
+            return dateOut;
+        }
+        private void updateBookedRoom()
+        {
+            int[] rooms = currentBooking.getRoomIDs();
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
+                { 
+                    bookedRoomTa.Insert(GetDateIn(), currentBooking.getSummaryID(), rooms[i]);
+                    break;
+                }
+            }
+        }
+        private void updateBookingStatus()
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                {
+                    fullDs.BookingSummary[i].bookingStatus = "Complete";
+                    bookingSummaryTa.Update(fullDs.BookingSummary);
+                    bookingSummaryTa.Fill(fullDs.BookingSummary);
+                }
+
+            }
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             if (eftIsValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                updateBookedRoom();
+                updateBookingStatus();
                 invoiceForm i = new invoiceForm();
                 this.Hide();
                 i.ShowDialog();
