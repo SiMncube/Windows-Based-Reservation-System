@@ -838,10 +838,11 @@ namespace WindowsFormsApp1
             textBox3.Clear();
             label33.Visible = false;
             panel5.Enabled = false;
+            label24.Visible = false;
             textBox5.Clear();
             button10.Enabled = false;
 
-            dateTimePicker1.ResetText();
+            dateTimePicker1.Value = DateTime.Today;
             dateTimePicker2.Value = DateTime.Today;
         }
 
@@ -905,8 +906,8 @@ namespace WindowsFormsApp1
             textBox4.Clear();
             button13.Enabled = false;
 
-            dateTimePicker1.ResetText();
-            dateTimePicker2.Value = DateTime.Today;
+            dateTimePicker3.Value = DateTime.Today;
+            dateTimePicker4.Value = DateTime.Today;
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
