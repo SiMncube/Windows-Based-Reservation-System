@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
                 if (fullDs.Payment[i].summaryID == summaryID)
                 {
                     string newAmount = calculateAmountDue(fullDs.Payment[i].amountDue.ToString());
-                    paymentTa.Insert(DateTime.Today, "-R " + newAmount, summaryID, fullDs.Payment[i].typeOfPayment);
+                    paymentTa.Insert(DateTime.Today, "-R " + newAmount+".00", summaryID, fullDs.Payment[i].typeOfPayment);
                     paymentTa.Fill(fullDs.Payment);
                     break;
                 }
