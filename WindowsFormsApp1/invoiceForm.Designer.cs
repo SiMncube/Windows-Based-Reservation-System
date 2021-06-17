@@ -31,13 +31,11 @@ namespace WindowsFormsApp1
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,13 +62,11 @@ namespace WindowsFormsApp1
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -86,36 +82,26 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(537, 187);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 386);
+            this.panel1.Size = new System.Drawing.Size(524, 344);
             this.panel1.TabIndex = 0;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(393, 336);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label21.Location = new System.Drawing.Point(398, 287);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(46, 19);
             this.label21.TabIndex = 20;
             this.label21.Text = "Total";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(382, 281);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 16);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "CPrices";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(359, 251);
+            this.label19.Location = new System.Drawing.Point(384, 251);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(84, 16);
             this.label19.TabIndex = 18;
@@ -126,7 +112,7 @@ namespace WindowsFormsApp1
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(359, 95);
+            this.label18.Location = new System.Drawing.Point(384, 95);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 16);
             this.label18.TabIndex = 17;
@@ -137,18 +123,18 @@ namespace WindowsFormsApp1
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(385, 127);
+            this.label17.Location = new System.Drawing.Point(457, 127);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 16);
+            this.label17.Size = new System.Drawing.Size(15, 16);
             this.label17.TabIndex = 16;
-            this.label17.Text = "#Nights";
+            this.label17.Text = "#";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(359, 67);
+            this.label8.Location = new System.Drawing.Point(410, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 15;
@@ -158,22 +144,11 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(47, 336);
+            this.label16.Location = new System.Drawing.Point(50, 287);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 19);
             this.label16.TabIndex = 14;
             this.label16.Text = "Total";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label15.Location = new System.Drawing.Point(48, 281);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 16);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "Cleaning price";
             // 
             // label14
             // 
@@ -199,7 +174,7 @@ namespace WindowsFormsApp1
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(394, 170);
+            this.label12.Location = new System.Drawing.Point(428, 170);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 16);
             this.label12.TabIndex = 10;
@@ -208,12 +183,12 @@ namespace WindowsFormsApp1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(358, 200);
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(384, 199);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 19);
+            this.label11.Size = new System.Drawing.Size(88, 18);
             this.label11.TabIndex = 9;
-            this.label11.Text = "label11";
+            this.label11.Text = "dd/MM/yyyy";
             // 
             // label10
             // 
@@ -229,10 +204,10 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(51, 199);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 19);
+            this.label9.Size = new System.Drawing.Size(50, 18);
             this.label9.TabIndex = 7;
             this.label9.Text = "label9";
             // 
@@ -347,7 +322,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -362,7 +336,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private fullDatabase fullDs;

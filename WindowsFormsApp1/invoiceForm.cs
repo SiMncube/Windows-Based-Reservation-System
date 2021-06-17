@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             bookingSummaryTa.Fill(fullDs.BookingSummary);
+            customerTa.Fill(fullDs.Customer);
             setDateIn();
             setDateOut();
             setName();
@@ -86,16 +87,11 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
-                    label7.Text = fullDs.BookingSummary[i].numberOfNights + "";
-                    label19.Text = "R " + getAmountDue() / fullDs.BookingSummary[i].numberOfNights;
+                    label17.Text = fullDs.BookingSummary[i].numberOfNights + "";
+                    label19.Text = "R " + (getAmountDue() / fullDs.BookingSummary[i].numberOfNights) +".00";
                     label21.Text = "R " + fullDs.BookingSummary[i].amountDue;
                 }
             }
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
