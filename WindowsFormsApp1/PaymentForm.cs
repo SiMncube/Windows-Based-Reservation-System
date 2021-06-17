@@ -18,6 +18,9 @@ namespace WindowsFormsApp1
             paymentTa.Fill(fullDs.Payment);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             bookedRoomTa.Fill(fullDs.BookedRoom);
+            toolTip1.SetToolTip(cardNumberTextBox, "Must be 16 digits");
+            toolTip1.SetToolTip(cvvTextbox,"Must be 3 digits");
+
         }
         private string getAmountDue()
         {
@@ -208,6 +211,8 @@ namespace WindowsFormsApp1
             if (eftIsValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                updateBookedRoom();
+                updateBookingStatus();
                 invoiceForm i = new invoiceForm();
                 this.Hide();
                 i.ShowDialog();
