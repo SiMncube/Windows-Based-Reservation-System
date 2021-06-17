@@ -14,8 +14,8 @@ namespace WindowsFormsApp1
     {
         public Form3()
         {
-            customerTableAdapter1.Fill(fullDatabase1.Customer);
             InitializeComponent();
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
             string userName = "";
             for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
             {
