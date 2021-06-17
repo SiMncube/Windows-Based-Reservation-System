@@ -219,6 +219,18 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage10.png" />
+    <None Include="Resources\Webp.net-resizeimage9.png" />
+    <None Include="Resources\Webp.net-resizeimage8.png" />
+    <None Include="Resources\Webp.net-resizeimage7.png" />
+    <None Include="Resources\Webp.net-resizeimage6.png" />
+    <None Include="Resources\Webp.net-resizeimage5.png" />
+    <None Include="Resources\Webp.net-resizeimage4.png" />
+    <None Include="Resources\Webp.net-resizeimage3.png" />
+    <None Include="Resources\Webp.net-resizeimage2.png" />
+    <None Include="Resources\Webp.net-resizeimage1.png" />
+    <None Include="Resources\Webp.net-resizeimage.png" />
+    <None Include="Resources\The Cottage %281%29.png" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%292.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%291.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%29.jpeg" />
