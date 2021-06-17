@@ -946,7 +946,7 @@ namespace WindowsFormsApp1
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(34, 254);
+            this.label36.Location = new System.Drawing.Point(34, 264);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(136, 18);
             this.label36.TabIndex = 54;
@@ -1099,7 +1099,7 @@ namespace WindowsFormsApp1
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(56, 254);
+            this.label33.Location = new System.Drawing.Point(54, 259);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(136, 18);
             this.label33.TabIndex = 54;
