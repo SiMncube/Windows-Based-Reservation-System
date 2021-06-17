@@ -200,9 +200,9 @@ namespace WindowsFormsApp1
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(276, 244);
+            this.button4.Location = new System.Drawing.Point(276, 255);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 40);
+            this.button4.Size = new System.Drawing.Size(156, 29);
             this.button4.TabIndex = 35;
             this.button4.Text = "Confirm booking";
             this.button4.UseVisualStyleBackColor = false;
@@ -216,9 +216,9 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(463, 244);
+            this.button1.Location = new System.Drawing.Point(463, 255);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 40);
+            this.button1.Size = new System.Drawing.Size(156, 29);
             this.button1.TabIndex = 4;
             this.button1.Text = "Check out";
             this.button1.UseVisualStyleBackColor = false;
@@ -316,7 +316,7 @@ namespace WindowsFormsApp1
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(411, 208);
+            this.textBox5.Location = new System.Drawing.Point(411, 210);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(208, 20);
             this.textBox5.TabIndex = 59;
