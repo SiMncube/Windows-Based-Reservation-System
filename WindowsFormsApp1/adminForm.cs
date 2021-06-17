@@ -840,6 +840,9 @@ namespace WindowsFormsApp1
             panel5.Enabled = false;
             textBox5.Clear();
             button10.Enabled = false;
+
+            dateTimePicker1.ResetText();
+            dateTimePicker2.Value = DateTime.Today;
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -868,7 +871,7 @@ namespace WindowsFormsApp1
         private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
-            label36.Text = "To Modify Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + "Ref: "+ customerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
+            label36.Text = "To Modify Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: "+ customerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
             label36.Visible = true;
             button13.Enabled = true;
         }
@@ -901,6 +904,9 @@ namespace WindowsFormsApp1
             panel8.Enabled = false;
             textBox4.Clear();
             button13.Enabled = false;
+
+            dateTimePicker1.ResetText();
+            dateTimePicker2.Value = DateTime.Today;
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
