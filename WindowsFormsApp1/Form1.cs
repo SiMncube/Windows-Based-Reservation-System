@@ -21,10 +21,6 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PaymentForm p = new PaymentForm();
-            this.Hide();
-            p.ShowDialog();
-            this.Close();
             if (loginisValid())
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())
