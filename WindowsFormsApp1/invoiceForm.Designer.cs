@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label21.Location = new System.Drawing.Point(398, 287);
+            this.label21.Location = new System.Drawing.Point(403, 287);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(46, 19);
             this.label21.TabIndex = 20;
@@ -109,14 +109,15 @@ namespace WindowsFormsApp1
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(384, 95);
+            this.label18.Location = new System.Drawing.Point(428, 95);
             this.label18.Name = "label18";
+            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label18.Size = new System.Drawing.Size(44, 16);
             this.label18.TabIndex = 17;
             this.label18.Text = "Email";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
@@ -134,8 +135,9 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(410, 67);
+            this.label8.Location = new System.Drawing.Point(426, 67);
             this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 15;
             this.label8.Text = "Name";
@@ -174,7 +176,7 @@ namespace WindowsFormsApp1
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(428, 170);
+            this.label12.Location = new System.Drawing.Point(423, 170);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 16);
             this.label12.TabIndex = 10;
@@ -184,7 +186,7 @@ namespace WindowsFormsApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(384, 199);
+            this.label11.Location = new System.Drawing.Point(384, 201);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 18);
             this.label11.TabIndex = 9;

@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
                 {
                     label17.Text = fullDs.BookingSummary[i].numberOfNights + "";
                     label19.Text = "R " + (getAmountDue() / fullDs.BookingSummary[i].numberOfNights) +".00";
-                    label21.Text = "R " + fullDs.BookingSummary[i].amountDue;
+                    label21.Text = fullDs.BookingSummary[i].amountDue;
                 }
             }
         }
