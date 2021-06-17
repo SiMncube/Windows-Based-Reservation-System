@@ -163,6 +163,8 @@ namespace WindowsFormsApp1
             this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.label33 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -796,7 +798,7 @@ namespace WindowsFormsApp1
             this.button10.BackColor = System.Drawing.Color.DodgerBlue;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(902, 292);
+            this.button10.Location = new System.Drawing.Point(760, 292);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(99, 38);
             this.button10.TabIndex = 51;
@@ -1174,6 +1176,8 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label34);
+            this.groupBox1.Controls.Add(this.button12);
             this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.customerDataGridView);
             this.groupBox1.Controls.Add(this.button10);
@@ -1577,6 +1581,30 @@ namespace WindowsFormsApp1
             this.label33.Size = new System.Drawing.Size(136, 18);
             this.label33.TabIndex = 54;
             this.label33.Text = "Customer Details";
+            this.label33.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(902, 292);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(99, 38);
+            this.button12.TabIndex = 55;
+            this.button12.Text = "Clear Infor";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label34.Location = new System.Drawing.Point(865, 302);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(31, 18);
+            this.label34.TabIndex = 56;
+            this.label34.Text = "OR";
             // 
             // adminForm
             // 
@@ -1765,5 +1793,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label34;
     }
 }

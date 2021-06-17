@@ -801,6 +801,9 @@ namespace WindowsFormsApp1
         {
             panel5.Enabled = true;
             customerTa.FillByAnythingGiven(fullDs.Customer, textBox3.Text);
+
+            customerDataGridView.ClearSelection();
+            label33.Visible = false;
             //label32.Visible = false;
             //textBox3.BackColor = Color.White;
         }
@@ -840,6 +843,12 @@ namespace WindowsFormsApp1
         private void bookingInnerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            customerDataGridView.ClearSelection();
+            label33.Visible = false;
         }
     }
 }
