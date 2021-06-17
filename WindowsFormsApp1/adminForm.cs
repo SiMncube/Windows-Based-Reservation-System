@@ -830,6 +830,7 @@ namespace WindowsFormsApp1
             currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
             label33.Text = "To Process Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + ")";
             label33.Visible = true;
+            button10.Enabled = true;
         }
 
         private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -848,6 +849,7 @@ namespace WindowsFormsApp1
             textBox3.Clear();
             label33.Visible = false;
             panel5.Enabled = false;
+            textBox5.Clear();
         }
 
         private void label20_Click(object sender, EventArgs e)
