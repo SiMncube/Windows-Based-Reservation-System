@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form4
+    partial class cancelBookingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@ namespace WindowsFormsApp1
             this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -62,7 +60,7 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox1);
@@ -70,21 +68,23 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(424, 162);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 242);
+            this.panel1.Size = new System.Drawing.Size(435, 242);
             this.panel1.TabIndex = 26;
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.DodgerBlue;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Change of mind",
             "Choose another BnB",
             "Not happy with the booking App",
             "Non of the above"});
-            this.comboBox1.Location = new System.Drawing.Point(214, 111);
+            this.comboBox1.Location = new System.Drawing.Point(237, 103);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 28);
+            this.comboBox1.Size = new System.Drawing.Size(166, 28);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.Text = "Reason";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -93,7 +93,8 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 119);
+            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Location = new System.Drawing.Point(26, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 20);
             this.label3.TabIndex = 4;
@@ -103,9 +104,9 @@ namespace WindowsFormsApp1
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(214, 42);
+            this.textBox1.Location = new System.Drawing.Point(237, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 26);
+            this.textBox1.Size = new System.Drawing.Size(166, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -113,7 +114,8 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 45);
+            this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label1.Location = new System.Drawing.Point(25, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 23);
             this.label1.TabIndex = 1;
@@ -121,13 +123,16 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(299, 160);
+            this.button1.Location = new System.Drawing.Point(30, 154);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 65);
+            this.button1.Size = new System.Drawing.Size(373, 65);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cancel Booking";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
@@ -136,27 +141,16 @@ namespace WindowsFormsApp1
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(555, 116);
+            this.label2.Location = new System.Drawing.Point(528, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cancel Booking";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_arrow_30;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 33);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -165,7 +159,7 @@ namespace WindowsFormsApp1
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Location = new System.Drawing.Point(424, 410);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(502, 93);
+            this.panel2.Size = new System.Drawing.Size(435, 93);
             this.panel2.TabIndex = 28;
             // 
             // label6
@@ -257,7 +251,7 @@ namespace WindowsFormsApp1
             this.paymentBindingSource1.DataMember = "Payment";
             this.paymentBindingSource1.DataSource = this.fullDatabase;
             // 
-            // Form4
+            // cancelBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,14 +260,12 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(1345, 698);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form4";
+            this.Name = "cancelBookingForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).EndInit();
@@ -294,7 +286,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private fullDatabase fullDatabase;
