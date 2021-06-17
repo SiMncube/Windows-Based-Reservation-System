@@ -788,9 +788,9 @@ namespace WindowsFormsApp1
             this.panel7.Controls.Add(this.label36);
             this.panel7.Controls.Add(this.label37);
             this.panel7.Controls.Add(this.button13);
-            this.panel7.Location = new System.Drawing.Point(57, 18);
+            this.panel7.Location = new System.Drawing.Point(72, 18);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1230, 306);
+            this.panel7.Size = new System.Drawing.Size(1230, 291);
             this.panel7.TabIndex = 56;
             // 
             // modifyBookingInnerDataGridView
@@ -912,7 +912,7 @@ namespace WindowsFormsApp1
             // 
             this.label35.AutoSize = true;
             this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label35.Location = new System.Drawing.Point(322, 14);
+            this.label35.Location = new System.Drawing.Point(347, 14);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(543, 18);
             this.label35.TabIndex = 49;
@@ -936,7 +936,7 @@ namespace WindowsFormsApp1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(304, 37);
+            this.textBox4.Location = new System.Drawing.Point(329, 37);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(582, 26);
             this.textBox4.TabIndex = 50;
@@ -946,7 +946,7 @@ namespace WindowsFormsApp1
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(45, 254);
+            this.label36.Location = new System.Drawing.Point(34, 254);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(136, 18);
             this.label36.TabIndex = 54;
@@ -1037,7 +1037,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.button10);
             this.panel6.Location = new System.Drawing.Point(157, 18);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1041, 296);
+            this.panel6.Size = new System.Drawing.Size(1041, 289);
             this.panel6.TabIndex = 55;
             // 
             // label20
@@ -1065,7 +1065,7 @@ namespace WindowsFormsApp1
             // 
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(280, 12);
+            this.label30.Location = new System.Drawing.Point(293, 14);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(442, 18);
             this.label30.TabIndex = 49;
@@ -1089,7 +1089,7 @@ namespace WindowsFormsApp1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(244, 35);
+            this.textBox3.Location = new System.Drawing.Point(257, 37);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(524, 26);
             this.textBox3.TabIndex = 50;
@@ -1111,7 +1111,7 @@ namespace WindowsFormsApp1
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(383, 64);
+            this.label32.Location = new System.Drawing.Point(396, 66);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(301, 16);
             this.label32.TabIndex = 53;
@@ -1136,7 +1136,7 @@ namespace WindowsFormsApp1
             this.customerDataGridView.Location = new System.Drawing.Point(57, 83);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.ReadOnly = true;
-            this.customerDataGridView.Size = new System.Drawing.Size(946, 148);
+            this.customerDataGridView.Size = new System.Drawing.Size(946, 160);
             this.customerDataGridView.TabIndex = 53;
             this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerDataGridView_RowHeaderMouseDoubleClick);
@@ -1245,7 +1245,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(372, 320);
+            this.panel5.Location = new System.Drawing.Point(373, 313);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(646, 306);
             this.panel5.TabIndex = 48;
@@ -1845,7 +1845,7 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.dateTimePicker4);
             this.panel8.Controls.Add(this.label43);
             this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(383, 330);
+            this.panel8.Location = new System.Drawing.Point(372, 315);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(646, 306);
             this.panel8.TabIndex = 57;
