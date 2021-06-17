@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(394, 95);
+            this.label18.Location = new System.Drawing.Point(359, 95);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 16);
             this.label18.TabIndex = 17;
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(393, 67);
+            this.label8.Location = new System.Drawing.Point(359, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 15;
@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(381, 199);
+            this.label11.Location = new System.Drawing.Point(358, 200);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 19);
             this.label11.TabIndex = 9;
@@ -220,7 +220,7 @@ namespace WindowsFormsApp1
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(243, 199);
+            this.label10.Location = new System.Drawing.Point(220, 199);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 20);
             this.label10.TabIndex = 8;
