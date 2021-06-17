@@ -86,11 +86,6 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -165,6 +160,25 @@ namespace WindowsFormsApp1
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button13 = new System.Windows.Forms.Button();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -179,7 +193,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
@@ -191,6 +204,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -238,7 +253,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(115, 25);
+            this.panel4.Location = new System.Drawing.Point(115, 21);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
@@ -426,7 +441,7 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(116, 346);
+            this.panel3.Location = new System.Drawing.Point(156, 335);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1049, 303);
             this.panel3.TabIndex = 2;
@@ -567,7 +582,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.bookingInnerDGV);
-            this.panel2.Location = new System.Drawing.Point(116, 29);
+            this.panel2.Location = new System.Drawing.Point(156, 18);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1049, 296);
             this.panel2.TabIndex = 1;
@@ -728,7 +743,7 @@ namespace WindowsFormsApp1
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.panel7);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
@@ -738,58 +753,6 @@ namespace WindowsFormsApp1
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modify booking";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Location = new System.Drawing.Point(150, 17);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1041, 302);
-            this.groupBox2.TabIndex = 55;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Search Booking";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(717, 57);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(74, 26);
-            this.button11.TabIndex = 51;
-            this.button11.Text = "Check";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label29.Location = new System.Drawing.Point(278, 37);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(317, 18);
-            this.label29.TabIndex = 49;
-            this.label29.Text = "Enter Customer Email/Booking Reference\r\n";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(322, 87);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(282, 16);
-            this.label31.TabIndex = 53;
-            this.label31.Text = "Input is incorrect Or Booking Does Not Exist";
-            this.label31.Visible = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(187, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(524, 26);
-            this.textBox4.TabIndex = 50;
             // 
             // label17
             // 
@@ -1629,6 +1592,199 @@ namespace WindowsFormsApp1
             this.label20.Text = "Search Customer Profile";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label29);
+            this.panel7.Controls.Add(this.label31);
+            this.panel7.Controls.Add(this.label35);
+            this.panel7.Controls.Add(this.button11);
+            this.panel7.Controls.Add(this.textBox4);
+            this.panel7.Controls.Add(this.label36);
+            this.panel7.Controls.Add(this.label37);
+            this.panel7.Controls.Add(this.dataGridView3);
+            this.panel7.Controls.Add(this.button13);
+            this.panel7.Location = new System.Drawing.Point(157, 18);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1041, 296);
+            this.panel7.TabIndex = 56;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(3, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(186, 18);
+            this.label29.TabIndex = 57;
+            this.label29.Text = "Search Customer Profile";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label31.Location = new System.Drawing.Point(850, 254);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(31, 18);
+            this.label31.TabIndex = 56;
+            this.label31.Text = "OR";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label35.Location = new System.Drawing.Point(280, 12);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(442, 18);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "Enter Your Current Customer Email/Name/Surname/ID No.\r\n";
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(887, 249);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(118, 28);
+            this.button11.TabIndex = 55;
+            this.button11.Text = "Clear Details";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(244, 35);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(524, 26);
+            this.textBox4.TabIndex = 50;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Location = new System.Drawing.Point(56, 254);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(136, 18);
+            this.label36.TabIndex = 54;
+            this.label36.Text = "Customer Details";
+            this.label36.Visible = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(383, 64);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(301, 16);
+            this.label37.TabIndex = 53;
+            this.label37.Text = "Input is incorrect Or Such profile does not exist";
+            this.label37.Visible = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.dataGridView3.DataSource = this.customerBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(57, 83);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(946, 148);
+            this.dataGridView3.TabIndex = 53;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "emailID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "emailID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn11.HeaderText = "name";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "surname";
+            this.dataGridViewTextBoxColumn12.HeaderText = "surname";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "idNumber";
+            this.dataGridViewTextBoxColumn13.HeaderText = "idNumber";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "cellNumber";
+            this.dataGridViewTextBoxColumn14.HeaderText = "cellNumber";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "streetName";
+            this.dataGridViewTextBoxColumn15.HeaderText = "streetName";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "suburb";
+            this.dataGridViewTextBoxColumn16.HeaderText = "suburb";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "city";
+            this.dataGridViewTextBoxColumn17.HeaderText = "city";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "postalCode";
+            this.dataGridViewTextBoxColumn18.HeaderText = "postalCode";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.Enabled = false;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(726, 249);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(118, 28);
+            this.button13.TabIndex = 51;
+            this.button13.Text = "Click Here";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1659,8 +1815,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
@@ -1677,6 +1831,9 @@ namespace WindowsFormsApp1
             this.tabControl1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1795,11 +1952,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private fullDatabaseTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridView customerDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1817,5 +1969,24 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.Button button13;
     }
 }
