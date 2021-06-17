@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
         }
         private bool isLetter(char c)
         {
-            if (c >= 'a' && c <= 'z')
+            //if (c >= 'a' && c <= 'z' || c == ' ')
                 return true;
             return false;
         }
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
                 count++;
             if (!cvvIsValid())
                 count++;
-            if (dateIsSelected())
+            if (!dateIsSelected())
                 count++;
             return count == 0;
         }
@@ -104,6 +104,8 @@ namespace WindowsFormsApp1
             if (creditDetailsValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "Credit card");
+                updateBookedRoom();
+                updateBookingStatus();
                 invoiceForm i = new invoiceForm();
                 this.Hide();
                 i.ShowDialog();
@@ -206,13 +208,19 @@ namespace WindowsFormsApp1
             if (eftIsValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
-                updateBookedRoom();
-                updateBookingStatus();
                 invoiceForm i = new invoiceForm();
                 this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form8 f = new Form8();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }
