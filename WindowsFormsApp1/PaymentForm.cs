@@ -211,6 +211,8 @@ namespace WindowsFormsApp1
             if (eftIsValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
+                updateBookedRoom();
+                updateBookingStatus();
                 invoiceForm i = new invoiceForm();
                 this.Hide();
                 i.ShowDialog();
