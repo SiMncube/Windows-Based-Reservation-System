@@ -1575,7 +1575,7 @@ namespace WindowsFormsApp1
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(52, 302);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(136, 18);

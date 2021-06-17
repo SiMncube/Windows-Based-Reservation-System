@@ -799,10 +799,9 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            panel5.Enabled = true;
             customerTa.FillByAnythingGiven(fullDs.Customer, textBox3.Text);
-
             customerDataGridView.ClearSelection();
+            panel5.Enabled = false;
             label33.Visible = false;
             //label32.Visible = false;
             //textBox3.BackColor = Color.White;
@@ -833,6 +832,7 @@ namespace WindowsFormsApp1
         {
             currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
             label33.Text = "To Process Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + ")";
+            label33.Visible = true;
         }
 
         private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -848,7 +848,9 @@ namespace WindowsFormsApp1
         private void button12_Click(object sender, EventArgs e)
         {
             customerDataGridView.ClearSelection();
+            textBox3.Clear();
             label33.Visible = false;
+            panel5.Enabled = false;
         }
     }
 }
