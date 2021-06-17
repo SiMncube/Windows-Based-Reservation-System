@@ -3823,7 +3823,9 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnsurname;
             
-            private global::System.Data.DataColumn columnsummaryID;
+            private global::System.Data.DataColumn columnidNumber;
+            
+            private global::System.Data.DataColumn columnBookingRef;
             
             private global::System.Data.DataColumn columndateIn;
             
@@ -3836,8 +3838,6 @@ namespace WindowsFormsApp1 {
             private global::System.Data.DataColumn columnbookingStatus;
             
             private global::System.Data.DataColumn columnamountDue;
-            
-            private global::System.Data.DataColumn columnidNumber;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3898,9 +3898,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn summaryIDColumn {
+            public global::System.Data.DataColumn idNumberColumn {
                 get {
-                    return this.columnsummaryID;
+                    return this.columnidNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BookingRefColumn {
+                get {
+                    return this.columnBookingRef;
                 }
             }
             
@@ -3954,14 +3962,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idNumberColumn {
-                get {
-                    return this.columnidNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3997,20 +3997,20 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModifyBookingInnerRow AddModifyBookingInnerRow(string emailID, string name, string surname, System.DateTime dateIn, System.DateTime dateOut, int numberOfNights, string bookingMethod, string bookingStatus, string amountDue, string idNumber) {
+            public ModifyBookingInnerRow AddModifyBookingInnerRow(string emailID, string name, string surname, string idNumber, System.DateTime dateIn, System.DateTime dateOut, int numberOfNights, string bookingMethod, string bookingStatus, string amountDue) {
                 ModifyBookingInnerRow rowModifyBookingInnerRow = ((ModifyBookingInnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         emailID,
                         name,
                         surname,
+                        idNumber,
                         null,
                         dateIn,
                         dateOut,
                         numberOfNights,
                         bookingMethod,
                         bookingStatus,
-                        amountDue,
-                        idNumber};
+                        amountDue};
                 rowModifyBookingInnerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowModifyBookingInnerRow);
                 return rowModifyBookingInnerRow;
@@ -4018,9 +4018,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModifyBookingInnerRow FindBysummaryID(int summaryID) {
+            public ModifyBookingInnerRow FindByBookingRef(int BookingRef) {
                 return ((ModifyBookingInnerRow)(this.Rows.Find(new object[] {
-                            summaryID})));
+                            BookingRef})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4043,14 +4043,14 @@ namespace WindowsFormsApp1 {
                 this.columnemailID = base.Columns["emailID"];
                 this.columnname = base.Columns["name"];
                 this.columnsurname = base.Columns["surname"];
-                this.columnsummaryID = base.Columns["summaryID"];
+                this.columnidNumber = base.Columns["idNumber"];
+                this.columnBookingRef = base.Columns["BookingRef"];
                 this.columndateIn = base.Columns["dateIn"];
                 this.columndateOut = base.Columns["dateOut"];
                 this.columnnumberOfNights = base.Columns["numberOfNights"];
                 this.columnbookingMethod = base.Columns["bookingMethod"];
                 this.columnbookingStatus = base.Columns["bookingStatus"];
                 this.columnamountDue = base.Columns["amountDue"];
-                this.columnidNumber = base.Columns["idNumber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4062,8 +4062,10 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnname);
                 this.columnsurname = new global::System.Data.DataColumn("surname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsurname);
-                this.columnsummaryID = new global::System.Data.DataColumn("summaryID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsummaryID);
+                this.columnidNumber = new global::System.Data.DataColumn("idNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidNumber);
+                this.columnBookingRef = new global::System.Data.DataColumn("BookingRef", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBookingRef);
                 this.columndateIn = new global::System.Data.DataColumn("dateIn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndateIn);
                 this.columndateOut = new global::System.Data.DataColumn("dateOut", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -4076,22 +4078,23 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnbookingStatus);
                 this.columnamountDue = new global::System.Data.DataColumn("amountDue", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamountDue);
-                this.columnidNumber = new global::System.Data.DataColumn("idNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidNumber);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnsummaryID}, true));
+                                this.columnBookingRef}, true));
                 this.columnemailID.AllowDBNull = false;
                 this.columnemailID.MaxLength = 50;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 50;
                 this.columnsurname.AllowDBNull = false;
                 this.columnsurname.MaxLength = 50;
-                this.columnsummaryID.AutoIncrement = true;
-                this.columnsummaryID.AutoIncrementSeed = -1;
-                this.columnsummaryID.AutoIncrementStep = -1;
-                this.columnsummaryID.AllowDBNull = false;
-                this.columnsummaryID.ReadOnly = true;
-                this.columnsummaryID.Unique = true;
+                this.columnidNumber.AllowDBNull = false;
+                this.columnidNumber.MaxLength = 13;
+                this.columnBookingRef.AutoIncrement = true;
+                this.columnBookingRef.AutoIncrementSeed = -1;
+                this.columnBookingRef.AutoIncrementStep = -1;
+                this.columnBookingRef.AllowDBNull = false;
+                this.columnBookingRef.ReadOnly = true;
+                this.columnBookingRef.Unique = true;
+                this.columnBookingRef.Caption = "summaryID";
                 this.columndateIn.AllowDBNull = false;
                 this.columndateOut.AllowDBNull = false;
                 this.columnnumberOfNights.AllowDBNull = false;
@@ -4099,8 +4102,6 @@ namespace WindowsFormsApp1 {
                 this.columnbookingStatus.MaxLength = 50;
                 this.columnamountDue.AllowDBNull = false;
                 this.columnamountDue.MaxLength = 50;
-                this.columnidNumber.AllowDBNull = false;
-                this.columnidNumber.MaxLength = 13;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5353,12 +5354,23 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int summaryID {
+            public string idNumber {
                 get {
-                    return ((int)(this[this.tableModifyBookingInner.summaryIDColumn]));
+                    return ((string)(this[this.tableModifyBookingInner.idNumberColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.summaryIDColumn] = value;
+                    this[this.tableModifyBookingInner.idNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BookingRef {
+                get {
+                    return ((int)(this[this.tableModifyBookingInner.BookingRefColumn]));
+                }
+                set {
+                    this[this.tableModifyBookingInner.BookingRefColumn] = value;
                 }
             }
             
@@ -5435,17 +5447,6 @@ namespace WindowsFormsApp1 {
                 }
                 set {
                     this[this.tableModifyBookingInner.amountDueColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string idNumber {
-                get {
-                    return ((string)(this[this.tableModifyBookingInner.idNumberColumn]));
-                }
-                set {
-                    this[this.tableModifyBookingInner.idNumberColumn] = value;
                 }
             }
             
@@ -9712,7 +9713,7 @@ WHERE        (Customer.surname LIKE @name + '%') OR
             tableMapping.ColumnMappings.Add("emailID", "emailID");
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("surname", "surname");
-            tableMapping.ColumnMappings.Add("summaryID", "summaryID");
+            tableMapping.ColumnMappings.Add("summaryID", "BookingRef");
             tableMapping.ColumnMappings.Add("dateIn", "dateIn");
             tableMapping.ColumnMappings.Add("dateOut", "dateOut");
             tableMapping.ColumnMappings.Add("numberOfNights", "numberOfNights");
@@ -9736,8 +9737,8 @@ WHERE        (Customer.surname LIKE @name + '%') OR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Customer.emailID, Customer.name, Customer.surname, BookingSummary.summaryID, BookingSummary.dateIn, BookingSummary.dateOut, BookingSummary.numberOfNights, BookingSummary.bookingMethod, 
-                         BookingSummary.bookingStatus, BookingSummary.amountDue, Customer.idNumber
+            this._commandCollection[0].CommandText = @"SELECT        Customer.emailID, Customer.name, Customer.surname, Customer.idNumber, BookingSummary.summaryID, BookingSummary.dateIn, BookingSummary.dateOut, BookingSummary.numberOfNights, BookingSummary.bookingMethod, 
+                         BookingSummary.bookingStatus, BookingSummary.amountDue
 FROM            Customer INNER JOIN
                          BookingSummary ON Customer.emailID = BookingSummary.emailID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
@@ -9750,7 +9751,8 @@ FROM            Customer INNER JOIN
 WHERE        (Customer.emailID LIKE @name + '%') OR
                          (Customer.name LIKE @name + '%') OR
                          (Customer.surname LIKE @name + '%') OR
-                         (BookingSummary.summaryID = @name + '%')";
+                         (BookingSummary.summaryID LIKE @name + '%') OR
+                         (Customer.idNumber LIKE @name + '%')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "emailID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
