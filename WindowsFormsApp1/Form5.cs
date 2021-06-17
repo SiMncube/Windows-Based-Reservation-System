@@ -228,8 +228,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
             if (amountDue != 0)
                 button4.Enabled = true;
@@ -239,8 +238,7 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
             if (amountDue != 0)
                 button4.Enabled = true;

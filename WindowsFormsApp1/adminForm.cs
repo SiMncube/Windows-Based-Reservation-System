@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
                 if (fullDs.Payment[i].summaryID == summaryID)
                 {
                     string newAmount = calculateAmountDue(fullDs.Payment[i].amountDue.ToString());
-                    paymentTa.Insert(DateTime.Today, "-R " + newAmount+".00", summaryID, fullDs.Payment[i].typeOfPayment);
+                    paymentTa.Insert(DateTime.Today, "-R " + newAmount + ".00", summaryID, fullDs.Payment[i].typeOfPayment);
                     paymentTa.Fill(fullDs.Payment);
                     break;
                 }
@@ -703,7 +703,7 @@ namespace WindowsFormsApp1
             int[] allAllocatedRooms = new int[singleAllocatedRooms.Length + doubleAllocatedRooms.Length];
             Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
-            currentBooking.setRoomIDs(allAllocatedRooms);   
+            currentBooking.setRoomIDs(allAllocatedRooms);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -777,7 +777,7 @@ namespace WindowsFormsApp1
         private void button9_Click(object sender, EventArgs e)
         {
             currentUser.setEmailID(currentCustomerEmailID);
-            PaymentForm payment= new PaymentForm();
+            PaymentForm payment = new PaymentForm();
             //this.Hide();
             payment.ShowDialog();
             //this.Close();
@@ -807,7 +807,9 @@ namespace WindowsFormsApp1
         private void button10_Click(object sender, EventArgs e)
         {
 
-                panel5.Enabled = true;
+            panel5.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            dateTimePicker2.Enabled = true;
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
@@ -850,6 +852,7 @@ namespace WindowsFormsApp1
             label33.Visible = false;
             panel5.Enabled = false;
             textBox5.Clear();
+            button10.Enabled = false;
         }
 
         private void label20_Click(object sender, EventArgs e)
