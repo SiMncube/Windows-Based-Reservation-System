@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
         }
         private bool isLetter(char c)
         {
-            if (c >= 'a' && c <= 'z')
+            //if (c >= 'a' && c <= 'z' || c == ' ')
                 return true;
             return false;
         }
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
                 count++;
             if (!cvvIsValid())
                 count++;
-            if (dateIsSelected())
+            if (!dateIsSelected())
                 count++;
             return count == 0;
         }

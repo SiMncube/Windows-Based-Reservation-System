@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             Form5 makebooking = new Form5();
             this.Hide();
             makebooking.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void checkBookingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
             Form6 checkBooking = new Form6();
             this.Hide();
             checkBooking.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void modifyBookingToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -75,31 +75,10 @@ namespace WindowsFormsApp1
             extend.ShowDialog();
             this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Form8_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.fullDatabase.Customer);
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
         }
     }
