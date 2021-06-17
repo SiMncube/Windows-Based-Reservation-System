@@ -803,8 +803,7 @@ namespace WindowsFormsApp1
             customerDataGridView.ClearSelection();
             panel5.Enabled = false;
             label33.Visible = false;
-            //label32.Visible = false;
-            //textBox3.BackColor = Color.White;
+
         }
 
         private void button10_Click(object sender, EventArgs e)

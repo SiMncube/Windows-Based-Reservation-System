@@ -779,11 +779,11 @@ namespace WindowsFormsApp1
             // 
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(333, 37);
+            this.label30.Location = new System.Drawing.Point(278, 35);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(385, 18);
+            this.label30.Size = new System.Drawing.Size(442, 18);
             this.label30.TabIndex = 49;
-            this.label30.Text = "Enter Your Current Customer Email/Name/Surname";
+            this.label30.Text = "Enter Your Current Customer Email/Name/Surname/ID No.\r\n";
             // 
             // textBox3
             // 
@@ -798,9 +798,9 @@ namespace WindowsFormsApp1
             this.button10.BackColor = System.Drawing.Color.DodgerBlue;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(760, 292);
+            this.button10.Location = new System.Drawing.Point(722, 292);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(99, 38);
+            this.button10.Size = new System.Drawing.Size(118, 38);
             this.button10.TabIndex = 51;
             this.button10.Text = "Click Here";
             this.button10.UseVisualStyleBackColor = false;
@@ -1588,11 +1588,11 @@ namespace WindowsFormsApp1
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(902, 292);
+            this.button12.Location = new System.Drawing.Point(883, 292);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(99, 38);
+            this.button12.Size = new System.Drawing.Size(118, 38);
             this.button12.TabIndex = 55;
-            this.button12.Text = "Clear Infor";
+            this.button12.Text = "Clear Details";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -1600,7 +1600,7 @@ namespace WindowsFormsApp1
             // 
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label34.Location = new System.Drawing.Point(865, 302);
+            this.label34.Location = new System.Drawing.Point(846, 302);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(31, 18);
             this.label34.TabIndex = 56;
