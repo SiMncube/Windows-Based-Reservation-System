@@ -234,6 +234,7 @@ namespace WindowsFormsApp1
             button2.Visible = false;
             label1.Visible = true;
             label4.Visible = true;
+            groupBox6.Visible = true;
         }
     }
 }
