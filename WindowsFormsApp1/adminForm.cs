@@ -862,7 +862,7 @@ namespace WindowsFormsApp1
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            //modifyBookingInnerTa.FillByAnythingGiven(this.fullDs.ModifyBookingInner, textBox4.Text);
+            modifyBookingInnerTa.FillByAnythingGiven(this.fullDs.ModifyBookingInner, textBox4.Text);
         }
 
         private void label37_Click(object sender, EventArgs e)
@@ -873,7 +873,7 @@ namespace WindowsFormsApp1
         private void adminForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fullDs.ModifyBookingInner' table. You can move, or remove it, as needed.
-            this.modifyBookingInnerTableAdapter.Fill(this.fullDs.ModifyBookingInner);
+            this.modifyBookingInnerTa.Fill(this.fullDs.ModifyBookingInner);
 
         }
     }
