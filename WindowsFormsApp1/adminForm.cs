@@ -543,7 +543,7 @@ namespace WindowsFormsApp1
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
         int numberOfNights;
-        string bookingMethod = "Admin - ";
+        string bookingMethod = "Admin";
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
@@ -743,8 +743,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label20.Text = getAmountDue();
-            label20.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
             if (amountDue != 0)
                 button8.Enabled = true;
@@ -754,8 +753,7 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label20.Text = getAmountDue();
-            label20.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
             if (amountDue != 0)
                 button8.Enabled = true;
@@ -850,6 +848,11 @@ namespace WindowsFormsApp1
             textBox3.Clear();
             label33.Visible = false;
             panel5.Enabled = false;
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
