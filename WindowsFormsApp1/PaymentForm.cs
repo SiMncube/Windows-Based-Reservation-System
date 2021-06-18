@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
         }
         private bool isLetter(char c)
         {
-            //if (c >= 'a' && c <= 'z' || c == ' ')
+            if(c >= 'a' && c <= 'z' || c == ' ')
                 return true;
             return false;
         }
