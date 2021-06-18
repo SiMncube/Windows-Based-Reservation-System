@@ -158,6 +158,29 @@ namespace WindowsFormsApp1
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.cellNumberTextBox = new System.Windows.Forms.TextBox();
+            this.IDTextBox = new System.Windows.Forms.TextBox();
+            this.postalCodeTextBox = new System.Windows.Forms.TextBox();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.addressLine2TextBox = new System.Windows.Forms.TextBox();
+            this.addressLine1TextBox = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.firtNameTextBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.registerButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -209,6 +232,12 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -272,6 +301,19 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit()
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -371,6 +413,9 @@ namespace WindowsFormsApp1
             this.dataGridView2.Size = new System.Drawing.Size(1043, 354);
             this.dataGridView2.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
             // nameDataGridViewTextBoxColumn2
             // 
             this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
@@ -1599,6 +1644,7 @@ namespace WindowsFormsApp1
             this.label16.TabIndex = 46;
             this.label16.Text = "Logout";
             // 
+            // tabPage1
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -1659,6 +1705,276 @@ namespace WindowsFormsApp1
             this.panel10.Size = new System.Drawing.Size(417, 368);
             this.panel10.TabIndex = 2;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Location = new System.Drawing.Point(1004, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(198, 15);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Currently logged in Admin : ";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(433, 86);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(497, 41);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Register new customer";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.cancelButton);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.emailTextBox);
+            this.panel1.Controls.Add(this.cellNumberTextBox);
+            this.panel1.Controls.Add(this.IDTextBox);
+            this.panel1.Controls.Add(this.postalCodeTextBox);
+            this.panel1.Controls.Add(this.cityTextBox);
+            this.panel1.Controls.Add(this.addressLine2TextBox);
+            this.panel1.Controls.Add(this.addressLine1TextBox);
+            this.panel1.Controls.Add(this.lastNameTextBox);
+            this.panel1.Controls.Add(this.firtNameTextBox);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.registerButton);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(382, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(583, 422);
+            this.panel1.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lime;
+            this.label9.Location = new System.Drawing.Point(46, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(468, 23);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "Customer account successfully registered";
+            this.label9.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(41, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(327, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Register a new Customer";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(41, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(353, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Fill the registration form below to register a new customer ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.label8.Location = new System.Drawing.Point(45, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.TabIndex = 62;
+            this.label8.Visible = false;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.Location = new System.Drawing.Point(45, 364);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(99, 35);
+            this.cancelButton.TabIndex = 57;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.emailTextBox.Location = new System.Drawing.Point(160, 316);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(314, 27);
+            this.emailTextBox.TabIndex = 53;
+            this.emailTextBox.Text = "Email";
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
+            this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
+            // 
+            // cellNumberTextBox
+            // 
+            this.cellNumberTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cellNumberTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.cellNumberTextBox.Location = new System.Drawing.Point(299, 267);
+            this.cellNumberTextBox.Name = "cellNumberTextBox";
+            this.cellNumberTextBox.Size = new System.Drawing.Size(248, 27);
+            this.cellNumberTextBox.TabIndex = 52;
+            this.cellNumberTextBox.Text = "Cell number";
+            this.cellNumberTextBox.TextChanged += new System.EventHandler(this.cellNumberTextBox_TextChanged);
+            this.cellNumberTextBox.Enter += new System.EventHandler(this.cellNumberTextBox_Enter);
+            this.cellNumberTextBox.Leave += new System.EventHandler(this.cellNumberTextBox_Leave);
+            // 
+            // IDTextBox
+            // 
+            this.IDTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.IDTextBox.Location = new System.Drawing.Point(45, 267);
+            this.IDTextBox.Name = "IDTextBox";
+            this.IDTextBox.Size = new System.Drawing.Size(248, 27);
+            this.IDTextBox.TabIndex = 51;
+            this.IDTextBox.Text = "ID number";
+            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
+            this.IDTextBox.Enter += new System.EventHandler(this.IDTextBox_Enter);
+            this.IDTextBox.Leave += new System.EventHandler(this.IDTextBox_Leave);
+            // 
+            // postalCodeTextBox
+            // 
+            this.postalCodeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postalCodeTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.postalCodeTextBox.Location = new System.Drawing.Point(299, 233);
+            this.postalCodeTextBox.Name = "postalCodeTextBox";
+            this.postalCodeTextBox.Size = new System.Drawing.Size(248, 27);
+            this.postalCodeTextBox.TabIndex = 50;
+            this.postalCodeTextBox.Text = "Postal code";
+            this.postalCodeTextBox.TextChanged += new System.EventHandler(this.postalCodeTextBox_TextChanged);
+            this.postalCodeTextBox.Enter += new System.EventHandler(this.postalCodeTextBox_Enter);
+            this.postalCodeTextBox.Leave += new System.EventHandler(this.postalCodeTextBox_Leave);
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.cityTextBox.Location = new System.Drawing.Point(45, 233);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(248, 27);
+            this.cityTextBox.TabIndex = 49;
+            this.cityTextBox.Text = "City";
+            this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
+            this.cityTextBox.Enter += new System.EventHandler(this.cityTextBox_Enter);
+            this.cityTextBox.Leave += new System.EventHandler(this.cityTextBox_Leave);
+            // 
+            // addressLine2TextBox
+            // 
+            this.addressLine2TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine2TextBox.ForeColor = System.Drawing.Color.Gray;
+            this.addressLine2TextBox.Location = new System.Drawing.Point(45, 201);
+            this.addressLine2TextBox.Name = "addressLine2TextBox";
+            this.addressLine2TextBox.Size = new System.Drawing.Size(502, 27);
+            this.addressLine2TextBox.TabIndex = 48;
+            this.addressLine2TextBox.Text = "Street Address Line 2";
+            this.addressLine2TextBox.TextChanged += new System.EventHandler(this.addressLine2TextBox_TextChanged);
+            this.addressLine2TextBox.Enter += new System.EventHandler(this.addressLine2TextBox_Enter);
+            this.addressLine2TextBox.Leave += new System.EventHandler(this.addressLine2TextBox_Leave);
+            // 
+            // addressLine1TextBox
+            // 
+            this.addressLine1TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine1TextBox.ForeColor = System.Drawing.Color.Gray;
+            this.addressLine1TextBox.Location = new System.Drawing.Point(45, 169);
+            this.addressLine1TextBox.Name = "addressLine1TextBox";
+            this.addressLine1TextBox.Size = new System.Drawing.Size(502, 27);
+            this.addressLine1TextBox.TabIndex = 47;
+            this.addressLine1TextBox.Text = "Street Address Line 1";
+            this.addressLine1TextBox.TextChanged += new System.EventHandler(this.addressLine1TextBox_TextChanged);
+            this.addressLine1TextBox.Enter += new System.EventHandler(this.addressLine1TextBox_Enter);
+            this.addressLine1TextBox.Leave += new System.EventHandler(this.addressLine1TextBox_Leave);
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.lastNameTextBox.Location = new System.Drawing.Point(299, 136);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(248, 27);
+            this.lastNameTextBox.TabIndex = 46;
+            this.lastNameTextBox.Text = "Last name";
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
+            this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
+            this.lastNameTextBox.Leave += new System.EventHandler(this.lastNameTextBox_Leave);
+            // 
+            // firtNameTextBox
+            // 
+            this.firtNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firtNameTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.firtNameTextBox.Location = new System.Drawing.Point(45, 136);
+            this.firtNameTextBox.Name = "firtNameTextBox";
+            this.firtNameTextBox.Size = new System.Drawing.Size(248, 27);
+            this.firtNameTextBox.TabIndex = 41;
+            this.firtNameTextBox.Text = "First name";
+            this.firtNameTextBox.TextChanged += new System.EventHandler(this.firtNameTextBox_TextChanged);
+            this.firtNameTextBox.Enter += new System.EventHandler(this.firtNameTextBox_Enter);
+            this.firtNameTextBox.Leave += new System.EventHandler(this.firtNameTextBox_Leave);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(226, 297);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(179, 16);
+            this.label23.TabIndex = 42;
+            this.label23.Text = "Email already registered";
+            this.label23.Visible = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Red;
+            this.label22.Location = new System.Drawing.Point(264, 297);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(97, 16);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Email invalid";
+            this.label22.Visible = false;
+            // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.registerButton.FlatAppearance.BorderSize = 0;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.Location = new System.Drawing.Point(448, 364);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(99, 35);
+            this.registerButton.TabIndex = 38;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.button1_Click);
             // label53
             // 
             this.label53.AutoSize = true;
@@ -1776,6 +2092,7 @@ namespace WindowsFormsApp1
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox7.Location = new System.Drawing.Point(50, 279);
@@ -1795,6 +2112,7 @@ namespace WindowsFormsApp1
             // 
             // textBox12
             // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox12.Location = new System.Drawing.Point(50, 228);
@@ -1929,7 +2247,6 @@ namespace WindowsFormsApp1
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
-            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label44
             // 
@@ -2508,6 +2825,130 @@ namespace WindowsFormsApp1
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(6, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 45);
+            this.button3.TabIndex = 43;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
+            this.pictureBox6.Location = new System.Drawing.Point(267, 268);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 61;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
+            this.pictureBox3.Location = new System.Drawing.Point(448, 317);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 58;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
+            this.pictureBox2.Location = new System.Drawing.Point(521, 268);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
+            this.pictureBox1.Location = new System.Drawing.Point(203, 228);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 61;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
+            this.pictureBox8.Location = new System.Drawing.Point(348, 228);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 44;
+            this.pictureBox8.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(6, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 45);
+            this.button4.TabIndex = 45;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(6, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 45);
+            this.button5.TabIndex = 45;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(6, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(45, 45);
+            this.button6.TabIndex = 45;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(7, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 45);
+            this.button7.TabIndex = 45;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2565,6 +3006,21 @@ namespace WindowsFormsApp1
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -2716,7 +3172,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.BindingSource modifyBookingInnerBindingSource;
         private fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter modifyBookingInnerTa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridView modifyBookingInnerDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;

@@ -3852,27 +3852,27 @@ namespace WindowsFormsApp1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ModifyBookingInnerDataTable : global::System.Data.TypedTableBase<ModifyBookingInnerRow> {
             
-            private global::System.Data.DataColumn columnemailID;
+            private global::System.Data.DataColumn columnEmail_Address;
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnsurname;
+            private global::System.Data.DataColumn columnSurname;
             
-            private global::System.Data.DataColumn columnidNumber;
+            private global::System.Data.DataColumn columnID_Number;
             
-            private global::System.Data.DataColumn columnBookingRef;
+            private global::System.Data.DataColumn columnBooking_Ref;
             
-            private global::System.Data.DataColumn columndateIn;
+            private global::System.Data.DataColumn columnDate_In;
             
-            private global::System.Data.DataColumn columndateOut;
+            private global::System.Data.DataColumn columnDate_Out;
             
-            private global::System.Data.DataColumn columnnumberOfNights;
+            private global::System.Data.DataColumn columnNumber_Of_Nights;
             
-            private global::System.Data.DataColumn columnbookingMethod;
+            private global::System.Data.DataColumn columnBooking_Method;
             
-            private global::System.Data.DataColumn columnbookingStatus;
+            private global::System.Data.DataColumn columnBooking_Status;
             
-            private global::System.Data.DataColumn columnamountDue;
+            private global::System.Data.DataColumn columnAmount_Due;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3909,89 +3909,89 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn emailIDColumn {
+            public global::System.Data.DataColumn Email_AddressColumn {
                 get {
-                    return this.columnemailID;
+                    return this.columnEmail_Address;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnname;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn surnameColumn {
+            public global::System.Data.DataColumn SurnameColumn {
                 get {
-                    return this.columnsurname;
+                    return this.columnSurname;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idNumberColumn {
+            public global::System.Data.DataColumn ID_NumberColumn {
                 get {
-                    return this.columnidNumber;
+                    return this.columnID_Number;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BookingRefColumn {
+            public global::System.Data.DataColumn Booking_RefColumn {
                 get {
-                    return this.columnBookingRef;
+                    return this.columnBooking_Ref;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dateInColumn {
+            public global::System.Data.DataColumn Date_InColumn {
                 get {
-                    return this.columndateIn;
+                    return this.columnDate_In;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dateOutColumn {
+            public global::System.Data.DataColumn Date_OutColumn {
                 get {
-                    return this.columndateOut;
+                    return this.columnDate_Out;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn numberOfNightsColumn {
+            public global::System.Data.DataColumn Number_Of_NightsColumn {
                 get {
-                    return this.columnnumberOfNights;
+                    return this.columnNumber_Of_Nights;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn bookingMethodColumn {
+            public global::System.Data.DataColumn Booking_MethodColumn {
                 get {
-                    return this.columnbookingMethod;
+                    return this.columnBooking_Method;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn bookingStatusColumn {
+            public global::System.Data.DataColumn Booking_StatusColumn {
                 get {
-                    return this.columnbookingStatus;
+                    return this.columnBooking_Status;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn amountDueColumn {
+            public global::System.Data.DataColumn Amount_DueColumn {
                 get {
-                    return this.columnamountDue;
+                    return this.columnAmount_Due;
                 }
             }
             
@@ -4032,20 +4032,20 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModifyBookingInnerRow AddModifyBookingInnerRow(string emailID, string name, string surname, string idNumber, System.DateTime dateIn, System.DateTime dateOut, int numberOfNights, string bookingMethod, string bookingStatus, string amountDue) {
+            public ModifyBookingInnerRow AddModifyBookingInnerRow(string Email_Address, string Name, string Surname, string ID_Number, System.DateTime Date_In, System.DateTime Date_Out, int Number_Of_Nights, string Booking_Method, string Booking_Status, string Amount_Due) {
                 ModifyBookingInnerRow rowModifyBookingInnerRow = ((ModifyBookingInnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        emailID,
-                        name,
-                        surname,
-                        idNumber,
+                        Email_Address,
+                        Name,
+                        Surname,
+                        ID_Number,
                         null,
-                        dateIn,
-                        dateOut,
-                        numberOfNights,
-                        bookingMethod,
-                        bookingStatus,
-                        amountDue};
+                        Date_In,
+                        Date_Out,
+                        Number_Of_Nights,
+                        Booking_Method,
+                        Booking_Status,
+                        Amount_Due};
                 rowModifyBookingInnerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowModifyBookingInnerRow);
                 return rowModifyBookingInnerRow;
@@ -4053,9 +4053,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModifyBookingInnerRow FindByBookingRef(int BookingRef) {
+            public ModifyBookingInnerRow FindByBooking_Ref(int Booking_Ref) {
                 return ((ModifyBookingInnerRow)(this.Rows.Find(new object[] {
-                            BookingRef})));
+                            Booking_Ref})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4075,68 +4075,68 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnemailID = base.Columns["emailID"];
-                this.columnname = base.Columns["name"];
-                this.columnsurname = base.Columns["surname"];
-                this.columnidNumber = base.Columns["idNumber"];
-                this.columnBookingRef = base.Columns["BookingRef"];
-                this.columndateIn = base.Columns["dateIn"];
-                this.columndateOut = base.Columns["dateOut"];
-                this.columnnumberOfNights = base.Columns["numberOfNights"];
-                this.columnbookingMethod = base.Columns["bookingMethod"];
-                this.columnbookingStatus = base.Columns["bookingStatus"];
-                this.columnamountDue = base.Columns["amountDue"];
+                this.columnEmail_Address = base.Columns["Email Address"];
+                this.columnName = base.Columns["Name"];
+                this.columnSurname = base.Columns["Surname"];
+                this.columnID_Number = base.Columns["ID Number"];
+                this.columnBooking_Ref = base.Columns["Booking Ref"];
+                this.columnDate_In = base.Columns["Date In"];
+                this.columnDate_Out = base.Columns["Date Out"];
+                this.columnNumber_Of_Nights = base.Columns["Number Of Nights"];
+                this.columnBooking_Method = base.Columns["Booking Method"];
+                this.columnBooking_Status = base.Columns["Booking Status"];
+                this.columnAmount_Due = base.Columns["Amount Due"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnemailID = new global::System.Data.DataColumn("emailID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemailID);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnsurname = new global::System.Data.DataColumn("surname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsurname);
-                this.columnidNumber = new global::System.Data.DataColumn("idNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidNumber);
-                this.columnBookingRef = new global::System.Data.DataColumn("BookingRef", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBookingRef);
-                this.columndateIn = new global::System.Data.DataColumn("dateIn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndateIn);
-                this.columndateOut = new global::System.Data.DataColumn("dateOut", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndateOut);
-                this.columnnumberOfNights = new global::System.Data.DataColumn("numberOfNights", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumberOfNights);
-                this.columnbookingMethod = new global::System.Data.DataColumn("bookingMethod", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbookingMethod);
-                this.columnbookingStatus = new global::System.Data.DataColumn("bookingStatus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbookingStatus);
-                this.columnamountDue = new global::System.Data.DataColumn("amountDue", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnamountDue);
+                this.columnEmail_Address = new global::System.Data.DataColumn("Email Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail_Address);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnSurname = new global::System.Data.DataColumn("Surname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSurname);
+                this.columnID_Number = new global::System.Data.DataColumn("ID Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Number);
+                this.columnBooking_Ref = new global::System.Data.DataColumn("Booking Ref", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBooking_Ref);
+                this.columnDate_In = new global::System.Data.DataColumn("Date In", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate_In);
+                this.columnDate_Out = new global::System.Data.DataColumn("Date Out", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate_Out);
+                this.columnNumber_Of_Nights = new global::System.Data.DataColumn("Number Of Nights", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumber_Of_Nights);
+                this.columnBooking_Method = new global::System.Data.DataColumn("Booking Method", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBooking_Method);
+                this.columnBooking_Status = new global::System.Data.DataColumn("Booking Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBooking_Status);
+                this.columnAmount_Due = new global::System.Data.DataColumn("Amount Due", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount_Due);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnBookingRef}, true));
-                this.columnemailID.AllowDBNull = false;
-                this.columnemailID.MaxLength = 50;
-                this.columnname.AllowDBNull = false;
-                this.columnname.MaxLength = 50;
-                this.columnsurname.AllowDBNull = false;
-                this.columnsurname.MaxLength = 50;
-                this.columnidNumber.AllowDBNull = false;
-                this.columnidNumber.MaxLength = 13;
-                this.columnBookingRef.AutoIncrement = true;
-                this.columnBookingRef.AutoIncrementSeed = -1;
-                this.columnBookingRef.AutoIncrementStep = -1;
-                this.columnBookingRef.AllowDBNull = false;
-                this.columnBookingRef.ReadOnly = true;
-                this.columnBookingRef.Unique = true;
-                this.columnBookingRef.Caption = "summaryID";
-                this.columndateIn.AllowDBNull = false;
-                this.columndateOut.AllowDBNull = false;
-                this.columnnumberOfNights.AllowDBNull = false;
-                this.columnbookingMethod.MaxLength = 50;
-                this.columnbookingStatus.MaxLength = 50;
-                this.columnamountDue.AllowDBNull = false;
-                this.columnamountDue.MaxLength = 50;
+                                this.columnBooking_Ref}, true));
+                this.columnEmail_Address.AllowDBNull = false;
+                this.columnEmail_Address.MaxLength = 50;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 50;
+                this.columnSurname.AllowDBNull = false;
+                this.columnSurname.MaxLength = 50;
+                this.columnID_Number.AllowDBNull = false;
+                this.columnID_Number.MaxLength = 13;
+                this.columnBooking_Ref.AutoIncrement = true;
+                this.columnBooking_Ref.AutoIncrementSeed = -1;
+                this.columnBooking_Ref.AutoIncrementStep = -1;
+                this.columnBooking_Ref.AllowDBNull = false;
+                this.columnBooking_Ref.ReadOnly = true;
+                this.columnBooking_Ref.Unique = true;
+                this.columnBooking_Ref.Caption = "summaryID";
+                this.columnDate_In.AllowDBNull = false;
+                this.columnDate_Out.AllowDBNull = false;
+                this.columnNumber_Of_Nights.AllowDBNull = false;
+                this.columnBooking_Method.MaxLength = 50;
+                this.columnBooking_Status.MaxLength = 50;
+                this.columnAmount_Due.AllowDBNull = false;
+                this.columnAmount_Due.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4274,7 +4274,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnSurnam;
+            private global::System.Data.DataColumn columnSurname;
             
             private global::System.Data.DataColumn columnID_Number;
             
@@ -4339,9 +4339,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SurnamColumn {
+            public global::System.Data.DataColumn SurnameColumn {
                 get {
-                    return this.columnSurnam;
+                    return this.columnSurname;
                 }
             }
             
@@ -4430,12 +4430,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Customer1Row AddCustomer1Row(string Email_Address, string Name, string Surnam, string ID_Number, string Cell_Number, string Street_Name, string Suburb, string City, string Postal_Code) {
+            public Customer1Row AddCustomer1Row(string Email_Address, string Name, string Surname, string ID_Number, string Cell_Number, string Street_Name, string Suburb, string City, string Postal_Code) {
                 Customer1Row rowCustomer1Row = ((Customer1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Email_Address,
                         Name,
-                        Surnam,
+                        Surname,
                         ID_Number,
                         Cell_Number,
                         Street_Name,
@@ -4473,7 +4473,7 @@ namespace WindowsFormsApp1 {
             internal void InitVars() {
                 this.columnEmail_Address = base.Columns["Email Address"];
                 this.columnName = base.Columns["Name"];
-                this.columnSurnam = base.Columns["Surnam"];
+                this.columnSurname = base.Columns["Surname"];
                 this.columnID_Number = base.Columns["ID Number"];
                 this.columnCell_Number = base.Columns["Cell Number"];
                 this.columnStreet_Name = base.Columns["Street Name"];
@@ -4489,8 +4489,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnEmail_Address);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnSurnam = new global::System.Data.DataColumn("Surnam", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSurnam);
+                this.columnSurname = new global::System.Data.DataColumn("Surname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSurname);
                 this.columnID_Number = new global::System.Data.DataColumn("ID Number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Number);
                 this.columnCell_Number = new global::System.Data.DataColumn("Cell Number", typeof(string), null, global::System.Data.MappingType.Element);
@@ -4512,9 +4512,9 @@ namespace WindowsFormsApp1 {
                 this.columnName.AllowDBNull = false;
                 this.columnName.Caption = "name";
                 this.columnName.MaxLength = 50;
-                this.columnSurnam.AllowDBNull = false;
-                this.columnSurnam.Caption = "surname";
-                this.columnSurnam.MaxLength = 50;
+                this.columnSurname.AllowDBNull = false;
+                this.columnSurname.Caption = "surname";
+                this.columnSurname.MaxLength = 50;
                 this.columnID_Number.AllowDBNull = false;
                 this.columnID_Number.Caption = "idNumber";
                 this.columnID_Number.MaxLength = 13;
@@ -5748,157 +5748,157 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string emailID {
+            public string Email_Address {
                 get {
-                    return ((string)(this[this.tableModifyBookingInner.emailIDColumn]));
+                    return ((string)(this[this.tableModifyBookingInner.Email_AddressColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.emailIDColumn] = value;
+                    this[this.tableModifyBookingInner.Email_AddressColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string name {
+            public string Name {
                 get {
-                    return ((string)(this[this.tableModifyBookingInner.nameColumn]));
+                    return ((string)(this[this.tableModifyBookingInner.NameColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.nameColumn] = value;
+                    this[this.tableModifyBookingInner.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string surname {
+            public string Surname {
                 get {
-                    return ((string)(this[this.tableModifyBookingInner.surnameColumn]));
+                    return ((string)(this[this.tableModifyBookingInner.SurnameColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.surnameColumn] = value;
+                    this[this.tableModifyBookingInner.SurnameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string idNumber {
+            public string ID_Number {
                 get {
-                    return ((string)(this[this.tableModifyBookingInner.idNumberColumn]));
+                    return ((string)(this[this.tableModifyBookingInner.ID_NumberColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.idNumberColumn] = value;
+                    this[this.tableModifyBookingInner.ID_NumberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BookingRef {
+            public int Booking_Ref {
                 get {
-                    return ((int)(this[this.tableModifyBookingInner.BookingRefColumn]));
+                    return ((int)(this[this.tableModifyBookingInner.Booking_RefColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.BookingRefColumn] = value;
+                    this[this.tableModifyBookingInner.Booking_RefColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime dateIn {
+            public System.DateTime Date_In {
                 get {
-                    return ((global::System.DateTime)(this[this.tableModifyBookingInner.dateInColumn]));
+                    return ((global::System.DateTime)(this[this.tableModifyBookingInner.Date_InColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.dateInColumn] = value;
+                    this[this.tableModifyBookingInner.Date_InColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime dateOut {
+            public System.DateTime Date_Out {
                 get {
-                    return ((global::System.DateTime)(this[this.tableModifyBookingInner.dateOutColumn]));
+                    return ((global::System.DateTime)(this[this.tableModifyBookingInner.Date_OutColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.dateOutColumn] = value;
+                    this[this.tableModifyBookingInner.Date_OutColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int numberOfNights {
+            public int Number_Of_Nights {
                 get {
-                    return ((int)(this[this.tableModifyBookingInner.numberOfNightsColumn]));
+                    return ((int)(this[this.tableModifyBookingInner.Number_Of_NightsColumn]));
                 }
                 set {
-                    this[this.tableModifyBookingInner.numberOfNightsColumn] = value;
+                    this[this.tableModifyBookingInner.Number_Of_NightsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string bookingMethod {
-                get {
-                    try {
-                        return ((string)(this[this.tableModifyBookingInner.bookingMethodColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'bookingMethod\' in table \'ModifyBookingInner\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableModifyBookingInner.bookingMethodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string bookingStatus {
+            public string Booking_Method {
                 get {
                     try {
-                        return ((string)(this[this.tableModifyBookingInner.bookingStatusColumn]));
+                        return ((string)(this[this.tableModifyBookingInner.Booking_MethodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'bookingStatus\' in table \'ModifyBookingInner\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Booking Method\' in table \'ModifyBookingInner\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableModifyBookingInner.bookingStatusColumn] = value;
+                    this[this.tableModifyBookingInner.Booking_MethodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string amountDue {
+            public string Booking_Status {
                 get {
-                    return ((string)(this[this.tableModifyBookingInner.amountDueColumn]));
+                    try {
+                        return ((string)(this[this.tableModifyBookingInner.Booking_StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Booking Status\' in table \'ModifyBookingInner\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableModifyBookingInner.amountDueColumn] = value;
+                    this[this.tableModifyBookingInner.Booking_StatusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsbookingMethodNull() {
-                return this.IsNull(this.tableModifyBookingInner.bookingMethodColumn);
+            public string Amount_Due {
+                get {
+                    return ((string)(this[this.tableModifyBookingInner.Amount_DueColumn]));
+                }
+                set {
+                    this[this.tableModifyBookingInner.Amount_DueColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetbookingMethodNull() {
-                this[this.tableModifyBookingInner.bookingMethodColumn] = global::System.Convert.DBNull;
+            public bool IsBooking_MethodNull() {
+                return this.IsNull(this.tableModifyBookingInner.Booking_MethodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsbookingStatusNull() {
-                return this.IsNull(this.tableModifyBookingInner.bookingStatusColumn);
+            public void SetBooking_MethodNull() {
+                this[this.tableModifyBookingInner.Booking_MethodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetbookingStatusNull() {
-                this[this.tableModifyBookingInner.bookingStatusColumn] = global::System.Convert.DBNull;
+            public bool IsBooking_StatusNull() {
+                return this.IsNull(this.tableModifyBookingInner.Booking_StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBooking_StatusNull() {
+                this[this.tableModifyBookingInner.Booking_StatusColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5940,12 +5940,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Surnam {
+            public string Surname {
                 get {
-                    return ((string)(this[this.tableCustomer1.SurnamColumn]));
+                    return ((string)(this[this.tableCustomer1.SurnameColumn]));
                 }
                 set {
-                    this[this.tableCustomer1.SurnamColumn] = value;
+                    this[this.tableCustomer1.SurnameColumn] = value;
                 }
             }
             
@@ -10353,17 +10353,17 @@ WHERE        (Customer.surname LIKE @name + '%') OR
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ModifyBookingInner";
-            tableMapping.ColumnMappings.Add("emailID", "emailID");
-            tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("surname", "surname");
-            tableMapping.ColumnMappings.Add("summaryID", "BookingRef");
-            tableMapping.ColumnMappings.Add("dateIn", "dateIn");
-            tableMapping.ColumnMappings.Add("dateOut", "dateOut");
-            tableMapping.ColumnMappings.Add("numberOfNights", "numberOfNights");
-            tableMapping.ColumnMappings.Add("bookingMethod", "bookingMethod");
-            tableMapping.ColumnMappings.Add("bookingStatus", "bookingStatus");
-            tableMapping.ColumnMappings.Add("amountDue", "amountDue");
-            tableMapping.ColumnMappings.Add("idNumber", "idNumber");
+            tableMapping.ColumnMappings.Add("emailID", "Email Address");
+            tableMapping.ColumnMappings.Add("name", "Name");
+            tableMapping.ColumnMappings.Add("surname", "Surname");
+            tableMapping.ColumnMappings.Add("summaryID", "Booking Ref");
+            tableMapping.ColumnMappings.Add("dateIn", "Date In");
+            tableMapping.ColumnMappings.Add("dateOut", "Date Out");
+            tableMapping.ColumnMappings.Add("numberOfNights", "Number Of Nights");
+            tableMapping.ColumnMappings.Add("bookingMethod", "Booking Method");
+            tableMapping.ColumnMappings.Add("bookingStatus", "Booking Status");
+            tableMapping.ColumnMappings.Add("amountDue", "Amount Due");
+            tableMapping.ColumnMappings.Add("idNumber", "ID Number");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10584,7 +10584,7 @@ WHERE        (Customer.emailID LIKE @name + '%') OR
             tableMapping.DataSetTable = "Customer1";
             tableMapping.ColumnMappings.Add("emailID", "Email Address");
             tableMapping.ColumnMappings.Add("name", "Name");
-            tableMapping.ColumnMappings.Add("surname", "Surnam");
+            tableMapping.ColumnMappings.Add("surname", "Surname");
             tableMapping.ColumnMappings.Add("idNumber", "ID Number");
             tableMapping.ColumnMappings.Add("cellNumber", "Cell Number");
             tableMapping.ColumnMappings.Add("streetName", "Street Name");
