@@ -1682,9 +1682,9 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.textBox18);
             this.panel9.Controls.Add(this.label44);
             this.panel9.Controls.Add(this.dataGridView3);
-            this.panel9.Location = new System.Drawing.Point(197, 6);
+            this.panel9.Location = new System.Drawing.Point(132, 6);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1108, 271);
+            this.panel9.Size = new System.Drawing.Size(1108, 294);
             this.panel9.TabIndex = 0;
             // 
             // dataGridView3
@@ -1736,7 +1736,7 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.textBox16);
             this.panel10.Controls.Add(this.textBox17);
             this.panel10.Controls.Add(this.button17);
-            this.panel10.Location = new System.Drawing.Point(489, 283);
+            this.panel10.Location = new System.Drawing.Point(468, 306);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(417, 368);
             this.panel10.TabIndex = 2;
@@ -1999,10 +1999,11 @@ namespace WindowsFormsApp1
             // label54
             // 
             this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(3, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(133, 18);
+            this.label54.Size = new System.Drawing.Size(148, 20);
             this.label54.TabIndex = 58;
             this.label54.Text = "Search Customer";
             // 

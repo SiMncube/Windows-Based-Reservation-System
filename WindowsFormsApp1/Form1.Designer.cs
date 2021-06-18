@@ -45,17 +45,17 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -267,16 +267,25 @@ namespace WindowsFormsApp1
             this.panel2.Size = new System.Drawing.Size(1361, 100);
             this.panel2.TabIndex = 16;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Webp_net_resizeimage;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 100);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Lucida Fax", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(260, 24);
+            this.label7.Location = new System.Drawing.Point(143, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(801, 61);
+            this.label7.Size = new System.Drawing.Size(1111, 56);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Welcome to the Cottage BnB";
+            this.label7.Text = "Welcome to the Cottage BnB Booking System";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -300,15 +309,6 @@ namespace WindowsFormsApp1
             // 
             this.staffTa.ClearBeforeFill = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Webp_net_resizeimage;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 100);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,8 +327,8 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.ResumeLayout(false);
 
         }
