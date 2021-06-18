@@ -226,5 +226,10 @@ namespace WindowsFormsApp1
             Form8 f = new Form8();
             f.ShowDialog();       
         }
+
+        private void PaymentForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
