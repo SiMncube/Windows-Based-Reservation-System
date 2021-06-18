@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_android_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-android-24", resourceCulture);
@@ -286,6 +296,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap Webp_net_resizeimage {
             get {
                 object obj = ResourceManager.GetObject("Webp.net-resizeimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webp_net_resizeimage__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Webp.net-resizeimage (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

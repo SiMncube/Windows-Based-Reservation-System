@@ -93,5 +93,17 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void invoiceForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
+        }
     }
 }

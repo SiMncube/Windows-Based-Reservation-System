@@ -221,6 +221,7 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
     <None Include="Resources\Webp.net-resizeimage10.png" />
     <None Include="Resources\Webp.net-resizeimage9.png" />
     <None Include="Resources\Webp.net-resizeimage8.png" />
@@ -266,6 +267,7 @@
     <None Include="Resources\icons8-mastercard-credit-card-48.png" />
     <None Include="Resources\icons8-visa-64.png" />
     <None Include="Resources\icons8-mastercard-64.png" />
+    <None Include="Resources\back.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />

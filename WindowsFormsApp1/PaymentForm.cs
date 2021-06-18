@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-                this.Hide();
+              //  this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             Form8 i = new Form8();
-            this.Hide();
+         //   this.Hide();
             i.ShowDialog();
             this.Close();
         }
@@ -214,7 +214,7 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-                this.Hide();
+             //   this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
