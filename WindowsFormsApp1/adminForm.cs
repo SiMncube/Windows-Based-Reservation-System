@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             viewBookingInnerTa.Fill(fullDs.viewBookingInner);
             staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
             customerTa.Fill(fullDs.Customer);
             bookedRoomTa.Fill(fullDs.BookedRoom);
             label12.Text += logedInAdmin();
@@ -693,6 +694,9 @@ namespace WindowsFormsApp1
             Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
             currentBooking.setRoomIDs(allAllocatedRooms);
+
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
