@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
             //Application.Run(new adminForm());
-           // Application.Run(new managerForm());
+             //Application.Run(new managerForm());
         }
     }
 }
