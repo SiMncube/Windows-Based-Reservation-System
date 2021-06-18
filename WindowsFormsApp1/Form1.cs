@@ -25,22 +25,24 @@ namespace WindowsFormsApp1
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())
                 {
-                    this.Close();
+                    this.Hide();
                     Form8 homePage = new Form8();
                     homePage.ShowDialog();
-                }
-                else if(adminNameIsCorrect() && adminPasswordIsCorrect())
-                {
                     this.Close();
-                    adminForm a = new adminForm();
-                    a.ShowDialog();         
                 }
-                else if(managerNameIsCorrect() && managerNameIsCorrect())
+                if(adminNameIsCorrect() && adminPasswordIsCorrect())
                 {
-                    this.Close();
-                    managerForm m = new managerForm();
                     this.Hide();
-                    m.ShowDialog();                
+                    adminForm a = new adminForm();
+                    a.ShowDialog();
+                    this.Close();
+                }
+                if(managerNameIsCorrect() && managerNameIsCorrect())
+                {
+                    this.Hide();
+                    managerForm m = new managerForm();
+                    m.ShowDialog();
+                    this.Close();
                 }
             }
         }

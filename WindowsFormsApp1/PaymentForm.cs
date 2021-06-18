@@ -224,8 +224,7 @@ namespace WindowsFormsApp1
         {
             this.Close();
             Form8 f = new Form8();
-            f.ShowDialog();
-            
+            f.ShowDialog();       
         }
     }
 }
