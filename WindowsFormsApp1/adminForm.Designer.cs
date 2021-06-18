@@ -38,18 +38,6 @@ namespace WindowsFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingRefDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfNightsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingMethodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStatusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -58,16 +46,6 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDueDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fullDs1 = new WindowsFormsApp1.fullDatabase();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -76,15 +54,6 @@ namespace WindowsFormsApp1
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bookingInnerDGV = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingRefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -102,18 +71,6 @@ namespace WindowsFormsApp1
             this.label43 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.modifyBookingInnerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modifyBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -134,16 +91,6 @@ namespace WindowsFormsApp1
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -189,29 +136,8 @@ namespace WindowsFormsApp1
             this.registerButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
-            this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
-            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
-            this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
-            this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
-            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
-            this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
-            this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -238,28 +164,95 @@ namespace WindowsFormsApp1
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
+            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fullDs = new WindowsFormsApp1.fullDatabase();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modifyBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDueDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fullDs1 = new WindowsFormsApp1.fullDatabase();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingRefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingRefDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfNightsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingMethodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStatusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
+            this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
+            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
+            this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
+            this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
+            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
+            this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
+            this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.panel5.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -270,10 +263,17 @@ namespace WindowsFormsApp1
             this.tabPage6.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -380,86 +380,6 @@ namespace WindowsFormsApp1
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(1043, 354);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn2
-            // 
-            this.surnameDataGridViewTextBoxColumn2.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn2.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn2.Name = "surnameDataGridViewTextBoxColumn2";
-            this.surnameDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // bookingRefDataGridViewTextBoxColumn2
-            // 
-            this.bookingRefDataGridViewTextBoxColumn2.DataPropertyName = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn2.HeaderText = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn2.Name = "bookingRefDataGridViewTextBoxColumn2";
-            this.bookingRefDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn2
-            // 
-            this.emailDataGridViewTextBoxColumn2.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn2.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn2.Name = "emailDataGridViewTextBoxColumn2";
-            this.emailDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dateInDataGridViewTextBoxColumn
-            // 
-            this.dateInDataGridViewTextBoxColumn.DataPropertyName = "Date In";
-            this.dateInDataGridViewTextBoxColumn.HeaderText = "Date In";
-            this.dateInDataGridViewTextBoxColumn.Name = "dateInDataGridViewTextBoxColumn";
-            this.dateInDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateOutDataGridViewTextBoxColumn
-            // 
-            this.dateOutDataGridViewTextBoxColumn.DataPropertyName = "Date Out";
-            this.dateOutDataGridViewTextBoxColumn.HeaderText = "Date Out";
-            this.dateOutDataGridViewTextBoxColumn.Name = "dateOutDataGridViewTextBoxColumn";
-            this.dateOutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numberOfNightsDataGridViewTextBoxColumn
-            // 
-            this.numberOfNightsDataGridViewTextBoxColumn.DataPropertyName = "Number Of Nights";
-            this.numberOfNightsDataGridViewTextBoxColumn.HeaderText = "Number Of Nights";
-            this.numberOfNightsDataGridViewTextBoxColumn.Name = "numberOfNightsDataGridViewTextBoxColumn";
-            this.numberOfNightsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingMethodDataGridViewTextBoxColumn
-            // 
-            this.bookingMethodDataGridViewTextBoxColumn.DataPropertyName = "Booking Method";
-            this.bookingMethodDataGridViewTextBoxColumn.HeaderText = "Booking Method";
-            this.bookingMethodDataGridViewTextBoxColumn.Name = "bookingMethodDataGridViewTextBoxColumn";
-            this.bookingMethodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn2
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn2.DataPropertyName = "Booking Status";
-            this.bookingStatusDataGridViewTextBoxColumn2.HeaderText = "Booking Status";
-            this.bookingStatusDataGridViewTextBoxColumn2.Name = "bookingStatusDataGridViewTextBoxColumn2";
-            this.bookingStatusDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // amountDueDataGridViewTextBoxColumn
-            // 
-            this.amountDueDataGridViewTextBoxColumn.DataPropertyName = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn.HeaderText = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn.Name = "amountDueDataGridViewTextBoxColumn";
-            this.amountDueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // viewBookingInnerBindingSource
-            // 
-            this.viewBookingInnerBindingSource.DataMember = "viewBookingInner";
-            this.viewBookingInnerBindingSource.DataSource = this.fullDs;
-            // 
-            // fullDs
-            // 
-            this.fullDs.DataSetName = "fullDatabase";
-            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage4
             // 
@@ -573,72 +493,6 @@ namespace WindowsFormsApp1
             this.dataGridView1.Size = new System.Drawing.Size(844, 128);
             this.dataGridView1.TabIndex = 0;
             // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn1
-            // 
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
-            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn1
-            // 
-            this.iDNumberDataGridViewTextBoxColumn1.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn1.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn1.Name = "iDNumberDataGridViewTextBoxColumn1";
-            this.iDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cellNumberDataGridViewTextBoxColumn1
-            // 
-            this.cellNumberDataGridViewTextBoxColumn1.DataPropertyName = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn1.HeaderText = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn1.Name = "cellNumberDataGridViewTextBoxColumn1";
-            this.cellNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingRefDataGridViewTextBoxColumn1
-            // 
-            this.bookingRefDataGridViewTextBoxColumn1.DataPropertyName = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn1.HeaderText = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn1.Name = "bookingRefDataGridViewTextBoxColumn1";
-            this.bookingRefDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // customerEmailDataGridViewTextBoxColumn1
-            // 
-            this.customerEmailDataGridViewTextBoxColumn1.DataPropertyName = "Customer Email";
-            this.customerEmailDataGridViewTextBoxColumn1.HeaderText = "Customer Email";
-            this.customerEmailDataGridViewTextBoxColumn1.Name = "customerEmailDataGridViewTextBoxColumn1";
-            this.customerEmailDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn1
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
-            this.bookingStatusDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // amountDueDataGridViewTextBoxColumn2
-            // 
-            this.amountDueDataGridViewTextBoxColumn2.DataPropertyName = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn2.HeaderText = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn2.Name = "amountDueDataGridViewTextBoxColumn2";
-            this.amountDueDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // bookingInnerBindingSource1
-            // 
-            this.bookingInnerBindingSource1.DataMember = "BookingInner";
-            this.bookingInnerBindingSource1.DataSource = this.fullDs1;
-            // 
-            // fullDs1
-            // 
-            this.fullDs1.DataSetName = "fullDatabase";
-            this.fullDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -746,67 +600,6 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.TabIndex = 0;
             this.bookingInnerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookingInnerDGV_CellContentClick);
             this.bookingInnerDGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookingInnerDGV_RowHeaderMouseDoubleClick);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn
-            // 
-            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
-            this.iDNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cellNumberDataGridViewTextBoxColumn
-            // 
-            this.cellNumberDataGridViewTextBoxColumn.DataPropertyName = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn.HeaderText = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn.Name = "cellNumberDataGridViewTextBoxColumn";
-            this.cellNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingRefDataGridViewTextBoxColumn
-            // 
-            this.bookingRefDataGridViewTextBoxColumn.DataPropertyName = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn.HeaderText = "Booking Ref";
-            this.bookingRefDataGridViewTextBoxColumn.Name = "bookingRefDataGridViewTextBoxColumn";
-            this.bookingRefDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerEmailDataGridViewTextBoxColumn
-            // 
-            this.customerEmailDataGridViewTextBoxColumn.DataPropertyName = "Customer Email";
-            this.customerEmailDataGridViewTextBoxColumn.HeaderText = "Customer Email";
-            this.customerEmailDataGridViewTextBoxColumn.Name = "customerEmailDataGridViewTextBoxColumn";
-            this.customerEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn.DataPropertyName = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn.HeaderText = "Booking status";
-            this.bookingStatusDataGridViewTextBoxColumn.Name = "bookingStatusDataGridViewTextBoxColumn";
-            this.bookingStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountDueDataGridViewTextBoxColumn1
-            // 
-            this.amountDueDataGridViewTextBoxColumn1.DataPropertyName = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn1.HeaderText = "Amount Due";
-            this.amountDueDataGridViewTextBoxColumn1.Name = "amountDueDataGridViewTextBoxColumn1";
-            this.amountDueDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bookingInnerBindingSource
-            // 
-            this.bookingInnerBindingSource.DataMember = "BookingInner";
-            this.bookingInnerBindingSource.DataSource = this.fullDs;
             // 
             // tabPage3
             // 
@@ -1038,78 +831,6 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerDataGridView.Size = new System.Drawing.Size(1151, 163);
             this.modifyBookingInnerDataGridView.TabIndex = 57;
             this.modifyBookingInnerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "emailID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "emailID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn11.HeaderText = "name";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "surname";
-            this.dataGridViewTextBoxColumn12.HeaderText = "surname";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "idNumber";
-            this.dataGridViewTextBoxColumn13.HeaderText = "idNumber";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "BookingRef";
-            this.dataGridViewTextBoxColumn15.HeaderText = "BookingRef";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "dateIn";
-            this.dataGridViewTextBoxColumn16.HeaderText = "dateIn";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "dateOut";
-            this.dataGridViewTextBoxColumn17.HeaderText = "dateOut";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "numberOfNights";
-            this.dataGridViewTextBoxColumn18.HeaderText = "numberOfNights";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "bookingMethod";
-            this.dataGridViewTextBoxColumn19.HeaderText = "bookingMethod";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "bookingStatus";
-            this.dataGridViewTextBoxColumn20.HeaderText = "bookingStatus";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "amountDue";
-            this.dataGridViewTextBoxColumn21.HeaderText = "amountDue";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // modifyBookingInnerBindingSource
-            // 
-            this.modifyBookingInnerBindingSource.DataMember = "ModifyBookingInner";
-            this.modifyBookingInnerBindingSource.DataSource = this.fullDs;
             // 
             // label29
             // 
@@ -1363,74 +1084,6 @@ namespace WindowsFormsApp1
             this.customerDataGridView.TabIndex = 53;
             this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerDataGridView_RowHeaderMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "emailID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "emailID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "surname";
-            this.dataGridViewTextBoxColumn3.HeaderText = "surname";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "idNumber";
-            this.dataGridViewTextBoxColumn4.HeaderText = "idNumber";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "cellNumber";
-            this.dataGridViewTextBoxColumn5.HeaderText = "cellNumber";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "streetName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "streetName";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "suburb";
-            this.dataGridViewTextBoxColumn8.HeaderText = "suburb";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "city";
-            this.dataGridViewTextBoxColumn9.HeaderText = "city";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "postalCode";
-            this.dataGridViewTextBoxColumn10.HeaderText = "postalCode";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.fullDs;
             // 
             // button10
             // 
@@ -2018,59 +1671,6 @@ namespace WindowsFormsApp1
             this.tabPage6.Text = "Update customer details";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // customerTa
-            // 
-            this.customerTa.ClearBeforeFill = true;
-            // 
-            // paymentTa
-            // 
-            this.paymentTa.ClearBeforeFill = true;
-            // 
-            // bookingInnerTa
-            // 
-            this.bookingInnerTa.ClearBeforeFill = true;
-            // 
-            // bookingSummaryTa
-            // 
-            this.bookingSummaryTa.ClearBeforeFill = true;
-            // 
-            // viewBookingInnerTa
-            // 
-            this.viewBookingInnerTa.ClearBeforeFill = true;
-            // 
-            // staffTa
-            // 
-            this.staffTa.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BookedRoomTableAdapter = null;
-            this.tableAdapterManager.BookingSummaryTableAdapter = this.bookingSummaryTa;
-            this.tableAdapterManager.Customer1TableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTa;
-            this.tableAdapterManager.PaymentTableAdapter = this.paymentTa;
-            this.tableAdapterManager.RoomTableAdapter = null;
-            this.tableAdapterManager.RoomTypeTableAdapter = null;
-            this.tableAdapterManager.StaffTableAdapter = this.staffTa;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // customerTableAdapter1
-            // 
-            this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // modifyBookingInnerTa
-            // 
-            this.modifyBookingInnerTa.ClearBeforeFill = true;
-            // 
-            // bookedRoomTa
-            // 
-            this.bookedRoomTa.ClearBeforeFill = true;
-            // 
-            // customer1Ta1
-            // 
-            this.customer1Ta1.ClearBeforeFill = true;
-            // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2106,74 +1706,6 @@ namespace WindowsFormsApp1
             this.dataGridView3.Size = new System.Drawing.Size(943, 163);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick);
-            // 
-            // customer1BindingSource
-            // 
-            this.customer1BindingSource.DataMember = "Customer1";
-            this.customer1BindingSource.DataSource = this.fullDs;
-            // 
-            // emailAddressDataGridViewTextBoxColumn
-            // 
-            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "Email Address";
-            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address";
-            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
-            this.emailAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn3
-            // 
-            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
-            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // surnamDataGridViewTextBoxColumn
-            // 
-            this.surnamDataGridViewTextBoxColumn.DataPropertyName = "Surnam";
-            this.surnamDataGridViewTextBoxColumn.HeaderText = "Surnam";
-            this.surnamDataGridViewTextBoxColumn.Name = "surnamDataGridViewTextBoxColumn";
-            this.surnamDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn2
-            // 
-            this.iDNumberDataGridViewTextBoxColumn2.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn2.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn2.Name = "iDNumberDataGridViewTextBoxColumn2";
-            this.iDNumberDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // cellNumberDataGridViewTextBoxColumn2
-            // 
-            this.cellNumberDataGridViewTextBoxColumn2.DataPropertyName = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn2.HeaderText = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn2.Name = "cellNumberDataGridViewTextBoxColumn2";
-            this.cellNumberDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // streetNameDataGridViewTextBoxColumn
-            // 
-            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "Street Name";
-            this.streetNameDataGridViewTextBoxColumn.HeaderText = "Street Name";
-            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
-            this.streetNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // suburbDataGridViewTextBoxColumn
-            // 
-            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "Suburb";
-            this.suburbDataGridViewTextBoxColumn.HeaderText = "Suburb";
-            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
-            this.suburbDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // postalCodeDataGridViewTextBoxColumn
-            // 
-            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "Postal Code";
-            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "Postal Code";
-            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
-            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // panel10
             // 
@@ -2240,11 +1772,12 @@ namespace WindowsFormsApp1
             this.button16.TabIndex = 57;
             this.button16.Text = "Cancel";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Gray;
+            this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox7.Location = new System.Drawing.Point(50, 279);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -2254,7 +1787,7 @@ namespace WindowsFormsApp1
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.Gray;
+            this.textBox10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox10.Location = new System.Drawing.Point(235, 228);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(139, 27);
@@ -2263,7 +1796,7 @@ namespace WindowsFormsApp1
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.Color.Gray;
+            this.textBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox12.Location = new System.Drawing.Point(50, 228);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -2273,7 +1806,7 @@ namespace WindowsFormsApp1
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.Gray;
+            this.textBox11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox11.Location = new System.Drawing.Point(235, 179);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(139, 27);
@@ -2282,7 +1815,7 @@ namespace WindowsFormsApp1
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.Gray;
+            this.textBox13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox13.Location = new System.Drawing.Point(50, 179);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(179, 27);
@@ -2291,7 +1824,7 @@ namespace WindowsFormsApp1
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.Color.Gray;
+            this.textBox14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox14.Location = new System.Drawing.Point(50, 130);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(324, 27);
@@ -2300,7 +1833,7 @@ namespace WindowsFormsApp1
             // textBox15
             // 
             this.textBox15.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.ForeColor = System.Drawing.Color.Gray;
+            this.textBox15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox15.Location = new System.Drawing.Point(50, 81);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(324, 27);
@@ -2309,7 +1842,7 @@ namespace WindowsFormsApp1
             // textBox16
             // 
             this.textBox16.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.ForeColor = System.Drawing.Color.Gray;
+            this.textBox16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox16.Location = new System.Drawing.Point(205, 31);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(169, 27);
@@ -2318,7 +1851,7 @@ namespace WindowsFormsApp1
             // textBox17
             // 
             this.textBox17.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.ForeColor = System.Drawing.Color.Gray;
+            this.textBox17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox17.Location = new System.Drawing.Point(50, 30);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(149, 27);
@@ -2337,6 +1870,7 @@ namespace WindowsFormsApp1
             this.button17.TabIndex = 38;
             this.button17.Text = "Update";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // textBox18
             // 
@@ -2345,17 +1879,18 @@ namespace WindowsFormsApp1
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
+            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label44
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label44.Location = new System.Drawing.Point(298, 15);
+            this.label44.Location = new System.Drawing.Point(235, 15);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(546, 24);
+            this.label44.Size = new System.Drawing.Size(669, 24);
             this.label44.TabIndex = 5;
-            this.label44.Text = "Enter booking ref, customer email or Customer name";
+            this.label44.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
             // 
             // label45
             // 
@@ -2467,6 +2002,474 @@ namespace WindowsFormsApp1
             this.label54.TabIndex = 58;
             this.label54.Text = "Search Customer";
             // 
+            // emailAddressDataGridViewTextBoxColumn
+            // 
+            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "Email Address";
+            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address";
+            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
+            this.emailAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn3
+            // 
+            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // surnamDataGridViewTextBoxColumn
+            // 
+            this.surnamDataGridViewTextBoxColumn.DataPropertyName = "Surnam";
+            this.surnamDataGridViewTextBoxColumn.HeaderText = "Surnam";
+            this.surnamDataGridViewTextBoxColumn.Name = "surnamDataGridViewTextBoxColumn";
+            this.surnamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn2
+            // 
+            this.iDNumberDataGridViewTextBoxColumn2.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn2.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn2.Name = "iDNumberDataGridViewTextBoxColumn2";
+            this.iDNumberDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // cellNumberDataGridViewTextBoxColumn2
+            // 
+            this.cellNumberDataGridViewTextBoxColumn2.DataPropertyName = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn2.HeaderText = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn2.Name = "cellNumberDataGridViewTextBoxColumn2";
+            this.cellNumberDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // streetNameDataGridViewTextBoxColumn
+            // 
+            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "Street Name";
+            this.streetNameDataGridViewTextBoxColumn.HeaderText = "Street Name";
+            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
+            this.streetNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // suburbDataGridViewTextBoxColumn
+            // 
+            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "Suburb";
+            this.suburbDataGridViewTextBoxColumn.HeaderText = "Suburb";
+            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
+            this.suburbDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "Postal Code";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "Postal Code";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customer1BindingSource
+            // 
+            this.customer1BindingSource.DataMember = "Customer1";
+            this.customer1BindingSource.DataSource = this.fullDs;
+            // 
+            // fullDs
+            // 
+            this.fullDs.DataSetName = "fullDatabase";
+            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "emailID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "emailID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "surname";
+            this.dataGridViewTextBoxColumn3.HeaderText = "surname";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "idNumber";
+            this.dataGridViewTextBoxColumn4.HeaderText = "idNumber";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "cellNumber";
+            this.dataGridViewTextBoxColumn5.HeaderText = "cellNumber";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "streetName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "streetName";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "suburb";
+            this.dataGridViewTextBoxColumn8.HeaderText = "suburb";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "city";
+            this.dataGridViewTextBoxColumn9.HeaderText = "city";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "postalCode";
+            this.dataGridViewTextBoxColumn10.HeaderText = "postalCode";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.fullDs;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "emailID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "emailID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn11.HeaderText = "name";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "surname";
+            this.dataGridViewTextBoxColumn12.HeaderText = "surname";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "idNumber";
+            this.dataGridViewTextBoxColumn13.HeaderText = "idNumber";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "BookingRef";
+            this.dataGridViewTextBoxColumn15.HeaderText = "BookingRef";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "dateIn";
+            this.dataGridViewTextBoxColumn16.HeaderText = "dateIn";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "dateOut";
+            this.dataGridViewTextBoxColumn17.HeaderText = "dateOut";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "numberOfNights";
+            this.dataGridViewTextBoxColumn18.HeaderText = "numberOfNights";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "bookingMethod";
+            this.dataGridViewTextBoxColumn19.HeaderText = "bookingMethod";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "bookingStatus";
+            this.dataGridViewTextBoxColumn20.HeaderText = "bookingStatus";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "amountDue";
+            this.dataGridViewTextBoxColumn21.HeaderText = "amountDue";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // modifyBookingInnerBindingSource
+            // 
+            this.modifyBookingInnerBindingSource.DataMember = "ModifyBookingInner";
+            this.modifyBookingInnerBindingSource.DataSource = this.fullDs;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn1
+            // 
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn1
+            // 
+            this.iDNumberDataGridViewTextBoxColumn1.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn1.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn1.Name = "iDNumberDataGridViewTextBoxColumn1";
+            this.iDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cellNumberDataGridViewTextBoxColumn1
+            // 
+            this.cellNumberDataGridViewTextBoxColumn1.DataPropertyName = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn1.HeaderText = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn1.Name = "cellNumberDataGridViewTextBoxColumn1";
+            this.cellNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingRefDataGridViewTextBoxColumn1
+            // 
+            this.bookingRefDataGridViewTextBoxColumn1.DataPropertyName = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn1.HeaderText = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn1.Name = "bookingRefDataGridViewTextBoxColumn1";
+            this.bookingRefDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // customerEmailDataGridViewTextBoxColumn1
+            // 
+            this.customerEmailDataGridViewTextBoxColumn1.DataPropertyName = "Customer Email";
+            this.customerEmailDataGridViewTextBoxColumn1.HeaderText = "Customer Email";
+            this.customerEmailDataGridViewTextBoxColumn1.Name = "customerEmailDataGridViewTextBoxColumn1";
+            this.customerEmailDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn1
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
+            this.bookingStatusDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // amountDueDataGridViewTextBoxColumn2
+            // 
+            this.amountDueDataGridViewTextBoxColumn2.DataPropertyName = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn2.HeaderText = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn2.Name = "amountDueDataGridViewTextBoxColumn2";
+            this.amountDueDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // bookingInnerBindingSource1
+            // 
+            this.bookingInnerBindingSource1.DataMember = "BookingInner";
+            this.bookingInnerBindingSource1.DataSource = this.fullDs1;
+            // 
+            // fullDs1
+            // 
+            this.fullDs1.DataSetName = "fullDatabase";
+            this.fullDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn
+            // 
+            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
+            this.iDNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cellNumberDataGridViewTextBoxColumn
+            // 
+            this.cellNumberDataGridViewTextBoxColumn.DataPropertyName = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn.HeaderText = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn.Name = "cellNumberDataGridViewTextBoxColumn";
+            this.cellNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingRefDataGridViewTextBoxColumn
+            // 
+            this.bookingRefDataGridViewTextBoxColumn.DataPropertyName = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn.HeaderText = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn.Name = "bookingRefDataGridViewTextBoxColumn";
+            this.bookingRefDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerEmailDataGridViewTextBoxColumn
+            // 
+            this.customerEmailDataGridViewTextBoxColumn.DataPropertyName = "Customer Email";
+            this.customerEmailDataGridViewTextBoxColumn.HeaderText = "Customer Email";
+            this.customerEmailDataGridViewTextBoxColumn.Name = "customerEmailDataGridViewTextBoxColumn";
+            this.customerEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn.DataPropertyName = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn.HeaderText = "Booking status";
+            this.bookingStatusDataGridViewTextBoxColumn.Name = "bookingStatusDataGridViewTextBoxColumn";
+            this.bookingStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDueDataGridViewTextBoxColumn1
+            // 
+            this.amountDueDataGridViewTextBoxColumn1.DataPropertyName = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn1.HeaderText = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn1.Name = "amountDueDataGridViewTextBoxColumn1";
+            this.amountDueDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bookingInnerBindingSource
+            // 
+            this.bookingInnerBindingSource.DataMember = "BookingInner";
+            this.bookingInnerBindingSource.DataSource = this.fullDs;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn2
+            // 
+            this.surnameDataGridViewTextBoxColumn2.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn2.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn2.Name = "surnameDataGridViewTextBoxColumn2";
+            this.surnameDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // bookingRefDataGridViewTextBoxColumn2
+            // 
+            this.bookingRefDataGridViewTextBoxColumn2.DataPropertyName = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn2.HeaderText = "Booking Ref";
+            this.bookingRefDataGridViewTextBoxColumn2.Name = "bookingRefDataGridViewTextBoxColumn2";
+            this.bookingRefDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn2
+            // 
+            this.emailDataGridViewTextBoxColumn2.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn2.Name = "emailDataGridViewTextBoxColumn2";
+            this.emailDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dateInDataGridViewTextBoxColumn
+            // 
+            this.dateInDataGridViewTextBoxColumn.DataPropertyName = "Date In";
+            this.dateInDataGridViewTextBoxColumn.HeaderText = "Date In";
+            this.dateInDataGridViewTextBoxColumn.Name = "dateInDataGridViewTextBoxColumn";
+            this.dateInDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateOutDataGridViewTextBoxColumn
+            // 
+            this.dateOutDataGridViewTextBoxColumn.DataPropertyName = "Date Out";
+            this.dateOutDataGridViewTextBoxColumn.HeaderText = "Date Out";
+            this.dateOutDataGridViewTextBoxColumn.Name = "dateOutDataGridViewTextBoxColumn";
+            this.dateOutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberOfNightsDataGridViewTextBoxColumn
+            // 
+            this.numberOfNightsDataGridViewTextBoxColumn.DataPropertyName = "Number Of Nights";
+            this.numberOfNightsDataGridViewTextBoxColumn.HeaderText = "Number Of Nights";
+            this.numberOfNightsDataGridViewTextBoxColumn.Name = "numberOfNightsDataGridViewTextBoxColumn";
+            this.numberOfNightsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingMethodDataGridViewTextBoxColumn
+            // 
+            this.bookingMethodDataGridViewTextBoxColumn.DataPropertyName = "Booking Method";
+            this.bookingMethodDataGridViewTextBoxColumn.HeaderText = "Booking Method";
+            this.bookingMethodDataGridViewTextBoxColumn.Name = "bookingMethodDataGridViewTextBoxColumn";
+            this.bookingMethodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn2
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn2.DataPropertyName = "Booking Status";
+            this.bookingStatusDataGridViewTextBoxColumn2.HeaderText = "Booking Status";
+            this.bookingStatusDataGridViewTextBoxColumn2.Name = "bookingStatusDataGridViewTextBoxColumn2";
+            this.bookingStatusDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // amountDueDataGridViewTextBoxColumn
+            // 
+            this.amountDueDataGridViewTextBoxColumn.DataPropertyName = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn.HeaderText = "Amount Due";
+            this.amountDueDataGridViewTextBoxColumn.Name = "amountDueDataGridViewTextBoxColumn";
+            this.amountDueDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // viewBookingInnerBindingSource
+            // 
+            this.viewBookingInnerBindingSource.DataMember = "viewBookingInner";
+            this.viewBookingInnerBindingSource.DataSource = this.fullDs;
+            // 
+            // customerTa
+            // 
+            this.customerTa.ClearBeforeFill = true;
+            // 
+            // paymentTa
+            // 
+            this.paymentTa.ClearBeforeFill = true;
+            // 
+            // bookingInnerTa
+            // 
+            this.bookingInnerTa.ClearBeforeFill = true;
+            // 
+            // bookingSummaryTa
+            // 
+            this.bookingSummaryTa.ClearBeforeFill = true;
+            // 
+            // viewBookingInnerTa
+            // 
+            this.viewBookingInnerTa.ClearBeforeFill = true;
+            // 
+            // staffTa
+            // 
+            this.staffTa.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BookedRoomTableAdapter = null;
+            this.tableAdapterManager.BookingSummaryTableAdapter = this.bookingSummaryTa;
+            this.tableAdapterManager.Customer1TableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTa;
+            this.tableAdapterManager.PaymentTableAdapter = this.paymentTa;
+            this.tableAdapterManager.RoomTableAdapter = null;
+            this.tableAdapterManager.RoomTypeTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = this.staffTa;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // modifyBookingInnerTa
+            // 
+            this.modifyBookingInnerTa.ClearBeforeFill = true;
+            // 
+            // bookedRoomTa
+            // 
+            this.bookedRoomTa.ClearBeforeFill = true;
+            // 
+            // customer1Ta1
+            // 
+            this.customer1Ta1.ClearBeforeFill = true;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2483,19 +2486,14 @@ namespace WindowsFormsApp1
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -2503,13 +2501,11 @@ namespace WindowsFormsApp1
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -2524,11 +2520,18 @@ namespace WindowsFormsApp1
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
