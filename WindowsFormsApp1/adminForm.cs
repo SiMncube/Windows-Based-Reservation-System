@@ -989,23 +989,17 @@ namespace WindowsFormsApp1
             {
                 dataRow[i] = dataGridView3.CurrentRow.Cells[i].Value;
             }
-            try
-            {
-                updateTextBox(textBox7, dataRow[0].ToString());
-                updateTextBox(textBox17, dataRow[1].ToString());
-                updateTextBox(textBox16, dataRow[2].ToString());
-                updateTextBox(textBox15, dataRow[5].ToString());
-                updateTextBox(textBox14, dataRow[6].ToString());
-                updateTextBox(textBox13, dataRow[7].ToString());
-                updateTextBox(textBox11, dataRow[8].ToString());
-                updateTextBox(textBox12, dataRow[3].ToString());
-                updateTextBox(textBox10, dataRow[4].ToString());
-            }
-            catch (ConstraintException)
-            {
-                label5.Visible = true;
-
-            }
+            label55.Visible = false;
+            label56.Visible = false;
+            updateTextBox(textBox7, dataRow[0].ToString());
+            updateTextBox(textBox17, dataRow[1].ToString());
+            updateTextBox(textBox16, dataRow[2].ToString());
+            updateTextBox(textBox15, dataRow[5].ToString());
+            updateTextBox(textBox14, dataRow[6].ToString());
+            updateTextBox(textBox13, dataRow[7].ToString());
+            updateTextBox(textBox11, dataRow[8].ToString());
+            updateTextBox(textBox12, dataRow[3].ToString());
+            updateTextBox(textBox10, dataRow[4].ToString());
         }
         private void updateTextBox(TextBox textBox , string s)
         {
@@ -1027,7 +1021,43 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
-            
+            if (textBox7.Text != "")
+            {
+                label55.Visible = false;
+                for (int i = 0; i < fullDs.Customer1.Rows.Count; i++)
+                {
+                    if (fullDs.Customer1[i].Email_Address.Equals(textBox7.Text, StringComparison.OrdinalIgnoreCase))
+                    {
+                        fullDs.Customer[i].name = textBox17.Text;
+                        fullDs.Customer[i].surname = textBox16.Text;
+                        fullDs.Customer[i].streetName = textBox15.Text;
+                        fullDs.Customer[i].suburb = textBox14.Text;
+                        fullDs.Customer[i].city = textBox13.Text;
+                        fullDs.Customer[i].postalCode = textBox11.Text;
+                        fullDs.Customer[i].idNumber = textBox12.Text;
+                        fullDs.Customer[i].cellNumber = textBox10.Text;
+                        customerTa.Update(fullDs.Customer[i]);
+                        customer1Ta1.Update(fullDs.Customer1[i]);
+                        customer1Ta1.Fill(fullDs.Customer1);
+                        label56.Visible = true;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                label55.Visible = true;
+                label56.Visible = false;
+            }
+            textBox7.Text = "";
+            textBox17.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+            textBox14.Text = "";
+            textBox13.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox10.Text = "";
         }
 
         private void textBox18_TextChanged(object sender, EventArgs e)
