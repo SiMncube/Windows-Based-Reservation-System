@@ -238,6 +238,8 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -1674,6 +1676,8 @@ namespace WindowsFormsApp1
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.label56);
+            this.panel9.Controls.Add(this.label55);
             this.panel9.Controls.Add(this.label54);
             this.panel9.Controls.Add(this.textBox18);
             this.panel9.Controls.Add(this.label44);
@@ -1700,7 +1704,7 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn,
             this.postalCodeDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.customer1BindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(95, 77);
+            this.dataGridView3.Location = new System.Drawing.Point(94, 98);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(943, 163);
@@ -1875,7 +1879,7 @@ namespace WindowsFormsApp1
             // textBox18
             // 
             this.textBox18.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(264, 42);
+            this.textBox18.Location = new System.Drawing.Point(263, 63);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
@@ -1886,7 +1890,7 @@ namespace WindowsFormsApp1
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label44.Location = new System.Drawing.Point(235, 15);
+            this.label44.Location = new System.Drawing.Point(234, 36);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(669, 24);
             this.label44.TabIndex = 5;
@@ -2470,6 +2474,30 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.Red;
+            this.label55.Location = new System.Drawing.Point(398, 12);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(243, 24);
+            this.label55.TabIndex = 59;
+            this.label55.Text = "Please select a customer";
+            this.label55.Visible = false;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Lime;
+            this.label56.Location = new System.Drawing.Point(393, 12);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(273, 24);
+            this.label56.TabIndex = 60;
+            this.label56.Text = "Details updated successfully";
+            this.label56.Visible = false;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2746,5 +2774,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
     }
 }
