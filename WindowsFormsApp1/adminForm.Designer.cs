@@ -1870,6 +1870,7 @@ namespace WindowsFormsApp1
             this.button17.TabIndex = 38;
             this.button17.Text = "Update";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // textBox18
             // 
@@ -1878,6 +1879,7 @@ namespace WindowsFormsApp1
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
+            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label44
             // 

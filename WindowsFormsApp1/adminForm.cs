@@ -1024,5 +1024,15 @@ namespace WindowsFormsApp1
             textBox12.Text = "";
             textBox10.Text = "";
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
+        }
     }
 }
