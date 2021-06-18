@@ -48,6 +48,15 @@ namespace WindowsFormsApp1
             if (signUIsValid())
             {
                 customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+                bookingInnerTa.Fill(fullDs.BookingInner);
+                paymentTa.Fill(fullDs.Payment);
+                bookingSummaryTa.Fill(fullDs.BookingSummary);
+                viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+                staffTa.Fill(fullDs.Staff);
+                modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+                customerTa.Fill(fullDs.Customer);
+                customer1Ta1.Fill(fullDs.Customer1);
+                bookedRoomTa.Fill(fullDs.BookedRoom);
                 label9.Visible = true;
                 panel1.Enabled = false;
             }
@@ -213,6 +222,14 @@ namespace WindowsFormsApp1
             }
             label4.Visible = true;
             bookingInnerTa.Fill(fullDs.BookingInner);
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+            customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
             fullDs1.Clear();
             label5.Visible = false;
             label13.Visible = false;
