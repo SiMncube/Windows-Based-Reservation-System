@@ -22,7 +22,9 @@ namespace WindowsFormsApp1
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             viewBookingInnerTa.Fill(fullDs.viewBookingInner);
             staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
             customerTa.Fill(fullDs.Customer);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
             label12.Text += logedInAdmin();
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
@@ -227,7 +229,7 @@ namespace WindowsFormsApp1
                 if (fullDs.Payment[i].summaryID == summaryID)
                 {
                     string newAmount = calculateAmountDue(fullDs.Payment[i].amountDue.ToString());
-                    paymentTa.Insert(DateTime.Today, "-R " + newAmount+".00", summaryID, fullDs.Payment[i].typeOfPayment);
+                    paymentTa.Insert(DateTime.Today, "-R " + newAmount + ".00", summaryID, fullDs.Payment[i].typeOfPayment);
                     paymentTa.Fill(fullDs.Payment);
                     break;
                 }
@@ -537,13 +539,13 @@ namespace WindowsFormsApp1
         /*=========================================================================================== Kaygee code END ===========================================================================================*/
 
 
-        /*=========================================================================================== Sihle Code START ===========================================================================================*/
+        /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
         string currentCustomerEmailID;
 
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
         int numberOfNights;
-        string bookingMethod = "Admin - ";
+        string bookingMethod = "Admin";
         string bookingStatus = "inComplete";
         double amountDue = 0;
 
@@ -553,18 +555,6 @@ namespace WindowsFormsApp1
         int numberOfSingleRooms = 0;
         int numberOfDoubleRooms = 0;
 
-        private bool CustomerIsRegistered()
-        {
-            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
-            {
-                if (fullDs.Customer[i].emailID.Equals(textBox3.Text, StringComparison.OrdinalIgnoreCase))
-                {
-                    currentCustomerEmailID = fullDs.Customer[i].emailID;
-                    return true;
-                }
-            }
-            return false;
-        }
 
         private bool bookingIsComplete(string summaryID)
         {
@@ -621,7 +611,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private string getAmountDue()
+        private string getAmountDue(ComboBox cb1, ComboBox cb2)
         {
             double amountDueForSingleRooms;
             double amountDueForDoubleRooms;
@@ -629,43 +619,43 @@ namespace WindowsFormsApp1
             if (numberOfNights == 0)
                 numberOfNights++;
 
-            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem.ToString() == "0")
+            if (cb1.SelectedItem == null || cb1.SelectedItem.ToString() == "0")
             {
                 amountDueForSingleRooms = 0.0;
             }
             else
             {
-                numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
+                numberOfSingleRooms = int.Parse(cb1.SelectedItem.ToString());
                 amountDueForSingleRooms = (numberOfSingleRooms * 450 * numberOfNights);
             }
-            if (comboBox2.SelectedItem == null || comboBox2.SelectedItem.ToString() == "0")
+            if (cb2.SelectedItem == null || cb2.SelectedItem.ToString() == "0")
             {
                 amountDueForDoubleRooms = 0.0;
             }
             else
             {
-                numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
+                numberOfDoubleRooms = int.Parse(cb2.SelectedItem.ToString());
                 amountDueForDoubleRooms = (numberOfDoubleRooms * 800 * numberOfNights);
             }
             amountDue = amountDueForSingleRooms + amountDueForDoubleRooms;
             return "R " + amountDue.ToString() + ".00";
         }
 
-        private void loadAvailableSinlges()
+        private void loadAvailableSinlges(ComboBox cb)
         {
 
-            comboBox1.Items.Clear();
-            comboBox1.Items.Add("0");
+            cb.Items.Clear();
+            cb.Items.Add("0");
             for (int i = 0; i < availableSingleRooms.Count; i++)
-                comboBox1.Items.Add(i + 1 + "");
+                cb.Items.Add(i + 1 + "");
         }
 
-        private void loadAvailableDoubles()
+        private void loadAvailableDoubles(ComboBox cb)
         {
-            comboBox2.Items.Clear();
-            comboBox2.Items.Add("0");
+            cb.Items.Clear();
+            cb.Items.Add("0");
             for (int i = 0; i < availableDoubleRooms.Count; i++)
-                comboBox2.Items.Add(i + 1 + "");
+                cb.Items.Add(i + 1 + "");
         }
 
         private bool dateIsValid()
@@ -675,13 +665,12 @@ namespace WindowsFormsApp1
             return false;
         }
 
-        private void updateBookingSummary()
+        private void updateBookingSummary(string callAmountDueMethod)
         {
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
             int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
 
-            bookingMethod += currentUser.getEmailID();
-            bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, getAmountDue().ToString());
+            bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, callAmountDueMethod);
             int summaryID = (int)bookingSummaryTa.getLastRecord();
             currentBooking.setSummaryID(summaryID);
 
@@ -705,6 +694,9 @@ namespace WindowsFormsApp1
             Array.Copy(singleAllocatedRooms, allAllocatedRooms, singleAllocatedRooms.Length);
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
             currentBooking.setRoomIDs(allAllocatedRooms);
+
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -730,8 +722,8 @@ namespace WindowsFormsApp1
                 comboBox1.Enabled = true;
                 comboBox2.Enabled = true;
                 updateAvailableRoomList();
-                loadAvailableSinlges();
-                loadAvailableDoubles();
+                loadAvailableSinlges(this.comboBox1);
+                loadAvailableDoubles(this.comboBox2);
                 label24.Visible = false;
             }
             else
@@ -744,8 +736,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label20.Text = getAmountDue();
-            label20.Visible = true;
+            textBox5.Text = getAmountDue(comboBox1, comboBox2);
             numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
             if (amountDue != 0)
                 button8.Enabled = true;
@@ -755,8 +746,7 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label20.Text = getAmountDue();
-            label20.Visible = true;
+            textBox5.Text = getAmountDue(comboBox1, comboBox2);
             numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
             if (amountDue != 0)
                 button8.Enabled = true;
@@ -766,11 +756,11 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            updateBookingSummary();
+            updateBookingSummary(getAmountDue(comboBox1, comboBox2).ToString());
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
             button9.Enabled = true;
-            button4.Enabled = false;
+            button8.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
@@ -779,10 +769,13 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            PaymentForm payment= new PaymentForm();
+            currentUser.setEmailID(currentCustomerEmailID);
+            PaymentForm payment = new PaymentForm();
             //this.Hide();
             payment.ShowDialog();
             //this.Close();
+
+            label33.Visible = false;
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -797,25 +790,195 @@ namespace WindowsFormsApp1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            label32.Visible = false;
-            textBox3.BackColor = Color.White;
+            customerTa.FillByAnythingGiven(fullDs.Customer, textBox3.Text);
+            customerDataGridView.ClearSelection();
+            panel5.Enabled = false;
+            label33.Visible = false;
+
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (CustomerIsRegistered())
-                panel5.Enabled = true;
-            else
-            {
-                label32.Visible = true;
-                textBox3.BackColor = Color.Red;
-            }
-
+            panel5.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            dateTimePicker2.Enabled = true;
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
+            label33.Text = "To Process Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + ")";
+            label33.Visible = true;
+            button10.Enabled = true;
+        }
+
+        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bookingInnerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            customerDataGridView.ClearSelection();
+            textBox3.Clear();
+            label33.Visible = false;
+            panel5.Enabled = false;
+            label24.Visible = false;
+            textBox5.Clear();
+            button10.Enabled = false;
+
+            dateTimePicker1.Value = DateTime.Today;
+            dateTimePicker2.Value = DateTime.Today;
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //=============================================================== Author @Sihle Modify Booking Tab ==============================================
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            modifyBookingInnerTa.FillByAnythingGiven(this.fullDs.ModifyBookingInner, textBox4.Text);
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fullDs.ModifyBookingInner' table. You can move, or remove it, as needed.
+            this.modifyBookingInnerTa.Fill(this.fullDs.ModifyBookingInner);
+        }
+        
+        private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            currentCustomerEmailID = modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString();
+            label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: "+ modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
+            label36.Visible = true;
+            button13.Enabled = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            panel8.Enabled = true;
+            dateTimePicker3.Enabled = true;
+            dateTimePicker4.Enabled = true;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            updateBookingSummary(getAmountDue(comboBox3, comboBox4).ToString());
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = false;
+            button15.Enabled = true;
+            button14.Enabled = false;
+            dateTimePicker3.Enabled = false;
+            dateTimePicker4.Enabled = false;
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            customerDataGridView.ClearSelection();
+            textBox6.Clear();
+            label36.Visible = false;
+            panel8.Enabled = false;
+            textBox4.Clear();
+            button13.Enabled = false;
+
+            dateTimePicker3.Value = DateTime.Today;
+            dateTimePicker4.Value = DateTime.Today;
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            dateIn = dateTimePicker3.Value.Date;
+            if (dateIsValid())
+            {
+                label39.Visible = false;
+            }
+            else
+            {
+                comboBox3.Enabled = false;
+                comboBox4.Enabled = false;
+            }
+        }
+
+        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
+        {
+            dateOut = dateTimePicker4.Value.Date;
+            label39.Visible = false;
+            if (dateIsValid())
+            {
+                comboBox3.Enabled = true;
+                comboBox4.Enabled = true;
+                updateAvailableRoomList();
+                loadAvailableSinlges(comboBox3);
+                loadAvailableDoubles(comboBox4);
+                label39.Visible = false;
+            }
+            else
+            {
+                label39.Visible = true;
+                comboBox3.Enabled = false;
+                comboBox4.Enabled = false;
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox6.Text = getAmountDue(comboBox3, comboBox4).ToString();
+            numberOfSingleRooms = int.Parse(comboBox3.SelectedItem.ToString());
+            if (amountDue != 0)
+                button14.Enabled = true;
+            else
+                button14.Enabled = false;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox6.Text = getAmountDue(comboBox3, comboBox4).ToString();
+            numberOfDoubleRooms = int.Parse(comboBox4.SelectedItem.ToString());
+            if (amountDue != 0)
+                button14.Enabled = true;
+            else
+                button14.Enabled = false;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            currentUser.setEmailID(currentCustomerEmailID);
+            PaymentForm payment = new PaymentForm();
+            //this.Hide();
+            payment.ShowDialog();
+            //this.Close();
+
+            label36.Visible = false;
         }
     }
 }

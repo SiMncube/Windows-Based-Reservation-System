@@ -32,6 +32,18 @@ namespace WindowsFormsApp1
             this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
             this.bookedRoomTableAdapter.Fill(this.fullDatabase.BookedRoom);
             this.paymentTableAdapter.Fill(this.fullDatabase.Payment);
+            this.customerTableAdapter1.Fill(this.fullDatabase.Customer);
+            string userName = "";
+            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    break;
+                }
+
+            }
+            label6.Text += userName;
         }
 
         private bool bookingIsComplete(string summaryID)
@@ -47,8 +59,8 @@ namespace WindowsFormsApp1
 
         private bool isRoomAvailable(int roomID, DateTime dateID)
         {   
-            int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
-            for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+            //int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
+            for (int i = 0; i < fullDatabase.BookedRoom.Rows.Count; i++)
             {
                 if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
                    (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID)) &&
@@ -128,6 +140,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < availableSingleRooms.Count; i++)
                 comboBox1.Items.Add(i + 1 + "");
         }
+
         private void loadAvailableDoubles()
         {
             comboBox2.Items.Clear();
@@ -135,6 +148,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < availableDoubleRooms.Count; i++)
                 comboBox2.Items.Add(i + 1 + "");
         }
+
         private bool dateIsValid()
         {
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
@@ -145,6 +159,8 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
         }
         private void updateBookingSummary()
         {
@@ -216,8 +232,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfSingleRooms = int.Parse(comboBox1.SelectedItem.ToString());
             if (amountDue != 0)
                 button4.Enabled = true;
@@ -227,8 +242,7 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label13.Text = getAmountDue();
-            label13.Visible = true;
+            textBox5.Text = getAmountDue();
             numberOfDoubleRooms = int.Parse(comboBox2.SelectedItem.ToString());
             if (amountDue != 0)
                 button4.Enabled = true;

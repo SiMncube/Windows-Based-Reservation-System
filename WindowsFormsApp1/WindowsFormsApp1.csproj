@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -219,6 +221,19 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+    <None Include="Resources\Webp.net-resizeimage10.png" />
+    <None Include="Resources\Webp.net-resizeimage9.png" />
+    <None Include="Resources\Webp.net-resizeimage8.png" />
+    <None Include="Resources\Webp.net-resizeimage7.png" />
+    <None Include="Resources\Webp.net-resizeimage6.png" />
+    <None Include="Resources\Webp.net-resizeimage5.png" />
+    <None Include="Resources\Webp.net-resizeimage4.png" />
+    <None Include="Resources\Webp.net-resizeimage3.png" />
+    <None Include="Resources\Webp.net-resizeimage2.png" />
+    <None Include="Resources\Webp.net-resizeimage1.png" />
+    <None Include="Resources\Webp.net-resizeimage.png" />
+    <None Include="Resources\The Cottage %281%29.png" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%292.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%291.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.28 %281%29.jpeg" />
@@ -252,6 +267,7 @@
     <None Include="Resources\icons8-mastercard-credit-card-48.png" />
     <None Include="Resources\icons8-visa-64.png" />
     <None Include="Resources\icons8-mastercard-64.png" />
+    <None Include="Resources\back.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />

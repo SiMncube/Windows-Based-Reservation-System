@@ -14,7 +14,20 @@ namespace WindowsFormsApp1
     {
         public Form9()
         {
+            
             InitializeComponent();
+            customerTableAdapter1.Fill(fullDatabase1.Customer);
+            string userName = "";
+            for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
+            {
+                if (fullDatabase1.Customer[i].emailID.Equals(currentUser.getEmailID()))
+                {
+                    userName += fullDatabase1.Customer[i].surname + " " + fullDatabase1.Customer[i].name;
+                    break;
+                }
+
+            }
+            label4.Text += userName;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,6 +38,8 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

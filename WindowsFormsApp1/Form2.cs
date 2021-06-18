@@ -18,6 +18,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDatabase1.Customer);
+            toolTip1.SetToolTip(textBox3, "Street Name");
+            toolTip1.SetToolTip(textBox4, "Suburb");
+            toolTip1.SetToolTip(textBox8, "Must be atleast 8 digits");
+            toolTip1.SetToolTip(textBox9, "Must be atleast 8 digits");
+            toolTip1.SetToolTip(textBox6, "Must be 4 digits");
+            toolTip1.SetToolTip(textBox10, "Must be 10 digits");
+            toolTip1.SetToolTip(textBox12, "Must be 13 digits");
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -228,10 +237,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            this.Hide();
-            login.ShowDialog();
             this.Close();
+            Form1 login = new Form1();
+            login.ShowDialog();
         }
         private void textBox13_TextChanged(object sender, EventArgs e)
         {

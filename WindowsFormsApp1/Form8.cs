@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             cancelBookingForm cancelBooking = new cancelBookingForm();
             this.Hide();
             cancelBooking.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void picturesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             Form3 pics = new Form3();
             this.Hide();
             pics.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void extendStayToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             Form9 extend = new Form9();
             this.Hide();
             extend.ShowDialog();
-            this.Show();
+            this.Close();
         }
         private void Form8_Load(object sender, EventArgs e)
         {

@@ -25,22 +25,22 @@ namespace WindowsFormsApp1
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())
                 {
-                    Form8 homePage = new Form8();
                     this.Hide();
+                    Form8 homePage = new Form8();
                     homePage.ShowDialog();
                     this.Close();
                 }
-                else if(adminNameIsCorrect() && adminPasswordIsCorrect())
+                if(adminNameIsCorrect() && adminPasswordIsCorrect())
                 {
-                    adminForm a = new adminForm();
                     this.Hide();
+                    adminForm a = new adminForm();
                     a.ShowDialog();
                     this.Close();
                 }
-                else if(managerNameIsCorrect() && managerNameIsCorrect())
+                if(managerNameIsCorrect() && managerNameIsCorrect())
                 {
-                    managerForm m = new managerForm();
                     this.Hide();
+                    managerForm m = new managerForm();
                     m.ShowDialog();
                     this.Close();
                 }
@@ -145,7 +145,6 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 signup = new Form2();
-            this.Hide();
             signup.ShowDialog();
             this.Close();
         }
@@ -171,7 +170,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             Form10 forgot = new Form10();
-            this.Hide();
+           // this.Hide();
             forgot.ShowDialog();
             this.Close();
         }
@@ -189,21 +188,21 @@ namespace WindowsFormsApp1
                     if (userNameIsCorrect() && userPasswordIsCorrect())
                     {
                         Form8 homePage = new Form8();
-                        this.Hide();
+                      //  this.Hide();
                         homePage.ShowDialog();
                         this.Close();
                     }
                     else if (adminNameIsCorrect() && adminPasswordIsCorrect())
                     {
                         adminForm a = new adminForm();
-                        this.Hide();
+                       // this.Hide();
                         a.ShowDialog();
                         this.Close();
                     }
                     else if (managerNameIsCorrect() && managerNameIsCorrect())
                     {
                         managerForm m = new managerForm();
-                        this.Hide();
+                     //   this.Hide();
                         m.ShowDialog();
                         this.Close();
                     }

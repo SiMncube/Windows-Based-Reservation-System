@@ -18,6 +18,9 @@ namespace WindowsFormsApp1
             paymentTa.Fill(fullDs.Payment);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             bookedRoomTa.Fill(fullDs.BookedRoom);
+            toolTip1.SetToolTip(cardNumberTextBox, "Must be 16 digits");
+            toolTip1.SetToolTip(cvvTextbox,"Must be 3 digits");
+
         }
         private string getAmountDue()
         {
@@ -107,7 +110,7 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-                this.Hide();
+              //  this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
@@ -116,7 +119,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             Form8 i = new Form8();
-            this.Hide();
+         //   this.Hide();
             i.ShowDialog();
             this.Close();
         }
@@ -211,7 +214,7 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-                this.Hide();
+             //   this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
@@ -219,10 +222,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form8 f = new Form8();
-            this.Hide();
-            f.ShowDialog();
             this.Close();
+            Form8 f = new Form8();
+            f.ShowDialog();       
         }
     }
 }
