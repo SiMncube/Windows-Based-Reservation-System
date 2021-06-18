@@ -157,6 +157,8 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
         }
         private void updateBookingSummary()
         {

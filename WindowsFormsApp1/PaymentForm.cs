@@ -222,10 +222,10 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form8 f = new Form8();
-            this.Hide();
-            f.ShowDialog();
             this.Close();
+            Form8 f = new Form8();
+            f.ShowDialog();
+            
         }
     }
 }

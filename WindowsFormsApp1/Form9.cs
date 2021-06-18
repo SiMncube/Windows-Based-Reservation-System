@@ -38,6 +38,8 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

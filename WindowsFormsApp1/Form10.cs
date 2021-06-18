@@ -179,10 +179,9 @@ namespace WindowsFormsApp1
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            this.Hide();
-            login.ShowDialog();
             this.Close();
+            Form1 login = new Form1();
+            login.ShowDialog();
         }
         private void button9_Click_1(object sender, EventArgs e)
         {
