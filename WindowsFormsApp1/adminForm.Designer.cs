@@ -304,7 +304,6 @@ namespace WindowsFormsApp1
             this.tabControl1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
@@ -313,7 +312,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit()
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
