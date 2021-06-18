@@ -1076,10 +1076,21 @@ namespace WindowsFormsApp1
             textBox12.Text = "";
             textBox10.Text = "";
         }
-
-        private void textBox18_TextChanged(object sender, EventArgs e)
+        private bool updateNameIsValid()
         {
-            customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
+            /*int count = 0;
+            if (!isAllLetters(textBox1.Text) || textBox1.Text.Length < 3)
+            {
+                textBox1.BackColor = Color.Red;
+                count++;
+            }
+            if (!isAllLetters(textBox2.Text) || textBox2.Text.Length < 3)
+            {
+                textBox2.BackColor = Color.Red;
+                count++;
+            }
+            return count == 0;*/
+            return true;
         }
     }
 }

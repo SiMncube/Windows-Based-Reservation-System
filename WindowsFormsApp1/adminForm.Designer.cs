@@ -32,7 +32,6 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@ namespace WindowsFormsApp1
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -80,7 +78,6 @@ namespace WindowsFormsApp1
             this.label37 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -107,10 +104,8 @@ namespace WindowsFormsApp1
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -118,10 +113,7 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cellNumberTextBox = new System.Windows.Forms.TextBox();
             this.IDTextBox = new System.Windows.Forms.TextBox();
@@ -139,8 +131,6 @@ namespace WindowsFormsApp1
             this.panel9 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button16 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -240,6 +230,16 @@ namespace WindowsFormsApp1
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -258,16 +258,11 @@ namespace WindowsFormsApp1
             this.panel5.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
@@ -276,14 +271,19 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage5.Controls.Add(this.label19);
-            this.tabPage5.Controls.Add(this.button7);
             this.tabPage5.Controls.Add(this.panel4);
+            this.tabPage5.Controls.Add(this.button7);
             this.tabPage5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
@@ -300,20 +300,6 @@ namespace WindowsFormsApp1
             this.label19.Size = new System.Drawing.Size(53, 20);
             this.label19.TabIndex = 46;
             this.label19.Text = "Logout";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(7, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 45);
-            this.button7.TabIndex = 45;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel4
             // 
@@ -387,9 +373,9 @@ namespace WindowsFormsApp1
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Controls.Add(this.panel2);
+            this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
@@ -408,20 +394,6 @@ namespace WindowsFormsApp1
             this.label18.Size = new System.Drawing.Size(53, 20);
             this.label18.TabIndex = 46;
             this.label18.Text = "Logout";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(6, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 45);
-            this.button6.TabIndex = 45;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
             // 
@@ -939,20 +911,6 @@ namespace WindowsFormsApp1
             this.label17.TabIndex = 46;
             this.label17.Text = "Logout";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(6, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 45);
-            this.button5.TabIndex = 45;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
@@ -1289,20 +1247,6 @@ namespace WindowsFormsApp1
             this.label16.TabIndex = 46;
             this.label16.Text = "Logout";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(6, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 45);
-            this.button4.TabIndex = 45;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
@@ -1327,19 +1271,6 @@ namespace WindowsFormsApp1
             this.label15.Size = new System.Drawing.Size(53, 20);
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(6, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 45);
-            this.button3.TabIndex = 43;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label12
             // 
@@ -1442,17 +1373,6 @@ namespace WindowsFormsApp1
             this.label8.TabIndex = 62;
             this.label8.Visible = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox6.Location = new System.Drawing.Point(267, 268);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 61;
-            this.pictureBox6.TabStop = false;
-            // 
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
@@ -1466,28 +1386,6 @@ namespace WindowsFormsApp1
             this.cancelButton.TabIndex = 57;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
-            this.pictureBox3.Location = new System.Drawing.Point(448, 317);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 58;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
-            this.pictureBox2.Location = new System.Drawing.Point(521, 268);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 44;
-            this.pictureBox2.TabStop = false;
             // 
             // emailTextBox
             // 
@@ -1741,28 +1639,6 @@ namespace WindowsFormsApp1
             this.panel10.Size = new System.Drawing.Size(417, 368);
             this.panel10.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox1.Location = new System.Drawing.Point(203, 228);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
-            this.pictureBox8.Location = new System.Drawing.Point(348, 228);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 44;
-            this.pictureBox8.TabStop = false;
-            // 
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.SteelBlue;
@@ -1780,6 +1656,7 @@ namespace WindowsFormsApp1
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox7.Location = new System.Drawing.Point(50, 279);
@@ -1799,6 +1676,7 @@ namespace WindowsFormsApp1
             // 
             // textBox12
             // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox12.Location = new System.Drawing.Point(50, 228);
@@ -1883,7 +1761,6 @@ namespace WindowsFormsApp1
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
-            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label44
             // 
@@ -2499,6 +2376,130 @@ namespace WindowsFormsApp1
             this.label56.Text = "Details updated successfully";
             this.label56.Visible = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(6, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 45);
+            this.button3.TabIndex = 43;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
+            this.pictureBox6.Location = new System.Drawing.Point(267, 268);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 61;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
+            this.pictureBox3.Location = new System.Drawing.Point(448, 317);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 58;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
+            this.pictureBox2.Location = new System.Drawing.Point(521, 268);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
+            this.pictureBox1.Location = new System.Drawing.Point(203, 228);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 61;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
+            this.pictureBox8.Location = new System.Drawing.Point(348, 228);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 44;
+            this.pictureBox8.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(6, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 45);
+            this.button4.TabIndex = 45;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(6, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 45);
+            this.button5.TabIndex = 45;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(6, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(45, 45);
+            this.button6.TabIndex = 45;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(7, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 45);
+            this.button7.TabIndex = 45;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2541,9 +2542,6 @@ namespace WindowsFormsApp1
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -2551,8 +2549,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
@@ -2561,6 +2557,11 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDs1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2707,7 +2708,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.BindingSource modifyBookingInnerBindingSource;
         private fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter modifyBookingInnerTa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridView modifyBookingInnerDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
