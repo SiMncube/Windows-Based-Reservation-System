@@ -198,6 +198,7 @@ namespace WindowsFormsApp1
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -1946,6 +1947,7 @@ namespace WindowsFormsApp1
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -2005,6 +2007,16 @@ namespace WindowsFormsApp1
             // bookedRoomTa
             // 
             this.bookedRoomTa.ClearBeforeFill = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Update customer details";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // adminForm
             // 
@@ -2233,5 +2245,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label43;
         private fullDatabaseTableAdapters.BookedRoomTableAdapter bookedRoomTa;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }
