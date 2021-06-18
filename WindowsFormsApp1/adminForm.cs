@@ -981,5 +981,35 @@ namespace WindowsFormsApp1
 
             label36.Visible = false;
         }
+
+        private void dataGridView3_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataRow dataRow = fullDs1.Customer1.NewRow();
+            for (int i = 0; i < dataRow.ItemArray.Length; i++)
+            {
+                dataRow[i] = dataGridView3.CurrentRow.Cells[i].Value;
+            }
+            try
+            {
+                updateTextBox(textBox7, dataRow[0].ToString());
+                updateTextBox(textBox17, dataRow[1].ToString());
+                updateTextBox(textBox16, dataRow[2].ToString());
+                updateTextBox(textBox15, dataRow[5].ToString());
+                updateTextBox(textBox14, dataRow[6].ToString());
+                updateTextBox(textBox13, dataRow[7].ToString());
+                updateTextBox(textBox11, dataRow[8].ToString());
+                updateTextBox(textBox12, dataRow[3].ToString());
+                updateTextBox(textBox10, dataRow[4].ToString());
+            }
+            catch (ConstraintException)
+            {
+                label5.Visible = true;
+
+            }
+        }
+        private void updateTextBox(TextBox textBox , string s)
+        {
+            textBox.Text = s;
+        }
     }
 }

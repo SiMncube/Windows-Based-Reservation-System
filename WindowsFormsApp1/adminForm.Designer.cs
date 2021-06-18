@@ -2105,6 +2105,7 @@ namespace WindowsFormsApp1
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(943, 163);
             this.dataGridView3.TabIndex = 0;
+            this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick);
             // 
             // customer1BindingSource
             // 
