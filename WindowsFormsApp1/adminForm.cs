@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             viewBookingInnerTa.Fill(fullDs.viewBookingInner);
             staffTa.Fill(fullDs.Staff);
             customerTa.Fill(fullDs.Customer);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
             label12.Text += logedInAdmin();
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
@@ -717,8 +718,8 @@ namespace WindowsFormsApp1
                 comboBox1.Enabled = true;
                 comboBox2.Enabled = true;
                 updateAvailableRoomList();
-                loadAvailableSinlges(comboBox1);
-                loadAvailableDoubles(comboBox2);
+                loadAvailableSinlges(this.comboBox1);
+                loadAvailableDoubles(this.comboBox2);
                 label24.Visible = false;
             }
             else
@@ -871,8 +872,8 @@ namespace WindowsFormsApp1
         
         private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            currentCustomerEmailID = customerDataGridView.CurrentRow.Cells[0].Value.ToString();
-            label36.Text = "To Modify Booking for: " + customerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + customerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + customerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: "+ customerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
+            currentCustomerEmailID = modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString();
+            label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: "+ modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
             label36.Visible = true;
             button13.Enabled = true;
         }

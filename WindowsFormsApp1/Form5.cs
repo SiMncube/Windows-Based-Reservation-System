@@ -59,8 +59,8 @@ namespace WindowsFormsApp1
 
         private bool isRoomAvailable(int roomID, DateTime dateID)
         {   
-            int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
-            for (int i = 0; i < numberOfRecordsInBookedRoom; i++)
+            //int numberOfRecordsInBookedRoom = fullDatabase.BookedRoom.Rows.Count;
+            for (int i = 0; i < fullDatabase.BookedRoom.Rows.Count; i++)
             {
                 if (((fullDatabase.Tables["BookedRoom"].Rows[i]["dateID"].ToString().Equals(dateID.ToString())) &&
                    (int.Parse(fullDatabase.Tables["BookedRoom"].Rows[i]["roomID"].ToString()) == roomID)) &&
@@ -140,6 +140,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < availableSingleRooms.Count; i++)
                 comboBox1.Items.Add(i + 1 + "");
         }
+
         private void loadAvailableDoubles()
         {
             comboBox2.Items.Clear();
@@ -147,6 +148,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < availableDoubleRooms.Count; i++)
                 comboBox2.Items.Add(i + 1 + "");
         }
+
         private bool dateIsValid()
         {
             if (((DateTime.Compare(DateTime.Today, dateIn) <= 0) && (DateTime.Compare(DateTime.Today, dateOut) < 0) && (DateTime.Compare(dateIn, dateOut) < 0)))
