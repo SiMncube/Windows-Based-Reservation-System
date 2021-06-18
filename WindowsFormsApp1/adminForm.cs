@@ -1011,5 +1011,18 @@ namespace WindowsFormsApp1
         {
             textBox.Text = s;
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            textBox7.Text = "";
+            textBox17.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+            textBox14.Text = "";
+            textBox13.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox10.Text = "";
+        }
     }
 }
