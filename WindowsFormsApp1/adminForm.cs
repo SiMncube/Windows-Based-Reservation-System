@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
             staffTa.Fill(fullDs.Staff);
             modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
             customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
             bookedRoomTa.Fill(fullDs.BookedRoom);
             label12.Text += logedInAdmin();
         }
