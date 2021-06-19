@@ -59,6 +59,13 @@ namespace WindowsFormsApp1
                 bookedRoomTa.Fill(fullDs.BookedRoom);
                 label9.Visible = true;
                 panel1.Enabled = false;
+                firtNameTextBox.Text = null;
+                lastNameTextBox.Text = null;
+                addressLine1TextBox.Text = null;
+                addressLine2TextBox.Text = null;
+                cellNumberTextBox.Text = null;
+                IDTextBox.Text = null;
+                emailTextBox.Text = null;
             }
         }
         private string capFirst(string s)
