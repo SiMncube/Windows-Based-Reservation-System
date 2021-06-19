@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                 if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Admin")
                 {
                     currentUser.setEmailID(fullDs.Staff[i].emailID);
+
                     return true;
                 }
             }
