@@ -237,6 +237,10 @@ namespace WindowsFormsApp1
             {
                 cancelBooking((int)dataGridView1.CurrentRow.Cells[4].Value);
             }
+
+            bookingSummaryTa.Update(fullDs.BookingSummary);
+            paymentTa.Update(fullDs.Payment);
+
             label4.Visible = true;
             bookingInnerTa.Fill(fullDs.BookingInner);
             paymentTa.Fill(fullDs.Payment);
@@ -250,6 +254,8 @@ namespace WindowsFormsApp1
             fullDs1.Clear();
             label5.Visible = false;
             label13.Visible = false;
+
+
         }
         private string calculateAmountDue(string s)
         {
@@ -746,15 +752,19 @@ namespace WindowsFormsApp1
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
             if (dateIsValid())
             {
                 label24.Visible = false;
+                comboBox1.Enabled = true;
+                comboBox2.Enabled = true;
                 updateAvailableRoomList();
                 loadAvailableSinlges(this.comboBox1);
                 loadAvailableDoubles(this.comboBox2);
             }
             else
             {
+                label24.Visible = true;
                 comboBox1.Enabled = false;
                 comboBox2.Enabled = false;
             }
@@ -762,16 +772,17 @@ namespace WindowsFormsApp1
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
+            dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             label24.Visible = false;
             if (dateIsValid())
             {
+                label24.Visible = false;
                 comboBox1.Enabled = true;
                 comboBox2.Enabled = true;
                 updateAvailableRoomList();
                 loadAvailableSinlges(this.comboBox1);
                 loadAvailableDoubles(this.comboBox2);
-                label24.Visible = false;
             }
             else
             {
@@ -886,11 +897,12 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
+
             customerDataGridView.ClearSelection();
             textBox3.Clear();
+            label24.Visible = false;
             label33.Visible = false;
             panel5.Enabled = false;
-            label24.Visible = false;
             textBox5.Clear();
             button10.Enabled = false;
 
