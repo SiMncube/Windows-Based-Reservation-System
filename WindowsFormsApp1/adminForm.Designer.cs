@@ -190,6 +190,8 @@ namespace WindowsFormsApp1
             this.registerButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label57 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -240,8 +242,6 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -1244,6 +1244,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.panel5);
             this.tabPage2.Controls.Add(this.label16);
@@ -2035,6 +2036,30 @@ namespace WindowsFormsApp1
             this.tabPage6.Text = "Update customer details";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Gray;
+            this.label57.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(3, 58);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(53, 20);
+            this.label57.TabIndex = 45;
+            this.label57.Text = "Logout";
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Transparent;
+            this.button18.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Location = new System.Drawing.Point(6, 10);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(45, 45);
+            this.button18.TabIndex = 44;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
@@ -2508,30 +2533,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(6, 10);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(45, 45);
-            this.button18.TabIndex = 44;
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Gray;
-            this.label57.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(3, 58);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(53, 20);
-            this.label57.TabIndex = 45;
-            this.label57.Text = "Logout";
             // 
             // adminForm
             // 
