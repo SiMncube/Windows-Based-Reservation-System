@@ -105,5 +105,19 @@ namespace WindowsFormsApp1
             Form8 form = new Form8();
             form.ShowDialog();
         }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            Form8 form = new Form8();
+            form.ShowDialog();
+        }
     }
 }

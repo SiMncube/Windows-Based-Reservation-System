@@ -1092,5 +1092,13 @@ namespace WindowsFormsApp1
             return count == 0;*/
             return true;
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
