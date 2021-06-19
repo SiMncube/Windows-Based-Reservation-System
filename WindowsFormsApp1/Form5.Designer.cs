@@ -108,6 +108,7 @@ namespace WindowsFormsApp1
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BookedRoomTableAdapter = this.bookedRoomTableAdapter;
             this.tableAdapterManager.BookingSummaryTableAdapter = this.bookingSummaryTableAdapter;
+            this.tableAdapterManager.Customer1TableAdapter = null;
             this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.PaymentTableAdapter = this.paymentTableAdapter;
             this.tableAdapterManager.RoomTableAdapter = null;
