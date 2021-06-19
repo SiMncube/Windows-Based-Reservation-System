@@ -1055,9 +1055,9 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.label54);
             this.panel9.Controls.Add(this.textBox18);
             this.panel9.Controls.Add(this.label44);
-            this.panel9.Location = new System.Drawing.Point(132, 6);
+            this.panel9.Location = new System.Drawing.Point(135, 19);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1108, 294);
+            this.panel9.Size = new System.Drawing.Size(1108, 281);
             this.panel9.TabIndex = 0;
             // 
             // dataGridView3
@@ -1231,9 +1231,9 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.label34);
             this.panel6.Controls.Add(this.label30);
             this.panel6.Controls.Add(this.button12);
+            this.panel6.Controls.Add(this.label32);
             this.panel6.Controls.Add(this.textBox3);
             this.panel6.Controls.Add(this.label33);
-            this.panel6.Controls.Add(this.label32);
             this.panel6.Controls.Add(this.customerDataGridView);
             this.panel6.Controls.Add(this.button10);
             this.panel6.Location = new System.Drawing.Point(157, 18);
@@ -1266,12 +1266,13 @@ namespace WindowsFormsApp1
             // label30
             // 
             this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(293, 14);
+            this.label30.Location = new System.Drawing.Point(287, 24);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(442, 18);
+            this.label30.Size = new System.Drawing.Size(455, 24);
             this.label30.TabIndex = 49;
-            this.label30.Text = "Enter Your Current Customer Email/Name/Surname/ID No.\r\n";
+            this.label30.Text = "Enter Customer Email/Name/Surname/ID No.\r\n";
             // 
             // button12
             // 
@@ -1291,9 +1292,9 @@ namespace WindowsFormsApp1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(257, 37);
+            this.textBox3.Location = new System.Drawing.Point(239, 51);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(524, 26);
+            this.textBox3.Size = new System.Drawing.Size(558, 26);
             this.textBox3.TabIndex = 50;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -1313,7 +1314,7 @@ namespace WindowsFormsApp1
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(396, 66);
+            this.label32.Location = new System.Drawing.Point(348, 8);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(301, 16);
             this.label32.TabIndex = 53;
@@ -1834,10 +1835,10 @@ namespace WindowsFormsApp1
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.label31);
             this.panel7.Controls.Add(this.label35);
+            this.panel7.Controls.Add(this.label37);
             this.panel7.Controls.Add(this.button11);
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Controls.Add(this.label36);
-            this.panel7.Controls.Add(this.label37);
             this.panel7.Controls.Add(this.button13);
             this.panel7.Location = new System.Drawing.Point(72, 18);
             this.panel7.Name = "panel7";
@@ -1958,12 +1959,13 @@ namespace WindowsFormsApp1
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label35.Location = new System.Drawing.Point(347, 14);
+            this.label35.Location = new System.Drawing.Point(328, 26);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(543, 18);
+            this.label35.Size = new System.Drawing.Size(585, 24);
             this.label35.TabIndex = 49;
-            this.label35.Text = "Enter Your Current Customer Email/Name/Surname/ID No./Booking Ref";
+            this.label35.Text = "Enter Customer Email/Name/Surname/ID No./Booking Ref";
             // 
             // button11
             // 
@@ -1983,7 +1985,7 @@ namespace WindowsFormsApp1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(329, 37);
+            this.textBox4.Location = new System.Drawing.Point(331, 53);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(582, 26);
             this.textBox4.TabIndex = 50;
@@ -2005,7 +2007,7 @@ namespace WindowsFormsApp1
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(467, 66);
+            this.label37.Location = new System.Drawing.Point(453, 10);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(301, 16);
             this.label37.TabIndex = 53;
@@ -2247,9 +2249,9 @@ namespace WindowsFormsApp1
             this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(409, 19);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(293, 24);
+            this.label13.Size = new System.Drawing.Size(298, 24);
             this.label13.TabIndex = 5;
-            this.label13.Text = "Booking is already canceled";
+            this.label13.Text = "Booking is already cancelled";
             this.label13.Visible = false;
             // 
             // label6
