@@ -899,12 +899,14 @@ namespace WindowsFormsApp1
         {
 
             customerDataGridView.ClearSelection();
+
             textBox3.Clear();
+            textBox5.Clear();
             label24.Visible = false;
             label33.Visible = false;
             panel5.Enabled = false;
-            textBox5.Clear();
             button10.Enabled = false;
+
 
             dateTimePicker1.Value = DateTime.Today;
             dateTimePicker2.Value = DateTime.Today;
@@ -967,10 +969,12 @@ namespace WindowsFormsApp1
         private void button11_Click(object sender, EventArgs e)
         {
             customerDataGridView.ClearSelection();
+
+            textBox4.Clear();
             textBox6.Clear();
             label36.Visible = false;
+            label39.Visible = false;
             panel8.Enabled = false;
-            textBox4.Clear();
             button13.Enabled = false;
 
             dateTimePicker3.Value = DateTime.Today;
@@ -980,12 +984,19 @@ namespace WindowsFormsApp1
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
             dateIn = dateTimePicker3.Value.Date;
+            dateOut = dateTimePicker4.Value.Date;
             if (dateIsValid())
             {
                 label39.Visible = false;
+                comboBox3.Enabled = true;
+                comboBox4.Enabled = true;
+                updateAvailableRoomList();
+                loadAvailableSinlges(comboBox3);
+                loadAvailableDoubles(comboBox4);
             }
             else
             {
+                label39.Visible = false;
                 comboBox3.Enabled = false;
                 comboBox4.Enabled = false;
             }
@@ -993,16 +1004,17 @@ namespace WindowsFormsApp1
 
         private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
         {
+            dateIn = dateTimePicker3.Value.Date;
             dateOut = dateTimePicker4.Value.Date;
             label39.Visible = false;
             if (dateIsValid())
             {
+                label39.Visible = false;
                 comboBox3.Enabled = true;
                 comboBox4.Enabled = true;
                 updateAvailableRoomList();
                 loadAvailableSinlges(comboBox3);
                 loadAvailableDoubles(comboBox4);
-                label39.Visible = false;
             }
             else
             {
