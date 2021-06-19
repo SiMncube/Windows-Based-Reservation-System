@@ -292,6 +292,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.Controls.Add(this.label19);
             this.tabPage5.Controls.Add(this.panel4);
             this.tabPage5.Controls.Add(this.button7);
@@ -479,6 +480,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Controls.Add(this.panel2);
@@ -828,6 +830,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.panel8);
             this.tabPage3.Controls.Add(this.panel7);
             this.tabPage3.Controls.Add(this.label17);
@@ -2085,6 +2088,7 @@ namespace WindowsFormsApp1
             // tabPage6
             // 
             this.tabPage6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage6.BackgroundImage")));
+            this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage6.Controls.Add(this.label57);
             this.tabPage6.Controls.Add(this.button18);
             this.tabPage6.Controls.Add(this.panel10);
