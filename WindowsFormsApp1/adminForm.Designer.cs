@@ -1746,7 +1746,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(470, 146);
+            this.panel1.Location = new System.Drawing.Point(487, 154);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
@@ -1800,7 +1800,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox6.Location = new System.Drawing.Point(191, 231);
+            this.pictureBox6.Location = new System.Drawing.Point(202, 231);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(26, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1901,7 +1901,7 @@ namespace WindowsFormsApp1
             this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
             this.cityTextBox.Location = new System.Drawing.Point(38, 196);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(179, 27);
+            this.cityTextBox.Size = new System.Drawing.Size(190, 27);
             this.cityTextBox.TabIndex = 49;
             this.cityTextBox.Text = "City";
             this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
@@ -2549,11 +2549,12 @@ namespace WindowsFormsApp1
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(38, 310);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(329, 27);
             this.textBox8.TabIndex = 64;
             this.textBox8.Text = "Password is auto generated";
@@ -2576,7 +2577,7 @@ namespace WindowsFormsApp1
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(548, 66);
+            this.label58.Location = new System.Drawing.Point(533, 66);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(250, 18);
             this.label58.TabIndex = 18;
