@@ -921,6 +921,7 @@ namespace WindowsFormsApp1
         }
 
         //=============================================================== Author @Sihle Modify Booking Tab ==============================================
+        string modifiedbookingID = "";
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -938,12 +939,58 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa.Fill(this.fullDs.ModifyBookingInner);
         }
 
+        private bool canBeModified(DateTime checkInDate, string bookingStatus)
+        {
+            if (DateTime.Compare(DateTime.Today, checkInDate) < 0)
+            {
+                if (bookingStatus.Equals("Complete"))  //this is the only block that should be executed for the booking to be modified.
+                    return true;
+                else if (bookingStatus.Equals("Modified"))
+                {
+                    MessageBox.Show("A " + bookingStatus + "can not be modified", "Selection Error");
+                    return false;
+                }
+                else if (bookingStatus.Equals("Cancelled"))
+                {
+                    MessageBox.Show("A " + bookingStatus + "can not be modified", "Selection Error");
+                    return false;
+                }
+                else if (bookingStatus.Equals("inComplete"))
+                {
+                    MessageBox.Show("An " + bookingStatus + "can not be modified, No Payment Was Made for this booking", "Selection Error");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("The Selected booking can not be modified, Checking in date has already passed", "Selection Error");
+                return false;
+            }
+            
+            return false;
+        }
+
+        private string getModifiedAmountDue()
+        {
+            return "R ";
+        }
+
         private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            currentCustomerEmailID = modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString();
-            label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: " + modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
-            label36.Visible = true;
-            button13.Enabled = true;
+            if (canBeModified((DateTime)(modifyBookingInnerDataGridView.CurrentRow.Cells[5].Value), modifyBookingInnerDataGridView.CurrentRow.Cells[9].Value.ToString()))
+            {
+                currentCustomerEmailID = modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString();
+                label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: " + modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
+                label36.Visible = true;
+                button13.Enabled = true;
+
+                modifiedbookingID = modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString();
+            }
+            else
+            {
+                customerDataGridView.ClearSelection();
+            }
+            
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -979,6 +1026,9 @@ namespace WindowsFormsApp1
 
             dateTimePicker3.Value = DateTime.Today;
             dateTimePicker4.Value = DateTime.Today;
+
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
@@ -996,7 +1046,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                label39.Visible = false;
+                label39.Visible = true;
                 comboBox3.Enabled = false;
                 comboBox4.Enabled = false;
             }
