@@ -877,6 +877,9 @@ namespace WindowsFormsApp1
 
             dateTimePicker1.Value = DateTime.Today;
             dateTimePicker2.Value = DateTime.Today;
+
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
         }
 
         private void label20_Click(object sender, EventArgs e)
