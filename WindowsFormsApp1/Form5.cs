@@ -200,6 +200,9 @@ namespace WindowsFormsApp1
             if (dateIsValid())
             {
                 label7.Visible = false;
+                updateAvailableRoomList();
+                loadAvailableSinlges();
+                loadAvailableDoubles();
             }
             else
             {
