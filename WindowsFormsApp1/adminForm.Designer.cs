@@ -1746,10 +1746,11 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(487, 154);
+            this.panel1.Location = new System.Drawing.Point(522, 153);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label9
             // 
@@ -2577,7 +2578,7 @@ namespace WindowsFormsApp1
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(533, 66);
+            this.label58.Location = new System.Drawing.Point(585, 70);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(250, 18);
             this.label58.TabIndex = 18;
@@ -2588,7 +2589,7 @@ namespace WindowsFormsApp1
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(201, 5);
+            this.label59.Location = new System.Drawing.Point(253, 9);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(933, 61);
             this.label59.TabIndex = 17;
