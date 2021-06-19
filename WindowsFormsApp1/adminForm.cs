@@ -274,7 +274,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
             {
-                if (fullDs.Payment[i].summaryID == summaryID)
+                if (fullDs.BookingSummary[i].summaryID == summaryID)
                 {
                     fullDs.BookingSummary[i].bookingStatus = "Cancelled";
                     bookingSummaryTa.Update(fullDs.BookingSummary);
