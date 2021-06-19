@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
             {
                 for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 { 
-                    bookedRoomTa.Insert(GetDateIn(), currentBooking.getSummaryID(), rooms[i]);
+                    bookedRoomTa.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
                 }
             }
             bookedRoomTa.Update(fullDs.BookedRoom);
