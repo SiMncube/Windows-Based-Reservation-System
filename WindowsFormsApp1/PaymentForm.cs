@@ -176,7 +176,6 @@ namespace WindowsFormsApp1
                 if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
                 {
                     dateOut = fullDs.BookingSummary[i].dateOut;
-                    break;
                 }
             }
             return dateOut;
@@ -189,9 +188,10 @@ namespace WindowsFormsApp1
                 for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
                 { 
                     bookedRoomTa.Insert(GetDateIn(), currentBooking.getSummaryID(), rooms[i]);
-                    break;
                 }
             }
+            bookedRoomTa.Update(fullDs.BookedRoom);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
         }
         private void updateBookingStatus()
         {

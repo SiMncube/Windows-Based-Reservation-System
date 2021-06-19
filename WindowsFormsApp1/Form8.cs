@@ -68,17 +68,8 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void extendStayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form9 extend = new Form9();
-            this.Hide();
-            extend.ShowDialog();
-            this.Close();
-        }
         private void Form8_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fullDatabase.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.fullDatabase.Customer);
 
         }
     }

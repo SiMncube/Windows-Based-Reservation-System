@@ -36,7 +36,6 @@ namespace WindowsFormsApp1
             this.makeBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.extendStayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.galleryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,8 +77,7 @@ namespace WindowsFormsApp1
             this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeBookingToolStripMenuItem,
             this.checkBookingToolStripMenuItem,
-            this.modifyBookingToolStripMenuItem,
-            this.extendStayToolStripMenuItem});
+            this.modifyBookingToolStripMenuItem});
             this.bookingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
@@ -105,13 +103,6 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
             this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click_1);
-            // 
-            // extendStayToolStripMenuItem
-            // 
-            this.extendStayToolStripMenuItem.Name = "extendStayToolStripMenuItem";
-            this.extendStayToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
-            this.extendStayToolStripMenuItem.Text = "Extend Stay";
-            this.extendStayToolStripMenuItem.Click += new System.EventHandler(this.extendStayToolStripMenuItem_Click);
             // 
             // galleryToolStripMenuItem
             // 
@@ -195,7 +186,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem makeBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyBookingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem extendStayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem galleryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem picturesToolStripMenuItem;
         private System.Windows.Forms.Label label1;
