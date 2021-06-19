@@ -197,15 +197,19 @@ namespace WindowsFormsApp1
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateIn = dateTimePicker1.Value.Date;
+            dateOut = dateTimePicker2.Value.Date;
             if (dateIsValid())
             {
                 label7.Visible = false;
+                comboBox1.Enabled = true;
+                comboBox2.Enabled = true;
                 updateAvailableRoomList();
                 loadAvailableSinlges();
                 loadAvailableDoubles();
             }
             else
             {
+                label7.Visible = true;
                 comboBox1.Enabled = false;
                 comboBox2.Enabled = false;
             }
@@ -214,16 +218,17 @@ namespace WindowsFormsApp1
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
+            dateIn = dateTimePicker1.Value.Date;
             dateOut = dateTimePicker2.Value.Date;
             label7.Visible = false;
             if (dateIsValid())
             {
+                label7.Visible = false;
                 comboBox1.Enabled = true;
                 comboBox2.Enabled = true;
                 updateAvailableRoomList();
                 loadAvailableSinlges();
                 loadAvailableDoubles();
-                label7.Visible = false;
             }
             else
             {

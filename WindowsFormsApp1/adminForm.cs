@@ -935,11 +935,11 @@ namespace WindowsFormsApp1
             // TODO: This line of code loads data into the 'fullDs.ModifyBookingInner' table. You can move, or remove it, as needed.
             this.modifyBookingInnerTa.Fill(this.fullDs.ModifyBookingInner);
         }
-        
+
         private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             currentCustomerEmailID = modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString();
-            label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: "+ modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
+            label36.Text = "To Modify Booking for: " + modifyBookingInnerDataGridView.CurrentRow.Cells[1].Value.ToString() + " " + modifyBookingInnerDataGridView.CurrentRow.Cells[2].Value.ToString() + " (" + modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString() + " - Booking Ref: " + modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString() + ")";
             label36.Visible = true;
             button13.Enabled = true;
         }
@@ -1062,7 +1062,7 @@ namespace WindowsFormsApp1
             updateTextBox(textBox12, dataRow[3].ToString());
             updateTextBox(textBox10, dataRow[4].ToString());
         }
-        private void updateTextBox(TextBox textBox , string s)
+        private void updateTextBox(TextBox textBox, string s)
         {
             textBox.Text = s;
         }
