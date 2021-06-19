@@ -222,9 +222,11 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+          
+            adminForm a = new adminForm();
+            this.Hide();
+            a.ShowDialog();
             this.Close();
-            Form8 f = new Form8();
-            f.ShowDialog();       
         }
 
         private void PaymentForm_Load(object sender, EventArgs e)

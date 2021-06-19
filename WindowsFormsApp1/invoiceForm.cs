@@ -119,5 +119,13 @@ namespace WindowsFormsApp1
             Form8 form = new Form8();
             form.ShowDialog();
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            adminForm a = new adminForm();
+            this.Hide();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }
