@@ -723,6 +723,9 @@ namespace WindowsFormsApp1
             if (dateIsValid())
             {
                 label24.Visible = false;
+                updateAvailableRoomList();
+                loadAvailableSinlges(this.comboBox1);
+                loadAvailableDoubles(this.comboBox2);
             }
             else
             {
