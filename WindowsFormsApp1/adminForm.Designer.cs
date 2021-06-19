@@ -166,7 +166,6 @@ namespace WindowsFormsApp1
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -243,6 +242,12 @@ namespace WindowsFormsApp1
             this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -279,6 +284,8 @@ namespace WindowsFormsApp1
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -1666,10 +1673,8 @@ namespace WindowsFormsApp1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.panel11);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -1681,9 +1686,10 @@ namespace WindowsFormsApp1
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Gray;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 67);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(11, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 20);
             this.label15.TabIndex = 44;
@@ -1694,8 +1700,9 @@ namespace WindowsFormsApp1
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(14, 19);
+            this.button3.Location = new System.Drawing.Point(17, 16);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(45, 45);
             this.button3.TabIndex = 43;
@@ -1713,25 +1720,12 @@ namespace WindowsFormsApp1
             this.label12.TabIndex = 4;
             this.label12.Text = "Currently logged in Admin : ";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(433, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(497, 41);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Register new customer";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
@@ -1752,20 +1746,20 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(382, 142);
+            this.panel1.Location = new System.Drawing.Point(522, 153);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(583, 422);
+            this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(46, 16);
+            this.label9.Location = new System.Drawing.Point(35, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(468, 23);
+            this.label9.Size = new System.Drawing.Size(330, 17);
             this.label9.TabIndex = 63;
             this.label9.Text = "Customer account successfully registered";
             this.label9.Visible = false;
@@ -1775,7 +1769,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(41, 62);
+            this.label1.Location = new System.Drawing.Point(34, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 27);
             this.label1.TabIndex = 1;
@@ -1784,11 +1778,11 @@ namespace WindowsFormsApp1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(41, 91);
+            this.label3.Location = new System.Drawing.Point(36, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(353, 20);
+            this.label3.Size = new System.Drawing.Size(325, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Fill the registration form below to register a new customer ";
             // 
@@ -1797,7 +1791,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.label8.Location = new System.Drawing.Point(45, 111);
+            this.label8.Location = new System.Drawing.Point(39, 86);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 62;
@@ -1807,7 +1801,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_user_24;
-            this.pictureBox6.Location = new System.Drawing.Point(267, 268);
+            this.pictureBox6.Location = new System.Drawing.Point(202, 231);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(26, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1821,7 +1815,7 @@ namespace WindowsFormsApp1
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(45, 364);
+            this.cancelButton.Location = new System.Drawing.Point(38, 365);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(99, 35);
             this.cancelButton.TabIndex = 57;
@@ -1832,7 +1826,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
-            this.pictureBox3.Location = new System.Drawing.Point(448, 317);
+            this.pictureBox3.Location = new System.Drawing.Point(341, 278);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1843,7 +1837,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
-            this.pictureBox2.Location = new System.Drawing.Point(521, 268);
+            this.pictureBox2.Location = new System.Drawing.Point(341, 231);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1854,9 +1848,9 @@ namespace WindowsFormsApp1
             // 
             this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.emailTextBox.Location = new System.Drawing.Point(160, 316);
+            this.emailTextBox.Location = new System.Drawing.Point(38, 277);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(314, 27);
+            this.emailTextBox.Size = new System.Drawing.Size(329, 27);
             this.emailTextBox.TabIndex = 53;
             this.emailTextBox.Text = "Email";
             this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
@@ -1867,9 +1861,9 @@ namespace WindowsFormsApp1
             // 
             this.cellNumberTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cellNumberTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.cellNumberTextBox.Location = new System.Drawing.Point(299, 267);
+            this.cellNumberTextBox.Location = new System.Drawing.Point(234, 230);
             this.cellNumberTextBox.Name = "cellNumberTextBox";
-            this.cellNumberTextBox.Size = new System.Drawing.Size(248, 27);
+            this.cellNumberTextBox.Size = new System.Drawing.Size(133, 27);
             this.cellNumberTextBox.TabIndex = 52;
             this.cellNumberTextBox.Text = "Cell number";
             this.cellNumberTextBox.TextChanged += new System.EventHandler(this.cellNumberTextBox_TextChanged);
@@ -1880,9 +1874,9 @@ namespace WindowsFormsApp1
             // 
             this.IDTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.IDTextBox.Location = new System.Drawing.Point(45, 267);
+            this.IDTextBox.Location = new System.Drawing.Point(38, 230);
             this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(248, 27);
+            this.IDTextBox.Size = new System.Drawing.Size(190, 27);
             this.IDTextBox.TabIndex = 51;
             this.IDTextBox.Text = "ID number";
             this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
@@ -1893,9 +1887,9 @@ namespace WindowsFormsApp1
             // 
             this.postalCodeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postalCodeTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.postalCodeTextBox.Location = new System.Drawing.Point(299, 233);
+            this.postalCodeTextBox.Location = new System.Drawing.Point(234, 196);
             this.postalCodeTextBox.Name = "postalCodeTextBox";
-            this.postalCodeTextBox.Size = new System.Drawing.Size(248, 27);
+            this.postalCodeTextBox.Size = new System.Drawing.Size(133, 27);
             this.postalCodeTextBox.TabIndex = 50;
             this.postalCodeTextBox.Text = "Postal code";
             this.postalCodeTextBox.TextChanged += new System.EventHandler(this.postalCodeTextBox_TextChanged);
@@ -1906,9 +1900,9 @@ namespace WindowsFormsApp1
             // 
             this.cityTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.cityTextBox.Location = new System.Drawing.Point(45, 233);
+            this.cityTextBox.Location = new System.Drawing.Point(38, 196);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(248, 27);
+            this.cityTextBox.Size = new System.Drawing.Size(190, 27);
             this.cityTextBox.TabIndex = 49;
             this.cityTextBox.Text = "City";
             this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
@@ -1919,9 +1913,9 @@ namespace WindowsFormsApp1
             // 
             this.addressLine2TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine2TextBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressLine2TextBox.Location = new System.Drawing.Point(45, 201);
+            this.addressLine2TextBox.Location = new System.Drawing.Point(38, 164);
             this.addressLine2TextBox.Name = "addressLine2TextBox";
-            this.addressLine2TextBox.Size = new System.Drawing.Size(502, 27);
+            this.addressLine2TextBox.Size = new System.Drawing.Size(329, 27);
             this.addressLine2TextBox.TabIndex = 48;
             this.addressLine2TextBox.Text = "Street Address Line 2";
             this.addressLine2TextBox.TextChanged += new System.EventHandler(this.addressLine2TextBox_TextChanged);
@@ -1932,9 +1926,9 @@ namespace WindowsFormsApp1
             // 
             this.addressLine1TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine1TextBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressLine1TextBox.Location = new System.Drawing.Point(45, 169);
+            this.addressLine1TextBox.Location = new System.Drawing.Point(38, 132);
             this.addressLine1TextBox.Name = "addressLine1TextBox";
-            this.addressLine1TextBox.Size = new System.Drawing.Size(502, 27);
+            this.addressLine1TextBox.Size = new System.Drawing.Size(329, 27);
             this.addressLine1TextBox.TabIndex = 47;
             this.addressLine1TextBox.Text = "Street Address Line 1";
             this.addressLine1TextBox.TextChanged += new System.EventHandler(this.addressLine1TextBox_TextChanged);
@@ -1945,9 +1939,9 @@ namespace WindowsFormsApp1
             // 
             this.lastNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.lastNameTextBox.Location = new System.Drawing.Point(299, 136);
+            this.lastNameTextBox.Location = new System.Drawing.Point(193, 99);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(248, 27);
+            this.lastNameTextBox.Size = new System.Drawing.Size(174, 27);
             this.lastNameTextBox.TabIndex = 46;
             this.lastNameTextBox.Text = "Last name";
             this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
@@ -1958,9 +1952,9 @@ namespace WindowsFormsApp1
             // 
             this.firtNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firtNameTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.firtNameTextBox.Location = new System.Drawing.Point(45, 136);
+            this.firtNameTextBox.Location = new System.Drawing.Point(38, 99);
             this.firtNameTextBox.Name = "firtNameTextBox";
-            this.firtNameTextBox.Size = new System.Drawing.Size(248, 27);
+            this.firtNameTextBox.Size = new System.Drawing.Size(149, 27);
             this.firtNameTextBox.TabIndex = 41;
             this.firtNameTextBox.Text = "First name";
             this.firtNameTextBox.TextChanged += new System.EventHandler(this.firtNameTextBox_TextChanged);
@@ -1972,7 +1966,7 @@ namespace WindowsFormsApp1
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(226, 297);
+            this.label23.Location = new System.Drawing.Point(105, 258);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(179, 16);
             this.label23.TabIndex = 42;
@@ -1984,7 +1978,7 @@ namespace WindowsFormsApp1
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(264, 297);
+            this.label22.Location = new System.Drawing.Point(143, 258);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(97, 16);
             this.label22.TabIndex = 41;
@@ -1998,7 +1992,7 @@ namespace WindowsFormsApp1
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(448, 364);
+            this.registerButton.Location = new System.Drawing.Point(268, 365);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(99, 35);
             this.registerButton.TabIndex = 38;
@@ -2543,6 +2537,72 @@ namespace WindowsFormsApp1
             this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
             this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_lock_24;
+            this.pictureBox4.Location = new System.Drawing.Point(341, 310);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 65;
+            this.pictureBox4.TabStop = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.White;
+            this.textBox8.Location = new System.Drawing.Point(38, 310);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(329, 27);
+            this.textBox8.TabIndex = 64;
+            this.textBox8.Text = "Password is auto generated";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel11.Controls.Add(this.label58);
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Controls.Add(this.label59);
+            this.panel11.Controls.Add(this.button3);
+            this.panel11.Controls.Add(this.label60);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1361, 100);
+            this.panel11.TabIndex = 45;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(585, 70);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(250, 18);
+            this.label58.TabIndex = 18;
+            this.label58.Text = "Safe . Dependable . Affordable";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label59.Location = new System.Drawing.Point(253, 9);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(933, 61);
+            this.label59.TabIndex = 17;
+            this.label59.Text = "The Cottage BnB Booking System";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(105, 43);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(0, 18);
+            this.label60.TabIndex = 0;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2606,6 +2666,9 @@ namespace WindowsFormsApp1
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2699,7 +2762,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
@@ -2835,5 +2897,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource customer1BindingSource;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
     }
 }

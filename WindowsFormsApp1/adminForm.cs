@@ -58,7 +58,24 @@ namespace WindowsFormsApp1
                 customer1Ta1.Fill(fullDs.Customer1);
                 bookedRoomTa.Fill(fullDs.BookedRoom);
                 label9.Visible = true;
-                panel1.Enabled = false;
+                firtNameTextBox.Text = "First name";
+                firtNameTextBox.ForeColor = Color.Gray;
+                lastNameTextBox.Text = "Last name";
+                lastNameTextBox.ForeColor = Color.Gray;
+                addressLine1TextBox.Text = "Street Address Line 1";
+                addressLine1TextBox.ForeColor = Color.Gray;
+                addressLine2TextBox.Text = "Street Address Line 2";
+                addressLine2TextBox.ForeColor = Color.Gray;
+                cityTextBox.Text = "City";
+                cityTextBox.ForeColor = Color.Gray;
+                postalCodeTextBox.Text = "Postal code";
+                postalCodeTextBox.ForeColor = Color.Gray;
+                cellNumberTextBox.Text = "Cell number";
+                cellNumberTextBox.ForeColor = Color.Gray;
+                IDTextBox.Text = "ID number";
+                IDTextBox.ForeColor = Color.Gray;
+                emailTextBox.Text = "Email";
+                emailTextBox.ForeColor = Color.Gray;
             }
         }
         private string capFirst(string s)
@@ -465,41 +482,49 @@ namespace WindowsFormsApp1
         private void firtNameTextBox_TextChanged(object sender, EventArgs e)
         {
             firtNameTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void lastNameTextBox_TextChanged(object sender, EventArgs e)
         {
             lastNameTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void addressLine1TextBox_TextChanged(object sender, EventArgs e)
         {
             addressLine1TextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void addressLine2TextBox_TextChanged(object sender, EventArgs e)
         {
             addressLine2TextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void cityTextBox_TextChanged(object sender, EventArgs e)
         {
             cityTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void postalCodeTextBox_TextChanged(object sender, EventArgs e)
         {
             postalCodeTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void IDTextBox_TextChanged(object sender, EventArgs e)
         {
             IDTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void cellNumberTextBox_TextChanged(object sender, EventArgs e)
         {
             cellNumberTextBox.BackColor = Color.White;
+            label9.Visible = false;
         }
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)
@@ -507,6 +532,7 @@ namespace WindowsFormsApp1
             emailTextBox.BackColor = Color.White;
             label23.Visible = false;
             label22.Visible = false;
+            label9.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -1137,6 +1163,11 @@ namespace WindowsFormsApp1
             updateTextBox(textBox11, dataRow[8].ToString());
             updateTextBox(textBox12, dataRow[3].ToString());
             updateTextBox(textBox10, dataRow[4].ToString());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
