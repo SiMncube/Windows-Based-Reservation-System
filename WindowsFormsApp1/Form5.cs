@@ -162,6 +162,7 @@ namespace WindowsFormsApp1
             Form8 form = new Form8();
             form.ShowDialog();
         }
+
         private void updateBookingSummary()
         {
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
@@ -192,7 +193,6 @@ namespace WindowsFormsApp1
             Array.Copy(doubleAllocatedRooms, 0, allAllocatedRooms, singleAllocatedRooms.Length, doubleAllocatedRooms.Length);
             currentBooking.setRoomIDs(allAllocatedRooms);
         }
-
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
