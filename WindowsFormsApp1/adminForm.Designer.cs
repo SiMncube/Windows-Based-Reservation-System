@@ -163,10 +163,16 @@ namespace WindowsFormsApp1
             this.label16 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.label60 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -215,6 +221,17 @@ namespace WindowsFormsApp1
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
@@ -231,23 +248,6 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -272,7 +272,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.panel5.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -284,8 +286,6 @@ namespace WindowsFormsApp1
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -1683,6 +1683,30 @@ namespace WindowsFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel11.Controls.Add(this.label58);
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Controls.Add(this.label59);
+            this.panel11.Controls.Add(this.button3);
+            this.panel11.Controls.Add(this.label60);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1361, 100);
+            this.panel11.TabIndex = 45;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(585, 70);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(250, 18);
+            this.label58.TabIndex = 18;
+            this.label58.Text = "Safe . Dependable . Affordable";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1694,6 +1718,17 @@ namespace WindowsFormsApp1
             this.label15.Size = new System.Drawing.Size(53, 20);
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label59.Location = new System.Drawing.Point(253, 9);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(933, 61);
+            this.label59.TabIndex = 17;
+            this.label59.Text = "The Cottage BnB Booking System";
             // 
             // button3
             // 
@@ -1708,6 +1743,14 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 43;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(105, 43);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(0, 18);
+            this.label60.TabIndex = 0;
             // 
             // label12
             // 
@@ -1746,11 +1789,34 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(522, 153);
+            this.panel1.Location = new System.Drawing.Point(481, 161);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_lock_24;
+            this.pictureBox4.Location = new System.Drawing.Point(341, 310);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 65;
+            this.pictureBox4.TabStop = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.White;
+            this.textBox8.Location = new System.Drawing.Point(38, 310);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(329, 27);
+            this.textBox8.TabIndex = 64;
+            this.textBox8.Text = "Password is auto generated";
             // 
             // label9
             // 
@@ -2338,6 +2404,98 @@ namespace WindowsFormsApp1
             this.panel9.Size = new System.Drawing.Size(1108, 294);
             this.panel9.TabIndex = 0;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.emailAddressDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn3,
+            this.surnameDataGridViewTextBoxColumn4,
+            this.iDNumberDataGridViewTextBoxColumn2,
+            this.cellNumberDataGridViewTextBoxColumn2,
+            this.streetNameDataGridViewTextBoxColumn,
+            this.suburbDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn,
+            this.postalCodeDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.customer1BindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(95, 98);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(944, 164);
+            this.dataGridView3.TabIndex = 61;
+            this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick_1);
+            // 
+            // emailAddressDataGridViewTextBoxColumn
+            // 
+            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "Email Address";
+            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address";
+            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
+            this.emailAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn3
+            // 
+            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn4
+            // 
+            this.surnameDataGridViewTextBoxColumn4.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn4.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn4.Name = "surnameDataGridViewTextBoxColumn4";
+            this.surnameDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // iDNumberDataGridViewTextBoxColumn2
+            // 
+            this.iDNumberDataGridViewTextBoxColumn2.DataPropertyName = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn2.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn2.Name = "iDNumberDataGridViewTextBoxColumn2";
+            this.iDNumberDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // cellNumberDataGridViewTextBoxColumn2
+            // 
+            this.cellNumberDataGridViewTextBoxColumn2.DataPropertyName = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn2.HeaderText = "Cell Number";
+            this.cellNumberDataGridViewTextBoxColumn2.Name = "cellNumberDataGridViewTextBoxColumn2";
+            this.cellNumberDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // streetNameDataGridViewTextBoxColumn
+            // 
+            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "Street Name";
+            this.streetNameDataGridViewTextBoxColumn.HeaderText = "Street Name";
+            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
+            this.streetNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // suburbDataGridViewTextBoxColumn
+            // 
+            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "Suburb";
+            this.suburbDataGridViewTextBoxColumn.HeaderText = "Suburb";
+            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
+            this.suburbDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "Postal Code";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "Postal Code";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customer1BindingSource
+            // 
+            this.customer1BindingSource.DataMember = "Customer1";
+            this.customer1BindingSource.DataSource = this.fullDs;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -2445,164 +2603,6 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emailAddressDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn3,
-            this.surnameDataGridViewTextBoxColumn4,
-            this.iDNumberDataGridViewTextBoxColumn2,
-            this.cellNumberDataGridViewTextBoxColumn2,
-            this.streetNameDataGridViewTextBoxColumn,
-            this.suburbDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.postalCodeDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.customer1BindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(95, 98);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(944, 164);
-            this.dataGridView3.TabIndex = 61;
-            this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick_1);
-            // 
-            // customer1BindingSource
-            // 
-            this.customer1BindingSource.DataMember = "Customer1";
-            this.customer1BindingSource.DataSource = this.fullDs;
-            // 
-            // emailAddressDataGridViewTextBoxColumn
-            // 
-            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "Email Address";
-            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address";
-            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
-            this.emailAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn3
-            // 
-            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
-            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn4
-            // 
-            this.surnameDataGridViewTextBoxColumn4.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn4.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn4.Name = "surnameDataGridViewTextBoxColumn4";
-            this.surnameDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // iDNumberDataGridViewTextBoxColumn2
-            // 
-            this.iDNumberDataGridViewTextBoxColumn2.DataPropertyName = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn2.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn2.Name = "iDNumberDataGridViewTextBoxColumn2";
-            this.iDNumberDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // cellNumberDataGridViewTextBoxColumn2
-            // 
-            this.cellNumberDataGridViewTextBoxColumn2.DataPropertyName = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn2.HeaderText = "Cell Number";
-            this.cellNumberDataGridViewTextBoxColumn2.Name = "cellNumberDataGridViewTextBoxColumn2";
-            this.cellNumberDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // streetNameDataGridViewTextBoxColumn
-            // 
-            this.streetNameDataGridViewTextBoxColumn.DataPropertyName = "Street Name";
-            this.streetNameDataGridViewTextBoxColumn.HeaderText = "Street Name";
-            this.streetNameDataGridViewTextBoxColumn.Name = "streetNameDataGridViewTextBoxColumn";
-            this.streetNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // suburbDataGridViewTextBoxColumn
-            // 
-            this.suburbDataGridViewTextBoxColumn.DataPropertyName = "Suburb";
-            this.suburbDataGridViewTextBoxColumn.HeaderText = "Suburb";
-            this.suburbDataGridViewTextBoxColumn.Name = "suburbDataGridViewTextBoxColumn";
-            this.suburbDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // postalCodeDataGridViewTextBoxColumn
-            // 
-            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "Postal Code";
-            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "Postal Code";
-            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
-            this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_lock_24;
-            this.pictureBox4.Location = new System.Drawing.Point(341, 310);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 65;
-            this.pictureBox4.TabStop = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(38, 310);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(329, 27);
-            this.textBox8.TabIndex = 64;
-            this.textBox8.Text = "Password is auto generated";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel11.Controls.Add(this.label58);
-            this.panel11.Controls.Add(this.label15);
-            this.panel11.Controls.Add(this.label59);
-            this.panel11.Controls.Add(this.button3);
-            this.panel11.Controls.Add(this.label60);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1361, 100);
-            this.panel11.TabIndex = 45;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(585, 70);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(250, 18);
-            this.label58.TabIndex = 18;
-            this.label58.Text = "Safe . Dependable . Affordable";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(253, 9);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(933, 61);
-            this.label59.TabIndex = 17;
-            this.label59.Text = "The Cottage BnB Booking System";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(105, 43);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(0, 18);
-            this.label60.TabIndex = 0;
-            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2650,8 +2650,11 @@ namespace WindowsFormsApp1
             this.panel5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -2666,9 +2669,6 @@ namespace WindowsFormsApp1
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
