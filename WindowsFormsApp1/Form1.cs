@@ -26,22 +26,22 @@ namespace WindowsFormsApp1
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())
                 {
-                    this.Hide();
                     Form8 homePage = new Form8();
+                    this.Hide();
                     homePage.ShowDialog();
                     this.Close();
                 }
                 if(adminNameIsCorrect() && adminPasswordIsCorrect())
                 {
-                    this.Hide();
                     adminForm a = new adminForm();
+                    this.Hide();
                     a.ShowDialog();
                     this.Close();
                 }
                 if(managerNameIsCorrect() && managerNameIsCorrect())
                 {
-                    this.Hide();
                     managerForm m = new managerForm();
+                    this.Hide();
                     m.ShowDialog();
                     this.Close();
                 }
@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                 if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Admin")
                 {
                     currentUser.setEmailID(fullDs.Staff[i].emailID);
+
                     return true;
                 }
             }
