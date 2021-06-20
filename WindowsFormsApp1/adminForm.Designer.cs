@@ -203,6 +203,7 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDueDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -249,7 +250,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label62 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -1422,7 +1422,7 @@ namespace WindowsFormsApp1
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(118, 28);
             this.button10.TabIndex = 51;
-            this.button10.Text = "Select";
+            this.button10.Text = "Confirm";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -2227,6 +2227,18 @@ namespace WindowsFormsApp1
             this.panel2.Size = new System.Drawing.Size(1049, 296);
             this.panel2.TabIndex = 1;
             // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Red;
+            this.label62.Location = new System.Drawing.Point(400, 8);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(290, 24);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Booking has been refunded";
+            this.label62.Visible = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -2619,18 +2631,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.Red;
-            this.label62.Location = new System.Drawing.Point(400, 8);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(290, 24);
-            this.label62.TabIndex = 8;
-            this.label62.Text = "Booking has been refunded";
-            this.label62.Visible = false;
             // 
             // adminForm
             // 
