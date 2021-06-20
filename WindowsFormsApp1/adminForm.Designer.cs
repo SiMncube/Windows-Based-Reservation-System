@@ -140,7 +140,6 @@ namespace WindowsFormsApp1
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
@@ -1438,7 +1437,6 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.label25);
             this.panel5.Controls.Add(this.dateTimePicker1);
             this.panel5.Controls.Add(this.label26);
@@ -1518,29 +1516,13 @@ namespace WindowsFormsApp1
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(25, 291);
+            this.button8.Location = new System.Drawing.Point(25, 295);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(126, 37);
+            this.button8.Size = new System.Drawing.Size(268, 37);
             this.button8.TabIndex = 35;
             this.button8.Text = "Save";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button9.Enabled = false;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(185, 291);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(108, 37);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Check Out";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label25
             // 
@@ -2800,7 +2782,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label26;

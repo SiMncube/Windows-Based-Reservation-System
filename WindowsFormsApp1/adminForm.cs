@@ -820,14 +820,18 @@ namespace WindowsFormsApp1
             updateBookingSummary(getAmountDue(comboBox1, comboBox2).ToString());
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
-            button9.Enabled = true;
+            //button9.Enabled = true;
             button8.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
-        }
 
+            currentUser.setEmailID(currentCustomerEmailID);
+            confirmBookingForm c = new confirmBookingForm();
+            c.ShowDialog();
+        }
+        
         private void button9_Click(object sender, EventArgs e)
         {
             currentUser.setEmailID(currentCustomerEmailID);
@@ -998,11 +1002,14 @@ namespace WindowsFormsApp1
             dateTimePicker3.Enabled = true;
             dateTimePicker4.Enabled = true;
         }
+
+        int summaryIDusedForPaymentRecords = 0;
         private void CaptureNEWBookingRecords(string callAmountDueMethod)  //this method does not capture payment records
         {
 
             bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, callAmountDueMethod);
             int summaryID = (int)bookingSummaryTa.getLastRecord();
+            summaryIDusedForPaymentRecords = summaryID;
 
             for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
             {
@@ -1022,11 +1029,10 @@ namespace WindowsFormsApp1
 
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
-            this.paymentTa.Update(this.fullDs.Payment);
-            this.paymentTa.Fill(this.fullDs.Payment);
             this.bookedRoomTa.Update(this.fullDs.BookedRoom);
             this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
         }
+
         private void button14_Click(object sender, EventArgs e)
         {
             updateBookingSummary(getAmountDue(comboBox3, comboBox4).ToString());
@@ -1157,6 +1163,7 @@ namespace WindowsFormsApp1
         {
             UpdateBookingStatusToModified(int.Parse(modifiedbookingID));
             ProcessModifiedBookingRefund();
+            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), summaryIDusedForPaymentRecords, "EFT");
 
             string temp = getAmountDue(comboBox3, comboBox4);
             decimal newBookingAmountDue = decimal.Parse(temp.Substring(2, temp.Length - 3));
@@ -1178,6 +1185,9 @@ namespace WindowsFormsApp1
             label36.Visible = false;
         }
 
+
+
+        //############################################################ Kaygee Code Update Customer Profile ################################################
         private void dataGridView3_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataRow dataRow = fullDs1.Customer1.NewRow();
