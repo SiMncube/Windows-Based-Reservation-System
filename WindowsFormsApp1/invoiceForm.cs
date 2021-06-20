@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
             setDateOut();
             setName();
             setPrices();
+            label20.Text = currentBooking.getSummaryID().ToString();
         }
         private DateTime setDateIn()
         {
@@ -126,6 +127,11 @@ namespace WindowsFormsApp1
             this.Hide();
             a.ShowDialog();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
