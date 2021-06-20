@@ -1050,7 +1050,7 @@ namespace WindowsFormsApp1
                 if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
                 {
                     string temp = fullDs.Payment[i].amountDue.ToString();
-                    return decimal.Parse(temp.Substring(2, temp.Length - 3));
+                    return decimal.Parse(temp.Substring(2, temp.Length - 2));
                 }
             }
             return -1;
@@ -1062,7 +1062,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.Payment[i].summaryID.ToString() == OldBookingSummaryID)
                 {
-                    string negativePayment = "-R" + fullDs.Payment[i].amountDue;
+                    string negativePayment = "-" + fullDs.Payment[i].amountDue;
                     paymentTa.Insert(DateTime.Today, negativePayment, int.Parse(OldBookingSummaryID), "Refund");
                     break;
                 }
@@ -1109,7 +1109,7 @@ namespace WindowsFormsApp1
             CaptureNEWBookingRecord(newBookingAmountDueString);      //not this record is incomplete untill the admin confirms the receipt of payment
 
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
-            decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 3));
+            decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 2));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
 
             DialogResult results;
