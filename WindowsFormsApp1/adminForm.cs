@@ -1092,6 +1092,9 @@ namespace WindowsFormsApp1
             ProcessModifiedBookingRefund();    //adds a negative payment record == oldBookingAmountDue 
             paymentTa.Insert(DateTime.Today, callNewBookingAmoundDue, newBookingSummaryID, "EFT");
             UpdateNewBookingStatusToComplete();
+
+            MessageBox.Show("Booking Has Been Successlly Updated", "Customer Message");
+
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
@@ -1114,10 +1117,22 @@ namespace WindowsFormsApp1
             if (finalAmountDue < 0)  //issue a refund
             {
                 results = MessageBox.Show("After Updating this Booking, Refund of R " + finalAmountDue + "will be processed.", "Customer Message", MessageBoxButtons.OKCancel);
+                if (results == DialogResult.OK)
+                {
+                    UpdateBooking(newBookingAmountDueString);
+                }
             }
             else if (finalAmountDue > 0) // add amount
             {
                 results = MessageBox.Show("To Update this booking Customer will have to Add R " + finalAmountDue, "Customer Message", MessageBoxButtons.OKCancel);
+                if (results == DialogResult.OK)
+                {
+                    results = MessageBox.Show("Click Okay to Confirm Receipt of  " + finalAmountDue, "Customer Payment Confiration Message", MessageBoxButtons.OKCancel);
+                    if (results == DialogResult.OK)
+                    {
+                        UpdateBooking(newBookingAmountDueString);
+                    }
+                }
             }
             else   //break even 
             {
