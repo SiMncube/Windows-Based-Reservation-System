@@ -9939,6 +9939,10 @@ FROM            BookingSummary INNER JOIN
 FROM            BookingSummary INNER JOIN
                          Customer ON BookingSummary.emailID = Customer.emailID
 WHERE        (Customer.surname LIKE @name + '%') OR
+                         (Customer.name LIKE @name + '%') OR
+                         (Customer.idNumber LIKE @name + '%') OR
+                         (Customer.surname LIKE @name + '%') OR
+                         (Customer.cellNumber LIKE @name + '%') OR
                          (BookingSummary.emailID LIKE @name + '%') OR
                          (BookingSummary.summaryID LIKE @name + '%')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
