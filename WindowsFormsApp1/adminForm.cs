@@ -1159,7 +1159,7 @@ namespace WindowsFormsApp1
         {
             UpdateBookingStatusToModified(int.Parse(modifiedbookingID));
             ProcessModifiedBookingRefund();
-            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), summaryID, "EFT");
+            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), summaryIDusedForPaymentRecords, "EFT");
 
             string temp = getAmountDue(comboBox3, comboBox4);
             decimal newBookingAmountDue = decimal.Parse(temp.Substring(2, temp.Length - 3));
