@@ -1112,7 +1112,6 @@ namespace WindowsFormsApp1
             ProcessModifiedBookingRefund();    //adds a negative payment record == oldBookingAmountDue 
             paymentTa.Insert(DateTime.Today, newBookingAmountDueTemp, newBookingSummaryID, "EFT");
             UpdateNewBookingStatusToComplete();
-
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
