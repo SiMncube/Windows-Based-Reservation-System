@@ -1272,10 +1272,9 @@ namespace WindowsFormsApp1
             updateTextBox(textBox12, dataRow[3].ToString());
             updateTextBox(textBox10, dataRow[4].ToString());
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-
+            fullDs1.Clear();
         }
     }
 }
