@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(504, 277);
+            this.panel1.Location = new System.Drawing.Point(494, 275);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 242);
             this.panel1.TabIndex = 26;
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(504, 178);
+            this.panel2.Location = new System.Drawing.Point(494, 176);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 93);
             this.panel2.TabIndex = 28;

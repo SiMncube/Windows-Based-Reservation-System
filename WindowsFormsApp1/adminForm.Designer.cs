@@ -460,7 +460,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(516, 159);
+            this.panel1.Location = new System.Drawing.Point(498, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
@@ -804,7 +804,7 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.textBox16);
             this.panel10.Controls.Add(this.textBox17);
             this.panel10.Controls.Add(this.button17);
-            this.panel10.Location = new System.Drawing.Point(549, 316);
+            this.panel10.Location = new System.Drawing.Point(507, 306);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(361, 368);
             this.panel10.TabIndex = 2;
@@ -1201,7 +1201,7 @@ namespace WindowsFormsApp1
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label44.Location = new System.Drawing.Point(234, 36);
+            this.label44.Location = new System.Drawing.Point(226, 36);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(669, 24);
             this.label44.TabIndex = 5;
@@ -1296,7 +1296,7 @@ namespace WindowsFormsApp1
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(348, 8);
+            this.label32.Location = new System.Drawing.Point(369, 8);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(301, 16);
             this.label32.TabIndex = 53;
@@ -1443,7 +1443,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(563, 313);
+            this.panel5.Location = new System.Drawing.Point(530, 313);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(323, 361);
             this.panel5.TabIndex = 48;
@@ -1649,7 +1649,7 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.dateTimePicker4);
             this.panel8.Controls.Add(this.label43);
             this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(562, 315);
+            this.panel8.Location = new System.Drawing.Point(529, 315);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(325, 369);
             this.panel8.TabIndex = 57;
@@ -2230,7 +2230,7 @@ namespace WindowsFormsApp1
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(409, 19);
+            this.label14.Location = new System.Drawing.Point(400, 8);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(234, 24);
             this.label14.TabIndex = 6;
@@ -2242,7 +2242,7 @@ namespace WindowsFormsApp1
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(409, 19);
+            this.label13.Location = new System.Drawing.Point(400, 8);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(298, 24);
             this.label13.TabIndex = 5;
@@ -2264,7 +2264,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(409, 19);
+            this.label5.Location = new System.Drawing.Point(400, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 24);
             this.label5.TabIndex = 3;
@@ -2422,7 +2422,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(155, 120);
+            this.panel4.Location = new System.Drawing.Point(137, 17);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
