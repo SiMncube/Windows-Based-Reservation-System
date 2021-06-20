@@ -823,9 +823,10 @@ namespace WindowsFormsApp1
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+
+            currentUser.setEmailID(currentCustomerEmailID);
             confirmBookingForm c = new confirmBookingForm();
             c.ShowDialog();
-            currentUser.setEmailID(currentCustomerEmailID);
         }
         
         private void button9_Click(object sender, EventArgs e)
