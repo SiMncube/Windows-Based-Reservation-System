@@ -933,14 +933,14 @@ namespace WindowsFormsApp1
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.SteelBlue;
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(20, 314);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(82, 35);
+            this.button16.Size = new System.Drawing.Size(119, 31);
             this.button16.TabIndex = 57;
             this.button16.Text = "Cancel";
             this.button16.UseVisualStyleBackColor = false;
@@ -1033,14 +1033,14 @@ namespace WindowsFormsApp1
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.SteelBlue;
+            this.button17.BackColor = System.Drawing.Color.DodgerBlue;
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(262, 314);
+            this.button17.Location = new System.Drawing.Point(225, 314);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(82, 35);
+            this.button17.Size = new System.Drawing.Size(119, 31);
             this.button17.TabIndex = 38;
             this.button17.Text = "Update";
             this.button17.UseVisualStyleBackColor = false;
