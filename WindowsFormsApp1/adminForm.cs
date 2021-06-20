@@ -1088,30 +1088,34 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string newBookingAmountDueTemp = getAmountDue(comboBox3, comboBox4);  
-            CaptureNEWBookingRecord(newBookingAmountDueTemp);  //not this record is incomplete untill the admin confirms the receipt of payment
+            string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);  
+            CaptureNEWBookingRecord(newBookingAmountDueString);  //not this record is incomplete untill the admin confirms the receipt of payment
 
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
-            decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueTemp.Substring(2, newBookingAmountDueTemp.Length - 3));
+            decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 3));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
 
-            if (finalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
-            {
-                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + finalAmountDue + "will be processed.", "Modified Booking");
+            if (finalAmountDue < 0)  //issue a refund
+            { 
+                MessageBox.Show("After Updating this Booking, Refund of R " + finalAmountDue + "will be processed.", "Customer Message");
             }
-            else if (finalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
-            {
-                MessageBox.Show("The Booking has been captured, Waiting for Suplus payment Confirmation", "Modified Booking");
+            else if (finalAmountDue > 0) // add amount
+            { 
+                MessageBox.Show("To Update this booking Customer will have to Add R " + finalAmountDue, "Customer Message");
             }
-            else   //break even means no action has to be done booking has been succefully modified;
+            else   //break even 
             {
-                MessageBox.Show("The Booking has been Successfully Modified", "Modified Booking");
+                MessageBox.Show("Thid Booking has been Successfully Modified", "Customer Message");
             }
 
-            UpdateOldBookingStatusToModified(int.Parse(OldBookingSummaryID));
-            ProcessModifiedBookingRefund();    //adds a negative payment record == oldBookingAmountDue 
-            paymentTa.Insert(DateTime.Today, newBookingAmountDueTemp, newBookingSummaryID, "EFT");
-            UpdateNewBookingStatusToComplete();
+            bool paymentHasBeenReceived = false;
+            if (paymentHasBeenReceived)
+            {
+                UpdateOldBookingStatusToModified(int.Parse(OldBookingSummaryID));
+                ProcessModifiedBookingRefund();    //adds a negative payment record == oldBookingAmountDue 
+                paymentTa.Insert(DateTime.Today, newBookingAmountDueString, newBookingSummaryID, "EFT");
+                UpdateNewBookingStatusToComplete();
+            }
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
