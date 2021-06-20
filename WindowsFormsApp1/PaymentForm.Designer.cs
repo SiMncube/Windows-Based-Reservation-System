@@ -479,11 +479,11 @@ namespace WindowsFormsApp1
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(253, 9);
+            this.label59.Location = new System.Drawing.Point(179, 4);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(933, 61);
+            this.label59.Size = new System.Drawing.Size(1070, 61);
             this.label59.TabIndex = 17;
-            this.label59.Text = "The Cottage BnB Booking System";
+            this.label59.Text = "We Are Looking Forward to Seing You";
             // 
             // button1
             // 
@@ -497,6 +497,7 @@ namespace WindowsFormsApp1
             this.button1.Size = new System.Drawing.Size(45, 45);
             this.button1.TabIndex = 43;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label60
             // 
