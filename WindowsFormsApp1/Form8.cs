@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
                 {
-                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    userName += fullDatabase.Customer[i].name + " " + fullDatabase.Customer[i].surname;
                     break;
                 }
 
