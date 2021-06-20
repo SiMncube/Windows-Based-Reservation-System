@@ -1075,18 +1075,18 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string NewBookingDetailsAmountDue = getAmountDue(comboBox3, comboBox4);  
-            CaptureNEWBookingRecord(NewBookingDetailsAmountDue);  //not this record is incomplete untill the admin confirms the receipt of payment
+            string newBookingAmountDueTemp = getAmountDue(comboBox3, comboBox4);  
+            CaptureNEWBookingRecord(newBookingAmountDueTemp);  //not this record is incomplete untill the admin confirms the receipt of payment
 
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
-            decimal newBookingAmountDue = decimal.Parse(NewBookingDetailsAmountDue.Substring(2, NewBookingDetailsAmountDue.Length - 3));
-            decimal FinalAmountDue = newBookingAmountDue - oldBookingAmountDue;
+            decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueTemp.Substring(2, newBookingAmountDueTemp.Length - 3));
+            decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
 
-            if (FinalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
+            if (finalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
             {
-                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + FinalAmountDue + "will be processed.", "Modified Booking");
+                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + finalAmountDue + "will be processed.", "Modified Booking");
             }
-            else if (FinalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
+            else if (finalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
             {
                 MessageBox.Show("The Booking has been captured, Waiting for Suplus payment Confirmation", "Modified Booking");
             }
