@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@ namespace WindowsFormsApp1
             this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -100,6 +100,28 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(514, 362);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label20.Location = new System.Drawing.Point(304, 161);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 16);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "Incomplete";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label15.Location = new System.Drawing.Point(49, 161);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 16);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Booking Ref No.";
             // 
             // label21
             // 
@@ -319,28 +341,6 @@ namespace WindowsFormsApp1
             // paymentTa
             // 
             this.paymentTa.ClearBeforeFill = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label15.Location = new System.Drawing.Point(49, 161);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 16);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "Booking Reference";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(304, 161);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 16);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "#";
             // 
             // panel2
             // 

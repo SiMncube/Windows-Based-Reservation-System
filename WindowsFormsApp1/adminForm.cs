@@ -925,6 +925,7 @@ namespace WindowsFormsApp1
 
         //=============================================================== Author @Sihle Modify Booking Tab ==============================================
         string modifiedbookingID = "";
+        decimal modifiedBookingPaidAmount = 0;
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -971,11 +972,6 @@ namespace WindowsFormsApp1
             }
             
             return false;
-        }
-
-        private string getModifiedAmountDue()
-        {
-            return "R ";
         }
 
         private void modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1097,14 +1093,64 @@ namespace WindowsFormsApp1
                 button14.Enabled = false;
         }
 
+        private void UpdateBookingStatusToModified(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
+                {
+                    fullDs.BookingSummary[i].bookingStatus = "Modified";
+
+                    string temp = fullDs.Payment[i].amountDue.ToString();
+                    modifiedBookingPaidAmount = decimal.Parse(temp.Substring(2, temp.Length - 3));
+
+                }
+            }
+            bookingSummaryTa.Update(fullDs.BookingSummary);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+        }
+
+        private void ProcessModifiedBookingRefund() //100% refund will be used to make the new booking
+        {
+            for (int i = 0; i < fullDs.Payment.Rows.Count; i++)
+            {
+                if (fullDs.Payment[i].summaryID.ToString() == modifiedbookingID)
+                {
+                    string negativePayment = "-" + fullDs.Payment[i].amountDue;
+                    paymentTa.Insert(DateTime.Today, negativePayment, int.Parse(modifiedbookingID), "Refund");
+                    break;
+                }
+            }
+            paymentTa.Update(fullDs.Payment);
+            paymentTa.Fill(fullDs.Payment);
+        }
+
         private void button15_Click(object sender, EventArgs e)
         {
-            currentUser.setEmailID(currentCustomerEmailID);
-            PaymentForm payment = new PaymentForm();
-            //this.Hide();
-            payment.ShowDialog();
-            //this.Close();
+            UpdateBookingStatusToModified(int.Parse(modifiedbookingID));
+            ProcessModifiedBookingRefund();
 
+            string temp = getAmountDue(comboBox3, comboBox4);
+            decimal newBookingAmountDue = decimal.Parse(temp.Substring(2, temp.Length - 3));
+
+            decimal FinalAmountDue = newBookingAmountDue - modifiedBookingPaidAmount;
+
+            if (FinalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
+            {
+                MessageBox.Show("Your Booking has been Successfully Modified, your refund of R " + FinalAmountDue + "will be reversed.", "Modified Booking");
+            }
+            else if(FinalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
+            {
+                currentUser.setEmailID(currentCustomerEmailID);
+                PaymentForm payment = new PaymentForm();
+                //this.Hide();
+                payment.ShowDialog();
+                //this.Close();
+            }
+            else   //break even means no action has to be done booking has been succefully modified;
+            {
+                MessageBox.Show("Your Booking has been Successfully Modified", "Modified Booking");
+            }
             label36.Visible = false;
         }
 
