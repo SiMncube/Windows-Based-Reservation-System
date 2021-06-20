@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
             }
             label1.Text += userName;
         }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 login = new Form1();
