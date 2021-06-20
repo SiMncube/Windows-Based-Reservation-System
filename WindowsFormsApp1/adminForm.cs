@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
         private void bookingInnerDGV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             label4.Visible = false;
-            if (!bookingIsCanceled((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsIncomplete((int)bookingInnerDGV.CurrentRow.Cells[4].Value))
+            if (!bookingIsCanceled((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsIncomplete((int)bookingInnerDGV.CurrentRow.Cells[4].Value) && !bookingIsModified((int)bookingInnerDGV.CurrentRow.Cells[4].Value))
             {
                 DataRow dataRow = fullDs1.BookingInner.NewRow();
                 for (int i = 0; i < dataRow.ItemArray.Length; i++)
@@ -301,6 +301,7 @@ namespace WindowsFormsApp1
                 {
                     label13.Visible = true;
                     label14.Visible = false;
+                    label62.Visible = false;
                     return true;
                 }
 
@@ -315,6 +316,21 @@ namespace WindowsFormsApp1
                 {
                     label14.Visible = true;
                     label13.Visible = false;
+                    label62.Visible = false;
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool bookingIsModified(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID && fullDs.BookingSummary[i].bookingStatus == "Modified")
+                {
+                    label14.Visible = false;
+                    label13.Visible = false;
+                    label62.Visible = true;
                     return true;
                 }
             }
@@ -890,17 +906,6 @@ namespace WindowsFormsApp1
             label33.Visible = true;
             button10.Enabled = true;
         }
-
-        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bookingInnerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
 
@@ -920,7 +925,6 @@ namespace WindowsFormsApp1
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             bookedRoomTa.Fill(fullDs.BookedRoom);
         }
-
         private void label20_Click(object sender, EventArgs e)
         {
 
@@ -1359,11 +1363,17 @@ namespace WindowsFormsApp1
         private void button2_Click_1(object sender, EventArgs e)
         {
             fullDs1.Clear();
+            label4.Visible = false;
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
         }
     }
 }
