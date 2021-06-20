@@ -92,6 +92,12 @@
     <Compile Include="invoiceForm.Designer.cs">
       <DependentUpon>invoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="modifyConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifyConfirm.Designer.cs">
+      <DependentUpon>modifyConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="invoiceForm.resx">
       <DependentUpon>invoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifyConfirm.resx">
+      <DependentUpon>modifyConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
