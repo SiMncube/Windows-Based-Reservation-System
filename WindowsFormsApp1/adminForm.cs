@@ -221,6 +221,7 @@ namespace WindowsFormsApp1
                 }
                 try
                 {
+                    fullDs1.BookingInner.Rows.Clear();
                     fullDs1.BookingInner.Rows.Add(dataRow);
                     label5.Visible = false;
                     label13.Visible = false;
@@ -240,10 +241,12 @@ namespace WindowsFormsApp1
             {
                 cancelBooking((int)dataGridView1.CurrentRow.Cells[4].Value);
             }
-
+            currentUser.setEmailID(dataGridView1.Rows[0].Cells[5].Value.ToString());
+            currentBooking.setSummaryID((int)dataGridView1.Rows[0].Cells[4].Value);
             bookingSummaryTa.Update(fullDs.BookingSummary);
             paymentTa.Update(fullDs.Payment);
-
+            cancelBookingConfirm c = new cancelBookingConfirm();
+            c.ShowDialog();
             label4.Visible = true;
             bookingInnerTa.Fill(fullDs.BookingInner);
             paymentTa.Fill(fullDs.Payment);
@@ -257,8 +260,6 @@ namespace WindowsFormsApp1
             fullDs1.Clear();
             label5.Visible = false;
             label13.Visible = false;
-
-
         }
         private string calculateAmountDue(string s)
         {

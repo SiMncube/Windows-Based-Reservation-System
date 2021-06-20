@@ -80,6 +80,12 @@
     <Compile Include="Form10.Designer.cs">
       <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
+    <Compile Include="cancelBookingConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cancelBookingConfirm.Designer.cs">
+      <DependentUpon>cancelBookingConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="invoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cancelBookingConfirm.resx">
+      <DependentUpon>cancelBookingConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="invoiceForm.resx">
       <DependentUpon>invoiceForm.cs</DependentUpon>
