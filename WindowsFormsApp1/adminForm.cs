@@ -817,7 +817,6 @@ namespace WindowsFormsApp1
             updateBookingSummary(getAmountDue(comboBox1, comboBox2).ToString());
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
-            //button9.Enabled = true;
             button8.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
@@ -925,8 +924,8 @@ namespace WindowsFormsApp1
         }
 
         //=============================================================== Author @Sihle Modify Booking Tab ==============================================
-        string modifiedbookingID = "";
-        decimal modifiedBookingPaidAmount = 0;
+        string OldBookingSummaryID = "";
+        int NewBookingSummaryID = 0;
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -984,7 +983,7 @@ namespace WindowsFormsApp1
                 label36.Visible = true;
                 button13.Enabled = true;
 
-                modifiedbookingID = modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString();
+                OldBookingSummaryID = modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value.ToString();
             }
             else
             {
@@ -1000,13 +999,11 @@ namespace WindowsFormsApp1
             dateTimePicker4.Enabled = true;
         }
 
-        int summaryIDusedForPaymentRecords = 0;
-        private void CaptureNEWBookingRecords(string callAmountDueMethod)  //this method does not capture payment records
+        private void CaptureNEWBookingRecord(string callAmountDueMethod)  //this method does not capture payment records
         {
-
-            bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, callAmountDueMethod);
+            bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, "inComplete", callAmountDueMethod);
             int summaryID = (int)bookingSummaryTa.getLastRecord();
-            summaryIDusedForPaymentRecords = summaryID;
+            NewBookingSummaryID = summaryID;
 
             for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
             {
@@ -1030,12 +1027,82 @@ namespace WindowsFormsApp1
             this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
         }
 
+        private void UpdateOldBookingStatusToModified(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
+                {
+                    fullDs.BookingSummary[i].bookingStatus = "Modified";
+                }
+            }
+            bookingSummaryTa.Update(fullDs.BookingSummary);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+        }
+
+        private decimal getOldBookingAmountDue(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
+                {
+                    string temp = fullDs.Payment[i].amountDue.ToString();
+                    return decimal.Parse(temp.Substring(2, temp.Length - 3));
+                }
+            }
+            return -1;
+        }
+
+        private void ProcessModifiedBookingRefund() //100% refund will be used to make the new booking
+        {
+            for (int i = 0; i < fullDs.Payment.Rows.Count; i++)
+            {
+                if (fullDs.Payment[i].summaryID.ToString() == OldBookingSummaryID)
+                {
+                    string negativePayment = "-" + fullDs.Payment[i].amountDue;
+                    paymentTa.Insert(DateTime.Today, negativePayment, int.Parse(OldBookingSummaryID), "Refund");
+                    break;
+                }
+            }
+            paymentTa.Update(fullDs.Payment);
+            paymentTa.Fill(fullDs.Payment);
+        }
+
+        private void UpdateNewBookingStatusToComplete()
+        {
+
+        }
+
         private void button14_Click(object sender, EventArgs e)
         {
-            updateBookingSummary(getAmountDue(comboBox3, comboBox4).ToString());
+            string NewBookingDetailsAmountDue = getAmountDue(comboBox3, comboBox4);  
+            CaptureNEWBookingRecord(NewBookingDetailsAmountDue);  //not this record is incomplete untill the admin confirms the receipt of payment
+
+            decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
+            decimal newBookingAmountDue = decimal.Parse(NewBookingDetailsAmountDue.Substring(2, NewBookingDetailsAmountDue.Length - 3));
+            decimal FinalAmountDue = newBookingAmountDue - oldBookingAmountDue;
+
+            if (FinalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
+            {
+                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + FinalAmountDue + "will be processed.", "Modified Booking");
+            }
+            else if (FinalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
+            {
+                MessageBox.Show("The Booking has been captured, Waiting for Suplus payment Confirmation", "Modified Booking");
+            }
+            else   //break even means no action has to be done booking has been succefully modified;
+            {
+                MessageBox.Show("The Booking has been Successfully Modified", "Modified Booking");
+            }
+
+            UpdateOldBookingStatusToModified(int.Parse(OldBookingSummaryID));
+            ProcessModifiedBookingRefund();  //adds a negative payment records to the payments table.
+            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), NewBookingSummaryID, "EFT");
+
+
+            label36.Visible = false;
             comboBox3.Enabled = false;
             comboBox4.Enabled = false;
-            button15.Enabled = true;
             button14.Enabled = false;
             dateTimePicker3.Enabled = false;
             dateTimePicker4.Enabled = false;
@@ -1123,65 +1190,6 @@ namespace WindowsFormsApp1
             else
                 button14.Enabled = false;
         }
-
-        private void UpdateBookingStatusToModified(int summaryID)
-        {
-            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
-            {
-                if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
-                {
-                    fullDs.BookingSummary[i].bookingStatus = "Modified";
-
-                    string temp = fullDs.Payment[i].amountDue.ToString();
-                    modifiedBookingPaidAmount = decimal.Parse(temp.Substring(2, temp.Length - 3));
-
-                }
-            }
-            bookingSummaryTa.Update(fullDs.BookingSummary);
-            bookingSummaryTa.Fill(fullDs.BookingSummary);
-        }
-
-        private void ProcessModifiedBookingRefund() //100% refund will be used to make the new booking
-        {
-            for (int i = 0; i < fullDs.Payment.Rows.Count; i++)
-            {
-                if (fullDs.Payment[i].summaryID.ToString() == modifiedbookingID)
-                {
-                    string negativePayment = "-" + fullDs.Payment[i].amountDue;
-                    paymentTa.Insert(DateTime.Today, negativePayment, int.Parse(modifiedbookingID), "Refund");
-                    break;
-                }
-            }
-            paymentTa.Update(fullDs.Payment);
-            paymentTa.Fill(fullDs.Payment);
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            UpdateBookingStatusToModified(int.Parse(modifiedbookingID));
-            ProcessModifiedBookingRefund();
-            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), summaryIDusedForPaymentRecords, "EFT");
-
-            string temp = getAmountDue(comboBox3, comboBox4);
-            decimal newBookingAmountDue = decimal.Parse(temp.Substring(2, temp.Length - 3));
-
-            decimal FinalAmountDue = newBookingAmountDue - modifiedBookingPaidAmount;
-
-            if (FinalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
-            {
-                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + FinalAmountDue + "will be processed.", "Modified Booking");
-            }
-            else if(FinalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
-            {
-                MessageBox.Show("The Booking has been captured, Waiting for Suplus payment Confirmation", "Modified Booking");
-            }
-            else   //break even means no action has to be done booking has been succefully modified;
-            {
-                MessageBox.Show("The Booking has been Successfully Modified", "Modified Booking");
-            }
-            label36.Visible = false;
-        }
-
 
 
         //############################################################ Kaygee Code Update Customer Profile ################################################
@@ -1309,6 +1317,11 @@ namespace WindowsFormsApp1
         private void button2_Click_1(object sender, EventArgs e)
         {
             fullDs1.Clear();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

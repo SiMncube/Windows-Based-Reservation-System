@@ -157,7 +157,6 @@ namespace WindowsFormsApp1
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label41 = new System.Windows.Forms.Label();
@@ -1642,7 +1641,6 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.comboBox4);
             this.panel8.Controls.Add(this.label39);
             this.panel8.Controls.Add(this.button14);
-            this.panel8.Controls.Add(this.button15);
             this.panel8.Controls.Add(this.label40);
             this.panel8.Controls.Add(this.dateTimePicker3);
             this.panel8.Controls.Add(this.label41);
@@ -1652,7 +1650,7 @@ namespace WindowsFormsApp1
             this.panel8.Enabled = false;
             this.panel8.Location = new System.Drawing.Point(562, 315);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(317, 369);
+            this.panel8.Size = new System.Drawing.Size(325, 369);
             this.panel8.TabIndex = 57;
             // 
             // label61
@@ -1732,29 +1730,13 @@ namespace WindowsFormsApp1
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(29, 307);
+            this.button14.Location = new System.Drawing.Point(27, 309);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(121, 37);
+            this.button14.Size = new System.Drawing.Size(270, 33);
             this.button14.TabIndex = 35;
-            this.button14.Text = "Confirm Update";
+            this.button14.Text = "Update Booking";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button15.Enabled = false;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(179, 307);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(118, 37);
-            this.button15.TabIndex = 4;
-            this.button15.Text = "Check Out";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label40
             // 
@@ -1837,6 +1819,7 @@ namespace WindowsFormsApp1
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1230, 291);
             this.panel7.TabIndex = 56;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // modifyBookingInnerDataGridView
             // 
@@ -2864,7 +2847,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label41;
