@@ -928,7 +928,7 @@ namespace WindowsFormsApp1
 
         //=============================================================== Author @Sihle Modify Booking Tab ==============================================
         string OldBookingSummaryID = "";
-        int NewBookingSummaryID = 0;
+        int newBookingSummaryID = 0;
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -1006,7 +1006,7 @@ namespace WindowsFormsApp1
         {
             bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, "inComplete", callAmountDueMethod);
             int summaryID = (int)bookingSummaryTa.getLastRecord();
-            NewBookingSummaryID = summaryID;
+            newBookingSummaryID = summaryID;
 
             for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
             {
@@ -1073,7 +1073,17 @@ namespace WindowsFormsApp1
 
         private void UpdateNewBookingStatusToComplete()
         {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == newBookingSummaryID)
+                {
+                    fullDs.BookingSummary[i].bookingStatus = "Complete";
+                    break;
+                }
 
+            }
+            bookingSummaryTa.Update(fullDs.BookingSummary);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -1099,9 +1109,16 @@ namespace WindowsFormsApp1
             }
 
             UpdateOldBookingStatusToModified(int.Parse(OldBookingSummaryID));
-            ProcessModifiedBookingRefund();  //adds a negative payment records to the payments table.
-            paymentTa.Insert(DateTime.Today, getAmountDue(comboBox3, comboBox4), NewBookingSummaryID, "EFT");
+            ProcessModifiedBookingRefund();    //adds a negative payment record == oldBookingAmountDue 
+            paymentTa.Insert(DateTime.Today, newBookingAmountDueTemp, newBookingSummaryID, "EFT");
+            UpdateNewBookingStatusToComplete();
 
+            this.paymentTa.Update(fullDs.Payment);
+            this.paymentTa.Fill(fullDs.Payment);
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            this.bookedRoomTa.Update(this.fullDs.BookedRoom);
+            this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
 
             label36.Visible = false;
             comboBox3.Enabled = false;
@@ -1109,8 +1126,6 @@ namespace WindowsFormsApp1
             button14.Enabled = false;
             dateTimePicker3.Enabled = false;
             dateTimePicker4.Enabled = false;
-            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
-            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
         }
 
         private void button11_Click(object sender, EventArgs e)
