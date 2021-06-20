@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(520, 188);
+            this.panel1.Location = new System.Drawing.Point(531, 188);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 384);
             this.panel1.TabIndex = 28;
@@ -349,7 +349,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(548, 66);
+            this.label5.Location = new System.Drawing.Point(567, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(250, 18);
             this.label5.TabIndex = 18;
@@ -360,7 +360,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(431, 5);
+            this.label8.Location = new System.Drawing.Point(450, 2);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(483, 61);
             this.label8.TabIndex = 17;
@@ -380,7 +380,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_28__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 682);
             this.Controls.Add(this.panel2);
