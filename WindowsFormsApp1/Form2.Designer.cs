@@ -64,7 +64,6 @@ namespace WindowsFormsApp1
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -81,7 +81,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -502,23 +501,15 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1361, 100);
             this.panel2.TabIndex = 41;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Webp2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 95);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -557,7 +548,7 @@ namespace WindowsFormsApp1
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(6, 106);
+            this.button2.Location = new System.Drawing.Point(9, 21);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(45, 45);
             this.button2.TabIndex = 40;
@@ -593,6 +584,17 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 0;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(11, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 16);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Back";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,7 +603,6 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.ClientSize = new System.Drawing.Size(1327, 749);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
@@ -618,7 +619,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -668,6 +668,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

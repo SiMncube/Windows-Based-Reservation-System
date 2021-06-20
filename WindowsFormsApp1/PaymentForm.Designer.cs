@@ -51,16 +51,8 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bankComboBox = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.passwordTextbox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.usernameTextbox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,6 +62,8 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,8 +72,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -335,39 +327,15 @@ namespace WindowsFormsApp1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.bankComboBox);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.passwordTextbox);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.usernameTextbox);
-            this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(54, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 244);
             this.panel3.TabIndex = 2;
-            // 
-            // bankComboBox
-            // 
-            this.bankComboBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.bankComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bankComboBox.ForeColor = System.Drawing.Color.White;
-            this.bankComboBox.FormattingEnabled = true;
-            this.bankComboBox.Items.AddRange(new object[] {
-            "Absa",
-            "Capitec",
-            "FNB",
-            "Nedbank",
-            "Standard Bank"});
-            this.bankComboBox.Location = new System.Drawing.Point(7, 39);
-            this.bankComboBox.Name = "bankComboBox";
-            this.bankComboBox.Size = new System.Drawing.Size(113, 24);
-            this.bankComboBox.TabIndex = 18;
-            this.bankComboBox.Text = "Choose bank";
             // 
             // button5
             // 
@@ -376,11 +344,11 @@ namespace WindowsFormsApp1
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(126, 191);
+            this.button5.Location = new System.Drawing.Point(177, 161);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 35);
+            this.button5.Size = new System.Drawing.Size(96, 35);
             this.button5.TabIndex = 16;
-            this.button5.Text = "Pay";
+            this.button5.Text = "Email Invoice";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -391,83 +359,12 @@ namespace WindowsFormsApp1
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(3, 191);
+            this.button6.Location = new System.Drawing.Point(48, 161);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(72, 35);
+            this.button6.Size = new System.Drawing.Size(85, 35);
             this.button6.TabIndex = 15;
             this.button6.Text = "Cancel";
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_visa_64;
-            this.pictureBox3.Location = new System.Drawing.Point(207, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_mastercard_64;
-            this.pictureBox4.Location = new System.Drawing.Point(259, 134);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(204, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 16);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Accepted cards";
-            // 
-            // passwordTextbox
-            // 
-            this.passwordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextbox.Location = new System.Drawing.Point(7, 134);
-            this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.PasswordChar = '*';
-            this.passwordTextbox.Size = new System.Drawing.Size(191, 26);
-            this.passwordTextbox.TabIndex = 5;
-            this.passwordTextbox.UseSystemPasswordChar = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(4, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 16);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Password";
-            // 
-            // usernameTextbox
-            // 
-            this.usernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextbox.Location = new System.Drawing.Point(7, 86);
-            this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(191, 26);
-            this.usernameTextbox.TabIndex = 3;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label13.Location = new System.Drawing.Point(4, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 16);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Username";
             // 
             // label14
             // 
@@ -531,6 +428,24 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(48, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 26);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(44, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Change/Confirm email";
+            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +456,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.Name = "PaymentForm";
             this.Text = "Form11";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -553,8 +469,6 @@ namespace WindowsFormsApp1
             this.tabPage3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.ResumeLayout(false);
 
@@ -584,15 +498,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox passwordTextbox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox usernameTextbox;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox bankComboBox;
         private fullDatabase fullDs;
         private fullDatabaseTableAdapters.PaymentTableAdapter paymentTa;
         private fullDatabaseTableAdapters.BookingSummaryTableAdapter bookingSummaryTa;
@@ -602,5 +508,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label9;
     }
 }
