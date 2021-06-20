@@ -464,7 +464,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(498, 159);
+            this.panel1.Location = new System.Drawing.Point(496, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
@@ -1060,7 +1060,7 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.label54);
             this.panel9.Controls.Add(this.textBox18);
             this.panel9.Controls.Add(this.label44);
-            this.panel9.Location = new System.Drawing.Point(135, 19);
+            this.panel9.Location = new System.Drawing.Point(135, 18);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1108, 281);
             this.panel9.TabIndex = 0;
@@ -2449,7 +2449,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(137, 17);
+            this.panel4.Location = new System.Drawing.Point(122, 18);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
