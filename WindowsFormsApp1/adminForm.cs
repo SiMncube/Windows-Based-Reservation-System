@@ -1094,8 +1094,23 @@ namespace WindowsFormsApp1
                 button14.Enabled = false;
         }
 
+        private void UpdateBookingStatusToModify(int summaryID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == summaryID)
+                {
+                    fullDs.BookingSummary[i].bookingStatus = "Modified";
+                    bookingSummaryTa.Update(fullDs.BookingSummary);
+                    bookingSummaryTa.Fill(fullDs.BookingSummary);
+                    bookingInnerTa.Fill(fullDs.BookingInner);
+                    processRefund(summaryID);
+                }
+            }
+        }
         private void button15_Click(object sender, EventArgs e)
         {
+            UpdateBookingStatusToModify(c)
             currentUser.setEmailID(currentCustomerEmailID);
             PaymentForm payment = new PaymentForm();
             //this.Hide();
