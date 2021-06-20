@@ -1303,5 +1303,10 @@ namespace WindowsFormsApp1
         {
             fullDs1.Clear();
         }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
+        }
     }
 }
