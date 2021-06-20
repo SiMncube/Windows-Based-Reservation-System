@@ -1329,6 +1329,8 @@ namespace WindowsFormsApp1
             // 
             // customerDataGridView
             // 
+            this.customerDataGridView.AllowUserToAddRows = false;
+            this.customerDataGridView.AllowUserToDeleteRows = false;
             this.customerDataGridView.AutoGenerateColumns = false;
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1839,6 +1841,8 @@ namespace WindowsFormsApp1
             // 
             // modifyBookingInnerDataGridView
             // 
+            this.modifyBookingInnerDataGridView.AllowUserToAddRows = false;
+            this.modifyBookingInnerDataGridView.AllowUserToDeleteRows = false;
             this.modifyBookingInnerDataGridView.AutoGenerateColumns = false;
             this.modifyBookingInnerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.modifyBookingInnerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1856,6 +1860,7 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerDataGridView.DataSource = this.modifyBookingInnerBindingSource;
             this.modifyBookingInnerDataGridView.Location = new System.Drawing.Point(37, 85);
             this.modifyBookingInnerDataGridView.Name = "modifyBookingInnerDataGridView";
+            this.modifyBookingInnerDataGridView.ReadOnly = true;
             this.modifyBookingInnerDataGridView.Size = new System.Drawing.Size(1151, 163);
             this.modifyBookingInnerDataGridView.TabIndex = 57;
             this.modifyBookingInnerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick);
@@ -1865,24 +1870,28 @@ namespace WindowsFormsApp1
             this.emailAddressDataGridViewTextBoxColumn1.DataPropertyName = "Email Address";
             this.emailAddressDataGridViewTextBoxColumn1.HeaderText = "Email Address";
             this.emailAddressDataGridViewTextBoxColumn1.Name = "emailAddressDataGridViewTextBoxColumn1";
+            this.emailAddressDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn4
             // 
             this.nameDataGridViewTextBoxColumn4.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn4.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn4.Name = "nameDataGridViewTextBoxColumn4";
+            this.nameDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // surnameDataGridViewTextBoxColumn3
             // 
             this.surnameDataGridViewTextBoxColumn3.DataPropertyName = "Surname";
             this.surnameDataGridViewTextBoxColumn3.HeaderText = "Surname";
             this.surnameDataGridViewTextBoxColumn3.Name = "surnameDataGridViewTextBoxColumn3";
+            this.surnameDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // iDNumberDataGridViewTextBoxColumn3
             // 
             this.iDNumberDataGridViewTextBoxColumn3.DataPropertyName = "ID Number";
             this.iDNumberDataGridViewTextBoxColumn3.HeaderText = "ID Number";
             this.iDNumberDataGridViewTextBoxColumn3.Name = "iDNumberDataGridViewTextBoxColumn3";
+            this.iDNumberDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // bookingRefDataGridViewTextBoxColumn3
             // 
@@ -1896,36 +1905,42 @@ namespace WindowsFormsApp1
             this.dateInDataGridViewTextBoxColumn1.DataPropertyName = "Date In";
             this.dateInDataGridViewTextBoxColumn1.HeaderText = "Date In";
             this.dateInDataGridViewTextBoxColumn1.Name = "dateInDataGridViewTextBoxColumn1";
+            this.dateInDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dateOutDataGridViewTextBoxColumn1
             // 
             this.dateOutDataGridViewTextBoxColumn1.DataPropertyName = "Date Out";
             this.dateOutDataGridViewTextBoxColumn1.HeaderText = "Date Out";
             this.dateOutDataGridViewTextBoxColumn1.Name = "dateOutDataGridViewTextBoxColumn1";
+            this.dateOutDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // numberOfNightsDataGridViewTextBoxColumn1
             // 
             this.numberOfNightsDataGridViewTextBoxColumn1.DataPropertyName = "Number Of Nights";
             this.numberOfNightsDataGridViewTextBoxColumn1.HeaderText = "Number Of Nights";
             this.numberOfNightsDataGridViewTextBoxColumn1.Name = "numberOfNightsDataGridViewTextBoxColumn1";
+            this.numberOfNightsDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // bookingMethodDataGridViewTextBoxColumn1
             // 
             this.bookingMethodDataGridViewTextBoxColumn1.DataPropertyName = "Booking Method";
             this.bookingMethodDataGridViewTextBoxColumn1.HeaderText = "Booking Method";
             this.bookingMethodDataGridViewTextBoxColumn1.Name = "bookingMethodDataGridViewTextBoxColumn1";
+            this.bookingMethodDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // bookingStatusDataGridViewTextBoxColumn3
             // 
             this.bookingStatusDataGridViewTextBoxColumn3.DataPropertyName = "Booking Status";
             this.bookingStatusDataGridViewTextBoxColumn3.HeaderText = "Booking Status";
             this.bookingStatusDataGridViewTextBoxColumn3.Name = "bookingStatusDataGridViewTextBoxColumn3";
+            this.bookingStatusDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // amountDueDataGridViewTextBoxColumn3
             // 
             this.amountDueDataGridViewTextBoxColumn3.DataPropertyName = "Amount Due";
             this.amountDueDataGridViewTextBoxColumn3.HeaderText = "Amount Due";
             this.amountDueDataGridViewTextBoxColumn3.Name = "amountDueDataGridViewTextBoxColumn3";
+            this.amountDueDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // label29
             // 
