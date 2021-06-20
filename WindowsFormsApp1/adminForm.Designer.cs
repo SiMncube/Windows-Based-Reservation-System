@@ -203,6 +203,7 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDueDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -221,6 +222,7 @@ namespace WindowsFormsApp1
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -247,8 +249,7 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -2213,6 +2214,7 @@ namespace WindowsFormsApp1
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label62);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
@@ -2224,6 +2226,17 @@ namespace WindowsFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1049, 296);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label2.Location = new System.Drawing.Point(203, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(669, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
             // 
             // label14
             // 
@@ -2415,6 +2428,17 @@ namespace WindowsFormsApp1
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label11.Location = new System.Drawing.Point(225, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(669, 24);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2596,27 +2620,17 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
-            // label11
+            // label62
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(225, 36);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(669, 24);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(203, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(669, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Red;
+            this.label62.Location = new System.Drawing.Point(400, 8);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(290, 24);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Booking has been refunded";
+            this.label62.Visible = false;
             // 
             // adminForm
             // 
@@ -2919,5 +2933,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label62;
     }
 }
