@@ -357,7 +357,7 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Lime;
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -372,14 +372,14 @@ namespace WindowsFormsApp1
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(48, 161);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(85, 35);
+            this.button6.Size = new System.Drawing.Size(96, 35);
             this.button6.TabIndex = 15;
             this.button6.Text = "Cancel";
             this.button6.UseVisualStyleBackColor = false;
