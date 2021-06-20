@@ -995,7 +995,35 @@ namespace WindowsFormsApp1
             dateTimePicker3.Enabled = true;
             dateTimePicker4.Enabled = true;
         }
+        private void CaptureNEWBookingRecords(string callAmountDueMethod)  //this method does not capture payment records
+        {
 
+            bookingSummaryTa.Insert(currentCustomerEmailID, dateIn, dateOut, numberOfNights, bookingMethod, bookingStatus, callAmountDueMethod);
+            int summaryID = (int)bookingSummaryTa.getLastRecord();
+
+            for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
+            {
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
+                {
+                    bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                }
+            }
+
+            for (int i = 0; i < numberOfDoubleRooms; i++) //adding double rooms to bookedRoom table
+            {
+                for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
+                {
+                    bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                }
+            }
+
+            this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+            this.paymentTa.Update(this.fullDs.Payment);
+            this.paymentTa.Fill(this.fullDs.Payment);
+            this.bookedRoomTa.Update(this.fullDs.BookedRoom);
+            this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
+        }
         private void button14_Click(object sender, EventArgs e)
         {
             updateBookingSummary(getAmountDue(comboBox3, comboBox4).ToString());
@@ -1134,19 +1162,15 @@ namespace WindowsFormsApp1
 
             if (FinalAmountDue < 0)  //tell that person they will be getting a refund of that specific amount,  new booking amount due is less then the that was paid, modified booking 
             {
-                MessageBox.Show("Your Booking has been Successfully Modified, your refund of R " + FinalAmountDue + "will be reversed.", "Modified Booking");
+                MessageBox.Show("The Booking has been Successfully Modified, Customer refund of R " + FinalAmountDue + "will be processed.", "Modified Booking");
             }
             else if(FinalAmountDue > 0)       //they have to add more money to proceess the new booking, new booking cost more money then the modified booking paid amount.
             {
-                currentUser.setEmailID(currentCustomerEmailID);
-                PaymentForm payment = new PaymentForm();
-                //this.Hide();
-                payment.ShowDialog();
-                //this.Close();
+                MessageBox.Show("The Booking has been captured, Waiting for Suplus payment Confirmation", "Modified Booking");
             }
             else   //break even means no action has to be done booking has been succefully modified;
             {
-                MessageBox.Show("Your Booking has been Successfully Modified", "Modified Booking");
+                MessageBox.Show("The Booking has been Successfully Modified", "Modified Booking");
             }
             label36.Visible = false;
         }
