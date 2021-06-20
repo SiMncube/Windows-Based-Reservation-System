@@ -1062,7 +1062,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.Payment[i].summaryID.ToString() == OldBookingSummaryID)
                 {
-                    string negativePayment = "-" + fullDs.Payment[i].amountDue;
+                    string negativePayment = "-R" + fullDs.Payment[i].amountDue;
                     paymentTa.Insert(DateTime.Today, negativePayment, int.Parse(OldBookingSummaryID), "Refund");
                     break;
                 }
@@ -1094,8 +1094,7 @@ namespace WindowsFormsApp1
             UpdateNewBookingStatusToComplete();
 
             MessageBox.Show("Booking Has Been Successlly Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
-                                                                                       // with all necessary details including the new customer booking reference.
-
+                                                                                        // with all necessary details including the new customer booking reference.
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
@@ -1107,7 +1106,7 @@ namespace WindowsFormsApp1
         private void button14_Click(object sender, EventArgs e)
         {
             string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);  
-            CaptureNEWBookingRecord(newBookingAmountDueString);  //not this record is incomplete untill the admin confirms the receipt of payment
+            CaptureNEWBookingRecord(newBookingAmountDueString);      //not this record is incomplete untill the admin confirms the receipt of payment
 
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 3));
@@ -1143,13 +1142,14 @@ namespace WindowsFormsApp1
                 }
             }
 
-
+            /*
             label36.Visible = false;
             comboBox3.Enabled = false;
             comboBox4.Enabled = false;
             button14.Enabled = false;
             dateTimePicker3.Enabled = false;
             dateTimePicker4.Enabled = false;
+            */
         }
 
         private void button11_Click(object sender, EventArgs e)
