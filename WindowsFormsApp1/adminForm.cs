@@ -1125,7 +1125,7 @@ namespace WindowsFormsApp1
                     UpdateBooking(newBookingAmountDueString);
                 }
             }
-            else if (finalAmountDue > 0) // add amount
+            else if (finalAmountDue > 0)  //add amount
             {
                 results = MessageBox.Show("To Update this booking Customer will have to Add R " + Math.Abs(finalAmountDue), "Customer Message", MessageBoxButtons.OKCancel);
                 if (results == DialogResult.OK)
