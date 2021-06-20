@@ -66,9 +66,9 @@ namespace WindowsFormsApp1
             this.panel11 = new System.Windows.Forms.Panel();
             this.label58 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label60 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -441,12 +441,12 @@ namespace WindowsFormsApp1
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel11.Controls.Add(this.label10);
             this.panel11.Controls.Add(this.label58);
             this.panel11.Controls.Add(this.label15);
-            this.panel11.Controls.Add(this.label59);
             this.panel11.Controls.Add(this.label60);
             this.panel11.Controls.Add(this.button1);
-            this.panel11.Location = new System.Drawing.Point(3, 5);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1361, 100);
             this.panel11.TabIndex = 46;
@@ -474,16 +474,13 @@ namespace WindowsFormsApp1
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
             // 
-            // label59
+            // label60
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(179, 4);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(1070, 61);
-            this.label59.TabIndex = 17;
-            this.label59.Text = "We Are Looking Forward to Seing You";
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(105, 43);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(0, 13);
+            this.label60.TabIndex = 0;
             // 
             // button1
             // 
@@ -499,13 +496,16 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label60
+            // label10
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(105, 43);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(0, 13);
-            this.label60.TabIndex = 0;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(463, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(483, 61);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "The Cottage BnB";
             // 
             // PaymentForm
             // 
@@ -575,8 +575,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }
