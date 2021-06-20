@@ -327,9 +327,9 @@ namespace WindowsFormsApp1
             this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label15.Location = new System.Drawing.Point(49, 161);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 16);
+            this.label15.Size = new System.Drawing.Size(124, 16);
             this.label15.TabIndex = 21;
-            this.label15.Text = "Booking Status";
+            this.label15.Text = "Booking Reference";
             // 
             // label20
             // 
@@ -338,9 +338,9 @@ namespace WindowsFormsApp1
             this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label20.Location = new System.Drawing.Point(304, 161);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 16);
+            this.label20.Size = new System.Drawing.Size(16, 16);
             this.label20.TabIndex = 22;
-            this.label20.Text = "Incomplete";
+            this.label20.Text = "#";
             // 
             // panel2
             // 
@@ -414,7 +414,7 @@ namespace WindowsFormsApp1
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label27);
-            this.panel3.Location = new System.Drawing.Point(-3, 712);
+            this.panel3.Location = new System.Drawing.Point(-3, 710);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1375, 37);
             this.panel3.TabIndex = 43;
