@@ -817,14 +817,17 @@ namespace WindowsFormsApp1
             updateBookingSummary(getAmountDue(comboBox1, comboBox2).ToString());
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
-            button9.Enabled = true;
+            //button9.Enabled = true;
             button8.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            confirmBookingForm c = new confirmBookingForm();
+            c.ShowDialog();
+            currentUser.setEmailID(currentCustomerEmailID);
         }
-
+        
         private void button9_Click(object sender, EventArgs e)
         {
             currentUser.setEmailID(currentCustomerEmailID);
