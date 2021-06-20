@@ -18,41 +18,7 @@ namespace WindowsFormsApp1
             bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);
             paymentTableAdapter1.Fill(fullDatabase.Payment);
             customerTableAdapter1.Fill(fullDatabase.Customer);
-            string userName = "";
-            for (int i = 0; i < fullDatabase.Customer.Rows.Count; i++)
-            {
-                if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
-                {
-                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
-                    break;
-                }
-
-            }
-            label9.Text += userName;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Form8 form = new Form8();
-            form.ShowDialog();
-        }
-
         private void Form4_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fullDatabase.BookingSummary' table. You can move, or remove it, as needed.
@@ -158,24 +124,12 @@ namespace WindowsFormsApp1
             }
             return false;
         }
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            Form8 f = new Form8();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }
