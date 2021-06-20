@@ -21,13 +21,14 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
                 {
-                    userName += fullDatabase.Customer[i].surname + " " + fullDatabase.Customer[i].name;
+                    userName += fullDatabase.Customer[i].name + " " + fullDatabase.Customer[i].surname;
                     break;
                 }
 
             }
             label1.Text += userName;
         }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 login = new Form1();

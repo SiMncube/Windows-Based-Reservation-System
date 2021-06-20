@@ -270,14 +270,14 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(46, 399);
+            this.button3.Location = new System.Drawing.Point(46, 402);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 35);
+            this.button3.Size = new System.Drawing.Size(126, 32);
             this.button3.TabIndex = 57;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
@@ -476,14 +476,14 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(294, 399);
+            this.button1.Location = new System.Drawing.Point(251, 402);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 35);
+            this.button1.Size = new System.Drawing.Size(125, 32);
             this.button1.TabIndex = 38;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
