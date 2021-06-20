@@ -27,6 +27,9 @@ namespace WindowsFormsApp1
             customer1Ta1.Fill(fullDs.Customer1);
             bookedRoomTa.Fill(fullDs.BookedRoom);
             label12.Text += logedInAdmin();
+            toolTip1.SetToolTip(postalCodeTextBox, "Must be 4 digits");
+            toolTip1.SetToolTip(IDTextBox, "Must be 13 digits");
+            toolTip1.SetToolTip(cellNumberTextBox, "Must be 10 digits");
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
 
