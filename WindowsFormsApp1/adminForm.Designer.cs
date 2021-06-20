@@ -1288,7 +1288,7 @@ namespace WindowsFormsApp1
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(118, 28);
             this.button12.TabIndex = 55;
-            this.button12.Text = "Clear";
+            this.button12.Text = "Remove";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -1422,7 +1422,7 @@ namespace WindowsFormsApp1
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(118, 28);
             this.button10.TabIndex = 51;
-            this.button10.Text = "Confirm";
+            this.button10.Text = "Select";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
