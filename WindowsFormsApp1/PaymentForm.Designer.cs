@@ -51,6 +51,8 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -231,7 +231,7 @@ namespace WindowsFormsApp1
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 16);
             this.label7.TabIndex = 10;
-            this.label7.Text = "CVV";
+            this.label7.Text = "CVC";
             // 
             // pictureBox1
             // 
@@ -337,6 +337,24 @@ namespace WindowsFormsApp1
             this.panel3.Size = new System.Drawing.Size(320, 244);
             this.panel3.TabIndex = 2;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(44, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Change/Confirm email";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(48, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 26);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Lime;
@@ -427,24 +445,6 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 40;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(48, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 26);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(44, 73);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Change/Confirm email";
             // 
             // PaymentForm
             // 
