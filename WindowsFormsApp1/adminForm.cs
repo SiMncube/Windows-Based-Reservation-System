@@ -1093,7 +1093,8 @@ namespace WindowsFormsApp1
             paymentTa.Insert(DateTime.Today, callNewBookingAmoundDue, newBookingSummaryID, "EFT");
             UpdateNewBookingStatusToComplete();
 
-            MessageBox.Show("Booking Has Been Successlly Updated", "Customer Message");
+            MessageBox.Show("Booking Has Been Successlly Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
+                                                                                       // with all necessary details including the new customer booking reference.
 
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
@@ -1113,7 +1114,6 @@ namespace WindowsFormsApp1
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
 
             DialogResult results;
-
             if (finalAmountDue < 0)  //issue a refund
             {
                 results = MessageBox.Show("After Updating this Booking, Refund of R " + finalAmountDue + "will be processed.", "Customer Message", MessageBoxButtons.OKCancel);
@@ -1142,6 +1142,7 @@ namespace WindowsFormsApp1
                     UpdateBooking(newBookingAmountDueString);
                 }
             }
+
 
             label36.Visible = false;
             comboBox3.Enabled = false;
