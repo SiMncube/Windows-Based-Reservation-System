@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             Form5 makebooking = new Form5();
             this.Hide();
             makebooking.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void checkBookingToolStripMenuItem_Click(object sender, EventArgs e)
