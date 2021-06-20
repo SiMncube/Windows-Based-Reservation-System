@@ -65,11 +65,11 @@ namespace WindowsFormsApp1
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(115, 83);
+            this.button1.Location = new System.Drawing.Point(108, 66);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 65);
+            this.button1.Size = new System.Drawing.Size(257, 35);
             this.button1.TabIndex = 0;
             this.button1.Text = "Check Booking";
             this.button1.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(96, 8);
+            this.label1.Location = new System.Drawing.Point(104, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 23);
             this.label1.TabIndex = 1;
@@ -90,9 +90,9 @@ namespace WindowsFormsApp1
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(95, 34);
+            this.textBox1.Location = new System.Drawing.Point(108, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 26);
+            this.textBox1.Size = new System.Drawing.Size(257, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -103,9 +103,9 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(479, 399);
+            this.panel1.Location = new System.Drawing.Point(472, 343);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 153);
+            this.panel1.Size = new System.Drawing.Size(460, 141);
             this.panel1.TabIndex = 25;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(479, 194);
+            this.panel2.Location = new System.Drawing.Point(472, 138);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 199);
             this.panel2.TabIndex = 26;
