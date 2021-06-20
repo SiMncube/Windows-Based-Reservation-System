@@ -1093,7 +1093,7 @@ namespace WindowsFormsApp1
             paymentTa.Insert(DateTime.Today, callNewBookingAmoundDue, newBookingSummaryID, "EFT");
             UpdateNewBookingStatusToComplete();
 
-            MessageBox.Show("Booking Has Been Successlly Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
+            MessageBox.Show("Booking Has Been Successfully Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
                                                                                         // with all necessary details including the new customer booking reference.
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
@@ -1115,7 +1115,7 @@ namespace WindowsFormsApp1
             DialogResult results;
             if (finalAmountDue < 0)  //issue a refund
             {
-                results = MessageBox.Show("After Updating this Booking, Refund of R " + finalAmountDue + "will be processed.", "Customer Message", MessageBoxButtons.OKCancel);
+                results = MessageBox.Show("After Updating this Booking, Refund of R " + Math.Abs(finalAmountDue) + " will be processed.", "Customer Message", MessageBoxButtons.OKCancel);
                 if (results == DialogResult.OK)
                 {
                     UpdateBooking(newBookingAmountDueString);
@@ -1123,7 +1123,7 @@ namespace WindowsFormsApp1
             }
             else if (finalAmountDue > 0) // add amount
             {
-                results = MessageBox.Show("To Update this booking Customer will have to Add R " + finalAmountDue, "Customer Message", MessageBoxButtons.OKCancel);
+                results = MessageBox.Show("To Update this booking Customer will have to Add R " + Math.Abs(finalAmountDue), "Customer Message", MessageBoxButtons.OKCancel);
                 if (results == DialogResult.OK)
                 {
                     results = MessageBox.Show("Click Okay to Confirm Receipt of  " + finalAmountDue, "Customer Payment Confiration Message", MessageBoxButtons.OKCancel);
