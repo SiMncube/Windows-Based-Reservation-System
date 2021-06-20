@@ -389,6 +389,7 @@ namespace WindowsFormsApp1
             this.button2.Size = new System.Drawing.Size(45, 45);
             this.button2.TabIndex = 40;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label24
             // 
