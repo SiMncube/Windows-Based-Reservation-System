@@ -134,6 +134,7 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button10 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -250,7 +251,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label63 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -1451,6 +1451,16 @@ namespace WindowsFormsApp1
             this.panel5.Size = new System.Drawing.Size(323, 361);
             this.panel5.TabIndex = 48;
             // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(3, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(125, 16);
+            this.label63.TabIndex = 59;
+            this.label63.Text = "Make A Booking:";
+            // 
             // textBox5
             // 
             this.textBox5.Enabled = false;
@@ -2633,16 +2643,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(3, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(121, 16);
-            this.label63.TabIndex = 59;
-            this.label63.Text = "Make A Booking";
             // 
             // adminForm
             // 

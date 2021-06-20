@@ -140,30 +140,32 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(520, 161);
+            this.panel1.Location = new System.Drawing.Point(520, 131);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 373);
+            this.panel1.Size = new System.Drawing.Size(352, 403);
             this.panel1.TabIndex = 28;
             // 
             // textBox5
             // 
             this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(155, 251);
+            this.textBox5.Location = new System.Drawing.Point(156, 285);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(157, 21);
             this.textBox5.TabIndex = 59;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(42, 252);
+            this.label21.Location = new System.Drawing.Point(43, 286);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(119, 20);
             this.label21.TabIndex = 58;
             this.label21.Text = "Amount Due: ";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // comboBox2
             // 
@@ -173,7 +175,7 @@ namespace WindowsFormsApp1
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "No double rooms available"});
-            this.comboBox2.Location = new System.Drawing.Point(44, 197);
+            this.comboBox2.Location = new System.Drawing.Point(45, 231);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(268, 28);
             this.comboBox2.TabIndex = 40;
@@ -187,7 +189,7 @@ namespace WindowsFormsApp1
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "No single rooms available"});
-            this.comboBox1.Location = new System.Drawing.Point(44, 147);
+            this.comboBox1.Location = new System.Drawing.Point(45, 181);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(268, 28);
             this.comboBox1.TabIndex = 39;
@@ -198,12 +200,13 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(88, 15);
+            this.label7.Location = new System.Drawing.Point(89, 49);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 16);
             this.label7.TabIndex = 36;
             this.label7.Text = "Selected Date is INVALID";
             this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button4
             // 
@@ -213,7 +216,7 @@ namespace WindowsFormsApp1
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(46, 304);
+            this.button4.Location = new System.Drawing.Point(47, 338);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 33);
             this.button4.TabIndex = 35;
@@ -229,7 +232,7 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(186, 304);
+            this.button1.Location = new System.Drawing.Point(187, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 33);
             this.button1.TabIndex = 4;
@@ -242,18 +245,19 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(41, 31);
+            this.label1.Location = new System.Drawing.Point(42, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Check-in Date *";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(44, 50);
+            this.dateTimePicker1.Location = new System.Drawing.Point(45, 84);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker1.TabIndex = 7;
@@ -264,7 +268,7 @@ namespace WindowsFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(43, 128);
+            this.label4.Location = new System.Drawing.Point(44, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 16);
             this.label4.TabIndex = 25;
@@ -276,16 +280,17 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(43, 84);
+            this.label2.Location = new System.Drawing.Point(44, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Check-out Date *";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(44, 103);
+            this.dateTimePicker2.Location = new System.Drawing.Point(45, 137);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker2.TabIndex = 8;
@@ -296,11 +301,12 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(41, 178);
+            this.label3.Location = new System.Drawing.Point(42, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Number of double";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // customerTableAdapter1
             // 
