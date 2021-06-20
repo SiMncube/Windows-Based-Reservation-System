@@ -64,7 +64,6 @@ namespace WindowsFormsApp1
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.fullDatabase1 = new WindowsFormsApp1.fullDatabase();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,7 +80,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -502,7 +500,6 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -510,15 +507,6 @@ namespace WindowsFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1361, 100);
             this.panel2.TabIndex = 41;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Webp2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 95);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -618,7 +606,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -668,6 +655,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

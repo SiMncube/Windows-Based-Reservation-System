@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace WindowsFormsApp1
             bookedRoomTa.Fill(fullDs.BookedRoom);
             toolTip1.SetToolTip(cardNumberTextBox, "Must be 16 digits");
             toolTip1.SetToolTip(cvvTextbox,"Must be 3 digits");
-
+            textBox1.Text = currentUser.getEmailID();
         }
         private string getAmountDue()
         {
@@ -123,37 +124,17 @@ namespace WindowsFormsApp1
             i.ShowDialog();
             this.Close();
         }
-        private bool usernameIsValid()
+        private bool emailValid()
         {
-            if (usernameTextbox.Text.Length > 3)
-                return true;
-            usernameTextbox.BackColor = Color.Red;
+            if (textBox1.Text != null)
+            {
+                EmailAddressAttribute email = new EmailAddressAttribute();
+                if (email.IsValid(textBox1.Text))
+                    return true;
+            }
+            textBox1.BackColor = Color.Red;
             return false;
-        }
-        private bool passwordIsValid()
-        {
-            if (passwordTextbox.Text.Length > 3)
-                return true;
-            passwordTextbox.BackColor = Color.Red;
-            return false;
-        }
-        private bool bankIsChoosen()
-        {
-            if (bankComboBox.SelectedItem != null)
-                return true;
-            bankComboBox.BackColor = Color.Red;
-            return false;
-        }
-        private bool eftIsValid()
-        {
-            int count = 0;
-            if(!usernameIsValid())
-                count++;
-            if(!passwordIsValid())
-                count++;
-            if (!bankIsChoosen())
-                count++;
-            return count == 0;
+
         }
         private DateTime GetDateIn()
         {
@@ -208,13 +189,13 @@ namespace WindowsFormsApp1
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if (eftIsValid())
+            if (emailValid())
             {
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-             //   this.Hide();
+                this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
@@ -230,6 +211,11 @@ namespace WindowsFormsApp1
         }
 
         private void PaymentForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
