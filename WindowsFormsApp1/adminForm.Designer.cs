@@ -157,7 +157,6 @@ namespace WindowsFormsApp1
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label41 = new System.Windows.Forms.Label();
@@ -249,6 +248,7 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -460,7 +460,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.registerButton);
-            this.panel1.Location = new System.Drawing.Point(516, 159);
+            this.panel1.Location = new System.Drawing.Point(498, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
@@ -804,7 +804,7 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.textBox16);
             this.panel10.Controls.Add(this.textBox17);
             this.panel10.Controls.Add(this.button17);
-            this.panel10.Location = new System.Drawing.Point(549, 316);
+            this.panel10.Location = new System.Drawing.Point(507, 306);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(361, 368);
             this.panel10.TabIndex = 2;
@@ -1202,7 +1202,7 @@ namespace WindowsFormsApp1
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label44.Location = new System.Drawing.Point(234, 36);
+            this.label44.Location = new System.Drawing.Point(226, 36);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(669, 24);
             this.label44.TabIndex = 5;
@@ -1297,7 +1297,7 @@ namespace WindowsFormsApp1
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(348, 8);
+            this.label32.Location = new System.Drawing.Point(369, 8);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(301, 16);
             this.label32.TabIndex = 53;
@@ -1444,7 +1444,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(563, 313);
+            this.panel5.Location = new System.Drawing.Point(530, 313);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(323, 361);
             this.panel5.TabIndex = 48;
@@ -1452,9 +1452,9 @@ namespace WindowsFormsApp1
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(192, 236);
+            this.textBox5.Location = new System.Drawing.Point(135, 236);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(99, 26);
+            this.textBox5.Size = new System.Drawing.Size(156, 26);
             this.textBox5.TabIndex = 57;
             // 
             // label21
@@ -1462,7 +1462,7 @@ namespace WindowsFormsApp1
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(21, 236);
+            this.label21.Location = new System.Drawing.Point(21, 238);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(119, 20);
             this.label21.TabIndex = 0;
@@ -1520,7 +1520,7 @@ namespace WindowsFormsApp1
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(268, 37);
             this.button8.TabIndex = 35;
-            this.button8.Text = "Confirm booking";
+            this.button8.Text = "Save";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -1643,7 +1643,6 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.comboBox4);
             this.panel8.Controls.Add(this.label39);
             this.panel8.Controls.Add(this.button14);
-            this.panel8.Controls.Add(this.button15);
             this.panel8.Controls.Add(this.label40);
             this.panel8.Controls.Add(this.dateTimePicker3);
             this.panel8.Controls.Add(this.label41);
@@ -1651,9 +1650,9 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.dateTimePicker4);
             this.panel8.Controls.Add(this.label43);
             this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(562, 315);
+            this.panel8.Location = new System.Drawing.Point(529, 315);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(317, 369);
+            this.panel8.Size = new System.Drawing.Size(325, 369);
             this.panel8.TabIndex = 57;
             // 
             // label61
@@ -1669,9 +1668,9 @@ namespace WindowsFormsApp1
             // textBox6
             // 
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(157, 258);
+            this.textBox6.Location = new System.Drawing.Point(138, 258);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 26);
+            this.textBox6.Size = new System.Drawing.Size(159, 26);
             this.textBox6.TabIndex = 57;
             // 
             // label38
@@ -1679,7 +1678,7 @@ namespace WindowsFormsApp1
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(25, 264);
+            this.label38.Location = new System.Drawing.Point(25, 260);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(119, 20);
             this.label38.TabIndex = 0;
@@ -1733,29 +1732,13 @@ namespace WindowsFormsApp1
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(29, 307);
+            this.button14.Location = new System.Drawing.Point(27, 309);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(121, 37);
+            this.button14.Size = new System.Drawing.Size(270, 33);
             this.button14.TabIndex = 35;
-            this.button14.Text = "Confirm Update";
+            this.button14.Text = "Update Booking";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button15.Enabled = false;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(179, 307);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(118, 37);
-            this.button15.TabIndex = 4;
-            this.button15.Text = "Check Out";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label40
             // 
@@ -1838,6 +1821,7 @@ namespace WindowsFormsApp1
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1230, 291);
             this.panel7.TabIndex = 56;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // modifyBookingInnerDataGridView
             // 
@@ -2247,7 +2231,7 @@ namespace WindowsFormsApp1
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(409, 19);
+            this.label14.Location = new System.Drawing.Point(400, 8);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(234, 24);
             this.label14.TabIndex = 6;
@@ -2259,7 +2243,7 @@ namespace WindowsFormsApp1
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(409, 19);
+            this.label13.Location = new System.Drawing.Point(400, 8);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(298, 24);
             this.label13.TabIndex = 5;
@@ -2281,7 +2265,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(409, 19);
+            this.label5.Location = new System.Drawing.Point(400, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 24);
             this.label5.TabIndex = 3;
@@ -2439,7 +2423,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(155, 120);
+            this.panel4.Location = new System.Drawing.Point(137, 17);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
@@ -2865,7 +2849,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label41;
@@ -2937,5 +2920,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

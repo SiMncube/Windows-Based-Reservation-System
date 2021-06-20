@@ -140,18 +140,18 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(531, 188);
+            this.panel1.Location = new System.Drawing.Point(520, 161);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 384);
+            this.panel1.Size = new System.Drawing.Size(352, 373);
             this.panel1.TabIndex = 28;
             // 
             // textBox5
             // 
             this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(181, 251);
+            this.textBox5.Location = new System.Drawing.Point(155, 251);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 21);
+            this.textBox5.Size = new System.Drawing.Size(157, 21);
             this.textBox5.TabIndex = 59;
             // 
             // label21
@@ -213,9 +213,9 @@ namespace WindowsFormsApp1
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(46, 297);
+            this.button4.Location = new System.Drawing.Point(46, 304);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 56);
+            this.button4.Size = new System.Drawing.Size(126, 33);
             this.button4.TabIndex = 35;
             this.button4.Text = "Save changes";
             this.button4.UseVisualStyleBackColor = false;
@@ -229,9 +229,9 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(198, 297);
+            this.button1.Location = new System.Drawing.Point(186, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 56);
+            this.button1.Size = new System.Drawing.Size(126, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "Check out";
             this.button1.UseVisualStyleBackColor = false;
