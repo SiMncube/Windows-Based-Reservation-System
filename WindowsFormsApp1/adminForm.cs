@@ -1049,7 +1049,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.BookingSummary[i].summaryID == summaryID)    //this is also used to capture the that was paid for this booking
                 {
-                    string temp = fullDs.Payment[i].amountDue.ToString();
+                    string temp = fullDs.BookingSummary[i].amountDue;
                     return decimal.Parse(temp.Substring(2, temp.Length - 2));
                 }
             }
