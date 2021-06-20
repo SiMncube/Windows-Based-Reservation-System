@@ -1343,7 +1343,6 @@ namespace WindowsFormsApp1
             this.customerDataGridView.ReadOnly = true;
             this.customerDataGridView.Size = new System.Drawing.Size(946, 160);
             this.customerDataGridView.TabIndex = 53;
-            this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerDataGridView_RowHeaderMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
@@ -2304,7 +2303,6 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bookingInnerDGV.Size = new System.Drawing.Size(844, 156);
             this.bookingInnerDGV.TabIndex = 0;
-            this.bookingInnerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookingInnerDGV_CellContentClick);
             this.bookingInnerDGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookingInnerDGV_RowHeaderMouseDoubleClick);
             // 
             // nameDataGridViewTextBoxColumn

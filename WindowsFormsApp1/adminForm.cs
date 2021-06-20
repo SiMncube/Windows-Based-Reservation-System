@@ -890,17 +890,6 @@ namespace WindowsFormsApp1
             label33.Visible = true;
             button10.Enabled = true;
         }
-
-        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bookingInnerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
 
@@ -920,7 +909,6 @@ namespace WindowsFormsApp1
             bookingSummaryTa.Fill(fullDs.BookingSummary);
             bookedRoomTa.Fill(fullDs.BookedRoom);
         }
-
         private void label20_Click(object sender, EventArgs e)
         {
 
