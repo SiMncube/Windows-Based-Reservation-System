@@ -2089,9 +2089,9 @@ namespace WindowsFormsApp1
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(108, 226);
+            this.button2.Location = new System.Drawing.Point(108, 244);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 53);
+            this.button2.Size = new System.Drawing.Size(198, 35);
             this.button2.TabIndex = 6;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
@@ -2126,9 +2126,9 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(757, 226);
+            this.button1.Location = new System.Drawing.Point(757, 244);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 53);
+            this.button1.Size = new System.Drawing.Size(195, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Cancel booking(s)";
             this.button1.UseVisualStyleBackColor = false;
