@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
-                    admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
+                    admin += fullDs.Staff[i].name + " " + fullDs.Staff[i].surname;
                     break;
                 }
             }
@@ -1374,6 +1374,11 @@ namespace WindowsFormsApp1
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
             customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

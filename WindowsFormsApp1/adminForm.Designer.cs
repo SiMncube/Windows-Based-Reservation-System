@@ -355,6 +355,7 @@ namespace WindowsFormsApp1
             this.tabPage1.Size = new System.Drawing.Size(1362, 718);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // panel11
             // 
@@ -428,9 +429,10 @@ namespace WindowsFormsApp1
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(1004, 3);
+            this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label12.Location = new System.Drawing.Point(991, 118);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(198, 15);
             this.label12.TabIndex = 4;
