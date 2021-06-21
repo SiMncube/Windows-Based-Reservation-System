@@ -1251,7 +1251,7 @@ namespace WindowsFormsApp1
                 label55.Visible = false;
                 for (int i = 0; i < fullDs.Customer1.Rows.Count; i++)
                 {
-                    if (fullDs.Customer1[i].Email_Address.Equals(textBox7.Text, StringComparison.OrdinalIgnoreCase))
+                    if (fullDs.Customer[i].emailID.Equals(textBox7.Text, StringComparison.OrdinalIgnoreCase))
                     {
                         fullDs.Customer[i].name = textBox17.Text;
                         fullDs.Customer[i].surname = textBox16.Text;
@@ -1261,8 +1261,8 @@ namespace WindowsFormsApp1
                         fullDs.Customer[i].postalCode = textBox11.Text;
                         fullDs.Customer[i].idNumber = textBox12.Text;
                         fullDs.Customer[i].cellNumber = textBox10.Text;
-                        customerTa.Update(fullDs.Customer[i]);
-                        customer1Ta1.Update(fullDs.Customer1[i]);
+                        customerTa.Update(fullDs.Customer);
+                        customer1Ta1.Update(fullDs.Customer1);
                         customer1Ta1.Fill(fullDs.Customer1);
                         label56.Visible = true;
                         break;
