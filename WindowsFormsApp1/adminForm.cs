@@ -1262,6 +1262,7 @@ namespace WindowsFormsApp1
                         fullDs.Customer[i].idNumber = textBox12.Text;
                         fullDs.Customer[i].cellNumber = textBox10.Text;
                         customerTa.Update(fullDs.Customer);
+                        customerTa.Fill(fullDs.Customer);
                         customer1Ta1.Update(fullDs.Customer1);
                         customer1Ta1.Fill(fullDs.Customer1);
                         label56.Visible = true;
@@ -1274,6 +1275,15 @@ namespace WindowsFormsApp1
                 label55.Visible = true;
                 label56.Visible = false;
             }
+            bookingInnerTa.Fill(fullDs.BookingInner);
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+            customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
             textBox7.Text = "";
             textBox17.Text = "";
             textBox16.Text = "";
