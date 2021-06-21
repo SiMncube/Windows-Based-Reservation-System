@@ -84,14 +84,22 @@ namespace WindowsFormsApp1
         }
         private void setPrices()
         {
-            for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
+            int[] rooms = currentBooking.getRoomIDs();
+            if (rooms[0] != -1)
             {
-                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                for (int i = fullDs.BookingSummary.Rows.Count - 1; i >= 0; i--)
                 {
-                    label17.Text = fullDs.BookingSummary[i].numberOfNights + "";
-                    label19.Text = "R " + (getAmountDue() / fullDs.BookingSummary[i].numberOfNights) +".00";
-                    label21.Text = fullDs.BookingSummary[i].amountDue;
+                    if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                    {
+                        label17.Text = fullDs.BookingSummary[i].numberOfNights + "";
+                        label19.Text = "R " + (getAmountDue() / fullDs.BookingSummary[i].numberOfNights) + ".00";
+                        label21.Text = fullDs.BookingSummary[i].amountDue;
+                    }
                 }
+            }
+            else
+            {
+                label21.Text = "R " + rooms[1] + ".00";
             }
         }
 

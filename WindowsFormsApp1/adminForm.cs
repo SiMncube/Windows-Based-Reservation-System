@@ -1115,7 +1115,7 @@ namespace WindowsFormsApp1
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 5));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
-            int[] a = {-1};
+            int[] a = {-1,(int)finalAmountDue};
             currentBooking.setRoomIDs(a);
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
