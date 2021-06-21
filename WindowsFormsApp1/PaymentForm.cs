@@ -164,27 +164,33 @@ namespace WindowsFormsApp1
         private void updateBookedRoom()
         {
             int[] rooms = currentBooking.getRoomIDs();
-            for (int i = 0; i < rooms.Length; i++)
+            if (rooms[0] != -1)
             {
-                for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
-                { 
-                    bookedRoomTa.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
+                for (int i = 0; i < rooms.Length; i++)
+                {
+                    for (DateTime dateID = GetDateIn(); DateTime.Compare(dateID, GetDateOut()) < 0; dateID = dateID.AddDays(1))
+                    {
+                        bookedRoomTa.Insert(dateID, currentBooking.getSummaryID(), rooms[i]);
+                    }
                 }
+                bookedRoomTa.Update(fullDs.BookedRoom);
+                bookedRoomTa.Fill(fullDs.BookedRoom);
             }
-            bookedRoomTa.Update(fullDs.BookedRoom);
-            bookedRoomTa.Fill(fullDs.BookedRoom);
         }
         private void updateBookingStatus()
         {
-            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            int[] rooms = currentBooking.getRoomIDs();
+            if (rooms[0] != -1)
             {
-                if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
                 {
-                    fullDs.BookingSummary[i].bookingStatus = "Complete";
-                    bookingSummaryTa.Update(fullDs.BookingSummary);
-                    bookingSummaryTa.Fill(fullDs.BookingSummary);
+                    if (fullDs.BookingSummary[i].summaryID == currentBooking.getSummaryID())
+                    {
+                        fullDs.BookingSummary[i].bookingStatus = "Complete";
+                        bookingSummaryTa.Update(fullDs.BookingSummary);
+                        bookingSummaryTa.Fill(fullDs.BookingSummary);
+                    }
                 }
-
             }
         }
         private void button5_Click(object sender, EventArgs e)

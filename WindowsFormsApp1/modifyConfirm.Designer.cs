@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -53,13 +55,19 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.fullDs = new WindowsFormsApp1.fullDatabase();
+            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
+            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label21);
@@ -81,10 +89,31 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 362);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(514, 385);
+            this.panel1.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label23.Location = new System.Drawing.Point(304, 353);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 16);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Total";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(46, 353);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(97, 16);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "Total Refund";
             // 
             // label20
             // 
@@ -93,9 +122,9 @@ namespace WindowsFormsApp1
             this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label20.Location = new System.Drawing.Point(304, 161);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 16);
+            this.label20.Size = new System.Drawing.Size(74, 16);
             this.label20.TabIndex = 22;
-            this.label20.Text = "Incomplete";
+            this.label20.Text = "Complete";
             // 
             // label15
             // 
@@ -170,11 +199,11 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(47, 317);
+            this.label16.Location = new System.Drawing.Point(46, 317);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 16);
+            this.label16.Size = new System.Drawing.Size(80, 16);
             this.label16.TabIndex = 14;
-            this.label16.Text = "Total";
+            this.label16.Text = "Total Paid";
             // 
             // label14
             // 
@@ -294,11 +323,11 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(49, 32);
+            this.label2.Location = new System.Drawing.Point(48, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 16);
+            this.label2.Size = new System.Drawing.Size(148, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Booking details";
+            this.label2.Text = "Confirm booking details";
             // 
             // label1
             // 
@@ -306,9 +335,9 @@ namespace WindowsFormsApp1
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 20);
+            this.label1.Size = new System.Drawing.Size(241, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Customer Booking Details";
+            this.label1.Text = "Cancel Booking Confirmation";
             // 
             // button2
             // 
@@ -317,26 +346,40 @@ namespace WindowsFormsApp1
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(399, 395);
+            this.button2.Location = new System.Drawing.Point(381, 399);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 43);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Pay";
+            this.button2.Size = new System.Drawing.Size(142, 43);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Confirm booking";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 395);
+            this.button1.Location = new System.Drawing.Point(10, 399);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 43);
-            this.button1.TabIndex = 5;
+            this.button1.Size = new System.Drawing.Size(142, 43);
+            this.button1.TabIndex = 7;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // fullDs
+            // 
+            this.fullDs.DataSetName = "fullDatabase";
+            this.fullDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookingSummaryTa
+            // 
+            this.bookingSummaryTa.ClearBeforeFill = true;
+            // 
+            // customerTa
+            // 
+            this.customerTa.ClearBeforeFill = true;
             // 
             // modifyConfirm
             // 
@@ -344,13 +387,14 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
             this.Name = "modifyConfirm";
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,6 +402,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
@@ -381,5 +427,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private fullDatabase fullDs;
+        private fullDatabaseTableAdapters.BookingSummaryTableAdapter bookingSummaryTa;
+        private fullDatabaseTableAdapters.CustomerTableAdapter customerTa;
     }
 }

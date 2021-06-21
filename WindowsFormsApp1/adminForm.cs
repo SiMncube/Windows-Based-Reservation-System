@@ -1112,49 +1112,16 @@ namespace WindowsFormsApp1
         {
             string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);  
             CaptureNEWBookingRecord(newBookingAmountDueString);      //not this record is incomplete untill the admin confirms the receipt of payment
-
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 5));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
-
-            DialogResult results;
-            if (finalAmountDue < 0)  //issue a refund
-            {
-                results = MessageBox.Show("After Updating this Booking, Refund of R " + Math.Abs(finalAmountDue) + " will be processed.", "Customer Message", MessageBoxButtons.OKCancel);
-                if (results == DialogResult.OK)
-                {
-                    UpdateBooking(newBookingAmountDueString);
-                }
-            }
-            else if (finalAmountDue > 0)  //add amount
-            {
-                results = MessageBox.Show("To Update this booking Customer will have to Add R " + Math.Abs(finalAmountDue), "Customer Message", MessageBoxButtons.OKCancel);
-                if (results == DialogResult.OK)
-                {
-                    results = MessageBox.Show("Click Okay to Confirm Receipt of  " + finalAmountDue, "Customer Payment Confiration Message", MessageBoxButtons.OKCancel);
-                    if (results == DialogResult.OK)
-                    {
-                        UpdateBooking(newBookingAmountDueString);
-                    }
-                }
-            }
-            else   //break even 
-            {
-                results = MessageBox.Show("Amount that was paid for the Old booking is enough for Updating this booking. Click Okay to Confirm Update Booking.", "Customer Message", MessageBoxButtons.OKCancel);
-                if (results == DialogResult.OK)
-                {
-                    UpdateBooking(newBookingAmountDueString);
-                }
-            }
-
-            /*
-            label36.Visible = false;
-            comboBox3.Enabled = false;
-            comboBox4.Enabled = false;
-            button14.Enabled = false;
-            dateTimePicker3.Enabled = false;
-            dateTimePicker4.Enabled = false;
-            */
+            int[] a = {-1};
+            currentBooking.setRoomIDs(a);
+            UpdateBooking(newBookingAmountDueString);
+            currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
+            currentUser.setEmailID(modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString());
+            modifyConfirm m = new modifyConfirm(finalAmountDue);
+            m.ShowDialog();
         }
 
         private void button11_Click(object sender, EventArgs e)
