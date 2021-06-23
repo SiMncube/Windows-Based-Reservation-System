@@ -111,7 +111,6 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 invoiceForm i = new invoiceForm();
-              //  this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
