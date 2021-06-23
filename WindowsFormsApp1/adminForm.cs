@@ -840,8 +840,10 @@ namespace WindowsFormsApp1
             button8.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
-            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
+            this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+            bookedRoomTa.Update(fullDs.BookedRoom);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
 
             currentUser.setEmailID(currentCustomerEmailID);
             confirmBookingForm c = new confirmBookingForm();
@@ -909,7 +911,6 @@ namespace WindowsFormsApp1
         }
         private void button12_Click(object sender, EventArgs e)
         {
-
             customerDataGridView.ClearSelection();
 
             textBox3.Clear();
@@ -919,13 +920,15 @@ namespace WindowsFormsApp1
             panel5.Enabled = false;
             button10.Enabled = false;
 
-
             dateTimePicker1.Value = DateTime.Today;
             dateTimePicker2.Value = DateTime.Today;
 
+            bookingSummaryTa.Update(fullDs.BookingSummary);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
+            bookedRoomTa.Update(fullDs.BookedRoom);
             bookedRoomTa.Fill(fullDs.BookedRoom);
         }
+
         private void label20_Click(object sender, EventArgs e)
         {
 
