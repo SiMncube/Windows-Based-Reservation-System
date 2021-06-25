@@ -119,6 +119,7 @@ namespace WindowsFormsApp1
             this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
             this.galleryToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.galleryToolStripMenuItem.Text = "Gallery";
+            this.galleryToolStripMenuItem.Click += new System.EventHandler(this.galleryToolStripMenuItem_Click);
             // 
             // picturesToolStripMenuItem
             // 

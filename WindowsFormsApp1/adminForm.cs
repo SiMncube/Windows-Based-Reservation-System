@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
-                    admin += fullDs.Staff[i].name + " " + fullDs.Staff[i].surname;
+                    admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
                     break;
                 }
             }
