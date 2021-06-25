@@ -41,6 +41,7 @@ namespace WindowsFormsApp1
             this.roomTypeTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTypeTableAdapter();
             this.roomTableAdapter = new WindowsFormsApp1.fullDatabaseTableAdapters.RoomTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,6 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookedRoomBindingSource)).BeginInit();
@@ -146,6 +146,16 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 403);
             this.panel1.TabIndex = 28;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(3, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(125, 16);
+            this.label63.TabIndex = 60;
+            this.label63.Text = "Make A Booking:";
             // 
             // textBox5
             // 
@@ -336,9 +346,9 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(4, 3);
+            this.panel2.Location = new System.Drawing.Point(-1, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1369, 100);
+            this.panel2.Size = new System.Drawing.Size(1374, 100);
             this.panel2.TabIndex = 47;
             // 
             // label10
@@ -381,16 +391,6 @@ namespace WindowsFormsApp1
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 0;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(3, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(125, 16);
-            this.label63.TabIndex = 60;
-            this.label63.Text = "Make A Booking:";
             // 
             // Form5
             // 
