@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDatabase.Customer[i].emailID.Equals(currentUser.getEmailID()))
                 {
-                    userName += fullDatabase.Customer[i].name + " " + fullDatabase.Customer[i].surname;
+                    userName += fullDatabase.Customer[i].surname + fullDatabase.Customer[i].name;
                     break;
                 }
 
@@ -70,6 +70,11 @@ namespace WindowsFormsApp1
         }
 
         private void Form8_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

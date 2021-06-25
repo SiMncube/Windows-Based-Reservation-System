@@ -119,6 +119,7 @@ namespace WindowsFormsApp1
             this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
             this.galleryToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.galleryToolStripMenuItem.Text = "Gallery";
+            this.galleryToolStripMenuItem.Click += new System.EventHandler(this.galleryToolStripMenuItem_Click);
             // 
             // picturesToolStripMenuItem
             // 
@@ -201,7 +202,7 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(0, 710);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1361, 37);
+            this.panel3.Size = new System.Drawing.Size(1370, 37);
             this.panel3.TabIndex = 43;
             // 
             // label4
