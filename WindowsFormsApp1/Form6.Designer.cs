@@ -193,9 +193,9 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(2, 2);
+            this.panel3.Location = new System.Drawing.Point(-4, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1380, 100);
+            this.panel3.Size = new System.Drawing.Size(1386, 103);
             this.panel3.TabIndex = 42;
             // 
             // label10
@@ -203,7 +203,7 @@ namespace WindowsFormsApp1
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(11, 66);
+            this.label10.Location = new System.Drawing.Point(18, 58);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 16);
             this.label10.TabIndex = 41;
@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(9, 21);
+            this.button2.Location = new System.Drawing.Point(16, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(45, 45);
             this.button2.TabIndex = 40;
