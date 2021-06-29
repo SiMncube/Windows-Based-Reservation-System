@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace WindowsFormsApp1
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
             this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,27 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(514, 385);
             this.panel1.TabIndex = 6;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label23.Location = new System.Drawing.Point(304, 353);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 16);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Total";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(46, 353);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(97, 16);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "Total Refund";
             // 
             // label20
             // 
@@ -361,32 +382,11 @@ namespace WindowsFormsApp1
             // 
             this.customerTa.ClearBeforeFill = true;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(46, 353);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 16);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "Total Refund";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label23.Location = new System.Drawing.Point(304, 353);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(44, 16);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Total";
-            // 
             // cancelBookingConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 458);
+            this.ClientSize = new System.Drawing.Size(535, 458);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
