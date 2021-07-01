@@ -96,6 +96,8 @@ namespace WindowsFormsApp1
                         label23.Text = "R " + (finalAmountDue * -1) + ".00";
                     else
                     {
+                        label22.Text = "Amount Due";
+                        label22.ForeColor = Color.Red;
                         label23.Text = "-R " + (finalAmountDue) + ".00";
                         label23.ForeColor = Color.Red;
                     }
