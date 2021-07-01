@@ -333,7 +333,7 @@ namespace WindowsFormsApp1
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(485, 7);
+            this.label12.Location = new System.Drawing.Point(492, 7);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(414, 18);
             this.label12.TabIndex = 41;
