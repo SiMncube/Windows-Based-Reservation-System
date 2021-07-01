@@ -365,9 +365,9 @@ namespace WindowsFormsApp1
             this.panel11.Controls.Add(this.label59);
             this.panel11.Controls.Add(this.button3);
             this.panel11.Controls.Add(this.label60);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Location = new System.Drawing.Point(3, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1361, 100);
+            this.panel11.Size = new System.Drawing.Size(1361, 103);
             this.panel11.TabIndex = 45;
             // 
             // label58
@@ -432,7 +432,7 @@ namespace WindowsFormsApp1
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label12.Location = new System.Drawing.Point(991, 118);
+            this.label12.Location = new System.Drawing.Point(1015, 120);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(198, 15);
             this.label12.TabIndex = 4;
