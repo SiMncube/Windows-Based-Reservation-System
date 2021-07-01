@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Gray;
-            this.menuStrip1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             this.galleryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 32);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
             // 
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(80, 28);
             this.exitToolStripMenuItem.Text = "Logout";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -87,27 +87,27 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem});
             this.bookingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(91, 28);
             this.bookingToolStripMenuItem.Text = "Booking";
             // 
             // makeBookingToolStripMenuItem
             // 
             this.makeBookingToolStripMenuItem.Name = "makeBookingToolStripMenuItem";
-            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.makeBookingToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.makeBookingToolStripMenuItem.Text = "Make Booking";
             this.makeBookingToolStripMenuItem.Click += new System.EventHandler(this.makeBookingToolStripMenuItem_Click);
             // 
             // checkBookingToolStripMenuItem
             // 
             this.checkBookingToolStripMenuItem.Name = "checkBookingToolStripMenuItem";
-            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.checkBookingToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.checkBookingToolStripMenuItem.Text = "Check Booking";
             this.checkBookingToolStripMenuItem.Click += new System.EventHandler(this.checkBookingToolStripMenuItem_Click);
             // 
             // modifyBookingToolStripMenuItem
             // 
             this.modifyBookingToolStripMenuItem.Name = "modifyBookingToolStripMenuItem";
-            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.modifyBookingToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.modifyBookingToolStripMenuItem.Text = "Cancel booking";
             this.modifyBookingToolStripMenuItem.Click += new System.EventHandler(this.modifyBookingToolStripMenuItem_Click_1);
             // 
@@ -117,14 +117,14 @@ namespace WindowsFormsApp1
             this.picturesToolStripMenuItem});
             this.galleryToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.galleryToolStripMenuItem.Name = "galleryToolStripMenuItem";
-            this.galleryToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.galleryToolStripMenuItem.Size = new System.Drawing.Size(80, 28);
             this.galleryToolStripMenuItem.Text = "Gallery";
             this.galleryToolStripMenuItem.Click += new System.EventHandler(this.galleryToolStripMenuItem_Click);
             // 
             // picturesToolStripMenuItem
             // 
             this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
-            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
             this.picturesToolStripMenuItem.Text = "Pictures";
             this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
             // 
