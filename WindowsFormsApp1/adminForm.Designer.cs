@@ -335,7 +335,7 @@ namespace WindowsFormsApp1
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -423,7 +423,7 @@ namespace WindowsFormsApp1
             this.label60.AutoSize = true;
             this.label60.Location = new System.Drawing.Point(105, 43);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(0, 18);
+            this.label60.Size = new System.Drawing.Size(0, 20);
             this.label60.TabIndex = 0;
             // 
             // label12
@@ -1265,7 +1265,7 @@ namespace WindowsFormsApp1
             this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label34.Location = new System.Drawing.Point(850, 254);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(31, 18);
+            this.label34.Size = new System.Drawing.Size(34, 20);
             this.label34.TabIndex = 56;
             this.label34.Text = "OR";
             // 
@@ -1312,7 +1312,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox3.Location = new System.Drawing.Point(239, 51);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(558, 26);
+            this.textBox3.Size = new System.Drawing.Size(558, 27);
             this.textBox3.TabIndex = 50;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -1322,7 +1322,7 @@ namespace WindowsFormsApp1
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(54, 259);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(136, 18);
+            this.label33.Size = new System.Drawing.Size(140, 20);
             this.label33.TabIndex = 54;
             this.label33.Text = "Customer Details";
             this.label33.Visible = false;
@@ -1470,7 +1470,7 @@ namespace WindowsFormsApp1
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(135, 263);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 26);
+            this.textBox5.Size = new System.Drawing.Size(156, 27);
             this.textBox5.TabIndex = 57;
             // 
             // label21
@@ -1686,7 +1686,7 @@ namespace WindowsFormsApp1
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(135, 257);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 26);
+            this.textBox6.Size = new System.Drawing.Size(159, 27);
             this.textBox6.TabIndex = 57;
             // 
             // label38
@@ -1959,7 +1959,7 @@ namespace WindowsFormsApp1
             this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label31.Location = new System.Drawing.Point(1033, 259);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(31, 18);
+            this.label31.Size = new System.Drawing.Size(34, 20);
             this.label31.TabIndex = 56;
             this.label31.Text = "OR";
             // 
@@ -2007,7 +2007,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox4.Location = new System.Drawing.Point(331, 53);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(582, 26);
+            this.textBox4.Size = new System.Drawing.Size(582, 27);
             this.textBox4.TabIndex = 50;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -2017,7 +2017,7 @@ namespace WindowsFormsApp1
             this.label36.ForeColor = System.Drawing.Color.Black;
             this.label36.Location = new System.Drawing.Point(34, 264);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(136, 18);
+            this.label36.Size = new System.Drawing.Size(140, 20);
             this.label36.TabIndex = 54;
             this.label36.Text = "Customer Details";
             this.label36.Visible = false;
@@ -2438,9 +2438,9 @@ namespace WindowsFormsApp1
             this.tabPage5.Controls.Add(this.panel4);
             this.tabPage5.Controls.Add(this.button7);
             this.tabPage5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage5.Size = new System.Drawing.Size(1362, 716);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "View booking";
             // 
