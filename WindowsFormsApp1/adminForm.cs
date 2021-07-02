@@ -1349,5 +1349,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
