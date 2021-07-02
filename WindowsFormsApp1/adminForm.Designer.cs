@@ -2443,6 +2443,7 @@ namespace WindowsFormsApp1
             this.tabPage5.Size = new System.Drawing.Size(1362, 716);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "View booking";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // label19
             // 
