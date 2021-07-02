@@ -279,7 +279,7 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(548, 66);
+            this.label2.Location = new System.Drawing.Point(533, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 18);
             this.label2.TabIndex = 18;
