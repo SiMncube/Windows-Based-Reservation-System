@@ -355,7 +355,6 @@ namespace WindowsFormsApp1
             this.tabPage1.Size = new System.Drawing.Size(1362, 718);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // panel11
             // 
@@ -2443,7 +2442,6 @@ namespace WindowsFormsApp1
             this.tabPage5.Size = new System.Drawing.Size(1362, 716);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "View booking";
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // label19
             // 

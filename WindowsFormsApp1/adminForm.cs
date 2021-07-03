@@ -1344,15 +1344,5 @@ namespace WindowsFormsApp1
         {
             customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
