@@ -25,8 +25,6 @@ namespace WindowsFormsApp1
             toolTip1.SetToolTip(textBox6, "Must be 4 digits");
             toolTip1.SetToolTip(textBox10, "Must be 10 digits");
             toolTip1.SetToolTip(textBox12, "Must be 13 digits");
-
-
         }
         private void button1_Click(object sender, EventArgs e)
         {
