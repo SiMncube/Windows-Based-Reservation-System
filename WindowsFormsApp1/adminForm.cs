@@ -1334,12 +1334,6 @@ namespace WindowsFormsApp1
             fullDs1.Clear();
             label4.Visible = false;
         }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
             customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);

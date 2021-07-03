@@ -1836,7 +1836,6 @@ namespace WindowsFormsApp1
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1230, 291);
             this.panel7.TabIndex = 56;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // modifyBookingInnerDataGridView
             // 
