@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 login = new Form1();
+            LoginForm login = new LoginForm();
             login.ShowDialog();
         }
         private void textBox13_TextChanged(object sender, EventArgs e)
@@ -509,7 +509,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            LoginForm login = new LoginForm();
             this.Hide();
             login.ShowDialog();
             this.Close();

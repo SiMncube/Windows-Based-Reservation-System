@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            LoginForm login = new LoginForm();
             this.Hide();
             login.ShowDialog();
             this.Close();
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
 
         private void checkBookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 checkBooking = new Form6();
+            CheckbookingForm checkBooking = new CheckbookingForm();
             this.Hide();
             checkBooking.ShowDialog();
             this.Close();
