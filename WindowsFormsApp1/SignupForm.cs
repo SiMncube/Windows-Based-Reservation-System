@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class SignupForm : Form
     {
         Timer timer = new Timer();
-        public Form2()
+        public SignupForm()
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDatabase1.Customer);

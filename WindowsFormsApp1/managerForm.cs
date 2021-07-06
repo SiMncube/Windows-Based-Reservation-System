@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class managerForm : Form
+    public partial class ManagerForm : Form
     {
-        public managerForm()
+        public ManagerForm()
         {
             InitializeComponent();
             this.bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);

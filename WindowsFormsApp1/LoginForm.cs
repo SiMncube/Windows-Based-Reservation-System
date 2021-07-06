@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
                 }
                 if(managerNameIsCorrect() && managerNameIsCorrect())
                 {
-                    managerForm m = new managerForm();
+                    ManagerForm m = new ManagerForm();
                     this.Hide();
                     m.ShowDialog();
                     this.Close();
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 signup = new Form2();
+            SignupForm signup = new SignupForm();
             signup.ShowDialog();
             this.Close();
         }
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form10 forgot = new Form10();
+            ResetpasswordForm forgot = new ResetpasswordForm();
            // this.Hide();
             forgot.ShowDialog();
             this.Close();
@@ -203,7 +203,7 @@ namespace WindowsFormsApp1
                     }
                     else if (managerNameIsCorrect() && managerNameIsCorrect())
                     {
-                        managerForm m = new managerForm();
+                        ManagerForm m = new ManagerForm();
                      //   this.Hide();
                         m.ShowDialog();
                         this.Close();

@@ -56,11 +56,11 @@
     <Compile Include="adminForm.Designer.cs">
       <DependentUpon>adminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="cancelBookingForm.cs">
+    <Compile Include="CancelbookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cancelBookingForm.designer.cs">
-      <DependentUpon>cancelBookingForm.cs</DependentUpon>
+    <Compile Include="CancelbookingForm.designer.cs">
+      <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -68,35 +68,35 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
+    <Compile Include="ResetpasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="ResetpasswordForm.Designer.cs">
+      <DependentUpon>ResetpasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="cancelBookingConfirm.cs">
+    <Compile Include="CancelbookingConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cancelBookingConfirm.Designer.cs">
-      <DependentUpon>cancelBookingConfirm.cs</DependentUpon>
+    <Compile Include="CancelbookingConfirm.Designer.cs">
+      <DependentUpon>CancelbookingConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="confirmBookingForm.cs">
+    <Compile Include="ConfirmbookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="confirmBookingForm.Designer.cs">
-      <DependentUpon>confirmBookingForm.cs</DependentUpon>
+    <Compile Include="ConfirmbookingForm.Designer.cs">
+      <DependentUpon>ConfirmbookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="invoiceForm.cs">
+    <Compile Include="InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="invoiceForm.Designer.cs">
-      <DependentUpon>invoiceForm.cs</DependentUpon>
+    <Compile Include="InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="modifyConfirm.cs">
+    <Compile Include="ModifyConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modifyConfirm.Designer.cs">
-      <DependentUpon>modifyConfirm.cs</DependentUpon>
+    <Compile Include="ModifyConfirm.Designer.cs">
+      <DependentUpon>ModifyConfirm.cs</DependentUpon>
     </Compile>
     <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>
@@ -104,11 +104,11 @@
     <Compile Include="PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GalleryForm.cs">
       <SubType>Form</SubType>
@@ -142,43 +142,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fullDatabase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="managerForm.cs">
+    <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="managerForm.Designer.cs">
-      <DependentUpon>managerForm.cs</DependentUpon>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="adminForm.resx">
       <DependentUpon>adminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cancelBookingForm.resx">
-      <DependentUpon>cancelBookingForm.cs</DependentUpon>
+    <EmbeddedResource Include="CancelbookingForm.resx">
+      <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="ResetpasswordForm.resx">
+      <DependentUpon>ResetpasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cancelBookingConfirm.resx">
-      <DependentUpon>cancelBookingConfirm.cs</DependentUpon>
+    <EmbeddedResource Include="CancelbookingConfirm.resx">
+      <DependentUpon>CancelbookingConfirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="confirmBookingForm.resx">
-      <DependentUpon>confirmBookingForm.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmbookingForm.resx">
+      <DependentUpon>ConfirmbookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="invoiceForm.resx">
-      <DependentUpon>invoiceForm.cs</DependentUpon>
+    <EmbeddedResource Include="InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modifyConfirm.resx">
-      <DependentUpon>modifyConfirm.cs</DependentUpon>
+    <EmbeddedResource Include="ModifyConfirm.resx">
+      <DependentUpon>ModifyConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GalleryForm.resx">
       <DependentUpon>GalleryForm.cs</DependentUpon>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="managerForm.resx">
-      <DependentUpon>managerForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

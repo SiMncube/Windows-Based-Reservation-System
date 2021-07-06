@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
 
         private void modifyBookingToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            cancelBookingForm cancelBooking = new cancelBookingForm();
+            CancelbookingForm cancelBooking = new CancelbookingForm();
             this.Hide();
             cancelBooking.ShowDialog();
             this.Close();

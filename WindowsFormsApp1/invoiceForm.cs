@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class invoiceForm : Form
+    public partial class InvoiceForm : Form
     {
-        public invoiceForm()
+        public InvoiceForm()
         {
             InitializeComponent();
             bookingSummaryTa.Fill(fullDs.BookingSummary);

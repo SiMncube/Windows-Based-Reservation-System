@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "Credit card");
                 updateBookedRoom();
                 updateBookingStatus();
-                invoiceForm i = new invoiceForm();
+                InvoiceForm i = new InvoiceForm();
                 i.ShowDialog();
                 this.Close();
             }
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
                 paymentTa.Insert(DateTime.Today, getAmountDue(), currentBooking.getSummaryID(), "EFT");
                 updateBookedRoom();
                 updateBookingStatus();
-                invoiceForm i = new invoiceForm();
+                InvoiceForm i = new InvoiceForm();
                 this.Hide();
                 i.ShowDialog();
                 this.Close();
