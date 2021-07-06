@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form8 f = new Form8();
+            Homepage f = new Homepage();
             this.Hide();
             f.ShowDialog();
             this.Close();
