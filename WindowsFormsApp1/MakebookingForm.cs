@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form5 : Form
+    public partial class MakebookingForm : Form
     {
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         int numberOfSingleRooms = 0;
         int numberOfDoubleRooms = 0;
 
-        public Form5()
+        public MakebookingForm()
         {
             InitializeComponent();
             this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
