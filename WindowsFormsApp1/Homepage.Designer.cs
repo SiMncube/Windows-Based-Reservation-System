@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form8
+    partial class Homepage
     {
         /// <summary>
         /// Required designer variable.

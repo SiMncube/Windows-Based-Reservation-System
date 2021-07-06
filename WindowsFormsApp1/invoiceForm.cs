@@ -111,21 +111,21 @@ namespace WindowsFormsApp1
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form8 form = new Form8();
+            Homepage form = new Homepage();
             form.ShowDialog();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Form8 form = new Form8();
+            Homepage form = new Homepage();
             form.ShowDialog();
         }
 
         private void pictureBox2_Click_2(object sender, EventArgs e)
         {
             this.Close();
-            Form8 form = new Form8();
+            Homepage form = new Homepage();
             form.ShowDialog();
         }
 

@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             {
                 if(userNameIsCorrect() && userPasswordIsCorrect())
                 {
-                    Form8 homePage = new Form8();
+                    Homepage homePage = new Homepage();
                     this.Hide();
                     homePage.ShowDialog();
                     this.Close();
@@ -189,7 +189,7 @@ namespace WindowsFormsApp1
                 {
                     if (userNameIsCorrect() && userPasswordIsCorrect())
                     {
-                        Form8 homePage = new Form8();
+                        Homepage homePage = new Homepage();
                       //  this.Hide();
                         homePage.ShowDialog();
                         this.Close();

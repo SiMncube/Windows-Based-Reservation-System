@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Form8 form = new Form8();
+            Homepage form = new Homepage();
             form.ShowDialog();
         }
 
@@ -280,7 +280,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form8 f = new Form8();
+            Homepage f = new Homepage();
             this.Hide();
             f.ShowDialog();
             this.Close();

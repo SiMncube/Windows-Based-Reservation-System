@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form8 form = new Form8();
+            Homepage form = new Homepage();
             form.ShowDialog();
         }
 

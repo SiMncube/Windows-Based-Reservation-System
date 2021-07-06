@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            Form8 homePage = new Form8();
+            Homepage homePage = new Homepage();
             timer.Dispose();
             this.Dispose();
             homePage.ShowDialog();
