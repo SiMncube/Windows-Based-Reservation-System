@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();

@@ -567,7 +567,7 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -575,7 +575,7 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -583,7 +583,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -591,7 +591,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -599,7 +599,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -1304,7 +1304,7 @@ namespace WindowsFormsApp1
 
         private void button18_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            LoginForm f = new LoginForm();
             this.Hide();
             f.ShowDialog();
             this.Close();
