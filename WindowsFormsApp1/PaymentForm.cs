@@ -93,7 +93,6 @@ namespace WindowsFormsApp1
         private bool creditDetailsValid()
         {
             int count = 0;
-   
             if (!nameIsValid())
                 count++;
             if (!cardNumberIsValid())
