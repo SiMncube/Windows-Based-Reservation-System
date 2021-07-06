@@ -256,7 +256,7 @@ namespace WindowsFormsApp1
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
             this.bookingSummaryTableAdapter.Fill(this.fullDatabase.BookingSummary);
-            confirmBookingForm c = new confirmBookingForm();
+            ConfirmbookingForm c = new ConfirmbookingForm();
             c.ShowDialog();
         }
 

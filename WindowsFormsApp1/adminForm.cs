@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             currentBooking.setSummaryID((int)dataGridView1.Rows[0].Cells[4].Value);
             bookingSummaryTa.Update(fullDs.BookingSummary);
             paymentTa.Update(fullDs.Payment);
-            cancelBookingConfirm c = new cancelBookingConfirm();
+            CancelbookingConfirm c = new CancelbookingConfirm();
             c.ShowDialog();
             label4.Visible = true;
             bookingInnerTa.Fill(fullDs.BookingInner);
@@ -846,7 +846,7 @@ namespace WindowsFormsApp1
             bookedRoomTa.Fill(fullDs.BookedRoom);
 
             currentUser.setEmailID(currentCustomerEmailID);
-            confirmBookingForm c = new confirmBookingForm();
+            ConfirmbookingForm c = new ConfirmbookingForm();
             c.ShowDialog();
         }
         
@@ -1123,7 +1123,7 @@ namespace WindowsFormsApp1
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
             currentUser.setEmailID(modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString());
-            modifyConfirm m = new modifyConfirm(finalAmountDue);
+            ModifyConfirm m = new ModifyConfirm(finalAmountDue);
             m.ShowDialog();
         }
 

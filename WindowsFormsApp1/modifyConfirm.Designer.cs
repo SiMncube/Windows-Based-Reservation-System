@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class modifyConfirm
+    partial class ModifyConfirm
     {
         /// <summary>
         /// Required designer variable.

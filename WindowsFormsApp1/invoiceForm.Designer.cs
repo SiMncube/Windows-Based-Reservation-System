@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class invoiceForm
+    partial class InvoiceForm
     {
         /// <summary>
         /// Required designer variable.

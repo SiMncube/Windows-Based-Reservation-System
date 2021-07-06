@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class cancelBookingForm : Form
+    public partial class CancelbookingForm : Form
     {
-        public cancelBookingForm()
+        public CancelbookingForm()
         {
             InitializeComponent();
             bookingSummaryTableAdapter.Fill(fullDatabase.BookingSummary);

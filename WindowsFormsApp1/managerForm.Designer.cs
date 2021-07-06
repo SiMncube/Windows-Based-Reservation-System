@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class managerForm
+    partial class ManagerForm
     {
         /// <summary>
         /// Required designer variable.

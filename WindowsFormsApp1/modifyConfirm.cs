@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class modifyConfirm : Form
+    public partial class ModifyConfirm : Form
     {
         private decimal finalAmountDue;
-        public modifyConfirm(decimal finalAmount)
+        public ModifyConfirm(decimal finalAmount)
         {
             InitializeComponent();
             this.finalAmountDue = finalAmount;
