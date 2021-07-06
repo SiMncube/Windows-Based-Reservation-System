@@ -260,7 +260,7 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(2, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1361, 100);
+            this.panel3.Size = new System.Drawing.Size(1369, 100);
             this.panel3.TabIndex = 42;
             // 
             // label10
@@ -323,9 +323,9 @@ namespace WindowsFormsApp1
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(-12, 664);
+            this.panel4.Location = new System.Drawing.Point(-10, 709);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1383, 37);
+            this.panel4.Size = new System.Drawing.Size(1381, 39);
             this.panel4.TabIndex = 43;
             // 
             // label12
@@ -333,7 +333,7 @@ namespace WindowsFormsApp1
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(492, 7);
+            this.label12.Location = new System.Drawing.Point(488, 13);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(414, 18);
             this.label12.TabIndex = 41;
@@ -347,18 +347,18 @@ namespace WindowsFormsApp1
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 0;
             // 
-            // cancelBookingForm
+            // CancelbookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1345, 698);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "cancelBookingForm";
+            this.Name = "CancelbookingForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
