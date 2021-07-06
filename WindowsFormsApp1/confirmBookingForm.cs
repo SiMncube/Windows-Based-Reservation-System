@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             for (int index = Application.OpenForms.Count - 1; index >= 0; index--)
             {
-                if (Application.OpenForms[index].Name == "Form5")
+                if (Application.OpenForms[index].Name == "Form5" || Application.OpenForms[index].Name == "adminForm")
                     Application.OpenForms[index].Close();
             }
             PaymentForm p = new PaymentForm();
@@ -35,7 +35,6 @@ namespace WindowsFormsApp1
             p.ShowDialog();
             this.Close();
         }
-
         private DateTime setDateIn()
         {
             DateTime dateIn = DateTime.Today;
@@ -111,11 +110,6 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
