@@ -349,10 +349,10 @@ namespace WindowsFormsApp1
             this.tabPage1.Controls.Add(this.panel11);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage1.Size = new System.Drawing.Size(1362, 716);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
             // 
@@ -374,7 +374,7 @@ namespace WindowsFormsApp1
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(585, 70);
+            this.label58.Location = new System.Drawing.Point(560, 70);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(250, 18);
             this.label58.TabIndex = 18;
@@ -397,7 +397,7 @@ namespace WindowsFormsApp1
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(253, 9);
+            this.label59.Location = new System.Drawing.Point(216, 9);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(933, 61);
             this.label59.TabIndex = 17;
@@ -747,10 +747,10 @@ namespace WindowsFormsApp1
             this.tabPage6.Controls.Add(this.button18);
             this.tabPage6.Controls.Add(this.panel10);
             this.tabPage6.Controls.Add(this.panel9);
-            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage6.Size = new System.Drawing.Size(1362, 716);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Update customer details";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1220,10 +1220,10 @@ namespace WindowsFormsApp1
             this.tabPage2.Controls.Add(this.panel5);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage2.Size = new System.Drawing.Size(1362, 716);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Make booking";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -1638,10 +1638,10 @@ namespace WindowsFormsApp1
             this.tabPage3.Controls.Add(this.panel7);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage3.Size = new System.Drawing.Size(1362, 716);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modify booking";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -2073,10 +2073,10 @@ namespace WindowsFormsApp1
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage4.Size = new System.Drawing.Size(1362, 716);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Cancel booking";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
