@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form5
+    partial class MakebookingForm
     {
         /// <summary>
         /// Required designer variable.

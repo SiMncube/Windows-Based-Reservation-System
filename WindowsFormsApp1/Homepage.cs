@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
 
         private void makeBookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 makebooking = new Form5();
+            MakebookingForm makebooking = new MakebookingForm();
             this.Hide();
             makebooking.ShowDialog();
             this.Show();
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void picturesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 pics = new Form3();
+            GalleryForm pics = new GalleryForm();
             this.Hide();
             pics.ShowDialog();
             this.Close();

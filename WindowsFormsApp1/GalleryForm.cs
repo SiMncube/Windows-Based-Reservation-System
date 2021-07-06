@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class GalleryForm : Form
     {
-        public Form3()
+        public GalleryForm()
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDatabase1.Customer);
