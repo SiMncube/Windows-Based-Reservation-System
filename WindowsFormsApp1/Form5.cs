@@ -252,7 +252,6 @@ namespace WindowsFormsApp1
             updateBookingSummary();
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
-            button1.Enabled = true;
             button4.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
