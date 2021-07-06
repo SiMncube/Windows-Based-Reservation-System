@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDs.Customer);
-            staffTa.Fill(fullDs.Staff)
+            staffTa.Fill(fullDs.Staff);
         }
 
         private void button3_Click(object sender, EventArgs e)
