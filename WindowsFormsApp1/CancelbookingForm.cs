@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             }
             else
             {
+
                 label7.Visible = true;
                 label4.Visible = false;
                 label6.Visible = false;
