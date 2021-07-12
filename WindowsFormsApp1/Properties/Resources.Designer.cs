@@ -153,6 +153,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_open_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-open-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_open_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-open-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_envelope_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-envelope-24", resourceCulture);

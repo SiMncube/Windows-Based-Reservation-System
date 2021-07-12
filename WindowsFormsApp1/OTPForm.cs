@@ -39,5 +39,13 @@ namespace WindowsFormsApp1
                 textBox1.ForeColor = Color.Gray;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginForm l = new LoginForm();
+            this.Hide();
+            l.ShowDialog();
+            this.Close();
+        }
     }
 }
