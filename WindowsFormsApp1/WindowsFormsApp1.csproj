@@ -68,6 +68,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OTPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTPForm.Designer.cs">
+      <DependentUpon>OTPForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResetpasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OTPForm.resx">
+      <DependentUpon>OTPForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResetpasswordForm.resx">
       <DependentUpon>ResetpasswordForm.cs</DependentUpon>
@@ -289,6 +298,8 @@
     <None Include="Resources\icons8-visa-64.png" />
     <None Include="Resources\icons8-mastercard-64.png" />
     <None Include="Resources\back.png" />
+    <None Include="Resources\icons8-email-open-96.png" />
+    <None Include="Resources\icons8-email-open-48.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />

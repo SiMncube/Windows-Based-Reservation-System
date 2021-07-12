@@ -147,6 +147,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             SignupForm signup = new SignupForm();
+            this.Hide();
             signup.ShowDialog();
             this.Close();
         }

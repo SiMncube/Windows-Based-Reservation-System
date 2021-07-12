@@ -514,5 +514,13 @@ namespace WindowsFormsApp1
             login.ShowDialog();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OTPForm o = new OTPForm();
+            this.Hide();
+            o.ShowDialog();
+            this.Close();
+        }
     }
 }
