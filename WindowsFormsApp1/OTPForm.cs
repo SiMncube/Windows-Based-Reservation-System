@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.OTP = randomOTP().Trim();
             //label2.Text += currentUser.getEmailID();
-            label2.Text += OTP;
+            label2.Text += this.OTP;
         }
 
         private void label1_Click(object sender, EventArgs e)
