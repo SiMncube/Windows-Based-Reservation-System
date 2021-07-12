@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             for (int index = Application.OpenForms.Count - 1; index >= 0; index--)
             {
-                if (Application.OpenForms[index].Name == "Form5" || Application.OpenForms[index].Name == "adminForm")
+                if (Application.OpenForms[index].Name == "MakebookingForm" || Application.OpenForms[index].Name == "adminForm")
                     Application.OpenForms[index].Close();
             }
             PaymentForm p = new PaymentForm();
