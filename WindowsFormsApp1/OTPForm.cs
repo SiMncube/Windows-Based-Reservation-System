@@ -12,11 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class OTPForm : Form
     {
+        private string OTP;
         public OTPForm()
         {
             InitializeComponent();
+            this.OTP = randomOTP().Trim();
             //label2.Text += currentUser.getEmailID();
-            label2.Text += randomOTP();
+            label2.Text += OTP;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,7 +27,6 @@ namespace WindowsFormsApp1
         }
         private string randomOTP()
         {
-
             Random r = new Random();
             int randNum = r.Next(1000000);
             string temp = randNum.ToString("D6");
