@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public OTPForm()
         {
             InitializeComponent();
-            this.OTP = randomOTP().Trim();
+            randomOTP();
             //label2.Text += currentUser.getEmailID();
             label2.Text += this.OTP;
         }
@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
             Random r = new Random();
             int randNum = r.Next(1000000);
             string temp = randNum.ToString("D6");
+            this.OTP = temp;
             string random = null;
 
             for(int i = 0; i < 6; i ++)
@@ -61,6 +62,24 @@ namespace WindowsFormsApp1
             this.Hide();
             l.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(this.OTP != textBox1.Text)
+                textBox1.BackColor = Color.Red;
+            else
+                textBox1.BackColor = Color.White;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+        }
+
+        private void OTPForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
