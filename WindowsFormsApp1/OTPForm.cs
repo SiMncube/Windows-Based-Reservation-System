@@ -15,13 +15,27 @@ namespace WindowsFormsApp1
         public OTPForm()
         {
             InitializeComponent();
+            //label2.Text += currentUser.getEmailID();
+            label2.Text += randomOTP();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+        private string randomOTP()
+        {
 
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string temp = randNum.ToString("D6");
+            string random = null;
+
+            for(int i = 0; i < 6; i ++)
+                random += temp[i] + " ";
+
+            return random;
+        }
         private void textBox1_MouseEnter_1(object sender, EventArgs e)
         {
             if (textBox1.Text == "Enter OTP")
