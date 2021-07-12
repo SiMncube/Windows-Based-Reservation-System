@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(523, 182);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 326);
+            this.panel1.Size = new System.Drawing.Size(335, 326);
             this.panel1.TabIndex = 0;
             // 
             // textBox1
@@ -222,6 +222,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.Name = "OTPForm";
             this.Text = "OTPForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
