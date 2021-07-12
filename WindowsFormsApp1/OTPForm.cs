@@ -16,9 +16,8 @@ namespace WindowsFormsApp1
         public OTPForm()
         {
             InitializeComponent();
-            randomOTP();
             //label2.Text += currentUser.getEmailID();
-            label2.Text += this.OTP;
+            label2.Text += randomOTP();
         }
 
         private void label1_Click(object sender, EventArgs e)
