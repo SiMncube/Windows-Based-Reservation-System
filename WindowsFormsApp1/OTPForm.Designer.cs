@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(68, 169);
+            this.textBox1.Location = new System.Drawing.Point(68, 168);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 27);
             this.textBox1.TabIndex = 53;
