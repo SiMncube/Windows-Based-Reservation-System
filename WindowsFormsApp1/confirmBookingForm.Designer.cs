@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(304, 161);
+            this.label20.Location = new System.Drawing.Point(312, 161);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(84, 16);
             this.label20.TabIndex = 22;
@@ -357,7 +357,7 @@ namespace WindowsFormsApp1
             // 
             this.customerTa.ClearBeforeFill = true;
             // 
-            // confirmBookingForm
+            // ConfirmbookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -369,7 +369,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "confirmBookingForm";
+            this.Name = "ConfirmbookingForm";
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
