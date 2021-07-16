@@ -88,10 +88,14 @@ namespace WindowsFormsApp1
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Change of mind",
-            "Choose another BnB",
-            "Not happy with the booking App",
-            "Non of the above"});
+            "Found a different accommodation option",
+            "Unable to travel due to Corona Virus (Covid-19) restrictions",
+            "Change of dates or destination",
+            "Change in the number or needs of travelers",
+            "Double Booked- Cancelling the ones I don\'t need",
+            "Person reasons",
+            "Trip is called off",
+            "None of the above"});
             this.comboBox1.Location = new System.Drawing.Point(43, 117);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(277, 28);
