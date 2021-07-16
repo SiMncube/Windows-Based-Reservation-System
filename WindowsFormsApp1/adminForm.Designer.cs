@@ -31,6 +31,13 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -226,7 +233,6 @@ namespace WindowsFormsApp1
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -251,6 +257,17 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -289,6 +306,8 @@ namespace WindowsFormsApp1
             this.tabPage5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -372,11 +391,11 @@ namespace WindowsFormsApp1
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(560, 70);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(250, 18);
+            this.label58.Size = new System.Drawing.Size(228, 20);
             this.label58.TabIndex = 18;
             this.label58.Text = "Safe . Dependable . Affordable";
             // 
@@ -384,22 +403,22 @@ namespace WindowsFormsApp1
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(11, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 20);
+            this.label15.Size = new System.Drawing.Size(65, 20);
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label59.Location = new System.Drawing.Point(216, 9);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(933, 61);
+            this.label59.Size = new System.Drawing.Size(852, 61);
             this.label59.TabIndex = 17;
             this.label59.Text = "The Cottage BnB Booking System";
             // 
@@ -429,11 +448,11 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label12.Location = new System.Drawing.Point(1015, 120);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 15);
+            this.label12.Size = new System.Drawing.Size(197, 16);
             this.label12.TabIndex = 4;
             this.label12.Text = "Currently logged in Admin : ";
             // 
@@ -482,7 +501,7 @@ namespace WindowsFormsApp1
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(38, 310);
             this.textBox8.Name = "textBox8";
@@ -494,11 +513,11 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(35, 9);
+            this.label9.Location = new System.Drawing.Point(35, 48);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(330, 17);
+            this.label9.Size = new System.Drawing.Size(325, 18);
             this.label9.TabIndex = 63;
             this.label9.Text = "Customer account successfully registered";
             this.label9.Visible = false;
@@ -506,22 +525,22 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(34, 39);
+            this.label1.Location = new System.Drawing.Point(33, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 27);
+            this.label1.Size = new System.Drawing.Size(307, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Register a new Customer";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(36, 66);
+            this.label3.Location = new System.Drawing.Point(5, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(325, 20);
+            this.label3.Size = new System.Drawing.Size(389, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Fill the registration form below to register a new customer ";
             // 
@@ -585,7 +604,7 @@ namespace WindowsFormsApp1
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
             this.emailTextBox.Location = new System.Drawing.Point(38, 277);
             this.emailTextBox.Name = "emailTextBox";
@@ -598,7 +617,7 @@ namespace WindowsFormsApp1
             // 
             // cellNumberTextBox
             // 
-            this.cellNumberTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cellNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cellNumberTextBox.ForeColor = System.Drawing.Color.Gray;
             this.cellNumberTextBox.Location = new System.Drawing.Point(234, 230);
             this.cellNumberTextBox.Name = "cellNumberTextBox";
@@ -611,7 +630,7 @@ namespace WindowsFormsApp1
             // 
             // IDTextBox
             // 
-            this.IDTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTextBox.ForeColor = System.Drawing.Color.Gray;
             this.IDTextBox.Location = new System.Drawing.Point(38, 230);
             this.IDTextBox.Name = "IDTextBox";
@@ -624,7 +643,7 @@ namespace WindowsFormsApp1
             // 
             // postalCodeTextBox
             // 
-            this.postalCodeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postalCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postalCodeTextBox.ForeColor = System.Drawing.Color.Gray;
             this.postalCodeTextBox.Location = new System.Drawing.Point(234, 196);
             this.postalCodeTextBox.Name = "postalCodeTextBox";
@@ -637,7 +656,7 @@ namespace WindowsFormsApp1
             // 
             // cityTextBox
             // 
-            this.cityTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
             this.cityTextBox.Location = new System.Drawing.Point(38, 196);
             this.cityTextBox.Name = "cityTextBox";
@@ -650,7 +669,7 @@ namespace WindowsFormsApp1
             // 
             // addressLine2TextBox
             // 
-            this.addressLine2TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine2TextBox.ForeColor = System.Drawing.Color.Gray;
             this.addressLine2TextBox.Location = new System.Drawing.Point(38, 164);
             this.addressLine2TextBox.Name = "addressLine2TextBox";
@@ -663,7 +682,7 @@ namespace WindowsFormsApp1
             // 
             // addressLine1TextBox
             // 
-            this.addressLine1TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine1TextBox.ForeColor = System.Drawing.Color.Gray;
             this.addressLine1TextBox.Location = new System.Drawing.Point(38, 132);
             this.addressLine1TextBox.Name = "addressLine1TextBox";
@@ -676,7 +695,7 @@ namespace WindowsFormsApp1
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.Color.Gray;
             this.lastNameTextBox.Location = new System.Drawing.Point(193, 99);
             this.lastNameTextBox.Name = "lastNameTextBox";
@@ -689,7 +708,7 @@ namespace WindowsFormsApp1
             // 
             // firtNameTextBox
             // 
-            this.firtNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firtNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firtNameTextBox.ForeColor = System.Drawing.Color.Gray;
             this.firtNameTextBox.Location = new System.Drawing.Point(38, 99);
             this.firtNameTextBox.Name = "firtNameTextBox";
@@ -759,11 +778,11 @@ namespace WindowsFormsApp1
             // 
             this.label57.AutoSize = true;
             this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.White;
             this.label57.Location = new System.Drawing.Point(3, 58);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(53, 20);
+            this.label57.Size = new System.Drawing.Size(65, 20);
             this.label57.TabIndex = 45;
             this.label57.Text = "Logout";
             // 
@@ -807,7 +826,7 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.textBox16);
             this.panel10.Controls.Add(this.textBox17);
             this.panel10.Controls.Add(this.button17);
-            this.panel10.Location = new System.Drawing.Point(507, 306);
+            this.panel10.Location = new System.Drawing.Point(500, 340);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(361, 368);
             this.panel10.TabIndex = 2;
@@ -903,11 +922,11 @@ namespace WindowsFormsApp1
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label45.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label45.Location = new System.Drawing.Point(16, 260);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(60, 20);
+            this.label45.Size = new System.Drawing.Size(53, 16);
             this.label45.TabIndex = 62;
             this.label45.Tag = "";
             this.label45.Text = "Email*";
@@ -952,7 +971,7 @@ namespace WindowsFormsApp1
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox7.Location = new System.Drawing.Point(20, 281);
             this.textBox7.Name = "textBox7";
@@ -962,7 +981,7 @@ namespace WindowsFormsApp1
             // 
             // textBox10
             // 
-            this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox10.Location = new System.Drawing.Point(205, 230);
             this.textBox10.Name = "textBox10";
@@ -972,7 +991,7 @@ namespace WindowsFormsApp1
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox12.Location = new System.Drawing.Point(20, 230);
             this.textBox12.Name = "textBox12";
@@ -982,7 +1001,7 @@ namespace WindowsFormsApp1
             // 
             // textBox11
             // 
-            this.textBox11.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox11.Location = new System.Drawing.Point(205, 181);
             this.textBox11.Name = "textBox11";
@@ -991,7 +1010,7 @@ namespace WindowsFormsApp1
             // 
             // textBox13
             // 
-            this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox13.Location = new System.Drawing.Point(20, 181);
             this.textBox13.Name = "textBox13";
@@ -1000,7 +1019,7 @@ namespace WindowsFormsApp1
             // 
             // textBox14
             // 
-            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox14.Location = new System.Drawing.Point(20, 132);
             this.textBox14.Name = "textBox14";
@@ -1009,7 +1028,7 @@ namespace WindowsFormsApp1
             // 
             // textBox15
             // 
-            this.textBox15.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox15.Location = new System.Drawing.Point(20, 83);
             this.textBox15.Name = "textBox15";
@@ -1018,7 +1037,7 @@ namespace WindowsFormsApp1
             // 
             // textBox16
             // 
-            this.textBox16.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox16.Location = new System.Drawing.Point(175, 33);
             this.textBox16.Name = "textBox16";
@@ -1027,7 +1046,7 @@ namespace WindowsFormsApp1
             // 
             // textBox17
             // 
-            this.textBox17.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox17.Location = new System.Drawing.Point(20, 32);
             this.textBox17.Name = "textBox17";
@@ -1053,6 +1072,7 @@ namespace WindowsFormsApp1
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.label64);
             this.panel9.Controls.Add(this.dataGridView3);
             this.panel9.Controls.Add(this.label56);
             this.panel9.Controls.Add(this.label55);
@@ -1061,7 +1081,7 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.label44);
             this.panel9.Location = new System.Drawing.Point(135, 18);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1108, 281);
+            this.panel9.Size = new System.Drawing.Size(1108, 316);
             this.panel9.TabIndex = 0;
             // 
             // dataGridView3
@@ -1069,6 +1089,7 @@ namespace WindowsFormsApp1
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.emailAddressDataGridViewTextBoxColumn,
@@ -1081,7 +1102,16 @@ namespace WindowsFormsApp1
             this.cityDataGridViewTextBoxColumn,
             this.postalCodeDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.customer1BindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(95, 98);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.Location = new System.Drawing.Point(95, 137);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(944, 164);
@@ -1161,7 +1191,7 @@ namespace WindowsFormsApp1
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Lime;
-            this.label56.Location = new System.Drawing.Point(393, 12);
+            this.label56.Location = new System.Drawing.Point(389, 50);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(273, 24);
             this.label56.TabIndex = 60;
@@ -1173,7 +1203,7 @@ namespace WindowsFormsApp1
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Red;
-            this.label55.Location = new System.Drawing.Point(398, 12);
+            this.label55.Location = new System.Drawing.Point(398, 50);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(243, 24);
             this.label55.TabIndex = 59;
@@ -1183,18 +1213,18 @@ namespace WindowsFormsApp1
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(3, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(116, 20);
+            this.label54.Size = new System.Drawing.Size(148, 20);
             this.label54.TabIndex = 58;
             this.label54.Text = "Search Customer";
             // 
             // textBox18
             // 
-            this.textBox18.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(263, 63);
+            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.Location = new System.Drawing.Point(263, 102);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
             this.textBox18.TabIndex = 6;
@@ -1203,19 +1233,21 @@ namespace WindowsFormsApp1
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label44.Location = new System.Drawing.Point(226, 36);
+            this.label44.Location = new System.Drawing.Point(226, 74);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(669, 24);
+            this.label44.Size = new System.Drawing.Size(695, 25);
             this.label44.TabIndex = 5;
-            this.label44.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
+            this.label44.Text = "Enter Customer Email, Name, Surname, ID Number or Cell Phone";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.panel13);
+            this.tabPage2.Controls.Add(this.panel12);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.panel5);
             this.tabPage2.Controls.Add(this.label16);
@@ -1232,6 +1264,7 @@ namespace WindowsFormsApp1
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label65);
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label34);
             this.panel6.Controls.Add(this.label30);
@@ -1243,17 +1276,17 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.button10);
             this.panel6.Location = new System.Drawing.Point(157, 18);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1041, 289);
+            this.panel6.Size = new System.Drawing.Size(1041, 325);
             this.panel6.TabIndex = 55;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(3, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(161, 20);
+            this.label20.Size = new System.Drawing.Size(204, 20);
             this.label20.TabIndex = 57;
             this.label20.Text = "Search Customer Profile";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -1262,7 +1295,7 @@ namespace WindowsFormsApp1
             // 
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label34.Location = new System.Drawing.Point(850, 254);
+            this.label34.Location = new System.Drawing.Point(846, 296);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(34, 20);
             this.label34.TabIndex = 56;
@@ -1271,13 +1304,13 @@ namespace WindowsFormsApp1
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(287, 24);
+            this.label30.Location = new System.Drawing.Point(287, 66);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(455, 24);
+            this.label30.Size = new System.Drawing.Size(566, 25);
             this.label30.TabIndex = 49;
-            this.label30.Text = "Enter Customer Email/Name/Surname/ID No.\r\n";
+            this.label30.Text = "Enter Customer Email, Name, Surname or ID Number\r\n";
             // 
             // button12
             // 
@@ -1287,7 +1320,7 @@ namespace WindowsFormsApp1
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(887, 249);
+            this.button12.Location = new System.Drawing.Point(885, 292);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(118, 28);
             this.button12.TabIndex = 55;
@@ -1298,18 +1331,18 @@ namespace WindowsFormsApp1
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(369, 8);
+            this.label32.Location = new System.Drawing.Point(369, 50);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(301, 16);
+            this.label32.Size = new System.Drawing.Size(327, 16);
             this.label32.TabIndex = 53;
             this.label32.Text = "Input is incorrect Or Such profile does not exist";
             this.label32.Visible = false;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(239, 51);
+            this.textBox3.Location = new System.Drawing.Point(282, 93);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(558, 27);
             this.textBox3.TabIndex = 50;
@@ -1319,7 +1352,7 @@ namespace WindowsFormsApp1
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(54, 259);
+            this.label33.Location = new System.Drawing.Point(53, 292);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(140, 20);
             this.label33.TabIndex = 54;
@@ -1331,6 +1364,7 @@ namespace WindowsFormsApp1
             this.customerDataGridView.AllowUserToAddRows = false;
             this.customerDataGridView.AllowUserToDeleteRows = false;
             this.customerDataGridView.AutoGenerateColumns = false;
+            this.customerDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1343,7 +1377,16 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.customerDataGridView.DataSource = this.customerBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(57, 83);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customerDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.customerDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.customerDataGridView.Location = new System.Drawing.Point(57, 126);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.ReadOnly = true;
             this.customerDataGridView.Size = new System.Drawing.Size(946, 160);
@@ -1422,7 +1465,7 @@ namespace WindowsFormsApp1
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(726, 249);
+            this.button10.Location = new System.Drawing.Point(722, 292);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(118, 28);
             this.button10.TabIndex = 51;
@@ -1449,9 +1492,9 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(530, 313);
+            this.panel5.Location = new System.Drawing.Point(507, 349);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(323, 361);
+            this.panel5.Size = new System.Drawing.Size(346, 361);
             this.panel5.TabIndex = 48;
             // 
             // label63
@@ -1514,11 +1557,11 @@ namespace WindowsFormsApp1
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
             this.label24.Location = new System.Drawing.Point(72, 49);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(163, 16);
+            this.label24.Size = new System.Drawing.Size(185, 16);
             this.label24.TabIndex = 36;
             this.label24.Text = "Selected Date is INVALID";
             this.label24.Visible = false;
@@ -1665,7 +1708,7 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.dateTimePicker4);
             this.panel8.Controls.Add(this.label43);
             this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(529, 315);
+            this.panel8.Location = new System.Drawing.Point(556, 344);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(322, 369);
             this.panel8.TabIndex = 57;
@@ -1730,11 +1773,11 @@ namespace WindowsFormsApp1
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Red;
             this.label39.Location = new System.Drawing.Point(70, 44);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(163, 16);
+            this.label39.Size = new System.Drawing.Size(185, 16);
             this.label39.TabIndex = 36;
             this.label39.Text = "Selected Date is INVALID";
             this.label39.Visible = false;
@@ -1823,6 +1866,7 @@ namespace WindowsFormsApp1
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label70);
             this.panel7.Controls.Add(this.modifyBookingInnerDataGridView);
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.label31);
@@ -1834,7 +1878,7 @@ namespace WindowsFormsApp1
             this.panel7.Controls.Add(this.button13);
             this.panel7.Location = new System.Drawing.Point(72, 18);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1230, 291);
+            this.panel7.Size = new System.Drawing.Size(1230, 317);
             this.panel7.TabIndex = 56;
             // 
             // modifyBookingInnerDataGridView
@@ -1842,6 +1886,7 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerDataGridView.AllowUserToAddRows = false;
             this.modifyBookingInnerDataGridView.AllowUserToDeleteRows = false;
             this.modifyBookingInnerDataGridView.AutoGenerateColumns = false;
+            this.modifyBookingInnerDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.modifyBookingInnerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.modifyBookingInnerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.emailAddressDataGridViewTextBoxColumn1,
@@ -1856,7 +1901,16 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn3,
             this.amountDueDataGridViewTextBoxColumn3});
             this.modifyBookingInnerDataGridView.DataSource = this.modifyBookingInnerBindingSource;
-            this.modifyBookingInnerDataGridView.Location = new System.Drawing.Point(37, 85);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.modifyBookingInnerDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.modifyBookingInnerDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.modifyBookingInnerDataGridView.Location = new System.Drawing.Point(37, 115);
             this.modifyBookingInnerDataGridView.Name = "modifyBookingInnerDataGridView";
             this.modifyBookingInnerDataGridView.ReadOnly = true;
             this.modifyBookingInnerDataGridView.Size = new System.Drawing.Size(1151, 163);
@@ -1943,11 +1997,11 @@ namespace WindowsFormsApp1
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(3, -1);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(172, 20);
+            this.label29.Size = new System.Drawing.Size(218, 20);
             this.label29.TabIndex = 57;
             this.label29.Text = "Search Customer Booking";
             // 
@@ -1955,7 +2009,7 @@ namespace WindowsFormsApp1
             // 
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label31.Location = new System.Drawing.Point(1033, 259);
+            this.label31.Location = new System.Drawing.Point(1030, 288);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(34, 20);
             this.label31.TabIndex = 56;
@@ -1964,22 +2018,22 @@ namespace WindowsFormsApp1
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label35.Location = new System.Drawing.Point(328, 26);
+            this.label35.Location = new System.Drawing.Point(275, 54);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(585, 24);
+            this.label35.Size = new System.Drawing.Size(708, 25);
             this.label35.TabIndex = 49;
-            this.label35.Text = "Enter Customer Email/Name/Surname/ID No./Booking Ref";
+            this.label35.Text = "Enter Customer Email, Name, Surname, ID Number or Booking Ref";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(453, 10);
+            this.label37.Location = new System.Drawing.Point(468, 39);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(301, 16);
+            this.label37.Size = new System.Drawing.Size(327, 16);
             this.label37.TabIndex = 53;
             this.label37.Text = "Input is incorrect Or Such profile does not exist";
             this.label37.Visible = false;
@@ -1993,7 +2047,7 @@ namespace WindowsFormsApp1
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(1070, 254);
+            this.button11.Location = new System.Drawing.Point(1070, 284);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(118, 28);
             this.button11.TabIndex = 55;
@@ -2003,7 +2057,7 @@ namespace WindowsFormsApp1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(331, 53);
+            this.textBox4.Location = new System.Drawing.Point(359, 82);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(582, 27);
             this.textBox4.TabIndex = 50;
@@ -2013,7 +2067,7 @@ namespace WindowsFormsApp1
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(34, 264);
+            this.label36.Location = new System.Drawing.Point(33, 295);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(140, 20);
             this.label36.TabIndex = 54;
@@ -2029,7 +2083,7 @@ namespace WindowsFormsApp1
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(909, 254);
+            this.button13.Location = new System.Drawing.Point(909, 284);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(118, 28);
             this.button13.TabIndex = 51;
@@ -2041,11 +2095,11 @@ namespace WindowsFormsApp1
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(2, 54);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 20);
+            this.label17.Size = new System.Drawing.Size(65, 20);
             this.label17.TabIndex = 46;
             this.label17.Text = "Logout";
             // 
@@ -2112,7 +2166,7 @@ namespace WindowsFormsApp1
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(108, 244);
             this.button2.Name = "button2";
@@ -2125,21 +2179,21 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Cancel booking";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(365, 32);
+            this.label4.Location = new System.Drawing.Point(316, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 25);
+            this.label4.Size = new System.Drawing.Size(370, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Booking(s) successfully cancelled";
             this.label4.Visible = false;
@@ -2149,7 +2203,7 @@ namespace WindowsFormsApp1
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(757, 244);
             this.button1.Name = "button1";
@@ -2164,6 +2218,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn1,
@@ -2175,6 +2230,15 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn1,
             this.amountDueDataGridViewTextBoxColumn2});
             this.dataGridView1.DataSource = this.bookingInnerBindingSource1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(108, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -2241,6 +2305,7 @@ namespace WindowsFormsApp1
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label71);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label62);
             this.panel2.Controls.Add(this.label14);
@@ -2257,22 +2322,22 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(182, 45);
+            this.label2.Location = new System.Drawing.Point(182, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(730, 22);
+            this.label2.Size = new System.Drawing.Size(747, 24);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Enter Booking ref, customer Email , Name , Surname, ID Number or Cell Phone";
+            this.label2.Text = "Enter Booking Ref, Customer Email, Name, Surname, ID Number or Cell Phone";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Red;
-            this.label62.Location = new System.Drawing.Point(380, 21);
+            this.label62.Location = new System.Drawing.Point(380, 34);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(290, 24);
+            this.label62.Size = new System.Drawing.Size(230, 20);
             this.label62.TabIndex = 8;
             this.label62.Text = "Booking has been refunded";
             this.label62.Visible = false;
@@ -2280,11 +2345,11 @@ namespace WindowsFormsApp1
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(380, 21);
+            this.label14.Location = new System.Drawing.Point(397, 34);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 24);
+            this.label14.Size = new System.Drawing.Size(184, 20);
             this.label14.TabIndex = 6;
             this.label14.Text = "Booking is incomplete";
             this.label14.Visible = false;
@@ -2292,11 +2357,11 @@ namespace WindowsFormsApp1
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(380, 21);
+            this.label13.Location = new System.Drawing.Point(380, 34);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(298, 24);
+            this.label13.Size = new System.Drawing.Size(236, 20);
             this.label13.TabIndex = 5;
             this.label13.Text = "Booking is already cancelled";
             this.label13.Visible = false;
@@ -2304,29 +2369,29 @@ namespace WindowsFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 20);
+            this.label6.Size = new System.Drawing.Size(182, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Search for booking(s)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(380, 21);
+            this.label5.Location = new System.Drawing.Point(397, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(224, 24);
+            this.label5.Size = new System.Drawing.Size(180, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Row is already added";
             this.label5.Visible = false;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(242, 70);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(244, 81);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(601, 29);
             this.textBox1.TabIndex = 2;
@@ -2337,6 +2402,15 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
             this.bookingInnerDGV.AutoGenerateColumns = false;
+            this.bookingInnerDGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookingInnerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -2348,8 +2422,16 @@ namespace WindowsFormsApp1
             this.bookingStatusDataGridViewTextBoxColumn,
             this.amountDueDataGridViewTextBoxColumn1});
             this.bookingInnerDGV.DataSource = this.bookingInnerBindingSource;
-            this.bookingInnerDGV.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.bookingInnerDGV.Location = new System.Drawing.Point(108, 105);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bookingInnerDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bookingInnerDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bookingInnerDGV.Location = new System.Drawing.Point(108, 116);
             this.bookingInnerDGV.Name = "bookingInnerDGV";
             this.bookingInnerDGV.ReadOnly = true;
             this.bookingInnerDGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2446,11 +2528,11 @@ namespace WindowsFormsApp1
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(3, 53);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 20);
+            this.label19.Size = new System.Drawing.Size(65, 20);
             this.label19.TabIndex = 46;
             this.label19.Text = "Logout";
             // 
@@ -2458,9 +2540,9 @@ namespace WindowsFormsApp1
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label72);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
             this.panel4.Location = new System.Drawing.Point(122, 18);
             this.panel4.Name = "panel4";
@@ -2470,32 +2552,22 @@ namespace WindowsFormsApp1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label11.Location = new System.Drawing.Point(194, 38);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(730, 22);
+            this.label11.Size = new System.Drawing.Size(747, 24);
             this.label11.TabIndex = 6;
-            this.label11.Text = "Enter Booking ref, customer Email , Name , Surname, ID Number or Cell Phone";
+            this.label11.Text = "Enter Booking Ref, Customer Email, Name, Surname, ID Number or Cell Phone";
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(262, 63);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(605, 29);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "View booking(s)";
             // 
             // dataGridView2
             // 
@@ -2503,6 +2575,14 @@ namespace WindowsFormsApp1
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.AutoGenerateColumns = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn2,
@@ -2659,6 +2739,116 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(329, 13);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(380, 37);
+            this.label64.TabIndex = 62;
+            this.label64.Text = "Update Customer Detail";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(392, 17);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(240, 33);
+            this.label65.TabIndex = 58;
+            this.label65.Text = "Make A Booking";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.label68);
+            this.panel12.Controls.Add(this.label66);
+            this.panel12.Location = new System.Drawing.Point(161, 349);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(340, 126);
+            this.panel12.TabIndex = 56;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.label69);
+            this.panel13.Controls.Add(this.label67);
+            this.panel13.Location = new System.Drawing.Point(859, 350);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(339, 125);
+            this.panel13.TabIndex = 57;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(4, 4);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(125, 20);
+            this.label66.TabIndex = 0;
+            this.label66.Text = "Single Rooms:";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(3, 3);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(132, 20);
+            this.label67.TabIndex = 0;
+            this.label67.Text = "Double Rooms:";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(61, 57);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(183, 29);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "R350 per night";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(68, 56);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(183, 29);
+            this.label69.TabIndex = 1;
+            this.label69.Text = "R500 per night";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(448, 6);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(357, 33);
+            this.label70.TabIndex = 58;
+            this.label70.Text = "Modify Customer Details";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(419, 3);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(197, 29);
+            this.label71.TabIndex = 10;
+            this.label71.Text = "Cancel Booking";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Location = new System.Drawing.Point(478, 9);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(204, 29);
+            this.label72.TabIndex = 7;
+            this.label72.Text = "View Booking(s)";
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2725,6 +2915,10 @@ namespace WindowsFormsApp1
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2746,7 +2940,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn2;
@@ -2950,5 +3143,16 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
     }
 }
