@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label21.Location = new System.Drawing.Point(309, 317);
+            this.label21.Location = new System.Drawing.Point(303, 317);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 16);
             this.label21.TabIndex = 20;
