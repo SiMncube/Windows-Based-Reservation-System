@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(50, 53);
+            this.label6.Location = new System.Drawing.Point(38, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(212, 24);
             this.label6.TabIndex = 0;
