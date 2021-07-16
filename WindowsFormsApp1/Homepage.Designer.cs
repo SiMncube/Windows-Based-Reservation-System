@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
             // picturesToolStripMenuItem
             // 
             this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
-            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.picturesToolStripMenuItem.Text = "Pictures";
             this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
             // 
@@ -168,22 +168,22 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(548, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 18);
+            this.label2.Size = new System.Drawing.Size(228, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Safe . Dependable . Affordable";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(433, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(483, 61);
+            this.label7.Size = new System.Drawing.Size(443, 61);
             this.label7.TabIndex = 17;
             this.label7.Text = "The Cottage BnB";
             // 
@@ -208,11 +208,11 @@ namespace WindowsFormsApp1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(480, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(414, 18);
+            this.label4.Size = new System.Drawing.Size(359, 20);
             this.label4.TabIndex = 41;
             this.label4.Text = "Copyright 2014 | All rights reserved | Privacy policy";
             // 
@@ -224,7 +224,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 0;
             // 
-            // Form8
+            // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,7 +235,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form8";
+            this.Name = "Homepage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form8_Load);
             this.menuStrip1.ResumeLayout(false);

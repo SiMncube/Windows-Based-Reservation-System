@@ -245,10 +245,10 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(48, 231);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 7;
             this.label9.Text = "label9";
             // 
@@ -369,11 +369,11 @@ namespace WindowsFormsApp1
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(548, 66);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(250, 18);
+            this.label23.Size = new System.Drawing.Size(228, 20);
             this.label23.TabIndex = 18;
             this.label23.Text = "Safe . Dependable . Affordable";
             // 
@@ -394,11 +394,11 @@ namespace WindowsFormsApp1
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label24.Location = new System.Drawing.Point(431, 5);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(483, 61);
+            this.label24.Size = new System.Drawing.Size(443, 61);
             this.label24.TabIndex = 17;
             this.label24.Text = "The Cottage BnB";
             // 
@@ -423,11 +423,11 @@ namespace WindowsFormsApp1
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(452, 10);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(414, 18);
+            this.label26.Size = new System.Drawing.Size(359, 20);
             this.label26.TabIndex = 41;
             this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
             // 
@@ -439,7 +439,7 @@ namespace WindowsFormsApp1
             this.label27.Size = new System.Drawing.Size(0, 13);
             this.label27.TabIndex = 0;
             // 
-            // invoiceForm
+            // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -448,7 +448,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "invoiceForm";
+            this.Name = "InvoiceForm";
             this.Text = "Invoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.invoiceForm_Load);

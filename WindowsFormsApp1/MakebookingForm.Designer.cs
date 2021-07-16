@@ -61,12 +61,15 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookedRoomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bookingSummaryBindingSource
@@ -148,12 +151,12 @@ namespace WindowsFormsApp1
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(3, 0);
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(60, 11);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(125, 16);
+            this.label63.Size = new System.Drawing.Size(202, 29);
             this.label63.TabIndex = 60;
-            this.label63.Text = "Make A Booking:";
+            this.label63.Text = "Make A Booking";
             // 
             // textBox5
             // 
@@ -208,11 +211,11 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(82, 49);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 16);
+            this.label7.Size = new System.Drawing.Size(185, 16);
             this.label7.TabIndex = 36;
             this.label7.Text = "Selected Date is INVALID";
             this.label7.Visible = false;
@@ -347,22 +350,22 @@ namespace WindowsFormsApp1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(567, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 18);
+            this.label5.Size = new System.Drawing.Size(228, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "Safe . Dependable . Affordable";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Location = new System.Drawing.Point(450, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(483, 61);
+            this.label8.Size = new System.Drawing.Size(443, 61);
             this.label8.TabIndex = 17;
             this.label8.Text = "The Cottage BnB";
             // 
@@ -374,7 +377,27 @@ namespace WindowsFormsApp1
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 0;
             // 
-            // Form5
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Location = new System.Drawing.Point(-1, 632);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1362, 38);
+            this.panel3.TabIndex = 48;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(528, 9);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(359, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
+            // 
+            // MakebookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -383,9 +406,10 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_28__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 682);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form5";
+            this.Name = "MakebookingForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).EndInit();
@@ -396,6 +420,8 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -432,5 +458,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label26;
     }
 }

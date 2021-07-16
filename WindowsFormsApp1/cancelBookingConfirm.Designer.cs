@@ -259,10 +259,10 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(48, 231);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 7;
             this.label9.Text = "label9";
             // 
@@ -382,7 +382,7 @@ namespace WindowsFormsApp1
             // 
             this.customerTa.ClearBeforeFill = true;
             // 
-            // cancelBookingConfirm
+            // CancelbookingConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,7 +393,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "cancelBookingConfirm";
+            this.Name = "CancelbookingConfirm";
             this.ShowIcon = false;
             this.Text = "Form4";
             this.panel1.ResumeLayout(false);

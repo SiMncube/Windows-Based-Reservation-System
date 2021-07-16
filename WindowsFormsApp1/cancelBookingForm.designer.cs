@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingSummaryBindingSource)).BeginInit();
@@ -151,15 +152,16 @@ namespace WindowsFormsApp1
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(494, 168);
+            this.panel2.Location = new System.Drawing.Point(494, 133);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 101);
+            this.panel2.Size = new System.Drawing.Size(362, 136);
             this.panel2.TabIndex = 28;
             // 
             // label6
@@ -167,7 +169,7 @@ namespace WindowsFormsApp1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(50, 53);
+            this.label6.Location = new System.Drawing.Point(87, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(201, 25);
             this.label6.TabIndex = 0;
@@ -179,7 +181,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label8.Location = new System.Drawing.Point(51, 53);
+            this.label8.Location = new System.Drawing.Point(51, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(237, 25);
             this.label8.TabIndex = 8;
@@ -191,7 +193,7 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label7.Location = new System.Drawing.Point(36, 53);
+            this.label7.Location = new System.Drawing.Point(38, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(295, 25);
             this.label7.TabIndex = 6;
@@ -203,7 +205,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label5.Location = new System.Drawing.Point(11, 53);
+            this.label5.Location = new System.Drawing.Point(18, 95);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(315, 25);
             this.label5.TabIndex = 7;
@@ -215,7 +217,7 @@ namespace WindowsFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(52, 54);
+            this.label4.Location = new System.Drawing.Point(52, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 24);
             this.label4.TabIndex = 4;
@@ -335,11 +337,11 @@ namespace WindowsFormsApp1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(488, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(414, 18);
+            this.label12.Size = new System.Drawing.Size(359, 20);
             this.label12.TabIndex = 41;
             this.label12.Text = "Copyright 2014 | All rights reserved | Privacy policy";
             // 
@@ -350,6 +352,17 @@ namespace WindowsFormsApp1
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(85, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(197, 29);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Cancel Booking";
             // 
             // CancelbookingForm
             // 
@@ -411,5 +424,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

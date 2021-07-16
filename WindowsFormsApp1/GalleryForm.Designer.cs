@@ -41,8 +41,11 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -91,11 +94,11 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(548, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 18);
+            this.label2.Size = new System.Drawing.Size(228, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Safe . Dependable . Affordable";
             // 
@@ -116,11 +119,11 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(431, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(483, 61);
+            this.label7.Size = new System.Drawing.Size(443, 61);
             this.label7.TabIndex = 17;
             this.label7.Text = "The Cottage BnB";
             // 
@@ -132,20 +135,43 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 0;
             // 
-            // Form3
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Location = new System.Drawing.Point(0, 613);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1384, 41);
+            this.panel1.TabIndex = 43;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(484, 6);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(359, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
+            // 
+            // GalleryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 648);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form3";
+            this.Name = "GalleryForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +187,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label26;
     }
 }

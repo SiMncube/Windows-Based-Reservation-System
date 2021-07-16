@@ -51,11 +51,14 @@ namespace WindowsFormsApp1
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -280,11 +283,11 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(143, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1111, 56);
+            this.label7.Size = new System.Drawing.Size(1013, 54);
             this.label7.TabIndex = 17;
             this.label7.Text = "Welcome to the Cottage BnB Booking System";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -310,16 +313,37 @@ namespace WindowsFormsApp1
             // 
             this.staffTa.ClearBeforeFill = true;
             // 
-            // Form1
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Location = new System.Drawing.Point(-3, 711);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1382, 46);
+            this.panel3.TabIndex = 17;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(512, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(359, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_08_53_30;
             this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form10";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form10_Load);
@@ -330,6 +354,8 @@ namespace WindowsFormsApp1
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +384,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button5;
         private fullDatabaseTableAdapters.StaffTableAdapter staffTa;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label26;
     }
 }
