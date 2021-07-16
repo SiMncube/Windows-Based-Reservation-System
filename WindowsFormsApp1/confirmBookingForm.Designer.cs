@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(304, 281);
+            this.label19.Location = new System.Drawing.Point(300, 281);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(93, 16);
             this.label19.TabIndex = 18;
