@@ -50,20 +50,22 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -72,6 +74,8 @@ namespace WindowsFormsApp1
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -142,7 +146,7 @@ namespace WindowsFormsApp1
             // picturesToolStripMenuItem
             // 
             this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
-            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
             this.picturesToolStripMenuItem.Text = "Pictures";
             this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
             // 
@@ -256,15 +260,49 @@ namespace WindowsFormsApp1
             this.panel1.TabIndex = 44;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label3
+            // label15
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "The College is a BnB in Glenwood, Durban.";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 82);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(726, 16);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Each room fitted with TV and DSTV | Tea and Coffee Station | Heater | Fan | Free " +
+    "Wifi | Laundry Service | Excellent Security";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(17, 54);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(439, 16);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "couples and individuals that are visiting Durban for business or pleasure. ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(17, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(971, 16);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "rooms, each with en suite shower suitable for colleagues who need to work or 2 co" +
+    "uples. And 7 unique single rooms each with its own king sized bed, great option " +
+    "for";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(275, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(703, 16);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "We are a small, persoal, elegant and accomodating. There are 15 beautiful rooms t" +
+    "o choose from. There are 8 double";
             // 
             // label8
             // 
@@ -276,15 +314,37 @@ namespace WindowsFormsApp1
             this.label8.TabIndex = 1;
             this.label8.Text = "About Us:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "The College is a BnB in Glenwood, Durban.";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Location = new System.Drawing.Point(1009, 588);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(349, 116);
             this.panel4.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(136, 86);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(192, 16);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "TheCottageGroup@gmail.com";
             // 
             // label9
             // 
@@ -300,106 +360,76 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(50, 31);
+            this.label10.Location = new System.Drawing.Point(136, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 16);
+            this.label10.Size = new System.Drawing.Size(78, 16);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Telephone: 0684578956";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(50, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(232, 16);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Email: TheCottageGroup@gmail.com";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(275, 22);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(703, 16);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "We are a small, persoal, elegant and accomodating. There are 15 beautiful rooms t" +
-    "o choose from. There are 8 double";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(971, 16);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "rooms, each with en suite shower suitable for colleagues who need to work or 2 co" +
-    "uples. And 7 unique single rooms each with its own king sized bed, great option " +
-    "for";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(17, 54);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(439, 16);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "couples and individuals that are visiting Durban for business or pleasure. ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(14, 82);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(726, 16);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Each room fitted with TV and DSTV | Tea and Coffee Station | Heater | Fan | Free " +
-    "Wifi | Laundry Service | Excellent Security";
+            this.label10.Text = "0684578956";
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Location = new System.Drawing.Point(12, 137);
+            this.panel5.Location = new System.Drawing.Point(516, 143);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(265, 102);
+            this.panel5.Size = new System.Drawing.Size(336, 120);
             this.panel5.TabIndex = 46;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label18.Location = new System.Drawing.Point(17, 75);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(316, 25);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Double Room at R500 per Night";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label17.Location = new System.Drawing.Point(17, 39);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(308, 25);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Single Room at R350 per Night";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label16.Location = new System.Drawing.Point(3, 9);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 18);
+            this.label16.Size = new System.Drawing.Size(61, 18);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Price:";
+            this.label16.Text = "Prices:";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // label17
+            // pictureBox1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(23, 36);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(229, 20);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Single Room at R350 per Night";
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.email;
+            this.pictureBox1.Location = new System.Drawing.Point(101, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
             // 
-            // label18
+            // pictureBox2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(16, 69);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(236, 20);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Double Room at R500 per Night";
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.phone;
+            this.pictureBox2.Location = new System.Drawing.Point(101, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
             // 
             // Homepage
             // 
@@ -432,6 +462,8 @@ namespace WindowsFormsApp1
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,5 +505,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -289,10 +289,13 @@
     <None Include="Resources\icons8-visa-64.png" />
     <None Include="Resources\icons8-mastercard-64.png" />
     <None Include="Resources\back.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\Location.jpg" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
     <None Include="Resources\photo-1448697138198-9aa6d0d84bf41.jpg" />
+    <None Include="Resources\phone.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
