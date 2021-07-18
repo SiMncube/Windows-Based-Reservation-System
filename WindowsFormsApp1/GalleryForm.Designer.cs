@@ -43,16 +43,27 @@ namespace WindowsFormsApp1
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.nextBTN = new System.Windows.Forms.Button();
+            this.backBTN = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "doubleroom_564885484_1000.jpg");
+            this.imageList1.Images.SetKeyName(1, "double-room5d2c6a6754bd1.jpg");
+            this.imageList1.Images.SetKeyName(2, "download.jpg");
+            this.imageList1.Images.SetKeyName(3, "superior-double-room-4.jpg");
+            this.imageList1.Images.SetKeyName(4, "unnamed.jpg");
             // 
             // fullDatabase1
             // 
@@ -155,6 +166,60 @@ namespace WindowsFormsApp1
             this.label26.TabIndex = 42;
             this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.nextBTN);
+            this.panel3.Controls.Add(this.backBTN);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(60, 159);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1249, 448);
+            this.panel3.TabIndex = 44;
+            // 
+            // nextBTN
+            // 
+            this.nextBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBTN.Location = new System.Drawing.Point(1139, 184);
+            this.nextBTN.Name = "nextBTN";
+            this.nextBTN.Size = new System.Drawing.Size(107, 66);
+            this.nextBTN.TabIndex = 3;
+            this.nextBTN.Text = ">";
+            this.nextBTN.UseVisualStyleBackColor = true;
+            this.nextBTN.Click += new System.EventHandler(this.nextBTN_Click);
+            // 
+            // backBTN
+            // 
+            this.backBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBTN.Location = new System.Drawing.Point(3, 184);
+            this.backBTN.Name = "backBTN";
+            this.backBTN.Size = new System.Drawing.Size(120, 66);
+            this.backBTN.TabIndex = 2;
+            this.backBTN.Text = "<";
+            this.backBTN.UseVisualStyleBackColor = true;
+            this.backBTN.Click += new System.EventHandler(this.backBTN_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.double_room5d2c6a6754bd1;
+            this.pictureBox1.Location = new System.Drawing.Point(129, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1004, 379);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(515, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Photo Gallery";
+            // 
             // GalleryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +227,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 648);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "GalleryForm";
@@ -172,6 +238,9 @@ namespace WindowsFormsApp1
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,5 +258,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button nextBTN;
+        private System.Windows.Forms.Button backBTN;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

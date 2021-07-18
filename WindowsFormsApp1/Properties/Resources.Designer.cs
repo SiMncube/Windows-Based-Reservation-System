@@ -73,6 +73,36 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap double_room5d2c6a6754bd1 {
+            get {
+                object obj = ResourceManager.GetObject("double_room5d2c6a6754bd1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doubleroom_564885484_1000 {
+            get {
+                object obj = ResourceManager.GetObject("doubleroom_564885484_1000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email {
             get {
                 object obj = ResourceManager.GetObject("email", resourceCulture);
@@ -283,19 +313,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_1448697138198_9aa6d0d84bf4 {
+        internal static System.Drawing.Bitmap superior_double_room_4 {
             get {
-                object obj = ResourceManager.GetObject("photo-1448697138198-9aa6d0d84bf4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stack_clean_towels_bathrobe_table_73344_6251 {
-            get {
-                object obj = ResourceManager.GetObject("stack-clean-towels-bathrobe-table_73344-6251", resourceCulture);
+                object obj = ResourceManager.GetObject("superior_double_room_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +333,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WALLPAPER {
+        internal static System.Drawing.Bitmap unnamed {
             get {
-                object obj = ResourceManager.GetObject("WALLPAPER", resourceCulture);
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

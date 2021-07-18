@@ -12,10 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class GalleryForm : Form
     {
+        int count = 1;
+
         public GalleryForm()
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDatabase1.Customer);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,41 +50,67 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginForm f = new LoginForm();
+            Homepage f = new Homepage();
             this.Hide();
             f.ShowDialog();
             this.Close();
         }
 
-        /* private void pictureBox1_Click(object sender, EventArgs e)
+        private void nextBTN_Click(object sender, EventArgs e)
+        {
+                if (count > 0)
+                {
+                    count--;
+                }
+                else
+                {
+                    count = 1;
+                }
+            changeImage(count);
+
+
+        }
+
+        private void backBTN_Click(object sender, EventArgs e)
+        {
+            
+                if (count < 5)
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 5;
+                }
+            changeImage(count);
+        }
+
+        private void changeImage(int num)
+
+        {
+            switch(num)
             {
-            this.Close();
-            }
-            private void pictureBox2_Click_1(object sender, EventArgs e)
-            {
-            if (count > 0)
-            {
-            count--;
-            }
-            else
-            {
-            count = 6;
-            }
-            pictureBox4.Image = imageList1.Images[count];
+                case 1:
+                    pictureBox1.Image = Properties.Resources.doubleroom_564885484_1000;
+                    break;
+                case 2:
+                    pictureBox1.Image = Properties.Resources.double_room5d2c6a6754bd1;
+                    break;
+                case 3:
+                    pictureBox1.Image = Properties.Resources.download;
+                    break;
+                case 4:
+                    pictureBox1.Image = Properties.Resources.superior_double_room_4;
+                    break;
+                case 5:
+                    pictureBox1.Image = Properties.Resources.unnamed;
+                    break;
+
             }
 
-            private void pictureBox3_Click(object sender, EventArgs e)
-            {
-            if(count < 6)
-            {
-            count++;
-            }
-            else
-            {
-            count = 0;
-            }
-            pictureBox4.Image = imageList1.Images[count];
-            }
-        */
+
+        }
+
+       
     }
 }

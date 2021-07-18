@@ -58,14 +58,15 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -73,9 +74,9 @@ namespace WindowsFormsApp1
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -346,6 +347,26 @@ namespace WindowsFormsApp1
             this.label11.TabIndex = 2;
             this.label11.Text = "TheCottageGroup@gmail.com";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.email;
+            this.pictureBox1.Location = new System.Drawing.Point(101, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.phone;
+            this.pictureBox2.Location = new System.Drawing.Point(101, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -369,67 +390,59 @@ namespace WindowsFormsApp1
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Location = new System.Drawing.Point(516, 143);
+            this.panel5.Location = new System.Drawing.Point(1000, 192);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(336, 120);
+            this.panel5.Size = new System.Drawing.Size(358, 138);
             this.panel5.TabIndex = 46;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label18.Location = new System.Drawing.Point(17, 75);
+            this.label18.Location = new System.Drawing.Point(3, 100);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(316, 25);
+            this.label18.Size = new System.Drawing.Size(354, 29);
             this.label18.TabIndex = 2;
             this.label18.Text = "Double Room at R500 per Night";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(17, 39);
+            this.label17.Location = new System.Drawing.Point(10, 33);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(308, 25);
+            this.label17.Size = new System.Drawing.Size(345, 29);
             this.label17.TabIndex = 1;
             this.label17.Text = "Single Room at R350 per Night";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label16.Location = new System.Drawing.Point(3, 9);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 18);
+            this.label16.Size = new System.Drawing.Size(146, 24);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Prices:";
+            this.label16.Text = "Great Prices at";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // pictureBox1
+            // label19
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.email;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.phone;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label19.Location = new System.Drawing.Point(174, 73);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "And";
             // 
             // Homepage
             // 
@@ -460,10 +473,10 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,5 +520,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label19;
     }
 }
