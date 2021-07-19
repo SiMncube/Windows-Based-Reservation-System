@@ -58,14 +58,13 @@ namespace WindowsFormsApp1
 
         private void nextBTN_Click(object sender, EventArgs e)
         {
-                if (count > 0)
-                {
-                    count--;
-                }
-                else
-                {
-                    count = 1;
-                }
+            count++;
+            
+            if (count > 5)
+            {
+                count = 1;
+            }
+               
             changeImage(count);
 
 
@@ -73,15 +72,13 @@ namespace WindowsFormsApp1
 
         private void backBTN_Click(object sender, EventArgs e)
         {
-            
-                if (count < 5)
-                {
-                    count++;
-                }
-                else
-                {
-                    count = 5;
-                }
+            count--;
+
+            if (count < 1)
+            {
+                count = 5;
+            }
+           
             changeImage(count);
         }
 
