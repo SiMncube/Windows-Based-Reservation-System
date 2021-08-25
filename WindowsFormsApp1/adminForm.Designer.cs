@@ -412,11 +412,11 @@ namespace WindowsFormsApp1
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(287, 24);
+            this.label30.Location = new System.Drawing.Point(269, 24);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(455, 24);
+            this.label30.Size = new System.Drawing.Size(500, 24);
             this.label30.TabIndex = 49;
-            this.label30.Text = "Enter Customer Email/Name/Surname/ID No.\r\n";
+            this.label30.Text = "Enter Customer Email, Name, Surname, or ID No.\r\n";
             // 
             // button12
             // 
