@@ -1346,5 +1346,13 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PaymentReport one = new PaymentReport();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
