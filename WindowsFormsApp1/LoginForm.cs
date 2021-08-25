@@ -31,14 +31,7 @@ namespace WindowsFormsApp1
                     homePage.ShowDialog();
                     this.Close();
                 }
-                if(adminNameIsCorrect() && adminPasswordIsCorrect())
-                {
-                    adminForm a = new adminForm();
-                    this.Hide();
-                    a.ShowDialog();
-                    this.Close();
-                }
-                if(managerNameIsCorrect() && managerNameIsCorrect())
+                if(staffNameIsCorrect() && staffPasswordIsCorrect())
                 {
                     adminForm a = new adminForm();
                     this.Hide();
@@ -71,11 +64,11 @@ namespace WindowsFormsApp1
                 label9.Visible = true;
             return false;
         }
-        private bool adminNameIsCorrect()
+        private bool staffNameIsCorrect()
         {
             for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
             {
-                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Admin")
+                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) )
                 {
                     currentUser.setEmailID(fullDs.Staff[i].emailID);
 
@@ -85,38 +78,14 @@ namespace WindowsFormsApp1
             label8.Visible = true;
             return false;
         }
-        private bool adminPasswordIsCorrect()
+        private bool staffPasswordIsCorrect()
         {
             for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
             {
                 if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
                     return true;
             }
-            if (adminNameIsCorrect())
-                label9.Visible = true;
-            return false;
-        }
-        private bool managerNameIsCorrect()
-        {
-            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
-            {
-                if (fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase) && fullDs.Staff[i].staffType == "Manager")
-                {
-                    currentUser.setEmailID(fullDs.Staff[i].emailID);
-                    return true;
-                }
-            }
-            label8.Visible = true;
-            return false;
-        }
-        private bool managerPasswordIsCorrect()
-        {
-            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
-            {
-                if (fullDs.Staff[i].password == textBox2.Text && fullDs.Staff[i].emailID.Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
-                    return true;
-            }
-            if (managerNameIsCorrect())
+            if (staffNameIsCorrect())
                 label9.Visible = true;
             return false;
         }
@@ -124,9 +93,7 @@ namespace WindowsFormsApp1
         {
             if (userNameIsCorrect() && userPasswordIsCorrect())
                 return true;
-            if (adminNameIsCorrect() && adminPasswordIsCorrect())
-                return true;
-            if (managerNameIsCorrect() && managerNameIsCorrect())
+            if (staffNameIsCorrect() && staffPasswordIsCorrect())
                 return true;
             return false;
         }
@@ -195,18 +162,11 @@ namespace WindowsFormsApp1
                         homePage.ShowDialog();
                         this.Close();
                     }
-                    else if (adminNameIsCorrect() && adminPasswordIsCorrect())
+                    else if (staffNameIsCorrect() && staffPasswordIsCorrect())
                     {
                         adminForm a = new adminForm();
                        // this.Hide();
                         a.ShowDialog();
-                        this.Close();
-                    }
-                    else if (managerNameIsCorrect() && managerNameIsCorrect())
-                    {
-                        ManagerForm m = new ManagerForm();
-                     //   this.Hide();
-                        m.ShowDialog();
                         this.Close();
                     }
                 }
