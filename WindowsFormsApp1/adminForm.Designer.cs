@@ -371,7 +371,7 @@ namespace WindowsFormsApp1
             this.button9.BackColor = System.Drawing.Color.White;
             this.button9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(648, 267);
+            this.button9.Location = new System.Drawing.Point(545, 273);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(224, 102);
             this.button9.TabIndex = 2;
@@ -2707,7 +2707,7 @@ namespace WindowsFormsApp1
             this.button15.BackColor = System.Drawing.Color.White;
             this.button15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Location = new System.Drawing.Point(634, 272);
+            this.button15.Location = new System.Drawing.Point(547, 271);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(226, 101);
             this.button15.TabIndex = 2;
