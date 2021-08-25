@@ -82,7 +82,6 @@ namespace WindowsFormsApp1
             this.label59 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label60 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -255,6 +254,7 @@ namespace WindowsFormsApp1
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button15 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -335,11 +335,11 @@ namespace WindowsFormsApp1
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -773,8 +773,8 @@ namespace WindowsFormsApp1
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.Controls.Add(this.panel11);
-            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -850,18 +850,6 @@ namespace WindowsFormsApp1
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(0, 20);
             this.label60.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label12.Location = new System.Drawing.Point(1015, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 15);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Currently logged in Admin : ";
             // 
             // panel1
             // 
@@ -2713,6 +2701,18 @@ namespace WindowsFormsApp1
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label12.Location = new System.Drawing.Point(1015, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(198, 15);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Currently logged in Admin : ";
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2870,7 +2870,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
@@ -3010,5 +3009,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label12;
     }
 }
