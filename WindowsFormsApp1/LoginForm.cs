@@ -40,9 +40,9 @@ namespace WindowsFormsApp1
                 }
                 if(managerNameIsCorrect() && managerNameIsCorrect())
                 {
-                    ManagerForm m = new ManagerForm();
+                    adminForm a = new adminForm();
                     this.Hide();
-                    m.ShowDialog();
+                    a.ShowDialog();
                     this.Close();
                 }
             }

@@ -41,8 +41,11 @@ namespace WindowsFormsApp1
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
                     admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
-                    tabControl1.TabPages.RemoveAt(6);
-                    tabControl1.TabPages.RemoveAt(6);
+                    if(fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        tabControl1.TabPages.RemoveAt(6);
+                        tabControl1.TabPages.RemoveAt(6);
+                    }       
                     break;
                 }
             }
