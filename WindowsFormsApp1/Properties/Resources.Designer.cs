@@ -303,6 +303,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_1859962 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_1859962", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stack_clean_towels_bathrobe_table_73344_6251 {
             get {
                 object obj = ResourceManager.GetObject("stack-clean-towels-bathrobe-table_73344-6251", resourceCulture);
