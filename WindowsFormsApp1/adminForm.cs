@@ -1338,5 +1338,13 @@ namespace WindowsFormsApp1
         {
             customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
         }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingReport one = new BookingReport();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
