@@ -414,9 +414,9 @@ namespace WindowsFormsApp1
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label30.Location = new System.Drawing.Point(269, 24);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(500, 24);
+            this.label30.Size = new System.Drawing.Size(488, 24);
             this.label30.TabIndex = 49;
-            this.label30.Text = "Enter Customer Email, Name, Surname, or ID No.\r\n";
+            this.label30.Text = "Enter Customer Email, Name, Surnam, or ID No.\r\n";
             // 
             // button12
             // 
@@ -1962,11 +1962,11 @@ namespace WindowsFormsApp1
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label35.Location = new System.Drawing.Point(328, 26);
+            this.label35.Location = new System.Drawing.Point(301, 26);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(585, 24);
+            this.label35.Size = new System.Drawing.Size(630, 24);
             this.label35.TabIndex = 49;
-            this.label35.Text = "Enter Customer Email/Name/Surname/ID No./Booking Ref";
+            this.label35.Text = "Enter Customer Email, Name, Surname, ID No. or Booking Ref";
             // 
             // label37
             // 
