@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
 
         private void changeImage(int num)
 
-        {
+        {/*
             switch(num)
             {
                 case 1:
@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
                     pictureBox1.Image = Properties.Resources.unnamed;
                     break;
 
-            }
+            }*/
 
 
         }

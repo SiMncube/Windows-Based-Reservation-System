@@ -202,7 +202,6 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.double_room5d2c6a6754bd1;
             this.pictureBox1.Location = new System.Drawing.Point(129, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1004, 379);
