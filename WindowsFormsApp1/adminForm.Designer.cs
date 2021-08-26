@@ -60,6 +60,13 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button10 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -255,13 +262,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -606,6 +606,82 @@ namespace WindowsFormsApp1
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 344);
             this.panel5.TabIndex = 48;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label70.Location = new System.Drawing.Point(356, 268);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(64, 20);
+            this.label70.TabIndex = 66;
+            this.label70.Text = "Total : ";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label69.Location = new System.Drawing.Point(356, 230);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(90, 20);
+            this.label69.TabIndex = 65;
+            this.label69.Text = "Doubles : ";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label68.Location = new System.Drawing.Point(356, 191);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(83, 20);
+            this.label68.TabIndex = 64;
+            this.label68.Text = "Singles : ";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label67.Location = new System.Drawing.Point(356, 151);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(95, 20);
+            this.label67.TabIndex = 63;
+            this.label67.Text = "Date-out : ";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label66.Location = new System.Drawing.Point(356, 107);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(83, 20);
+            this.label66.TabIndex = 62;
+            this.label66.Text = "Date-in : ";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label65.Location = new System.Drawing.Point(356, 65);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(161, 20);
+            this.label65.TabIndex = 61;
+            this.label65.Text = "Number of nights : ";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(356, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(158, 20);
+            this.label64.TabIndex = 60;
+            this.label64.Text = "Booking summary";
             // 
             // label63
             // 
@@ -2729,81 +2805,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(356, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(143, 20);
-            this.label64.TabIndex = 60;
-            this.label64.Text = "Booking summary";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label65.Location = new System.Drawing.Point(356, 65);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(161, 20);
-            this.label65.TabIndex = 61;
-            this.label65.Text = "Number of nights : ";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label66.Location = new System.Drawing.Point(356, 107);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(83, 20);
-            this.label66.TabIndex = 62;
-            this.label66.Text = "Date-in : ";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label67.Location = new System.Drawing.Point(356, 151);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(95, 20);
-            this.label67.TabIndex = 63;
-            this.label67.Text = "Date-out : ";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label68.Location = new System.Drawing.Point(356, 191);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(83, 20);
-            this.label68.TabIndex = 64;
-            this.label68.Text = "Singles : ";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label69.Location = new System.Drawing.Point(356, 230);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(90, 20);
-            this.label69.TabIndex = 65;
-            this.label69.Text = "Doubles : ";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label70.Location = new System.Drawing.Point(356, 268);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(64, 20);
-            this.label70.TabIndex = 66;
-            this.label70.Text = "Total : ";
             // 
             // adminForm
             // 
