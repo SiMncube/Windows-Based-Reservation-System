@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Location = new System.Drawing.Point(0, 613);
+            this.panel1.Location = new System.Drawing.Point(0, 708);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1384, 41);
             this.panel1.TabIndex = 43;
@@ -168,6 +168,7 @@ namespace WindowsFormsApp1
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.nextBTN);
             this.panel3.Controls.Add(this.backBTN);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -225,7 +226,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 648);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
