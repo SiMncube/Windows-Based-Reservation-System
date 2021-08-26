@@ -63,10 +63,10 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -249,15 +249,17 @@ namespace WindowsFormsApp1
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(12, 588);
+            this.panel1.Location = new System.Drawing.Point(0, 592);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(991, 116);
+            this.panel1.Size = new System.Drawing.Size(1054, 116);
             this.panel1.TabIndex = 44;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -327,21 +329,22 @@ namespace WindowsFormsApp1
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(1009, 588);
+            this.panel4.Location = new System.Drawing.Point(1060, 592);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(349, 116);
+            this.panel4.Size = new System.Drawing.Size(298, 116);
             this.panel4.TabIndex = 45;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(136, 86);
+            this.label11.Location = new System.Drawing.Point(40, 86);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(192, 16);
             this.label11.TabIndex = 2;
@@ -349,7 +352,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(101, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -358,7 +361,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(101, 38);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 38);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -379,23 +382,35 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(136, 51);
+            this.label10.Location = new System.Drawing.Point(42, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.Size = new System.Drawing.Size(89, 16);
             this.label10.TabIndex = 0;
-            this.label10.Text = "0684578956";
+            this.label10.Text = "+27-84578956";
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Location = new System.Drawing.Point(1000, 192);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 138);
+            this.panel5.Size = new System.Drawing.Size(358, 175);
             this.panel5.TabIndex = 46;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label19.Location = new System.Drawing.Point(174, 73);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "And";
             // 
             // label18
             // 
@@ -413,7 +428,7 @@ namespace WindowsFormsApp1
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(10, 33);
+            this.label17.Location = new System.Drawing.Point(3, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(345, 29);
             this.label17.TabIndex = 1;
@@ -430,17 +445,6 @@ namespace WindowsFormsApp1
             this.label16.TabIndex = 0;
             this.label16.Text = "Great Prices at";
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label19.Location = new System.Drawing.Point(174, 73);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 16);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "And";
             // 
             // Homepage
             // 
