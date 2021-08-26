@@ -357,7 +357,6 @@ namespace WindowsFormsApp1
             // 
             // tabPage7
             // 
-            this.tabPage7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.pngtree_technology_atmospheric_year_end_report_image_1859962;
             this.tabPage7.Controls.Add(this.button9);
             this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Name = "tabPage7";
@@ -2693,7 +2692,6 @@ namespace WindowsFormsApp1
             // 
             // tabPage8
             // 
-            this.tabPage8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.pngtree_technology_atmospheric_year_end_report_image_1859962;
             this.tabPage8.Controls.Add(this.button15);
             this.tabPage8.Location = new System.Drawing.Point(4, 29);
             this.tabPage8.Name = "tabPage8";
