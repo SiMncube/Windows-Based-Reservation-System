@@ -40,8 +40,8 @@ namespace WindowsFormsApp1
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button15 = new System.Windows.Forms.Button();
             this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
@@ -253,8 +253,8 @@ namespace WindowsFormsApp1
             this.label54 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.button15 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -264,7 +264,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
-            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
@@ -294,7 +294,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage8.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -355,28 +355,29 @@ namespace WindowsFormsApp1
             this.customer1BindingSource.DataMember = "Customer1";
             this.customer1BindingSource.DataSource = this.fullDs;
             // 
-            // tabPage7
+            // tabPage8
             // 
-            this.tabPage7.Controls.Add(this.button9);
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1362, 716);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Booking reports";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.tabPage8.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.pngtree_technology_atmospheric_year_end_report_image_1859963;
+            this.tabPage8.Controls.Add(this.button15);
+            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1362, 716);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Payment reports";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // button15
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(545, 273);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(224, 102);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Generate Booking Report";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.Black;
+            this.button15.Location = new System.Drawing.Point(547, 271);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(226, 101);
+            this.button15.TabIndex = 2;
+            this.button15.Text = "Generate Payment Report";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // customerTa
             // 
@@ -2690,28 +2691,29 @@ namespace WindowsFormsApp1
             this.label44.TabIndex = 5;
             this.label44.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
             // 
-            // tabPage8
+            // tabPage7
             // 
-            this.tabPage8.Controls.Add(this.button15);
-            this.tabPage8.Location = new System.Drawing.Point(4, 29);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1362, 716);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Payment reports";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.pngtree_technology_atmospheric_year_end_report_image_1859963;
+            this.tabPage7.Controls.Add(this.button9);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1362, 716);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Booking reports";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // button9
             // 
-            this.button15.BackColor = System.Drawing.Color.White;
-            this.button15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Location = new System.Drawing.Point(547, 271);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(226, 101);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Generate Payment Report";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(545, 273);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(224, 102);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Generate Booking Report";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // adminForm
             // 
@@ -2733,7 +2735,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
-            this.tabPage7.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -2780,7 +2782,7 @@ namespace WindowsFormsApp1
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage8.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

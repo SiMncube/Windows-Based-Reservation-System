@@ -73,46 +73,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap double_room5d2c6a6754bd1 {
-            get {
-                object obj = ResourceManager.GetObject("double_room5d2c6a6754bd1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap doubleroom_564885484_1000 {
-            get {
-                object obj = ResourceManager.GetObject("doubleroom_564885484_1000", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap download {
-            get {
-                object obj = ResourceManager.GetObject("download", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap email {
-            get {
-                object obj = ResourceManager.GetObject("email", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_android_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-android-24", resourceCulture);
@@ -186,6 +146,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap icons8_credit_card_961 {
             get {
                 object obj = ResourceManager.GetObject("icons8-credit-card-961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_open_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-open-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_open_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-open-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,16 +263,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Location {
-            get {
-                object obj = ResourceManager.GetObject("Location", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logopit_1622304679296 {
             get {
                 object obj = ResourceManager.GetObject("Logopit_1622304679296", resourceCulture);
@@ -303,9 +273,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phone {
+        internal static System.Drawing.Bitmap photo_1448697138198_9aa6d0d84bf4 {
             get {
-                object obj = ResourceManager.GetObject("phone", resourceCulture);
+                object obj = ResourceManager.GetObject("photo-1448697138198-9aa6d0d84bf4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +283,49 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap superior_double_room_4 {
+        internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_185996 {
             get {
-                object obj = ResourceManager.GetObject("superior_double_room_4", resourceCulture);
+                object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_185996", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_1859961 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_1859961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_1859962 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_1859962", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_1859963 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_1859963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stack_clean_towels_bathrobe_table_73344_6251 {
+            get {
+                object obj = ResourceManager.GetObject("stack-clean-towels-bathrobe-table_73344-6251", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +343,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unnamed {
+        internal static System.Drawing.Bitmap WALLPAPER {
             get {
-                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
+                object obj = ResourceManager.GetObject("WALLPAPER", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
