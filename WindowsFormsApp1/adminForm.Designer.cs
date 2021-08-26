@@ -364,7 +364,7 @@ namespace WindowsFormsApp1
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
+            this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.panel12);
             this.tabPage2.Controls.Add(this.panel6);
@@ -390,7 +390,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.label33);
             this.panel6.Controls.Add(this.customerDataGridView);
             this.panel6.Controls.Add(this.button10);
-            this.panel6.Location = new System.Drawing.Point(164, 86);
+            this.panel6.Location = new System.Drawing.Point(175, 73);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1041, 289);
             this.panel6.TabIndex = 55;
@@ -400,7 +400,7 @@ namespace WindowsFormsApp1
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Location = new System.Drawing.Point(3, 8);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(161, 20);
             this.label20.TabIndex = 57;
@@ -605,7 +605,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(401, 381);
+            this.panel5.Location = new System.Drawing.Point(388, 368);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 327);
             this.panel5.TabIndex = 48;
@@ -2826,7 +2826,7 @@ namespace WindowsFormsApp1
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Lucida Fax", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label73.Location = new System.Drawing.Point(283, 15);
+            this.label73.Location = new System.Drawing.Point(342, 15);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(704, 46);
             this.label73.TabIndex = 17;
