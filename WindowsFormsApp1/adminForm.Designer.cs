@@ -262,6 +262,9 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -302,6 +305,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -362,10 +366,9 @@ namespace WindowsFormsApp1
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_531;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.panel12);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -387,7 +390,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.label33);
             this.panel6.Controls.Add(this.customerDataGridView);
             this.panel6.Controls.Add(this.button10);
-            this.panel6.Location = new System.Drawing.Point(157, 18);
+            this.panel6.Location = new System.Drawing.Point(164, 86);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1041, 289);
             this.panel6.TabIndex = 55;
@@ -602,9 +605,9 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(394, 313);
+            this.panel5.Location = new System.Drawing.Point(401, 381);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(632, 344);
+            this.panel5.Size = new System.Drawing.Size(632, 327);
             this.panel5.TabIndex = 48;
             // 
             // label70
@@ -612,7 +615,7 @@ namespace WindowsFormsApp1
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label70.Location = new System.Drawing.Point(356, 268);
+            this.label70.Location = new System.Drawing.Point(356, 251);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(64, 20);
             this.label70.TabIndex = 66;
@@ -623,7 +626,7 @@ namespace WindowsFormsApp1
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label69.Location = new System.Drawing.Point(356, 230);
+            this.label69.Location = new System.Drawing.Point(356, 213);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(90, 20);
             this.label69.TabIndex = 65;
@@ -634,7 +637,7 @@ namespace WindowsFormsApp1
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label68.Location = new System.Drawing.Point(356, 191);
+            this.label68.Location = new System.Drawing.Point(356, 174);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(83, 20);
             this.label68.TabIndex = 64;
@@ -645,7 +648,7 @@ namespace WindowsFormsApp1
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label67.Location = new System.Drawing.Point(356, 151);
+            this.label67.Location = new System.Drawing.Point(356, 134);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(95, 20);
             this.label67.TabIndex = 63;
@@ -656,7 +659,7 @@ namespace WindowsFormsApp1
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label66.Location = new System.Drawing.Point(356, 107);
+            this.label66.Location = new System.Drawing.Point(356, 84);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(83, 20);
             this.label66.TabIndex = 62;
@@ -667,7 +670,7 @@ namespace WindowsFormsApp1
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label65.Location = new System.Drawing.Point(356, 65);
+            this.label65.Location = new System.Drawing.Point(356, 42);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(161, 20);
             this.label65.TabIndex = 61;
@@ -696,7 +699,7 @@ namespace WindowsFormsApp1
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(147, 256);
+            this.textBox5.Location = new System.Drawing.Point(149, 231);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(146, 27);
             this.textBox5.TabIndex = 57;
@@ -707,7 +710,7 @@ namespace WindowsFormsApp1
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DarkGray;
-            this.label21.Location = new System.Drawing.Point(25, 263);
+            this.label21.Location = new System.Drawing.Point(27, 238);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(109, 20);
             this.label21.TabIndex = 0;
@@ -721,7 +724,7 @@ namespace WindowsFormsApp1
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "No double rooms available"});
-            this.comboBox2.Location = new System.Drawing.Point(25, 222);
+            this.comboBox2.Location = new System.Drawing.Point(27, 197);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(268, 28);
             this.comboBox2.TabIndex = 40;
@@ -735,7 +738,7 @@ namespace WindowsFormsApp1
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "No single rooms available"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 172);
+            this.comboBox1.Location = new System.Drawing.Point(27, 147);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(268, 28);
             this.comboBox1.TabIndex = 39;
@@ -746,7 +749,7 @@ namespace WindowsFormsApp1
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(72, 49);
+            this.label24.Location = new System.Drawing.Point(74, 24);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(163, 16);
             this.label24.TabIndex = 36;
@@ -761,9 +764,9 @@ namespace WindowsFormsApp1
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(29, 289);
+            this.button8.Location = new System.Drawing.Point(173, 285);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(268, 37);
+            this.button8.Size = new System.Drawing.Size(287, 37);
             this.button8.TabIndex = 35;
             this.button8.Text = "Save";
             this.button8.UseVisualStyleBackColor = false;
@@ -774,7 +777,7 @@ namespace WindowsFormsApp1
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label25.Location = new System.Drawing.Point(22, 65);
+            this.label25.Location = new System.Drawing.Point(24, 40);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(115, 16);
             this.label25.TabIndex = 0;
@@ -785,7 +788,7 @@ namespace WindowsFormsApp1
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(25, 84);
+            this.dateTimePicker1.Location = new System.Drawing.Point(27, 59);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker1.TabIndex = 7;
@@ -796,7 +799,7 @@ namespace WindowsFormsApp1
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label26.Location = new System.Drawing.Point(22, 153);
+            this.label26.Location = new System.Drawing.Point(24, 128);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(182, 16);
             this.label26.TabIndex = 25;
@@ -807,7 +810,7 @@ namespace WindowsFormsApp1
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label27.Location = new System.Drawing.Point(22, 109);
+            this.label27.Location = new System.Drawing.Point(24, 84);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(124, 16);
             this.label27.TabIndex = 2;
@@ -816,7 +819,7 @@ namespace WindowsFormsApp1
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(25, 128);
+            this.dateTimePicker2.Location = new System.Drawing.Point(27, 103);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker2.TabIndex = 8;
@@ -827,7 +830,7 @@ namespace WindowsFormsApp1
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label28.Location = new System.Drawing.Point(22, 203);
+            this.label28.Location = new System.Drawing.Point(24, 178);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(188, 16);
             this.label28.TabIndex = 5;
@@ -839,7 +842,7 @@ namespace WindowsFormsApp1
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(2, 54);
+            this.label16.Location = new System.Drawing.Point(5, 41);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 20);
             this.label16.TabIndex = 46;
@@ -852,7 +855,7 @@ namespace WindowsFormsApp1
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(6, 6);
+            this.button4.Location = new System.Drawing.Point(5, -1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(45, 45);
             this.button4.TabIndex = 45;
@@ -2806,6 +2809,37 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.label73);
+            this.panel12.Controls.Add(this.label74);
+            this.panel12.Controls.Add(this.button4);
+            this.panel12.Controls.Add(this.label16);
+            this.panel12.Location = new System.Drawing.Point(3, 1);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1361, 66);
+            this.panel12.TabIndex = 56;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Lucida Fax", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label73.Location = new System.Drawing.Point(283, 15);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(704, 46);
+            this.label73.TabIndex = 17;
+            this.label73.Text = "The Cottage BnB Booking System";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(105, 43);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(0, 20);
+            this.label74.TabIndex = 0;
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2826,7 +2860,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
@@ -2874,6 +2907,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3110,5 +3145,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label74;
     }
 }
