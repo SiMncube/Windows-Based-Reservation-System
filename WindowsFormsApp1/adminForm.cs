@@ -41,6 +41,11 @@ namespace WindowsFormsApp1
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
                     admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
+                    if(fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        tabControl1.TabPages.RemoveAt(6);
+                        tabControl1.TabPages.RemoveAt(6);
+                    }       
                     break;
                 }
             }
@@ -1337,6 +1342,24 @@ namespace WindowsFormsApp1
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
             customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
+        }
+
+        //############################################################ SI Code generating reoprts ################################################
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingReport one = new BookingReport();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e) 
+        {
+            this.Hide();
+            PaymentReport one = new PaymentReport();
+            one.ShowDialog();
+            this.Show();
         }
     }
 }

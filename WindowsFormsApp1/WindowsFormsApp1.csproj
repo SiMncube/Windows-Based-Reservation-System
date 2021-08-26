@@ -33,11 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,11 +69,41 @@
     <Compile Include="CancelbookingForm.designer.cs">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingReport.Designer.cs">
+      <DependentUpon>BookingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReport.Designer.cs">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OTPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTPForm.Designer.cs">
+      <DependentUpon>OTPForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ResetpasswordForm.cs">
       <SubType>Form</SubType>
@@ -156,8 +193,25 @@
     <EmbeddedResource Include="CancelbookingForm.resx">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingReport.resx">
+      <DependentUpon>BookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReport.resx">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OTPForm.resx">
+      <DependentUpon>OTPForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResetpasswordForm.resx">
       <DependentUpon>ResetpasswordForm.cs</DependentUpon>
@@ -239,8 +293,6 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unnamed.jpg" />
-    <None Include="Resources\superior-double-room-4.jpg" />
     <None Include="Resources\WhatsApp Image 2021-06-18 at 19.25.45.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-18 at 19.00.46.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.288.jpeg" />
@@ -291,17 +343,19 @@
     <None Include="Resources\icons8-visa-64.png" />
     <None Include="Resources\icons8-mastercard-64.png" />
     <None Include="Resources\back.png" />
-    <None Include="Resources\email.png" />
-    <None Include="Resources\Location.jpg" />
-    <None Include="Resources\doubleroom_564885484_1000.jpg" />
-    <None Include="Resources\double-room5d2c6a6754bd1.jpg" />
-    <None Include="Resources\download.jpg" />
+    <None Include="Resources\icons8-email-open-96.png" />
+    <None Include="Resources\icons8-email-open-48.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
     <None Include="Resources\photo-1448697138198-9aa6d0d84bf41.jpg" />
-    <None Include="Resources\phone.png" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_185996.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859961.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859962.jpg" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
