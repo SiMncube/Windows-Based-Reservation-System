@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
@@ -41,6 +41,12 @@ namespace WindowsFormsApp1
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
@@ -254,6 +260,7 @@ namespace WindowsFormsApp1
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button15 = new System.Windows.Forms.Button();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
             this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
@@ -266,13 +273,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -282,6 +282,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
@@ -314,8 +316,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -389,6 +389,66 @@ namespace WindowsFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Make booking";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.label75);
+            this.panel14.Controls.Add(this.label72);
+            this.panel14.Location = new System.Drawing.Point(1014, 370);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(202, 124);
+            this.panel14.TabIndex = 58;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label75.Location = new System.Drawing.Point(11, 55);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(183, 29);
+            this.label75.TabIndex = 2;
+            this.label75.Text = "R500 per night";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(3, 7);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(152, 20);
+            this.label72.TabIndex = 1;
+            this.label72.Text = "Double room price:";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.label76);
+            this.panel13.Controls.Add(this.label71);
+            this.panel13.Location = new System.Drawing.Point(175, 369);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(195, 124);
+            this.panel13.TabIndex = 57;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label76.Location = new System.Drawing.Point(3, 54);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(183, 29);
+            this.label76.TabIndex = 3;
+            this.label76.Text = "R350 per night";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(4, 8);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(145, 20);
+            this.label71.TabIndex = 0;
+            this.label71.Text = "Single room price:";
             // 
             // panel12
             // 
@@ -1369,6 +1429,7 @@ namespace WindowsFormsApp1
             this.label18.Size = new System.Drawing.Size(59, 20);
             this.label18.TabIndex = 46;
             this.label18.Text = "Logout";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // panel3
             // 
@@ -1613,8 +1674,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2803,6 +2864,17 @@ namespace WindowsFormsApp1
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // tabPage9
+            // 
+            this.tabPage9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Webp_net_resizeimage;
+            this.tabPage9.Location = new System.Drawing.Point(4, 29);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1362, 716);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "FAQ";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // customerTa
             // 
             this.customerTa.ClearBeforeFill = true;
@@ -2856,77 +2928,6 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.label76);
-            this.panel13.Controls.Add(this.label71);
-            this.panel13.Location = new System.Drawing.Point(175, 369);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(195, 124);
-            this.panel13.TabIndex = 57;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.label75);
-            this.panel14.Controls.Add(this.label72);
-            this.panel14.Location = new System.Drawing.Point(1014, 370);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(202, 124);
-            this.panel14.TabIndex = 58;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(4, 8);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(145, 20);
-            this.label71.TabIndex = 0;
-            this.label71.Text = "Single room price:";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(3, 7);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(152, 20);
-            this.label72.TabIndex = 1;
-            this.label72.Text = "Double room price:";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label75.Location = new System.Drawing.Point(11, 55);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(183, 29);
-            this.label75.TabIndex = 2;
-            this.label75.Text = "R500 per night";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label76.Location = new System.Drawing.Point(3, 54);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(183, 29);
-            this.label76.TabIndex = 3;
-            this.label76.Text = "R350 per night";
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Webp_net_resizeimage;
-            this.tabPage9.Location = new System.Drawing.Point(4, 29);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1362, 716);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "FAQ";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2947,6 +2948,10 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -2996,10 +3001,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }

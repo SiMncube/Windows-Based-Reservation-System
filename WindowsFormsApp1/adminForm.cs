@@ -1361,5 +1361,10 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
