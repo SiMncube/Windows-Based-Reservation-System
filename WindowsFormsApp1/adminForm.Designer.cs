@@ -40,6 +40,11 @@ namespace WindowsFormsApp1
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -80,8 +85,6 @@ namespace WindowsFormsApp1
             this.label27 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label61 = new System.Windows.Forms.Label();
@@ -262,9 +265,12 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -274,6 +280,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.panel5.SuspendLayout();
@@ -305,7 +312,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -363,9 +371,11 @@ namespace WindowsFormsApp1
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.panel14);
+            this.tabPage2.Controls.Add(this.panel13);
             this.tabPage2.Controls.Add(this.panel12);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.panel5);
@@ -376,6 +386,63 @@ namespace WindowsFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Make booking";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.label73);
+            this.panel12.Controls.Add(this.label74);
+            this.panel12.Controls.Add(this.button4);
+            this.panel12.Controls.Add(this.label16);
+            this.panel12.Location = new System.Drawing.Point(3, 1);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1361, 66);
+            this.panel12.TabIndex = 56;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Lucida Fax", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label73.Location = new System.Drawing.Point(342, 15);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(704, 46);
+            this.label73.TabIndex = 17;
+            this.label73.Text = "The Cottage BnB Booking System";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(105, 43);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(0, 20);
+            this.label74.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(5, -1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 45);
+            this.button4.TabIndex = 45;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(5, 41);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 20);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Logout";
             // 
             // panel6
             // 
@@ -605,7 +672,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(388, 368);
+            this.panel5.Location = new System.Drawing.Point(376, 370);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 327);
             this.panel5.TabIndex = 48;
@@ -835,32 +902,6 @@ namespace WindowsFormsApp1
             this.label28.Size = new System.Drawing.Size(188, 16);
             this.label28.TabIndex = 5;
             this.label28.Text = "Number of double room(s)";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(5, 41);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 20);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "Logout";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(5, -1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 45);
-            this.button4.TabIndex = 45;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // tabPage3
             // 
@@ -2809,36 +2850,65 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
-            // panel12
+            // panel13
             // 
-            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel12.Controls.Add(this.label73);
-            this.panel12.Controls.Add(this.label74);
-            this.panel12.Controls.Add(this.button4);
-            this.panel12.Controls.Add(this.label16);
-            this.panel12.Location = new System.Drawing.Point(3, 1);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1361, 66);
-            this.panel12.TabIndex = 56;
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.label76);
+            this.panel13.Controls.Add(this.label71);
+            this.panel13.Location = new System.Drawing.Point(175, 369);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(195, 124);
+            this.panel13.TabIndex = 57;
             // 
-            // label73
+            // panel14
             // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Lucida Fax", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label73.Location = new System.Drawing.Point(342, 15);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(704, 46);
-            this.label73.TabIndex = 17;
-            this.label73.Text = "The Cottage BnB Booking System";
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.label75);
+            this.panel14.Controls.Add(this.label72);
+            this.panel14.Location = new System.Drawing.Point(1014, 370);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(202, 124);
+            this.panel14.TabIndex = 58;
             // 
-            // label74
+            // label71
             // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(105, 43);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(0, 20);
-            this.label74.TabIndex = 0;
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(4, 8);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(145, 20);
+            this.label71.TabIndex = 0;
+            this.label71.Text = "Single room price:";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(3, 7);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(152, 20);
+            this.label72.TabIndex = 1;
+            this.label72.Text = "Double room price:";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label75.Location = new System.Drawing.Point(11, 55);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(183, 29);
+            this.label75.TabIndex = 2;
+            this.label75.Text = "R500 per night";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label76.Location = new System.Drawing.Point(3, 54);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(183, 29);
+            this.label76.TabIndex = 3;
+            this.label76.Text = "R350 per night";
             // 
             // adminForm
             // 
@@ -2860,6 +2930,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
@@ -2907,8 +2979,10 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3148,5 +3222,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label71;
     }
 }
