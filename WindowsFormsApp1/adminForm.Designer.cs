@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
@@ -402,11 +403,11 @@ namespace WindowsFormsApp1
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Lucida Fax", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label73.Location = new System.Drawing.Point(342, 15);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(704, 46);
+            this.label73.Size = new System.Drawing.Size(657, 46);
             this.label73.TabIndex = 17;
             this.label73.Text = "The Cottage BnB Booking System";
             // 
@@ -436,11 +437,11 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(5, 41);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 20);
+            this.label16.Size = new System.Drawing.Size(65, 20);
             this.label16.TabIndex = 46;
             this.label16.Text = "Logout";
             // 
@@ -487,11 +488,11 @@ namespace WindowsFormsApp1
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label30.Location = new System.Drawing.Point(269, 24);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(488, 24);
+            this.label30.Size = new System.Drawing.Size(515, 25);
             this.label30.TabIndex = 49;
             this.label30.Text = "Enter Customer Email, Name, Surnam, or ID No.\r\n";
             // 
@@ -514,11 +515,11 @@ namespace WindowsFormsApp1
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(369, 8);
+            this.label32.Location = new System.Drawing.Point(370, 4);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(301, 16);
+            this.label32.Size = new System.Drawing.Size(386, 20);
             this.label32.TabIndex = 53;
             this.label32.Text = "Input is incorrect Or Such profile does not exist";
             this.label32.Visible = false;
@@ -814,11 +815,11 @@ namespace WindowsFormsApp1
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(74, 24);
+            this.label24.Location = new System.Drawing.Point(70, 24);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(163, 16);
+            this.label24.Size = new System.Drawing.Size(185, 16);
             this.label24.TabIndex = 36;
             this.label24.Text = "Selected Date is INVALID";
             this.label24.Visible = false;
@@ -1004,11 +1005,11 @@ namespace WindowsFormsApp1
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Red;
-            this.label39.Location = new System.Drawing.Point(70, 44);
+            this.label39.Location = new System.Drawing.Point(50, 28);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(163, 16);
+            this.label39.Size = new System.Drawing.Size(218, 20);
             this.label39.TabIndex = 36;
             this.label39.Text = "Selected Date is INVALID";
             this.label39.Visible = false;
@@ -1217,11 +1218,11 @@ namespace WindowsFormsApp1
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(3, -1);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(172, 20);
+            this.label29.Size = new System.Drawing.Size(218, 20);
             this.label29.TabIndex = 57;
             this.label29.Text = "Search Customer Booking";
             // 
@@ -1238,22 +1239,22 @@ namespace WindowsFormsApp1
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label35.Location = new System.Drawing.Point(301, 26);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(630, 24);
+            this.label35.Size = new System.Drawing.Size(663, 25);
             this.label35.TabIndex = 49;
             this.label35.Text = "Enter Customer Email, Name, Surname, ID No. or Booking Ref";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(453, 10);
+            this.label37.Location = new System.Drawing.Point(452, 6);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(301, 16);
+            this.label37.Size = new System.Drawing.Size(386, 20);
             this.label37.TabIndex = 53;
             this.label37.Text = "Input is incorrect Or Such profile does not exist";
             this.label37.Visible = false;
@@ -1315,11 +1316,11 @@ namespace WindowsFormsApp1
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(2, 54);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 20);
+            this.label17.Size = new System.Drawing.Size(65, 20);
             this.label17.TabIndex = 46;
             this.label17.Text = "Logout";
             // 
@@ -1386,7 +1387,7 @@ namespace WindowsFormsApp1
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(108, 244);
             this.button2.Name = "button2";
@@ -1399,21 +1400,21 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Cancel booking";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(365, 32);
+            this.label4.Location = new System.Drawing.Point(365, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 25);
+            this.label4.Size = new System.Drawing.Size(370, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Booking(s) successfully cancelled";
             this.label4.Visible = false;
@@ -1423,7 +1424,7 @@ namespace WindowsFormsApp1
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(757, 244);
             this.button1.Name = "button1";
@@ -1531,22 +1532,22 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Location = new System.Drawing.Point(182, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(730, 22);
+            this.label2.Size = new System.Drawing.Size(749, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Enter Booking ref, customer Email , Name , Surname, ID Number or Cell Phone";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Red;
-            this.label62.Location = new System.Drawing.Point(380, 21);
+            this.label62.Location = new System.Drawing.Point(379, 7);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(290, 24);
+            this.label62.Size = new System.Drawing.Size(301, 25);
             this.label62.TabIndex = 8;
             this.label62.Text = "Booking has been refunded";
             this.label62.Visible = false;
@@ -1554,11 +1555,11 @@ namespace WindowsFormsApp1
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(380, 21);
+            this.label14.Location = new System.Drawing.Point(379, 7);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 24);
+            this.label14.Size = new System.Drawing.Size(243, 25);
             this.label14.TabIndex = 6;
             this.label14.Text = "Booking is incomplete";
             this.label14.Visible = false;
@@ -1566,11 +1567,11 @@ namespace WindowsFormsApp1
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(380, 21);
+            this.label13.Location = new System.Drawing.Point(379, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(298, 24);
+            this.label13.Size = new System.Drawing.Size(315, 25);
             this.label13.TabIndex = 5;
             this.label13.Text = "Booking is already cancelled";
             this.label13.Visible = false;
@@ -1578,28 +1579,28 @@ namespace WindowsFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 20);
+            this.label6.Size = new System.Drawing.Size(182, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Search for booking(s)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(380, 21);
+            this.label5.Location = new System.Drawing.Point(379, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(224, 24);
+            this.label5.Size = new System.Drawing.Size(239, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "Row is already added";
             this.label5.Visible = false;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(242, 70);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(601, 29);
@@ -1610,6 +1611,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1720,11 +1723,11 @@ namespace WindowsFormsApp1
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Location = new System.Drawing.Point(3, 53);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 20);
+            this.label19.Size = new System.Drawing.Size(65, 20);
             this.label19.TabIndex = 46;
             this.label19.Text = "Logout";
             // 
@@ -1744,17 +1747,17 @@ namespace WindowsFormsApp1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label11.Location = new System.Drawing.Point(194, 38);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(730, 22);
+            this.label11.Size = new System.Drawing.Size(749, 24);
             this.label11.TabIndex = 6;
             this.label11.Text = "Enter Booking ref, customer Email , Name , Surname, ID Number or Cell Phone";
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(262, 63);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(605, 29);
@@ -1764,10 +1767,10 @@ namespace WindowsFormsApp1
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(4, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 20);
+            this.label10.Size = new System.Drawing.Size(136, 20);
             this.label10.TabIndex = 1;
             this.label10.Text = "View booking(s)";
             // 
@@ -1910,11 +1913,11 @@ namespace WindowsFormsApp1
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(560, 70);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(250, 18);
+            this.label58.Size = new System.Drawing.Size(228, 20);
             this.label58.TabIndex = 18;
             this.label58.Text = "Safe . Dependable . Affordable";
             // 
@@ -1922,22 +1925,22 @@ namespace WindowsFormsApp1
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 64);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(13, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 20);
+            this.label15.Size = new System.Drawing.Size(59, 20);
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label59.Location = new System.Drawing.Point(216, 9);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(933, 61);
+            this.label59.Size = new System.Drawing.Size(852, 61);
             this.label59.TabIndex = 17;
             this.label59.Text = "The Cottage BnB Booking System";
             // 
@@ -2008,7 +2011,7 @@ namespace WindowsFormsApp1
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(38, 310);
             this.textBox8.Name = "textBox8";
@@ -2020,11 +2023,11 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(35, 9);
+            this.label9.Location = new System.Drawing.Point(-4, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(330, 17);
+            this.label9.Size = new System.Drawing.Size(398, 24);
             this.label9.TabIndex = 63;
             this.label9.Text = "Customer account successfully registered";
             this.label9.Visible = false;
@@ -2032,22 +2035,22 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(34, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 27);
+            this.label1.Size = new System.Drawing.Size(307, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Register a new Customer";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(36, 66);
+            this.label3.Location = new System.Drawing.Point(3, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(325, 20);
+            this.label3.Size = new System.Drawing.Size(389, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Fill the registration form below to register a new customer ";
             // 
@@ -2111,7 +2114,7 @@ namespace WindowsFormsApp1
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.Color.Gray;
             this.emailTextBox.Location = new System.Drawing.Point(38, 277);
             this.emailTextBox.Name = "emailTextBox";
@@ -2124,7 +2127,7 @@ namespace WindowsFormsApp1
             // 
             // cellNumberTextBox
             // 
-            this.cellNumberTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cellNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cellNumberTextBox.ForeColor = System.Drawing.Color.Gray;
             this.cellNumberTextBox.Location = new System.Drawing.Point(234, 230);
             this.cellNumberTextBox.Name = "cellNumberTextBox";
@@ -2137,7 +2140,7 @@ namespace WindowsFormsApp1
             // 
             // IDTextBox
             // 
-            this.IDTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTextBox.ForeColor = System.Drawing.Color.Gray;
             this.IDTextBox.Location = new System.Drawing.Point(38, 230);
             this.IDTextBox.Name = "IDTextBox";
@@ -2150,7 +2153,7 @@ namespace WindowsFormsApp1
             // 
             // postalCodeTextBox
             // 
-            this.postalCodeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postalCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postalCodeTextBox.ForeColor = System.Drawing.Color.Gray;
             this.postalCodeTextBox.Location = new System.Drawing.Point(234, 196);
             this.postalCodeTextBox.Name = "postalCodeTextBox";
@@ -2163,7 +2166,7 @@ namespace WindowsFormsApp1
             // 
             // cityTextBox
             // 
-            this.cityTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityTextBox.ForeColor = System.Drawing.Color.Gray;
             this.cityTextBox.Location = new System.Drawing.Point(38, 196);
             this.cityTextBox.Name = "cityTextBox";
@@ -2176,7 +2179,7 @@ namespace WindowsFormsApp1
             // 
             // addressLine2TextBox
             // 
-            this.addressLine2TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine2TextBox.ForeColor = System.Drawing.Color.Gray;
             this.addressLine2TextBox.Location = new System.Drawing.Point(38, 164);
             this.addressLine2TextBox.Name = "addressLine2TextBox";
@@ -2189,7 +2192,7 @@ namespace WindowsFormsApp1
             // 
             // addressLine1TextBox
             // 
-            this.addressLine1TextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLine1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLine1TextBox.ForeColor = System.Drawing.Color.Gray;
             this.addressLine1TextBox.Location = new System.Drawing.Point(38, 132);
             this.addressLine1TextBox.Name = "addressLine1TextBox";
@@ -2202,7 +2205,7 @@ namespace WindowsFormsApp1
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.Color.Gray;
             this.lastNameTextBox.Location = new System.Drawing.Point(193, 99);
             this.lastNameTextBox.Name = "lastNameTextBox";
@@ -2215,7 +2218,7 @@ namespace WindowsFormsApp1
             // 
             // firtNameTextBox
             // 
-            this.firtNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firtNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firtNameTextBox.ForeColor = System.Drawing.Color.Gray;
             this.firtNameTextBox.Location = new System.Drawing.Point(38, 99);
             this.firtNameTextBox.Name = "firtNameTextBox";
@@ -2269,11 +2272,11 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label12.Location = new System.Drawing.Point(1015, 120);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 15);
+            this.label12.Size = new System.Drawing.Size(197, 16);
             this.label12.TabIndex = 4;
             this.label12.Text = "Currently logged in Admin : ";
             // 
@@ -2297,11 +2300,11 @@ namespace WindowsFormsApp1
             // 
             this.label57.AutoSize = true;
             this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label57.Location = new System.Drawing.Point(3, 58);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(53, 20);
+            this.label57.Size = new System.Drawing.Size(59, 20);
             this.label57.TabIndex = 45;
             this.label57.Text = "Logout";
             // 
@@ -2490,7 +2493,7 @@ namespace WindowsFormsApp1
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox7.Location = new System.Drawing.Point(20, 281);
             this.textBox7.Name = "textBox7";
@@ -2500,7 +2503,7 @@ namespace WindowsFormsApp1
             // 
             // textBox10
             // 
-            this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox10.Location = new System.Drawing.Point(205, 230);
             this.textBox10.Name = "textBox10";
@@ -2510,7 +2513,7 @@ namespace WindowsFormsApp1
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox12.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox12.Location = new System.Drawing.Point(20, 230);
             this.textBox12.Name = "textBox12";
@@ -2520,7 +2523,7 @@ namespace WindowsFormsApp1
             // 
             // textBox11
             // 
-            this.textBox11.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox11.Location = new System.Drawing.Point(205, 181);
             this.textBox11.Name = "textBox11";
@@ -2529,7 +2532,7 @@ namespace WindowsFormsApp1
             // 
             // textBox13
             // 
-            this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox13.Location = new System.Drawing.Point(20, 181);
             this.textBox13.Name = "textBox13";
@@ -2538,7 +2541,7 @@ namespace WindowsFormsApp1
             // 
             // textBox14
             // 
-            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox14.Location = new System.Drawing.Point(20, 132);
             this.textBox14.Name = "textBox14";
@@ -2547,7 +2550,7 @@ namespace WindowsFormsApp1
             // 
             // textBox15
             // 
-            this.textBox15.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox15.Location = new System.Drawing.Point(20, 83);
             this.textBox15.Name = "textBox15";
@@ -2556,7 +2559,7 @@ namespace WindowsFormsApp1
             // 
             // textBox16
             // 
-            this.textBox16.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox16.Location = new System.Drawing.Point(175, 33);
             this.textBox16.Name = "textBox16";
@@ -2565,7 +2568,7 @@ namespace WindowsFormsApp1
             // 
             // textBox17
             // 
-            this.textBox17.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox17.Location = new System.Drawing.Point(20, 32);
             this.textBox17.Name = "textBox17";
@@ -2697,11 +2700,11 @@ namespace WindowsFormsApp1
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Lime;
-            this.label56.Location = new System.Drawing.Point(393, 12);
+            this.label56.Location = new System.Drawing.Point(397, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(273, 24);
+            this.label56.Size = new System.Drawing.Size(314, 25);
             this.label56.TabIndex = 60;
             this.label56.Text = "Details updated successfully";
             this.label56.Visible = false;
@@ -2709,11 +2712,11 @@ namespace WindowsFormsApp1
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Red;
-            this.label55.Location = new System.Drawing.Point(398, 12);
+            this.label55.Location = new System.Drawing.Point(397, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(243, 24);
+            this.label55.Size = new System.Drawing.Size(277, 25);
             this.label55.TabIndex = 59;
             this.label55.Text = "Please select a customer";
             this.label55.Visible = false;
@@ -2721,17 +2724,17 @@ namespace WindowsFormsApp1
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(3, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(116, 20);
+            this.label54.Size = new System.Drawing.Size(148, 20);
             this.label54.TabIndex = 58;
             this.label54.Text = "Search Customer";
             // 
             // textBox18
             // 
-            this.textBox18.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox18.Location = new System.Drawing.Point(263, 63);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(605, 29);
@@ -2741,11 +2744,11 @@ namespace WindowsFormsApp1
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label44.Location = new System.Drawing.Point(226, 36);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(669, 24);
+            this.label44.Size = new System.Drawing.Size(705, 25);
             this.label44.TabIndex = 5;
             this.label44.Text = "Enter customer Email , Name , Surname, ID Number or Cell Phone";
             // 
@@ -2763,7 +2766,7 @@ namespace WindowsFormsApp1
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
             this.button9.Location = new System.Drawing.Point(545, 273);
             this.button9.Name = "button9";
@@ -2787,7 +2790,7 @@ namespace WindowsFormsApp1
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.White;
-            this.button15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Black;
             this.button15.Location = new System.Drawing.Point(547, 271);
             this.button15.Name = "button15";
