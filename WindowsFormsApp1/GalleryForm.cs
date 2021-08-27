@@ -84,26 +84,26 @@ namespace WindowsFormsApp1
 
         private void changeImage(int num)
 
-        {/*
+        {
             switch(num)
             {
                 case 1:
-                    pictureBox1.Image = Properties.Resources.doubleroom_564885484_1000;
+                    pictureBox1.Image = Properties.Resources.SIngleLux;
                     break;
                 case 2:
-                    pictureBox1.Image = Properties.Resources.double_room5d2c6a6754bd1;
+                    pictureBox1.Image = Properties.Resources.SingleRoom1;
                     break;
                 case 3:
-                    pictureBox1.Image = Properties.Resources.download;
+                    pictureBox1.Image = Properties.Resources.DoubleRoom1;
                     break;
                 case 4:
-                    pictureBox1.Image = Properties.Resources.superior_double_room_4;
+                    pictureBox1.Image = Properties.Resources.DoubleStand;
                     break;
                 case 5:
-                    pictureBox1.Image = Properties.Resources.unnamed;
+                    pictureBox1.Image = Properties.Resources.Outside2;
                     break;
 
-            }*/
+            }
 
 
         }

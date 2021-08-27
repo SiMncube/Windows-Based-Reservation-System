@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             // nextBTN
             // 
             this.nextBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBTN.Location = new System.Drawing.Point(1139, 184);
+            this.nextBTN.Location = new System.Drawing.Point(1085, 184);
             this.nextBTN.Name = "nextBTN";
             this.nextBTN.Size = new System.Drawing.Size(107, 66);
             this.nextBTN.TabIndex = 3;
@@ -192,7 +192,7 @@ namespace WindowsFormsApp1
             // backBTN
             // 
             this.backBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBTN.Location = new System.Drawing.Point(3, 184);
+            this.backBTN.Location = new System.Drawing.Point(48, 184);
             this.backBTN.Name = "backBTN";
             this.backBTN.Size = new System.Drawing.Size(120, 66);
             this.backBTN.TabIndex = 2;
@@ -203,9 +203,10 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(129, 44);
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.SIngleLux;
+            this.pictureBox1.Location = new System.Drawing.Point(236, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1004, 379);
+            this.pictureBox1.Size = new System.Drawing.Size(783, 379);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

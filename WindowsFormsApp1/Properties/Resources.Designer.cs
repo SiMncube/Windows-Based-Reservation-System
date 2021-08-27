@@ -73,6 +73,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DoubleRoom1 {
+            get {
+                object obj = ResourceManager.GetObject("DoubleRoom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DoubleStand {
+            get {
+                object obj = ResourceManager.GetObject("DoubleStand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_android_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-android-24", resourceCulture);
@@ -273,6 +293,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Outside2 {
+            get {
+                object obj = ResourceManager.GetObject("Outside2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo_1448697138198_9aa6d0d84bf4 {
             get {
                 object obj = ResourceManager.GetObject("photo-1448697138198-9aa6d0d84bf4", resourceCulture);
@@ -316,6 +346,36 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap pngtree_technology_atmospheric_year_end_report_image_1859963 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-technology-atmospheric-year-end-report-image_1859963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIngleLux {
+            get {
+                object obj = ResourceManager.GetObject("SIngleLux", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SingleRoom1 {
+            get {
+                object obj = ResourceManager.GetObject("SingleRoom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SR1 {
+            get {
+                object obj = ResourceManager.GetObject("SR1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

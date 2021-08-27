@@ -345,6 +345,8 @@
     <None Include="Resources\back.png" />
     <None Include="Resources\icons8-email-open-96.png" />
     <None Include="Resources\icons8-email-open-48.png" />
+    <None Include="Resources\DoubleRoom1.jpg" />
+    <None Include="Resources\DoubleStand.jpg" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
@@ -353,6 +355,10 @@
     <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859961.jpg" />
     <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859962.jpg" />
     <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859963.jpg" />
+    <None Include="Resources\Outside2.jpg" />
+    <None Include="Resources\SIngleLux.jpg" />
+    <None Include="Resources\SingleRoom1.jpg" />
+    <None Include="Resources\SR1.jpg" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <ItemGroup>
