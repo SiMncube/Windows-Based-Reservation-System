@@ -426,7 +426,7 @@ namespace WindowsFormsApp1
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(5, -1);
+            this.button4.Location = new System.Drawing.Point(9, -1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(45, 45);
             this.button4.TabIndex = 45;
@@ -437,11 +437,11 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Location = new System.Drawing.Point(5, 41);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 20);
+            this.label16.Size = new System.Drawing.Size(59, 20);
             this.label16.TabIndex = 46;
             this.label16.Text = "Logout";
             // 
@@ -1316,11 +1316,11 @@ namespace WindowsFormsApp1
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(2, 54);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 20);
+            this.label17.Size = new System.Drawing.Size(59, 20);
             this.label17.TabIndex = 46;
             this.label17.Text = "Logout";
             // 
@@ -1360,11 +1360,11 @@ namespace WindowsFormsApp1
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Location = new System.Drawing.Point(2, 53);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 20);
+            this.label18.Size = new System.Drawing.Size(59, 20);
             this.label18.TabIndex = 46;
             this.label18.Text = "Logout";
             // 
@@ -1697,6 +1697,7 @@ namespace WindowsFormsApp1
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(6, 6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(45, 45);
@@ -1723,11 +1724,11 @@ namespace WindowsFormsApp1
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Location = new System.Drawing.Point(3, 53);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 20);
+            this.label19.Size = new System.Drawing.Size(59, 20);
             this.label19.TabIndex = 46;
             this.label19.Text = "Logout";
             // 
@@ -2302,7 +2303,7 @@ namespace WindowsFormsApp1
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label57.Location = new System.Drawing.Point(3, 58);
+            this.label57.Location = new System.Drawing.Point(3, 55);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(59, 20);
             this.label57.TabIndex = 45;
