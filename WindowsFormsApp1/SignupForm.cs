@@ -59,6 +59,8 @@ namespace WindowsFormsApp1
         {
             if(signUIsValid())
             {
+                string temp = randomOTP();
+                Email.sendEmail(textBox7.Text, "Sign up OTP confirmation", "You OTP is " + temp);
                 panel1.Visible = false;
                 panel6.Visible = true;
             }
@@ -548,6 +550,7 @@ namespace WindowsFormsApp1
             {
                 panel6.Visible = false;
                 panel1.Visible = true;
+                register();
             }
             else
             {
@@ -561,6 +564,12 @@ namespace WindowsFormsApp1
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
             label18.Visible = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            string temp = randomOTP();
+            Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
         }
     }
 }
