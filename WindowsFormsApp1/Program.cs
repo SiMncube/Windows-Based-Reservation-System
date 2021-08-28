@@ -31,6 +31,38 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        public static void sendInvoice() //for sending resevation invoice after making a booking
+        {
+            sendEmail(currentUser.getEmailID(), "The Cottage BNB, Reservation Invoice", invoiceBody());
+        }
+
+        public static string invoiceBody()  //this method will just creating some structure for the booking invoice email
+        {
+            string body = "Dear ";
+
+            return body;
+        }
+
+        public static void updateBookingInvoice()
+        {
+
+        }
+
+        //these field needs to be updated at some point of the program runtime, So they could be used to generate invoice
+        public static string bookingID;
+        public static string customerName;
+        public static string customerSurname;
+        public static string customerEmail;
+        public static string bookingStatus;
+        public static string noNight;
+        public static string dateIn;
+        public static string dateOut;
+        public static string noSingles;
+        public static string noDoubles;
+        public static string singleRoomsList;
+        public static string doubleRoomsList;
+        public static string amountDue;
     }
 
     public static class currentUser
@@ -45,6 +77,7 @@ namespace WindowsFormsApp1
             emailID = e;
         }
     }
+
     public static class currentBooking
     {
         private static int summaryID;
@@ -65,15 +98,6 @@ namespace WindowsFormsApp1
         {
             roomIDs = r;
         }
-    }
-    public static class BookingSummary
-    {
-        static string noNight;
-        static string dateIn;
-        static string dateOut;
-        static string noSingles;
-        static string noDoubles;
-        static string amount;
     }
     static class Program
     {
