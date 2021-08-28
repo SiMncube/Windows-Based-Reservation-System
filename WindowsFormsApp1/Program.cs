@@ -45,7 +45,15 @@ namespace WindowsFormsApp1
             roomIDs = r;
         }
     }
-
+    public static class BookingSummary
+    {
+        static string noNight;
+        static string dateIn;
+        static string dateOut;
+        static string noSingles;
+        static string noDoubles;
+        static string amount;
+    }
     static class Program
     {
         /// <summary>
