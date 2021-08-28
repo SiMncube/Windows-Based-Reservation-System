@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@ namespace WindowsFormsApp1
             this.button13 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -206,7 +206,7 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(290, 27);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Email or Phone";
+            this.textBox2.Text = "Email";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(493, 242);
+            this.panel2.Location = new System.Drawing.Point(497, 237);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(353, 258);
             this.panel2.TabIndex = 43;
@@ -398,7 +398,7 @@ namespace WindowsFormsApp1
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(497, 233);
+            this.panel3.Location = new System.Drawing.Point(501, 233);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 258);
             this.panel3.TabIndex = 44;
@@ -540,11 +540,23 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.button13);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(489, 247);
+            this.panel6.Location = new System.Drawing.Point(493, 242);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(353, 258);
             this.panel6.TabIndex = 47;
             this.panel6.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(66, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(109, 15);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "OTP is incorrect";
+            this.label18.Visible = false;
             // 
             // pictureBox1
             // 
@@ -629,18 +641,6 @@ namespace WindowsFormsApp1
             this.label17.Size = new System.Drawing.Size(98, 18);
             this.label17.TabIndex = 48;
             this.label17.Text = "Enter Code";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(66, 125);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 15);
-            this.label18.TabIndex = 55;
-            this.label18.Text = "OTP is incorrect";
-            this.label18.Visible = false;
             // 
             // ResetpasswordForm
             // 
