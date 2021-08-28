@@ -111,6 +111,8 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 InvoiceForm i = new InvoiceForm();
+                Email.bookingStatus = "Complete";  //added by Sihle
+                Email.sendInvoice();               //added by Sihle
                 i.ShowDialog();
                 this.Close();
             }
