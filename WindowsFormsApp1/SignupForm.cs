@@ -517,7 +517,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OTPForm o = new OTPForm();
+            OTPForm o = new OTPForm(textBox7.Text,"Please confirm your email","OTP = ");
             this.Hide();
             o.ShowDialog();
             this.Close();
