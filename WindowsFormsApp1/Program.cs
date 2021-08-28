@@ -49,14 +49,24 @@ namespace WindowsFormsApp1
             string htmlTdStart = "<td style=\" border-color:#5c87b2; border-style:solid; border-width:thin; padding: 5px;\">";
 
             string messageBody = "<font>Dear " + customerName + "</font><br><br>";
+            messageBody += "<font> Thank You for your payment, Your Booking has been confirmed.</font><br><br>";
             messageBody += "<font> Here Is Your Reservations Invoice, We're Looking Forward To Having You Again As Our Guest.</font><br><br>";
             messageBody += "<table style=\"border-collapse:collapse; text-align:center;\" >";
 
-            messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">" + htmlTdStart + "Booking Details </td>" + htmlTdStart + " Values + </td></tr>";
+            messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">" + htmlTdStart + "Booking Details </td>" + htmlTdStart + " Values </td></tr>";
 
             messageBody += htmlTrStart + htmlTdStart + "Booking Reference </td>" + htmlTdStart + bookingID + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Booking Status </td>" + htmlTdStart + bookingStatus + "</td></tr> ";
             messageBody += htmlTrStart + htmlTdStart + "Name </td>" + htmlTdStart + customerName + "</td></tr> ";
-
+            messageBody += htmlTrStart + htmlTdStart + "Surname </td>" + htmlTdStart + customerSurname + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Checking In Date </td>" + htmlTdStart + dateIn + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Checking Out Date </td>" + htmlTdStart + dateOut + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Number Of Nights </td>" + htmlTdStart + numberOfNights + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Number Of Single Rooms </td>" + htmlTdStart + numberOfSingles + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Number Of Double Rooms </td>" + htmlTdStart + numberOfDoubles + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Booked Single Rooms </td>" + htmlTdStart + singleRoomIDs + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Booked Double Rooms </td>" + htmlTdStart + doubleRoomIDs + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Total Amount Paid </td>" + htmlTdStart + amountDue + "</td></tr> ";
             messageBody += "</table>";
 
             return messageBody;  //return HTML Table as string from this function  
