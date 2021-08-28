@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class ResetpasswordForm : Form
     {
+        private string otp;
+        private int check = 0;
         public ResetpasswordForm()
         {
             InitializeComponent();
@@ -54,10 +56,9 @@ namespace WindowsFormsApp1
                         if (fullDatabase1.Customer[i].emailID.Equals(textBox2.Text, StringComparison.OrdinalIgnoreCase))
                         {
                             panel1.Visible = false;
-                            panel2.Visible = true;
-                            OTPForm oTPForm = new OTPForm(textBox2.Text, "Cottage BNB OTP confirmation email", "Your otp is : \n");
-                            this.Hide();
-                            oTPForm.ShowDialog();
+                            panel6.Visible = true;
+                            string temp = randomOTP();
+                            Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
                             break;
                         }
                     }
@@ -217,5 +218,62 @@ namespace WindowsFormsApp1
             button10.Visible = true;
             button11.Visible = false;
         }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Enter OTP")
+            {
+                textBox1.Text = null;
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Enter OTP";
+                textBox1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == this.otp)
+            {
+                panel6.Visible = false;
+                panel2.Visible = true;
+            }
+            else
+            {
+                label18.Visible = true;
+                check++;
+                if (check > 1)
+                    button3.Visible = true;
+            }
+        }
+        public string randomOTP()
+        {
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string temp = randNum.ToString("D6");
+            otp = temp;
+            string random = null;
+            for (int i = 0; i < 6; i++)
+                random += temp[i] + " ";
+            return random;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label18.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string temp = randomOTP();
+            Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
+        }
     }
+
 }
