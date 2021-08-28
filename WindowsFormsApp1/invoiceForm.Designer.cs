@@ -144,6 +144,7 @@ namespace WindowsFormsApp1
             this.label19.Size = new System.Drawing.Size(93, 16);
             this.label19.TabIndex = 18;
             this.label19.Text = "RoomPrices";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label18
             // 
