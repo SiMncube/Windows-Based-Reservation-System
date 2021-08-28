@@ -31,6 +31,18 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        public static void sendInvoice() //this fuction is for sending resevation invoice after making a booking
+        {
+            sendEmail(currentUser.getEmailID(), "The Cottage BNB, Reservation Invoice", invoiceBody());
+        }
+
+        public static string invoiceBody()
+        {
+            string body = "";
+
+            return body;
+        }
     }
 
     public static class currentUser
