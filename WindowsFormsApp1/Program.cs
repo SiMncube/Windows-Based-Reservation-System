@@ -143,6 +143,7 @@ namespace WindowsFormsApp1
         public static string amountDue;
 
         public static bool isModify = false;
+        public static bool isCancel = false;
         public static string oldBookingID;
         public static string refund;
     }
