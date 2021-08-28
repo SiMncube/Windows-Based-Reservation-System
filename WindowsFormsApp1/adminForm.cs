@@ -805,8 +805,8 @@ namespace WindowsFormsApp1
             Email.bookingID = summaryID.ToString();
             Email.bookingStatus = bookingStatus;
             Email.bookingMethod = bookingMethod;
-            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00PM";
-            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00PM";
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
             Email.numberOfNights = numberOfNights.ToString();
             Email.numberOfSingles = singleAllocatedRooms.Length.ToString();
             Email.numberOfDoubles = doubleAllocatedRooms.Length.ToString();
