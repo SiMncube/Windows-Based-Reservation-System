@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
             mail.From = new MailAddress("TheCottageGroup7@gmail.com");
             mail.To.Add(toEmail);
             mail.Subject = emailSubject;
+            mail.IsBodyHtml = true; //to make message body as html could be commented out.
             mail.Body = emailBody;
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
@@ -60,7 +61,8 @@ namespace WindowsFormsApp1
             messageBody += htmlTrStart + htmlTdStart + "Name" +              htmlTdEnd + htmlTdStart + customerName + htmlTdEnd + htmlTrEnd;
 
             messageBody += "</table>";
-            return messageBody; // return HTML Table as string from this function  
+
+            return messageBody;  //return HTML Table as string from this function  
 
             //original Code 
             /*
