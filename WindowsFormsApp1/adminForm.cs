@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace WindowsFormsApp1
 {
@@ -41,11 +42,11 @@ namespace WindowsFormsApp1
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
                     admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
-                    if(fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    if (fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         tabControl1.TabPages.RemoveAt(6);
                         tabControl1.TabPages.RemoveAt(6);
-                    }       
+                    }
                     break;
                 }
             }
@@ -854,7 +855,7 @@ namespace WindowsFormsApp1
             ConfirmbookingForm c = new ConfirmbookingForm();
             c.ShowDialog();
         }
-        
+
         private void button9_Click(object sender, EventArgs e)
         {
             currentUser.setEmailID(currentCustomerEmailID);
@@ -986,7 +987,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("The Selected booking can not be modified, Checking in date has already passed", "Selection Error");
                 return false;
             }
-            
+
             return false;
         }
 
@@ -1005,7 +1006,7 @@ namespace WindowsFormsApp1
             {
                 customerDataGridView.ClearSelection();
             }
-            
+
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -1107,7 +1108,7 @@ namespace WindowsFormsApp1
             UpdateNewBookingStatusToComplete();
 
             MessageBox.Show("Booking Has Been Successfully Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
-                                                                                        // with all necessary details including the new customer booking reference.
+                                                                                          // with all necessary details including the new customer booking reference.
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
@@ -1118,12 +1119,12 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);  
+            string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);
             CaptureNEWBookingRecord(newBookingAmountDueString);      //not this record is incomplete untill the admin confirms the receipt of payment
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 5));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
-            int[] a = {-1,(int)finalAmountDue};
+            int[] a = { -1, (int)finalAmountDue };
             currentBooking.setRoomIDs(a);
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
@@ -1341,7 +1342,7 @@ namespace WindowsFormsApp1
         }
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
-            customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
+            customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
         }
 
         //############################################################ SI Code generating reoprts ################################################
@@ -1354,7 +1355,7 @@ namespace WindowsFormsApp1
             this.Show();
         }
 
-        private void button15_Click(object sender, EventArgs e) 
+        private void button15_Click(object sender, EventArgs e)
         {
             this.Hide();
             PaymentReport one = new PaymentReport();
@@ -1366,5 +1367,27 @@ namespace WindowsFormsApp1
         {
 
         }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress("TheCottageGroup7@gmail.com");
+                mail.To.Add("sinxasane@gmail.com");
+                mail.Subject = "Urban Threshold Email Client Test";
+                mail.Body = "Hey There Am just testing the mailing fuctionality";
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+                MessageBox.Show("mail Send");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
+
