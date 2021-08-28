@@ -1367,7 +1367,8 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void button19_Click(object sender, EventArgs e)
+
+        public void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
             try
             {
@@ -1387,6 +1388,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            sendEmail();
         }
     }
 }
