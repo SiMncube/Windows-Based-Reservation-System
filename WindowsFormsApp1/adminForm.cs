@@ -740,6 +740,24 @@ namespace WindowsFormsApp1
             return false;
         }
 
+        public string arrayToString(int[] array)
+        {
+            string s = "Room: ";
+
+            if (array.Length == 0)
+                return "none";
+            else
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    s += array[i];
+                    if (i != array.Length - 1)
+                        s += ", ";
+                }
+            }
+            return s;
+        }
+
         private void updateBookingSummary(string callAmountDueMethod)
         {
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
@@ -787,13 +805,13 @@ namespace WindowsFormsApp1
             Email.bookingID = summaryID.ToString();
             Email.bookingStatus = bookingStatus;
             Email.bookingMethod = bookingMethod;
-            Email.dateIn = dateIn.ToString();
-            Email.dateOut = dateOut.ToString();
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " - 12:00PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " - 12:00PM";
             Email.numberOfNights = numberOfNights.ToString();
             Email.numberOfSingles = singleAllocatedRooms.Length.ToString();
             Email.numberOfDoubles = doubleAllocatedRooms.Length.ToString();
-            Email.singleRoomIDs = singleAllocatedRooms.ToString();
-            Email.doubleRoomIDs = doubleAllocatedRooms.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
             Email.amountDue = callAmountDueMethod;
 
         }
