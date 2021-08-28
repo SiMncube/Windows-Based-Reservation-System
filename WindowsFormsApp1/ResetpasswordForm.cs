@@ -51,10 +51,13 @@ namespace WindowsFormsApp1
                 {
                     for (int i = 0; i < fullDatabase1.Customer.Rows.Count; i++)
                     {
-                        if (fullDatabase1.Customer[i].emailID.Equals(textBox2.Text, StringComparison.OrdinalIgnoreCase) || textBox2.Text.Equals(fullDatabase1.Customer[i].cellNumber))
+                        if (fullDatabase1.Customer[i].emailID.Equals(textBox2.Text, StringComparison.OrdinalIgnoreCase))
                         {
                             panel1.Visible = false;
                             panel2.Visible = true;
+                            OTPForm oTPForm = new OTPForm(textBox2.Text, "Cottage BNB OTP confirmation email", "Your otp is : \n");
+                            this.Hide();
+                            oTPForm.ShowDialog();
                             break;
                         }
                     }
