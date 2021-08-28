@@ -1366,11 +1366,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            Email.sendEmail("216036774@stu.ukzn.ac.za", "Subject Line for our emails", "Hey There We are testing the mailing fuctionality");
-        }
     }
 }
 
