@@ -6,7 +6,7 @@ using System.Collections;
 using System.Windows.Forms;
 using System.Net.Mail;
 
-namespace WindowsFormsApp1   
+namespace WindowsFormsApp1
 {
     public static class Email
     {
@@ -26,10 +26,10 @@ namespace WindowsFormsApp1
         }
         public static void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
-            
+
             try
             {
-                send(toEmail,emailSubject,emailBody);
+                send(toEmail, emailSubject, emailBody);
             }
             catch (Exception ex)
             {
@@ -44,28 +44,82 @@ namespace WindowsFormsApp1
 
         public static string invoiceBody()  //this method will just creating some structure for the booking invoice email
         {
-            string body = "Dear ";
+            string htmlTrStart = "<tr style=\"color:#555555;\">";
+            string htmlTrEnd = "</tr>";
+            string htmlTdStart = "<td style=\" border-color:#5c87b2; border-style:solid; border-width:thin; padding: 5px;\">";
+            string htmlTdEnd = "</td>";
 
-            return body;
+            string messageBody = "<font>Dear " + customerName + "</font><br><br>";
+            messageBody += "<table style=\"border-collapse:collapse; text-align:center;\" >";
+            messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">";
+
+            messageBody += htmlTdStart + "Parameters" + htmlTdEnd + htmlTdStart + "Values" + htmlTdEnd;
+            messageBody += "</tr>";
+
+            messageBody += htmlTrStart + htmlTdStart + "Booking Reference" + htmlTdEnd + htmlTdStart + bookingID + htmlTdEnd + htmlTrEnd;
+            messageBody += htmlTrStart + htmlTdStart + "Name" +              htmlTdEnd + htmlTdStart + customerName + htmlTdEnd + htmlTrEnd;
+
+            messageBody += "</table>";
+            return messageBody; // return HTML Table as string from this function  
+
+            //original Code 
+            /*
+            try
+            {
+                string messageBody = "<font>The following are the records: </font><br><br>";
+                if (grid.RowCount == 0) return messageBody;
+                string htmlTableStart = "<table style=\"border-collapse:collapse; text-align:center;\" >";
+                string htmlTableEnd = "</table>";
+                string htmlHeaderRowStart = "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">";
+                string htmlHeaderRowEnd = "</tr>";
+                string htmlTrStart = "<tr style=\"color:#555555;\">";
+                string htmlTrEnd = "</tr>";
+                string htmlTdStart = "<td style=\" border-color:#5c87b2; border-style:solid; border-width:thin; padding: 5px;\">";
+                string htmlTdEnd = "</td>";
+                messageBody += htmlTableStart;
+                messageBody += htmlHeaderRowStart;
+                messageBody += htmlTdStart + "Student Name" + htmlTdEnd;
+                messageBody += htmlTdStart + "DOB" + htmlTdEnd;
+                messageBody += htmlTdStart + "Email" + htmlTdEnd;
+                messageBody += htmlTdStart + "Mobile" + htmlTdEnd;
+                messageBody += htmlHeaderRowEnd;
+                //Loop all the rows from grid vew and added to html td  
+                for (int i = 0; i <= grid.RowCount - 1; i++)
+                {
+                    messageBody = messageBody + htmlTrStart;
+                    messageBody = messageBody + htmlTdStart + grid.Rows[i].Cells[0].Value + htmlTdEnd; //adding student name  
+                    messageBody = messageBody + htmlTdStart + grid.Rows[i].Cells[1].Value + htmlTdEnd; //adding DOB  
+                    messageBody = messageBody + htmlTdStart + grid.Rows[i].Cells[2].Value + htmlTdEnd; //adding Email  
+                    messageBody = messageBody + htmlTdStart + grid.Rows[i].Cells[3].Value + htmlTdEnd; //adding Mobile  
+                    messageBody = messageBody + htmlTrEnd;
+                }
+                messageBody = messageBody + htmlTableEnd;
+                return messageBody; // return HTML Table as string from this function  
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            */
         }
 
         //these fields needs to be updated at some point of the program runtime, So they could be used to generate invoice.
         //these are initialized in admin form, around line 775 to line 788
-        public static string customerName;      
+        public static string customerName;
         public static string customerSurname;
         public static string customerIdNumber;
-        public static string customerEmail;     
-        public static string bookingID;         
+        public static string customerEmail;
+        public static string bookingID;
         public static string bookingStatus;   //initailized at line 788 of adminForm, then updated at line 203 of paymentForm  
-        public static string bookingMethod;    
-        public static string dateIn;            
-        public static string dateOut;           
-        public static string numberOfNights;   
-        public static string numberOfSingles;  
-        public static string numberOfDoubles;  
-        public static string singleRoomIDs;    
-        public static string doubleRoomIDs;    
-        public static string amountDue;         
+        public static string bookingMethod;
+        public static string dateIn;
+        public static string dateOut;
+        public static string numberOfNights;
+        public static string numberOfSingles;
+        public static string numberOfDoubles;
+        public static string singleRoomIDs;
+        public static string doubleRoomIDs;
+        public static string amountDue;
     }
 
     public static class currentUser
@@ -112,9 +166,9 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
             //Application.Run(new adminForm());
-           //Application.Run(new managerForm());
+            //Application.Run(new managerForm());
         }
     }
 }
