@@ -412,7 +412,7 @@ namespace WindowsFormsApp1
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(183, 29);
             this.label75.TabIndex = 2;
-            this.label75.Text = "R500 per night";
+            this.label75.Text = "R800 per night";
             // 
             // label72
             // 
@@ -443,7 +443,7 @@ namespace WindowsFormsApp1
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(183, 29);
             this.label76.TabIndex = 3;
-            this.label76.Text = "R350 per night";
+            this.label76.Text = "R450 per night";
             // 
             // label71
             // 
