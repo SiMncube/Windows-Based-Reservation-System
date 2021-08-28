@@ -4,9 +4,35 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace WindowsFormsApp1   
 {
+    public static class Email
+    {
+        public static void sendEmail(string toEmail, string emailSubject, string emailBody)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress("TheCottageGroup7@gmail.com");
+                mail.To.Add(toEmail);
+                mail.Subject = emailSubject;
+                mail.Body = emailBody;
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+                MessageBox.Show("mail Send");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+    }
+
     public static class currentUser
     {
         private static string emailID;

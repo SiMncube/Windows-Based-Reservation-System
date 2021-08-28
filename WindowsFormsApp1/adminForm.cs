@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Mail;
 
 namespace WindowsFormsApp1
 {
@@ -1368,30 +1367,9 @@ namespace WindowsFormsApp1
 
         }
 
-        public void sendEmail(string toEmail, string emailSubject, string emailBody)
-        {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("TheCottageGroup7@gmail.com");
-                mail.To.Add(toEmail);
-                mail.Subject = emailSubject;
-                mail.Body = emailBody;
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
-                SmtpServer.EnableSsl = true;
-                SmtpServer.Send(mail);
-                MessageBox.Show("mail Send");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
         private void button19_Click(object sender, EventArgs e)
         {
-            sendEmail("sinxasane@gmail.com", "Urban Threshold Email Client Test", "Hey There Am just testing the mailing fuctionality");
+            Email.sendEmail("216036774@stu.ukzn.ac.za", "Subject Line for our emails", "Hey There We are testing the mailing fuctionality");
         }
     }
 }
