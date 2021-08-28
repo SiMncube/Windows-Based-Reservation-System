@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         }
 
         //these fields needs to be updated at some point of the program runtime, So they could be used to generate invoice.
-        //these are initialized in admin form, around line 770 to line 788
+        //these are initialized in admin form, around line 775 to line 788
         public static string customerName;      
         public static string customerSurname;
         public static string customerIdNumber;
