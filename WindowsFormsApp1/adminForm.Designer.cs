@@ -393,6 +393,7 @@ namespace WindowsFormsApp1
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label75);
             this.panel14.Controls.Add(this.label72);
             this.panel14.Location = new System.Drawing.Point(1014, 370);
@@ -423,6 +424,7 @@ namespace WindowsFormsApp1
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.label76);
             this.panel13.Controls.Add(this.label71);
             this.panel13.Location = new System.Drawing.Point(175, 369);
