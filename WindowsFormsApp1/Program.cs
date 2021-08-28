@@ -49,20 +49,22 @@ namespace WindowsFormsApp1
 
         }
 
-        //these field needs to be updated at some point of the program runtime, So they could be used to generate invoice
-        public static string bookingID;
-        public static string customerName;
-        public static string customerSurname;
-        public static string customerEmail;
-        public static string bookingStatus;
-        public static string noNight;
-        public static string dateIn;
-        public static string dateOut;
-        public static string noSingles;
-        public static string noDoubles;
-        public static string singleRoomsList;
-        public static string doubleRoomsList;
-        public static string amountDue;
+        //these fields needs to be updated at some point of the program runtime, So they could be used to generate invoice.
+        public static string customerName;      //
+        public static string customerSurname;   //
+        //these are initialized in admin form, around line 777 to line 788
+        public static string customerEmail;     
+        public static string bookingID;         
+        public static string bookingStatus;     
+        public static string bookingMethod;    
+        public static string dateIn;            
+        public static string dateOut;           
+        public static string numberOfNights;   
+        public static string numberOfSingles;  
+        public static string numberOfDoubles;  
+        public static string singleRoomIDs;    
+        public static string doubleRoomIDs;    
+        public static string amountDue;         
     }
 
     public static class currentUser

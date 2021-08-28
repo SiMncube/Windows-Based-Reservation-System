@@ -772,6 +772,20 @@ namespace WindowsFormsApp1
 
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+
+            //These initailizes the invoice field
+            Email.customerEmail = currentCustomerEmailID;
+            Email.bookingID = summaryID.ToString();
+            Email.bookingStatus = bookingStatus;
+            Email.bookingMethod = bookingMethod;
+            Email.dateIn = dateIn.ToString();
+            Email.dateOut = dateOut.ToString();
+            Email.numberOfNights = numberOfNights.ToString();
+            Email.numberOfSingles = singleAllocatedRooms.Length.ToString();
+            Email.numberOfDoubles = doubleAllocatedRooms.Length.ToString();
+            Email.singleRoomIDs = singleAllocatedRooms.ToString();
+            Email.doubleRoomIDs = doubleAllocatedRooms.ToString();
+            Email.amountDue = callAmountDueMethod; 
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
