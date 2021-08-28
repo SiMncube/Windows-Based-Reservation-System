@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             if(signUIsValid())
             {
                 string temp = randomOTP();
-                Email.sendEmail(textBox7.Text, "Sign up OTP confirmation", "You OTP is " + temp);
+                Email.sendEmail(textBox7.Text, "Sign up OTP confirmation", "You OTP is : " + temp);
                 panel1.Visible = false;
                 panel6.Visible = true;
             }
