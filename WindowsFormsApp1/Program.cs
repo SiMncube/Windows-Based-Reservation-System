@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             mail.From = new MailAddress("TheCottageGroup7@gmail.com");
             mail.To.Add(toEmail);
             mail.Subject = emailSubject;
-            mail.IsBodyHtml = true; //to make message body as html could be commented out.
+            mail.IsBodyHtml = true;  //to make message body as html could be commented out.
             mail.Body = emailBody;
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
@@ -46,19 +46,16 @@ namespace WindowsFormsApp1
         public static string invoiceBody()  //this method will just creating some structure for the booking invoice email
         {
             string htmlTrStart = "<tr style=\"color:#555555;\">";
-            string htmlTrEnd = "</tr>";
             string htmlTdStart = "<td style=\" border-color:#5c87b2; border-style:solid; border-width:thin; padding: 5px;\">";
-            string htmlTdEnd = "</td>";
 
             string messageBody = "<font>Dear " + customerName + "</font><br><br>";
+            messageBody += "<font> Here Is Your Reservations Invoice, We're Looking Forward To Having You Again As Our Guest.</font><br><br>";
             messageBody += "<table style=\"border-collapse:collapse; text-align:center;\" >";
-            messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">";
 
-            messageBody += htmlTdStart + "Parameters" + htmlTdEnd + htmlTdStart + "Values" + htmlTdEnd;
-            messageBody += "</tr>";
+            messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">" + htmlTdStart + "Booking Details </td>" + htmlTdStart + " Values + </td></tr>";
 
-            messageBody += htmlTrStart + htmlTdStart + "Booking Reference" + htmlTdEnd + htmlTdStart + bookingID + htmlTdEnd + htmlTrEnd;
-            messageBody += htmlTrStart + htmlTdStart + "Name" +              htmlTdEnd + htmlTdStart + customerName + htmlTdEnd + htmlTrEnd;
+            messageBody += htmlTrStart + htmlTdStart + "Booking Reference </td>" + htmlTdStart + bookingID + "</td></tr> ";
+            messageBody += htmlTrStart + htmlTdStart + "Name </td>" + htmlTdStart + customerName + "</td></tr> ";
 
             messageBody += "</table>";
 
