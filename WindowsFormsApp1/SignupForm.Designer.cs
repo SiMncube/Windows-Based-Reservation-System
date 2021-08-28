@@ -608,7 +608,7 @@ namespace WindowsFormsApp1
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 32);
             this.button4.TabIndex = 69;
-            this.button4.Text = "Register";
+            this.button4.Text = "next";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // SignupForm
