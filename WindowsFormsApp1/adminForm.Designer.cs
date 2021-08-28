@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
@@ -725,11 +725,11 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.label64);
             this.panel5.Controls.Add(this.label63);
             this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.label21);
             this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.label25);
             this.panel5.Controls.Add(this.dateTimePicker1);
             this.panel5.Controls.Add(this.label26);
@@ -739,7 +739,7 @@ namespace WindowsFormsApp1
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(376, 370);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(632, 327);
+            this.panel5.Size = new System.Drawing.Size(632, 301);
             this.panel5.TabIndex = 48;
             // 
             // label70
@@ -747,7 +747,7 @@ namespace WindowsFormsApp1
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label70.Location = new System.Drawing.Point(356, 251);
+            this.label70.Location = new System.Drawing.Point(356, 220);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(64, 20);
             this.label70.TabIndex = 66;
@@ -758,7 +758,7 @@ namespace WindowsFormsApp1
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label69.Location = new System.Drawing.Point(356, 213);
+            this.label69.Location = new System.Drawing.Point(356, 147);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(90, 20);
             this.label69.TabIndex = 65;
@@ -769,7 +769,7 @@ namespace WindowsFormsApp1
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label68.Location = new System.Drawing.Point(356, 174);
+            this.label68.Location = new System.Drawing.Point(356, 105);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(83, 20);
             this.label68.TabIndex = 64;
@@ -780,7 +780,7 @@ namespace WindowsFormsApp1
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label67.Location = new System.Drawing.Point(356, 134);
+            this.label67.Location = new System.Drawing.Point(356, 84);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(95, 20);
             this.label67.TabIndex = 63;
@@ -791,7 +791,7 @@ namespace WindowsFormsApp1
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label66.Location = new System.Drawing.Point(356, 84);
+            this.label66.Location = new System.Drawing.Point(356, 64);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(83, 20);
             this.label66.TabIndex = 62;
@@ -896,9 +896,9 @@ namespace WindowsFormsApp1
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(173, 285);
+            this.button8.Location = new System.Drawing.Point(195, 264);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(287, 37);
+            this.button8.Size = new System.Drawing.Size(287, 28);
             this.button8.TabIndex = 35;
             this.button8.Text = "Save";
             this.button8.UseVisualStyleBackColor = false;
@@ -1676,8 +1676,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
