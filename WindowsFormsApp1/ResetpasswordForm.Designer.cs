@@ -65,12 +65,23 @@ namespace WindowsFormsApp1
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // customerTableAdapter1
@@ -216,7 +227,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(132, 138);
+            this.panel2.Location = new System.Drawing.Point(550, 187);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(353, 258);
             this.panel2.TabIndex = 43;
@@ -387,7 +398,7 @@ namespace WindowsFormsApp1
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(718, 100);
+            this.panel3.Location = new System.Drawing.Point(116, 229);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 258);
             this.panel3.TabIndex = 44;
@@ -426,7 +437,6 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(-6, -1);
@@ -518,6 +528,119 @@ namespace WindowsFormsApp1
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 0;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.button3);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.button13);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Location = new System.Drawing.Point(909, 187);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(353, 258);
+            this.panel6.TabIndex = 47;
+            this.panel6.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(145, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox1.Location = new System.Drawing.Point(69, 143);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 27);
+            this.textBox1.TabIndex = 53;
+            this.textBox1.Text = "Enter OTP";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
+            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button3.Location = new System.Drawing.Point(212, 225);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 23);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "Resend";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label15.Location = new System.Drawing.Point(73, 228);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 16);
+            this.label15.TabIndex = 51;
+            this.label15.Text = "Did not receive the code?";
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(69, 191);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(206, 34);
+            this.button13.TabIndex = 50;
+            this.button13.Text = "Confirm code";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label16.Location = new System.Drawing.Point(66, 85);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(209, 32);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "We have sent you an email with 6 digit\r\nverification code (OTP) on\r\n";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(118, 58);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 18);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "Enter Code";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(66, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(109, 15);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "OTP is incorrect";
+            this.label18.Visible = false;
+            // 
             // ResetpasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,9 +648,11 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "ResetpasswordForm";
@@ -544,6 +669,9 @@ namespace WindowsFormsApp1
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,5 +713,14 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }
