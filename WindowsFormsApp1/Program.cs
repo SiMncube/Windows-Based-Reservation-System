@@ -47,9 +47,17 @@ namespace WindowsFormsApp1
         {
             string htmlTdStart = "<td style=\" border-color:#5c87b2; border-style:solid; border-width:thin; padding: 5px;\">";
             string messageBody = "<font>Dear " + customerName + ",</font><br><br>";
-            messageBody += "<font> Thank you for your payment, your booking has been confirmed.</font><br><br>";
-            messageBody += "<font> Here Is Your Invoice, We're Looking Forward To Having You As Our Guest.</font><br><br>";
-            messageBody += "<table style=\"border-collapse:collapse; text-align:center;\" >";
+            if (isModify)
+            {
+                messageBody += "<font> Your booking with ref: " + oldBookingID + "has been successfully modified.</font><br><br>";
+                messageBody += "<font> Here Is Modified Invoice, We're Looking Forward To Having You As Our Guest.</font><br><br>";
+            }
+            else
+            {
+                messageBody += "<font> Thank you for your payment, your booking has been confirmed.</font><br><br>";
+                messageBody += "<font> Here Is Your Invoice, We're Looking Forward To Having You As Our Guest.</font><br><br>";
+            }
+            messageBody += "<table style=\"border-collapse:collapse; text-align:center;\">";
 
             messageBody += "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">" + htmlTdStart + "Booking Details </td>" + htmlTdStart + " Values </td></tr>"; //table header or first row
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booking Reference </td>" + htmlTdStart + bookingID + "</td></tr> ";
@@ -133,6 +141,10 @@ namespace WindowsFormsApp1
         public static string singleRoomIDs;
         public static string doubleRoomIDs;
         public static string amountDue;
+
+        public static bool isModify = false;
+        public static string oldBookingID;
+        public static string refund;
     }
 
     public static class currentUser
