@@ -10,25 +10,30 @@ namespace WindowsFormsApp1
 {
     public static class Email
     {
+        private static void send(string toEmail, string emailSubject, string emailBody)
+        {
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+            mail.From = new MailAddress("TheCottageGroup7@gmail.com");
+            mail.To.Add(toEmail);
+            mail.Subject = emailSubject;
+            mail.Body = emailBody;
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
+            SmtpServer.EnableSsl = true;
+            SmtpServer.Send(mail);
+            MessageBox.Show("mail Send");
+        }
         public static void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
+            
             try
             {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("TheCottageGroup7@gmail.com");
-                mail.To.Add(toEmail);
-                mail.Subject = emailSubject;
-                mail.Body = emailBody;
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
-                SmtpServer.EnableSsl = true;
-                SmtpServer.Send(mail);
-                MessageBox.Show("mail Send");
+                send(toEmail,emailSubject,emailBody);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                send(toEmail, emailSubject, emailBody);
             }
         }
 
