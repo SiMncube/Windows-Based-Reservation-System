@@ -1375,9 +1375,9 @@ namespace WindowsFormsApp1
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                 mail.From = new MailAddress("TheCottageGroup7@gmail.com");
-                mail.To.Add("sinxasane@gmail.com");
-                mail.Subject = "Urban Threshold Email Client Test";
-                mail.Body = "Hey There Am just testing the mailing fuctionality";
+                mail.To.Add(toEmail);
+                mail.Subject = emailSubject;
+                mail.Body = emailBody;
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
                 SmtpServer.EnableSsl = true;
@@ -1391,7 +1391,7 @@ namespace WindowsFormsApp1
         }
         private void button19_Click(object sender, EventArgs e)
         {
-            sendEmail();
+            sendEmail("sinxasane@gmail.com", "Urban Threshold Email Client Test", "Hey There Am just testing the mailing fuctionality");
         }
     }
 }
