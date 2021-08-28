@@ -795,6 +795,7 @@ namespace WindowsFormsApp1
             Email.singleRoomIDs = singleAllocatedRooms.ToString();
             Email.doubleRoomIDs = doubleAllocatedRooms.ToString();
             Email.amountDue = callAmountDueMethod;
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

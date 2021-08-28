@@ -49,11 +49,6 @@ namespace WindowsFormsApp1
             return body;
         }
 
-        public static void updateBookingInvoice()
-        {
-
-        }
-
         //these fields needs to be updated at some point of the program runtime, So they could be used to generate invoice.
         //these are initialized in admin form, around line 775 to line 788
         public static string customerName;      
@@ -61,7 +56,7 @@ namespace WindowsFormsApp1
         public static string customerIdNumber;
         public static string customerEmail;     
         public static string bookingID;         
-        public static string bookingStatus;     
+        public static string bookingStatus;   //initailized at line 788 of adminForm, then updated at line 203 of paymentForm  
         public static string bookingMethod;    
         public static string dateIn;            
         public static string dateOut;           
