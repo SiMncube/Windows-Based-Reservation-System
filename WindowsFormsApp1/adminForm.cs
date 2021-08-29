@@ -1420,6 +1420,11 @@ namespace WindowsFormsApp1
         {
 
         }
+        //############################################################ Admin sign up OTP ################################################
+        private void button20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
