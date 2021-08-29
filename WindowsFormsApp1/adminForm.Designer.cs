@@ -1964,7 +1964,6 @@ namespace WindowsFormsApp1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
-            this.tabPage1.Controls.Add(this.panel15);
             this.tabPage1.Controls.Add(this.panel11);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.label12);
@@ -2048,6 +2047,7 @@ namespace WindowsFormsApp1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label9);
@@ -2954,7 +2954,7 @@ namespace WindowsFormsApp1
             this.panel15.Controls.Add(this.button20);
             this.panel15.Controls.Add(this.label79);
             this.panel15.Controls.Add(this.label80);
-            this.panel15.Location = new System.Drawing.Point(112, 214);
+            this.panel15.Location = new System.Drawing.Point(25, 39);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(353, 282);
             this.panel15.TabIndex = 48;
