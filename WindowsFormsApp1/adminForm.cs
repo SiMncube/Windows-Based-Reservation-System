@@ -89,7 +89,10 @@ namespace WindowsFormsApp1
         {
             if (signUIsValid())
             {
-                regeisterCust();
+                string temp = randomOTP();
+                Email.sendEmail(emailTextBox.Text, "Reset password OTP confirmation", "You OTP is " + temp);
+                panel15.Visible = true;
+                panel1.Visible = false;
             }
         }
         private string capFirst(string s)
@@ -1433,6 +1436,7 @@ namespace WindowsFormsApp1
             {
                 panel15.Visible = false;
                 panel1.Visible = true;
+                regeisterCust();
             }
             else
             {
