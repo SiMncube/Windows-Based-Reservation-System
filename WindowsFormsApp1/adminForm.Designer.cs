@@ -2956,7 +2956,7 @@ namespace WindowsFormsApp1
             this.panel15.Controls.Add(this.label80);
             this.panel15.Location = new System.Drawing.Point(112, 228);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(353, 258);
+            this.panel15.Size = new System.Drawing.Size(353, 282);
             this.panel15.TabIndex = 48;
             this.panel15.Visible = false;
             // 
@@ -2996,10 +2996,11 @@ namespace WindowsFormsApp1
             // 
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button19.Location = new System.Drawing.Point(212, 225);
+            this.button19.Location = new System.Drawing.Point(197, 228);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(60, 23);
+            this.button19.Size = new System.Drawing.Size(78, 28);
             this.button19.TabIndex = 52;
             this.button19.Text = "Resend";
             this.button19.UseVisualStyleBackColor = true;
@@ -3010,7 +3011,7 @@ namespace WindowsFormsApp1
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label78.Location = new System.Drawing.Point(73, 228);
+            this.label78.Location = new System.Drawing.Point(66, 235);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(143, 16);
             this.label78.TabIndex = 51;
@@ -3029,6 +3030,7 @@ namespace WindowsFormsApp1
             this.button20.TabIndex = 50;
             this.button20.Text = "Confirm code";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label79
             // 
