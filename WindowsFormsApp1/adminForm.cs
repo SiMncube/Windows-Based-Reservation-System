@@ -1432,7 +1432,7 @@ namespace WindowsFormsApp1
         //############################################################ Admin sign up OTP ################################################
         private void button20_Click(object sender, EventArgs e)
         {
-            if (textBox9.Text == this.otp)
+            if (textBox9.Text.Trim() == this.otp)
             {
                 panel15.Visible = false;
                 panel1.Visible = true;
@@ -1462,6 +1462,24 @@ namespace WindowsFormsApp1
         {
             string temp = randomOTP();
             Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
+        }
+
+        private void textBox9_MouseEnter(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "Enter OTP")
+            {
+                textBox9.Text = null;
+                textBox9.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox9_MouseLeave(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "")
+            {
+                textBox9.Text = "Enter OTP";
+                textBox9.ForeColor = Color.Gray;
+            }
         }
     }
 }
