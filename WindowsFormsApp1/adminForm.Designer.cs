@@ -2954,7 +2954,7 @@ namespace WindowsFormsApp1
             this.panel15.Controls.Add(this.button20);
             this.panel15.Controls.Add(this.label79);
             this.panel15.Controls.Add(this.label80);
-            this.panel15.Location = new System.Drawing.Point(112, 228);
+            this.panel15.Location = new System.Drawing.Point(112, 214);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(353, 282);
             this.panel15.TabIndex = 48;
