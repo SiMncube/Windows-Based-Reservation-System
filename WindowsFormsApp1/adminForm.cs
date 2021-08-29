@@ -1429,7 +1429,18 @@ namespace WindowsFormsApp1
         //############################################################ Admin sign up OTP ################################################
         private void button20_Click(object sender, EventArgs e)
         {
-
+            if (textBox9.Text == this.otp)
+            {
+                panel15.Visible = false;
+                panel1.Visible = true;
+            }
+            else
+            {
+                label77.Visible = true;
+                check++;
+                if (check > 1)
+                    button19.Visible = true;
+            }
         }
         public string randomOTP()
         {
