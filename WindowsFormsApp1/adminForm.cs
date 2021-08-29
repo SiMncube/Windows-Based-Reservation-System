@@ -1364,6 +1364,7 @@ namespace WindowsFormsApp1
             {
                 dataRow[i] = dataGridView3.CurrentRow.Cells[i].Value;
             }
+
             label55.Visible = false;
             label56.Visible = false;
             updateTextBox(textBox7, dataRow[0].ToString());
@@ -1381,6 +1382,7 @@ namespace WindowsFormsApp1
             fullDs1.Clear();
             label4.Visible = false;
         }
+
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
             customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
