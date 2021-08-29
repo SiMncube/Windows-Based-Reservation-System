@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     public partial class SignupForm : Form
     {
         Timer timer = new Timer();
+        private string otp;
+        private int check = 0;
         public SignupForm()
         {
             InitializeComponent();
@@ -26,12 +28,11 @@ namespace WindowsFormsApp1
             toolTip1.SetToolTip(textBox10, "Must be 10 digits");
             toolTip1.SetToolTip(textBox12, "Must be 13 digits");
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void register()
         {
-            if(signUIsValid())
-            {
+           
                 panel1.Enabled = false;
-                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text,textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
+                customerTableAdapter1.Insert(capFirst(textBox7.Text), capFirst(textBox1.Text), capFirst(textBox2.Text), textBox12.Text, textBox10.Text, textBox8.Text, capFirst(textBox3.Text), capFirst(textBox4.Text), capFirst(textBox5.Text), textBox6.Text);
                 label9.Visible = true;
                 Timer timer1 = new Timer();
                 Timer timer2 = new Timer();
@@ -52,6 +53,16 @@ namespace WindowsFormsApp1
                 timer2.Start();
                 timer3.Start();
                 timer4.Start();
+            
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(signUIsValid())
+            {
+                string temp = randomOTP();
+                Email.sendEmail(textBox7.Text, "Sign up OTP confirmation", "You OTP is : " + temp);
+                panel1.Visible = false;
+                panel6.Visible = true;
             }
             
         }
@@ -517,10 +528,48 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OTPForm o = new OTPForm();
+            OTPForm o = new OTPForm(textBox7.Text,"Please confirm your email","OTP = ");
             this.Hide();
             o.ShowDialog();
             this.Close();
+        }
+        public string randomOTP()
+        {
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string temp = randNum.ToString("D6");
+            otp = temp;
+            string random = null;
+            for (int i = 0; i < 6; i++)
+                random += temp[i] + " ";
+            return random;
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == this.otp)
+            {
+                panel6.Visible = false;
+                panel1.Visible = true;
+                register();
+            }
+            else
+            {
+                label18.Visible = true;
+                check++;
+                if (check > 1)
+                    button3.Visible = true;
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            label18.Visible = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            string temp = randomOTP();
+            Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
         }
     }
 }
