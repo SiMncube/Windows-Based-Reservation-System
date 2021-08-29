@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
 {
     public partial class adminForm : Form
     {
+        private string otp;
+        private int check = 0;
         public adminForm()
         {
             InitializeComponent();
@@ -51,39 +53,43 @@ namespace WindowsFormsApp1
             }
             return admin;
         }
+        private void regeisterCust()
+        {
+            customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+            bookingInnerTa.Fill(fullDs.BookingInner);
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+            customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
+            label9.Visible = true;
+            firtNameTextBox.Text = "First name";
+            firtNameTextBox.ForeColor = Color.Gray;
+            lastNameTextBox.Text = "Last name";
+            lastNameTextBox.ForeColor = Color.Gray;
+            addressLine1TextBox.Text = "Street Address Line 1";
+            addressLine1TextBox.ForeColor = Color.Gray;
+            addressLine2TextBox.Text = "Street Address Line 2";
+            addressLine2TextBox.ForeColor = Color.Gray;
+            cityTextBox.Text = "City";
+            cityTextBox.ForeColor = Color.Gray;
+            postalCodeTextBox.Text = "Postal code";
+            postalCodeTextBox.ForeColor = Color.Gray;
+            cellNumberTextBox.Text = "Cell number";
+            cellNumberTextBox.ForeColor = Color.Gray;
+            IDTextBox.Text = "ID number";
+            IDTextBox.ForeColor = Color.Gray;
+            emailTextBox.Text = "Email";
+            emailTextBox.ForeColor = Color.Gray;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (signUIsValid())
             {
-                customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
-                bookingInnerTa.Fill(fullDs.BookingInner);
-                paymentTa.Fill(fullDs.Payment);
-                bookingSummaryTa.Fill(fullDs.BookingSummary);
-                viewBookingInnerTa.Fill(fullDs.viewBookingInner);
-                staffTa.Fill(fullDs.Staff);
-                modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
-                customerTa.Fill(fullDs.Customer);
-                customer1Ta1.Fill(fullDs.Customer1);
-                bookedRoomTa.Fill(fullDs.BookedRoom);
-                label9.Visible = true;
-                firtNameTextBox.Text = "First name";
-                firtNameTextBox.ForeColor = Color.Gray;
-                lastNameTextBox.Text = "Last name";
-                lastNameTextBox.ForeColor = Color.Gray;
-                addressLine1TextBox.Text = "Street Address Line 1";
-                addressLine1TextBox.ForeColor = Color.Gray;
-                addressLine2TextBox.Text = "Street Address Line 2";
-                addressLine2TextBox.ForeColor = Color.Gray;
-                cityTextBox.Text = "City";
-                cityTextBox.ForeColor = Color.Gray;
-                postalCodeTextBox.Text = "Postal code";
-                postalCodeTextBox.ForeColor = Color.Gray;
-                cellNumberTextBox.Text = "Cell number";
-                cellNumberTextBox.ForeColor = Color.Gray;
-                IDTextBox.Text = "ID number";
-                IDTextBox.ForeColor = Color.Gray;
-                emailTextBox.Text = "Email";
-                emailTextBox.ForeColor = Color.Gray;
+                regeisterCust();
             }
         }
         private string capFirst(string s)
@@ -1424,6 +1430,23 @@ namespace WindowsFormsApp1
         private void button20_Click(object sender, EventArgs e)
         {
 
+        }
+        public string randomOTP()
+        {
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string temp = randNum.ToString("D6");
+            otp = temp;
+            string random = null;
+            for (int i = 0; i < 6; i++)
+                random += temp[i] + " ";
+            return random;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            string temp = randomOTP();
+            Email.sendEmail(textBox2.Text, "Reset password OTP confirmation", "You OTP is " + temp);
         }
     }
 }

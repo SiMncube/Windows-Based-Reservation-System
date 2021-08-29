@@ -3005,6 +3005,7 @@ namespace WindowsFormsApp1
             this.button19.Text = "Resend";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // label78
             // 
