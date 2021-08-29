@@ -2991,6 +2991,7 @@ namespace WindowsFormsApp1
             this.textBox9.Size = new System.Drawing.Size(206, 27);
             this.textBox9.TabIndex = 53;
             this.textBox9.Text = "Enter OTP";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             this.textBox9.MouseEnter += new System.EventHandler(this.textBox9_MouseEnter);
             this.textBox9.MouseLeave += new System.EventHandler(this.textBox9_MouseLeave);
             // 

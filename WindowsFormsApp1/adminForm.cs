@@ -1493,6 +1493,11 @@ namespace WindowsFormsApp1
                 textBox9.ForeColor = Color.Gray;
             }
         }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            label77.Visible = false;
+        }
     }
 }
 
