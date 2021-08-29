@@ -38,6 +38,8 @@ namespace WindowsFormsApp1
             this.modifyBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.galleryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fAQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDatabase = new WindowsFormsApp1.fullDatabase();
@@ -67,8 +69,6 @@ namespace WindowsFormsApp1
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fAQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -150,9 +150,24 @@ namespace WindowsFormsApp1
             // picturesToolStripMenuItem
             // 
             this.picturesToolStripMenuItem.Name = "picturesToolStripMenuItem";
-            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.picturesToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
             this.picturesToolStripMenuItem.Text = "Pictures";
             this.picturesToolStripMenuItem.Click += new System.EventHandler(this.picturesToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fAQToolStripMenuItem});
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // fAQToolStripMenuItem
+            // 
+            this.fAQToolStripMenuItem.Name = "fAQToolStripMenuItem";
+            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(120, 28);
+            this.fAQToolStripMenuItem.Text = "FAQ";
             // 
             // label1
             // 
@@ -424,7 +439,7 @@ namespace WindowsFormsApp1
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(354, 29);
             this.label18.TabIndex = 2;
-            this.label18.Text = "Double Room at R500 per Night";
+            this.label18.Text = "Double Room at R800 per Night";
             // 
             // label17
             // 
@@ -435,7 +450,8 @@ namespace WindowsFormsApp1
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(345, 29);
             this.label17.TabIndex = 1;
-            this.label17.Text = "Single Room at R350 per Night";
+            this.label17.Text = "Single Room at R450 per Night";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -448,21 +464,6 @@ namespace WindowsFormsApp1
             this.label16.TabIndex = 0;
             this.label16.Text = "Great Prices at";
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fAQToolStripMenuItem});
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // fAQToolStripMenuItem
-            // 
-            this.fAQToolStripMenuItem.Name = "fAQToolStripMenuItem";
-            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.fAQToolStripMenuItem.Text = "FAQ";
             // 
             // Homepage
             // 
