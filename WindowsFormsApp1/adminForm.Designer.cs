@@ -273,6 +273,15 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label77 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -316,6 +325,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -1953,6 +1964,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.Controls.Add(this.panel15);
             this.tabPage1.Controls.Add(this.panel11);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.label12);
@@ -2930,6 +2942,115 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.label77);
+            this.panel15.Controls.Add(this.pictureBox5);
+            this.panel15.Controls.Add(this.textBox9);
+            this.panel15.Controls.Add(this.button19);
+            this.panel15.Controls.Add(this.label78);
+            this.panel15.Controls.Add(this.button20);
+            this.panel15.Controls.Add(this.label79);
+            this.panel15.Controls.Add(this.label80);
+            this.panel15.Location = new System.Drawing.Point(112, 228);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(353, 258);
+            this.panel15.TabIndex = 48;
+            this.panel15.Visible = false;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.Red;
+            this.label77.Location = new System.Drawing.Point(66, 125);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(109, 15);
+            this.label77.TabIndex = 55;
+            this.label77.Text = "OTP is incorrect";
+            this.label77.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_email_open_48;
+            this.pictureBox5.Location = new System.Drawing.Point(145, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 54;
+            this.pictureBox5.TabStop = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox9.Location = new System.Drawing.Point(69, 143);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(206, 27);
+            this.textBox9.TabIndex = 53;
+            this.textBox9.Text = "Enter OTP";
+            // 
+            // button19
+            // 
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button19.Location = new System.Drawing.Point(212, 225);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(60, 23);
+            this.button19.TabIndex = 52;
+            this.button19.Text = "Resend";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Visible = false;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label78.Location = new System.Drawing.Point(73, 228);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(143, 16);
+            this.label78.TabIndex = 51;
+            this.label78.Text = "Did not receive the code?";
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(69, 191);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(206, 34);
+            this.button20.TabIndex = 50;
+            this.button20.Text = "Confirm code";
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label79.Location = new System.Drawing.Point(66, 85);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(209, 32);
+            this.label79.TabIndex = 49;
+            this.label79.Text = "We have sent you an email with 6 digit\r\nverification code (OTP) on\r\n";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(118, 58);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(98, 18);
+            this.label80.TabIndex = 48;
+            this.label80.Text = "Enter Code";
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3003,6 +3124,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3249,5 +3373,14 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
     }
 }
