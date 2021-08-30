@@ -234,8 +234,20 @@
     <EmbeddedResource Include="BookingReport.resx">
       <DependentUpon>BookingReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpCancel.resx">
+      <DependentUpon>HelpCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpFirstTimeCus.resx">
+      <DependentUpon>HelpFirstTimeCus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelpMakeBooking.resx">
       <DependentUpon>HelpMakeBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpModifycs.resx">
+      <DependentUpon>HelpModifycs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpUpdate.resx">
+      <DependentUpon>HelpUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentReport.resx">
       <DependentUpon>PaymentReport.cs</DependentUpon>

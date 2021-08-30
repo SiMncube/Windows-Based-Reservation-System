@@ -16,5 +16,13 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            adminForm f = new adminForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
