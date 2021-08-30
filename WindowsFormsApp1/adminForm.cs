@@ -1498,6 +1498,14 @@ namespace WindowsFormsApp1
         {
             label77.Visible = false;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpMakeBooking one = new HelpMakeBooking();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
 

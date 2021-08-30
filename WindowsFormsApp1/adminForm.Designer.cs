@@ -190,6 +190,15 @@ namespace WindowsFormsApp1
             this.button3 = new System.Windows.Forms.Button();
             this.label60 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label77 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -273,15 +282,12 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label77 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.label78 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkCancel = new System.Windows.Forms.LinkLabel();
+            this.linkUpdate = new System.Windows.Forms.LinkLabel();
+            this.linkFirstTimeCus = new System.Windows.Forms.LinkLabel();
+            this.linkModify = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -312,6 +318,8 @@ namespace WindowsFormsApp1
             this.tabPage1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -325,8 +333,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewBookingInnerBindingSource
@@ -2075,6 +2083,121 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(395, 442);
             this.panel1.TabIndex = 2;
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.label77);
+            this.panel15.Controls.Add(this.pictureBox5);
+            this.panel15.Controls.Add(this.textBox9);
+            this.panel15.Controls.Add(this.button19);
+            this.panel15.Controls.Add(this.label78);
+            this.panel15.Controls.Add(this.button20);
+            this.panel15.Controls.Add(this.label79);
+            this.panel15.Controls.Add(this.label80);
+            this.panel15.Location = new System.Drawing.Point(25, 39);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(353, 282);
+            this.panel15.TabIndex = 48;
+            this.panel15.Visible = false;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.Red;
+            this.label77.Location = new System.Drawing.Point(66, 125);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(109, 15);
+            this.label77.TabIndex = 55;
+            this.label77.Text = "OTP is incorrect";
+            this.label77.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_email_open_48;
+            this.pictureBox5.Location = new System.Drawing.Point(145, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 54;
+            this.pictureBox5.TabStop = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox9.Location = new System.Drawing.Point(69, 143);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(206, 27);
+            this.textBox9.TabIndex = 53;
+            this.textBox9.Text = "Enter OTP";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.textBox9.MouseEnter += new System.EventHandler(this.textBox9_MouseEnter);
+            this.textBox9.MouseLeave += new System.EventHandler(this.textBox9_MouseLeave);
+            // 
+            // button19
+            // 
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button19.Location = new System.Drawing.Point(197, 228);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(78, 28);
+            this.button19.TabIndex = 52;
+            this.button19.Text = "Resend";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label78.Location = new System.Drawing.Point(66, 235);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(143, 16);
+            this.label78.TabIndex = 51;
+            this.label78.Text = "Did not receive the code?";
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(69, 191);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(206, 34);
+            this.button20.TabIndex = 50;
+            this.button20.Text = "Confirm code";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label79.Location = new System.Drawing.Point(66, 85);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(209, 32);
+            this.label79.TabIndex = 49;
+            this.label79.Text = "We have sent you an email with 6 digit\r\nverification code (OTP) on\r\n";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(118, 58);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(98, 18);
+            this.label80.TabIndex = 48;
+            this.label80.Text = "Enter Code";
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2881,6 +3004,7 @@ namespace WindowsFormsApp1
             // tabPage9
             // 
             this.tabPage9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Webp_net_resizeimage;
+            this.tabPage9.Controls.Add(this.panel16);
             this.tabPage9.Location = new System.Drawing.Point(4, 29);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -2942,120 +3066,69 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
-            // panel15
+            // panel16
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.label77);
-            this.panel15.Controls.Add(this.pictureBox5);
-            this.panel15.Controls.Add(this.textBox9);
-            this.panel15.Controls.Add(this.button19);
-            this.panel15.Controls.Add(this.label78);
-            this.panel15.Controls.Add(this.button20);
-            this.panel15.Controls.Add(this.label79);
-            this.panel15.Controls.Add(this.label80);
-            this.panel15.Location = new System.Drawing.Point(25, 39);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(353, 282);
-            this.panel15.TabIndex = 48;
-            this.panel15.Visible = false;
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Controls.Add(this.linkModify);
+            this.panel16.Controls.Add(this.linkFirstTimeCus);
+            this.panel16.Controls.Add(this.linkUpdate);
+            this.panel16.Controls.Add(this.linkCancel);
+            this.panel16.Controls.Add(this.linkLabel1);
+            this.panel16.Location = new System.Drawing.Point(34, 55);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(953, 271);
+            this.panel16.TabIndex = 0;
             // 
-            // label77
+            // linkLabel1
             // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.Red;
-            this.label77.Location = new System.Drawing.Point(66, 125);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(109, 15);
-            this.label77.TabIndex = 55;
-            this.label77.Text = "OTP is incorrect";
-            this.label77.Visible = false;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(324, 66);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(380, 20);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "How to make a booking (For returning customers)";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // pictureBox5
+            // linkCancel
             // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_email_open_48;
-            this.pictureBox5.Location = new System.Drawing.Point(145, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 54;
-            this.pictureBox5.TabStop = false;
+            this.linkCancel.AutoSize = true;
+            this.linkCancel.Location = new System.Drawing.Point(405, 203);
+            this.linkCancel.Name = "linkCancel";
+            this.linkCancel.Size = new System.Drawing.Size(192, 20);
+            this.linkCancel.TabIndex = 1;
+            this.linkCancel.TabStop = true;
+            this.linkCancel.Text = "How to cancel a booking";
             // 
-            // textBox9
+            // linkUpdate
             // 
-            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox9.Location = new System.Drawing.Point(69, 143);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(206, 27);
-            this.textBox9.TabIndex = 53;
-            this.textBox9.Text = "Enter OTP";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            this.textBox9.MouseEnter += new System.EventHandler(this.textBox9_MouseEnter);
-            this.textBox9.MouseLeave += new System.EventHandler(this.textBox9_MouseLeave);
+            this.linkUpdate.AutoSize = true;
+            this.linkUpdate.Location = new System.Drawing.Point(372, 133);
+            this.linkUpdate.Name = "linkUpdate";
+            this.linkUpdate.Size = new System.Drawing.Size(280, 20);
+            this.linkUpdate.TabIndex = 2;
+            this.linkUpdate.TabStop = true;
+            this.linkUpdate.Text = "How to update customer information";
             // 
-            // button19
+            // linkFirstTimeCus
             // 
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button19.Location = new System.Drawing.Point(197, 228);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(78, 28);
-            this.button19.TabIndex = 52;
-            this.button19.Text = "Resend";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Visible = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.linkFirstTimeCus.AutoSize = true;
+            this.linkFirstTimeCus.Location = new System.Drawing.Point(324, 100);
+            this.linkFirstTimeCus.Name = "linkFirstTimeCus";
+            this.linkFirstTimeCus.Size = new System.Drawing.Size(346, 20);
+            this.linkFirstTimeCus.TabIndex = 3;
+            this.linkFirstTimeCus.TabStop = true;
+            this.linkFirstTimeCus.Text = "How to make a booking (First time customer)";
             // 
-            // label78
+            // linkModify
             // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label78.Location = new System.Drawing.Point(66, 235);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(143, 16);
-            this.label78.TabIndex = 51;
-            this.label78.Text = "Did not receive the code?";
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(69, 191);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(206, 34);
-            this.button20.TabIndex = 50;
-            this.button20.Text = "Confirm code";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label79.Location = new System.Drawing.Point(66, 85);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(209, 32);
-            this.label79.TabIndex = 49;
-            this.label79.Text = "We have sent you an email with 6 digit\r\nverification code (OTP) on\r\n";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(118, 58);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(98, 18);
-            this.label80.TabIndex = 48;
-            this.label80.Text = "Enter Code";
+            this.linkModify.AutoSize = true;
+            this.linkModify.Location = new System.Drawing.Point(405, 165);
+            this.linkModify.Name = "linkModify";
+            this.linkModify.Size = new System.Drawing.Size(192, 20);
+            this.linkModify.TabIndex = 4;
+            this.linkModify.TabStop = true;
+            this.linkModify.Text = "How to modify a booking";
             // 
             // adminForm
             // 
@@ -3114,6 +3187,9 @@ namespace WindowsFormsApp1
             this.panel11.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -3130,9 +3206,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3388,5 +3464,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkModify;
+        private System.Windows.Forms.LinkLabel linkFirstTimeCus;
+        private System.Windows.Forms.LinkLabel linkUpdate;
+        private System.Windows.Forms.LinkLabel linkCancel;
     }
 }

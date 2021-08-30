@@ -87,6 +87,36 @@
     <Compile Include="BookingReport.Designer.cs">
       <DependentUpon>BookingReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpCancel.Designer.cs">
+      <DependentUpon>HelpCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpFirstTimeCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpFirstTimeCus.Designer.cs">
+      <DependentUpon>HelpFirstTimeCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpMakeBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpMakeBooking.Designer.cs">
+      <DependentUpon>HelpMakeBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpModifycs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpModifycs.Designer.cs">
+      <DependentUpon>HelpModifycs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpUpdate.Designer.cs">
+      <DependentUpon>HelpUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingReport.resx">
       <DependentUpon>BookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpMakeBooking.resx">
+      <DependentUpon>HelpMakeBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentReport.resx">
       <DependentUpon>PaymentReport.cs</DependentUpon>
