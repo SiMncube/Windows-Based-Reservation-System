@@ -1506,6 +1506,38 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void linkFirstTimeCus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpFirstTimeCus one = new HelpFirstTimeCus();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpUpdate one = new HelpUpdate();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkModify_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpModifycs one = new HelpModifycs();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpCancel one = new HelpCancel();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
 
