@@ -125,6 +125,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button2);
             this.Name = "HelpModifycs";
             this.Text = "HelpModifycs";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -134,6 +134,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button2);
             this.Name = "HelpCancel";
             this.Text = "HelpCancel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

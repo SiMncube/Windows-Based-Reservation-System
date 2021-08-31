@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
         {
             adminForm f = new adminForm();
             this.Hide();
-            f.ShowDialog();
             this.Close();
         }
 
@@ -29,7 +28,6 @@ namespace WindowsFormsApp1
         {
             HelpMakeBooking f = new HelpMakeBooking();
             this.Hide();
-            f.ShowDialog();
             this.Close();
         }
     }

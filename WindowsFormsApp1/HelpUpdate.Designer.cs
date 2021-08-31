@@ -124,6 +124,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button2);
             this.Name = "HelpUpdate";
             this.Text = "HelpUpdate";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

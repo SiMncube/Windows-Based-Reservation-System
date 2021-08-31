@@ -149,6 +149,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "HelpMakeBooking";
             this.Text = "HelpMakeBooking";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

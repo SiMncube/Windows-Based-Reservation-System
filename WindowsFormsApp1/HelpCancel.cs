@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
         {
             adminForm f = new adminForm();
             this.Hide();
-            f.ShowDialog();
             this.Close();
         }
     }
