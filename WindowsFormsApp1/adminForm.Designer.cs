@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             this.label76 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -182,12 +181,8 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label58 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.label60 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label77 = new System.Windows.Forms.Label();
@@ -287,6 +282,14 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label81 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -315,7 +318,6 @@ namespace WindowsFormsApp1
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -414,7 +416,7 @@ namespace WindowsFormsApp1
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label75);
             this.panel14.Controls.Add(this.label72);
-            this.panel14.Location = new System.Drawing.Point(1014, 370);
+            this.panel14.Location = new System.Drawing.Point(1014, 407);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(202, 124);
             this.panel14.TabIndex = 58;
@@ -445,7 +447,7 @@ namespace WindowsFormsApp1
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.label76);
             this.panel13.Controls.Add(this.label71);
-            this.panel13.Location = new System.Drawing.Point(175, 369);
+            this.panel13.Location = new System.Drawing.Point(175, 407);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(195, 124);
             this.panel13.TabIndex = 57;
@@ -473,25 +475,15 @@ namespace WindowsFormsApp1
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel12.Controls.Add(this.label73);
+            this.panel12.Controls.Add(this.label58);
+            this.panel12.Controls.Add(this.label59);
             this.panel12.Controls.Add(this.label74);
             this.panel12.Controls.Add(this.button4);
             this.panel12.Controls.Add(this.label16);
             this.panel12.Location = new System.Drawing.Point(3, 1);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1361, 66);
+            this.panel12.Size = new System.Drawing.Size(1361, 105);
             this.panel12.TabIndex = 56;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label73.Location = new System.Drawing.Point(342, 15);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(657, 46);
-            this.label73.TabIndex = 17;
-            this.label73.Text = "The Cottage BnB Booking System";
             // 
             // label74
             // 
@@ -540,7 +532,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.label33);
             this.panel6.Controls.Add(this.customerDataGridView);
             this.panel6.Controls.Add(this.button10);
-            this.panel6.Location = new System.Drawing.Point(175, 73);
+            this.panel6.Location = new System.Drawing.Point(175, 112);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1041, 289);
             this.panel6.TabIndex = 55;
@@ -755,7 +747,7 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label28);
             this.panel5.Enabled = false;
-            this.panel5.Location = new System.Drawing.Point(376, 370);
+            this.panel5.Location = new System.Drawing.Point(376, 407);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 301);
             this.panel5.TabIndex = 48;
@@ -991,6 +983,7 @@ namespace WindowsFormsApp1
             this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.label84);
             this.tabPage3.Controls.Add(this.panel8);
             this.tabPage3.Controls.Add(this.panel7);
             this.tabPage3.Controls.Add(this.label17);
@@ -1022,7 +1015,7 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.dateTimePicker4);
             this.panel8.Controls.Add(this.label43);
             this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(529, 315);
+            this.panel8.Location = new System.Drawing.Point(529, 339);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(322, 369);
             this.panel8.TabIndex = 57;
@@ -1189,7 +1182,7 @@ namespace WindowsFormsApp1
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Controls.Add(this.label36);
             this.panel7.Controls.Add(this.button13);
-            this.panel7.Location = new System.Drawing.Point(72, 18);
+            this.panel7.Location = new System.Drawing.Point(67, 46);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1230, 291);
             this.panel7.TabIndex = 56;
@@ -1425,6 +1418,7 @@ namespace WindowsFormsApp1
             this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.label83);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Controls.Add(this.panel2);
@@ -1460,7 +1454,7 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(156, 335);
+            this.panel3.Location = new System.Drawing.Point(156, 393);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1049, 297);
             this.panel3.TabIndex = 2;
@@ -1607,7 +1601,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.bookingInnerDGV);
-            this.panel2.Location = new System.Drawing.Point(156, 18);
+            this.panel2.Location = new System.Drawing.Point(156, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1049, 296);
             this.panel2.TabIndex = 1;
@@ -1694,8 +1688,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1793,6 +1787,7 @@ namespace WindowsFormsApp1
             this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
             this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage5.Controls.Add(this.label82);
             this.tabPage5.Controls.Add(this.label19);
             this.tabPage5.Controls.Add(this.panel4);
             this.tabPage5.Controls.Add(this.button7);
@@ -1823,7 +1818,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(122, 18);
+            this.panel4.Location = new System.Drawing.Point(125, 67);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
@@ -1971,7 +1966,9 @@ namespace WindowsFormsApp1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
-            this.tabPage1.Controls.Add(this.panel11);
+            this.tabPage1.Controls.Add(this.label73);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -1981,52 +1978,17 @@ namespace WindowsFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create new customer profile";
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel11.Controls.Add(this.label58);
-            this.panel11.Controls.Add(this.label15);
-            this.panel11.Controls.Add(this.label59);
-            this.panel11.Controls.Add(this.button3);
-            this.panel11.Controls.Add(this.label60);
-            this.panel11.Location = new System.Drawing.Point(3, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1361, 103);
-            this.panel11.TabIndex = 45;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(560, 70);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(228, 20);
-            this.label58.TabIndex = 18;
-            this.label58.Text = "Safe . Dependable . Affordable";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(13, 64);
+            this.label15.Location = new System.Drawing.Point(6, 54);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 20);
             this.label15.TabIndex = 44;
             this.label15.Text = "Logout";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(216, 9);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(852, 61);
-            this.label59.TabIndex = 17;
-            this.label59.Text = "The Cottage BnB Booking System";
             // 
             // button3
             // 
@@ -2035,20 +1997,12 @@ namespace WindowsFormsApp1
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(17, 16);
+            this.button3.Location = new System.Drawing.Point(10, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(45, 45);
             this.button3.TabIndex = 43;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(105, 43);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(0, 20);
-            this.label60.TabIndex = 0;
             // 
             // panel1
             // 
@@ -2474,7 +2428,7 @@ namespace WindowsFormsApp1
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label12.Location = new System.Drawing.Point(1015, 120);
+            this.label12.Location = new System.Drawing.Point(1020, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(197, 16);
             this.label12.TabIndex = 4;
@@ -2484,6 +2438,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
             this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage6.Controls.Add(this.label60);
             this.tabPage6.Controls.Add(this.label57);
             this.tabPage6.Controls.Add(this.button18);
             this.tabPage6.Controls.Add(this.panel10);
@@ -2548,7 +2503,7 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.textBox16);
             this.panel10.Controls.Add(this.textBox17);
             this.panel10.Controls.Add(this.button17);
-            this.panel10.Location = new System.Drawing.Point(507, 306);
+            this.panel10.Location = new System.Drawing.Point(507, 340);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(361, 368);
             this.panel10.TabIndex = 2;
@@ -2800,7 +2755,7 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.label54);
             this.panel9.Controls.Add(this.textBox18);
             this.panel9.Controls.Add(this.label44);
-            this.panel9.Location = new System.Drawing.Point(135, 18);
+            this.panel9.Location = new System.Drawing.Point(135, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1108, 281);
             this.panel9.TabIndex = 0;
@@ -3003,6 +2958,7 @@ namespace WindowsFormsApp1
             // tabPage9
             // 
             this.tabPage9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
+            this.tabPage9.Controls.Add(this.label81);
             this.tabPage9.Controls.Add(this.panel16);
             this.tabPage9.Location = new System.Drawing.Point(4, 29);
             this.tabPage9.Name = "tabPage9";
@@ -3020,15 +2976,15 @@ namespace WindowsFormsApp1
             this.panel16.Controls.Add(this.linkUpdate);
             this.panel16.Controls.Add(this.linkCancel);
             this.panel16.Controls.Add(this.linkLabel1);
-            this.panel16.Location = new System.Drawing.Point(34, 55);
+            this.panel16.Location = new System.Drawing.Point(525, 142);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(953, 271);
+            this.panel16.Size = new System.Drawing.Size(543, 374);
             this.panel16.TabIndex = 0;
             // 
             // linkModify
             // 
             this.linkModify.AutoSize = true;
-            this.linkModify.Location = new System.Drawing.Point(405, 165);
+            this.linkModify.Location = new System.Drawing.Point(177, 247);
             this.linkModify.Name = "linkModify";
             this.linkModify.Size = new System.Drawing.Size(192, 20);
             this.linkModify.TabIndex = 4;
@@ -3039,7 +2995,7 @@ namespace WindowsFormsApp1
             // linkFirstTimeCus
             // 
             this.linkFirstTimeCus.AutoSize = true;
-            this.linkFirstTimeCus.Location = new System.Drawing.Point(324, 100);
+            this.linkFirstTimeCus.Location = new System.Drawing.Point(95, 108);
             this.linkFirstTimeCus.Name = "linkFirstTimeCus";
             this.linkFirstTimeCus.Size = new System.Drawing.Size(354, 20);
             this.linkFirstTimeCus.TabIndex = 3;
@@ -3050,7 +3006,7 @@ namespace WindowsFormsApp1
             // linkUpdate
             // 
             this.linkUpdate.AutoSize = true;
-            this.linkUpdate.Location = new System.Drawing.Point(372, 133);
+            this.linkUpdate.Location = new System.Drawing.Point(124, 177);
             this.linkUpdate.Name = "linkUpdate";
             this.linkUpdate.Size = new System.Drawing.Size(280, 20);
             this.linkUpdate.TabIndex = 2;
@@ -3061,7 +3017,7 @@ namespace WindowsFormsApp1
             // linkCancel
             // 
             this.linkCancel.AutoSize = true;
-            this.linkCancel.Location = new System.Drawing.Point(405, 203);
+            this.linkCancel.Location = new System.Drawing.Point(177, 311);
             this.linkCancel.Name = "linkCancel";
             this.linkCancel.Size = new System.Drawing.Size(192, 20);
             this.linkCancel.TabIndex = 1;
@@ -3072,7 +3028,7 @@ namespace WindowsFormsApp1
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(324, 66);
+            this.linkLabel1.Location = new System.Drawing.Point(95, 37);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(354, 20);
             this.linkLabel1.TabIndex = 0;
@@ -3133,6 +3089,92 @@ namespace WindowsFormsApp1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
             // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(545, 49);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(508, 33);
+            this.label81.TabIndex = 5;
+            this.label81.Text = "Frequently asked questions (FAQs)";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label59.Location = new System.Drawing.Point(315, 10);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(852, 61);
+            this.label59.TabIndex = 47;
+            this.label59.Text = "The Cottage BnB Booking System";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(566, 71);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(228, 20);
+            this.label58.TabIndex = 48;
+            this.label58.Text = "Safe . Dependable . Affordable";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(501, 10);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(397, 31);
+            this.label60.TabIndex = 46;
+            this.label60.Text = "Update Customer Information";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.BackColor = System.Drawing.Color.Transparent;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(516, 43);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(322, 33);
+            this.label73.TabIndex = 45;
+            this.label73.Text = "Create New Customer";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.BackColor = System.Drawing.Color.Transparent;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(526, 17);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(328, 33);
+            this.label82.TabIndex = 47;
+            this.label82.Text = "Search For Booking(s)";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.BackColor = System.Drawing.Color.Transparent;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(552, 18);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(271, 33);
+            this.label83.TabIndex = 47;
+            this.label83.Text = "Cancel Booking(s)";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Location = new System.Drawing.Point(548, 7);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(266, 33);
+            this.label84.TabIndex = 58;
+            this.label84.Text = "Modify Booking(s)";
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3186,8 +3228,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -3210,6 +3250,7 @@ namespace WindowsFormsApp1
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.ResumeLayout(false);
@@ -3425,10 +3466,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.BindingSource customer1BindingSource;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -3449,7 +3486,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label75;
@@ -3473,5 +3509,13 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.LinkLabel linkFirstTimeCus;
         private System.Windows.Forms.LinkLabel linkUpdate;
         private System.Windows.Forms.LinkLabel linkCancel;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label81;
     }
 }
