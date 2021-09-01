@@ -23,5 +23,10 @@ namespace WindowsFormsApp1
             this.Hide();
             this.Close();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
