@@ -36,6 +36,14 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -66,55 +74,101 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(192, 71);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(394, 26);
+            this.label1.Size = new System.Drawing.Size(630, 50);
             this.label1.TabIndex = 44;
-            this.label1.Text = "1. In \"Update customer details\", search for customer profile using name, surname," +
-    " \r\n    email or ID number.\r\n";
+            this.label1.Text = "1. In \"Update customer details\", search for customer profile using\r\n    name, sur" +
+    "name, email or ID number.\r\n";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 111);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(836, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(371, 26);
+            this.label2.Size = new System.Drawing.Size(460, 75);
             this.label2.TabIndex = 45;
-            this.label2.Text = "2. Double click on the left hand column next to the customer\'s email address. \r\n " +
-    "   Once row has been highlighted, click \"Confirm\".";
+            this.label2.Text = "2. Double click on the left hand column next to \r\n    the customer\'s email addres" +
+    "s. Once row has\r\n    been highlighted, click \"Confirm\".";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(192, 164);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(123, 355);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 13);
+            this.label3.Size = new System.Drawing.Size(408, 25);
             this.label3.TabIndex = 46;
             this.label3.Text = "3. Customer details should appear below.";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(192, 209);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(836, 488);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(273, 13);
+            this.label4.Size = new System.Drawing.Size(399, 50);
             this.label4.TabIndex = 47;
-            this.label4.Text = "4. Once new details have been entered, click \"Update\".";
+            this.label4.Text = "4. Once new details have been entered, \r\n    click \"Update\".";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(192, 258);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(123, 621);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 13);
+            this.label5.Size = new System.Drawing.Size(388, 25);
             this.label5.TabIndex = 48;
             this.label5.Text = "5. Customer details have been updated";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
+            this.pictureBox1.Location = new System.Drawing.Point(132, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
+            this.pictureBox2.Location = new System.Drawing.Point(787, 242);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
+            this.pictureBox3.Location = new System.Drawing.Point(128, 383);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox3.TabIndex = 54;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
+            this.pictureBox4.Location = new System.Drawing.Point(787, 541);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox4.TabIndex = 55;
+            this.pictureBox4.TabStop = false;
             // 
             // HelpUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -125,6 +179,10 @@ namespace WindowsFormsApp1
             this.Name = "HelpUpdate";
             this.Text = "HelpUpdate";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +197,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
