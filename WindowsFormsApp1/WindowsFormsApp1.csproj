@@ -404,6 +404,8 @@
     <None Include="Resources\SIngleLux.jpg" />
     <None Include="Resources\SingleRoom1.jpg" />
     <None Include="Resources\SR1.jpg" />
+    <None Include="Resources\Screenshot %28287%29.png" />
+    <None Include="Resources\Screenshot %28301%29.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <ItemGroup>
