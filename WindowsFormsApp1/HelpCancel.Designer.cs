@@ -38,13 +38,11 @@ namespace WindowsFormsApp1
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,7 +76,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(855, 143);
+            this.label2.Location = new System.Drawing.Point(817, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(314, 75);
@@ -104,15 +102,15 @@ namespace WindowsFormsApp1
             this.label4.Location = new System.Drawing.Point(817, 422);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(486, 50);
+            this.label4.Size = new System.Drawing.Size(254, 25);
             this.label4.TabIndex = 47;
-            this.label4.Text = "4. Double click on the left hand column, and click \r\n    \"Cancel Booking\"";
+            this.label4.Text = "4. Click \"Cancel Booking\"";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(146, 567);
+            this.label5.Location = new System.Drawing.Point(146, 523);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(269, 25);
@@ -134,7 +132,7 @@ namespace WindowsFormsApp1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(895, 681);
+            this.label7.Location = new System.Drawing.Point(817, 595);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(313, 25);
             this.label7.TabIndex = 50;
@@ -142,35 +140,28 @@ namespace WindowsFormsApp1
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox5.Location = new System.Drawing.Point(128, 595);
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__320_;
+            this.pictureBox5.Location = new System.Drawing.Point(128, 551);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox5.Size = new System.Drawing.Size(571, 195);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 55;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox4.Location = new System.Drawing.Point(774, 483);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox4.TabIndex = 54;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__319_;
             this.pictureBox3.Location = new System.Drawing.Point(128, 343);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox3.Size = new System.Drawing.Size(571, 177);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__301_;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_;
             this.pictureBox2.Location = new System.Drawing.Point(774, 224);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(571, 171);
@@ -180,7 +171,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__301_;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__317_;
             this.pictureBox1.Location = new System.Drawing.Point(128, 119);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(571, 168);
@@ -210,7 +201,6 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -229,7 +219,6 @@ namespace WindowsFormsApp1
             this.Text = "HelpCancel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -252,7 +241,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

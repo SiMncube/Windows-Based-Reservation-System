@@ -37,20 +37,20 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 234);
+            this.label3.Location = new System.Drawing.Point(101, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(556, 50);
             this.label3.TabIndex = 2;
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(771, 482);
+            this.label6.Location = new System.Drawing.Point(771, 433);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(620, 125);
             this.label6.TabIndex = 5;
@@ -121,11 +121,79 @@ namespace WindowsFormsApp1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(161, 680);
+            this.label7.Location = new System.Drawing.Point(116, 712);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(274, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "7. Booking has been made.";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(14, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 16);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Back";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__307_;
+            this.pictureBox6.Location = new System.Drawing.Point(776, 561);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(571, 176);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 57;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__305_;
+            this.pictureBox5.Location = new System.Drawing.Point(119, 503);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(586, 206);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 56;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__304_;
+            this.pictureBox4.Location = new System.Drawing.Point(776, 348);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(571, 82);
+            this.pictureBox4.TabIndex = 55;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__306_;
+            this.pictureBox3.Location = new System.Drawing.Point(119, 260);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(577, 201);
+            this.pictureBox3.TabIndex = 54;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__301_1;
+            this.pictureBox2.Location = new System.Drawing.Point(776, 108);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(571, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__302_;
+            this.pictureBox1.Location = new System.Drawing.Point(106, 72);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(599, 115);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -140,71 +208,6 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 41;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(14, 60);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 16);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "Back";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox2.Location = new System.Drawing.Point(776, 102);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox3.Location = new System.Drawing.Point(106, 287);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox3.TabIndex = 54;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox4.Location = new System.Drawing.Point(776, 348);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox4.TabIndex = 55;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox5.Location = new System.Drawing.Point(119, 503);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox5.TabIndex = 56;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.photo_1448697138198_9aa6d0d84bf4;
-            this.pictureBox6.Location = new System.Drawing.Point(776, 608);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(571, 129);
-            this.pictureBox6.TabIndex = 57;
-            this.pictureBox6.TabStop = false;
             // 
             // HelpMakeBooking
             // 
@@ -229,12 +232,12 @@ namespace WindowsFormsApp1
             this.Name = "HelpMakeBooking";
             this.Text = "HelpMakeBooking";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

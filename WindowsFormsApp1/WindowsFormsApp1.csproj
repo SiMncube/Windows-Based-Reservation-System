@@ -406,6 +406,30 @@
     <None Include="Resources\SR1.jpg" />
     <None Include="Resources\Screenshot %28287%29.png" />
     <None Include="Resources\Screenshot %28301%29.png" />
+    <None Include="Resources\Screenshot %28302%29.png" />
+    <None Include="Resources\Screenshot %28302%291.png" />
+    <None Include="Resources\Screenshot %28301%291.png" />
+    <None Include="Resources\Screenshot %28303%29.png" />
+    <None Include="Resources\Screenshot %28304%29.png" />
+    <None Include="Resources\Screenshot %28305%29.png" />
+    <None Include="Resources\Screenshot %28306%29.png" />
+    <None Include="Resources\Screenshot %28307%29.png" />
+    <None Include="Resources\Screenshot %28308%29.png" />
+    <None Include="Resources\Screenshot %28309%29.png" />
+    <None Include="Resources\Screenshot %28310%29.png" />
+    <None Include="Resources\Screenshot %28311%29.png" />
+    <None Include="Resources\Screenshot %28312%29.png" />
+    <None Include="Resources\Screenshot %28301%292.png" />
+    <None Include="Resources\Screenshot %28302%292.png" />
+    <None Include="Resources\Screenshot %28305%291.png" />
+    <None Include="Resources\Screenshot %28306%291.png" />
+    <None Include="Resources\Screenshot %28308%291.png" />
+    <None Include="Resources\Screenshot %28310%291.png" />
+    <None Include="Resources\Screenshot %28309%291.png" />
+    <None Include="Resources\Screenshot %28317%29.png" />
+    <None Include="Resources\Screenshot %28318%29.png" />
+    <None Include="Resources\Screenshot %28319%29.png" />
+    <None Include="Resources\Screenshot %28320%29.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <ItemGroup>
