@@ -12,10 +12,10 @@ namespace WindowsFormsApp1
     {
         private static void send(string toEmail, string emailSubject, string emailBody)
         {
-            MailMessage mail = new MailMessage();
+            MailAddress addressFrom = new MailAddress("TheCottageGroup7@gmail.com", "The Cottage BnB");
+            MailAddress addressTo = new MailAddress(toEmail);
+            MailMessage mail = new MailMessage(addressFrom, addressTo);
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("TheCottageGroup7@gmail.com");
-            mail.To.Add(toEmail);
             mail.Subject = emailSubject;
             mail.IsBodyHtml = true;  //to make message body as html could be commented out.
             mail.Body = emailBody;
