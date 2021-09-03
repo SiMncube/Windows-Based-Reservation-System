@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(505, 229);
+            this.panel1.Location = new System.Drawing.Point(550, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(353, 258);
             this.panel1.TabIndex = 42;
@@ -210,6 +210,7 @@ namespace WindowsFormsApp1
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter_1);
             // 
             // panel2
             // 
@@ -227,7 +228,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(497, 237);
+            this.panel2.Location = new System.Drawing.Point(556, 260);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(353, 258);
             this.panel2.TabIndex = 43;
@@ -398,7 +399,7 @@ namespace WindowsFormsApp1
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(501, 233);
+            this.panel3.Location = new System.Drawing.Point(560, 256);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 258);
             this.panel3.TabIndex = 44;
@@ -540,7 +541,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.button13);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(493, 242);
+            this.panel6.Location = new System.Drawing.Point(544, 269);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(353, 258);
             this.panel6.TabIndex = 47;
@@ -651,10 +652,10 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
             this.Name = "ResetpasswordForm";
             this.Text = "Form10";
