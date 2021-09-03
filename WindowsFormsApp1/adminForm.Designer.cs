@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +47,8 @@ namespace WindowsFormsApp1
             this.label76 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -91,6 +93,7 @@ namespace WindowsFormsApp1
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label84 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label61 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -129,6 +132,7 @@ namespace WindowsFormsApp1
             this.label17 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label83 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -163,6 +167,7 @@ namespace WindowsFormsApp1
             this.amountDueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button6 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label82 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -217,6 +222,7 @@ namespace WindowsFormsApp1
             this.registerButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label60 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -264,6 +270,7 @@ namespace WindowsFormsApp1
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button15 = new System.Windows.Forms.Button();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label81 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.linkModify = new System.Windows.Forms.LinkLabel();
             this.linkFirstTimeCus = new System.Windows.Forms.LinkLabel();
@@ -282,14 +289,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label81 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -484,6 +483,28 @@ namespace WindowsFormsApp1
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1361, 105);
             this.panel12.TabIndex = 56;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(566, 71);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(228, 20);
+            this.label58.TabIndex = 48;
+            this.label58.Text = "Safe . Dependable . Affordable";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label59.Location = new System.Drawing.Point(315, 10);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(852, 61);
+            this.label59.TabIndex = 47;
+            this.label59.Text = "The Cottage BnB Booking System";
             // 
             // label74
             // 
@@ -996,6 +1017,17 @@ namespace WindowsFormsApp1
             this.tabPage3.Text = "Modify booking";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Location = new System.Drawing.Point(548, 7);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(266, 33);
+            this.label84.TabIndex = 58;
+            this.label84.Text = "Modify Booking(s)";
+            // 
             // panel8
             // 
             this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -1432,6 +1464,17 @@ namespace WindowsFormsApp1
             this.tabPage4.Text = "Cancel booking";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.BackColor = System.Drawing.Color.Transparent;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(552, 18);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(271, 33);
+            this.label83.TabIndex = 47;
+            this.label83.Text = "Cancel Booking(s)";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1688,8 +1731,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1797,6 +1840,17 @@ namespace WindowsFormsApp1
             this.tabPage5.Size = new System.Drawing.Size(1362, 716);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "View booking";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.BackColor = System.Drawing.Color.Transparent;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(526, 17);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(328, 33);
+            this.label82.TabIndex = 47;
+            this.label82.Text = "Search For Booking(s)";
             // 
             // label19
             // 
@@ -1966,7 +2020,7 @@ namespace WindowsFormsApp1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_09_41_26;
-            this.tabPage1.Controls.Add(this.label73);
+            this.tabPage1.Controls.Add(this.panel15);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.panel1);
@@ -2008,7 +2062,6 @@ namespace WindowsFormsApp1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label9);
@@ -2048,7 +2101,7 @@ namespace WindowsFormsApp1
             this.panel15.Controls.Add(this.button20);
             this.panel15.Controls.Add(this.label79);
             this.panel15.Controls.Add(this.label80);
-            this.panel15.Location = new System.Drawing.Point(24, 42);
+            this.panel15.Location = new System.Drawing.Point(523, 150);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(353, 282);
             this.panel15.TabIndex = 48;
@@ -2450,6 +2503,16 @@ namespace WindowsFormsApp1
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Update customer details";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(501, 10);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(397, 31);
+            this.label60.TabIndex = 46;
+            this.label60.Text = "Update Customer Information";
             // 
             // label57
             // 
@@ -2968,6 +3031,16 @@ namespace WindowsFormsApp1
             this.tabPage9.Text = "Help";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(545, 49);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(508, 33);
+            this.label81.TabIndex = 5;
+            this.label81.Text = "Frequently asked questions (FAQs)";
+            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.White;
@@ -3088,92 +3161,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(545, 49);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(508, 33);
-            this.label81.TabIndex = 5;
-            this.label81.Text = "Frequently asked questions (FAQs)";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label59.Location = new System.Drawing.Point(315, 10);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(852, 61);
-            this.label59.TabIndex = 47;
-            this.label59.Text = "The Cottage BnB Booking System";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(566, 71);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(228, 20);
-            this.label58.TabIndex = 48;
-            this.label58.Text = "Safe . Dependable . Affordable";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(501, 10);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(397, 31);
-            this.label60.TabIndex = 46;
-            this.label60.Text = "Update Customer Information";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.BackColor = System.Drawing.Color.Transparent;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(516, 43);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(322, 33);
-            this.label73.TabIndex = 45;
-            this.label73.Text = "Create New Customer";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.BackColor = System.Drawing.Color.Transparent;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(526, 17);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(328, 33);
-            this.label82.TabIndex = 47;
-            this.label82.Text = "Search For Booking(s)";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.BackColor = System.Drawing.Color.Transparent;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.Location = new System.Drawing.Point(552, 18);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(271, 33);
-            this.label83.TabIndex = 47;
-            this.label83.Text = "Cancel Booking(s)";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.Location = new System.Drawing.Point(548, 7);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(266, 33);
-            this.label84.TabIndex = 58;
-            this.label84.Text = "Modify Booking(s)";
             // 
             // adminForm
             // 
@@ -3514,7 +3501,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label81;
     }
