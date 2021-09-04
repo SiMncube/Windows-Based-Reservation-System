@@ -27,7 +27,6 @@ namespace WindowsFormsApp1
         }
         public static void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
-
             try
             {
                 send(toEmail, emailSubject, emailBody);
