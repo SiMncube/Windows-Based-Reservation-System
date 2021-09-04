@@ -8,7 +8,7 @@ using System.Net.Mail;
 
 namespace WindowsFormsApp1
 {
-    public static class Email
+    public class Email
     {
         private static void send(string toEmail, string emailSubject, string emailBody)
         {
@@ -41,11 +41,11 @@ namespace WindowsFormsApp1
         public static void sendInvoice() //for sending resevation invoice after making a booking
         {
             if (isCancel)
-                sendEmail(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
+                send(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
             else if(isModify)
-                sendEmail(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());
+                send(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());
             else
-                sendEmail(customerEmail, "The Cottage BNB, Reservation Invoice", invoiceBody());
+                send(customerEmail, "The Cottage BNB, Reservation Invoice", invoiceBody());
         }
 
         public static string invoiceBody()  //this method will just creating some structure for the booking invoice email
