@@ -41,9 +41,16 @@ namespace WindowsFormsApp1
         public static void sendInvoice() //for sending resevation invoice after making a booking
         {
             if (isCancel)
+            {
                 send(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
-            else if(isModify)
+                isCancel = false;
+            }
+                
+            else if (isModify)
+            {
                 send(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());
+                isModify = false;
+            }
             else
                 send(customerEmail, "The Cottage BNB, Reservation Invoice", invoiceBody());
         }
@@ -137,7 +144,6 @@ namespace WindowsFormsApp1
         public static string amountDue;
 
         public static bool isCancel = false;
-
         public static bool isModify = false;
         public static string oldBookingID;      //also used in cancel booking form
         public static string oldBookingAmountDue;
