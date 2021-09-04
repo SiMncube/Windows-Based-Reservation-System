@@ -79,11 +79,13 @@ namespace WindowsFormsApp1
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Checking In Date </td>" + htmlTdStart + dateIn + "</td></tr> ";
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Checking Out Date </td>" + htmlTdStart + dateOut + "</td></tr> ";
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Nights </td>" + htmlTdStart + numberOfNights + "</td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Single Rooms </td>" + htmlTdStart + numberOfSingles + "</td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Double Rooms </td>" + htmlTdStart + numberOfDoubles + "</td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Single Rooms </td>" + htmlTdStart + singleRoomIDs + "</td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Double Rooms </td>" + htmlTdStart + doubleRoomIDs + "</td></tr> ";
-
+            if (!isCancel)
+            {
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Single Rooms </td>" + htmlTdStart + numberOfSingles + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Double Rooms </td>" + htmlTdStart + numberOfDoubles + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Single Rooms </td>" + htmlTdStart + singleRoomIDs + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Double Rooms </td>" + htmlTdStart + doubleRoomIDs + "</td></tr> ";
+            }
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "----- </td>" + htmlTdStart + "--- </td></tr> ";
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Single Room Rate </td>" + htmlTdStart + "R450 Per Night" + "</td></tr> ";
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Double Room Rate </td>" + htmlTdStart + "R800 Per Night" + "</td></tr> ";

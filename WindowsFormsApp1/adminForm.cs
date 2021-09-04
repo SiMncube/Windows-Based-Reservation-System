@@ -253,47 +253,43 @@ namespace WindowsFormsApp1
 
         private void SendCanceledBookingInvoice(int canceledBookingID)
         {
+        //These initailizes the invoice fields before being sent to the customer
+            Email.bookingID = canceledBookingID.ToString();
             for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
             {
                 if (fullDs.BookingSummary[i].summaryID == canceledBookingID)
                 {
-
+                    Email.customerEmail = fullDs.BookingSummary[i].emailID;
+                    Email.bookingStatus = fullDs.BookingSummary[i].bookingStatus;
+                    Email.bookingMethod = fullDs.BookingSummary[i].bookingMethod;
+                    Email.dateIn = fullDs.BookingSummary[i].dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+                    Email.dateOut = fullDs.BookingSummary[i].dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+                    Email.numberOfNights = fullDs.BookingSummary[i].numberOfNights.ToString();
+                    Email.amountDue = fullDs.BookingSummary[i].amountDue;
+                    Email.excessOrefund = decimal.Parse(calculateAmountDue(fullDs.BookingSummary[i].amountDue))/2;
                 }
             }
             for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
             {
-                if (fullDs.Customer[i].emailID.Equals(emailTextBox.Text, StringComparison.OrdinalIgnoreCase))
-      
-            }
-            //These initailizes the invoice fields
-            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
-            {
-                if (fullDs.Customer[i].emailID.Equals(currentCustomerEmailID))
+                if (fullDs.Customer[i].emailID.Equals(Email.customerEmail))
                 {
                     Email.customerName = fullDs.Customer[i].name;
                     Email.customerSurname = fullDs.Customer[i].surname;
                     Email.customerIdNumber = fullDs.Customer[i].idNumber;
                 }
             }
-            Email.customerEmail = currentCustomerEmailID;
-            Email.bookingID = summaryID.ToString();
-            Email.bookingStatus = bookingStatus;
-            Email.bookingMethod = bookingMethod;
-            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
-            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
-            Email.numberOfNights = numberOfNights.ToString();
+            Email.isCancel = true;
+            Email.sendInvoice();
+
+            //These are irrelevant or Can not be extracted from the database because our tables does not have these fields/attributes
+            /* 
             Email.numberOfSingles = numberOfSingleRooms.ToString();
             Email.numberOfDoubles = numberOfDoubleRooms.ToString();
             Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
             Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
-            Email.amountDue = callAmountDueMethod;
-
-            //Old booking information
-            Email.isModify = true;
             Email.oldBookingID = OldBookingSummaryID;
             Email.oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID)).ToString();
-
-            Email.sendInvoice();
+            */
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -671,8 +667,8 @@ namespace WindowsFormsApp1
         /*=========================================================================================== Kaygee code END ===========================================================================================*/
 
 
-        /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
-        string currentCustomerEmailID;
+            /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
+            string currentCustomerEmailID;
 
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
