@@ -330,7 +330,7 @@ namespace WindowsFormsApp1
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(425, 296);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "instant EFT";
+            this.tabPage3.Text = "Instant EFT";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel3
