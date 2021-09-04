@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(mail);
-            MessageBox.Show("mail Send");
+            MessageBox.Show("Email has been Send");
         }
         public static void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
@@ -40,7 +40,12 @@ namespace WindowsFormsApp1
 
         public static void sendInvoice() //for sending resevation invoice after making a booking
         {
-            sendEmail(customerEmail, "The Cottage BNB, Reservation Invoice", invoiceBody());
+            if (isCancel)
+                sendEmail(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
+            else if(isModify)
+                sendEmail(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());
+            else
+                sendEmail(customerEmail, "The Cottage BNB, Reservation Invoice", invoiceBody());
         }
 
         public static string invoiceBody()  //this method will just creating some structure for the booking invoice email

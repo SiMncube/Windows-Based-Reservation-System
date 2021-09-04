@@ -251,11 +251,57 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void SendCanceledBookingInvoice(int canceledBookingID)
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == canceledBookingID)
+                {
+
+                }
+            }
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(emailTextBox.Text, StringComparison.OrdinalIgnoreCase))
+      
+            }
+            //These initailizes the invoice fields
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(currentCustomerEmailID))
+                {
+                    Email.customerName = fullDs.Customer[i].name;
+                    Email.customerSurname = fullDs.Customer[i].surname;
+                    Email.customerIdNumber = fullDs.Customer[i].idNumber;
+                }
+            }
+            Email.customerEmail = currentCustomerEmailID;
+            Email.bookingID = summaryID.ToString();
+            Email.bookingStatus = bookingStatus;
+            Email.bookingMethod = bookingMethod;
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.numberOfNights = numberOfNights.ToString();
+            Email.numberOfSingles = numberOfSingleRooms.ToString();
+            Email.numberOfDoubles = numberOfDoubleRooms.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
+            Email.amountDue = callAmountDueMethod;
+
+            //Old booking information
+            Email.isModify = true;
+            Email.oldBookingID = OldBookingSummaryID;
+            Email.oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID)).ToString();
+
+            Email.sendInvoice();
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 cancelBooking((int)dataGridView1.CurrentRow.Cells[4].Value);
+                SendCanceledBookingInvoice((int)dataGridView1.CurrentRow.Cells[4].Value); //added by Sihle for sending invoice of the canceled booking
             }
             currentUser.setEmailID(dataGridView1.Rows[0].Cells[5].Value.ToString());
             currentBooking.setSummaryID((int)dataGridView1.Rows[0].Cells[4].Value);
