@@ -108,12 +108,12 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(finalAmountDue > 0)
-            {
+            //if(finalAmountDue > 0) //commented out by Sihle, i wanted to reach payment form for all case including refund case, so i could be able to send the invoice
+            //{
                 PaymentForm p = new PaymentForm();
                 this.Hide();
                 p.ShowDialog();
-            }    
+            //}    
             this.Close();
         }
 

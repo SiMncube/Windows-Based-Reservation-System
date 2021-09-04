@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "----- </td>" + htmlTdStart + "--- </td></tr> ";
             if (isModify)
             {
-                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Previus Booking Payment </td>" + htmlTdStart + oldBookingAmountDue + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Previous Booking Payment </td>" + htmlTdStart + oldBookingAmountDue + "</td></tr> ";
                 messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "New Booking Amount Due </td>" + htmlTdStart + amountDue + "</td></tr> ";
                 if (excessOrefund < 0 )
                     messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Total Refund Amount </td>" + htmlTdStart + "R " + excessOrefund + "</td></tr> ";
