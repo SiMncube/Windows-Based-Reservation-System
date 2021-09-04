@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             }
             else if (isCancel)
             {
-                messageBody += "<font> Your booking with ref: " + oldBookingID + " has been successfully Cancelled.</font><br><br>";
+                messageBody += "<font> Your booking with ref: " + bookingID + " has been successfully Cancelled.</font><br><br>";
                 messageBody += "<font> Here Is Your Invoice, Your Refund will be processed within the next 3-5 business days</font><br><br>";
             }
             else
@@ -85,10 +85,11 @@ namespace WindowsFormsApp1
                 messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Number Of Double Rooms </td>" + htmlTdStart + numberOfDoubles + "</td></tr> ";
                 messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Single Rooms </td>" + htmlTdStart + singleRoomIDs + "</td></tr> ";
                 messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booked Double Rooms </td>" + htmlTdStart + doubleRoomIDs + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "----- </td>" + htmlTdStart + "--- </td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Single Room Rate </td>" + htmlTdStart + "R450 Per Night" + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Double Room Rate </td>" + htmlTdStart + "R800 Per Night" + "</td></tr> ";
+
             }
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "----- </td>" + htmlTdStart + "--- </td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Single Room Rate </td>" + htmlTdStart + "R450 Per Night" + "</td></tr> ";
-            messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Double Room Rate </td>" + htmlTdStart + "R800 Per Night" + "</td></tr> ";
             messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "----- </td>" + htmlTdStart + "--- </td></tr> ";
             if (isModify)
             {
@@ -103,7 +104,7 @@ namespace WindowsFormsApp1
             }
             else if (isCancel)
             {
-                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Booking Payment </td>" + htmlTdStart + amountDue + "</td></tr> ";
+                messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Total Paid </td>" + htmlTdStart + amountDue + "</td></tr> ";
                 messageBody += "<tr style=\"color:#555555;\">" + htmlTdStart + "Total Refund Amount </td>" + htmlTdStart + "R " + Math.Abs(excessOrefund) + "</td></tr> ";
             }
             else

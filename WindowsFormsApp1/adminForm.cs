@@ -266,7 +266,7 @@ namespace WindowsFormsApp1
                     Email.dateOut = fullDs.BookingSummary[i].dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
                     Email.numberOfNights = fullDs.BookingSummary[i].numberOfNights.ToString();
                     Email.amountDue = fullDs.BookingSummary[i].amountDue;
-                    Email.excessOrefund = decimal.Parse(calculateAmountDue(fullDs.BookingSummary[i].amountDue))/2;
+                    Email.excessOrefund = decimal.Parse(calculateAmountDue(fullDs.BookingSummary[i].amountDue));
                 }
             }
             for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
