@@ -1642,6 +1642,14 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
 
