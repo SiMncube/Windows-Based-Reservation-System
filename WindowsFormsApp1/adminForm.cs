@@ -1093,7 +1093,7 @@ namespace WindowsFormsApp1
             {
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                 {
-                    bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    bookedRoomTa.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
                     doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
                 }
             }
