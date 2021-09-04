@@ -944,6 +944,8 @@ namespace WindowsFormsApp1
             panel5.Enabled = true;
             dateTimePicker1.Enabled = true;
             dateTimePicker2.Enabled = true;
+
+            //pre populate the fields with booking details we have
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
