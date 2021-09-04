@@ -176,8 +176,6 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            //Application.Run(new adminForm());
-            //Application.Run(new managerForm());
         }
     }
 }
