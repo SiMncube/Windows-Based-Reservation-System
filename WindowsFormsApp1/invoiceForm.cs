@@ -108,35 +108,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void pictureBox2_Click_2(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            adminForm a = new adminForm();
-            this.Hide();
-            a.ShowDialog();
-            this.Close();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

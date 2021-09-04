@@ -950,17 +950,6 @@ namespace WindowsFormsApp1
             c.ShowDialog();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            currentUser.setEmailID(currentCustomerEmailID);
-            PaymentForm payment = new PaymentForm();
-            //this.Hide();
-            payment.ShowDialog();
-            //this.Close();
-
-            label33.Visible = false;
-        }
-
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
