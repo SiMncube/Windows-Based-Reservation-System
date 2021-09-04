@@ -30,9 +30,9 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -1424,7 +1424,7 @@ namespace WindowsFormsApp1
             this.panel17.Controls.Add(this.button6);
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1361, 66);
+            this.panel17.Size = new System.Drawing.Size(1361, 70);
             this.panel17.TabIndex = 60;
             // 
             // label64
@@ -1441,7 +1441,7 @@ namespace WindowsFormsApp1
             this.label83.BackColor = System.Drawing.Color.Transparent;
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.ForeColor = System.Drawing.Color.White;
-            this.label83.Location = new System.Drawing.Point(520, 21);
+            this.label83.Location = new System.Drawing.Point(520, 6);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(295, 42);
             this.label83.TabIndex = 47;
@@ -1718,8 +1718,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1737,8 +1737,8 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.Name = "bookingInnerDGV";
             this.bookingInnerDGV.ReadOnly = true;
             this.bookingInnerDGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.bookingInnerDGV.Size = new System.Drawing.Size(844, 156);
             this.bookingInnerDGV.TabIndex = 0;
             this.bookingInnerDGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookingInnerDGV_RowHeaderMouseDoubleClick);
@@ -1822,7 +1822,7 @@ namespace WindowsFormsApp1
             this.panel18.Controls.Add(this.label82);
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(1361, 66);
+            this.panel18.Size = new System.Drawing.Size(1361, 77);
             this.panel18.TabIndex = 60;
             // 
             // label65
@@ -1879,7 +1879,7 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(125, 67);
+            this.panel4.Location = new System.Drawing.Point(125, 121);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1123, 484);
             this.panel4.TabIndex = 1;
@@ -2041,11 +2041,11 @@ namespace WindowsFormsApp1
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(523, 10);
+            this.label68.Location = new System.Drawing.Point(390, 6);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(341, 42);
+            this.label68.Size = new System.Drawing.Size(603, 42);
             this.label68.TabIndex = 45;
-            this.label68.Text = "Create a customer";
+            this.label68.Text = "Register a new customer account";
             // 
             // label67
             // 
@@ -2885,8 +2885,8 @@ namespace WindowsFormsApp1
             this.dataGridView3.Location = new System.Drawing.Point(95, 110);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView3.Size = new System.Drawing.Size(944, 150);
             this.dataGridView3.TabIndex = 61;
             this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick_1);
