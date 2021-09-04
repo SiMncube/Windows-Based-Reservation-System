@@ -1632,6 +1632,11 @@ namespace WindowsFormsApp1
             body += " </body></html>";
             return body;
         }
+
+        private void modifyBookingInnerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
