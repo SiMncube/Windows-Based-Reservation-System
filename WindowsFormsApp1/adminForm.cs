@@ -1077,11 +1077,15 @@ namespace WindowsFormsApp1
             int summaryID = (int)bookingSummaryTa.getLastRecord();
             newBookingSummaryID = summaryID;
 
+            int[] singleAllocatedRooms = new int[numberOfSingleRooms];
+            int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
+
             for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
             {
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
                     bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    singleAllocatedRooms[i] = (int)availableSingleRooms[i];
                 }
             }
 
@@ -1090,6 +1094,7 @@ namespace WindowsFormsApp1
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                 {
                     bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
                 }
             }
 
@@ -1097,6 +1102,34 @@ namespace WindowsFormsApp1
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookedRoomTa.Update(this.fullDs.BookedRoom);
             this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
+
+            //These initailizes the invoice fields
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(currentCustomerEmailID))
+                {
+                    Email.customerName = fullDs.Customer[i].name;
+                    Email.customerSurname = fullDs.Customer[i].surname;
+                    Email.customerIdNumber = fullDs.Customer[i].idNumber;
+                }
+            }
+            Email.customerEmail = currentCustomerEmailID;
+            Email.bookingID = summaryID.ToString();
+            Email.bookingStatus = bookingStatus;
+            Email.bookingMethod = bookingMethod;
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.numberOfNights = numberOfNights.ToString();
+            Email.numberOfSingles = numberOfSingleRooms.ToString();
+            Email.numberOfDoubles = numberOfDoubleRooms.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
+            Email.amountDue = callAmountDueMethod;
+
+            //Old booking information
+            Email.isModify = true;
+            Email.oldBookingID = OldBookingSummaryID;
+            Email.oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID)).ToString();
         }
 
         private void UpdateOldBookingStatusToModified(int summaryID)
@@ -1179,13 +1212,14 @@ namespace WindowsFormsApp1
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 5));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
+            Email.excessOrefund = finalAmountDue;
             int[] a = { -1, (int)finalAmountDue };
             currentBooking.setRoomIDs(a);
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
             currentUser.setEmailID(modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString());
             ModifyConfirm m = new ModifyConfirm(finalAmountDue);
-            m.ShowDialog();
+            m.ShowDialog(); 
         }
 
         private void button11_Click(object sender, EventArgs e)
