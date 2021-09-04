@@ -247,7 +247,6 @@ namespace WindowsFormsApp1
                 catch (ConstraintException)
                 {
                     label5.Visible = true;
-
                 }
             }
         }
