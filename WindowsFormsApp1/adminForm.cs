@@ -1655,10 +1655,7 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PaymentReport one = new PaymentReport();
-            one.ShowDialog();
-            this.Show();
+           
         }
 
         private void button15_Click_1(object sender, EventArgs e)
@@ -1675,6 +1672,14 @@ namespace WindowsFormsApp1
             this.Hide();
             f.ShowDialog();
             this.Close();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PaymentReport one = new PaymentReport();
+            one.ShowDialog();
+            this.Show();
         }
     }
 }
