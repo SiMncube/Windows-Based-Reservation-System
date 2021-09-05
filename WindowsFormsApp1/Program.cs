@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             {
                 send(toEmail, emailSubject, emailBody);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 send(toEmail, emailSubject, emailBody);
             }
