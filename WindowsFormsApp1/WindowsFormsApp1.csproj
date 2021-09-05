@@ -430,6 +430,7 @@
     <None Include="Resources\Screenshot %28318%29.png" />
     <None Include="Resources\Screenshot %28319%29.png" />
     <None Include="Resources\Screenshot %28320%29.png" />
+    <None Include="Resources\Screenshot %28318%291.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <ItemGroup>

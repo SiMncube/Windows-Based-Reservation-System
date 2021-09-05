@@ -37,9 +37,11 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +79,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 537);
+            this.label3.Location = new System.Drawing.Point(115, 638);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 25);
             this.label3.TabIndex = 46;
@@ -87,7 +89,7 @@ namespace WindowsFormsApp1
             // 
             this.linkFirsttimehelp.AutoSize = true;
             this.linkFirsttimehelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkFirsttimehelp.Location = new System.Drawing.Point(151, 537);
+            this.linkFirsttimehelp.Location = new System.Drawing.Point(151, 638);
             this.linkFirsttimehelp.Name = "linkFirsttimehelp";
             this.linkFirsttimehelp.Size = new System.Drawing.Size(262, 25);
             this.linkFirsttimehelp.TabIndex = 47;
@@ -119,12 +121,21 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(744, 400);
+            this.label6.Location = new System.Drawing.Point(728, 400);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(445, 50);
+            this.label6.Size = new System.Drawing.Size(488, 50);
             this.label6.TabIndex = 50;
-            this.label6.Text = "4. Once OTP has been confirmed proceed to \r\n   \"Make a booking\" or see Step 5 bel" +
-    "ow";
+            this.label6.Text = "4. Confirm OTP then proceed to \"Make a booking\"\r\n    or see Step 5 below";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_1;
+            this.pictureBox3.Location = new System.Drawing.Point(733, 456);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(397, 207);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 54;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -165,6 +176,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -179,6 +191,7 @@ namespace WindowsFormsApp1
             this.Name = "HelpFirstTimeCus";
             this.Text = "HelpFirstTimeCus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -199,5 +212,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
