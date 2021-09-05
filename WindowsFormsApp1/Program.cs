@@ -37,14 +37,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        public static void sendInvoice() //for sending resevation invoice after making a booking
-        {
+        public static void sendInvoice()  //sending System generated invoices for make/modify/cancel booking.
+        { 
             if (isCancel)
             {
                 send(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
                 isCancel = false;
-            }
-                
+            }         
             else if (isModify)
             {
                 send(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());

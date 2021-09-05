@@ -593,6 +593,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__318_1 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (318)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot__319_ {
             get {
                 object obj = ResourceManager.GetObject("Screenshot (319)", resourceCulture);
