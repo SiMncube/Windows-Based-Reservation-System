@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
         private void regeisterCust()
         {
             Email.sendEmail(emailTextBox.Text, "Welcome to The Cottage BnB", htmlWelcome());
-            customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text,tempPassword, capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+            customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, tempPassword, capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
             bookingInnerTa.Fill(fullDs.BookingInner);
             paymentTa.Fill(fullDs.Payment);
             bookingSummaryTa.Fill(fullDs.BookingSummary);
@@ -253,7 +253,7 @@ namespace WindowsFormsApp1
 
         private void SendCanceledBookingInvoice(int canceledBookingID)
         {
-        //These initailizes the invoice fields before being sent to the customer
+            //These initailizes the invoice fields before being sent to the customer
             Email.bookingID = canceledBookingID.ToString();
             for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
             {
@@ -667,8 +667,8 @@ namespace WindowsFormsApp1
         /*=========================================================================================== Kaygee code END ===========================================================================================*/
 
 
-            /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
-            string currentCustomerEmailID;
+        /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
+        string currentCustomerEmailID;
 
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
@@ -1094,11 +1094,24 @@ namespace WindowsFormsApp1
 
         }
 
+        public void prepopulate()
+        {
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == int.Parse(OldBookingSummaryID))
+                {
+                    dateTimePicker3.Value = fullDs.BookingSummary[i].dateIn;
+                    dateTimePicker4.Value = fullDs.BookingSummary[i].dateOut;
+                }
+            }
+        }
+
         private void button13_Click(object sender, EventArgs e)
         {
             panel8.Enabled = true;
             dateTimePicker3.Enabled = true;
             dateTimePicker4.Enabled = true;
+            prepopulate();
         }
 
         private void CaptureNEWBookingRecord(string callAmountDueMethod)  //this method does not capture payment records
