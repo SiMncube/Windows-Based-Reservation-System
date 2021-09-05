@@ -43,8 +43,7 @@ namespace WindowsFormsApp1
             {
                 send(customerEmail, "The Cottage BNB, Canceled Reservation Invoice", invoiceBody());
                 isCancel = false;
-            }
-                
+            }         
             else if (isModify)
             {
                 send(customerEmail, "The Cottage BNB, Modified Reservation Invoice", invoiceBody());
