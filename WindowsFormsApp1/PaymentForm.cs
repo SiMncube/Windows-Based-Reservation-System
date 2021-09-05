@@ -204,6 +204,7 @@ namespace WindowsFormsApp1
                 updateBookingStatus();
                 InvoiceForm i = new InvoiceForm();
                 Email.bookingStatus = "Complete";  //added by Sihle
+                Email.isBankingDetails = true;   //added by Sihle
                 Email.sendInvoice();               //added by Sihle
                 this.Hide();
                 i.ShowDialog();
