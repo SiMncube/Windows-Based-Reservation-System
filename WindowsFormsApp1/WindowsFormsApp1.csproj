@@ -87,11 +87,11 @@
     <Compile Include="BookingReport.Designer.cs">
       <DependentUpon>BookingReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ConfirmCustForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ConfirmCustForm.Designer.cs">
+      <DependentUpon>ConfirmCustForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HelpCancel.cs">
       <SubType>Form</SubType>
@@ -240,8 +240,8 @@
     <EmbeddedResource Include="BookingReport.resx">
       <DependentUpon>BookingReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmCustForm.resx">
+      <DependentUpon>ConfirmCustForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpCancel.resx">
       <DependentUpon>HelpCancel.cs</DependentUpon>
