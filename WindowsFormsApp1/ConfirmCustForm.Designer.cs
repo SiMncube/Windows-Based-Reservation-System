@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 43);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Pay";
+            this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // label6
