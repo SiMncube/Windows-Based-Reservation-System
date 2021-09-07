@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
             toolTip1.SetToolTip(postalCodeTextBox, "Must be 4 digits");
             toolTip1.SetToolTip(IDTextBox, "Must be 13 digits");
             toolTip1.SetToolTip(cellNumberTextBox, "Must be 10 digits");
+            currentUser.setIsAdmin(true);
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
 

@@ -173,6 +173,7 @@ namespace WindowsFormsApp1
     public static class currentUser
     {
         private static string emailID;
+        private static bool isAdmin = false;
         public static string getEmailID()
         {
             return emailID;
@@ -180,6 +181,14 @@ namespace WindowsFormsApp1
         public static void setEmailID(string e)
         {
             emailID = e;
+        }
+        public static bool getIsAdmin()
+        {
+            return isAdmin;
+        }
+        public static void setIsAdmin(bool a)
+        {
+            isAdmin = a;
         }
     }
 
