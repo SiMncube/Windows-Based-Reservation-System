@@ -211,6 +211,7 @@ namespace WindowsFormsApp1
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter_1);
+            this.textBox2.MouseLeave += new System.EventHandler(this.textBox2_MouseLeave);
             // 
             // panel2
             // 
@@ -228,7 +229,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(556, 260);
+            this.panel2.Location = new System.Drawing.Point(539, 269);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(353, 258);
             this.panel2.TabIndex = 43;
@@ -541,7 +542,7 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.button13);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(544, 269);
+            this.panel6.Location = new System.Drawing.Point(535, 278);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(353, 258);
             this.panel6.TabIndex = 47;
