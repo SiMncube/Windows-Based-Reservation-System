@@ -115,7 +115,20 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (currentUser.getIsAdmin())
+            {
+                adminForm i = new adminForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Homepage i = new Homepage();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
         }
 
         private void label19_Click(object sender, EventArgs e)

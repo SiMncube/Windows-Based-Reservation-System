@@ -25,12 +25,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            PaymentForm p = new PaymentForm();
             for (int index = Application.OpenForms.Count - 1; index >= 0; index--)
             {
                 if (Application.OpenForms[index].Name == "MakebookingForm" || Application.OpenForms[index].Name == "adminForm")
+                {
+                    Application.OpenForms[index].Hide();
                     Application.OpenForms[index].Close();
+                }
             }
-            PaymentForm p = new PaymentForm();
             this.Hide();
             p.ShowDialog();
             this.Close();
