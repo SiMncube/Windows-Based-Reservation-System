@@ -392,6 +392,7 @@ namespace WindowsFormsApp1
             this.button6.TabIndex = 15;
             this.button6.Text = "Cancel";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label14
             // 
@@ -482,11 +483,11 @@ namespace WindowsFormsApp1
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 64);
+            this.label15.Location = new System.Drawing.Point(13, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 20);
+            this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 44;
-            this.label15.Text = "Logout";
+            this.label15.Text = "Back";
             // 
             // label60
             // 
