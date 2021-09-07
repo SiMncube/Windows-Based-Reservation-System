@@ -301,6 +301,7 @@ namespace WindowsFormsApp1
                 SendCanceledBookingInvoice((int)dataGridView1.CurrentRow.Cells[4].Value); //added by Sihle for sending invoice of the canceled booking
             }
             currentUser.setEmailID(dataGridView1.Rows[0].Cells[5].Value.ToString());
+            currentUser.setIsAdmin(true);
             currentBooking.setSummaryID((int)dataGridView1.Rows[0].Cells[4].Value);
             bookingSummaryTa.Update(fullDs.BookingSummary);
             paymentTa.Update(fullDs.Payment);
@@ -947,6 +948,7 @@ namespace WindowsFormsApp1
             bookedRoomTa.Fill(fullDs.BookedRoom);
 
             currentUser.setEmailID(currentCustomerEmailID);
+            currentUser.setIsAdmin(true);
             ConfirmbookingForm c = new ConfirmbookingForm();
             c.ShowDialog();
         }
@@ -1262,6 +1264,7 @@ namespace WindowsFormsApp1
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
             currentUser.setEmailID(modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString());
+            currentUser.setIsAdmin(true);
             ModifyConfirm m = new ModifyConfirm(finalAmountDue);
             m.ShowDialog(); 
         }
