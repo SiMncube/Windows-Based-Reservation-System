@@ -158,14 +158,14 @@ namespace WindowsFormsApp1
                     if (userNameIsCorrect() && userPasswordIsCorrect())
                     {
                         Homepage homePage = new Homepage();
-                      //  this.Hide();
+                        this.Hide();
                         homePage.ShowDialog();
                         this.Close();
                     }
                     else if (staffNameIsCorrect() && staffPasswordIsCorrect())
                     {
                         adminForm a = new adminForm();
-                       // this.Hide();
+                        this.Hide();
                         a.ShowDialog();
                         this.Close();
                     }
