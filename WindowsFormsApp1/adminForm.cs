@@ -48,7 +48,6 @@ namespace WindowsFormsApp1
                     if (fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         tabControl1.TabPages.RemoveAt(6);
-                        tabControl1.TabPages.RemoveAt(6);
                     }
                     break;
                 }
