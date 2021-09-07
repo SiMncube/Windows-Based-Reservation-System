@@ -114,6 +114,7 @@ namespace WindowsFormsApp1
                 InvoiceForm i = new InvoiceForm();
                 Email.bookingStatus = "Complete";  //added by Sihle
                 Email.sendInvoice();               //added by Sihle
+                this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
