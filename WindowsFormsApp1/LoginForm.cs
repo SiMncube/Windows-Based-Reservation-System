@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             ResetpasswordForm forgot = new ResetpasswordForm();
-           // this.Hide();
+            this.Hide();
             forgot.ShowDialog();
             this.Close();
         }
