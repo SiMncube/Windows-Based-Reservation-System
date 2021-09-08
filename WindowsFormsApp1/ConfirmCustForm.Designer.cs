@@ -48,27 +48,29 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 8;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label28);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 142);
+            this.panel2.Size = new System.Drawing.Size(518, 142);
             this.panel2.TabIndex = 9;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(3, 49);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(458, 48);
+            this.label28.Size = new System.Drawing.Size(512, 48);
             this.label28.TabIndex = 0;
-            this.label28.Text = "Customer has been Successfully Registered.\r\nAn Email containing their loggin deta" +
-    "ils has been sent";
+            this.label28.Text = "The customer has been Successfully Registered.\r\nAn Email containing their loggin " +
+    "details has been sent";
             // 
             // confirmCust
             // 
@@ -82,6 +84,7 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "confirmCust";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

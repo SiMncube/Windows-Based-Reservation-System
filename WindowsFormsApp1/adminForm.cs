@@ -1517,6 +1517,8 @@ namespace WindowsFormsApp1
             if (textBox9.Text.Trim() == this.otp)
             {
                 panel15.Visible = false;
+                confirmCust c = new confirmCust();
+                c.ShowDialog();
                 panel1.Visible = true;
                 textBox9.Text = "Enter OTP";
                 textBox9.ForeColor = Color.Gray;
