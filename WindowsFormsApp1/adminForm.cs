@@ -1701,6 +1701,19 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void button9_Click_2(object sender, EventArgs e)
+        {
+            bookingInnerTa.Fill(fullDs.BookingInner);
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+            customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
+        }
     }
 }
 
