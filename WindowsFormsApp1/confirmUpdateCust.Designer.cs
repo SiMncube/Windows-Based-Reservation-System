@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,23 +39,11 @@ namespace WindowsFormsApp1
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label28);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(518, 142);
+            this.panel2.Size = new System.Drawing.Size(540, 142);
             this.panel2.TabIndex = 11;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(3, 49);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(512, 48);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "The customer has been Successfully Registered.\r\nAn Email containing their loggin " +
-    "details has been sent";
             // 
             // button2
             // 
@@ -72,11 +60,23 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-1, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(530, 48);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "The customers details have been Successfully updated.\r\nA confirmation email is se" +
+    "nt";
+            // 
             // confirmUpdateCust
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 220);
+            this.ClientSize = new System.Drawing.Size(568, 220);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }
