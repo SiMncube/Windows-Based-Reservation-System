@@ -1519,6 +1519,7 @@ namespace WindowsFormsApp1
                 panel15.Visible = false;
                 panel1.Visible = true;
                 textBox9.Text = "Enter OTP";
+                textBox9.ForeColor = Color.Gray;
                 regeisterCust();
             }
             else
