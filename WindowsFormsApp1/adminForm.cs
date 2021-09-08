@@ -1359,7 +1359,6 @@ namespace WindowsFormsApp1
                 dataRow[i] = dataGridView3.CurrentRow.Cells[i].Value;
             }
             label55.Visible = false;
-            label56.Visible = false;
             updateTextBox(textBox7, dataRow[0].ToString());
             updateTextBox(textBox17, dataRow[1].ToString());
             updateTextBox(textBox16, dataRow[2].ToString());
@@ -1409,7 +1408,8 @@ namespace WindowsFormsApp1
                         customerTa.Fill(fullDs.Customer);
                         customer1Ta1.Update(fullDs.Customer1);
                         customer1Ta1.Fill(fullDs.Customer1);
-                        label56.Visible = true;
+                        confirmUpdateCust c = new confirmUpdateCust();
+                        c.ShowDialog();
                         break;
                     }
                 }
@@ -1417,7 +1417,6 @@ namespace WindowsFormsApp1
             else
             {
                 label55.Visible = true;
-                label56.Visible = false;
             }
             bookingInnerTa.Fill(fullDs.BookingInner);
             paymentTa.Fill(fullDs.Payment);
@@ -1460,7 +1459,6 @@ namespace WindowsFormsApp1
             }
 
             label55.Visible = false;
-            label56.Visible = false;
             updateTextBox(textBox7, dataRow[0].ToString());
             updateTextBox(textBox17, dataRow[1].ToString());
             updateTextBox(textBox16, dataRow[2].ToString());

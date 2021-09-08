@@ -288,13 +288,14 @@ namespace WindowsFormsApp1
             this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.label87 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -306,13 +307,11 @@ namespace WindowsFormsApp1
             this.Reports = new System.Windows.Forms.TabPage();
             this.button23 = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.label86 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
-            this.label87 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label86 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -2967,7 +2966,6 @@ namespace WindowsFormsApp1
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.dataGridView3);
-            this.panel9.Controls.Add(this.label56);
             this.panel9.Controls.Add(this.label55);
             this.panel9.Controls.Add(this.label54);
             this.panel9.Controls.Add(this.textBox18);
@@ -3074,18 +3072,6 @@ namespace WindowsFormsApp1
             this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
             this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.Lime;
-            this.label56.Location = new System.Drawing.Point(397, 10);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(314, 25);
-            this.label56.TabIndex = 60;
-            this.label56.Text = "Details updated successfully";
-            this.label56.Visible = false;
-            // 
             // label55
             // 
             this.label55.AutoSize = true;
@@ -3153,6 +3139,33 @@ namespace WindowsFormsApp1
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(1361, 66);
             this.panel21.TabIndex = 60;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BackColor = System.Drawing.Color.Transparent;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.White;
+            this.label87.Location = new System.Drawing.Point(2, 43);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(65, 20);
+            this.label87.TabIndex = 65;
+            this.label87.Text = "Logout";
+            this.label87.Click += new System.EventHandler(this.label87_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(7, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(45, 45);
+            this.button9.TabIndex = 64;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_3);
             // 
             // label70
             // 
@@ -3283,6 +3296,31 @@ namespace WindowsFormsApp1
             this.panel22.Size = new System.Drawing.Size(1361, 74);
             this.panel22.TabIndex = 61;
             // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.Transparent;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.ForeColor = System.Drawing.Color.White;
+            this.label86.Location = new System.Drawing.Point(0, 43);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(65, 20);
+            this.label86.TabIndex = 47;
+            this.label86.Text = "Logout";
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Location = new System.Drawing.Point(7, 0);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(45, 45);
+            this.button15.TabIndex = 46;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
             // label57
             // 
             this.label57.AutoSize = true;
@@ -3316,58 +3354,6 @@ namespace WindowsFormsApp1
             this.button21.Text = "Create Booking Report";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.BackColor = System.Drawing.Color.Transparent;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.ForeColor = System.Drawing.Color.White;
-            this.label87.Location = new System.Drawing.Point(2, 43);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(65, 20);
-            this.label87.TabIndex = 65;
-            this.label87.Text = "Logout";
-            this.label87.Click += new System.EventHandler(this.label87_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(7, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(45, 45);
-            this.button9.TabIndex = 64;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click_3);
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.BackColor = System.Drawing.Color.Transparent;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.ForeColor = System.Drawing.Color.White;
-            this.label86.Location = new System.Drawing.Point(0, 43);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(65, 20);
-            this.label86.TabIndex = 47;
-            this.label86.Text = "Logout";
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_back_to_100;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(7, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(45, 45);
-            this.button15.TabIndex = 46;
-            this.button15.UseVisualStyleBackColor = false;
             // 
             // adminForm
             // 
@@ -3641,7 +3627,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailAddressDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn3;

@@ -69,6 +69,12 @@
     <Compile Include="CancelbookingForm.designer.cs">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="confirmUpdateCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmUpdateCust.Designer.cs">
+      <DependentUpon>confirmUpdateCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CancelbookingForm.resx">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmUpdateCust.resx">
+      <DependentUpon>confirmUpdateCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
