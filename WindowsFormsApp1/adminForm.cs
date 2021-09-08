@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                     admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
                     if (fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        tabControl1.TabPages.RemoveAt(6);
+                        tabControl1.TabPages.RemoveAt(7);
                     }
                     break;
                 }
