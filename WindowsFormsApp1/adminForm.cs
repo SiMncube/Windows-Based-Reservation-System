@@ -1714,6 +1714,16 @@ namespace WindowsFormsApp1
             customer1Ta1.Fill(fullDs.Customer1);
             bookedRoomTa.Fill(fullDs.BookedRoom);
         }
+
+        private void button9_Click_3(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label87_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
