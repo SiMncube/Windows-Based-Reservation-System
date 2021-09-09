@@ -30,13 +30,13 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.bookingInnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -276,6 +276,7 @@ namespace WindowsFormsApp1
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label57 = new System.Windows.Forms.Label();
@@ -305,7 +306,6 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -682,8 +682,8 @@ namespace WindowsFormsApp1
             this.customerDataGridView.Location = new System.Drawing.Point(57, 83);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.ReadOnly = true;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.customerDataGridView.Size = new System.Drawing.Size(946, 160);
             this.customerDataGridView.TabIndex = 53;
             this.customerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customerDataGridView_RowHeaderMouseDoubleClick);
@@ -1230,8 +1230,8 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerDataGridView.Location = new System.Drawing.Point(37, 86);
             this.modifyBookingInnerDataGridView.Name = "modifyBookingInnerDataGridView";
             this.modifyBookingInnerDataGridView.ReadOnly = true;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyBookingInnerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyBookingInnerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.modifyBookingInnerDataGridView.Size = new System.Drawing.Size(1151, 140);
             this.modifyBookingInnerDataGridView.TabIndex = 57;
             this.modifyBookingInnerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.modifyBookingInnerDataGridView_RowHeaderMouseDoubleClick);
@@ -1572,8 +1572,8 @@ namespace WindowsFormsApp1
             this.dataGridView1.Location = new System.Drawing.Point(108, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(844, 127);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -1732,8 +1732,8 @@ namespace WindowsFormsApp1
             // 
             this.bookingInnerDGV.AllowUserToAddRows = false;
             this.bookingInnerDGV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.bookingInnerDGV.AutoGenerateColumns = false;
             this.bookingInnerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingInnerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1751,8 +1751,8 @@ namespace WindowsFormsApp1
             this.bookingInnerDGV.Name = "bookingInnerDGV";
             this.bookingInnerDGV.ReadOnly = true;
             this.bookingInnerDGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingInnerDGV.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingInnerDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.bookingInnerDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookingInnerDGV.Size = new System.Drawing.Size(844, 156);
             this.bookingInnerDGV.TabIndex = 0;
@@ -1951,8 +1951,8 @@ namespace WindowsFormsApp1
             this.dataGridView2.Location = new System.Drawing.Point(41, 98);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.Size = new System.Drawing.Size(1043, 354);
             this.dataGridView2.TabIndex = 0;
             // 
@@ -2902,8 +2902,8 @@ namespace WindowsFormsApp1
             this.dataGridView3.Location = new System.Drawing.Point(95, 110);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView3.Size = new System.Drawing.Size(944, 150);
             this.dataGridView3.TabIndex = 61;
             this.dataGridView3.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseDoubleClick_1);
@@ -3045,6 +3045,21 @@ namespace WindowsFormsApp1
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Reports";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(554, 456);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(233, 101);
+            this.button9.TabIndex = 63;
+            this.button9.Text = "Create Day Report";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_2);
             // 
             // button23
             // 
@@ -3296,21 +3311,6 @@ namespace WindowsFormsApp1
             // customer1Ta1
             // 
             this.customer1Ta1.ClearBeforeFill = true;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(554, 456);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(233, 101);
-            this.button9.TabIndex = 63;
-            this.button9.Text = "Create Customer Report";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click_2);
             // 
             // adminForm
             // 
