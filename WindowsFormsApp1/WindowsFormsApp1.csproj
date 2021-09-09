@@ -87,6 +87,18 @@
     <Compile Include="BookingReport.Designer.cs">
       <DependentUpon>BookingReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.Designer.cs">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpCancel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +245,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingReport.resx">
       <DependentUpon>BookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReport.resx">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpCancel.resx">
       <DependentUpon>HelpCancel.cs</DependentUpon>

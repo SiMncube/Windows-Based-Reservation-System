@@ -1681,6 +1681,14 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void button9_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerReport one = new CustomerReport();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
 
