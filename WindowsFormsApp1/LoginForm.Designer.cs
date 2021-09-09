@@ -312,7 +312,7 @@ namespace WindowsFormsApp1
             this.panel12.Controls.Add(this.label74);
             this.panel12.Location = new System.Drawing.Point(1, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1361, 73);
+            this.panel12.Size = new System.Drawing.Size(1378, 73);
             this.panel12.TabIndex = 57;
             // 
             // label58
@@ -352,7 +352,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_08_53_30;
-            this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

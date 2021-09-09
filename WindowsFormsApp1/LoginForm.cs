@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             ResetpasswordForm forgot = new ResetpasswordForm();
-           // this.Hide();
+            this.Hide();
             forgot.ShowDialog();
             this.Close();
         }
@@ -158,14 +158,14 @@ namespace WindowsFormsApp1
                     if (userNameIsCorrect() && userPasswordIsCorrect())
                     {
                         Homepage homePage = new Homepage();
-                      //  this.Hide();
+                        this.Hide();
                         homePage.ShowDialog();
                         this.Close();
                     }
                     else if (staffNameIsCorrect() && staffPasswordIsCorrect())
                     {
                         adminForm a = new adminForm();
-                       // this.Hide();
+                        this.Hide();
                         a.ShowDialog();
                         this.Close();
                     }

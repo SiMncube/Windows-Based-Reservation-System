@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
                 }
             }
             label1.Text += userName;
+            currentUser.setIsAdmin(false);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

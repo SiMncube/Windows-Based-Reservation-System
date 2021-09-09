@@ -69,6 +69,7 @@ namespace WindowsFormsApp1
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDatabase)).BeginInit();
@@ -79,6 +80,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -320,10 +322,10 @@ namespace WindowsFormsApp1
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(275, 22);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(703, 16);
+            this.label12.Size = new System.Drawing.Size(710, 16);
             this.label12.TabIndex = 2;
-            this.label12.Text = "We are a small, persoal, elegant and accomodating. There are 15 beautiful rooms t" +
-    "o choose from. There are 8 double";
+            this.label12.Text = "We are a small, personal, elegant and accomodating. There are 15 beautiful rooms " +
+    "to choose from. There are 8 double";
             // 
             // label8
             // 
@@ -370,18 +372,20 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_envelope_24;
             this.pictureBox1.Location = new System.Drawing.Point(7, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_android_24;
             this.pictureBox2.Location = new System.Drawing.Point(7, 38);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
@@ -414,19 +418,19 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Location = new System.Drawing.Point(1000, 192);
+            this.panel5.Location = new System.Drawing.Point(1060, 192);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 175);
+            this.panel5.Size = new System.Drawing.Size(298, 384);
             this.panel5.TabIndex = 46;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label19.Location = new System.Drawing.Point(174, 73);
+            this.label19.Location = new System.Drawing.Point(116, 190);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 16);
+            this.label19.Size = new System.Drawing.Size(55, 29);
             this.label19.TabIndex = 3;
             this.label19.Text = "And";
             // 
@@ -435,22 +439,22 @@ namespace WindowsFormsApp1
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label18.Location = new System.Drawing.Point(3, 100);
+            this.label18.Location = new System.Drawing.Point(57, 265);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(354, 29);
+            this.label18.Size = new System.Drawing.Size(174, 87);
             this.label18.TabIndex = 2;
-            this.label18.Text = "Double Room at R800 per Night";
+            this.label18.Text = "Double Room \r\n          @ \r\nR800 per Night";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(3, 33);
+            this.label17.Location = new System.Drawing.Point(57, 61);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(345, 29);
+            this.label17.Size = new System.Drawing.Size(174, 87);
             this.label17.TabIndex = 1;
-            this.label17.Text = "Single Room at R450 per Night";
+            this.label17.Text = "Single Room\r\n         @ \r\nR450 per Night";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
@@ -465,6 +469,16 @@ namespace WindowsFormsApp1
             this.label16.Text = "Great Prices at";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_18_at_19_25_45;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 192);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(923, 384);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 47;
+            this.pictureBox3.TabStop = false;
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,6 +486,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -498,6 +513,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,5 +560,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fAQToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

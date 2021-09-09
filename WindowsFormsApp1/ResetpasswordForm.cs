@@ -296,7 +296,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_MouseLeave_1(object sender, EventArgs e)
+        private void textBox2_MouseLeave(object sender, EventArgs e)
         {
             if (textBox2.Text == "")
             {

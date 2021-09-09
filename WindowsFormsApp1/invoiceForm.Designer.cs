@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(430, 199);
+            this.panel1.Location = new System.Drawing.Point(440, 198);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(514, 362);
             this.panel1.TabIndex = 0;
@@ -351,9 +351,9 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
-            this.panel2.Location = new System.Drawing.Point(-3, 2);
+            this.panel2.Location = new System.Drawing.Point(-3, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1375, 100);
+            this.panel2.Size = new System.Drawing.Size(1375, 104);
             this.panel2.TabIndex = 42;
             // 
             // label22
@@ -372,7 +372,7 @@ namespace WindowsFormsApp1
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(548, 66);
+            this.label23.Location = new System.Drawing.Point(571, 66);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(228, 20);
             this.label23.TabIndex = 18;
@@ -395,9 +395,9 @@ namespace WindowsFormsApp1
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label24.Location = new System.Drawing.Point(431, 5);
+            this.label24.Location = new System.Drawing.Point(474, 5);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(443, 61);
             this.label24.TabIndex = 17;
@@ -416,7 +416,7 @@ namespace WindowsFormsApp1
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label27);
-            this.panel3.Location = new System.Drawing.Point(-3, 710);
+            this.panel3.Location = new System.Drawing.Point(-3, 713);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1375, 37);
             this.panel3.TabIndex = 43;
@@ -426,7 +426,7 @@ namespace WindowsFormsApp1
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(452, 10);
+            this.label26.Location = new System.Drawing.Point(482, 7);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(359, 20);
             this.label26.TabIndex = 41;
