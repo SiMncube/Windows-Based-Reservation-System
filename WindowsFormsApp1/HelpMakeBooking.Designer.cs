@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(771, 60);
+            this.label4.Location = new System.Drawing.Point(771, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(559, 25);
             this.label4.TabIndex = 3;
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(771, 163);
+            this.label5.Location = new System.Drawing.Point(771, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(509, 25);
             this.label5.TabIndex = 4;
@@ -112,9 +112,9 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(771, 408);
+            this.label6.Location = new System.Drawing.Point(771, 433);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(620, 125);
+            this.label6.Size = new System.Drawing.Size(620, 100);
             this.label6.TabIndex = 5;
             this.label6.Text = resources.GetString("label6.Text");
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -143,9 +143,9 @@ namespace WindowsFormsApp1
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__307_;
-            this.pictureBox6.Location = new System.Drawing.Point(774, 536);
+            this.pictureBox6.Location = new System.Drawing.Point(776, 539);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(571, 176);
+            this.pictureBox6.Size = new System.Drawing.Size(554, 176);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 57;
             this.pictureBox6.TabStop = false;
@@ -153,9 +153,9 @@ namespace WindowsFormsApp1
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__305_;
-            this.pictureBox5.Location = new System.Drawing.Point(776, 199);
+            this.pictureBox5.Location = new System.Drawing.Point(776, 224);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(586, 206);
+            this.pictureBox5.Size = new System.Drawing.Size(569, 206);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 56;
             this.pictureBox5.TabStop = false;
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__304_;
-            this.pictureBox4.Location = new System.Drawing.Point(774, 88);
+            this.pictureBox4.Location = new System.Drawing.Point(774, 121);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(571, 72);
             this.pictureBox4.TabIndex = 55;
