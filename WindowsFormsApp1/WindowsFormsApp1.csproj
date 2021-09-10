@@ -262,6 +262,9 @@
     <EmbeddedResource Include="HelpCancel.resx">
       <DependentUpon>HelpCancel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpCreate.resx">
+      <DependentUpon>HelpCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelpFirstTimeCus.resx">
       <DependentUpon>HelpFirstTimeCus.cs</DependentUpon>
     </EmbeddedResource>
