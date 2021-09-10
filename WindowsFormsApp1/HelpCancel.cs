@@ -38,5 +38,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            adminForm f = new adminForm();
+            this.Hide();
+            this.Close();
+        }
     }
 }

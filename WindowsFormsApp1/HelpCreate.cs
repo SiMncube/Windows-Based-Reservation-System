@@ -23,5 +23,17 @@ namespace WindowsFormsApp1
             this.Hide();
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            adminForm f = new adminForm();
+            this.Hide();
+            this.Close();
+        }
     }
 }
