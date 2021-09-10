@@ -1689,6 +1689,14 @@ namespace WindowsFormsApp1
             one.ShowDialog();
             this.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpCreate one = new HelpCreate();
+            one.ShowDialog();
+            this.Show();
+        }
     }
 }
 
