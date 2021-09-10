@@ -105,6 +105,12 @@
     <Compile Include="HelpCancel.Designer.cs">
       <DependentUpon>HelpCancel.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpCreate.Designer.cs">
+      <DependentUpon>HelpCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpFirstTimeCus.cs">
       <SubType>Form</SubType>
     </Compile>
