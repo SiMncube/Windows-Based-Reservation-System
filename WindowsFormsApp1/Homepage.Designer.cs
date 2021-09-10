@@ -472,9 +472,9 @@ namespace WindowsFormsApp1
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_18_at_19_25_45;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 192);
+            this.pictureBox3.Location = new System.Drawing.Point(53, 192);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(923, 384);
+            this.pictureBox3.Size = new System.Drawing.Size(743, 384);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 47;
             this.pictureBox3.TabStop = false;
