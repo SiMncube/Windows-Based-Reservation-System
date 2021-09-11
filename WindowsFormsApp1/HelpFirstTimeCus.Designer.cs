@@ -35,7 +35,6 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.linkFirsttimehelp = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -62,7 +61,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 83);
+            this.label1.Location = new System.Drawing.Point(111, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(402, 50);
             this.label1.TabIndex = 44;
@@ -80,17 +79,17 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(728, 448);
+            this.label3.Location = new System.Drawing.Point(741, 495);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 25);
             this.label3.TabIndex = 46;
-            this.label3.Text = "5.";
+            this.label3.Text = "4.";
             // 
             // linkFirsttimehelp
             // 
             this.linkFirsttimehelp.AutoSize = true;
             this.linkFirsttimehelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkFirsttimehelp.Location = new System.Drawing.Point(764, 448);
+            this.linkFirsttimehelp.Location = new System.Drawing.Point(777, 495);
             this.linkFirsttimehelp.Name = "linkFirsttimehelp";
             this.linkFirsttimehelp.Size = new System.Drawing.Size(262, 25);
             this.linkFirsttimehelp.TabIndex = 47;
@@ -102,36 +101,28 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 448);
+            this.label4.Location = new System.Drawing.Point(111, 495);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 25);
+            this.label4.Size = new System.Drawing.Size(428, 75);
             this.label4.TabIndex = 48;
-            this.label4.Text = "2. Select \"Register\"";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 675);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(501, 25);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "3. OTP will be sent to the customer\'s email address";
+            this.label4.Text = "2. Select \"Register\" button.\r\n    Email will be sent to the customer\'s email\r\n   " +
+    " address containing OTP.";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(728, 83);
+            this.label6.Location = new System.Drawing.Point(741, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(488, 50);
+            this.label6.Size = new System.Drawing.Size(524, 50);
             this.label6.TabIndex = 50;
-            this.label6.Text = "4. Confirm OTP then proceed to \"Make a booking\"\r\n    or see Step 5 below";
+            this.label6.Text = "3. Confirm OTP then proceed to \"Make a booking\" tab\r\n    or see Step 4, if you ne" +
+    "ed assistance.";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_1;
-            this.pictureBox3.Location = new System.Drawing.Point(733, 152);
+            this.pictureBox3.Location = new System.Drawing.Point(782, 235);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(397, 207);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +132,7 @@ namespace WindowsFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__309_1;
-            this.pictureBox2.Location = new System.Drawing.Point(116, 477);
+            this.pictureBox2.Location = new System.Drawing.Point(138, 573);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(383, 129);
             this.pictureBox2.TabIndex = 53;
@@ -150,9 +141,9 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__310_1;
-            this.pictureBox1.Location = new System.Drawing.Point(116, 152);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 235);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 262);
+            this.pictureBox1.Size = new System.Drawing.Size(401, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -177,7 +168,7 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(300, 9);
+            this.label7.Location = new System.Drawing.Point(298, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(716, 37);
             this.label7.TabIndex = 55;
@@ -193,7 +184,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linkFirsttimehelp);
             this.Controls.Add(this.label3);
@@ -221,7 +211,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkFirsttimehelp;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
