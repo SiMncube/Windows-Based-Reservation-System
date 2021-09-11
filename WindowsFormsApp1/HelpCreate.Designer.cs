@@ -84,17 +84,18 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 98);
+            this.label2.Location = new System.Drawing.Point(82, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(425, 50);
             this.label2.TabIndex = 47;
             this.label2.Text = "1. In \"Create new customer profile\", capture\r\n    the customer\'s personal details" +
     ".";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__310_1;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 163);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 218);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(401, 262);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,16 +117,17 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(767, 98);
+            this.label6.Location = new System.Drawing.Point(767, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(347, 50);
+            this.label6.Size = new System.Drawing.Size(566, 50);
             this.label6.TabIndex = 55;
-            this.label6.Text = "3. Enter OTP, then proceed to click\r\n    \"Confirm code\" button";
+            this.label6.Text = "3. Enter OTP, then proceed to click \"Confirm code\" button.\r\n    Customer will be " +
+    "successfully added.";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_1;
-            this.pictureBox3.Location = new System.Drawing.Point(772, 163);
+            this.pictureBox3.Location = new System.Drawing.Point(797, 218);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(397, 207);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
