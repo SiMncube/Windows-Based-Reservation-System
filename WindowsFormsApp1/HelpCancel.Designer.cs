@@ -78,10 +78,10 @@ namespace WindowsFormsApp1
             this.label2.Location = new System.Drawing.Point(89, 419);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(490, 50);
+            this.label2.Size = new System.Drawing.Size(427, 75);
             this.label2.TabIndex = 45;
-            this.label2.Text = "2. Double click on the left hand column next to the\r\n    customer\'s email address" +
-    ".";
+            this.label2.Text = "2. Once correct booking has been found,\r\n    double click on the left hand column" +
+    " next\r\n    to the customer\'s email address.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -91,10 +91,10 @@ namespace WindowsFormsApp1
             this.label3.Location = new System.Drawing.Point(780, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(471, 75);
+            this.label3.Size = new System.Drawing.Size(443, 75);
             this.label3.TabIndex = 46;
-            this.label3.Text = "3. Booking you want to cancel should appear in \r\n    the table below. \r\n    Proce" +
-    "ed to click \"Cancel booking\"  button ";
+            this.label3.Text = "3. Booking should appear in the table below. \r\n    Proceed to click \"Cancel booki" +
+    "ng\" button\r\n    to cancel the booking.";
             // 
             // label5
             // 
@@ -103,9 +103,10 @@ namespace WindowsFormsApp1
             this.label5.Location = new System.Drawing.Point(780, 419);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(422, 50);
+            this.label5.Size = new System.Drawing.Size(437, 100);
             this.label5.TabIndex = 48;
-            this.label5.Text = "4. Select \"Process Refund\" button to finish.\r\n    Booking will be cancelled.";
+            this.label5.Text = "4. \"Cancel booking confirmation\" will appear \r\n    with the refund amount.\r\n    S" +
+    "elect \"Process Refund\" button to finish.\r\n    Booking will be cancelled.";
             // 
             // label6
             // 
@@ -121,7 +122,7 @@ namespace WindowsFormsApp1
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__320_;
-            this.pictureBox5.Location = new System.Drawing.Point(785, 472);
+            this.pictureBox5.Location = new System.Drawing.Point(785, 497);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(571, 195);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +144,7 @@ namespace WindowsFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_;
-            this.pictureBox2.Location = new System.Drawing.Point(94, 472);
+            this.pictureBox2.Location = new System.Drawing.Point(94, 497);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(571, 195);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
