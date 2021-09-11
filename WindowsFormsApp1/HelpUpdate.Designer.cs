@@ -161,9 +161,9 @@ namespace WindowsFormsApp1
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label7.Location = new System.Drawing.Point(506, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(396, 37);
+            this.label7.Size = new System.Drawing.Size(568, 37);
             this.label7.TabIndex = 56;
-            this.label7.Text = "How to update a booking";
+            this.label7.Text = "How to update customer information";
             // 
             // HelpUpdate
             // 
