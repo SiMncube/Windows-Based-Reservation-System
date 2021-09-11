@@ -122,9 +122,9 @@ namespace WindowsFormsApp1
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__320_;
-            this.pictureBox5.Location = new System.Drawing.Point(785, 497);
+            this.pictureBox5.Location = new System.Drawing.Point(807, 497);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(571, 195);
+            this.pictureBox5.Size = new System.Drawing.Size(506, 195);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 55;
             this.pictureBox5.TabStop = false;
@@ -133,9 +133,9 @@ namespace WindowsFormsApp1
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__319_;
-            this.pictureBox3.Location = new System.Drawing.Point(785, 200);
+            this.pictureBox3.Location = new System.Drawing.Point(807, 200);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(571, 177);
+            this.pictureBox3.Size = new System.Drawing.Size(506, 177);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
@@ -144,9 +144,9 @@ namespace WindowsFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_;
-            this.pictureBox2.Location = new System.Drawing.Point(94, 497);
+            this.pictureBox2.Location = new System.Drawing.Point(119, 497);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(571, 195);
+            this.pictureBox2.Size = new System.Drawing.Size(546, 195);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
@@ -154,9 +154,9 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__317_;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 200);
+            this.pictureBox1.Location = new System.Drawing.Point(119, 200);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(571, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(546, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
