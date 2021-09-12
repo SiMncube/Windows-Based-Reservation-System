@@ -45,6 +45,19 @@ namespace WindowsFormsApp1
             this.modifyBookingInnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
+            this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
+            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
+            this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
+            this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
+            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
+            this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
+            this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
+            this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label75 = new System.Windows.Forms.Label();
@@ -269,7 +282,6 @@ namespace WindowsFormsApp1
             this.suburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customer1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
@@ -294,20 +306,7 @@ namespace WindowsFormsApp1
             this.linkModify = new System.Windows.Forms.LinkLabel();
             this.linkFirstTimeCus = new System.Windows.Forms.LinkLabel();
             this.linkUpdate = new System.Windows.Forms.LinkLabel();
-            this.linkCancel = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.customerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.paymentTa = new WindowsFormsApp1.fullDatabaseTableAdapters.PaymentTableAdapter();
-            this.bookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingInnerTableAdapter();
-            this.bookingSummaryTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookingSummaryTableAdapter();
-            this.viewBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.viewBookingInnerTableAdapter();
-            this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager();
-            this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
-            this.modifyBookingInnerTa = new WindowsFormsApp1.fullDatabaseTableAdapters.ModifyBookingInnerTableAdapter();
-            this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
-            this.customer1Ta1 = new WindowsFormsApp1.fullDatabaseTableAdapters.Customer1TableAdapter();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.viewBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingInnerBindingSource1)).BeginInit();
@@ -316,6 +315,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -354,7 +354,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.panel22.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -414,6 +413,64 @@ namespace WindowsFormsApp1
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1370, 749);
             this.tabControl1.TabIndex = 0;
+            // 
+            // customer1BindingSource
+            // 
+            this.customer1BindingSource.DataMember = "Customer1";
+            this.customer1BindingSource.DataSource = this.fullDs;
+            // 
+            // customerTa
+            // 
+            this.customerTa.ClearBeforeFill = true;
+            // 
+            // paymentTa
+            // 
+            this.paymentTa.ClearBeforeFill = true;
+            // 
+            // bookingInnerTa
+            // 
+            this.bookingInnerTa.ClearBeforeFill = true;
+            // 
+            // bookingSummaryTa
+            // 
+            this.bookingSummaryTa.ClearBeforeFill = true;
+            // 
+            // viewBookingInnerTa
+            // 
+            this.viewBookingInnerTa.ClearBeforeFill = true;
+            // 
+            // staffTa
+            // 
+            this.staffTa.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BookedRoomTableAdapter = null;
+            this.tableAdapterManager.BookingSummaryTableAdapter = this.bookingSummaryTa;
+            this.tableAdapterManager.Customer1TableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTa;
+            this.tableAdapterManager.PaymentTableAdapter = this.paymentTa;
+            this.tableAdapterManager.RoomTableAdapter = null;
+            this.tableAdapterManager.RoomTypeTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = this.staffTa;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // modifyBookingInnerTa
+            // 
+            this.modifyBookingInnerTa.ClearBeforeFill = true;
+            // 
+            // bookedRoomTa
+            // 
+            this.bookedRoomTa.ClearBeforeFill = true;
+            // 
+            // customer1Ta1
+            // 
+            this.customer1Ta1.ClearBeforeFill = true;
             // 
             // tabPage2
             // 
@@ -2974,11 +3031,6 @@ namespace WindowsFormsApp1
             this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
             this.postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // customer1BindingSource
-            // 
-            this.customer1BindingSource.DataMember = "Customer1";
-            this.customer1BindingSource.DataSource = this.fullDs;
-            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -3203,7 +3255,6 @@ namespace WindowsFormsApp1
             this.panel16.Controls.Add(this.linkModify);
             this.panel16.Controls.Add(this.linkFirstTimeCus);
             this.panel16.Controls.Add(this.linkUpdate);
-            this.panel16.Controls.Add(this.linkCancel);
             this.panel16.Controls.Add(this.linkLabel1);
             this.panel16.Location = new System.Drawing.Point(447, 164);
             this.panel16.Name = "panel16";
@@ -3264,17 +3315,6 @@ namespace WindowsFormsApp1
             this.linkUpdate.Text = "How to update customer information";
             this.linkUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkUpdate_LinkClicked);
             // 
-            // linkCancel
-            // 
-            this.linkCancel.AutoSize = true;
-            this.linkCancel.Location = new System.Drawing.Point(90, 311);
-            this.linkCancel.Name = "linkCancel";
-            this.linkCancel.Size = new System.Drawing.Size(204, 20);
-            this.linkCancel.TabIndex = 1;
-            this.linkCancel.TabStop = true;
-            this.linkCancel.Text = "How to set up a password";
-            this.linkCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCancel_LinkClicked);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -3285,59 +3325,6 @@ namespace WindowsFormsApp1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "How to make a booking";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // customerTa
-            // 
-            this.customerTa.ClearBeforeFill = true;
-            // 
-            // paymentTa
-            // 
-            this.paymentTa.ClearBeforeFill = true;
-            // 
-            // bookingInnerTa
-            // 
-            this.bookingInnerTa.ClearBeforeFill = true;
-            // 
-            // bookingSummaryTa
-            // 
-            this.bookingSummaryTa.ClearBeforeFill = true;
-            // 
-            // viewBookingInnerTa
-            // 
-            this.viewBookingInnerTa.ClearBeforeFill = true;
-            // 
-            // staffTa
-            // 
-            this.staffTa.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BookedRoomTableAdapter = null;
-            this.tableAdapterManager.BookingSummaryTableAdapter = this.bookingSummaryTa;
-            this.tableAdapterManager.Customer1TableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTa;
-            this.tableAdapterManager.PaymentTableAdapter = this.paymentTa;
-            this.tableAdapterManager.RoomTableAdapter = null;
-            this.tableAdapterManager.RoomTypeTableAdapter = null;
-            this.tableAdapterManager.StaffTableAdapter = this.staffTa;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.fullDatabaseTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // customerTableAdapter1
-            // 
-            this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // modifyBookingInnerTa
-            // 
-            this.modifyBookingInnerTa.ClearBeforeFill = true;
-            // 
-            // bookedRoomTa
-            // 
-            this.bookedRoomTa.ClearBeforeFill = true;
-            // 
-            // customer1Ta1
-            // 
-            this.customer1Ta1.ClearBeforeFill = true;
             // 
             // adminForm
             // 
@@ -3358,6 +3345,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.modifyBookingInnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
@@ -3416,7 +3404,6 @@ namespace WindowsFormsApp1
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer1BindingSource)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
@@ -3669,7 +3656,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.LinkLabel linkModify;
         private System.Windows.Forms.LinkLabel linkFirstTimeCus;
         private System.Windows.Forms.LinkLabel linkUpdate;
-        private System.Windows.Forms.LinkLabel linkCancel;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label84;

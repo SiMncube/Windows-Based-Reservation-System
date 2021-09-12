@@ -36,11 +36,11 @@ namespace WindowsFormsApp1
             this.linkFirsttimehelp = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,9 +119,20 @@ namespace WindowsFormsApp1
             this.label6.Text = "3. Confirm OTP then proceed to \"Make a booking\" tab\r\n    or see Step 4, if you ne" +
     "ed assistance.";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(298, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(716, 37);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "How to make a booking for first time customer";
+            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__318_1;
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__334_;
             this.pictureBox3.Location = new System.Drawing.Point(782, 235);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(397, 207);
@@ -140,10 +151,10 @@ namespace WindowsFormsApp1
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__310_1;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__337_;
             this.pictureBox1.Location = new System.Drawing.Point(138, 235);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 207);
+            this.pictureBox1.Size = new System.Drawing.Size(401, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -162,17 +173,6 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 42;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(298, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(716, 37);
-            this.label7.TabIndex = 55;
-            this.label7.Text = "How to make a booking for first time customer";
             // 
             // HelpFirstTimeCus
             // 
