@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__306_1;
-            this.pictureBox4.Location = new System.Drawing.Point(859, 465);
+            this.pictureBox4.Location = new System.Drawing.Point(883, 465);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(383, 272);
             this.pictureBox4.TabIndex = 55;
