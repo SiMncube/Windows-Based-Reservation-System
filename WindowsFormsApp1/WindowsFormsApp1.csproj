@@ -460,6 +460,12 @@
     <None Include="Resources\Screenshot %28319%29.png" />
     <None Include="Resources\Screenshot %28320%29.png" />
     <None Include="Resources\Screenshot %28318%291.png" />
+    <None Include="Resources\Screenshot %28328%29.png" />
+    <None Include="Resources\Screenshot %28329%29.png" />
+    <None Include="Resources\Screenshot %28328%291.png" />
+    <None Include="Resources\Screenshot %28331%29.png" />
+    <None Include="Resources\Screenshot %28332%29.png" />
+    <None Include="Resources\Screenshot %28333%29.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
   </ItemGroup>
   <ItemGroup>
