@@ -34,12 +34,12 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,40 +102,53 @@ namespace WindowsFormsApp1
     "";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(506, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(568, 37);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "How to update customer information";
+            // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__306_1;
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__365_;
             this.pictureBox4.Location = new System.Drawing.Point(883, 465);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(383, 272);
+            this.pictureBox4.Size = new System.Drawing.Size(392, 272);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 55;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__305_1;
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__360_;
             this.pictureBox3.Location = new System.Drawing.Point(883, 149);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(392, 260);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__302_2;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__359_;
             this.pictureBox2.Location = new System.Drawing.Point(86, 465);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(571, 129);
+            this.pictureBox2.Size = new System.Drawing.Size(612, 218);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 53;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__301_2;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 154);
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot__358_;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 149);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(567, 133);
+            this.pictureBox1.Size = new System.Drawing.Size(591, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -153,17 +166,6 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 42;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(506, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(568, 37);
-            this.label7.TabIndex = 56;
-            this.label7.Text = "How to update customer information";
             // 
             // HelpUpdate
             // 
