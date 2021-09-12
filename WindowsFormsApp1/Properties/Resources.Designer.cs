@@ -713,6 +713,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__334_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (334)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SIngleLux {
             get {
                 object obj = ResourceManager.GetObject("SIngleLux", resourceCulture);
