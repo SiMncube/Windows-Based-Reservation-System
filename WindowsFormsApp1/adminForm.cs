@@ -29,14 +29,14 @@ namespace WindowsFormsApp1
             customerTa.Fill(fullDs.Customer);
             customer1Ta1.Fill(fullDs.Customer1);
             bookedRoomTa.Fill(fullDs.BookedRoom);
-            label12.Text += logedInAdmin();
+            //label12.Text += logedInAdmin(); modified by Sihle
             toolTip1.SetToolTip(postalCodeTextBox, "Must be 4 digits");
             toolTip1.SetToolTip(IDTextBox, "Must be 13 digits");
             toolTip1.SetToolTip(cellNumberTextBox, "Must be 10 digits");
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
 
-        private string logedInAdmin()
+        private void logedInAdmin()
         {
             string admin = "";
             for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
@@ -53,7 +53,6 @@ namespace WindowsFormsApp1
                 }
             }
             label87.Text = admin;
-            return admin;
         }
         private void regeisterCust()
         {

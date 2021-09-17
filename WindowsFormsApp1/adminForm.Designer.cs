@@ -2119,10 +2119,12 @@ namespace WindowsFormsApp1
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.gray_current_user_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(1203, 3);
+            this.pictureBox7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.download;
+            this.pictureBox7.Location = new System.Drawing.Point(1224, 6);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(83, 40);
+            this.pictureBox7.Size = new System.Drawing.Size(47, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 50;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);

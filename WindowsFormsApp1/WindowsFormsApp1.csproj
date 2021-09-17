@@ -421,8 +421,10 @@
     <None Include="Resources\icons8-email-open-48.png" />
     <None Include="Resources\DoubleRoom1.jpg" />
     <None Include="Resources\DoubleStand.jpg" />
+    <None Include="Resources\download.png" />
     <Content Include="Resources\gray current user icon.png" />
     <None Include="Resources\gray current user icon1.png" />
+    <None Include="Resources\images.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
