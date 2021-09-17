@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             {
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
-                    admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
+                    admin += fullDs.Staff[i].name + " " + fullDs.Staff[i].surname;
                     if (fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         tabControl1.TabPages.RemoveAt(6);
@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
                     break;
                 }
             }
+            label87.Text = admin;
             return admin;
         }
         private void regeisterCust()
@@ -281,7 +282,7 @@ namespace WindowsFormsApp1
             Email.isCancel = true;
             Email.sendInvoice();
 
-            //These are irrelevant or Can not be extracted from the database because our tables does not have these fields/attributes
+            //These are irrelevant or Can not be extracted from the database because our tables does not have these fields/attributes @Sihle
             /* 
             Email.numberOfSingles = numberOfSingleRooms.ToString();
             Email.numberOfDoubles = numberOfDoubleRooms.ToString();
@@ -1696,6 +1697,11 @@ namespace WindowsFormsApp1
             HelpCreate one = new HelpCreate();
             one.ShowDialog();
             this.Show();
+        }
+
+        private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
