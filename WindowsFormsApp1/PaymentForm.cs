@@ -103,6 +103,7 @@ namespace WindowsFormsApp1
                 count++;
             return count == 0;
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             if (creditDetailsValid())
@@ -111,6 +112,9 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 InvoiceForm i = new InvoiceForm();
+                Email.bookingStatus = "Complete";  //added by Sihle
+                Email.sendInvoice();               //added by Sihle
+                this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
@@ -118,10 +122,20 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Homepage i = new Homepage();
-         //   this.Hide();
-            i.ShowDialog();
-            this.Close();
+            if (currentUser.getIsAdmin())
+            {
+                adminForm i = new adminForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Homepage i = new Homepage();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
         }
         private bool emailValid()
         {
@@ -200,19 +214,13 @@ namespace WindowsFormsApp1
                 updateBookedRoom();
                 updateBookingStatus();
                 InvoiceForm i = new InvoiceForm();
+                Email.bookingStatus = "Complete";  //added by Sihle
+                Email.isBankingDetails = true;   //added by Sihle
+                Email.sendInvoice();               //added by Sihle
                 this.Hide();
                 i.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-          
-            adminForm a = new adminForm();
-            this.Hide();
-            a.ShowDialog();
-            this.Close();
         }
 
         private void PaymentForm_Load(object sender, EventArgs e)
@@ -224,10 +232,49 @@ namespace WindowsFormsApp1
         {
 
         }
-
+        private bool isAdminLogged()
+        {
+            for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
+            {
+                if (fullDs.Staff[i].emailID == currentUser.getEmailID())
+                    return true;
+            }
+            return false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            if(currentUser.getIsAdmin())
+            {
+                adminForm i = new adminForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Homepage i = new Homepage();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (currentUser.getIsAdmin())
+            {
+                adminForm i = new adminForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Homepage i = new Homepage();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

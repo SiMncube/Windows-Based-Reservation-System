@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
     public partial class OTPForm : Form
     {
         private string OTP;
-        public OTPForm()
+        public OTPForm(string toEmail, string emailSubject, string emailBody)
         {
             InitializeComponent();
-            //label2.Text += currentUser.getEmailID();
+            Email.sendEmail(toEmail, emailSubject,emailBody + randomOTP());
             label2.Text += randomOTP();
         }
 

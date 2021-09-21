@@ -108,35 +108,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void pictureBox2_Click_2(object sender, EventArgs e)
-        {
-            this.Close();
-            Homepage form = new Homepage();
-            form.ShowDialog();
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            adminForm a = new adminForm();
-            this.Hide();
-            a.ShowDialog();
-            this.Close();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -144,7 +115,25 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (currentUser.getIsAdmin())
+            {
+                adminForm i = new adminForm();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Homepage i = new Homepage();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

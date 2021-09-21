@@ -14,6 +14,9 @@ namespace WindowsFormsApp1
 {
     public partial class adminForm : Form
     {
+        private string otp;
+        private int check = 0;
+        private string tempPassword;
         public adminForm()
         {
             InitializeComponent();
@@ -26,59 +29,73 @@ namespace WindowsFormsApp1
             customerTa.Fill(fullDs.Customer);
             customer1Ta1.Fill(fullDs.Customer1);
             bookedRoomTa.Fill(fullDs.BookedRoom);
-            label12.Text += logedInAdmin();
+            //label12.Text += logedInAdmin(); modified by Sihle
             toolTip1.SetToolTip(postalCodeTextBox, "Must be 4 digits");
             toolTip1.SetToolTip(IDTextBox, "Must be 13 digits");
             toolTip1.SetToolTip(cellNumberTextBox, "Must be 10 digits");
         }
         /*=========================================================================================== Kaygee code ===========================================================================================*/
 
-        private string logedInAdmin()
+        private void logedInAdmin()
         {
             string admin = "";
             for (int i = 0; i < fullDs.Staff.Rows.Count; i++)
             {
                 if (fullDs.Staff[i].emailID.Equals(currentUser.getEmailID(), StringComparison.OrdinalIgnoreCase))
                 {
-                    admin += fullDs.Staff[i].surname + " " + fullDs.Staff[i].name;
+                    admin += fullDs.Staff[i].name + " " + fullDs.Staff[i].surname;
+                    if (fullDs.Staff[i].staffType.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        tabControl1.TabPages.RemoveAt(6);
+                        tabControl1.TabPages.RemoveAt(6);
+                    }
                     break;
                 }
             }
-            return admin;
+            label87.Text = admin;
+        }
+        private void regeisterCust()
+        {
+            Email.sendEmail(emailTextBox.Text, "Welcome to The Cottage BnB", htmlWelcome());
+            customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text,tempPassword, capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
+            bookingInnerTa.Fill(fullDs.BookingInner);
+            paymentTa.Fill(fullDs.Payment);
+            bookingSummaryTa.Fill(fullDs.BookingSummary);
+            viewBookingInnerTa.Fill(fullDs.viewBookingInner);
+            staffTa.Fill(fullDs.Staff);
+            modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
+            customerTa.Fill(fullDs.Customer);
+            customer1Ta1.Fill(fullDs.Customer1);
+            bookedRoomTa.Fill(fullDs.BookedRoom);
+            label9.Visible = true;
+            firtNameTextBox.Text = "First name";
+            firtNameTextBox.ForeColor = Color.Gray;
+            lastNameTextBox.Text = "Last name";
+            lastNameTextBox.ForeColor = Color.Gray;
+            addressLine1TextBox.Text = "Street Address Line 1";
+            addressLine1TextBox.ForeColor = Color.Gray;
+            addressLine2TextBox.Text = "Street Address Line 2";
+            addressLine2TextBox.ForeColor = Color.Gray;
+            cityTextBox.Text = "City";
+            cityTextBox.ForeColor = Color.Gray;
+            postalCodeTextBox.Text = "Postal code";
+            postalCodeTextBox.ForeColor = Color.Gray;
+            cellNumberTextBox.Text = "Cell number";
+            cellNumberTextBox.ForeColor = Color.Gray;
+            IDTextBox.Text = "ID number";
+            IDTextBox.ForeColor = Color.Gray;
+            emailTextBox.Text = "Email";
+            emailTextBox.ForeColor = Color.Gray;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             if (signUIsValid())
             {
-                customerTa.Insert(capFirst(emailTextBox.Text), capFirst(firtNameTextBox.Text), capFirst(lastNameTextBox.Text), IDTextBox.Text, cellNumberTextBox.Text, "00000000", capFirst(addressLine1TextBox.Text), capFirst(addressLine2TextBox.Text), capFirst(cityTextBox.Text), postalCodeTextBox.Text);
-                bookingInnerTa.Fill(fullDs.BookingInner);
-                paymentTa.Fill(fullDs.Payment);
-                bookingSummaryTa.Fill(fullDs.BookingSummary);
-                viewBookingInnerTa.Fill(fullDs.viewBookingInner);
-                staffTa.Fill(fullDs.Staff);
-                modifyBookingInnerTa.Fill(fullDs.ModifyBookingInner);
-                customerTa.Fill(fullDs.Customer);
-                customer1Ta1.Fill(fullDs.Customer1);
-                bookedRoomTa.Fill(fullDs.BookedRoom);
-                label9.Visible = true;
-                firtNameTextBox.Text = "First name";
-                firtNameTextBox.ForeColor = Color.Gray;
-                lastNameTextBox.Text = "Last name";
-                lastNameTextBox.ForeColor = Color.Gray;
-                addressLine1TextBox.Text = "Street Address Line 1";
-                addressLine1TextBox.ForeColor = Color.Gray;
-                addressLine2TextBox.Text = "Street Address Line 2";
-                addressLine2TextBox.ForeColor = Color.Gray;
-                cityTextBox.Text = "City";
-                cityTextBox.ForeColor = Color.Gray;
-                postalCodeTextBox.Text = "Postal code";
-                postalCodeTextBox.ForeColor = Color.Gray;
-                cellNumberTextBox.Text = "Cell number";
-                cellNumberTextBox.ForeColor = Color.Gray;
-                IDTextBox.Text = "ID number";
-                IDTextBox.ForeColor = Color.Gray;
-                emailTextBox.Text = "Email";
-                emailTextBox.ForeColor = Color.Gray;
+                string temp = randomOTP();
+                string emailBody = htmlOTP(temp);
+                Email.sendEmail(emailTextBox.Text, "Email Confirmation", emailBody);
+                panel15.Visible = true;
+                panel1.Visible = false;
             }
         }
         private string capFirst(string s)
@@ -230,9 +247,49 @@ namespace WindowsFormsApp1
                 catch (ConstraintException)
                 {
                     label5.Visible = true;
-
                 }
             }
+        }
+
+        private void SendCanceledBookingInvoice(int canceledBookingID)
+        {
+        //These initailizes the invoice fields before being sent to the customer
+            Email.bookingID = canceledBookingID.ToString();
+            for (int i = 0; i < fullDs.BookingSummary.Rows.Count; i++)
+            {
+                if (fullDs.BookingSummary[i].summaryID == canceledBookingID)
+                {
+                    Email.customerEmail = fullDs.BookingSummary[i].emailID;
+                    Email.bookingStatus = fullDs.BookingSummary[i].bookingStatus;
+                    Email.bookingMethod = fullDs.BookingSummary[i].bookingMethod;
+                    Email.dateIn = fullDs.BookingSummary[i].dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+                    Email.dateOut = fullDs.BookingSummary[i].dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+                    Email.numberOfNights = fullDs.BookingSummary[i].numberOfNights.ToString();
+                    Email.amountDue = fullDs.BookingSummary[i].amountDue;
+                    Email.excessOrefund = decimal.Parse(calculateAmountDue(fullDs.BookingSummary[i].amountDue));
+                }
+            }
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(Email.customerEmail))
+                {
+                    Email.customerName = fullDs.Customer[i].name;
+                    Email.customerSurname = fullDs.Customer[i].surname;
+                    Email.customerIdNumber = fullDs.Customer[i].idNumber;
+                }
+            }
+            Email.isCancel = true;
+            Email.sendInvoice();
+
+            //These are irrelevant or Can not be extracted from the database because our tables does not have these fields/attributes @Sihle
+            /* 
+            Email.numberOfSingles = numberOfSingleRooms.ToString();
+            Email.numberOfDoubles = numberOfDoubleRooms.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
+            Email.oldBookingID = OldBookingSummaryID;
+            Email.oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID)).ToString();
+            */
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -240,6 +297,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 cancelBooking((int)dataGridView1.CurrentRow.Cells[4].Value);
+                SendCanceledBookingInvoice((int)dataGridView1.CurrentRow.Cells[4].Value); //added by Sihle for sending invoice of the canceled booking
             }
             currentUser.setEmailID(dataGridView1.Rows[0].Cells[5].Value.ToString());
             currentBooking.setSummaryID((int)dataGridView1.Rows[0].Cells[4].Value);
@@ -609,8 +667,8 @@ namespace WindowsFormsApp1
         /*=========================================================================================== Kaygee code END ===========================================================================================*/
 
 
-        /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
-        string currentCustomerEmailID;
+            /*================================================================================= Author @Sihle Make Booking Tab ===========================================================================================*/
+            string currentCustomerEmailID;
 
         DateTime dateIn = DateTime.Today;
         DateTime dateOut = DateTime.Today;
@@ -735,6 +793,24 @@ namespace WindowsFormsApp1
             return false;
         }
 
+        public string arrayToString(int[] array)
+        {
+            string s = "Room: ";
+
+            if (array.Length == 0)
+                return "none";
+            else
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    s += array[i];
+                    if (i != array.Length - 1)
+                        s += ", ";
+                }
+            }
+            return s;
+        }
+
         private void updateBookingSummary(string callAmountDueMethod)
         {
             int[] singleAllocatedRooms = new int[numberOfSingleRooms];
@@ -767,6 +843,30 @@ namespace WindowsFormsApp1
 
             this.bookingSummaryTa.Update(this.fullDs.BookingSummary);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
+
+            //These initailizes the invoice fields
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(currentCustomerEmailID))
+                {
+                    Email.customerName = fullDs.Customer[i].name;
+                    Email.customerSurname = fullDs.Customer[i].surname;
+                    Email.customerIdNumber = fullDs.Customer[i].idNumber;
+                }
+            }
+            Email.customerEmail = currentCustomerEmailID;
+            Email.bookingID = summaryID.ToString();
+            Email.bookingStatus = bookingStatus;
+            Email.bookingMethod = bookingMethod;
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.numberOfNights = numberOfNights.ToString();
+            Email.numberOfSingles = singleAllocatedRooms.Length.ToString();
+            Email.numberOfDoubles = doubleAllocatedRooms.Length.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
+            Email.amountDue = callAmountDueMethod;
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -849,17 +949,6 @@ namespace WindowsFormsApp1
             ConfirmbookingForm c = new ConfirmbookingForm();
             c.ShowDialog();
         }
-        
-        private void button9_Click(object sender, EventArgs e)
-        {
-            currentUser.setEmailID(currentCustomerEmailID);
-            PaymentForm payment = new PaymentForm();
-            //this.Hide();
-            payment.ShowDialog();
-            //this.Close();
-
-            label33.Visible = false;
-        }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
@@ -885,6 +974,8 @@ namespace WindowsFormsApp1
             panel5.Enabled = true;
             dateTimePicker1.Enabled = true;
             dateTimePicker2.Enabled = true;
+
+            //pre populate the fields with booking details we have
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
@@ -981,7 +1072,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("The Selected booking can not be modified, Checking in date has already passed", "Selection Error");
                 return false;
             }
-            
+
             return false;
         }
 
@@ -1000,7 +1091,7 @@ namespace WindowsFormsApp1
             {
                 customerDataGridView.ClearSelection();
             }
-            
+
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -1016,11 +1107,15 @@ namespace WindowsFormsApp1
             int summaryID = (int)bookingSummaryTa.getLastRecord();
             newBookingSummaryID = summaryID;
 
+            int[] singleAllocatedRooms = new int[numberOfSingleRooms];
+            int[] doubleAllocatedRooms = new int[numberOfDoubleRooms];
+
             for (int i = 0; i < numberOfSingleRooms; i++) //adding single rooms to bookedRoom table
             {
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1))
                 {
                     bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    singleAllocatedRooms[i] = (int)availableSingleRooms[i];
                 }
             }
 
@@ -1028,7 +1123,8 @@ namespace WindowsFormsApp1
             {
                 for (DateTime dateID = dateIn; DateTime.Compare(dateID, dateOut) < 0; dateID = dateID.AddDays(1)) //adding double rooms to bookedRoom table
                 {
-                    bookedRoomTa.Insert(dateID, summaryID, (int)availableSingleRooms[i]);
+                    bookedRoomTa.Insert(dateID, summaryID, (int)availableDoubleRooms[i]);
+                    doubleAllocatedRooms[i] = (int)availableDoubleRooms[i];
                 }
             }
 
@@ -1036,6 +1132,34 @@ namespace WindowsFormsApp1
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
             this.bookedRoomTa.Update(this.fullDs.BookedRoom);
             this.bookedRoomTa.Fill(this.fullDs.BookedRoom);
+
+            //These initailizes the invoice fields
+            for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
+            {
+                if (fullDs.Customer[i].emailID.Equals(currentCustomerEmailID))
+                {
+                    Email.customerName = fullDs.Customer[i].name;
+                    Email.customerSurname = fullDs.Customer[i].surname;
+                    Email.customerIdNumber = fullDs.Customer[i].idNumber;
+                }
+            }
+            Email.customerEmail = currentCustomerEmailID;
+            Email.bookingID = summaryID.ToString();
+            Email.bookingStatus = bookingStatus;
+            Email.bookingMethod = bookingMethod;
+            Email.dateIn = dateIn.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.dateOut = dateOut.ToString("dd/MM/yyyy") + " 12:00 PM";
+            Email.numberOfNights = numberOfNights.ToString();
+            Email.numberOfSingles = numberOfSingleRooms.ToString();
+            Email.numberOfDoubles = numberOfDoubleRooms.ToString();
+            Email.singleRoomIDs = arrayToString(singleAllocatedRooms);
+            Email.doubleRoomIDs = arrayToString(doubleAllocatedRooms);
+            Email.amountDue = callAmountDueMethod;
+
+            //Old booking information
+            Email.isModify = true;
+            Email.oldBookingID = OldBookingSummaryID;
+            Email.oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID)).ToString();
         }
 
         private void UpdateOldBookingStatusToModified(int summaryID)
@@ -1102,7 +1226,7 @@ namespace WindowsFormsApp1
             UpdateNewBookingStatusToComplete();
 
             MessageBox.Show("Booking Has Been Successfully Updated", "Customer Message"); //could be changed to showing all bookind details or something like an invoice 
-                                                                                        // with all necessary details including the new customer booking reference.
+                                                                                          // with all necessary details including the new customer booking reference.
             this.paymentTa.Update(fullDs.Payment);
             this.paymentTa.Fill(fullDs.Payment);
             this.bookingSummaryTa.Fill(this.fullDs.BookingSummary);
@@ -1113,18 +1237,19 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);  
+            string newBookingAmountDueString = getAmountDue(comboBox3, comboBox4);
             CaptureNEWBookingRecord(newBookingAmountDueString);      //not this record is incomplete untill the admin confirms the receipt of payment
             decimal oldBookingAmountDue = getOldBookingAmountDue(int.Parse(OldBookingSummaryID));
             decimal newBookingAmountDue = decimal.Parse(newBookingAmountDueString.Substring(2, newBookingAmountDueString.Length - 5));
             decimal finalAmountDue = newBookingAmountDue - oldBookingAmountDue;
-            int[] a = {-1,(int)finalAmountDue};
+            Email.excessOrefund = finalAmountDue;
+            int[] a = { -1, (int)finalAmountDue };
             currentBooking.setRoomIDs(a);
             UpdateBooking(newBookingAmountDueString);
             currentBooking.setSummaryID((int)modifyBookingInnerDataGridView.CurrentRow.Cells[4].Value);
             currentUser.setEmailID(modifyBookingInnerDataGridView.CurrentRow.Cells[0].Value.ToString());
             ModifyConfirm m = new ModifyConfirm(finalAmountDue);
-            m.ShowDialog();
+            m.ShowDialog(); 
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -1317,6 +1442,7 @@ namespace WindowsFormsApp1
             {
                 dataRow[i] = dataGridView3.CurrentRow.Cells[i].Value;
             }
+
             label55.Visible = false;
             label56.Visible = false;
             updateTextBox(textBox7, dataRow[0].ToString());
@@ -1334,9 +1460,253 @@ namespace WindowsFormsApp1
             fullDs1.Clear();
             label4.Visible = false;
         }
+
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
-            customer1Ta1.FillByPreference(fullDs.Customer1,textBox18.Text);
+            customer1Ta1.FillByPreference(fullDs.Customer1, textBox18.Text);
+        }
+
+        //############################################################ SI Code generating reoprts ################################################
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingReport one = new BookingReport();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+        //############################################################ Admin sign up OTP ################################################
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (textBox9.Text.Trim() == this.otp)
+            {
+                panel15.Visible = false;
+                panel1.Visible = true;
+                regeisterCust();
+            }
+            else
+            {
+                label77.Visible = true;
+                check++;
+                if (check > 1)
+                    button19.Visible = true;
+            }
+        }
+        public string randomOTP()
+        {
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string temp = randNum.ToString("D6");
+            otp = temp;
+            string random = null;
+            for (int i = 0; i < 6; i++)
+                random += temp[i] + "-";
+
+            return random.Substring(0,11);
+            
+        }
+        private string htmlOTP(string temp)
+        {
+            string body = @"<html>
+                           <body>";
+            body += "<p>Dear " + firtNameTextBox.Text + ",</p><p>We're happy you signed up for The Cottage BNB. To start making bookings on the cottage booking app, Please confirm your email address</p>";
+            body += "<p>Here's your One Time Pin(OTP) : <strong>" + temp + "</strong></p>";
+            body += "<p>This is an autogenerated email, for enquiries<br>call: +27 64 090 3388<br>Or email: sonya@TheCottageBnB.co.za</p>";
+            body += " </body></html>";
+            return body;
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            string temp = randomOTP();
+            string emailBody = htmlOTP(temp);
+            Email.sendEmail(emailTextBox.Text, "Email Confirmation", emailBody);
+        }
+
+        private void textBox9_MouseEnter(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "Enter OTP")
+            {
+                textBox9.Text = null;
+                textBox9.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox9_MouseLeave(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "")
+            {
+                textBox9.Text = "Enter OTP";
+                textBox9.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            label77.Visible = false;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpMakeBooking one = new HelpMakeBooking();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkFirstTimeCus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpFirstTimeCus one = new HelpFirstTimeCus();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpUpdate one = new HelpUpdate();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkModify_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpModifycs one = new HelpModifycs();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpCancel one = new HelpCancel();
+            one.ShowDialog();
+            this.Show();
+        }
+        private string generatePassword()
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch;
+            for (int i = 0; i < 8; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            this.tempPassword = builder.ToString();
+            return builder.ToString();
+        }
+        private string htmlWelcome()
+        {
+            string body = @"<html>
+                           <body>";
+            body += "<h1>Welcome to The Cottage BnB, " + firtNameTextBox.Text + "!</h1><p><strong>This email includes your account details, so please keep it safe.</strong></p><p>We’re thrilled to see you here!</p>";
+            body += "<p>We’re confident that The Cottage BnB will give you an enjoyable and unforgettable experience everytime you visit.</p>";
+            body += "<p>Here's your Auto generated password :  <strong>"+generatePassword()+"</strong><br>You can now login and change you password.</p>";
+            body += "<p>Take care!</p>";
+            body += "<p>This is an autogenerated email, for enquiries<br>call: +27 64 090 3388<br>Or email: sonya@TheCottageBnB.co.za</p>";
+            body += " </body></html>";
+            return body;
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label84_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label81_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingReport one = new BookingReport();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PaymentReport one = new PaymentReport();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void button9_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerReport one = new CustomerReport();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpCreate one = new HelpCreate();
+            one.ShowDialog();
+            this.Show();
+        }
+
+        private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

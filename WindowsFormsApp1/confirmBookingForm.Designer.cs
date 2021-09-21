@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(17, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(514, 362);
             this.panel1.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(304, 281);
+            this.label19.Location = new System.Drawing.Point(300, 281);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(93, 16);
             this.label19.TabIndex = 18;
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(303, 67);
+            this.label8.Location = new System.Drawing.Point(306, 67);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label8.Size = new System.Drawing.Size(49, 16);
@@ -234,10 +234,10 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(48, 231);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 7;
             this.label9.Text = "label9";
             // 
@@ -357,7 +357,7 @@ namespace WindowsFormsApp1
             // 
             this.customerTa.ClearBeforeFill = true;
             // 
-            // confirmBookingForm
+            // ConfirmbookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -369,7 +369,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "confirmBookingForm";
+            this.Name = "ConfirmbookingForm";
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -44,18 +44,22 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.fullDs = new WindowsFormsApp1.fullDatabase();
             this.customerTableAdapter1 = new WindowsFormsApp1.fullDatabaseTableAdapters.CustomerTableAdapter();
             this.staffTa = new WindowsFormsApp1.fullDatabaseTableAdapters.StaffTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -256,46 +260,15 @@ namespace WindowsFormsApp1
             this.label8.Text = "Username Incorrect";
             this.label8.Visible = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1369, 103);
-            this.panel2.TabIndex = 16;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_18_at_19_25_45;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(69, 68);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(143, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1111, 56);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Welcome to the Cottage BnB Booking System";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 0;
             // 
             // fullDs
             // 
@@ -310,26 +283,92 @@ namespace WindowsFormsApp1
             // 
             this.staffTa.ClearBeforeFill = true;
             // 
-            // Form1
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Location = new System.Drawing.Point(-3, 711);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1382, 46);
+            this.panel3.TabIndex = 17;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(512, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(359, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.pictureBox2);
+            this.panel12.Controls.Add(this.label58);
+            this.panel12.Controls.Add(this.label59);
+            this.panel12.Controls.Add(this.label74);
+            this.panel12.Location = new System.Drawing.Point(1, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1378, 73);
+            this.panel12.TabIndex = 57;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(564, 46);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(228, 20);
+            this.label58.TabIndex = 48;
+            this.label58.Text = "Safe . Dependable . Affordable";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label59.Location = new System.Drawing.Point(400, 3);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(571, 39);
+            this.label59.TabIndex = 47;
+            this.label59.Text = "The Cottage BnB Booking System";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(105, 43);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(0, 13);
+            this.label74.TabIndex = 0;
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_05_at_08_53_30;
-            this.ClientSize = new System.Drawing.Size(1364, 749);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form10";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -346,9 +385,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private fullDatabase fullDs;
         private fullDatabaseTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private System.Windows.Forms.Label label9;
@@ -358,5 +394,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button5;
         private fullDatabaseTableAdapters.StaffTableAdapter staffTa;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label74;
     }
 }

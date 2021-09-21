@@ -12,10 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class GalleryForm : Form
     {
+        int count = 1;
+
         public GalleryForm()
         {
             InitializeComponent();
             customerTableAdapter1.Fill(fullDatabase1.Customer);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,41 +50,64 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginForm f = new LoginForm();
+            Homepage f = new Homepage();
             this.Hide();
             f.ShowDialog();
             this.Close();
         }
 
-        /* private void pictureBox1_Click(object sender, EventArgs e)
+        private void nextBTN_Click(object sender, EventArgs e)
+        {
+            count++;
+            
+            if (count > 5)
             {
-            this.Close();
+                count = 1;
             }
-            private void pictureBox2_Click_1(object sender, EventArgs e)
-            {
-            if (count > 0)
-            {
+               
+            changeImage(count);
+
+
+        }
+
+        private void backBTN_Click(object sender, EventArgs e)
+        {
             count--;
-            }
-            else
+
+            if (count < 1)
             {
-            count = 6;
+                count = 5;
             }
-            pictureBox4.Image = imageList1.Images[count];
+           
+            changeImage(count);
+        }
+
+        private void changeImage(int num)
+
+        {
+            switch(num)
+            {
+                case 1:
+                    pictureBox1.Image = Properties.Resources.SIngleLux;
+                    break;
+                case 2:
+                    pictureBox1.Image = Properties.Resources.SingleRoom1;
+                    break;
+                case 3:
+                    pictureBox1.Image = Properties.Resources.DoubleRoom1;
+                    break;
+                case 4:
+                    pictureBox1.Image = Properties.Resources.DoubleStand;
+                    break;
+                case 5:
+                    pictureBox1.Image = Properties.Resources.Outside2;
+                    break;
+
             }
 
-            private void pictureBox3_Click(object sender, EventArgs e)
-            {
-            if(count < 6)
-            {
-            count++;
-            }
-            else
-            {
-            count = 0;
-            }
-            pictureBox4.Image = imageList1.Images[count];
-            }
-        */
+
+        }
+
+       
     }
 }

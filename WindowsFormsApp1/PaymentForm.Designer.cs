@@ -64,11 +64,13 @@ namespace WindowsFormsApp1
             this.bookedRoomTa = new WindowsFormsApp1.fullDatabaseTableAdapters.BookedRoomTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -79,6 +81,7 @@ namespace WindowsFormsApp1
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,9 +91,9 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(473, 207);
+            this.panel1.Location = new System.Drawing.Point(473, 184);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(496, 411);
+            this.panel1.Size = new System.Drawing.Size(496, 434);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -311,10 +314,10 @@ namespace WindowsFormsApp1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(142, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Card information";
             // 
@@ -327,7 +330,7 @@ namespace WindowsFormsApp1
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(425, 296);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "instant EFT";
+            this.tabPage3.Text = "Instant EFT";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -389,35 +392,36 @@ namespace WindowsFormsApp1
             this.button6.TabIndex = 15;
             this.button6.Text = "Cancel";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(137, 20);
+            this.label14.Size = new System.Drawing.Size(177, 20);
             this.label14.TabIndex = 1;
             this.label14.Text = "Instant EFT payment";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(131, 28);
+            this.label2.Location = new System.Drawing.Point(131, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 20);
+            this.label2.Size = new System.Drawing.Size(236, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pick  payment method below";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(113, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Payment";
             // 
@@ -448,17 +452,28 @@ namespace WindowsFormsApp1
             this.panel11.Controls.Add(this.button1);
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1361, 100);
+            this.panel11.Size = new System.Drawing.Size(1377, 100);
             this.panel11.TabIndex = 46;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(463, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(443, 61);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "The Cottage BnB";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(585, 70);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(250, 18);
+            this.label58.Size = new System.Drawing.Size(228, 20);
             this.label58.TabIndex = 18;
             this.label58.Text = "Safe . Dependable . Affordable";
             // 
@@ -466,13 +481,13 @@ namespace WindowsFormsApp1
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 64);
+            this.label15.Location = new System.Drawing.Point(13, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 20);
+            this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 44;
-            this.label15.Text = "Logout";
+            this.label15.Text = "Back";
             // 
             // label60
             // 
@@ -496,16 +511,25 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label10
+            // panel4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Fax", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(463, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(483, 61);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "The Cottage BnB";
+            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Location = new System.Drawing.Point(-4, 717);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1384, 41);
+            this.panel4.TabIndex = 47;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(513, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(359, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Copyright 2014 | All rights reserved | Privacy policy";
             // 
             // PaymentForm
             // 
@@ -513,6 +537,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2021_06_02_at_15_53_29;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Name = "PaymentForm";
@@ -533,6 +558,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.fullDs)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -578,5 +605,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label26;
     }
 }

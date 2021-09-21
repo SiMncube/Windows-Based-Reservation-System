@@ -33,11 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +68,78 @@
     </Compile>
     <Compile Include="CancelbookingForm.designer.cs">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingReport.Designer.cs">
+      <DependentUpon>BookingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.Designer.cs">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpCancel.Designer.cs">
+      <DependentUpon>HelpCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpCreate.Designer.cs">
+      <DependentUpon>HelpCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpFirstTimeCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpFirstTimeCus.Designer.cs">
+      <DependentUpon>HelpFirstTimeCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpMakeBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpMakeBooking.Designer.cs">
+      <DependentUpon>HelpMakeBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpModifycs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpModifycs.Designer.cs">
+      <DependentUpon>HelpModifycs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpUpdate.Designer.cs">
+      <DependentUpon>HelpUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReport.Designer.cs">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -162,6 +241,45 @@
     <EmbeddedResource Include="CancelbookingForm.resx">
       <DependentUpon>CancelbookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingReport.resx">
+      <DependentUpon>BookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReport.resx">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpCancel.resx">
+      <DependentUpon>HelpCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpCreate.resx">
+      <DependentUpon>HelpCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpFirstTimeCus.resx">
+      <DependentUpon>HelpFirstTimeCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpMakeBooking.resx">
+      <DependentUpon>HelpMakeBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpModifycs.resx">
+      <DependentUpon>HelpModifycs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpUpdate.resx">
+      <DependentUpon>HelpUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReport.resx">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +366,7 @@
     <None Include="Resources\icons8-arrow-80.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-09-05 at 19.21.55.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-18 at 19.25.45.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-18 at 19.00.46.jpeg" />
     <None Include="Resources\WhatsApp Image 2021-06-02 at 15.53.288.jpeg" />
@@ -300,11 +419,74 @@
     <None Include="Resources\back.png" />
     <None Include="Resources\icons8-email-open-96.png" />
     <None Include="Resources\icons8-email-open-48.png" />
+    <None Include="Resources\DoubleRoom1.jpg" />
+    <None Include="Resources\DoubleStand.jpg" />
+    <None Include="Resources\download.png" />
+    <Content Include="Resources\gray current user icon.png" />
+    <None Include="Resources\gray current user icon1.png" />
+    <None Include="Resources\images.png" />
     <Content Include="Resources\Logopit_1622304679296.png" />
     <None Include="Resources\WALLPAPER.JPG" />
     <None Include="Resources\stack-clean-towels-bathrobe-table_73344-62511.jpg" />
     <None Include="Resources\photo-1448697138198-9aa6d0d84bf41.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_185996.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859961.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859962.jpg" />
+    <None Include="Resources\pngtree-technology-atmospheric-year-end-report-image_1859963.jpg" />
+    <None Include="Resources\Outside2.jpg" />
+    <None Include="Resources\SIngleLux.jpg" />
+    <None Include="Resources\SingleRoom1.jpg" />
+    <None Include="Resources\SR1.jpg" />
+    <None Include="Resources\Screenshot %28287%29.png" />
+    <None Include="Resources\Screenshot %28301%29.png" />
+    <None Include="Resources\Screenshot %28302%29.png" />
+    <None Include="Resources\Screenshot %28302%291.png" />
+    <None Include="Resources\Screenshot %28301%291.png" />
+    <None Include="Resources\Screenshot %28303%29.png" />
+    <None Include="Resources\Screenshot %28304%29.png" />
+    <None Include="Resources\Screenshot %28305%29.png" />
+    <None Include="Resources\Screenshot %28306%29.png" />
+    <None Include="Resources\Screenshot %28307%29.png" />
+    <None Include="Resources\Screenshot %28308%29.png" />
+    <None Include="Resources\Screenshot %28309%29.png" />
+    <None Include="Resources\Screenshot %28310%29.png" />
+    <None Include="Resources\Screenshot %28311%29.png" />
+    <None Include="Resources\Screenshot %28312%29.png" />
+    <None Include="Resources\Screenshot %28301%292.png" />
+    <None Include="Resources\Screenshot %28302%292.png" />
+    <None Include="Resources\Screenshot %28305%291.png" />
+    <None Include="Resources\Screenshot %28306%291.png" />
+    <None Include="Resources\Screenshot %28308%291.png" />
+    <None Include="Resources\Screenshot %28310%291.png" />
+    <None Include="Resources\Screenshot %28309%291.png" />
+    <None Include="Resources\Screenshot %28317%29.png" />
+    <None Include="Resources\Screenshot %28318%29.png" />
+    <None Include="Resources\Screenshot %28319%29.png" />
+    <None Include="Resources\Screenshot %28320%29.png" />
+    <None Include="Resources\Screenshot %28318%291.png" />
+    <None Include="Resources\Screenshot %28328%29.png" />
+    <None Include="Resources\Screenshot %28329%29.png" />
+    <None Include="Resources\Screenshot %28328%291.png" />
+    <None Include="Resources\Screenshot %28331%29.png" />
+    <None Include="Resources\Screenshot %28332%29.png" />
+    <None Include="Resources\Screenshot %28333%29.png" />
+    <None Include="Resources\Screenshot %28334%29.png" />
+    <None Include="Resources\Screenshot %28336%29.png" />
+    <None Include="Resources\Screenshot %28337%29.png" />
+    <None Include="Resources\Screenshot %28342%29.png" />
+    <None Include="Resources\Screenshot %28343%29.png" />
+    <None Include="Resources\Screenshot %28352%29.png" />
+    <None Include="Resources\Screenshot %28353%29.png" />
+    <None Include="Resources\Screenshot %28354%29.png" />
+    <None Include="Resources\Screenshot %28358%29.png" />
+    <None Include="Resources\Screenshot %28359%29.png" />
+    <None Include="Resources\Screenshot %28360%29.png" />
+    <None Include="Resources\Screenshot %28361%29.png" />
+    <None Include="Resources\Screenshot %28365%29.png" />
     <Content Include="Resources\stack-clean-towels-bathrobe-table_73344-6251.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
