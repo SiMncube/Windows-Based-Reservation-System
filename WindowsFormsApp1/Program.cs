@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             SmtpServer.Credentials = new System.Net.NetworkCredential("TheCottageGroup7@gmail.com", "UKZNgroup7");
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(mail);
-            MessageBox.Show("Email has been Send");
+            MessageBox.Show("Email has been Sent");
         }
         public static void sendEmail(string toEmail, string emailSubject, string emailBody)
         {
