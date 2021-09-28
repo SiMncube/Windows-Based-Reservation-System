@@ -1520,7 +1520,7 @@ namespace WindowsFormsApp1
             otp = temp;
             string random = null;
             for (int i = 0; i < 6; i++)
-                random += temp[i] + "-";
+                random += temp[i] + " ";
 
             return random.Substring(0,11);
             
