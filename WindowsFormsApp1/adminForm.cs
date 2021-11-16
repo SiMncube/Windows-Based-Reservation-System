@@ -271,7 +271,7 @@ namespace WindowsFormsApp1
             }
             for (int i = 0; i < fullDs.Customer.Rows.Count; i++)
             {
-                if (fullDs.Customer[i].emailID.Equals(Email.customerEmail))
+                if (fullDs.Customer[i].emailID.ToLower().Equals(Email.customerEmail.ToLower()))
                 {
                     Email.customerName = fullDs.Customer[i].name;
                     Email.customerSurname = fullDs.Customer[i].surname;
